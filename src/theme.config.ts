@@ -2,9 +2,9 @@ import { defineThemeConfig } from './types'
 
 export default defineThemeConfig({
   site: 'https://nordlys.fjelloverflow.dev',
-  title: 'Nordlys',
+  title: 'the unnamed road',
   description: 'A minimal Astro blog theme',
-  author: 'FjellOverflow',
+  author: 'TUR',
   navbarItems: [
     { label: 'Blog', href: '/posts' },
     { label: 'Projects', href: '/projects' },
@@ -23,7 +23,7 @@ export default defineThemeConfig({
   footerItems: [
     {
       icon: 'tabler--brand-github',
-      href: 'https://github.com/FjellOverflow/nordlys',
+      href: 'https://github.com/',
       label: 'Github'
     },
     {
@@ -34,7 +34,7 @@ export default defineThemeConfig({
   ],
 
   // optional settings
-  locale: 'en',
+  locale: 'se',
   mode: 'dark',
   modeToggle: true,
   colorScheme: 'scheme-mono',
