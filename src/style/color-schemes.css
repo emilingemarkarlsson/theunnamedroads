@@ -28,4 +28,14 @@
       --accent-bg: 35, 39, 48;
     }
   }
+
+  .scheme-conversion {
+    --accent: 255, 107, 0;
+    --accent-bg: 242, 244, 248;
+
+    &[data-mode='dark'] {
+      --accent: 255, 138, 48;
+      --accent-bg: 35, 39, 48;
+    }
+  }
 }

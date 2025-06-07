@@ -1,24 +1,113 @@
 ---
 layout: '@/layouts/PageLayout.astro'
-title: About
+title: About The Unnamed Road
+description: Learn about our anonymous, AI-driven methodology for exploring business ideas
 activeHeaderLink: About
 ---
 
-# About
+<div class="space-y-16">
 
-Nordlys is a minimal Astro blog theme, ideal for a personal blog and showcasing a projects portfolio. It is fully customizable with baked-in theming and ready-to-use components. Developed by [FjellOverflow](https://github.com/FjellOverflow) using [Astro](https://astro.build/) and [Tailwindcss](https://tailwindcss.com/). The name _Nordlys_ comes from Norwegian and means [_Northern Lights_](https://en.wikipedia.org/wiki/Aurora) or [_Aurora_](https://en.wikipedia.org/wiki/Aurora), which is also reflected in the logo!
+# About The Unnamed Road
 
-import logo from '@/assets/logo.svg'
-import { Image } from 'astro:assets'
-
-<div class="w-full flex justify-center">
-    <Image alt="Nordlys logo" src={logo} loading="eager" class="my-2" />
+<div class="bg-gradient-to-br from-accent/5 to-accent/10 dark:from-accent/10 dark:to-accent/20 rounded-2xl p-8 md:p-12 border border-accent/30">
+  <h2 class="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6">Our Ethos</h2>
+  <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+    **The Unnamed Road** operates on the principle that the best ideas emerge when freed from the constraints of personal branding, investor expectations, and conventional startup wisdom. We are an anonymous venture studio that uses AI as a collaborative partner to explore, test, and develop business concepts.
+  </p>
 </div>
 
-## Built-in Pages
+## Why Anonymous?
 
-The theme includes a [landing](/) page, [blog](/posts), [projects](/projects) section, [about](/about) page and a [404](/some-url-that-does-not-exist) page. Adding new content is straightforward - simply create a new `.md` file in the `src/pages`, `src/content/posts` or `src/content/projects` directories and start writing! Take a look at the provided examples to see how to tweak and configure the pages correctly.
+<div class="bg-gray-50 dark:bg-gray-800/50 rounded-2xl p-8 md:p-12">
+  <p class="text-lg text-gray-600 dark:text-gray-300 mb-8 text-center">
+    Anonymity is not about hiding—it's about removing barriers to honest exploration:
+  </p>
+  
+  <div class="grid md:grid-cols-2 gap-8">
+    <div class="group space-y-4 p-6 bg-white dark:bg-gray-700/30 rounded-xl border border-gray-200 dark:border-gray-600 hover:border-accent/50 dark:hover:border-accent/50 transition-all duration-300">
+      <div class="flex items-center space-x-3">
+        <div class="w-12 h-12 bg-gradient-to-br from-accent/20 to-accent/30 rounded-xl flex items-center justify-center">
+          <span class="text-2xl">🎭</span>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 dark:text-gray-100">Eliminates Ego</h3>
+      </div>
+      <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+        Without personal reputation at stake, we can pursue controversial ideas, admit failures quickly, and pivot without face-saving concerns.
+      </p>
+    </div>
 
-## Configuration & Customization
+    <div class="group space-y-4 p-6 bg-white dark:bg-gray-700/30 rounded-xl border border-gray-200 dark:border-gray-600 hover:border-accent/50 dark:hover:border-accent/50 transition-all duration-300">
+      <div class="flex items-center space-x-3">
+        <div class="w-12 h-12 bg-gradient-to-br from-accent/20 to-accent/30 rounded-xl flex items-center justify-center">
+          <span class="text-2xl">⚖️</span>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 dark:text-gray-100">Reduces Bias</h3>
+      </div>
+      <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+        Ideas are evaluated purely on merit, not on who proposed them or what their track record suggests.
+      </p>
+    </div>
 
-All basic configuration is done in `src/theme.config.ts`. To learn more about how you can configure and customize this theme, visit the [blog](/posts) section. There you will find tutorials and feature showcases. Nordlys offers a variety of features, such as a light/dark mode, icons, custom components, color schemes, and headers for code-blocks.
+    <div class="group space-y-4 p-6 bg-white dark:bg-gray-700/30 rounded-xl border border-gray-200 dark:border-gray-600 hover:border-accent/50 dark:hover:border-accent/50 transition-all duration-300">
+      <div class="flex items-center space-x-3">
+        <div class="w-12 h-12 bg-gradient-to-br from-accent/20 to-accent/30 rounded-xl flex items-center justify-center">
+          <span class="text-2xl">🧪</span>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 dark:text-gray-100">Enables True Experimentation</h3>
+      </div>
+      <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+        We can test concepts that might seem "unmarketable" or unconventional without worrying about brand perception.
+      </p>
+    </div>
+
+    <div class="group space-y-4 p-6 bg-white dark:bg-gray-700/30 rounded-xl border border-gray-200 dark:border-gray-600 hover:border-accent/50 dark:hover:border-accent/50 transition-all duration-300">
+      <div class="flex items-center space-x-3">
+        <div class="w-12 h-12 bg-gradient-to-br from-accent/20 to-accent/30 rounded-xl flex items-center justify-center">
+          <span class="text-2xl">🎯</span>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 dark:text-gray-100">Focuses on Problems</h3>
+      </div>
+      <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+        The spotlight stays on solving real problems rather than building personal brands or raising capital.
+      </p>
+    </div>
+  </div>
+</div>
+
+## Our Methodology
+
+### **AI-Human Collaboration**
+We leverage AI as a thinking partner, not a replacement. AI helps us:
+- Generate and explore ideas without human preconceptions
+- Analyze markets and opportunities objectively
+- Prototype and test concepts rapidly
+- Scale research and development processes
+
+### **Rapid Experimentation**
+- **Week 1-2**: Concept validation and market research
+- **Week 3-4**: Rapid prototyping and initial testing
+- **Week 5-8**: Iteration based on feedback and data
+- **Week 9-12**: Decision point: scale, pivot, or archive
+
+### **Knowledge Sharing**
+Every experiment, successful or failed, contributes to our shared knowledge base. We document:
+- What worked and what didn't
+- Market insights and customer feedback
+- Technical learnings and implementation details
+- Strategic decisions and their outcomes
+
+## What We Build
+
+Our projects span various domains:
+- **Digital Products**: Apps, platforms, and tools
+- **Services**: New approaches to existing markets
+- **Experiments**: Proof-of-concept explorations
+- **Research**: Industry analysis and trend identification
+
+## Join the Journey
+
+While we operate anonymously, we believe in transparent sharing of knowledge. Follow our [insights](/insights) for learnings from each experiment, or reach out through our [anonymous contact system](/contact) if you have ideas to explore or questions about our methodology.
+
+---
+
+*The road less traveled often leads to the most interesting destinations.*

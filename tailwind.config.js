@@ -1,5 +1,9 @@
-import { addIconSelectors } from '@iconify/tailwind'
+import tailwindTypography from '@tailwindcss/typography'
+import { createRequire } from 'module'
 import defaultTheme from 'tailwindcss/defaultTheme'
+
+const require = createRequire(import.meta.url)
+const { addIconSelectors } = require('@iconify/tailwind')
 
 function withOpacity(variableName) {
   return ({ opacityValue }) => {
@@ -24,6 +28,6 @@ export default {
       }
     }
   },
-  plugins: [require('@tailwindcss/typography'), addIconSelectors(['tabler'])],
+  plugins: [tailwindTypography, addIconSelectors(['tabler'])],
   darkMode: ['selector', '[data-mode="dark"]']
 }

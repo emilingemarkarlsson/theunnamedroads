@@ -1,30 +1,24 @@
 import { defineThemeConfig } from './types'
 
 export default defineThemeConfig({
-  site: 'https://nordlys.fjelloverflow.dev',
-  title: 'the unnamed road',
-  description: 'A minimal Astro blog theme',
-  author: 'TUR',
+  site: 'https://theunnamedroad.dev',
+  title: 'The Unnamed Road',
+  description:
+    'An anonymous, AI-driven venture studio exploring new business ideas without traditional startup infrastructure',
+  author: 'The Unnamed Road',
   navbarItems: [
-    { label: 'Blog', href: '/posts' },
-    { label: 'Projects', href: '/projects' },
-    { label: 'Tags', href: '/tags' },
+    { label: 'Home', href: '/' },
     { label: 'About', href: '/about' },
-    {
-      label: 'Other pages',
-      children: [
-        { label: 'Landing page', href: '/' },
-        { label: '404 page', href: '/404' },
-        { label: 'Author: FjellOverflow', href: '/authors/FjellOverflow' },
-        { label: 'Tag: documentation', href: '/tags/documentation' }
-      ]
-    }
+    { label: 'Projects', href: '/projects' },
+    { label: 'Tools', href: '/tools' },
+    { label: 'Insights', href: '/insights' },
+    { label: 'Contact', href: '/contact' }
   ],
   footerItems: [
     {
-      icon: 'tabler--brand-github',
-      href: 'https://github.com/',
-      label: 'Github'
+      icon: 'tabler--mail',
+      href: '/contact',
+      label: 'Contact'
     },
     {
       icon: 'tabler--rss',
@@ -37,7 +31,7 @@ export default defineThemeConfig({
   locale: 'se',
   mode: 'dark',
   modeToggle: true,
-  colorScheme: 'scheme-mono',
+  colorScheme: 'scheme-conversion',
   openGraphImage: undefined,
   postsPerPage: 4,
   projectsPerPage: 3,

@@ -1,0 +1,280 @@
+---
+layout: '@/layouts/PageLayout.astro'
+title: The Toolbox - Our Tech Stack
+description: Discover the tools, frameworks, and technologies that power our anonymous AI-driven experiments
+activeHeaderLink: Tools
+---
+
+# The Toolbox
+
+We build with brains, bytes, and bots. Here's what fuels our experiments.
+
+<div class="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-8 md:p-12 mt-8">
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    
+    {/* AI & ML */}
+    <div class="space-y-4">
+      <div class="flex items-center space-x-3">
+        <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center">
+          <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100">🧠 AI & ML</h3>
+      </div>
+      <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+        Large language models, vector databases, and machine learning infrastructure
+      </p>
+      <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400">
+        <li class="flex items-start space-x-2">
+          <span class="text-accent mt-1">•</span>
+          <span><strong>OpenAI</strong> - ChatGPT, GPT-4 for ideation and development</span>
+        </li>
+        <li class="flex items-start space-x-2">
+          <span class="text-accent mt-1">•</span>
+          <span><strong>Hugging Face</strong> - Open-source transformers and models</span>
+        </li>
+        <li class="flex items-start space-x-2">
+          <span class="text-accent mt-1">•</span>
+          <span><strong>Pinecone</strong> - Vector database for semantic search</span>
+        </li>
+        <li class="flex items-start space-x-2">
+          <span class="text-accent mt-1">•</span>
+          <span><strong>LangChain</strong> - Building AI application workflows</span>
+        </li>
+        <li class="flex items-start space-x-2">
+          <span class="text-accent mt-1">•</span>
+          <span><strong>Replicate</strong> - Running models in the cloud</span>
+        </li>
+      </ul>
+    </div>
+
+    {/* Automation */}
+    <div class="space-y-4">
+      <div class="flex items-center space-x-3">
+        <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center">
+          <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100">⚙️ Automation</h3>
+      </div>
+      <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+        Workflow automation, web scraping, and continuous integration
+      </p>
+      <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400">
+        <li class="flex items-start space-x-2">
+          <span class="text-accent mt-1">•</span>
+          <span><strong>n8n</strong> - Self-hosted automation workflows</span>
+        </li>
+        <li class="flex items-start space-x-2">
+          <span class="text-accent mt-1">•</span>
+          <span><strong>Zapier</strong> - Quick integration for basic flows</span>
+        </li>
+        <li class="flex items-start space-x-2">
+          <span class="text-accent mt-1">•</span>
+          <span><strong>GitHub Actions</strong> - CI/CD and deployment automation</span>
+        </li>
+        <li class="flex items-start space-x-2">
+          <span class="text-accent mt-1">•</span>
+          <span><strong>Selenium</strong> - Stealth web automation and testing</span>
+        </li>
+        <li class="flex items-start space-x-2">
+          <span class="text-accent mt-1">•</span>
+          <span><strong>Puppeteer/Playwright</strong> - Modern browser automation</span>
+        </li>
+      </ul>
+    </div>
+
+    {/* Prototyping */}
+    <div class="space-y-4">
+      <div class="flex items-center space-x-3">
+        <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center">
+          <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100">🧪 Prototyping</h3>
+      </div>
+      <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+        Rapid MVP development and user research tools
+      </p>
+      <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400">
+        <li class="flex items-start space-x-2">
+          <span class="text-accent mt-1">•</span>
+          <span><strong>Bubble/Softr/WeWeb</strong> - No-code rapid prototyping</span>
+        </li>
+        <li class="flex items-start space-x-2">
+          <span class="text-accent mt-1">•</span>
+          <span><strong>Figma</strong> - UI/UX design and collaboration</span>
+        </li>
+        <li class="flex items-start space-x-2">
+          <span class="text-accent mt-1">•</span>
+          <span><strong>Webflow</strong> - Visual development for MVPs</span>
+        </li>
+        <li class="flex items-start space-x-2">
+          <span class="text-accent mt-1">•</span>
+          <span><strong>Formbricks</strong> - Anonymous user surveys</span>
+        </li>
+      </ul>
+    </div>
+
+    {/* Analytics */}
+    <div class="space-y-4">
+      <div class="flex items-center space-x-3">
+        <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center">
+          <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100">📊 Analytics</h3>
+      </div>
+      <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+        Privacy-focused tracking and behavioral insights
+      </p>
+      <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400">
+        <li class="flex items-start space-x-2">
+          <span class="text-accent mt-1">•</span>
+          <span><strong>Plausible</strong> - Privacy-focused web analytics</span>
+        </li>
+        <li class="flex items-start space-x-2">
+          <span class="text-accent mt-1">•</span>
+          <span><strong>PostHog</strong> - Self-hosted behavior tracking</span>
+        </li>
+        <li class="flex items-start space-x-2">
+          <span class="text-accent mt-1">•</span>
+          <span><strong>Mixpanel</strong> - Product experiments and A/B testing</span>
+        </li>
+      </ul>
+    </div>
+
+    {/* Data & Infrastructure */}
+    <div class="space-y-4">
+      <div class="flex items-center space-x-3">
+        <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center">
+          <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100">🗄 Data & Infrastructure</h3>
+      </div>
+      <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+        Databases, hosting, and backend services
+      </p>
+      <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400">
+        <li class="flex items-start space-x-2">
+          <span class="text-accent mt-1">•</span>
+          <span><strong>Supabase</strong> - Postgres with real-time subscriptions</span>
+        </li>
+        <li class="flex items-start space-x-2">
+          <span class="text-accent mt-1">•</span>
+          <span><strong>Firebase</strong> - Rapid prototyping backend</span>
+        </li>
+        <li class="flex items-start space-x-2">
+          <span class="text-accent mt-1">•</span>
+          <span><strong>PostgreSQL</strong> - Production database for complex apps</span>
+        </li>
+        <li class="flex items-start space-x-2">
+          <span class="text-accent mt-1">•</span>
+          <span><strong>Redis</strong> - Caching and microservices communication</span>
+        </li>
+        <li class="flex items-start space-x-2">
+          <span class="text-accent mt-1">•</span>
+          <span><strong>Vercel/Render/Railway</strong> - Modern deployment platforms</span>
+        </li>
+      </ul>
+    </div>
+
+    {/* Frontend Development */}
+    <div class="space-y-4">
+      <div class="flex items-center space-x-3">
+        <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center">
+          <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100">🧩 Frontend Frameworks</h3>
+      </div>
+      <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+        Modern web development tools and frameworks
+      </p>
+      <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400">
+        <li class="flex items-start space-x-2">
+          <span class="text-accent mt-1">•</span>
+          <span><strong>Astro</strong> - Content-focused sites (like this one)</span>
+        </li>
+        <li class="flex items-start space-x-2">
+          <span class="text-accent mt-1">•</span>
+          <span><strong>Next.js</strong> - React-based web applications</span>
+        </li>
+        <li class="flex items-start space-x-2">
+          <span class="text-accent mt-1">•</span>
+          <span><strong>Tailwind CSS</strong> - Utility-first styling</span>
+        </li>
+        <li class="flex items-start space-x-2">
+          <span class="text-accent mt-1">•</span>
+          <span><strong>TypeScript</strong> - Type-safe JavaScript development</span>
+        </li>
+      </ul>
+    </div>
+
+    {/* Privacy & Security */}
+    <div class="space-y-4">
+      <div class="flex items-center space-x-3">
+        <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center">
+          <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100">🔐 Privacy & Security</h3>
+      </div>
+      <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
+        Anonymous communication and security infrastructure
+      </p>
+      <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400">
+        <li class="flex items-start space-x-2">
+          <span class="text-accent mt-1">•</span>
+          <span><strong>ProtonMail</strong> - Encrypted email communication</span>
+        </li>
+        <li class="flex items-start space-x-2">
+          <span class="text-accent mt-1">•</span>
+          <span><strong>Tutanota</strong> - Alternative secure email service</span>
+        </li>
+        <li class="flex items-start space-x-2">
+          <span class="text-accent mt-1">•</span>
+          <span><strong>Cloudflare Zero Trust</strong> - Network security and access control</span>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+  
+  <div class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
+    <div class="text-center space-y-4">
+      <p class="text-lg text-gray-600 dark:text-gray-300 italic">
+        "We try not to get religious about tools—everything here is replaceable."
+      </p>
+      <p class="text-sm text-gray-500 dark:text-gray-400">
+        The point is speed, modularity, and no dependencies on headcount. We choose tools that let us move fast, fail fast, and learn fast.
+      </p>
+    </div>
+  </div>
+</div>
+
+## Why These Tools?
+
+Our stack is built around three core principles:
+
+### **🚀 Speed of Execution**
+Every tool must accelerate our time from idea to testable prototype. If it takes longer to set up than to validate, we choose something else.
+
+### **🔧 Modularity**
+Components should be swappable without breaking the entire system. This lets us experiment with new approaches without rewriting everything.
+
+### **👤 One-Person Operations**
+We optimize for tools that don't require large teams or complex coordination. AI augments what one person can accomplish.
+
+---
+
+*Tools evolve, principles endure. This stack reflects our current experiments—check back as we discover new ways to build.*

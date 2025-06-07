@@ -28,7 +28,8 @@ const Modes = ['dark', 'light'] as const
 export const ColorSchemes = [
   'scheme-mono',
   'scheme-nord',
-  'scheme-aurora'
+  'scheme-aurora',
+  'scheme-conversion'
 ] as const
 
 export type Mode = (typeof Modes)[number]
