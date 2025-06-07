@@ -6,6 +6,7 @@ import PageLayout, {
   type Props as PageLayoutProps
 } from '@/layouts/PageLayout.astro'
 import HeadingAnchorsPlugin from '@/plugins/HeadingAnchorsPlugin.astro'
+import config from '@/theme.config'
 import { toDateString } from '@/util'
 import { adjacentPosts } from '@/util/posts'
 import { resolveTags } from '@/util/tags'
@@ -33,9 +34,37 @@ const frontmatter: PageLayoutProps['frontmatter'] = {
 }
 
 const publishedStr = toDateString(post.data.publishedDate)
+
+// Article JSON-LD structured data
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: post.data.title,
+  description: post.data.description,
+  author: {
+    '@type': 'Organization',
+    name: post.data.author || 'The Unnamed Road'
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'The Unnamed Road'
+  },
+  datePublished: post.data.publishedDate.toISOString(),
+  dateModified:
+    post.data.updatedDate?.toISOString() || post.data.publishedDate.toISOString(),
+  url: `${config.site}/posts/${post.slug}`,
+  image: post.data.openGraphImage || `/posts/${post.slug}.png`,
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': `${config.site}/posts/${post.slug}`
+  }
+}
 ---
 
 <PageLayout {frontmatter}>
+  <!-- Article JSON-LD structured data -->
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+  
   <div slot="top" class="mt-4">
     <NavItem
       item={{

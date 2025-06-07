@@ -1,0 +1,22 @@
+@import "tailwindcss";
+@import "@tailwindcss/typography";
+
+@config {
+  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"];
+  
+  theme: {
+    extend: {
+      colors: {
+        accent: "rgb(var(--accent) / <alpha-value>)";
+        accent-bg: "rgb(var(--accent-bg) / <alpha-value>)";
+      }
+      fontFamily: {
+        sans: ["IBM Plex Sans", "ui-sans-serif", "system-ui"];
+      }
+    }
+  }
+}
+
+@plugin "@iconify/tailwind" {
+  icons: ["tabler"];
+}

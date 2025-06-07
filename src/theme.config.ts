@@ -28,7 +28,7 @@ export default defineThemeConfig({
   ],
 
   // optional settings
-  locale: 'se',
+  locale: 'en',
   mode: 'dark',
   modeToggle: true,
   colorScheme: 'scheme-conversion',

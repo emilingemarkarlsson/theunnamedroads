@@ -10,8 +10,25 @@
     @apply bg-accent-bg selection:bg-accent/75 overflow-y-scroll scroll-smooth underline-offset-4 selection:text-white selection:dark:text-black;
 
     #page-wrapper {
-      @apply mx-auto flex min-h-[100svh] w-full max-w-[90%] flex-col justify-between md:max-w-3xl;
+      @apply mx-auto flex min-h-[100svh] w-full max-w-[95%] sm:max-w-[90%] flex-col justify-between md:max-w-3xl px-2 sm:px-4 md:px-0;
     }
+  }
+
+  /* Responsive typography base */
+  html {
+    @apply text-sm sm:text-base;
+  }
+
+  /* Better touch targets for mobile */
+  button, 
+  .clickable,
+  a {
+    @apply min-h-[44px] sm:min-h-0 min-w-[44px] sm:min-w-0 flex items-center justify-center;
+  }
+
+  /* Responsive images */
+  img {
+    @apply max-w-full h-auto;
   }
 
   ::-webkit-scrollbar {

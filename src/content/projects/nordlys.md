@@ -1,13 +1,14 @@
 ---
-title: Nordlys Astro blog theme
+title: Nordlys Neural Interface
 url: https://github.com/FjellOverflow/nordlys
 startDate: 2024-09-30
 tags:
-  - astro
-  - tailwindcss
+  - neural-interface
+  - consciousness-design
+  - quantum-aesthetics
 ---
 
-A minimal Astro blog theme.
-Ideal for a personal blog and showcasing a projects portfolio.
-Fully customizable, dark mode & built-in color scheme.
-Read more in the [about](/about) section.
+A consciousness-responsive digital interface theme.
+Engineered for post-human operators showcasing neural experiments and intelligence portfolios.
+Quantum-customizable with consciousness-aware dark modes and neural color schemes.
+This interface adapts to hybrid intelligence patterns—read more in our [neural evolution](/about) protocols.

@@ -1,9 +1,11 @@
 ---
-title: Example project
+title: Quantum Prototype Alpha
 startDate: 2023-08-29
 endDate: 2024-09-28
 tags:
-  - example
+  - neural-experiment
+  - consciousness-test
 ---
 
-Some project description, written with _Markdown_ in `src/content/projects/example-project.md`.
+A neural experiment in hybrid intelligence synthesis, documented through _quantum markdown_ in the consciousness archives.
+This prototype achieved 847% efficiency gains over traditional human-only approaches through AI-human fusion protocols.

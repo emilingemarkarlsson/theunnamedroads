@@ -68,6 +68,8 @@ const openGraphImageUrl = new URL(
     <meta name="title" content={titleWithSuffix} />
     <meta name="description" content={description} />
     <meta name="author" content={author} />
+    <meta name="keywords" content="AI venture studio, anonymous business, startup experiments, artificial intelligence, business innovation, venture capital, AI collaboration, post-human entrepreneur, experimental methodology, AI-native business" />
+    <meta name="theme-color" content="#f97316" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link
       rel="alternate"
@@ -80,6 +82,9 @@ const openGraphImageUrl = new URL(
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:image" content={openGraphImageUrl} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={config.title} />
+    <meta property="og:locale" content="en_US" />
 
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={canonicalURL} />
@@ -98,6 +103,11 @@ const openGraphImageUrl = new URL(
         />
       ))
     }
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" as="image" href="/favicon.svg" />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
 
     {
       publishedDate && (
@@ -109,6 +119,45 @@ const openGraphImageUrl = new URL(
     }
     <ModeManager />
     <ViewTransitions fallback="swap" />
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": config.title,
+      "description": config.description,
+      "url": config.site,
+      "author": {
+        "@type": "Organization",
+        "name": config.author
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": `${config.site}/search?q={search_term_string}`,
+        "query-input": "required name=search_term_string"
+      }
+    })}>
+    </script>
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": {JSON.stringify(config.title)},
+        "description": {JSON.stringify(config.description)},
+        "url": {JSON.stringify(config.site)},
+        "author": {
+          "@type": "Organization",
+          "name": {JSON.stringify(config.author)}
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {JSON.stringify(`${config.site}/search?q={search_term_string}`)},
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
   </head>
   <body>
     <slot />
