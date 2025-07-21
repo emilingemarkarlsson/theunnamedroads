@@ -51,7 +51,8 @@ const articleSchema = {
   },
   datePublished: post.data.publishedDate.toISOString(),
   dateModified:
-    post.data.updatedDate?.toISOString() || post.data.publishedDate.toISOString(),
+    post.data.updatedDate?.toISOString() ||
+    post.data.publishedDate.toISOString(),
   url: `${config.site}/posts/${post.slug}`,
   image: post.data.openGraphImage || `/posts/${post.slug}.png`,
   mainEntityOfPage: {
@@ -63,8 +64,13 @@ const articleSchema = {
 
 <PageLayout {frontmatter}>
   <!-- Article JSON-LD structured data -->
-  <script slot="head" type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
-  
+    <!-- Article JSON-LD structured data -->
+  <script
+    slot="head"
+    type="application/ld+json"
+    set:html={JSON.stringify(articleSchema)}
+  ></script>
+
   <div slot="top" class="mt-4">
     <NavItem
       item={{
