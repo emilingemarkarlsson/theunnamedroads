@@ -14,7 +14,8 @@ projects.sort(sortProjects)
 // Map projects to their logos
 const projectLogos: Record<string, string> = {
   'anonymous-venture-studio': '/logos/unnamed-road-logo.svg',
-  'example-project': '/logos/unnamed-road-logo.svg'
+  'example-project': '/logos/unnamed-road-logo.svg',
+  'the-hockey-analytics': '/logos/tha-logo.svg'
 }
 
 // Map projects to status colors
@@ -28,6 +29,7 @@ const statusColors: Record<string, string> = {
 function getProjectStatus(slug: string): { status: string; color: string } {
   if (slug === 'anonymous-venture-studio') return { status: 'Active', color: statusColors.active }
   if (slug === 'example-project') return { status: 'Experimental', color: statusColors.experimental }
+  if (slug === 'the-hockey-analytics') return { status: 'Active', color: statusColors.active }
   return { status: 'Active', color: statusColors.active }
 }
 ---
