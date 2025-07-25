@@ -1,29 +1,18 @@
 ---
-import Pagination from '@/components/Pagination.astro'
 import ProjectsList from '@/components/ProjectsList.astro'
 import PageLayout, {
   type Props as PageLayoutProps
 } from '@/layouts/PageLayout.astro'
-import config from '@/theme.config'
 import { getProjects } from '@/util/projects'
-import type { GetStaticPaths, InferGetStaticPropsType } from 'astro'
 
-export const getStaticPaths = (async ({ paginate }) => {
-  const projects = await getProjects()
-
-  return paginate(projects, { pageSize: config.projectsPerPage })
-}) satisfies GetStaticPaths
-
-type Props = InferGetStaticPropsType<typeof getStaticPaths>
-
-const { page } = Astro.props
+// Get all projects without pagination
+const projects = await getProjects()
 
 const frontmatter: PageLayoutProps['frontmatter'] = {
   title: 'Projects',
   description:
     'Explore our AI-native projects where technology meets innovation to build the future roads of business.',
-  activeHeaderLink: 'Projects',
-  canonicalURL: new URL('/projects/1', Astro.site).toString()
+  activeHeaderLink: 'Projects'
 }
 ---
 
@@ -38,7 +27,5 @@ const frontmatter: PageLayoutProps['frontmatter'] = {
     </p>
   </div>
 
-  <ProjectsList projects={page.data} />
-
-  <Pagination slot="bottom" page={page} />
+  <ProjectsList {projects} />
 </PageLayout>
