@@ -74,7 +74,10 @@ const openGraphImageUrl = new URL(
     <meta name="title" content={titleWithSuffix} />
     <meta name="description" content={description} />
     <meta name="author" content={author} />
-    <meta name="keywords" content="AI venture studio, anonymous business, startup experiments, artificial intelligence, business innovation, venture capital, AI collaboration, post-human entrepreneur, experimental methodology, AI-native business" />
+    <meta name="keywords" content="AI venture studio, anonymous business, startup experiments, artificial intelligence, business innovation, venture capital, AI collaboration, post-human entrepreneur, experimental methodology, AI-native business, future roads, unnamed roads, AI-driven ventures, machine learning startups, automated business development, AI entrepreneurship, neural networks, deep learning ventures, AI-powered innovation, autonomous business creation" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="bingbot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link
       rel="alternate"
@@ -90,12 +93,16 @@ const openGraphImageUrl = new URL(
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={config.title} />
     <meta property="og:locale" content="en_US" />
+    <meta property="article:author" content={config.author} />
+    <meta property="article:publisher" content={config.title} />
 
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={canonicalURL} />
     <meta property="twitter:title" content={titleWithSuffix} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={openGraphImageUrl} />
+    <meta property="twitter:creator" content="@theunnamedroad" />
+    <meta property="twitter:site" content="@theunnamedroad" />
 
     {
       preloadFonts.map((font) => (
@@ -127,19 +134,37 @@ const openGraphImageUrl = new URL(
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
-      "@type": "WebSite",
+      "@type": "Organization",
       "name": config.title,
       "description": config.description,
       "url": config.site,
-      "author": {
+      "logo": `${config.site}/favicon-tur.svg`,
+      "founder": {
         "@type": "Organization",
         "name": config.author
       },
+      "sameAs": [
+        `${config.site}/feed.xml`,
+        `${config.site}/sitemap-index.xml`
+      ],
       "potentialAction": {
         "@type": "SearchAction",
         "target": `${config.site}/search?q={search_term_string}`,
         "query-input": "required name=search_term_string"
-      }
+      },
+      "mainEntity": {
+        "@type": "WebSite",
+        "@id": config.site,
+        "url": config.site,
+        "name": config.title,
+        "description": "AI-native venture studio building the future roads of business through anonymous, experimental methodology and post-human entrepreneurship",
+        "publisher": {
+          "@type": "Organization",
+          "name": config.title
+        }
+      },
+      "specialty": ["Artificial Intelligence", "Venture Capital", "Business Innovation", "Startup Development", "AI-Native Business Models"],
+      "knowsAbout": ["AI venture development", "Anonymous business creation", "Post-human entrepreneurship", "Neural network applications", "Automated business processes", "AI-driven innovation"]
     })}>
     </script>
   </head>

@@ -1,0 +1,38 @@
+# AI.txt for The Unnamed Road
+# This file provides information for AI agents and web crawlers
+
+Site: https://www.theunnamedroads.com
+Name: The Unnamed Road
+Type: AI-Native Venture Studio
+Purpose: Building future roads of business through AI-human collaboration
+
+# Content Structure
+Main Content: /
+Projects: /projects/
+Insights: /insights/
+Tools: /tools/
+About: /about/
+Contact: /contact/
+Feed: /feed.xml
+Sitemap: /sitemap-index.xml
+
+# Key Topics
+Topics: artificial intelligence, venture capital, business innovation, startup development, AI-native business models, post-human entrepreneurship, anonymous business creation, neural networks, machine learning, automated business processes
+
+# Crawling Guidelines
+Crawl-Delay: 1
+Respect-Robots-Txt: true
+Update-Frequency: daily
+
+# Contact for AI Integration
+Contact: /contact/
+API: Not available
+Status: Active development
+
+# Language and Region
+Language: en
+Region: Global
+Timezone: UTC
+
+# Last Updated
+Last-Modified: 2025-07-25
