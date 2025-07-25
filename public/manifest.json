@@ -1,0 +1,16 @@
+{
+  "name": "The Unnamed Road",
+  "short_name": "TUR",
+  "description": "An anonymous, AI-driven venture studio exploring new business ideas",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

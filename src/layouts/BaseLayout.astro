@@ -58,11 +58,13 @@ const openGraphImageUrl = new URL(
 <html lang={config.locale} class={config.colorScheme || 'scheme-mono'}>
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2" />
-    <link rel="shortcut icon" href="/favicon.svg?v=2" />
-    <link rel="apple-touch-icon" href="/favicon.svg?v=2" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=3" />
+    <link rel="shortcut icon" href="/favicon.svg?v=3" />
+    <link rel="apple-touch-icon" href="/favicon.svg?v=3" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=3" />
     <meta name="msapplication-TileColor" content="#000000" />
     <meta name="theme-color" content="#000000" />
+    <link rel="manifest" href="/manifest.json" />
 
     <meta name="viewport" content="width=device-width" />
     <link rel="canonical" href={canonicalURL} />
@@ -73,7 +75,6 @@ const openGraphImageUrl = new URL(
     <meta name="description" content={description} />
     <meta name="author" content={author} />
     <meta name="keywords" content="AI venture studio, anonymous business, startup experiments, artificial intelligence, business innovation, venture capital, AI collaboration, post-human entrepreneur, experimental methodology, AI-native business" />
-    <meta name="theme-color" content="#f97316" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link
       rel="alternate"
@@ -109,7 +110,6 @@ const openGraphImageUrl = new URL(
     }
     
     <!-- Preload critical resources -->
-    <link rel="preload" as="image" href="/favicon.svg" />
     <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
 
@@ -141,26 +141,6 @@ const openGraphImageUrl = new URL(
         "query-input": "required name=search_term_string"
       }
     })}>
-    </script>
-    
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": {JSON.stringify(config.title)},
-        "description": {JSON.stringify(config.description)},
-        "url": {JSON.stringify(config.site)},
-        "author": {
-          "@type": "Organization",
-          "name": {JSON.stringify(config.author)}
-        },
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": {JSON.stringify(`${config.site}/search?q={search_term_string}`)},
-          "query-input": "required name=search_term_string"
-        }
-      }
     </script>
   </head>
   <body>
