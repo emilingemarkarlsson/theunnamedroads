@@ -1,0 +1,27 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="readwiseGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d97706;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="30" fill="url(#readwiseGradient)"/>
+  
+  <!-- Readwise logo - book with highlights -->
+  <g fill="white">
+    <!-- Book outline -->
+    <rect x="18" y="16" width="20" height="26" rx="2" fill="none" stroke="white" stroke-width="2"/>
+    <line x1="22" y1="16" x2="22" y2="42" stroke="white" stroke-width="1"/>
+    
+    <!-- Highlighted text lines -->
+    <rect x="24" y="22" width="12" height="2" rx="1" fill="#fbbf24"/>
+    <rect x="24" y="27" width="10" height="2" rx="1"/>
+    <rect x="24" y="32" width="13" height="2" rx="1" fill="#fbbf24"/>
+    <rect x="24" y="37" width="8" height="2" rx="1"/>
+    
+    <!-- Bookmark -->
+    <path d="M34 16 L38 16 L38 28 L36 26 L34 28 Z" fill="#fbbf24"/>
+  </g>
+</svg>

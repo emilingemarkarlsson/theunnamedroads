@@ -20,15 +20,24 @@ const { page } = Astro.props
 
 const frontmatter: PageLayoutProps['frontmatter'] = {
   title: 'Projects',
+  description:
+    'Explore our AI-native projects where technology meets innovation to build the future roads of business.',
   activeHeaderLink: 'Projects',
   canonicalURL: new URL('/projects/1', Astro.site).toString()
 }
 ---
 
 <PageLayout {frontmatter}>
-  <h1>
-    {frontmatter.title}
-  </h1>
+  <div class="mb-8 text-center">
+    <h1 class="mb-4 text-3xl font-bold sm:text-4xl md:text-5xl">
+      Our Projects
+    </h1>
+    <p class="text-base-content/80 mx-auto max-w-2xl text-lg">
+      Building the future through AI-native development. Each project represents
+      our commitment to pushing boundaries and creating innovative solutions.
+    </p>
+  </div>
+
   <ProjectsList projects={page.data} />
 
   <Pagination slot="bottom" page={page} />

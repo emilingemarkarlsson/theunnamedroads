@@ -1,0 +1,34 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="databricksGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff3621;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff6a00;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="30" fill="url(#databricksGradient)"/>
+  
+  <!-- Databricks logo - stylized brick pattern -->
+  <g fill="white">
+    <!-- Top row -->
+    <rect x="16" y="18" width="8" height="6" rx="1"/>
+    <rect x="26" y="18" width="8" height="6" rx="1"/>
+    <rect x="36" y="18" width="8" height="6" rx="1"/>
+    
+    <!-- Second row -->
+    <rect x="12" y="26" width="8" height="6" rx="1"/>
+    <rect x="22" y="26" width="8" height="6" rx="1"/>
+    <rect x="32" y="26" width="8" height="6" rx="1"/>
+    <rect x="42" y="26" width="8" height="6" rx="1"/>
+    
+    <!-- Third row -->
+    <rect x="16" y="34" width="8" height="6" rx="1"/>
+    <rect x="26" y="34" width="8" height="6" rx="1"/>
+    <rect x="36" y="34" width="8" height="6" rx="1"/>
+    
+    <!-- Bottom row -->
+    <rect x="20" y="42" width="8" height="6" rx="1"/>
+    <rect x="30" y="42" width="8" height="6" rx="1"/>
+  </g>
+</svg>

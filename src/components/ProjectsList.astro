@@ -1,9 +1,6 @@
 ---
-import Separator from '@/components/layout/Separator.astro'
-import TagsBar from '@/components/TagsBar.astro'
-import { isAbsolute, resolveImageUrl, toMonthString } from '@/util'
+import { isAbsolute, toMonthString } from '@/util'
 import { sortProjects } from '@/util/projects'
-import { resolveTags } from '@/util/tags'
 import type { CollectionEntry } from 'astro:content'
 
 export interface Props {
@@ -14,74 +11,109 @@ const { projects } = Astro.props
 
 projects.sort(sortProjects)
 
-const renderedProjects = await Promise.all(
-  projects.map(async (project) => {
-    const { Content } = await project.render()
-    const { previewImage } = project.data
+// Map projects to their logos
+const projectLogos: Record<string, string> = {
+  'the-hockey-analytics': '/logos/hockey-analytics-logo.svg',
+  'nordlys': '/logos/nordlys-logo.svg', 
+  'unnamed-road-venture-studio': '/logos/unnamed-road-logo.svg'
+}
 
-    const previewImageUrl = previewImage
-      ? resolveImageUrl(previewImage)
-      : undefined
+// Map projects to status colors
+const statusColors: Record<string, string> = {
+  'active': 'bg-green-500',
+  'complete': 'bg-blue-500',
+  'experimental': 'bg-purple-500'
+}
 
-    return {
-      ...project,
-      Content,
-      previewImageUrl
-    }
-  })
-)
+// Extract status from project content
+function getProjectStatus(slug: string): { status: string; color: string } {
+  if (slug === 'the-hockey-analytics') return { status: 'Active', color: statusColors.active }
+  if (slug === 'nordlys') return { status: 'Complete', color: statusColors.complete }
+  if (slug === 'unnamed-road-venture-studio') return { status: 'Experimental', color: statusColors.experimental }
+  return { status: 'Active', color: statusColors.active }
+}
 ---
 
-<ul class="list-none p-0">
-  {
-    renderedProjects.map(({ data, Content, previewImageUrl }, index) => (
-      <>
-        <li class="flex gap-8">
-          {previewImageUrl && (
-            <img
-              class="mb-0 mt-8 hidden max-h-32 rounded md:block"
-              src={previewImageUrl}
-              alt={`${data.title} preview`}
-            />
-          )}
-          <div class="col-span-2 flex h-fit flex-col">
-            <div class="flex flex-col justify-between sm:flex-row sm:items-center">
-              {data.url && (
-                <a
-                  class="mb-2 text-xl font-normal no-underline"
-                  href={data.url}
-                  target={isAbsolute(data.url) ? '_blank' : '_self'}
-                >
-                  <span class="underline">{data.title}</span>
-                  {data.url && isAbsolute(data.url) && (
-                    <span class="iconify align-middle tabler--external-link" />
-                  )}
-                </a>
-              )}
-              {!data.url && <span class="mb-2 text-xl">{data.title}</span>}
-              <div class="my-2 text-sm opacity-75 sm:my-0">
-                <time>{toMonthString(data.startDate)}</time> -
-                {data.endDate && <time>{toMonthString(data.endDate)}</time>}
-                {!data.endDate && 'Now'}
-              </div>
-            </div>
-            <TagsBar tags={resolveTags(data.tags)} />
-            {previewImageUrl && (
-              <div class="flex w-full justify-center md:hidden">
-                <img
-                  class="max-w-3/4 mb-0 max-h-32 rounded object-contain"
-                  src={previewImageUrl}
-                  alt={`${data.title} preview`}
-                />
-              </div>
-            )}
-            <div class="opacity-75">
-              <Content />
-            </div>
+<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+  {projects.map((project) => {
+    const { data, slug } = project
+    const logo = projectLogos[slug] || '/logos/unnamed-road-logo.svg'
+    const { status, color } = getProjectStatus(slug)
+    const isExternal = data.url && isAbsolute(data.url)
+    const projectUrl = data.url || `/projects/${slug}`
+    
+    return (
+      <a 
+        href={projectUrl}
+        target={isExternal ? '_blank' : '_self'}
+        class="group block transform transition-all duration-300 hover:scale-105"
+      >
+        <div class="relative overflow-hidden rounded-xl border border-gray-200 bg-white p-6 shadow-md transition-all duration-300 hover:shadow-xl dark:border-gray-700 dark:bg-gray-800">
+          {/* Status Badge */}
+          <div class={`absolute right-4 top-4 rounded-full px-3 py-1 text-xs font-semibold text-white ${color}`}>
+            {status}
           </div>
-        </li>
-        {index !== projects.length - 1 && <Separator class="mb-6 ml-2 mt-0" />}
-      </>
-    ))
+          
+          {/* Logo */}
+          <div class="mb-4 flex justify-center">
+            <img 
+              src={logo} 
+              alt={`${data.title} logo`}
+              class="h-16 w-16 transition-transform duration-300 group-hover:scale-110"
+            />
+          </div>
+          
+          {/* Title */}
+          <h3 class="mb-2 text-center text-xl font-bold text-gray-900 dark:text-white">
+            {data.title}
+            {isExternal && (
+              <span class="iconify ml-1 inline-block align-middle text-sm tabler--external-link opacity-60" />
+            )}
+          </h3>
+          
+          {/* Description */}
+          <p class="mb-4 text-center text-sm text-gray-600 dark:text-gray-300 line-clamp-3">
+            {data.description}
+          </p>
+          
+          {/* Timeline */}
+          <div class="flex items-center justify-center text-xs text-gray-500 dark:text-gray-400">
+            <time>{toMonthString(data.startDate)}</time>
+            <span class="mx-2">-</span>
+            {data.endDate ? (
+              <time>{toMonthString(data.endDate)}</time>
+            ) : (
+              <span>Ongoing</span>
+            )}
+          </div>
+          
+          {/* Tags */}
+          <div class="mt-4 flex flex-wrap justify-center gap-1">
+            {data.tags.slice(0, 3).map((tag) => (
+              <span class="rounded-full bg-gray-100 px-2 py-1 text-xs text-gray-600 dark:bg-gray-700 dark:text-gray-300">
+                {tag.replace('-', ' ')}
+              </span>
+            ))}
+            {data.tags.length > 3 && (
+              <span class="rounded-full bg-gray-100 px-2 py-1 text-xs text-gray-600 dark:bg-gray-700 dark:text-gray-300">
+                +{data.tags.length - 3}
+              </span>
+            )}
+          </div>
+          
+          {/* Hover Effect */}
+          <div class="absolute inset-0 rounded-xl bg-gradient-to-br from-transparent to-accent/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+        </div>
+      </a>
+    )
+  })}
+</div>
+
+<style>
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
-</ul>
+</style>

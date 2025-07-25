@@ -1,0 +1,19 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle for consistency with other logos -->
+  <circle cx="32" cy="32" r="30" fill="#6c5ce7"/>
+  
+  <!-- Mage AI flame logo - based on their official branding -->
+  <g>
+    <!-- Main flame shape in white -->
+    <path d="M32 16 C35 18, 37 21, 37 25 C37 29, 35 32, 32 34 C29 32, 27 29, 27 25 C27 21, 29 18, 32 16 Z" fill="white"/>
+    
+    <!-- Secondary flame -->
+    <path d="M32 34 C34 35, 35 37, 35 39 C35 41, 34 43, 32 44 C30 43, 29 41, 29 39 C29 37, 30 35, 32 34 Z" fill="white"/>
+    
+    <!-- Small flame tip -->
+    <ellipse cx="32" cy="44" rx="1.5" ry="3" fill="white"/>
+    
+    <!-- Mage text -->
+    <text x="32" y="56" text-anchor="middle" font-family="Arial, sans-serif" font-size="5" font-weight="600" fill="white">MAGE</text>
+  </g>
+</svg>
