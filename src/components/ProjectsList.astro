@@ -13,9 +13,8 @@ projects.sort(sortProjects)
 
 // Map projects to their logos
 const projectLogos: Record<string, string> = {
-  'the-hockey-analytics': '/logos/hockey-analytics-logo.svg',
-  'nordlys': '/logos/nordlys-logo.svg', 
-  'unnamed-road-venture-studio': '/logos/unnamed-road-logo.svg'
+  'anonymous-venture-studio': '/logos/unnamed-road-logo.svg',
+  'example-project': '/logos/unnamed-road-logo.svg'
 }
 
 // Map projects to status colors
@@ -27,9 +26,8 @@ const statusColors: Record<string, string> = {
 
 // Extract status from project content
 function getProjectStatus(slug: string): { status: string; color: string } {
-  if (slug === 'the-hockey-analytics') return { status: 'Active', color: statusColors.active }
-  if (slug === 'nordlys') return { status: 'Complete', color: statusColors.complete }
-  if (slug === 'unnamed-road-venture-studio') return { status: 'Experimental', color: statusColors.experimental }
+  if (slug === 'anonymous-venture-studio') return { status: 'Active', color: statusColors.active }
+  if (slug === 'example-project') return { status: 'Experimental', color: statusColors.experimental }
   return { status: 'Active', color: statusColors.active }
 }
 ---
@@ -70,11 +68,6 @@ function getProjectStatus(slug: string): { status: string; color: string } {
               <span class="iconify ml-1 inline-block align-middle text-sm tabler--external-link opacity-60" />
             )}
           </h3>
-          
-          {/* Description */}
-          <p class="mb-4 text-center text-sm text-gray-600 dark:text-gray-300 line-clamp-3">
-            {data.description}
-          </p>
           
           {/* Timeline */}
           <div class="flex items-center justify-center text-xs text-gray-500 dark:text-gray-400">
