@@ -1,7 +1,7 @@
 import { defineThemeConfig } from './types'
 
 export default defineThemeConfig({
-  site: 'https://theunnamedroad.dev',
+  site: 'https://www.theunnamedroads.com',
   title: 'The Unnamed Road',
   description:
     'An anonymous, AI-driven venture studio exploring new business ideas without traditional startup infrastructure',
