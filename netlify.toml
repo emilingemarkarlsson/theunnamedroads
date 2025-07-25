@@ -20,3 +20,19 @@
 # Build image specification
 [template.environment]
   NETLIFY_BUILD_IMAGE = "ubuntu-noble-24.04"
+
+# Cache headers - shorter cache time for favicons to allow faster updates
+[[headers]]
+  for = "/favicon*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+    
+[[headers]]
+  for = "*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+    
+[[headers]]
+  for = "*.ico"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
