@@ -1,9 +1,11 @@
 [build]
   publish = "dist"
   command = "npm run build"
+  base = ""
 
 [build.environment]
   NODE_VERSION = "22"
+  NETLIFY_BUILD_IMAGE = "ubuntu-noble-24.04"
 
 # Use Ubuntu Noble 24.04 build image
 [build.processing]
@@ -12,14 +14,6 @@
 # Force Ubuntu Noble 24.04 build image
 [context.production]
   command = "npm run build"
-
-# Specify build image (this ensures Ubuntu Noble 24.04)
-[build]
-  base = ""
-  
-# Build image specification
-[template.environment]
-  NETLIFY_BUILD_IMAGE = "ubuntu-noble-24.04"
 
 # Cache headers - shorter cache time for favicons to allow faster updates
 [[headers]]
