@@ -13,47 +13,74 @@ tags:
 
 # The Hockey Analytics
 
-**Status:** Active Development  
+**Status:** 🚀 Active Development  
 **Timeline:** Continuous Enhancement  
-**Type:** Sports Analytics Platform
+**Type:** Sports Analytics Platform  
+**Live Platform:** [thehockeyanalytics.netlify.app](https://thehockeyanalytics.netlify.app)
 
-## Beyond Traditional Stats
+## Current Focus: Revolutionizing NHL Analysis
 
-While mainstream hockey analysis relies on basic metrics like goals and assists, **The Hockey Analytics** reveals the hidden patterns that determine game outcomes through advanced statistical modeling and machine learning algorithms.
+The Hockey Analytics is our **flagship active project** - a comprehensive NHL data analysis platform that transforms raw hockey statistics into actionable insights using advanced statistical modeling and machine learning algorithms.
 
-## The Platform
+## Platform Capabilities
 
-A comprehensive NHL analytics system that transforms raw game data into actionable insights:
+### 🏒 Advanced Player Metrics
+Beyond traditional stats like goals and assists, we reveal true player impact through:
+- Expected goals and assist models
+- Defensive contribution analysis  
+- Zone entry/exit effectiveness
+- Power play and penalty kill impact metrics
 
-- **Advanced Player Metrics**: Beyond traditional stats to reveal true player impact
-- **Team Performance Analysis**: Deep dive into tactical patterns and strategic effectiveness  
-- **Predictive Modeling**: Machine learning algorithms for game outcome predictions
-- **Interactive Visualizations**: Dynamic charts and graphs for data exploration
+### 📊 Team Performance Analysis
+Deep tactical insights including:
+- Line combination effectiveness
+- Strategic formation analysis
+- Game situation performance
+- Home/away advantage patterns
+
+### 🤖 Machine Learning Integration
+- **Predictive Modeling**: Game outcome forecasting algorithms
+- **Pattern Recognition**: Identifying tactical trends and player development
 - **Real-time Analytics**: Live game analysis and performance tracking
+- **Automated Insights**: AI-generated game summaries and player evaluations
+
+### 📈 Interactive Visualizations  
+- Dynamic charts showing performance trends
+- Heat maps for spatial game analysis
+- Comparative player and team dashboards
+- Historical data exploration tools
 
 ## Technical Innovation
 
-Built with modern web technologies to deliver:
+Built with modern web technologies for optimal performance:
+- **React/Next.js Frontend**: Responsive, fast-loading interface
 - **Real-time Data Processing**: Instant updates during NHL games
-- **Machine Learning Integration**: AI-powered pattern recognition and predictions
-- **Responsive Design**: Optimized for all devices and screen sizes
-- **Data Visualization**: Interactive charts using advanced charting libraries
-- **Performance Optimization**: Fast loading and smooth user experience
+- **Machine Learning Pipeline**: Python-based models for predictions
+- **Data Visualization**: D3.js and modern charting libraries
+- **Performance Optimization**: Cached queries and efficient data structures
 
-## The Analytics Edge
+## Impact & Results
 
-This platform goes beyond traditional hockey statistics to uncover:
-- **Hidden Player Contributions**: Metrics that reveal true player value
-- **Tactical Insights**: Understanding team strategies through data
-- **Predictive Intelligence**: Forecasting game outcomes and player performance
-- **Trend Analysis**: Identifying patterns across seasons and matchups
+- **Live NHL Coverage**: Real-time analysis of ongoing games
+- **Historical Database**: Comprehensive stats going back multiple seasons  
+- **User Growth**: Growing community of hockey analysts and fans
+- **Accuracy**: ML models achieving high prediction accuracy rates
 
-## Future Development
+## Future Development Roadmap
 
-Continuous expansion includes:
-- **Enhanced ML Models**: More sophisticated prediction algorithms
-- **Extended Coverage**: Potential expansion to other hockey leagues
-- **API Development**: Access for developers and analysts
-- **Mobile Applications**: Native apps for iOS and Android platforms
+### Phase 1 (Current)
+- Enhanced prediction algorithms
+- Expanded player tracking metrics
+- Mobile-responsive improvements
 
-**The Hockey Analytics** represents the future of sports analysis—where traditional scouting meets artificial intelligence to unlock the game's deepest secrets.
+### Phase 2 (Q3 2025)
+- API development for third-party access
+- Advanced video analysis integration
+- Custom dashboard creation tools
+
+### Phase 3 (2026+)
+- Expansion to other hockey leagues (IIHF, KHL)
+- Real-time coaching recommendation system
+- Mobile applications for iOS/Android
+
+**The Hockey Analytics** showcases how AI-native development can transform traditional sports analysis, creating tools that reveal insights previously impossible to discover through conventional methods.
