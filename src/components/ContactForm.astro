@@ -72,10 +72,11 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    const form = document.querySelector('form[name="contact"]');
+    const form = document.querySelector('form[name="contact"]') as HTMLFormElement;
     if (!form) return;
     
-    const submitButton = form.querySelector('button[type="submit"]');
+    const submitButton = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+    if (!submitButton) return;
     
     form.addEventListener('submit', async function(e) {
       e.preventDefault();
@@ -85,7 +86,10 @@
       submitButton.disabled = true;
       
       const formData = new FormData(form);
-      const data = Object.fromEntries(formData);
+      const data: Record<string, string> = {};
+      for (const [key, value] of formData.entries()) {
+        data[key] = value.toString();
+      }
       
       try {
         const response = await fetch('/.netlify/functions/contact-form', {
@@ -107,7 +111,9 @@
         console.error('Error:', error);
         alert('There was an error sending your message. Please try again.');
         
-        submitButton.textContent = originalText;
+        if (originalText) {
+          submitButton.textContent = originalText;
+        }
         submitButton.disabled = false;
       }
     });

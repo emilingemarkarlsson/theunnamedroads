@@ -50,9 +50,7 @@ const articleSchema = {
     name: 'The Unnamed Road'
   },
   datePublished: post.data.publishedDate.toISOString(),
-  dateModified:
-    post.data.updatedDate?.toISOString() ||
-    post.data.publishedDate.toISOString(),
+  dateModified: post.data.publishedDate.toISOString(),
   url: `${config.site}/posts/${post.slug}`,
   image: post.data.openGraphImage || `/posts/${post.slug}.png`,
   mainEntityOfPage: {
