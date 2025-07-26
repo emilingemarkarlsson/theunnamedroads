@@ -1,0 +1,15 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Hockey puck background -->
+  <circle cx="32" cy="32" r="30" fill="#1a1a1a" stroke="#333" stroke-width="2"/>
+  
+  <!-- Hockey stick -->
+  <path d="M20 44 L32 32 L42 28" stroke="#00ff88" stroke-width="3" fill="none" stroke-linecap="round"/>
+  
+  <!-- Data visualization bars -->
+  <rect x="45" y="20" width="3" height="15" fill="#00ff88"/>
+  <rect x="49" y="25" width="3" height="10" fill="#00ff88"/>
+  <rect x="53" y="15" width="3" height="20" fill="#00ff88"/>
+  
+  <!-- THA text -->
+  <text x="32" y="52" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#00ff88" text-anchor="middle">THA</text>
+</svg>
