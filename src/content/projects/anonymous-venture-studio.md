@@ -1,11 +1,12 @@
 ---
-title: The Unnamed Road - AI-Native Venture Studio
+title: The Unnamed Road
 description: An experimental approach to venture creation where AI and human intelligence merge to build businesses without traditional startup infrastructure
 startDate: 2024-11-15
+url: https://theunnamedroads.com
 tags: ['venture-studio', 'ai-native', 'business-innovation', 'experimental-methodology']
 ---
 
-# The Unnamed Road - AI-Native Venture Studio
+# The Unnamed Road
 
 **Status:** 🧪 Experimental Phase  
 **Type:** Business Methodology & Platform  
