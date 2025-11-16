@@ -1,24 +1,26 @@
 {
-  "name": "nordlys",
+  "name": "theunnamedroads",
   "type": "module",
-  "version": "0.2.1",
-  "description": "A minimal Astro blog theme",
-  "author": "FjellOverflow",
-  "license": "GPL-3.0-only",
-  "homepage": "https://github.com/FjellOverflow/nordlys",
+  "version": "1.0.0",
+  "description": "AI-native venture studio exploring the intersection of human and artificial intelligence",
+  "author": "The Unnamed Road",
+  "license": "MIT",
+  "homepage": "https://theunnamedroads.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/FjellOverflow/nordlys.git"
+    "url": "https://github.com/emilingemarkarlsson/theunnamedroads.git"
   },
   "bugs": {
-    "url": "https://github.com/FjellOverflow/nordlys/issues"
+    "url": "https://github.com/emilingemarkarlsson/theunnamedroads/issues"
   },
   "keywords": [
     "astro",
-    "blog",
-    "template",
-    "theme",
-    "tailwindcss"
+    "venture-studio",
+    "ai-native",
+    "portfolio",
+    "projects",
+    "tailwindcss",
+    "typescript"
   ],
   "scripts": {
     "dev": "astro dev",
