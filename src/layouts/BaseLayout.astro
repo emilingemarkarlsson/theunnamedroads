@@ -10,6 +10,8 @@ import ModeManager from '@/components/mode/ModeManager.astro'
 import CopyCodeButtonsPlugin from '@/plugins/CopyCodeButtonsPlugin.astro'
 import MediumZoomPlugin from '@/plugins/MediumZoomPlugin.astro'
 import GoogleAnalytics from '@/components/GoogleAnalytics.astro'
+import GoogleTagManager from '@/components/GoogleTagManager.astro'
+import GoogleTagManagerNoScript from '@/components/GoogleTagManagerNoScript.astro'
 import config from '@/theme.config'
 import { resolveImageUrl } from '@/util'
 import type { HTMLAttributes } from 'astro/types'
@@ -138,6 +140,7 @@ if (articleJsonLd) jsonLdGraph.push(articleJsonLd)
 <!doctype html>
 <html lang={config.locale} class={config.colorScheme || 'scheme-mono'}>
   <head>
+    <GoogleTagManager />
     <GoogleAnalytics />
     
     <meta charset="utf-8" />
@@ -230,6 +233,7 @@ if (articleJsonLd) jsonLdGraph.push(articleJsonLd)
     ></script>
   </head>
   <body>
+    <GoogleTagManagerNoScript />
     <slot />
     <CopyCodeButtonsPlugin />
     <MediumZoomPlugin />
