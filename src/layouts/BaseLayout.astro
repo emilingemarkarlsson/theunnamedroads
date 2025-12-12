@@ -9,6 +9,7 @@ import '@fontsource/ibm-plex-sans/latin.css'
 import ModeManager from '@/components/mode/ModeManager.astro'
 import CopyCodeButtonsPlugin from '@/plugins/CopyCodeButtonsPlugin.astro'
 import MediumZoomPlugin from '@/plugins/MediumZoomPlugin.astro'
+import GoogleAnalytics from '@/components/GoogleAnalytics.astro'
 import config from '@/theme.config'
 import { resolveImageUrl } from '@/util'
 import type { HTMLAttributes } from 'astro/types'
@@ -137,6 +138,8 @@ if (articleJsonLd) jsonLdGraph.push(articleJsonLd)
 <!doctype html>
 <html lang={config.locale} class={config.colorScheme || 'scheme-mono'}>
   <head>
+    <GoogleAnalytics />
+    
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon-tur.svg" />
     <link rel="shortcut icon" href="/favicon-tur.svg" />
@@ -225,15 +228,6 @@ if (articleJsonLd) jsonLdGraph.push(articleJsonLd)
         '@graph': jsonLdGraph
       })}
     ></script>
-
-    <!-- Google tag (gtag.js) -->
-    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-PY1CENL8ZR"></script>
-    <script is:inline>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(...args){dataLayer.push(args);}
-      gtag('js', new Date());
-      gtag('config', 'G-PY1CENL8ZR');
-    </script>
   </head>
   <body>
     <slot />
