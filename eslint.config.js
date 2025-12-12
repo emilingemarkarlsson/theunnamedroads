@@ -32,6 +32,18 @@ export default [
     }
   },
   {
+    files: ['**/*.astro'],
+    rules: {
+      'prettier/prettier': ['error', { parser: 'astro' }]
+    }
+  },
+  {
+    files: ['src/layouts/BaseLayout.astro'],
+    rules: {
+      'prettier/prettier': 'off'
+    }
+  },
+  {
     ignores: ['dist', 'node_modules', '.astro']
   }
 ]

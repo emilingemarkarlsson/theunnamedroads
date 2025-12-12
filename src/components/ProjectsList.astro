@@ -11,70 +11,84 @@ const { projects } = Astro.props
 
 projects.sort(sortProjects)
 
-// Map projects to their logos
-const projectLogos: Record<string, string> = {
-  'anonymous-venture-studio': '/logos/unnamed-road-logo.svg',
-  'example-project': '/logos/tha-logo.svg'
+const buildProjectStatus = (
+  project: CollectionEntry<'projects'>
+): { label: string; color: string; animate?: boolean } => {
+  const label = project.data.homepage?.statusLabel ?? 'Active Experiment'
+  const color = project.data.homepage?.statusDotColor ?? 'bg-emerald-500'
+  const animate = project.data.homepage?.animateDot ?? true
+
+  return { label, color, animate }
 }
 
-// Map projects to status colors
-const statusColors: Record<string, string> = {
-  'active': 'bg-green-500',
-  'complete': 'bg-blue-500',
-  'experimental': 'bg-purple-500'
-}
+const formatTimeline = (project: CollectionEntry<'projects'>) => {
+  const start = toMonthString(project.data.startDate)
+  if (!project.data.endDate) return start
 
-// Extract status from project content
-function getProjectStatus(slug: string): { status: string; color: string } {
-  if (slug === 'anonymous-venture-studio') return { status: 'Active', color: statusColors.active }
-  if (slug === 'example-project') return { status: 'Active', color: statusColors.active }
-  return { status: 'Active', color: statusColors.active }
+  const end = toMonthString(project.data.endDate)
+  return `${start} – ${end}`
 }
 ---
 
 <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-  {projects.map((project) => {
-    const { data, slug } = project
-    const logo = projectLogos[slug] || '/logos/unnamed-road-logo.svg'
-    const { status, color } = getProjectStatus(slug)
-    const isExternal = data.url && isAbsolute(data.url)
-    const projectUrl = data.url || `/projects/${slug}`
-    
-    return (
-      <a 
-        href={projectUrl}
-        target={isExternal ? '_blank' : '_self'}
-        class="group block h-full transition-all duration-500"
-      >
-        <div class="relative flex h-full min-h-[280px] flex-col overflow-hidden rounded-3xl border-2 border-white/[0.08] bg-gradient-to-br from-white/[0.08] via-white/[0.03] to-transparent p-10 shadow-2xl backdrop-blur-md transition-all duration-500 hover:border-accent/30 hover:bg-gradient-to-br hover:from-accent/[0.15] hover:via-accent/[0.05] hover:to-transparent hover:shadow-[0_20px_60px_-15px_rgba(241,141,79,0.3)]">
-          {/* Status Badge */}
-          <div class={`absolute left-6 top-6 flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-white shadow-md ${color}`}>
-            <span class="h-1 w-1 animate-pulse rounded-full bg-white"></span>
-            {status}
-          </div>
-          
-          {/* Content Container */}
-          <div class="flex flex-1 flex-col items-center justify-center">
-            {/* Title */}
-            <h3 class="mb-4 text-center text-4xl font-bold leading-tight tracking-tight text-white transition-colors duration-300 group-hover:text-accent">
-              {data.title}
-            </h3>
-            
-            {/* Timeline */}
-            <div class="flex items-center justify-center text-sm font-semibold text-white/60 transition-colors duration-300 group-hover:text-white/80">
-              <time>{toMonthString(data.startDate)}</time>
+  {
+    projects.map((project) => {
+      const { data, slug } = project
+      const { label, color, animate } = buildProjectStatus(project)
+      const timeline = formatTimeline(project)
+      const isExternal = data.url && isAbsolute(data.url)
+      const projectUrl = data.url || `/projects/${slug}`
+
+      return (
+        <a
+          href={projectUrl}
+          target={isExternal ? '_blank' : '_self'}
+          class="group block h-full transition-all duration-500"
+        >
+          <div class="relative flex h-full min-h-[320px] flex-col overflow-hidden rounded-3xl border-2 border-white/[0.08] bg-gradient-to-br from-white/[0.08] via-white/[0.03] to-transparent p-8 shadow-2xl backdrop-blur-md transition-all duration-500 hover:border-accent/30 hover:bg-gradient-to-br hover:from-accent/[0.15] hover:via-accent/[0.05] hover:to-transparent hover:shadow-[0_20px_60px_-15px_rgba(241,141,79,0.3)]">
+            {/* Status Badge */}
+            <div
+              class={`absolute left-6 top-6 flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-white shadow-md ${color}`}
+            >
+              <span
+                class={`h-1 w-1 rounded-full bg-white ${
+                  animate ? 'animate-pulse' : ''
+                }`}
+              />
+              {label}
             </div>
+
+            {/* Content Container */}
+            <div class="flex flex-1 flex-col items-start justify-center text-left">
+              <h3 class="mb-3 text-3xl font-bold leading-tight tracking-tight text-white transition-colors duration-300 group-hover:text-accent">
+                {data.title}
+              </h3>
+              <p class="project-summary mb-4 text-base text-white/80">
+                {data.description}
+              </p>
+              <div class="flex items-center gap-2 text-sm font-semibold text-white/60 transition-colors duration-300 group-hover:text-white/80">
+                <span class="inline-flex items-center gap-2 rounded-full border border-white/10 px-3 py-1 text-xs uppercase tracking-[0.3em] text-white/70">
+                  Timeline
+                </span>
+                <time>{timeline}</time>
+              </div>
+            </div>
+
+            {/* Hover Glow Effect */}
+            <div class="pointer-events-none absolute inset-0 rounded-3xl bg-gradient-to-br from-accent/10 via-purple-500/5 to-blue-500/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
           </div>
-          
-          {/* Hover Glow Effect */}
-          <div class="pointer-events-none absolute inset-0 rounded-3xl bg-gradient-to-br from-accent/10 via-purple-500/5 to-blue-500/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-        </div>
-      </a>
-    )
-  })}
+        </a>
+      )
+    })
+  }
 </div>
 
 <style>
+  .project-summary {
+    color: rgba(248, 250, 252, 0.82);
+    line-height: 1.5;
+  }
+
   .line-clamp-3 {
     display: -webkit-box;
     -webkit-line-clamp: 3;

@@ -3,12 +3,58 @@ layout: '@/layouts/PageLayout.astro'
 title: Contact
 description: Get in touch with us for collaboration opportunities and inquiries
 activeHeaderLink: Contact
+fullBleed: true
 ---
 
 import ContactForm from '@/components/ContactForm.astro'
 
-# Contact
+<div class="homepage-shell space-y-8">
+	<section class="section-shell space-y-6">
+		<div class="space-y-3">
+			<p class="section-eyebrow">Signal us</p>
+			<h1 class="text-4xl font-semibold text-white sm:text-5xl">Contact</h1>
+			<p class="text-base text-slate-300 sm:text-lg">
+				Drop a note if you want to co-build, license the operating system, or simply trade intelligence. We respond to every serious signal.
+			</p>
+		</div>
 
-We'd love to hear from you. Send us a message and we'll get back to you as soon as possible.
+    	<div class="grid gap-6 lg:grid-cols-2">
+    		<div class="space-y-4">
+    			<div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+    				<p class="text-xs uppercase tracking-[0.4em] text-slate-400">Preferred channel</p>
+    				<p class="mt-2 text-lg font-semibold text-white">Encrypted form response within 48h</p>
+    			</div>
+    			<div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+    				<p class="text-xs uppercase tracking-[0.4em] text-slate-400">Other vectors</p>
+    				<ul class="space-y-2 text-sm text-slate-300">
+    					<li>• Introductions via trusted mutuals</li>
+    					<li>• Direct signal on X: <a class="text-white" href="https://x.com/unnamedroads" target="_blank" rel="noreferrer">@unnamedroads</a></li>
+    					<li>• Partnerships through <a class="text-white" href="/tools">tooling stack</a></li>
+    				</ul>
+    			</div>
+    		</div>
+    		<div class="rounded-3xl border border-white/15 bg-white/5 p-6 shadow-2xl">
+    			<ContactForm />
+    		</div>
+    	</div>
+    </section>
 
-<ContactForm />
+    <section class="section-shell space-y-4">
+    	<p class="section-eyebrow">What happens next</p>
+    	<div class="grid gap-4 md:grid-cols-3">
+    		<article class="signal-card space-y-2">
+    			<h3 class="text-lg font-semibold text-white">01. Triage</h3>
+    			<p class="text-sm text-slate-300">We sanity-check fit, context, and urgency.</p>
+    		</article>
+    		<article class="signal-card space-y-2">
+    			<h3 class="text-lg font-semibold text-white">02. Intelligence share</h3>
+    			<p class="text-sm text-slate-300">Expect a short loom, memo, or deck with our POV.</p>
+    		</article>
+    		<article class="signal-card space-y-2">
+    			<h3 class="text-lg font-semibold text-white">03. Activation</h3>
+    			<p class="text-sm text-slate-300">Spin up a squad, license modules, or decline fast.</p>
+    		</article>
+    	</div>
+    </section>
+
+</div>

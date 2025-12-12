@@ -1,0 +1,104 @@
+---
+import ToolStackSection from '@/components/ToolStackSection.astro'
+import PageLayout from '@/layouts/PageLayout.astro'
+import { getEntry } from 'astro:content'
+
+const homepageEntry = await getEntry('homepage', 'structure')
+
+if (!homepageEntry) {
+  throw new Error(
+    'Homepage data is missing. Ensure content collections are synced.'
+  )
+}
+
+const toolsData = homepageEntry.data.tools
+---
+
+<PageLayout
+  frontmatter={{
+    title: 'Tools',
+    description:
+      'Essential tools and platforms that power our AI-native development workflow',
+    activeHeaderLink: 'Tools',
+    fullBleed: true
+  }}
+>
+  <div class="homepage-shell space-y-12">
+    <section class="section-shell space-y-6">
+      <p class="section-eyebrow">{toolsData.eyebrow}</p>
+      <h1 class="text-4xl font-semibold text-white sm:text-5xl">
+        Operating Stack Playbook
+      </h1>
+      <p class="max-w-3xl text-lg text-slate-200">
+        We map every platform to an OS phase so partners can trace how signals
+        enter, who composes the work, how deployments stay hardened, and which
+        surfaces keep AI teams observable.
+      </p>
+      <div class="grid gap-4 text-sm text-slate-300 sm:grid-cols-2">
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+          <p class="text-xs uppercase tracking-[0.4em] text-slate-400">
+            Why this stack
+          </p>
+          <p class="mt-2 text-base text-slate-200">
+            Every tool inside the studio is self-hosted or API-first so squads
+            can automate without waiting on new procurement.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+          <p class="text-xs uppercase tracking-[0.4em] text-slate-400">
+            How it evolves
+          </p>
+          <p class="mt-2 text-base text-slate-200">
+            We audit quarterly and swap components fast—anything that slows
+            launch cadence gets replaced or automated.
+          </p>
+        </div>
+      </div>
+      <div class="flex flex-col gap-3 pt-2 sm:flex-row">
+        <a
+          href="/contact"
+          class="inline-flex items-center justify-center gap-2 rounded-2xl bg-white px-6 py-3 font-semibold text-gray-900"
+        >
+          Start a project
+        </a>
+        <a
+          href="/about"
+          class="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/40 px-6 py-3 font-semibold text-white"
+        >
+          Read the studio thesis
+        </a>
+      </div>
+    </section>
+
+    <ToolStackSection
+      id="toolstack"
+      data={toolsData}
+      variant="page"
+      showHeader={false}
+    />
+
+    <section class="section-shell space-y-4">
+      <p class="section-eyebrow">Activation</p>
+      <h2 class="text-3xl font-semibold text-white">Plug into the stack</h2>
+      <p class="max-w-3xl text-base text-slate-200">
+        License specific squads, rent the full operating system, or co-build a
+        bespoke environment. We deploy these tools so you inherit reliable
+        infrastructure on day one.
+      </p>
+      <div class="flex flex-col gap-3 pt-2 sm:flex-row">
+        <a
+          href="/contact"
+          class="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/40 px-6 py-3 font-semibold text-white"
+        >
+          Talk to the studio
+        </a>
+        <a
+          href="/tools#toolstack"
+          class="inline-flex items-center justify-center gap-2 rounded-2xl px-6 py-3 font-semibold text-slate-200"
+        >
+          Jump to the stack
+        </a>
+      </div>
+    </section>
+  </div>
+</PageLayout>

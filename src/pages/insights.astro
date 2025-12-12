@@ -12,95 +12,105 @@ const posts = (await getCollection('posts'))
 
 const totalPages = Math.ceil(posts.length / config.postsPerPage)
 const currentPosts = posts.slice(0, config.postsPerPage)
+
+const frontmatter = {
+  title: 'Insights',
+  description:
+    'Knowledge, findings, and thought leadership from our experiments and explorations',
+  activeHeaderLink: 'Insights',
+  fullBleed: true
+}
 ---
 
-<PageLayout
-  frontmatter={{
-    title: 'Insights',
-    description:
-      'Knowledge, findings, and thought leadership from our experiments and explorations'
-  }}
->
-  <div class="space-y-12">
-    <section>
-      <h1 class="mb-4 text-3xl font-bold text-gray-900 dark:text-gray-100">
-        Insights & Learnings
-      </h1>
-      <p class="mb-8 text-lg text-gray-600 dark:text-gray-400">
-        Documenting our journey through business experimentation, AI
-        collaboration, and unconventional startup methodology. Each insight
-        represents learning from real experiments and explorations.
-      </p>
+<PageLayout {frontmatter}>
+  <div class="homepage-shell space-y-10">
+    <section class="section-shell space-y-4 text-center">
+      <p class="section-eyebrow">Field notes</p>
+      <div class="space-y-6">
+        <h1 class="text-4xl font-semibold text-white sm:text-5xl">
+          Insights &amp; learnings from the lab
+        </h1>
+        <p class="mx-auto max-w-3xl text-base text-slate-300 sm:text-lg">
+          Documenting experiments, failures, and frameworks uncovered while
+          building anonymously with AI. Every post captures signal pulled from
+          real ops.
+        </p>
+      </div>
+      <div class="flex flex-col gap-3 pt-2 sm:flex-row sm:justify-center">
+        <a
+          href="/feed.xml"
+          class="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/40 px-6 py-3 font-semibold text-white"
+        >
+          Subscribe via RSS
+        </a>
+        <a
+          href="/contact"
+          class="inline-flex items-center justify-center gap-2 rounded-2xl bg-white px-6 py-3 font-semibold text-gray-900"
+        >
+          Request a briefing
+        </a>
+      </div>
     </section>
 
-    <section>
-      <h2 class="mb-6 text-2xl font-semibold text-gray-900 dark:text-gray-100">
-        Latest Insights
-      </h2>
-      <PostsList posts={currentPosts} />
-
-      {
-        totalPages > 1 && (
-          <div class="mt-8 text-center">
+    <section class="section-shell space-y-8">
+      <div
+        class="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between"
+      >
+        <div>
+          <p class="section-eyebrow">Latest drops</p>
+          <h2 class="text-3xl font-semibold text-white">Fresh intelligence</h2>
+          <p class="mt-2 max-w-2xl text-slate-300">
+            We publish only when the data is interesting—expect sharp takes on
+            AI-native venture design, operating cadence, and experimentation
+            rituals.
+          </p>
+        </div>
+        {
+          totalPages > 1 && (
             <a
               href="/posts"
-              class="inline-flex items-center rounded-md border border-transparent bg-accent px-4 py-2 text-sm font-medium text-white hover:bg-accent/90 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
+              class="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/40 px-6 py-3 font-semibold text-white"
             >
-              View All Insights
-              <svg
-                class="-mr-1 ml-2 h-4 w-4"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                  clip-rule="evenodd"
-                />
-              </svg>
+              View the full archive
             </a>
-          </div>
-        )
-      }
+          )
+        }
+      </div>
+
+      <PostsList posts={currentPosts} />
     </section>
 
-    <section class="rounded-lg bg-gray-50 p-6 dark:bg-gray-800/50">
-      <h2 class="mb-4 text-xl font-semibold text-gray-900 dark:text-gray-100">
-        Categories of Insights
-      </h2>
-      <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
-        <div>
-          <h3 class="mb-2 font-medium text-gray-900 dark:text-gray-100">
-            Experimentation
-          </h3>
-          <p class="text-sm text-gray-600 dark:text-gray-400">
-            Methodologies, frameworks, and lessons from testing business ideas
+    <section class="section-shell space-y-6">
+      <div>
+        <p class="section-eyebrow">Signals we track</p>
+        <h2 class="text-3xl font-semibold text-white">Research streams</h2>
+      </div>
+      <div class="grid gap-4 md:grid-cols-2">
+        <article class="signal-card space-y-2">
+          <h3 class="text-xl font-semibold text-white">Experimentation</h3>
+          <p class="text-sm text-slate-300">
+            Methodologies, frameworks, and lessons from rapid venture tests.
           </p>
-        </div>
-        <div>
-          <h3 class="mb-2 font-medium text-gray-900 dark:text-gray-100">
-            AI Collaboration
-          </h3>
-          <p class="text-sm text-gray-600 dark:text-gray-400">
-            How we work with AI as a thinking partner and co-creator
+        </article>
+        <article class="signal-card space-y-2">
+          <h3 class="text-xl font-semibold text-white">AI Collaboration</h3>
+          <p class="text-sm text-slate-300">
+            How we pair operators with autonomous agents to compress build
+            cycles.
           </p>
-        </div>
-        <div>
-          <h3 class="mb-2 font-medium text-gray-900 dark:text-gray-100">
-            Market Analysis
-          </h3>
-          <p class="text-sm text-gray-600 dark:text-gray-400">
-            Insights from studying emerging trends and opportunities
+        </article>
+        <article class="signal-card space-y-2">
+          <h3 class="text-xl font-semibold text-white">Market Analysis</h3>
+          <p class="text-sm text-slate-300">
+            Scouting cultural, capital, and tech trends that unlock asymmetry.
           </p>
-        </div>
-        <div>
-          <h3 class="mb-2 font-medium text-gray-900 dark:text-gray-100">
-            Anonymous Operations
-          </h3>
-          <p class="text-sm text-gray-600 dark:text-gray-400">
-            Benefits and challenges of building without personal branding
+        </article>
+        <article class="signal-card space-y-2">
+          <h3 class="text-xl font-semibold text-white">Anonymous Ops</h3>
+          <p class="text-sm text-slate-300">
+            The art of shipping without identity baggage—systems over fame.
           </p>
-        </div>
+        </article>
       </div>
     </section>
   </div>

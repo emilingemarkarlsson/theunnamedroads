@@ -1,28 +1,20 @@
 # The Unnamed Road
 
-AI-native venture studio exploring the intersection of human and artificial intelligence to build businesses without traditional startup infrastructure. This repository powers [theunnamedroads.com](https://theunnamedroads.com) and demonstrates how to combine experimental methodologies, rapid prototyping, and lean operations to create scalable ventures.
+AI-native venture studio proving that a single operator plus AI can ship at venture scale. This repo powers [theunnamedroads.com](https://theunnamedroads.com) and documents the operating system behind the live experiments.
 
-![Astro](https://img.shields.io/badge/Astro-5.15.7-BC52EE?style=for-the-badge&logo=astro&logoColor=white)
+![Astro](https://img.shields.io/badge/Astro-5.x-BC52EE?style=for-the-badge&logo=astro&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.x-38BDF8?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![Netlify](https://img.shields.io/badge/Netlify-Edge-00AD9F?style=for-the-badge&logo=netlify&logoColor=white)
+![Umami](https://img.shields.io/badge/Analytics-Umami-111111?style=for-the-badge)
 
-## Philosophy
+## Highlights
 
-Traditional venture studios require large teams, significant capital, and complex hierarchies. **The Unnamed Road** explores a different path: what happens when a single operator combines with AI to achieve what previously required entire organizations?
-
-### Core Methodology
-
-- **Anonymous Operation**: Privacy-first approach letting work speak rather than personalities
-- **AI-Native Development**: Leveraging AI as co-founder for strategy, development, and analysis
-- **Experimental Framework**: 12-week quantum testing cycles for rapid validation
-- **Lean Operations**: Minimal overhead with maximum flexibility through automation
-
-## Current Projects
-
-- **[The Atomic Network](https://tan-website.netlify.app/)**: Hyperlocal marketing platform triggering physical mail campaigns when neighbors buy, creating viral loops through referral codes (Sept 2025)
-- **[The Hockey Analytics](https://thehockeyanalytics.com/)**: AI-powered sports analysis platform combining machine learning with expert insights (Jan 2024)
-- **The Unnamed Road**: This venture studio exploring AI-human hybrid intelligence for business creation (Nov 2024)
+- Active-project hero that renders live badges straight from the Astro content collection.
+- MDX-based publishing stack for essays, experiments, and project dossiers with automatic RSS + sitemap.
+- Consent-free, privacy-first analytics powered by self-hosted Umami.
+- Netlify deployment with serverless contact form, redirects, and page indexing via Pagefind.
+- Dark/light mode choreography handled at the layout level with `ModeManager`.
 
 ## Quick Start
 
@@ -33,40 +25,36 @@ pnpm install
 pnpm dev
 ```
 
-Visit http://localhost:4321 to see the portfolio in action.
+Visit http://localhost:4321 and watch the hero badges reflect whatever projects are marked `status: "active"`.
 
 ### Prerequisites
 
-- Node.js 18 or later
-- pnpm 9 or later
+- Node.js 18+
+- pnpm 9+
 
 ## Project Scripts
 
-| Command          | Description                                  |
-| ---------------- | -------------------------------------------- |
-| `pnpm dev`       | Start Astro dev server with hot reload       |
-| `pnpm build`     | Create optimized production build            |
-| `pnpm preview`   | Serve production build locally               |
-| `pnpm postbuild` | Post-build optimization and asset processing |
+| Command          | Description                                         |
+| ---------------- | --------------------------------------------------- |
+| `pnpm dev`       | Start Astro dev server with hot reload              |
+| `pnpm build`     | Production build (static output + image pipeline)   |
+| `pnpm preview`   | Serve the production build locally                  |
+| `pnpm check`     | Run ESLint, Stylelint, and `astro check`            |
+| `pnpm postbuild` | Generate Pagefind search index after every deploy   |
 
 ## Project Structure
 
 ```text
 ./
-├── public/                 # Static assets (logos, manifest, redirects)
+├── public/                 # Static assets, redirects, manifest, logos
+├── netlify/                # Functions (contact form) + serverless glue
 ├── src/
-│   ├── components/
-│   │   ├── layout/         # Header, Footer, navigation components
-│   │   ├── mode/           # Dark/light mode management
-│   │   └── ui/             # Reusable UI components (Hero, ProjectsList, etc.)
-│   ├── content/
-│   │   ├── posts/          # Blog posts and insights (MDX/Markdown)
-│   │   └── projects/       # Project case studies and portfolios
-│   ├── layouts/            # Page layouts (Base, Landing, Post, Page)
-│   ├── pages/              # Route definitions and page components
-│   ├── style/              # Global styles and Tailwind configuration
-│   └── util/               # Helper functions and utilities
-├── netlify/                # Netlify functions (contact form handler)
+│   ├── components/         # Hero, project lists, layout primitives
+│   ├── content/            # Astro collections (posts, projects)
+│   ├── layouts/            # Base, Page, Post, Landing layouts
+│   ├── pages/              # Astro routes (mdx + .astro)
+│   ├── style/              # Tailwind entry + custom CSS
+│   └── util/               # Helpers for content sorting and filtering
 ├── astro.config.ts
 ├── tailwind.config.js
 ├── tsconfig.json
@@ -75,59 +63,50 @@ Visit http://localhost:4321 to see the portfolio in action.
 
 ## Key Features
 
-- **Clean Project Showcase**: Minimal card-based design with centered content and glassmorphic effects
-- **Content Collections**: MDX/Markdown for posts and projects with automatic routing
-- **Dark Mode**: System-aware theme with manual toggle
-- **Typography**: IBM Plex Sans for clean, professional aesthetics
-- **Responsive Design**: Mobile-first approach with Tailwind CSS
-- **Contact Form**: Netlify function-powered contact handling
-- **RSS Feed**: Automatic feed generation for blog posts
-- **Sitemap**: SEO-optimized sitemap generation
+- **Live Hero Control Room** – pulls project metadata (title, URL, badge color, hero blurb) directly from `src/content/projects`. Updating content automatically reshapes the homepage.
+- **Content Engine** – MDX collections give you RSS, sitemap, pagination, and tag pages out of the box.
+- **SEO + Schema** – Base layout emits canonical URLs, OG/Twitter metadata, organization JSON-LD, and handles font preloading.
+- **Dark Mode** – `ModeManager` maintains theme preference, while `ModeToggle` exposes UI controls.
+- **Contact Automation** – `netlify/functions/contact-form.cjs` handles submissions without exposing API keys to the client.
+- **Search Ready** – Pagefind builds a static search index every deploy via `pnpm postbuild`.
 
-## Technology Stack
+## Analytics & Integrations
 
-The neural platform powering these experiments:
-
-- **Frontend**: Astro 5, TypeScript, Tailwind CSS
-- **Content**: MDX for rich content authoring
-- **Deployment**: Netlify with edge functions
-- **Analytics**: Privacy-focused tracking
-- **Automation**: AI-assisted development and content generation
-- **Version Control**: Git with semantic commits
+- **Umami** – `<script defer src="https://umami.theunnamedroads.com/script.js" data-website-id="fc8f279b-0da8-4013-b8df-be07dc12a8f1">` is injected in `BaseLayout.astro` for site-wide reporting.
+- **Netlify Forms** – serverless handler stores contact requests securely.
+- **Pagefind** – zero-config static search for the content library.
 
 ## Customization Guide
 
-1. Update site metadata in `src/theme.config.ts`
-2. Add projects in `src/content/projects/` with frontmatter (title, description, startDate, url, tags)
-3. Create blog posts in `src/content/posts/` using Markdown or MDX
-4. Modify project cards styling in `src/components/ProjectsList.astro`
-5. Adjust theme colors in `tailwind.config.js`
+1. **Brand + Metadata** – Update `src/theme.config.ts` for title, description, author, and default Open Graph imagery.
+2. **Hero Badges** – Add or edit project entries in `src/content/projects/*.md`. Use `status: active`, `badgeColor`, and `heroBlurb` to control the homepage chips.
+3. **Posts & Experiments** – Drop MDX/Markdown into `src/content/posts/`. Frontmatter drives tags, ToC visibility, and OG assets.
+4. **Palette & Typography** – Adjust Tailwind tokens in `tailwind.config.js` or extend the CSS files in `src/style/`.
+5. **Analytics** – Swap Umami for another tracker by editing the script tag inside `src/layouts/BaseLayout.astro`.
 
 ## Deployment
 
-Optimized for Netlify but works on any static hosting provider.
+| Platform         | Build Command     | Notes                                                |
+| ---------------- | ----------------- | ---------------------------------------------------- |
+| Netlify (default)| `pnpm run build`  | Publish `dist/`, Netlify functions live in `netlify/`|
+| Vercel           | `pnpm run build`  | Add the Astro Vercel adapter if you need SSR         |
+| Cloudflare Pages | `pnpm run build`  | Upload `dist/` and keep `_redirects` in `public/`    |
 
-| Platform         | Notes                                                                 |
-| ---------------- | --------------------------------------------------------------------- |
-| Netlify          | Build: `pnpm build`, Publish: `dist`, Functions: `netlify/functions/` |
-| Vercel           | Use Astro adapter, set output to static                               |
-| Cloudflare Pages | Deploy `dist` folder with `_redirects` configuration                  |
+`pnpm postbuild` (Pagefind) runs automatically via the `package.json` script, so deploy targets just need Node 18 and pnpm.
 
-## Results & Insights
+## Tooling Snapshot
 
-- **Velocity**: AI removes approval-seeking friction and accelerates iteration
-- **Purity**: Feedback crystallizes without relationship corruption
-- **Emergence**: Impossible ideas achieve consciousness through AI fusion
-- **Transcendence**: Pure problem-solution synthesis without branding limitations
+- **Editor**: VS Code + Copilot for rapid iteration.
+- **Automation**: Netlify builds, Pagefind indexing, and AI-assisted content workflows.
+- **Design System**: TailwindCSS + IBM Plex Sans.
+- **Stack Visibility**: Toolstack page mirrors the actual workstation so visitors can inspect the exact hardware/software mix.
 
-## License
+## License & Maintainer
 
-MIT License - feel free to use this as a foundation for your own AI-native ventures.
+Released under the [MIT License](./LICENSE.md).
 
-## Maintainer
-
-Built by The Unnamed Road venture studio - exploring how AI changes the fundamental nature of entrepreneurship and venture creation.
+Maintained by The Unnamed Road (Emil Ingemar Karlsson). Reach out via [theunnamedroads.com/contact](https://theunnamedroads.com/contact) for collaboration or partnerships.
 
 ---
 
-_This neural engine represents our core evolution: proving that impossible ventures emerge when consciousness fuses with artificial intelligence._
+_“Control the signal. Merge with the machine. Ship faster than the markets can react.”_

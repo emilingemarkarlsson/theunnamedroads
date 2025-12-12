@@ -3,7 +3,28 @@ title: The Unnamed Road
 description: An experimental approach to venture creation where AI and human intelligence merge to build businesses without traditional startup infrastructure
 startDate: 2024-11-15
 url: https://theunnamedroads.com
-tags: ['venture-studio', 'ai-native', 'business-innovation', 'experimental-methodology']
+tags:
+  [
+    'venture-studio',
+    'ai-native',
+    'business-innovation',
+    'experimental-methodology'
+  ]
+homepage:
+  featured: true
+  order: 5
+  statusLabel: Active
+  statusTone: active
+  statusDotColor: bg-emerald-500
+  animateDot: true
+  focus: Anonymous venture studio
+  summary: >-
+    Venture studio proving AI-native company creation with stealth
+    go-to-market experiments fueled by hybrid intelligence.
+  metricLabel: Proof cadence
+  metricValue: 12-week cycles
+  tag: Venture studio
+  href: /about
 ---
 
 # The Unnamed Road
@@ -19,16 +40,19 @@ Traditional venture studios require large teams, significant capital, and comple
 ## Core Methodology
 
 ### Anonymous Operation
+
 - **Privacy-First**: Building without personal brand attachment
-- **Focus on Results**: Let the work speak rather than personalities  
+- **Focus on Results**: Let the work speak rather than personalities
 - **Reduced Bias**: Decisions based on data and outcomes, not reputation
 
 ### AI-Native Development
+
 - **AI as Co-founder**: Leveraging AI for strategy, development, and analysis
 - **Automated Processes**: Streamlining operations through intelligent automation
 - **Data-Driven Decisions**: Using AI insights for business direction
 
 ### Experimental Approach
+
 - **Rapid Prototyping**: Quick testing of business concepts
 - **Lean Operations**: Minimal overhead, maximum flexibility
 - **Iterative Learning**: Continuous improvement through experimentation
@@ -36,6 +60,7 @@ Traditional venture studios require large teams, significant capital, and comple
 ## Current Experiments
 
 This venture studio approach is being tested through:
+
 - **The Hockey Analytics**: AI-powered sports analysis platform
 - **Content & Strategy**: AI-assisted content creation and business development
 - **Web Technologies**: Modern frameworks and automation tools
@@ -43,8 +68,9 @@ This venture studio approach is being tested through:
 ## The Future Roads
 
 The goal is to prove that AI-native venture creation can:
+
 - **Reduce Capital Requirements**: AI reduces need for human resources
-- **Accelerate Development**: Faster iteration and deployment cycles  
+- **Accelerate Development**: Faster iteration and deployment cycles
 - **Increase Success Rates**: Data-driven decision making
 - **Enable Solo Operators**: Individual entrepreneurs achieving enterprise-scale impact
 

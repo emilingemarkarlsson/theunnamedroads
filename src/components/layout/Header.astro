@@ -2,7 +2,6 @@
 import Dropdown from '@/components/Dropdown.astro'
 import MobileNavToggle from '@/components/layout/MobileNavToggle.astro'
 import NavItem from '@/components/layout/NavItem.astro'
-import Separator from '@/components/layout/Separator.astro'
 import ModeToggle from '@/components/mode/ModeToggle.astro'
 import config from '@/theme.config'
 import type { HeaderItem, NavItem as NavItemType } from '@/types'
@@ -17,8 +16,12 @@ export const isNavItem = (item: HeaderItem): item is NavItemType =>
   Object.hasOwn(item, 'href')
 ---
 
-<header>
-  <div class="flex items-center justify-between py-4 sm:py-6 md:py-8">
+<header
+  class="sticky top-0 z-50 border-b border-gray-200/60 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:border-white/10 dark:bg-gray-950/60"
+>
+  <div
+    class="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-3 py-2 sm:px-6 sm:py-4 lg:px-8 lg:py-6"
+  >
     <a
       href="/"
       class="flex gap-2 text-2xl font-bold text-accent sm:text-3xl lg:text-4xl"
@@ -68,9 +71,11 @@ export const isNavItem = (item: HeaderItem): item is NavItemType =>
       <MobileNavToggle />
     </div>
   </div>
-  <Separator />
-  <div id="mobile-nav" class="hidden">
-    <nav class="flex-col justify-end py-6">
+  <div
+    id="mobile-nav"
+    class="mx-auto hidden w-full max-w-6xl border-t border-gray-200/60 px-3 pt-4 sm:px-6 dark:border-white/10"
+  >
+    <nav class="flex-col justify-end pb-4">
       <ul class="flex flex-col items-center gap-2">
         {
           config.navbarItems.map((item) => (
@@ -91,6 +96,5 @@ export const isNavItem = (item: HeaderItem): item is NavItemType =>
         }
       </ul>
     </nav>
-    <Separator />
   </div>
 </header>

@@ -9,7 +9,6 @@ export default defineThemeConfig({
   navbarItems: [
     { label: 'Home', href: '/' },
     { label: 'About', href: '/about' },
-    { label: 'Projects', href: '/projects' },
     { label: 'Tools', href: '/tools' },
     { label: 'Insights', href: '/insights' },
     { label: 'Contact', href: '/contact' }

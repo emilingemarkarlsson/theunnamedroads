@@ -1,0 +1,548 @@
+{
+  "hero": {
+    "eyebrow": "Hybrid intelligence studio",
+    "headline": "AI-Native Ventures For The Brave",
+    "subheadline": "We design, launch, and operate multiple companies with a single human founder orchestrating a full stack of synthetic teams.",
+    "supportingLine": "Signal-led building across automation, media, commerce, and systems.",
+    "badges": [
+      { "id": "badge-operating", "label": "Always-on operating system" },
+      { "id": "badge-solo", "label": "One founder, many ventures" },
+      { "id": "badge-ai", "label": "Federated AI teams" }
+    ],
+    "stats": [
+      { "id": "ventures", "label": "Ventures running", "value": "06", "detail": "parallel builds" },
+      { "id": "launch", "label": "Median launch", "value": "12d", "detail": "concept to market" },
+      { "id": "automation", "label": "Autonomy", "value": "92%", "detail": "work handled by AI" },
+      {
+        "id": "legacy-headcount",
+        "label": "Traditional team",
+        "value": "18 FTE",
+        "detail": "needed in a legacy studio"
+      }
+    ],
+    "primaryCta": {
+      "label": "Review the OS",
+      "href": "#operating-system"
+    },
+    "secondaryCta": {
+      "label": "Meet the AI org",
+      "href": "#ai-teams"
+    }
+  },
+  "ventures": {
+    "eyebrow": "Active venture graph",
+    "title": "Where the AI org is deployed",
+    "description": "Every venture is operated by a dedicated trio of AI squads—build, communicate, optimize. Filter the board to see current surface areas.",
+    "filters": [
+      { "id": "automation", "label": "Automation" },
+      { "id": "commerce", "label": "Commerce" },
+      { "id": "media", "label": "Media" },
+      { "id": "infrastructure", "label": "Infrastructure" },
+      { "id": "labs", "label": "Labs" }
+    ],
+    "companies": [
+      {
+        "id": "autopath",
+        "name": "AUTOPATH",
+        "focus": "AI workflow infrastructure",
+        "summary": "Orchestrates sales and operations automation for high-velocity businesses.",
+        "tag": "automation",
+        "status": { "label": "Shipping", "tone": "active" },
+        "metric": { "label": "Playbooks live", "value": "28" },
+        "href": "/projects/post-human-venture-engine"
+      },
+      {
+        "id": "northbridge",
+        "name": "NORTHBRIDGE LABS",
+        "focus": "Realtime data commerce",
+        "summary": "Deploys micro APIs that feed market and product intelligence back into every venture.",
+        "tag": "infrastructure",
+        "status": { "label": "Scaling", "tone": "active" },
+        "metric": { "label": "Signals / hour", "value": "480" },
+        "href": "/projects/the-atomic-network"
+      },
+      {
+        "id": "circuit",
+        "name": "CIRCUIT COMMERCE",
+        "focus": "Autonomous storefronts",
+        "summary": "Launches and operates AI-run shops with dynamic pricing and narrative engines.",
+        "tag": "commerce",
+        "status": { "label": "Building", "tone": "building" },
+        "metric": { "label": "Experiments / week", "value": "65" }
+      },
+      {
+        "id": "quantum",
+        "name": "QUANTUM INK",
+        "focus": "Narrative manufacturing",
+        "summary": "Creates long-form media, brand systems, and launch kits on demand.",
+        "tag": "media",
+        "status": { "label": "Shipping", "tone": "active" },
+        "metric": { "label": "Campaigns / month", "value": "34" }
+      },
+      {
+        "id": "signal-loom",
+        "name": "SIGNAL LOOM",
+        "focus": "Market sensing grid",
+        "summary": "Listens to cultural, financial, and technical shifts to trigger new ventures.",
+        "tag": "labs",
+        "status": { "label": "Live monitoring", "tone": "exploring" },
+        "metric": { "label": "Signals mapped", "value": "3.2K" }
+      },
+      {
+        "id": "flowfield",
+        "name": "FLOWFIELD OPS",
+        "focus": "Ops autopilot",
+        "summary": "Turns messy internal processes into resilient autonomous workflows.",
+        "tag": "automation",
+        "status": { "label": "Pilot", "tone": "building" },
+        "metric": { "label": "Processes stabilized", "value": "19" }
+      }
+    ]
+  },
+  "signals": {
+    "eyebrow": "Signal cloud",
+    "title": "What we are tracking this quarter",
+    "description": "Tags are updated weekly. The heavier the tag, the more surface area we currently devote resources to.",
+    "tags": [
+      "synthetic labor",
+      "boutique ai orgs",
+      "memory-anchored ux",
+      "multi-agent orchestration",
+      "vertical automation",
+      "founder tools",
+      "liquid media",
+      "hyperlocal commerce",
+      "consensus scraping",
+      "low-latency ops",
+      "voice-native flows",
+      "autonomous care",
+      "edge creativity",
+      "chain-of-ops"
+    ],
+    "highlights": [
+      {
+        "id": "operating-stack",
+        "label": "Operating stack shifts",
+        "detail": "Studios want everything abstracted: briefing, building, launch, telemetry. We build the scaffolding."
+      },
+      {
+        "id": "trust-systems",
+        "label": "Trust systems",
+        "detail": "AI teams require observable control surfaces so humans can audit decision paths in real time."
+      },
+      {
+        "id": "story-engines",
+        "label": "Story engines",
+        "detail": "Narratives become living systems—media drops, product updates, and data share a single orchestrator."
+      }
+    ]
+  },
+  "operatingSystem": {
+    "eyebrow": "Hybrid OS",
+    "title": "From idea to autonomous company",
+    "description": "A single operating system loops discovery, build, launch, and optimization. Humans direct the vector; AI handles the surface area.",
+    "phases": [
+      {
+        "id": "scan",
+        "label": "SCAN",
+        "title": "Signal scanning",
+        "description": "Pattern-match the markets, sentiment, data leaks, and workflow gaps that matter.",
+        "meta": "Live dashboards · hourly refresh"
+      },
+      {
+        "id": "compose",
+        "label": "COMPOSE",
+        "title": "Venture composition",
+        "description": "Pair market gaps with available AI squads, resource budgets, and launch windows.",
+        "meta": "48h design-to-spec sprint"
+      },
+      {
+        "id": "deploy",
+        "label": "DEPLOY",
+        "title": "Autonomous deployment",
+        "description": "Spin up infrastructure, data, content, and go-live cadences without waiting for handoffs.",
+        "meta": "Under 2 weeks to revenue"
+      },
+      {
+        "id": "drive",
+        "label": "DRIVE",
+        "title": "Operate + amplify",
+        "description": "AI teams own campaigns, product loops, customer feedback, and finance telemetry.",
+        "meta": "92% autonomous execution"
+      },
+      {
+        "id": "decide",
+        "label": "DECIDE",
+        "title": "Scale or sunset",
+        "description": "Keep signal loops running; scale performing ventures, recycle assets from the rest.",
+        "meta": "Decision windows every 30 days"
+      }
+    ]
+  },
+  "aiTeams": {
+    "eyebrow": "Synthetic org chart",
+    "title": "Meet the AI organization",
+    "subtitle": "Every venture spins up a trio of squads: build, communicate, optimize. Each member has a distinct remit and reportable metrics.",
+    "note": "Human founder orchestrates strategy, approvals, and key relationships. Everything else is handled by AI counterparts.",
+    "groups": [
+      {
+        "id": "systems",
+        "name": "Systems Team",
+        "description": "Architecture, automation, and intelligence fabric for every venture.",
+        "members": [
+          {
+            "id": "aion",
+            "name": "AION",
+            "role": "Lead AI Engineer",
+            "strengths": "Speed, precision, multi-project execution",
+            "bio": "Turns strategic intent into hardened systems—from backend services to production-ready apps."
+          },
+          {
+            "id": "solace",
+            "name": "SOLACE",
+            "role": "Product Architect",
+            "strengths": "User systems, interaction design",
+            "bio": "Designs experiences that align user behavior with business outcomes across ventures."
+          },
+          {
+            "id": "neura",
+            "name": "NEURA",
+            "role": "Data & Signals Analyst",
+            "strengths": "Pattern detection, predictive modeling",
+            "bio": "Processes large data volumes to surface insights, calibrate bets, and eliminate guesswork."
+          }
+        ]
+      },
+      {
+        "id": "story",
+        "name": "Story Team",
+        "description": "Brand, narrative, and go-to-market cadence.",
+        "members": [
+          {
+            "id": "vexa",
+            "name": "VEXA",
+            "role": "Creative Director AI",
+            "strengths": "Narrative design, cross-channel creativity",
+            "bio": "Shapes how every venture looks, sounds, and feels—from names to long-form drops."
+          },
+          {
+            "id": "pulse",
+            "name": "PULSE",
+            "role": "Growth & Performance AI",
+            "strengths": "Rapid experimentation, funnel design",
+            "bio": "Runs continuous experiments to uncover compounding channels and scale the winners."
+          },
+          {
+            "id": "chant",
+            "name": "CHANT",
+            "role": "Community & Support AI",
+            "strengths": "Tone matching, live ops",
+            "bio": "Maintains relationships with users, early adopters, and partners across every touchpoint."
+          },
+          {
+            "id": "flare",
+            "name": "FLARE",
+            "role": "Market Architect",
+            "strengths": "Omnichannel launches, partner flywheels",
+            "bio": "Designs integrated marketing systems that align stories, surfaces, and conversion loops for each venture.",
+            "status": "hiring",
+            "statusLabel": "Recruiting"
+          }
+        ]
+      },
+      {
+        "id": "optimize",
+        "name": "Optimization Team",
+        "description": "Telemetry, finance, and decision automation.",
+        "members": [
+          {
+            "id": "prism",
+            "name": "PRISM",
+            "role": "Telemetry Strategist",
+            "strengths": "Instrumentation, observability",
+            "bio": "Builds dashboards and alerting so humans can audit every decision surface in real time."
+          },
+          {
+            "id": "loop",
+            "name": "LOOP",
+            "role": "Ops Stabilizer",
+            "strengths": "Feedback routing, process repair",
+            "bio": "Routes qualitative and quantitative feedback back into the OS to keep ventures compounding."
+          },
+          {
+            "id": "trace",
+            "name": "TRACE",
+            "role": "Finance & Risk AI",
+            "strengths": "Scenario modeling, guardrails",
+            "bio": "Models upside, risk, and runway to inform when to scale, pause, or sunset ventures."
+          }
+        ]
+      }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "Proof of impact",
+    "title": "Builders tapping the OS",
+    "description": "Operators, founders, and partners plug into the system when they need a flexible AI-native org.",
+    "quotes": [
+      {
+        "id": "quote-caro",
+        "quote": "They launch in days. Brief on Monday, get working product, story, and growth engine by Friday.",
+        "author": "Caro V.",
+        "role": "Founder, parallel retail"
+      },
+      {
+        "id": "quote-ian",
+        "quote": "The telemetry layer is wild—every AI agent outputs rationale so we can audit in real time.",
+        "author": "Ian M.",
+        "role": "Angel operator"
+      },
+      {
+        "id": "quote-sora",
+        "quote": "We plugged in for a go-to-market sprint and kept them on as our standing story team.",
+        "author": "Sora L.",
+        "role": "Chief of Staff, autonomy lab"
+      }
+    ]
+  },
+  "tools": {
+    "eyebrow": "Stack",
+    "title": "Tools we deploy daily",
+    "description": "Every OS phase has named tools so partners can see exactly how we sense, compose, deploy, and audit autonomous ventures.",
+    "groups": [
+      {
+        "id": "scan",
+        "phase": "SCAN",
+        "title": "Signal intake grid",
+        "description": "Scrapers, research capture, and model synths pouring context into NEURA and Signal Loom every hour.",
+        "theme": {
+          "gradientFrom": "rgba(75, 225, 255, 0.28)",
+          "gradientTo": "rgba(15, 23, 42, 0.12)",
+          "accent": "#4be1ff",
+          "glow": "rgba(75, 225, 255, 0.18)"
+        },
+        "tools": [
+          {
+            "id": "readwise",
+            "name": "Readwise",
+            "description": "Source-of-truth for highlights so agents can recall research in briefings.",
+            "href": "https://readwise.io/read",
+            "logo": {
+              "type": "image",
+              "src": "/logos/readwise-logo.svg",
+              "alt": "Readwise logo"
+            }
+          },
+          {
+            "id": "apify",
+            "name": "Apify",
+            "description": "Turns messy public surfaces into structured signals we can automate on.",
+            "href": "https://apify.com/",
+            "logo": {
+              "type": "monogram",
+              "label": "AP",
+              "background": "#f59e0b"
+            }
+          },
+          {
+            "id": "perplexity",
+            "name": "Perplexity API",
+            "description": "Rapid synthesis pass when we're probing opaque markets or niche tech.",
+            "href": "https://www.perplexity.ai/",
+            "logo": {
+              "type": "monogram",
+              "label": "PX",
+              "background": "#0f172a"
+            }
+          }
+        ]
+      },
+      {
+        "id": "compose",
+        "phase": "COMPOSE",
+        "title": "Briefing + runway",
+        "description": "Where specs, budgets, and squad assignments get locked before we greenlight a venture.",
+        "theme": {
+          "gradientFrom": "rgba(255, 145, 77, 0.24)",
+          "gradientTo": "rgba(91, 76, 147, 0.18)",
+          "accent": "#ff914d",
+          "glow": "rgba(255, 145, 77, 0.25)"
+        },
+        "tools": [
+          {
+            "id": "notion",
+            "name": "Notion API",
+            "description": "Structured venture briefs and rituals that sync straight into the OS.",
+            "href": "https://www.notion.so/",
+            "logo": {
+              "type": "monogram",
+              "label": "N",
+              "background": "#111827"
+            }
+          },
+          {
+            "id": "linear",
+            "name": "Linear",
+            "description": "Sequences autonomous workstreams with human approval checkpoints.",
+            "href": "https://linear.app/",
+            "logo": {
+              "type": "monogram",
+              "label": "LI",
+              "background": "#5e6ad2"
+            }
+          },
+          {
+            "id": "cursor",
+            "name": "Cursor",
+            "description": "Agentic IDE loops to get from spec to ship-ready systems fast.",
+            "href": "https://www.cursor.com/",
+            "logo": {
+              "type": "monogram",
+              "label": "CR",
+              "background": "#0f1117"
+            }
+          }
+        ]
+      },
+      {
+        "id": "deploy",
+        "phase": "DEPLOY",
+        "title": "Autonomous runtime",
+        "description": "Data, orchestration, and hosting layers that keep deployments reliable without headcount.",
+        "theme": {
+          "gradientFrom": "rgba(82, 251, 210, 0.22)",
+          "gradientTo": "rgba(15, 118, 110, 0.12)",
+          "accent": "#34f5c5",
+          "glow": "rgba(52, 245, 197, 0.2)"
+        },
+        "tools": [
+          {
+            "id": "databricks",
+            "name": "Databricks",
+            "description": "Unified analytics and ML runtime for streaming, training, and collaboration.",
+            "href": "https://www.databricks.com/",
+            "logo": {
+              "type": "image",
+              "src": "/logos/databricks-logo.svg",
+              "alt": "Databricks logo"
+            }
+          },
+          {
+            "id": "mage",
+            "name": "Mage",
+            "description": "Modern pipeline builder when we need deterministic data products.",
+            "href": "https://www.mage.ai/",
+            "logo": {
+              "type": "image",
+              "src": "/logos/mage-logo.svg",
+              "alt": "Mage logo"
+            }
+          },
+          {
+            "id": "n8n",
+            "name": "n8n",
+            "description": "Self-hosted workflow automation gluing agents, APIs, and telemetry.",
+            "href": "https://n8n.io/",
+            "logo": {
+              "type": "image",
+              "src": "/logos/n8n-logo.svg",
+              "alt": "n8n logo"
+            }
+          },
+          {
+            "id": "elestio",
+            "name": "Elest.io",
+            "description": "Managed DevOps that keeps our experiments hardened and deployable.",
+            "href": "https://elest.io/",
+            "logo": {
+              "type": "image",
+              "src": "/logos/elest-logo.svg",
+              "alt": "Elest.io logo"
+            }
+          }
+        ]
+      },
+      {
+        "id": "drive",
+        "phase": "DRIVE + DECIDE",
+        "title": "Observability + guardrails",
+        "description": "The telemetry layer PRISM and TRACE use to audit every autonomous decision.",
+        "theme": {
+          "gradientFrom": "rgba(192, 132, 252, 0.3)",
+          "gradientTo": "rgba(59, 7, 100, 0.15)",
+          "accent": "#c084fc",
+          "glow": "rgba(192, 132, 252, 0.25)"
+        },
+        "tools": [
+          {
+            "id": "grafana",
+            "name": "Grafana",
+            "description": "Live dashboards spanning product, growth, and finance signals across ventures.",
+            "href": "https://grafana.com/",
+            "logo": {
+              "type": "monogram",
+              "label": "GF",
+              "background": "#f97316"
+            }
+          },
+          {
+            "id": "langfuse",
+            "name": "Langfuse",
+            "description": "Prompt and response tracing for Flowise chains plus custom evaluators.",
+            "href": "https://langfuse.com/",
+            "logo": {
+              "type": "monogram",
+              "label": "LF",
+              "background": "#0ea5e9"
+            }
+          },
+          {
+            "id": "metabase",
+            "name": "Metabase",
+            "description": "Decision cockpit for our 30-day venture reviews and financial guardrails.",
+            "href": "https://www.metabase.com/",
+            "logo": {
+              "type": "monogram",
+              "label": "MB",
+              "background": "#2563eb"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "Why we exist",
+    "title": "The Unnamed Roads",
+    "subtitle": "A studio built for founders who prefer orchestration over headcount.",
+    "body": [
+      "The Unnamed Roads is an AI-native venture studio built around a simple idea: a single founder can orchestrate an entire organization of AI teams to build multiple companies in parallel.",
+      "Instead of hiring large human teams, we deploy specialized AI agents to handle engineering, marketing, operations, analysis, and finance. The result is a new kind of organization—lean, fast, massively scalable, and constantly learning.",
+      "Each venture we launch is another 'unnamed road' into the future. We exist to explore as many of those roads as possible."
+    ],
+    "pillars": [
+      { "id": "parallel", "title": "Parallel building", "detail": "Spin up multiple ventures simultaneously without diluting focus." },
+      { "id": "synthetic", "title": "Synthetic org", "detail": "Dedicated AI teams act like departments with shared telemetry." },
+      { "id": "adaptive", "title": "Adaptive ops", "detail": "Every workflow is instrumented, versioned, and continuously improved." }
+    ],
+    "stats": [
+      { "id": "assets", "label": "Reusable assets", "value": "240+" },
+      { "id": "network", "label": "Signals ingested / day", "value": "3.8K" },
+      { "id": "speed", "label": "Average sprint", "value": "72h" }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Open door",
+    "title": "Plug into the operating system",
+    "description": "Partners, investors, and ambitious operators can embed with the studio or license specific squads.",
+    "primaryCta": {
+      "label": "Start a project",
+      "href": "/contact"
+    },
+    "secondaryCta": {
+      "label": "Download the brief",
+      "href": "/tools"
+    },
+    "note": "Currently booking new collaborations for the next 6-week cycle."
+  }
+}

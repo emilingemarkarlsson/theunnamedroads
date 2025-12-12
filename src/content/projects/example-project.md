@@ -9,6 +9,21 @@ tags:
   - machine-learning
   - data-visualization
   - nhl-analytics
+homepage:
+  featured: true
+  order: 4
+  statusLabel: Active
+  statusTone: active
+  statusDotColor: bg-emerald-500
+  animateDot: true
+  focus: Hockey Analytics Platform
+  summary: >-
+    Hockey analytics engine turning raw game data into insights, predictive
+    models, and interactive reports for coaches and bettors.
+  metricLabel: Models live
+  metricValue: 7 ML stacks
+  tag: Sports AI
+  href: https://www.thehockeyanalytics.com/
 ---
 
 # The Hockey Analytics
@@ -26,7 +41,7 @@ While mainstream hockey analysis relies on basic metrics like goals and assists,
 A comprehensive NHL analytics system that transforms raw game data into actionable insights:
 
 - **Advanced Player Metrics**: Beyond traditional stats to reveal true player impact
-- **Team Performance Analysis**: Deep dive into tactical patterns and strategic effectiveness  
+- **Team Performance Analysis**: Deep dive into tactical patterns and strategic effectiveness
 - **Predictive Modeling**: Machine learning algorithms for game outcome predictions
 - **Interactive Visualizations**: Dynamic charts and graphs for data exploration
 - **Real-time Analytics**: Live game analysis and performance tracking
@@ -34,6 +49,7 @@ A comprehensive NHL analytics system that transforms raw game data into actionab
 ## Technical Innovation
 
 Built with modern web technologies to deliver:
+
 - **Real-time Data Processing**: Instant updates during NHL games
 - **Machine Learning Integration**: AI-powered pattern recognition and predictions
 - **Responsive Design**: Optimized for all devices and screen sizes
@@ -43,6 +59,7 @@ Built with modern web technologies to deliver:
 ## The Analytics Edge
 
 This platform goes beyond traditional hockey statistics to uncover:
+
 - **Hidden Player Contributions**: Metrics that reveal true player value
 - **Tactical Insights**: Understanding team strategies through data
 - **Predictive Intelligence**: Forecasting game outcomes and player performance
@@ -51,6 +68,7 @@ This platform goes beyond traditional hockey statistics to uncover:
 ## Future Development
 
 Continuous expansion includes:
+
 - **Enhanced ML Models**: More sophisticated prediction algorithms
 - **Extended Coverage**: Potential expansion to other hockey leagues
 - **API Development**: Access for developers and analysts

@@ -12,7 +12,6 @@ import MediumZoomPlugin from '@/plugins/MediumZoomPlugin.astro'
 import config from '@/theme.config'
 import { resolveImageUrl } from '@/util'
 import type { HTMLAttributes } from 'astro/types'
-import { ViewTransitions } from 'astro:transitions'
 
 const preloadFonts = [
   ibmPlexNormal,
@@ -129,15 +128,15 @@ const openGraphImageUrl = new URL(
       )
     }
     <ModeManager />
-    <ViewTransitions fallback="swap" />
     <script
+      is:inline
       defer
       src="https://umami.theunnamedroads.com/script.js"
       data-website-id="fc8f279b-0da8-4013-b8df-be07dc12a8f1"
     />
     
     <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json" set:html={JSON.stringify({
+    <script is:inline type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": config.title,

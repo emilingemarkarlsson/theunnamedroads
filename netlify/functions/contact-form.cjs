@@ -1,4 +1,4 @@
-exports.handler = async (event, context) => {
+exports.handler = async (event) => {
   // Only handle POST requests
   if (event.httpMethod !== 'POST') {
     return {

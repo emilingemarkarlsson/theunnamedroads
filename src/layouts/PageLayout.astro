@@ -15,6 +15,7 @@ export type Props = BaseLayoutProps & {
     activeHeaderLink: string
     scrollToTop: boolean
     searchable: boolean
+    fullBleed: boolean
   }>
 }
 
@@ -24,8 +25,11 @@ const {
   scrollProgress = config.scrollProgress,
   scrollToTop = config.scrollToTop,
   activeHeaderLink,
-  searchable = false
+  searchable = false,
+  fullBleed = false
 } = frontmatter
+
+const contentContainerClass = 'mx-auto w-full max-w-6xl px-3 sm:px-6 lg:px-8'
 ---
 
 <BaseLayout frontmatter={frontmatter}>
@@ -37,10 +41,18 @@ const {
       <slot name="aside" />
     </aside>
 
-    <main class="mt-6 sm:mt-12" data-pagefind-body={searchable}>
-      <Prose class="mb-6 sm:mb-12">
-        <slot />
-      </Prose>
+    <main class="mt-6 pb-10 sm:mt-12 sm:pb-16" data-pagefind-body={searchable}>
+      {
+        fullBleed ? (
+          <div class={contentContainerClass}>
+            <slot />
+          </div>
+        ) : (
+          <Prose class={`mb-6 sm:mb-12 ${contentContainerClass}`}>
+            <slot />
+          </Prose>
+        )
+      }
     </main>
     <slot name="bottom" />
     <Footer />

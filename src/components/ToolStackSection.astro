@@ -1,0 +1,345 @@
+---
+import type { CollectionEntry } from 'astro:content'
+
+type ToolGroup = CollectionEntry<'homepage'>['data']['tools']['groups'][number]
+type Tool = ToolGroup['tools'][number]
+
+interface Props {
+  id?: string
+  data: CollectionEntry<'homepage'>['data']['tools']
+  variant?: 'homepage' | 'page'
+  showHeader?: boolean
+}
+
+const {
+  data,
+  id = 'tools',
+  variant = 'homepage',
+  showHeader = true
+} = Astro.props
+
+const isHomepageVariant = variant === 'homepage'
+const sectionClass = isHomepageVariant
+  ? 'section-shell space-y-8'
+  : 'section-shell space-y-12 toolstack-standalone'
+
+const getLogoLabel = (name: string) =>
+  name
+    .split(/\s+/)
+    .map((word) => word.charAt(0))
+    .join('')
+    .slice(0, 2)
+    .toUpperCase()
+---
+
+<section
+  id={id}
+  class={`toolstack-section ${sectionClass}`}
+  data-reveal={isHomepageVariant ? '' : undefined}
+>
+  {
+    showHeader && (
+      <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+        <div class="space-y-3">
+          <p class="section-eyebrow">{data.eyebrow}</p>
+          <h2 class="text-3xl font-semibold text-slate-100">{data.title}</h2>
+          <p class="max-w-2xl text-base text-slate-300">{data.description}</p>
+        </div>
+      </div>
+    )
+  }
+  <div class="tool-groups">
+    {
+      data.groups.map((group, groupIndex) => (
+        <article
+          class="tool-group-card"
+          style={`--phase-gradient-from:${group.theme.gradientFrom};--phase-gradient-to:${group.theme.gradientTo};--phase-accent:${group.theme.accent};--phase-glow:${
+            group.theme.glow ?? 'rgba(0,0,0,0.35)'
+          };--reveal-delay:${groupIndex * 90}ms;`}
+          data-reveal={isHomepageVariant ? '' : undefined}
+        >
+          <div class="tool-group-heading">
+            <span class="tool-phase-chip">{group.phase}</span>
+            <div>
+              <h3 class="tool-group-title">{group.title}</h3>
+              <p class="tool-group-description">{group.description}</p>
+            </div>
+          </div>
+          <div class="tools-grid">
+            {group.tools.map((tool: Tool, toolIndex) => (
+              <a
+                href={tool.href}
+                target="_blank"
+                rel="noreferrer noopener"
+                class="tool-card"
+                data-reveal={isHomepageVariant ? '' : undefined}
+                style={`--reveal-delay:${toolIndex * 60}ms;`}
+              >
+                <div class="tool-card-top">
+                  {tool.logo?.type === 'image' ? (
+                    <span class="tool-logo is-image">
+                      <img
+                        src={tool.logo.src}
+                        alt={tool.logo.alt ?? `${tool.name} logo`}
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </span>
+                  ) : (
+                    <span
+                      class="tool-logo is-monogram"
+                      style={
+                        tool.logo?.type === 'monogram' && tool.logo.background
+                          ? `--tool-logo-bg:${tool.logo.background};`
+                          : undefined
+                      }
+                    >
+                      {tool.logo?.type === 'monogram'
+                        ? tool.logo.label
+                        : getLogoLabel(tool.name)}
+                    </span>
+                  )}
+                  <div>
+                    <p class="tool-card-label">{tool.name}</p>
+                    <p class="tool-card-description">{tool.description}</p>
+                  </div>
+                </div>
+                <span class="tool-card-arrow" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M7 17L17 7M8 7h9v9"
+                    />
+                  </svg>
+                </span>
+              </a>
+            ))}
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</section>
+
+<style is:global>
+  .toolstack-section {
+    position: relative;
+  }
+
+  .toolstack-standalone {
+    border-radius: 40px;
+    border: 1px solid var(--tur-border, rgba(148, 163, 184, 0.25));
+    background: linear-gradient(
+      135deg,
+      rgba(4, 7, 18, 0.85),
+      rgba(1, 3, 11, 0.92)
+    );
+    box-shadow: 0 45px 120px rgba(3, 6, 18, 0.65);
+  }
+
+  .tool-groups {
+    display: grid;
+    gap: clamp(1.25rem, 3vw, 2rem);
+  }
+
+  .tool-group-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px;
+    border: 1px solid var(--tur-border, rgba(148, 163, 184, 0.25));
+    background: linear-gradient(
+      145deg,
+      rgba(8, 13, 26, 0.95),
+      rgba(3, 6, 18, 0.92)
+    );
+    padding: clamp(1.5rem, 3vw, 2.5rem);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    box-shadow: 0 30px 80px rgba(2, 6, 23, 0.55);
+  }
+
+  .tool-group-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(
+      135deg,
+      var(--phase-gradient-from, rgba(255, 255, 255, 0.05)),
+      var(--phase-gradient-to, rgba(0, 0, 0, 0))
+    );
+    opacity: 0.95;
+    pointer-events: none;
+  }
+
+  .tool-group-card::after {
+    content: '';
+    position: absolute;
+    inset: 6px;
+    border-radius: inherit;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+  .tool-group-card > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .tool-group-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .tool-group-heading > div:last-child {
+    flex: 1;
+  }
+
+  @media (min-width: 768px) {
+    .tool-group-heading {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 1.25rem;
+    }
+  }
+
+  .tool-phase-chip {
+    align-self: flex-start;
+    border-radius: 9999px;
+    border: 1px solid
+      var(--phase-accent, var(--tur-text-soft, rgba(148, 163, 184, 0.68)));
+    padding: 0.35rem 1.1rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--phase-accent, var(--tur-text-soft, rgba(148, 163, 184, 0.68)));
+  }
+
+  .tool-group-title {
+    font-size: clamp(1.4rem, 2vw, 1.75rem);
+    font-weight: 600;
+    color: var(--tur-text-strong, #f8fafc);
+  }
+
+  .tool-group-description {
+    margin-top: 0.4rem;
+    color: var(--tur-text-muted, rgba(226, 232, 240, 0.8));
+    max-width: 60ch;
+  }
+
+  .tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+  }
+
+  .tool-card {
+    position: relative;
+    border-radius: 24px;
+    border: 1px solid var(--phase-accent, rgba(255, 255, 255, 0.12));
+    background: linear-gradient(
+      135deg,
+      rgba(6, 10, 24, 0.95),
+      rgba(4, 7, 18, 0.7)
+    );
+    padding: 1.35rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    min-height: 190px;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 20px 60px var(--phase-glow, rgba(0, 0, 0, 0.35));
+    transition:
+      transform 0.25s ease,
+      border-color 0.25s ease,
+      box-shadow 0.25s ease;
+  }
+
+  .tool-card::before {
+    content: '';
+    position: absolute;
+    inset: 1px;
+    border-radius: inherit;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    pointer-events: none;
+  }
+
+  .tool-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--phase-accent, rgba(255, 255, 255, 0.4));
+    box-shadow: 0 35px 80px var(--phase-glow, rgba(0, 0, 0, 0.45));
+  }
+
+  .tool-card-top {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .tool-logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 16px;
+    flex-shrink: 0;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: var(--tool-logo-bg, rgba(255, 255, 255, 0.04));
+  }
+
+  .tool-logo.is-image {
+    padding: 0.35rem;
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .tool-logo.is-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.45));
+  }
+
+  .tool-logo.is-monogram {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: #f8fafc;
+    text-transform: uppercase;
+  }
+
+  .tool-card-label {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--tur-text-strong, #f8fafc);
+  }
+
+  .tool-card-description {
+    font-size: 0.95rem;
+    color: var(--tur-text-muted, rgba(226, 232, 240, 0.8));
+  }
+
+  .tool-card-arrow {
+    margin-top: auto;
+    align-self: flex-end;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    border: 1px solid var(--phase-accent, rgba(255, 255, 255, 0.3));
+    color: var(--phase-accent, rgba(255, 255, 255, 0.65));
+  }
+
+  .tool-card-arrow svg {
+    width: 18px;
+    height: 18px;
+  }
+</style>

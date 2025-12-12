@@ -7,21 +7,69 @@ import { getProjects } from '@/util/projects'
 
 // Get all projects without pagination
 const projects = await getProjects()
+const projectCount = projects.length
 
 const frontmatter: PageLayoutProps['frontmatter'] = {
   title: 'Projects',
   description:
     'Explore our AI-native projects where technology meets innovation to build the future roads of business.',
-  activeHeaderLink: 'Projects'
+  activeHeaderLink: 'Projects',
+  fullBleed: true
 }
 ---
 
 <PageLayout {frontmatter}>
-  <div class="mb-16 text-center">
-    <h1 class="mb-4 text-3xl font-bold sm:text-4xl md:text-5xl">
-      Projects
-    </h1>
-  </div>
+  <div class="homepage-shell space-y-10">
+    <section class="section-shell space-y-4 text-center">
+      <p class="section-eyebrow">Experiments in flight</p>
+      <div class="space-y-6">
+        <h1 class="text-4xl font-semibold text-white sm:text-5xl">
+          Where we test impossible playbooks
+        </h1>
+        <p class="mx-auto max-w-3xl text-base text-slate-300 sm:text-lg">
+          Every build is a data point in our post-human methodology. These are
+          the stacks, services, and networks currently proving what a single
+          operator plus AI can ship.
+        </p>
+      </div>
+      <div class="flex flex-col gap-3 pt-2 sm:flex-row sm:justify-center">
+        <a
+          href="/contact"
+          class="inline-flex items-center justify-center gap-2 rounded-2xl bg-white px-6 py-3 font-semibold text-gray-900"
+        >
+          Propose a build
+        </a>
+        <a
+          href="/tools"
+          class="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/40 px-6 py-3 font-semibold text-white"
+        >
+          Inspect the stack
+        </a>
+      </div>
+    </section>
 
-  <ProjectsList {projects} />
+    <section class="section-shell space-y-8">
+      <div
+        class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between"
+      >
+        <div>
+          <p class="section-eyebrow">Active portfolio</p>
+          <h2 class="text-3xl font-semibold text-white">
+            {projectCount} builds across research, product, and GTM
+          </h2>
+          <p class="mt-2 max-w-2xl text-slate-300">
+            From stealth operating systems to public-facing SaaS launches, each
+            project runs on the same automation-first discipline.
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <span class="filter-chip">AI-native</span>
+          <span class="filter-chip">Solo operator</span>
+          <span class="filter-chip">12-week proofs</span>
+        </div>
+      </div>
+
+      <ProjectsList {projects} />
+    </section>
+  </div>
 </PageLayout>
