@@ -116,6 +116,15 @@
         const result = await response.json()
 
         if (response.ok) {
+          // GTM/GA4 event
+          ;(window as unknown as { dataLayer: unknown[] }).dataLayer =
+            (window as unknown as { dataLayer: unknown[] }).dataLayer || []
+          ;(window as unknown as { dataLayer: unknown[] }).dataLayer.push({
+            event: 'contact_form_submit',
+            form_name: 'contact',
+            status: 'success'
+          })
+
           form.innerHTML =
             '<div class="text-center py-8"><div class="text-green-600 dark:text-green-400 text-lg font-medium mb-2">✅ Message sent successfully!</div><p class="text-gray-600 dark:text-gray-400">Thank you for your message. We will get back to you soon.</p></div>'
         } else {
@@ -124,6 +133,13 @@
       } catch (error) {
         console.error('Error:', error)
         alert('There was an error sending your message. Please try again.')
+        ;(window as unknown as { dataLayer: unknown[] }).dataLayer =
+          (window as unknown as { dataLayer: unknown[] }).dataLayer || []
+        ;(window as unknown as { dataLayer: unknown[] }).dataLayer.push({
+          event: 'contact_form_submit',
+          form_name: 'contact',
+          status: 'error'
+        })
 
         submitButton.textContent = originalText
         submitButton.disabled = false
