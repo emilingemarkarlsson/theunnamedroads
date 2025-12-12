@@ -99,86 +99,6 @@
       }
     ]
   },
-  "signals": {
-    "eyebrow": "Signal cloud",
-    "title": "What we are tracking this quarter",
-    "description": "Tags are updated weekly. The heavier the tag, the more surface area we currently devote resources to.",
-    "tags": [
-      "synthetic labor",
-      "boutique ai orgs",
-      "memory-anchored ux",
-      "multi-agent orchestration",
-      "vertical automation",
-      "founder tools",
-      "liquid media",
-      "hyperlocal commerce",
-      "consensus scraping",
-      "low-latency ops",
-      "voice-native flows",
-      "autonomous care",
-      "edge creativity",
-      "chain-of-ops"
-    ],
-    "highlights": [
-      {
-        "id": "operating-stack",
-        "label": "Operating stack shifts",
-        "detail": "Studios want everything abstracted: briefing, building, launch, telemetry. We build the scaffolding."
-      },
-      {
-        "id": "trust-systems",
-        "label": "Trust systems",
-        "detail": "AI teams require observable control surfaces so humans can audit decision paths in real time."
-      },
-      {
-        "id": "story-engines",
-        "label": "Story engines",
-        "detail": "Narratives become living systems—media drops, product updates, and data share a single orchestrator."
-      }
-    ]
-  },
-  "operatingSystem": {
-    "eyebrow": "Hybrid OS",
-    "title": "From idea to autonomous company",
-    "description": "A single operating system loops discovery, build, launch, and optimization. Humans direct the vector; AI handles the surface area.",
-    "phases": [
-      {
-        "id": "scan",
-        "label": "SCAN",
-        "title": "Signal scanning",
-        "description": "Pattern-match the markets, sentiment, data leaks, and workflow gaps that matter.",
-        "meta": "Live dashboards · hourly refresh"
-      },
-      {
-        "id": "compose",
-        "label": "COMPOSE",
-        "title": "Venture composition",
-        "description": "Pair market gaps with available AI squads, resource budgets, and launch windows.",
-        "meta": "48h design-to-spec sprint"
-      },
-      {
-        "id": "deploy",
-        "label": "DEPLOY",
-        "title": "Autonomous deployment",
-        "description": "Spin up infrastructure, data, content, and go-live cadences without waiting for handoffs.",
-        "meta": "Under 2 weeks to revenue"
-      },
-      {
-        "id": "drive",
-        "label": "DRIVE",
-        "title": "Operate + amplify",
-        "description": "AI teams own campaigns, product loops, customer feedback, and finance telemetry.",
-        "meta": "92% autonomous execution"
-      },
-      {
-        "id": "decide",
-        "label": "DECIDE",
-        "title": "Scale or sunset",
-        "description": "Keep signal loops running; scale performing ventures, recycle assets from the rest.",
-        "meta": "Decision windows every 30 days"
-      }
-    ]
-  },
   "aiTeams": {
     "eyebrow": "Synthetic org chart",
     "title": "Meet the AI organization",
@@ -277,6 +197,86 @@
             "bio": "Models upside, risk, and runway to inform when to scale, pause, or sunset ventures."
           }
         ]
+      }
+    ]
+  },
+  "signals": {
+    "eyebrow": "Signal cloud",
+    "title": "What we are tracking this quarter",
+    "description": "Tags are updated weekly. The heavier the tag, the more surface area we currently devote resources to.",
+    "tags": [
+      "synthetic labor",
+      "boutique ai orgs",
+      "memory-anchored ux",
+      "multi-agent orchestration",
+      "vertical automation",
+      "founder tools",
+      "liquid media",
+      "hyperlocal commerce",
+      "consensus scraping",
+      "low-latency ops",
+      "voice-native flows",
+      "autonomous care",
+      "edge creativity",
+      "chain-of-ops"
+    ],
+    "highlights": [
+      {
+        "id": "operating-stack",
+        "label": "Operating stack shifts",
+        "detail": "Studios want everything abstracted: briefing, building, launch, telemetry. We build the scaffolding."
+      },
+      {
+        "id": "trust-systems",
+        "label": "Trust systems",
+        "detail": "AI teams require observable control surfaces so humans can audit decision paths in real time."
+      },
+      {
+        "id": "story-engines",
+        "label": "Story engines",
+        "detail": "Narratives become living systems—media drops, product updates, and data share a single orchestrator."
+      }
+    ]
+  },
+  "operatingSystem": {
+    "eyebrow": "Hybrid OS",
+    "title": "From idea to autonomous company",
+    "description": "A single operating system loops discovery, build, launch, and optimization. Humans direct the vector; AI handles the surface area.",
+    "phases": [
+      {
+        "id": "scan",
+        "label": "SCAN",
+        "title": "Signal scanning",
+        "description": "Pattern-match the markets, sentiment, data leaks, and workflow gaps that matter.",
+        "meta": "Live dashboards · hourly refresh"
+      },
+      {
+        "id": "compose",
+        "label": "COMPOSE",
+        "title": "Venture composition",
+        "description": "Pair market gaps with available AI squads, resource budgets, and launch windows.",
+        "meta": "48h design-to-spec sprint"
+      },
+      {
+        "id": "deploy",
+        "label": "DEPLOY",
+        "title": "Autonomous deployment",
+        "description": "Spin up infrastructure, data, content, and go-live cadences without waiting for handoffs.",
+        "meta": "Under 2 weeks to revenue"
+      },
+      {
+        "id": "drive",
+        "label": "DRIVE",
+        "title": "Operate + amplify",
+        "description": "AI teams own campaigns, product loops, customer feedback, and finance telemetry.",
+        "meta": "92% autonomous execution"
+      },
+      {
+        "id": "decide",
+        "label": "DECIDE",
+        "title": "Scale or sunset",
+        "description": "Keep signal loops running; scale performing ventures, recycle assets from the rest.",
+        "meta": "Decision windows every 30 days"
       }
     ]
   },

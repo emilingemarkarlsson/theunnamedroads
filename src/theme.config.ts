@@ -29,8 +29,8 @@ export default defineThemeConfig({
   // optional settings
   locale: 'en',
   mode: 'dark',
-  modeToggle: true,
-  colorScheme: 'scheme-conversion',
+  modeToggle: false,
+  colorScheme: 'scheme-mono',
   openGraphImage: undefined,
   postsPerPage: 4,
   projectsPerPage: 3,

@@ -1,0 +1,322 @@
+{
+  "name": "tur-seo-report",
+  "nodes": [
+    {
+      "id": "CronTrigger1",
+      "name": "Weekly Trigger",
+      "type": "n8n-nodes-base.cron",
+      "typeVersion": 1,
+      "position": [200, 300],
+      "parameters": {
+        "triggerTimes": {
+          "item": [
+            {
+              "mode": "custom",
+              "cronExpression": "0 9 * * 1"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "GSCNode1",
+      "name": "GSC Data",
+      "type": "n8n-nodes-base.googleSearchConsole",
+      "typeVersion": 1,
+      "position": [500, 200],
+      "parameters": {
+        "operation": "query",
+        "siteUrl": "={{ $env.SITE_URL }}",
+        "startDate": "={{ $now.minus({ days: 7 }).format('YYYY-MM-DD') }}",
+        "endDate": "={{ $now.format('YYYY-MM-DD') }}",
+        "dimensions": [
+          "query",
+          "page"
+        ],
+        "metrics": [
+          "clicks",
+          "impressions",
+          "ctr",
+          "position"
+        ],
+        "options": {
+          "rowLimit": 250,
+          "startRow": 0
+        }
+      },
+      "credentials": {
+        "googleOAuth2ServiceAccount": {
+          "id": "Google OAuth2 Service Account",
+          "name": "Google OAuth2 Service Account"
+        }
+      }
+    },
+    {
+      "id": "GA4Node1",
+      "name": "GA4 Data",
+      "type": "n8n-nodes-base.googleAnalyticsGA4",
+      "typeVersion": 1,
+      "position": [500, 400],
+      "parameters": {
+        "operation": "runReport",
+        "propertyId": "={{ $env.GA4_PROPERTY_ID }}",
+        "dateRanges": [
+          {
+            "startDate": "={{ $now.minus({ days: 7 }).format('YYYY-MM-DD') }}",
+            "endDate": "={{ $now.format('YYYY-MM-DD') }}"
+          }
+        ],
+        "metrics": [
+          { "name": "sessions" },
+          { "name": "totalUsers" },
+          { "name": "screenPageViews" }
+        ],
+        "dimensions": [
+          { "name": "landingPage" }
+        ],
+        "limit": 250
+      },
+      "credentials": {
+        "googleOAuth2ServiceAccount": {
+          "id": "Google OAuth2 Service Account",
+          "name": "Google OAuth2 Service Account"
+        }
+      }
+    },
+    {
+      "id": "IFErrorGSC",
+      "name": "GSC Error?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [700, 200],
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $json.error !== undefined }}"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "IFErrorGA4",
+      "name": "GA4 Error?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [700, 400],
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $json.error !== undefined }}"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "MergeNode1",
+      "name": "Merge SEO Data",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 1,
+      "position": [900, 300],
+      "parameters": {
+        "mode": "append"
+      }
+    },
+    {
+      "id": "SetSummary1",
+      "name": "Data Summary",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [1100, 300],
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "week",
+              "value": "={{ $now.format('GGGG-[W]WW') }}"
+            },
+            {
+              "name": "top_queries",
+              "value": "={{ (Array.isArray($items(\"GSC Data\")?.[0]?.json?.rows) ? $items(\"GSC Data\")[0].json.rows.slice(0,5).map(r => r.keys?.[0] || r.query) : []).join(',') }}"
+            },
+            {
+              "name": "recommendations",
+              "value": "={{ ($json.total_impressions || 0) < 1000 ? 'Optimize low-performers' : 'Maintain and iterate on top content' }}"
+            }
+          ],
+          "number": [
+            {
+              "name": "total_clicks",
+              "value": "={{ (Array.isArray($items(\"GSC Data\")?.[0]?.json?.rows) ? $items(\"GSC Data\")[0].json.rows.reduce((sum, r) => sum + (r.clicks || r.metrics?.clicks || 0), 0) : 0) }}"
+            },
+            {
+              "name": "total_impressions",
+              "value": "={{ (Array.isArray($items(\"GSC Data\")?.[0]?.json?.rows) ? $items(\"GSC Data\")[0].json.rows.reduce((sum, r) => sum + (r.impressions || r.metrics?.impressions || 0), 0) : 0) }}"
+            },
+            {
+              "name": "traffic_change_pct",
+              "value": "={{ 0 }}"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "GoogleSheets1",
+      "name": "Update Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 3,
+      "position": [1300, 300],
+      "parameters": {
+        "operation": "append",
+        "documentId": "={{ $env.SHEETS_ID }}",
+        "sheetName": "SEO Reports",
+        "options": {
+          "valueInputMode": "RAW"
+        },
+        "data": "={{ [$json.week, $json.total_clicks, $json.total_impressions, $json.traffic_change_pct, JSON.stringify(($json.top_queries || '').split(',')), $json.recommendations] }}"
+      },
+      "credentials": {
+        "googleOAuth2": {
+          "id": "Google OAuth2",
+          "name": "Google OAuth2"
+        }
+      }
+    },
+    {
+      "id": "GmailNode1",
+      "name": "Send Report Email",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2,
+      "position": [1500, 300],
+      "parameters": {
+        "resource": "message",
+        "operation": "send",
+        "to": "={{ $env.EMAIL_TO }}",
+        "subject": "={{ 'Weekly SEO Report - ' + $now.format('YYYY-MM-DD') }}",
+        "message": "Hi! Your SEO report is ready. Check the sheet: https://docs.google.com/spreadsheets/d/{{ $env.SHEETS_ID }}. Key highlights: {{ $json.total_clicks }} clicks, {{ $json.traffic_change_pct }}% change. Recommendations: {{ $json.recommendations }}"
+      },
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "Gmail OAuth2",
+          "name": "Gmail OAuth2"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Weekly Trigger": {
+      "main": [
+        [
+          {
+            "node": "GSC Data",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "GA4 Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "GSC Data": {
+      "main": [
+        [
+          {
+            "node": "GSC Error?",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge SEO Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "GA4 Data": {
+      "main": [
+        [
+          {
+            "node": "GA4 Error?",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge SEO Data",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Merge SEO Data": {
+      "main": [
+        [
+          {
+            "node": "Data Summary",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Data Summary": {
+      "main": [
+        [
+          {
+            "node": "Update Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Update Sheets": {
+      "main": [
+        [
+          {
+            "node": "Send Report Email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {
+    "GSC Data": [
+      {
+        "rows": [
+          { "keys": ["query1", "https://example.com/page1"], "clicks": 120, "impressions": 500, "ctr": 0.24, "position": 3.1 },
+          { "keys": ["query2", "https://example.com/page2"], "clicks": 80, "impressions": 300, "ctr": 0.26, "position": 5.0 }
+        ]
+      }
+    ],
+    "GA4 Data": [
+      {
+        "rows": [
+          { "landingPage": "/page1", "sessions": 200, "totalUsers": 150, "screenPageViews": 400 },
+          { "landingPage": "/page2", "sessions": 120, "totalUsers": 90, "screenPageViews": 220 }
+        ]
+      }
+    ]
+  },
+  "staticData": {},
+  "settings": {
+    "executionOrder": "all",
+    "saveManualExecutions": true,
+    "timezone": "UTC"
+  },
+  "meta": {
+    "instanceId": "tur-seo-report-instance"
+  },
+  "id": "tur-seo-report"
+}

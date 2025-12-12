@@ -51,6 +51,87 @@ const openGraphImageUrl = new URL(
   resolveImageUrl(openGraphImage) || '/ogImage.png',
   Astro.site
 ).href
+
+const organizationId = `${config.site}#organization`
+const websiteId = `${config.site}#website`
+const webPageId = `${canonicalURL}#webpage`
+const sameAsProfiles = ['https://x.com/unnamedroads']
+
+const organizationJsonLd = {
+  '@type': 'Organization',
+  '@id': organizationId,
+  name: config.title,
+  description: config.description,
+  url: config.site,
+  logo: `${config.site}/favicon-tur.svg`,
+  sameAs: sameAsProfiles,
+  contactPoint: [
+    {
+      '@type': 'ContactPoint',
+      contactType: 'Partnership inquiries',
+      url: `${config.site}/contact`,
+      availableLanguage: ['en'],
+      areaServed: 'Global'
+    }
+  ]
+}
+
+const websiteJsonLd = {
+  '@type': 'WebSite',
+  '@id': websiteId,
+  url: config.site,
+  name: config.title,
+  description: config.description,
+  publisher: { '@id': organizationId },
+  inLanguage: config.locale,
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: `${config.site}/search?q={search_term_string}`,
+    'query-input': 'required name=search_term_string'
+  }
+}
+
+const webPageJsonLd = {
+  '@type': 'WebPage',
+  '@id': webPageId,
+  url: canonicalURL,
+  name: titleWithSuffix,
+  description,
+  isPartOf: { '@id': websiteId },
+  inLanguage: config.locale,
+  datePublished: publishedDate?.toISOString(),
+  dateModified: new Date().toISOString(),
+  mainEntity: { '@id': organizationId },
+  author: {
+    '@type': 'Organization',
+    name: author
+  }
+}
+
+const articleJsonLd =
+  publishedDate && {
+    '@type': 'Article',
+    '@id': `${canonicalURL}#article`,
+    headline: title,
+    description,
+    image: openGraphImageUrl,
+    author: {
+      '@type': 'Organization',
+      name: author
+    },
+    publisher: { '@id': organizationId },
+    datePublished: publishedDate.toISOString(),
+    dateModified: new Date().toISOString(),
+    mainEntityOfPage: { '@id': webPageId },
+    inLanguage: config.locale
+  }
+
+const jsonLdGraph: Record<string, unknown>[] = [
+  organizationJsonLd,
+  websiteJsonLd,
+  webPageJsonLd
+]
+if (articleJsonLd) jsonLdGraph.push(articleJsonLd)
 ---
 
 <!doctype html>
@@ -136,40 +217,22 @@ const openGraphImageUrl = new URL(
     />
     
     <!-- JSON-LD Structured Data -->
-    <script is:inline type="application/ld+json" set:html={JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": config.title,
-      "description": config.description,
-      "url": config.site,
-      "logo": `${config.site}/favicon-tur.svg`,
-      "founder": {
-        "@type": "Organization",
-        "name": config.author
-      },
-      "sameAs": [
-        `${config.site}/feed.xml`,
-        `${config.site}/sitemap-index.xml`
-      ],
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": `${config.site}/search?q={search_term_string}`,
-        "query-input": "required name=search_term_string"
-      },
-      "mainEntity": {
-        "@type": "WebSite",
-        "@id": config.site,
-        "url": config.site,
-        "name": config.title,
-        "description": "AI-native venture studio building the future roads of business through anonymous, experimental methodology and post-human entrepreneurship",
-        "publisher": {
-          "@type": "Organization",
-          "name": config.title
-        }
-      },
-      "specialty": ["Artificial Intelligence", "Venture Capital", "Business Innovation", "Startup Development", "AI-Native Business Models"],
-      "knowsAbout": ["AI venture development", "Anonymous business creation", "Post-human entrepreneurship", "Neural network applications", "Automated business processes", "AI-driven innovation"]
-    })}>
+    <script
+      is:inline
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        '@context': 'https://schema.org',
+        '@graph': jsonLdGraph
+      })}
+    ></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PY1CENL8ZR"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(...args){dataLayer.push(args);}
+      gtag('js', new Date());
+      gtag('config', 'G-PY1CENL8ZR');
     </script>
   </head>
   <body>

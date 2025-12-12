@@ -2,11 +2,19 @@
 import config from '@/theme.config'
 
 const defaultMode = config.mode
+const isModeToggleDisabled = !config.modeToggle
 ---
 
-<script is:inline data-default-mode={defaultMode}>
+<script
+  is:inline
+  data-default-mode={defaultMode}
+  data-mode-toggle-disabled={isModeToggleDisabled}
+>
   window.mode ??= (() => {
     const defaultMode = document.currentScript.getAttribute('data-default-mode')
+    const isModeToggleDisabled =
+      document.currentScript.getAttribute('data-mode-toggle-disabled') ===
+      'true'
     const storageKey = 'mode'
     const store =
       typeof localStorage !== 'undefined'
@@ -30,12 +38,15 @@ const defaultMode = config.mode
     }
 
     function getMode() {
+      // If toggle is disabled, always return default mode
+      if (isModeToggleDisabled) return defaultMode
       return store.getItem(storageKey) || defaultMode
     }
 
     return { setMode, getMode }
   })()
 
+  // Always set to default mode on load
   mode.setMode(mode.getMode())
 </script>
 <script>
