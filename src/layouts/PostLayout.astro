@@ -111,7 +111,7 @@ const articleSchema = {
     <Content />
   </article>
 
-  <div slot="bottom" class="my-4 grid grid-cols-3">
+  <div slot="bottom" class="my-4 grid grid-cols-1 gap-4 sm:grid-cols-3">
     <div class="flex flex-col items-start">
       {
         !!next && (
@@ -120,21 +120,21 @@ const articleSchema = {
               <span class="iconify text-xl tabler--arrow-left" />
               <span>Next post</span>
             </div>
-            <span class="mt-2 text-lg sm:text-xl">{next.data.title}</span>
+            <span class="mt-2 text-base sm:text-lg lg:text-xl">{next.data.title}</span>
           </a>
         )
       }
     </div>
-    <div class="w-1/4"></div>
-    <div class="flex flex-col items-end">
+    <div class="hidden sm:block"></div>
+    <div class="flex flex-col items-start sm:items-end">
       {
         !!previous && (
           <a href={`/posts/${previous.slug}`} class="clickable">
-            <div class="flex items-center justify-end gap-1">
+            <div class="flex items-center justify-start gap-1 sm:justify-end">
               <span>Previous post</span>
               <span class="iconify text-xl tabler--arrow-right" />
             </div>
-            <span class="mt-2 text-lg sm:text-xl">{previous.data.title}</span>
+            <span class="mt-2 text-base sm:text-lg lg:text-xl">{previous.data.title}</span>
           </a>
         )
       }

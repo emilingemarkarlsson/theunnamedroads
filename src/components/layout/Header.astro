@@ -62,10 +62,10 @@ export const isNavItem = (item: HeaderItem): item is NavItemType =>
       </ul>
     </nav>
     <div
-      class="flex items-center justify-center gap-3 text-xl sm:gap-4 sm:text-2xl md:hidden"
+      class="flex items-center gap-3 text-xl sm:gap-4 sm:text-2xl md:hidden"
     >
       {config.modeToggle && <ModeToggle />}
-      <a href="/search" class="transition-colors hover:text-accent">
+      <a href="/search" class="flex items-center transition-colors hover:text-accent">
         <span class="clickable iconify tabler--search"></span>
       </a>
       <MobileNavToggle />
@@ -75,7 +75,7 @@ export const isNavItem = (item: HeaderItem): item is NavItemType =>
     id="mobile-nav"
     class="mx-auto hidden w-full max-w-6xl border-t border-gray-200/60 px-3 pt-4 sm:px-6 dark:border-white/10"
   >
-    <nav class="flex-col justify-end pb-4">
+    <nav class="flex flex-col justify-end pb-4">
       <ul class="flex flex-col items-center gap-2">
         {
           config.navbarItems.map((item) => (

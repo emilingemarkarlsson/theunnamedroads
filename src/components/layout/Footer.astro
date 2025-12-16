@@ -9,11 +9,12 @@ const currentYear = new Date().getFullYear()
 <footer class="mt-auto">
   <Separator />
   <div
-    class="mx-auto flex w-full max-w-6xl items-center justify-between gap-2 px-3 py-4 text-2xl sm:px-6 sm:py-8 lg:px-8"
+    class="mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-4 px-3 py-4 text-2xl sm:flex-row sm:gap-2 sm:px-6 sm:py-8 lg:px-8"
   >
     <span class="text-base">&#169; {currentYear} {config.author}</span>
 
-    <div class="grow"></div>
-    {config.footerItems.map((item) => <FooterItem {item} />)}
+    <div class="flex gap-4">
+      {config.footerItems.map((item) => <FooterItem {item} />)}
+    </div>
   </div>
 </footer>
