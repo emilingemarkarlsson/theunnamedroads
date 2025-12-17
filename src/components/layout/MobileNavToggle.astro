@@ -4,23 +4,29 @@
 
 <button
   id="mobile-nav-toggle"
-  class="flex items-center"
+  class="flex items-center clickable"
   title="Mobile nav toggle"
+  type="button"
 >
-  <span class="clickable iconify tabler--menu-2"></span>
+  <span class="iconify tabler--menu-2"></span>
 </button>
 
-<script>
+<script is:inline>
   const iconOpen = 'tabler--x'
   const iconClosed = 'tabler--menu-2'
 
   function setupMobileNavClickHandler() {
     const button = document.querySelector('#mobile-nav-toggle')
     const nav = document.querySelector('#mobile-nav')
-    const icon = button?.children[0]
-    if (!icon || !nav) return
+    if (!button || !nav) return
 
-    button?.addEventListener('click', () => {
+    const icon = button.querySelector('span.iconify')
+    if (!icon) return
+
+    const handler = function(e) {
+      e.preventDefault()
+      e.stopPropagation()
+      
       if (icon.className.includes(iconOpen)) {
         icon.classList.remove(iconOpen)
         icon.classList.add(iconClosed)
@@ -30,10 +36,21 @@
         icon.classList.add(iconOpen)
         nav.classList.remove('hidden')
       }
-    })
+    }
+
+    // Remove existing listeners and add new ones
+    button.removeEventListener('click', handler)
+    button.removeEventListener('touchend', handler)
+    button.addEventListener('click', handler)
+    button.addEventListener('touchend', handler)
   }
 
-  document.addEventListener('astro:page-load', () => {
+  // Run on both initial load and page navigation
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupMobileNavClickHandler)
+  } else {
     setupMobileNavClickHandler()
-  })
+  }
+
+  document.addEventListener('astro:page-load', setupMobileNavClickHandler)
 </script>

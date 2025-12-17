@@ -43,63 +43,22 @@ exports.handler = async (event) => {
       }
     }
 
-    // Prepare Slack webhook payload
-    const slackPayload = {
-      text: `New contact form submission from ${name}`,
-      blocks: [
-        {
-          type: 'header',
-          text: {
-            type: 'plain_text',
-            text: '📬 New Contact Form Submission'
-          }
-        },
-        {
-          type: 'section',
-          fields: [
-            {
-              type: 'mrkdwn',
-              text: `*Name:*\n${name}`
-            },
-            {
-              type: 'mrkdwn',
-              text: `*Email:*\n${email}`
-            }
-          ]
-        },
-        {
-          type: 'section',
-          fields: [
-            {
-              type: 'mrkdwn',
-              text: `*Subject:*\n${subject}`
-            }
-          ]
-        },
-        {
-          type: 'section',
-          text: {
-            type: 'mrkdwn',
-            text: `*Message:*\n${message}`
-          }
-        },
-        {
-          type: 'context',
-          elements: [
-            {
-              type: 'mrkdwn',
-              text: `Submitted at: ${new Date().toLocaleString('sv-SE', { timeZone: 'Europe/Stockholm' })}`
-            }
-          ]
-        }
-      ]
+    // Prepare payload for n8n webhook (similar to early-access flow)
+    const timestamp = new Date().toISOString()
+    const n8nPayload = {
+      name,
+      email,
+      subject,
+      message,
+      timestamp,
+      source: 'Contact Form - The Unnamed Roads'
     }
 
-    // Send to Slack webhook (you'll need to set SLACK_WEBHOOK_URL in Netlify env vars)
-    const webhookUrl = process.env.SLACK_WEBHOOK_URL
+    // Send to n8n webhook (set N8N_WEBHOOK_URL in Netlify env vars)
+    const webhookUrl = process.env.N8N_WEBHOOK_URL
 
     if (!webhookUrl) {
-      console.error('SLACK_WEBHOOK_URL environment variable is not set')
+      console.error('N8N_WEBHOOK_URL environment variable is not set')
       // Still return success to user, but log the error
       return {
         statusCode: 200,
@@ -117,11 +76,11 @@ exports.handler = async (event) => {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(slackPayload)
+      body: JSON.stringify(n8nPayload)
     })
 
     if (!response.ok) {
-      throw new Error(`Slack webhook responded with status: ${response.status}`)
+      throw new Error(`n8n webhook responded with status: ${response.status}`)
     }
 
     // Return success response

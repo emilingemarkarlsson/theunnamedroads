@@ -10,7 +10,7 @@
       { "id": "badge-ai", "label": "Federated AI teams" }
     ],
     "stats": [
-      { "id": "ventures", "label": "Ventures running", "value": "06", "detail": "parallel builds" },
+      { "id": "ventures", "label": "Ventures running", "value": "07", "detail": "parallel builds" },
       { "id": "launch", "label": "Median launch", "value": "12d", "detail": "concept to market" },
       { "id": "automation", "label": "Autonomy", "value": "92%", "detail": "work handled by AI" },
       {

@@ -45,7 +45,9 @@ const ventureProjects = featuredProjects.map((project) => {
   const summary = meta.summary ?? truncate(project.data.description)
   const metricLabel = meta.metricLabel ?? 'Since'
   const metricValue = meta.metricValue ?? toMonthString(project.data.startDate)
-  const href = meta.href ?? project.data.url ?? `/projects/${project.slug}`
+  const href = meta.href !== undefined 
+    ? (meta.href === '' ? undefined : meta.href)
+    : (project.data.url ?? `/projects/${project.slug}`)
 
   return {
     tag,

@@ -22,7 +22,7 @@ homepage:
     analytics squads for teams that want measurable tactical advantages without
     full-time hires.
   metricLabel: Data points
-  metricValue: ~7,5 miljoner
+  metricValue: ~7,5 M
   tag: Sports AI
   href: https://thb-site.vercel.app/
 ---
