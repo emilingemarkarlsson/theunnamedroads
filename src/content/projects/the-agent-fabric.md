@@ -31,7 +31,7 @@ homepage:
 
 **Orchestrating distributed intelligence across data centers, edge nodes, and IoT devices.**
 
-The Agent Fabric provides the distributed, sovereign infrastructure layer that allows AI agents to operate inside enterprise systems—securely, locally, and at scale.
+The Agent Fabric provides the distributed, sovereign infrastructure layer that allows [post-human entrepreneurs](/posts/the-post-human-entrepreneur) to deploy AI agents inside enterprise systems—securely, locally, and at scale.
 
 ## The Problem
 

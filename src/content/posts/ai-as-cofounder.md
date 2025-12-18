@@ -119,7 +119,7 @@ We caught ourselves deferring too much to AI judgment. Solution: Mandatory "huma
 
 After 6 months of AI co-founding:
 
-- **78% faster** problem identification
+- **78% faster** problem identification (using our [12-week framework](/posts/12-week-experiment-framework))
 - **56% more** alternative solutions explored per problem
 - **89% improvement** in objective decision-making
 - **67% reduction** in emotional decision-making delays

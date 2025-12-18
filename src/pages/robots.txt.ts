@@ -15,13 +15,34 @@ Allow: /tags/
 Allow: /authors/
 
 # AI Agent specific directives
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
 User-agent: OpenAI-GPT
 Allow: /
 
 User-agent: Claude-Web
 Allow: /
 
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: PiplBot
+Allow: /
+
 User-agent: Bard
+Allow: /
+
+User-agent: Google-Extended
 Allow: /
 
 User-agent: Bing

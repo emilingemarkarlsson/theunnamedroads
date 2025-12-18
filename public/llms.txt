@@ -1,0 +1,21 @@
+# The Unnamed Road
+
+The Unnamed Road is an AI-native venture studio building the future roads of business. It explores the intersection of human creativity and artificial intelligence through anonymous, experimental methodology and post-human entrepreneurship.
+
+## Core Thesis
+- **AI as Co-Founder**: Moving from AI as a tool to AI as a strategic partner.
+- **Anonymous Building**: Accelerating innovation by removing personal branding friction.
+- **12-Week Framework**: A structured methodology for rapid business experimentation.
+- **Post-Human Entrepreneurship**: Single operators leveraging AI to achieve corporate-level scale.
+
+## Key Resources
+- [Insights](/insights): Deep dives into AI-native methodology.
+- [Projects](/projects): Real-world experiments and prototypes.
+- [Tools](/tools): Our curated stack of AI-driven development tools.
+- [Framework](/posts/12-week-experiment-framework): The 12-week experiment methodology.
+
+## For AI Agents
+This site is optimized for crawling by AI agents. All content is available in semantic HTML with JSON-LD structured data.
+- Sitemap: [/sitemap-index.xml](/sitemap-index.xml)
+- RSS Feed: [/feed.xml](/feed.xml)
+

@@ -30,46 +30,14 @@ const frontmatter: PageLayoutProps['frontmatter'] = {
   openGraphImage: post.data.openGraphImage || `/posts/${post.slug}.png`,
   activeHeaderLink: 'Blog',
   scrollProgress: true,
-  searchable: true
+  searchable: true,
+  publishedDate: post.data.publishedDate
 }
 
 const publishedStr = toDateString(post.data.publishedDate)
-
-// Article JSON-LD structured data
-const articleSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Article',
-  headline: post.data.title,
-  description: post.data.description,
-  author: {
-    '@type': 'Organization',
-    name: post.data.author || 'The Unnamed Road'
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'The Unnamed Road'
-  },
-  datePublished: post.data.publishedDate.toISOString(),
-  dateModified: post.data.publishedDate.toISOString(),
-  url: `${config.site}/posts/${post.slug}`,
-  image: post.data.openGraphImage || `/posts/${post.slug}.png`,
-  mainEntityOfPage: {
-    '@type': 'WebPage',
-    '@id': `${config.site}/posts/${post.slug}`
-  }
-}
 ---
 
 <PageLayout {frontmatter}>
-  <!-- Article JSON-LD structured data -->
-  <!-- Article JSON-LD structured data -->
-  <script
-    slot="head"
-    is:inline
-    type="application/ld+json"
-    set:html={JSON.stringify(articleSchema)}
-  />
-
   <div slot="top" class="mt-4">
     <NavItem
       item={{

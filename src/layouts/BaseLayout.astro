@@ -30,6 +30,8 @@ export interface Props {
     canonicalURL: string
     openGraphImage: string | HTMLAttributes<'img'>
     publishedDate: Date
+    prev?: string
+    next?: string
   }>
 }
 
@@ -40,7 +42,9 @@ const {
     description = config.description,
     canonicalURL = new URL(Astro.url.pathname, Astro.site).href,
     openGraphImage = config.openGraphImage || '/ogImage.png',
-    publishedDate
+    publishedDate,
+    prev,
+    next
   }
 } = Astro.props
 
@@ -110,6 +114,26 @@ const webPageJsonLd = {
   }
 }
 
+// BreadcrumbList JSON-LD
+const pathSegments = Astro.url.pathname.split('/').filter(Boolean)
+const breadcrumbJsonLd = {
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: config.site
+    },
+    ...pathSegments.map((segment, index) => ({
+      '@type': 'ListItem',
+      position: index + 2,
+      name: segment.charAt(0).toUpperCase() + segment.slice(1),
+      item: `${config.site}/${pathSegments.slice(0, index + 1).join('/')}`
+    }))
+  ]
+}
+
 const articleJsonLd =
   publishedDate && {
     '@type': 'Article',
@@ -131,7 +155,8 @@ const articleJsonLd =
 const jsonLdGraph: Record<string, unknown>[] = [
   organizationJsonLd,
   websiteJsonLd,
-  webPageJsonLd
+  webPageJsonLd,
+  breadcrumbJsonLd
 ]
 if (articleJsonLd) jsonLdGraph.push(articleJsonLd)
 ---
@@ -153,12 +178,13 @@ if (articleJsonLd) jsonLdGraph.push(articleJsonLd)
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="canonical" href={canonicalURL} />
     <meta name="generator" content={Astro.generator} />
+    {prev && <link rel="prev" href={new URL(prev, Astro.site).href} />}
+    {next && <link rel="next" href={new URL(next, Astro.site).href} />}
 
     <title>{titleWithSuffix}</title>
     <meta name="title" content={titleWithSuffix} />
     <meta name="description" content={description} />
     <meta name="author" content={author} />
-    <meta name="keywords" content="AI venture studio, anonymous business, startup experiments, artificial intelligence, business innovation, venture capital, AI collaboration, post-human entrepreneur, experimental methodology, AI-native business, future roads, unnamed roads, AI-driven ventures, machine learning startups, automated business development, AI entrepreneurship, neural networks, deep learning ventures, AI-powered innovation, autonomous business creation" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="bingbot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />

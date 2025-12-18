@@ -1,0 +1,67 @@
+{
+  "name": "tur-indexnow-submit",
+  "nodes": [
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "INSERT_YOUR_GOOGLE_SHEET_ID_HERE"
+        },
+        "sheetName": "Published Content",
+        "options": {}
+      },
+      "id": "trigger-new-content",
+      "name": "Google Sheets Trigger",
+      "type": "n8n-nodes-base.googleSheetsTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.indexnow.org/indexnow",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"host\": \"theunnamedroads.com\",\n  \"key\": \"741e73bc05ca4ca8b93944e7e9231f99\",\n  \"keyLocation\": \"https://theunnamedroads.com/741e73bc05ca4ca8b93944e7e9231f99.txt\",\n  \"urlList\": [\n    \"{{ $json.url }}\"\n  ]\n}",
+        "options": {}
+      },
+      "id": "submit-indexnow",
+      "name": "Submit to IndexNow",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        250,
+        0
+      ]
+    }
+  ],
+  "connections": {
+    "Google Sheets Trigger": {
+      "main": [
+        [
+          {
+            "node": "Submit to IndexNow",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "id": "tur-indexnow-submit"
+}

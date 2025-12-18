@@ -59,6 +59,8 @@ Traditional startup timelines are either too short (fail to gather meaningful da
 
 **AI Collaboration:**
 
+We use [AI as a co-founder](/posts/ai-as-cofounder) to stress-test our initial problem definitions.
+
 ```
 Prompt: "Help me analyze this problem space: [description].
 What angles haven't I considered? What adjacent problems exist?"
@@ -284,7 +286,7 @@ What are the strongest signals for/against continuing?"
 
 ## Integration with Anonymous Building
 
-This framework works especially well for anonymous experiments:
+This framework works especially well for [anonymous building](/posts/why-anonymity-accelerates-innovation):
 
 1. **Reduces Personal Risk**: 12-week commitment limits reputation exposure
 2. **Enables Honest Evaluation**: Anonymous feedback improves decision quality

@@ -55,19 +55,11 @@ People give more honest feedback when they're not managing relationships with th
 
 ## AI as the Perfect Anonymous Partner
 
-AI collaboration enhances anonymous building in several ways:
+AI collaboration (acting as an [AI co-founder](/posts/ai-as-cofounder)) enhances anonymous building in several ways:
 
-### **Ego-Free Collaboration**
-
-AI doesn't have personal agendas, making it an ideal thinking partner for anonymous work.
-
-### **Objective Analysis**
-
-AI can analyze ideas, markets, and opportunities without human bias or relationship considerations.
-
-### **Rapid Iteration**
-
-AI enables fast prototyping and testing without needing to manage human team dynamics.
+1. **Ego-Free Collaboration**
+2. **Objective Analysis**
+3. **Rapid Iteration**
 
 ## Practical Anonymous Operations
 
