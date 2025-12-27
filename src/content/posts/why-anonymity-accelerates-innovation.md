@@ -9,6 +9,8 @@ draft: false
 
 # Why Anonymity Accelerates Innovation
 
+> **Part of our [Anonymous Building Strategy](/insights/anonymous-building) pillar** — This article explains the strategic advantages of building without personal branding.
+
 After six months of building businesses anonymously, we've discovered something counterintuitive: **removing your name from your work makes everything move faster.**
 
 ## The Personal Brand Trap
@@ -166,6 +168,12 @@ Start small with anonymous innovation:
 Anonymity isn't about hiding from responsibility—it's about removing barriers to honest experimentation. In a world increasingly focused on personal branding, anonymous innovation offers a powerful alternative for builders who prioritize problems over personas.
 
 The most innovative solutions often come from the roads less traveled. Sometimes, the best way to find those roads is to travel them without a name.
+
+## Related Resources
+
+- **[Anonymous Building Strategy](/insights/anonymous-building)** — Complete guide to building without personal branding
+- **[The 12-Week Experiment Framework](/posts/12-week-experiment-framework)** — How anonymity enables faster experimentation
+- **[Post-Human Entrepreneurship](/insights/post-human-entrepreneurship)** — The stealth advantage in the new paradigm
 
 ---
 

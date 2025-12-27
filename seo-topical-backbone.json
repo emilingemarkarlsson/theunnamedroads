@@ -1,0 +1,656 @@
+{
+  "site": "theunnamedroads.com",
+  "core_topic": "AI-native venture building for solo operators",
+  "core_topic_statement": "This site aims to become the most authoritative resource on building scalable businesses as a single operator using AI as a strategic partner for entrepreneurs, builders, and venture creators.",
+  "audience": "Solo entrepreneurs, indie hackers, venture studio operators, and builders who want to leverage AI to achieve corporate-scale output without traditional startup infrastructure",
+  "primary_intent": "mixed",
+  "intent_breakdown": {
+    "informational": 60,
+    "commercial": 30,
+    "navigational": 10
+  },
+  "pillars": [
+    {
+      "name": "AI-Human Collaboration Methodology",
+      "slug": "ai-human-collaboration",
+      "description": "Frameworks, practices, and mental models for treating AI as a co-founder rather than a tool. This pillar establishes the foundational philosophy that differentiates AI-native building from traditional entrepreneurship.",
+      "why_necessary": "This is the core differentiator. Without establishing clear methodology for AI collaboration, the site becomes just another 'AI tools' blog. This pillar positions the site as the authority on the strategic use of AI in business building.",
+      "search_queries": [
+        "how to use AI as co-founder",
+        "AI collaboration framework",
+        "human AI partnership business",
+        "AI native entrepreneurship",
+        "solo founder with AI",
+        "AI strategic partner",
+        "post-human entrepreneur",
+        "hybrid intelligence business"
+      ],
+      "subtopics": [
+        "Daily AI collaboration routines",
+        "Decision-making frameworks with AI",
+        "AI prompt engineering for business strategy",
+        "Balancing human intuition with AI analysis",
+        "AI memory systems for long-term projects",
+        "When to trust vs verify AI suggestions",
+        "AI team member integration",
+        "Measuring AI collaboration effectiveness",
+        "AI co-founder equity and structure",
+        "Ethical boundaries in AI partnerships"
+      ],
+      "questions": [
+        "How do you structure daily collaboration with AI?",
+        "What decisions should AI make vs humans?",
+        "How do you maintain context across long AI conversations?",
+        "What's the difference between using AI tools and AI as co-founder?",
+        "How do you measure if AI collaboration is working?",
+        "What are the risks of over-relying on AI?",
+        "How do you build trust in AI recommendations?",
+        "What AI models work best for strategic business decisions?",
+        "How do you handle AI hallucinations in business planning?",
+        "What's the ROI of treating AI as a partner?",
+        "How do you structure AI collaboration for teams?",
+        "What are the legal implications of AI co-founders?",
+        "How do you document AI contributions?",
+        "What happens when AI recommendations conflict with human judgment?",
+        "How do you scale AI collaboration as you grow?",
+        "What tools enable true AI partnership?",
+        "How do you maintain human creativity with AI assistance?",
+        "What are the psychological effects of AI collaboration?",
+        "How do you prevent AI from replacing human value?",
+        "What's the future of human-AI business partnerships?"
+      ],
+      "existing_content": [
+        "/posts/ai-as-cofounder"
+      ],
+      "target_pillar_page": "/insights/ai-human-collaboration"
+    },
+    {
+      "name": "Rapid Experimentation Frameworks",
+      "slug": "experimentation-frameworks",
+      "description": "Structured methodologies for testing business ideas quickly and systematically. This includes the 12-week framework, proof cycles, and decision-making criteria for scale/pivot/kill decisions.",
+      "why_necessary": "Methodology is what separates systematic builders from random experimenters. This pillar provides actionable frameworks that readers can implement immediately, establishing the site as a practical resource.",
+      "search_queries": [
+        "12 week business experiment",
+        "rapid experimentation framework",
+        "lean startup alternative",
+        "business validation framework",
+        "MVP testing methodology",
+        "experiment-driven business",
+        "proof cycle methodology",
+        "scale pivot kill framework"
+      ],
+      "subtopics": [
+        "12-week experiment framework deep dive",
+        "Week-by-week experiment planning",
+        "Hypothesis formation for business experiments",
+        "Success metrics for rapid experiments",
+        "Decision frameworks: scale vs pivot vs kill",
+        "Anonymous experimentation benefits",
+        "Experiment documentation systems",
+        "Parallel experiment management",
+        "Experiment portfolio optimization",
+        "Learning extraction from failed experiments"
+      ],
+      "questions": [
+        "How do you structure a 12-week business experiment?",
+        "What metrics determine if an experiment should continue?",
+        "How do you run multiple experiments in parallel?",
+        "What's the minimum viable test for a business idea?",
+        "How do you avoid sunk cost fallacy in experiments?",
+        "What data do you need before killing an experiment?",
+        "How do you document experiment learnings?",
+        "What's the difference between an experiment and a startup?",
+        "How do you balance speed with thoroughness in experiments?",
+        "What tools help manage multiple experiments?",
+        "How do you validate problems before building solutions?",
+        "What's the optimal experiment duration?",
+        "How do you test controversial business ideas?",
+        "What's the role of AI in experiment design?",
+        "How do you measure experiment ROI?",
+        "What are common experiment pitfalls?",
+        "How do you transition from experiment to real business?",
+        "What's the cost of running experiments?",
+        "How do you prioritize which experiments to run?",
+        "What makes an experiment successful vs failed?"
+      ],
+      "existing_content": [
+        "/posts/12-week-experiment-framework"
+      ],
+      "target_pillar_page": "/insights/experimentation-frameworks"
+    },
+    {
+      "name": "Anonymous Building Strategy",
+      "slug": "anonymous-building",
+      "description": "The strategic advantages of building businesses without personal branding, including faster iteration, honest feedback, and reduced bias. This covers operational anonymity, legal structures, and when to reveal identity.",
+      "why_necessary": "Anonymity is a unique angle that most competitors don't cover. This pillar establishes a defensible position and addresses a real pain point for builders who want to test ideas without reputation risk.",
+      "search_queries": [
+        "anonymous business building",
+        "building without personal brand",
+        "stealth startup advantages",
+        "anonymous entrepreneurship",
+        "pseudonym business building",
+        "anonymous venture studio",
+        "building in private vs public",
+        "stealth mode benefits"
+      ],
+      "subtopics": [
+        "Why anonymity accelerates innovation",
+        "Legal structures for anonymous operations",
+        "Communication systems for anonymous building",
+        "When to reveal your identity",
+        "Anonymous feedback collection",
+        "Building trust without personal brand",
+        "Anonymous team collaboration",
+        "Reputation vs results trade-offs",
+        "Anonymous funding strategies",
+        "Psychological benefits of anonymous building"
+      ],
+      "questions": [
+        "Why does anonymity help innovation?",
+        "How do you build a business anonymously?",
+        "What are the legal requirements for anonymous businesses?",
+        "When should you reveal your identity?",
+        "How do you collect honest feedback anonymously?",
+        "What are the disadvantages of anonymous building?",
+        "How do you build trust without a personal brand?",
+        "Can you raise funding anonymously?",
+        "What tools enable anonymous operations?",
+        "How do you handle customer relationships anonymously?",
+        "What industries work best for anonymous building?",
+        "How do you market anonymously?",
+        "What's the difference between stealth and anonymous?",
+        "How do you build a team anonymously?",
+        "What are the tax implications of anonymous businesses?",
+        "How do you maintain anonymity at scale?",
+        "What are examples of successful anonymous businesses?",
+        "How do you transition from anonymous to branded?",
+        "What are the psychological effects of anonymous building?",
+        "How do you measure success without personal validation?"
+      ],
+      "existing_content": [
+        "/posts/why-anonymity-accelerates-innovation"
+      ],
+      "target_pillar_page": "/insights/anonymous-building"
+    },
+    {
+      "name": "Post-Human Entrepreneurship",
+      "slug": "post-human-entrepreneurship",
+      "description": "The paradigm shift where single operators achieve corporate-scale output through AI symbiosis. This covers the death of traditional startup infrastructure, hybrid intelligence, and the new breed of entrepreneurs.",
+      "why_necessary": "This is the philosophical and strategic foundation. It explains WHY the old model is broken and positions the site at the forefront of a new movement. This pillar captures high-intent searches from builders questioning traditional approaches.",
+      "search_queries": [
+        "post-human entrepreneur",
+        "solo operator scaling",
+        "one person corporation",
+        "AI native business",
+        "single founder scaling",
+        "solo entrepreneur with AI",
+        "hybrid intelligence business",
+        "future of entrepreneurship"
+      ],
+      "subtopics": [
+        "The death of traditional startup infrastructure",
+        "Single operator vs team scaling",
+        "Hybrid intelligence advantages",
+        "Capital requirements in post-human era",
+        "Geographic barriers elimination",
+        "Expertise democratization through AI",
+        "Speed advantages of AI-native building",
+        "The stealth advantage",
+        "Beyond human limitations",
+        "Future of venture creation"
+      ],
+      "questions": [
+        "What is post-human entrepreneurship?",
+        "How can one person compete with teams?",
+        "What's the difference between solo and post-human?",
+        "How do you scale without hiring?",
+        "What are the limits of AI-native building?",
+        "How do you maintain quality at AI speed?",
+        "What skills matter in post-human era?",
+        "How do you build relationships without a team?",
+        "What's the future of venture capital?",
+        "How do you compete with funded startups?",
+        "What industries are best for post-human building?",
+        "How do you handle complex operations alone?",
+        "What's the role of human creativity?",
+        "How do you avoid AI dependency?",
+        "What are the ethical implications?",
+        "How do you measure post-human success?",
+        "What tools enable post-human entrepreneurship?",
+        "How do you transition from traditional to post-human?",
+        "What are examples of post-human businesses?",
+        "How do you build a post-human venture studio?"
+      ],
+      "existing_content": [
+        "/posts/the-post-human-entrepreneur"
+      ],
+      "target_pillar_page": "/insights/post-human-entrepreneurship"
+    },
+    {
+      "name": "AI-Native Product Development",
+      "slug": "ai-native-products",
+      "description": "Building products where AI is a core component, not an add-on. This covers AI-first experiences, infrastructure requirements, and the technical architecture of AI-native applications.",
+      "why_necessary": "Technical depth is required to establish authority. This pillar addresses the 'how' questions that builders face when actually implementing AI-native products, differentiating from surface-level tool reviews.",
+      "search_queries": [
+        "AI native product development",
+        "AI first application architecture",
+        "building AI native products",
+        "AI product infrastructure",
+        "AI native vs AI enhanced",
+        "AI product design",
+        "AI native SaaS",
+        "AI product stack"
+      ],
+      "subtopics": [
+        "AI-first vs AI-enhanced products",
+        "AI native architecture patterns",
+        "Infrastructure for AI products",
+        "AI product design principles",
+        "Data requirements for AI products",
+        "AI product monetization",
+        "Scaling AI native products",
+        "AI product security and privacy",
+        "AI product user experience",
+        "AI product testing and validation"
+      ],
+      "questions": [
+        "What makes a product AI-native vs AI-enhanced?",
+        "What infrastructure do AI-native products need?",
+        "How do you design AI-first user experiences?",
+        "What data do you need for AI products?",
+        "How do you monetize AI-native products?",
+        "What are the technical requirements?",
+        "How do you test AI-native products?",
+        "What's the difference between AI SaaS and AI-native?",
+        "How do you handle AI product failures?",
+        "What are AI product security concerns?",
+        "How do you scale AI-native products?",
+        "What's the cost structure of AI products?",
+        "How do you build AI products without code?",
+        "What AI models work best for products?",
+        "How do you handle AI model updates?",
+        "What are AI product design patterns?",
+        "How do you measure AI product success?",
+        "What are examples of AI-native products?",
+        "How do you validate AI product ideas?",
+        "What's the future of AI-native products?"
+      ],
+      "existing_content": [
+        "/projects/the-agent-fabric",
+        "/projects/the-hockey-brain"
+      ],
+      "target_pillar_page": "/insights/ai-native-products"
+    },
+    {
+      "name": "Venture Studio Operations",
+      "slug": "venture-studio-operations",
+      "description": "Operating a venture studio with AI-native methodology. This covers portfolio management, parallel experiment execution, automation systems, and the operating system behind scalable venture creation.",
+      "why_necessary": "Venture studios are a growing model, but most content focuses on traditional studios. This pillar positions the site as the authority on AI-native studio operations, a unique and defensible position.",
+      "search_queries": [
+        "AI native venture studio",
+        "venture studio operations",
+        "portfolio venture building",
+        "venture studio methodology",
+        "parallel venture building",
+        "venture studio automation",
+        "solo venture studio",
+        "venture studio playbook"
+      ],
+      "subtopics": [
+        "Venture studio vs traditional startup",
+        "Portfolio experiment management",
+        "Venture studio automation systems",
+        "Signal mesh and opportunity sourcing",
+        "Assembly line workflows",
+        "Proof cycle implementation",
+        "Venture studio metrics",
+        "Scaling venture studio operations",
+        "Venture studio team structure",
+        "Venture studio funding models"
+      ],
+      "questions": [
+        "How do you operate a venture studio alone?",
+        "What's the difference between studio and accelerator?",
+        "How do you manage multiple ventures in parallel?",
+        "What automation systems do venture studios need?",
+        "How do you source opportunities for a studio?",
+        "What metrics matter for venture studios?",
+        "How do you decide which ventures to pursue?",
+        "What's the operating system for venture studios?",
+        "How do you scale a venture studio?",
+        "What's the cost structure of a venture studio?",
+        "How do you fund a venture studio?",
+        "What tools do venture studios use?",
+        "How do you measure venture studio success?",
+        "What are examples of AI-native venture studios?",
+        "How do you build a venture studio playbook?",
+        "What's the team structure for venture studios?",
+        "How do you handle venture studio failures?",
+        "What's the difference between studio and fund?",
+        "How do you exit ventures from a studio?",
+        "What's the future of venture studios?"
+      ],
+      "existing_content": [
+        "/projects/anonymous-venture-studio",
+        "/projects/post-human-venture-engine"
+      ],
+      "target_pillar_page": "/insights/venture-studio-operations"
+    },
+    {
+      "name": "AI Tool Stack & Infrastructure",
+      "slug": "ai-tool-stack",
+      "description": "The practical tools, platforms, and infrastructure that enable AI-native building. This covers the operating stack, tool selection criteria, and how to build a self-hosted, API-first development environment.",
+      "why_necessary": "Builders need practical, actionable tool recommendations. This pillar provides the 'what to use' answers that complement the 'how to think' content in other pillars, creating a complete resource.",
+      "search_queries": [
+        "AI tool stack for builders",
+        "AI native development tools",
+        "solo founder tool stack",
+        "AI infrastructure setup",
+        "self-hosted AI tools",
+        "API-first development stack",
+        "AI automation tools",
+        "venture studio tool stack"
+      ],
+      "subtopics": [
+        "AI tool evaluation criteria",
+        "Self-hosted vs SaaS AI tools",
+        "API-first tool selection",
+        "AI development infrastructure",
+        "Tool integration patterns",
+        "Tool cost optimization",
+        "Tool security and privacy",
+        "Tool automation workflows",
+        "Tool stack evolution",
+        "Tool replacement strategies"
+      ],
+      "questions": [
+        "What tools do AI-native builders use?",
+        "How do you evaluate AI tools?",
+        "What's the best AI tool stack for solo builders?",
+        "Should you self-host AI tools?",
+        "What are API-first tools?",
+        "How do you integrate multiple AI tools?",
+        "What's the cost of an AI-native tool stack?",
+        "How do you automate tool workflows?",
+        "What tools enable anonymous building?",
+        "How do you secure AI tool infrastructure?",
+        "What tools help with rapid experimentation?",
+        "How do you choose between AI tool alternatives?",
+        "What tools enable venture studio operations?",
+        "How do you build a self-hosted AI stack?",
+        "What tools help with AI collaboration?",
+        "How do you measure tool ROI?",
+        "What tools should you avoid?",
+        "How do you stay updated on new AI tools?",
+        "What's the minimum viable AI tool stack?",
+        "How do you replace tools without disruption?"
+      ],
+      "existing_content": [
+        "/tools"
+      ],
+      "target_pillar_page": "/tools"
+    },
+    {
+      "name": "Auto Agent Workflows",
+      "slug": "auto-agent-workflows",
+      "description": "Proactive AI agents that generate work for approval and execution. Autonomous agents that solo operators collaborate with to scale operations without hiring. This covers agent design, approval workflows, agent orchestration, and building a team of AI agents.",
+      "why_necessary": "This is the practical implementation layer. While 'AI-Human Collaboration' covers the philosophy, this pillar addresses the concrete systems: agents that work autonomously, generate proposals, and execute after approval. This is what enables true solo operator scaling.",
+      "search_queries": [
+        "autonomous AI agents for business",
+        "AI agents that generate work",
+        "proactive AI agents",
+        "AI agent approval workflows",
+        "solo operator AI agents",
+        "autonomous agent systems",
+        "AI agent orchestration",
+        "building AI agent team",
+        "agent-based automation",
+        "AI agents for solo founders"
+      ],
+      "subtopics": [
+        "Designing proactive AI agents",
+        "Agent approval and review workflows",
+        "Agent orchestration and coordination",
+        "Agent memory and context management",
+        "Agent-to-agent communication",
+        "Agent monitoring and observability",
+        "Agent failure handling and recovery",
+        "Building agent teams for solo operators",
+        "Agent specialization and role definition",
+        "Agent security and access control"
+      ],
+      "questions": [
+        "How do you build AI agents that work proactively?",
+        "What's the difference between reactive and proactive agents?",
+        "How do you set up approval workflows for AI agents?",
+        "How do multiple AI agents coordinate together?",
+        "What happens when an AI agent makes a mistake?",
+        "How do you monitor what your AI agents are doing?",
+        "How do you give AI agents access to your systems safely?",
+        "What tasks should AI agents handle autonomously?",
+        "How do you build a team of specialized AI agents?",
+        "What's the difference between agents and automation?",
+        "How do AI agents maintain context across tasks?",
+        "How do you prevent AI agents from conflicting?",
+        "What infrastructure do you need for AI agents?",
+        "How do you test AI agents before deployment?",
+        "How do you scale from one agent to many?",
+        "What are examples of successful AI agent workflows?",
+        "How do you handle agent failures gracefully?",
+        "What's the cost of running multiple AI agents?",
+        "How do you ensure agents follow your business rules?",
+        "What's the future of autonomous agent teams?"
+      ],
+      "existing_content": [
+        "/projects/post-human-venture-engine",
+        "/projects/the-agent-fabric"
+      ],
+      "target_pillar_page": "/insights/auto-agent-workflows"
+    }
+  ],
+  "internal_linking_rules": [
+    {
+      "rule": "All blog posts must link to at least one pillar page",
+      "implementation": "Every post in /posts/ should include at least one contextual link to /insights/{pillar-slug} or /tools",
+      "anchor_text_strategy": "Use natural, descriptive anchor text that includes the pillar topic (e.g., 'AI collaboration methodology' not 'click here')"
+    },
+    {
+      "rule": "All pillar pages must link to homepage and related pillars",
+      "implementation": "Each /insights/{pillar-slug} page should link to homepage, at least 2 related pillars, and 3-5 supporting articles",
+      "anchor_text_strategy": "Use pillar names as anchor text for cross-pillar links"
+    },
+    {
+      "rule": "Supporting articles link horizontally to related articles",
+      "implementation": "Articles within the same pillar should link to each other when contextually relevant (minimum 1-2 horizontal links per article)",
+      "anchor_text_strategy": "Use question-based anchor text that matches search intent (e.g., 'how to structure AI collaboration' links to related how-to article)"
+    },
+    {
+      "rule": "Projects link to relevant methodology content",
+      "implementation": "Each project in /projects/ should link to at least one relevant pillar page and one methodology article",
+      "anchor_text_strategy": "Link project features to methodology (e.g., 'built using our 12-week framework')"
+    },
+    {
+      "rule": "Homepage links to all pillar pages",
+      "implementation": "Homepage should have clear navigation or featured sections linking to all 8 pillar pages",
+      "anchor_text_strategy": "Use pillar names as primary navigation labels"
+    },
+    {
+      "rule": "Tools page links to methodology pillars",
+      "implementation": "/tools should link to 'AI-Human Collaboration' and 'AI-Native Product Development' pillars",
+      "anchor_text_strategy": "Link tool categories to relevant methodology (e.g., 'AI collaboration tools' links to collaboration pillar)"
+    }
+  ],
+  "content_to_target_mapping": [
+    {
+      "content_type": "how-to article about AI collaboration",
+      "targets": [
+        "/insights/ai-human-collaboration (required)",
+        "/posts/ai-as-cofounder (if exists)",
+        "/tools (if tool-specific)"
+      ],
+      "rule": "If article answers 'how to collaborate with AI' questions, it must link to AI-Human Collaboration pillar and existing co-founder article"
+    },
+    {
+      "content_type": "experiment methodology article",
+      "targets": [
+        "/insights/experimentation-frameworks (required)",
+        "/posts/12-week-experiment-framework (if exists)",
+        "/insights/anonymous-building (if anonymous angle)"
+      ],
+      "rule": "If article covers experiment methodology, it must link to Experimentation Frameworks pillar and 12-week framework article"
+    },
+    {
+      "content_type": "anonymous building article",
+      "targets": [
+        "/insights/anonymous-building (required)",
+        "/posts/why-anonymity-accelerates-innovation (if exists)",
+        "/insights/experimentation-frameworks (if experiment-related)"
+      ],
+      "rule": "If article discusses anonymous operations, it must link to Anonymous Building pillar and existing anonymity article"
+    },
+    {
+      "content_type": "post-human philosophy article",
+      "targets": [
+        "/insights/post-human-entrepreneurship (required)",
+        "/posts/the-post-human-entrepreneur (if exists)",
+        "/insights/ai-human-collaboration (related pillar)"
+      ],
+      "rule": "If article discusses post-human concepts, it must link to Post-Human Entrepreneurship pillar and existing post-human article"
+    },
+    {
+      "content_type": "AI product technical article",
+      "targets": [
+        "/insights/ai-native-products (required)",
+        "/tools (if tool-specific)",
+        "/projects/{relevant-project} (if case study)"
+      ],
+      "rule": "If article covers AI product development, it must link to AI-Native Products pillar and relevant project case studies"
+    },
+    {
+      "content_type": "venture studio article",
+      "targets": [
+        "/insights/venture-studio-operations (required)",
+        "/projects/anonymous-venture-studio (if exists)",
+        "/insights/experimentation-frameworks (methodology link)"
+      ],
+      "rule": "If article discusses venture studios, it must link to Venture Studio Operations pillar and studio project"
+    },
+    {
+      "content_type": "tool review or stack article",
+      "targets": [
+        "/tools (required)",
+        "/insights/ai-tool-stack (if pillar exists)",
+        "/insights/ai-human-collaboration (if collaboration tool)"
+      ],
+      "rule": "If article reviews tools, it must link to Tools page and relevant methodology pillar"
+    },
+    {
+      "content_type": "autonomous agent or workflow article",
+      "targets": [
+        "/insights/auto-agent-workflows (required)",
+        "/projects/post-human-venture-engine (if exists)",
+        "/projects/the-agent-fabric (if infrastructure-related)",
+        "/insights/ai-human-collaboration (related pillar)"
+      ],
+      "rule": "If article discusses autonomous agents, agent workflows, or agent orchestration, it must link to Auto Agent Workflows pillar and relevant projects"
+    }
+  ],
+  "content_guardrails": {
+    "out_of_scope_topics": [
+      "General AI news and trends (unless directly related to building methodology)",
+      "Generic startup advice without AI-native angle",
+      "Personal productivity tips unrelated to business building",
+      "Cryptocurrency and blockchain (unless AI-native use case)",
+      "Traditional VC fundraising strategies",
+      "Hiring and team management (contradicts solo operator thesis)",
+      "Generic marketing advice (must have AI-native or anonymous angle)",
+      "Tech stack reviews for non-AI products",
+      "Industry-specific advice outside our experiment portfolio"
+    ],
+    "keywords_to_avoid": [
+      "AI tools list (too generic)",
+      "Best AI tools 2024 (trend-based, low value)",
+      "How to make money with AI (get-rich-quick angle)",
+      "AI will replace humans (fear-based, not our thesis)",
+      "AI startup ideas (too generic, not methodology-focused)"
+    ],
+    "angles_to_avoid": [
+      "Fear-based AI content (AI taking jobs)",
+      "Hype-driven content (AI will solve everything)",
+      "Tool-only content without methodology",
+      "Personal brand building (contradicts anonymity thesis)",
+      "Traditional startup playbook content",
+      "VC-focused content (we focus on capital-light building)"
+    ],
+    "signals_of_topical_dilution": [
+      "More than 30% of content is tool reviews without methodology",
+      "Content starts covering general entrepreneurship without AI angle",
+      "Articles become news-focused rather than evergreen methodology",
+      "Internal linking becomes sparse (less than 2 internal links per article)",
+      "Pillar pages are not being created or updated",
+      "Content doesn't answer specific 'how' or 'why' questions"
+    ],
+    "criteria_for_not_writing": [
+      "Topic is purely news-based with no evergreen methodology component",
+      "Topic doesn't connect to at least one pillar",
+      "Topic is too broad and generic (e.g., 'what is AI')",
+      "Topic contradicts core thesis (e.g., 'why you need a team')",
+      "Topic is already well-covered by competitors without unique angle",
+      "Topic requires expertise we don't have (e.g., legal advice)",
+      "Topic is trend-only with no long-term search value"
+    ]
+  },
+  "pillar_pages_to_create": [
+    {
+      "slug": "/insights/ai-human-collaboration",
+      "title": "AI-Human Collaboration Methodology",
+      "description": "Complete guide to treating AI as a strategic co-founder. Frameworks, practices, and mental models for hybrid intelligence in business building.",
+      "priority": 1
+    },
+    {
+      "slug": "/insights/experimentation-frameworks",
+      "title": "Rapid Experimentation Frameworks",
+      "description": "Systematic methodologies for testing business ideas quickly. The 12-week framework, proof cycles, and scale/pivot/kill decision criteria.",
+      "priority": 1
+    },
+    {
+      "slug": "/insights/anonymous-building",
+      "title": "Anonymous Building Strategy",
+      "description": "Strategic advantages of building without personal branding. Faster iteration, honest feedback, and reduced bias through operational anonymity.",
+      "priority": 2
+    },
+    {
+      "slug": "/insights/post-human-entrepreneurship",
+      "title": "Post-Human Entrepreneurship",
+      "description": "The paradigm shift where single operators achieve corporate-scale output through AI symbiosis. The death of traditional startup infrastructure.",
+      "priority": 1
+    },
+    {
+      "slug": "/insights/ai-native-products",
+      "title": "AI-Native Product Development",
+      "description": "Building products where AI is a core component. Architecture, infrastructure, and technical patterns for AI-first applications.",
+      "priority": 2
+    },
+    {
+      "slug": "/insights/venture-studio-operations",
+      "title": "Venture Studio Operations",
+      "description": "Operating AI-native venture studios. Portfolio management, parallel experiments, automation systems, and scalable venture creation.",
+      "priority": 2
+    },
+    {
+      "slug": "/insights/auto-agent-workflows",
+      "title": "Auto Agent Workflows",
+      "description": "Proactive AI agents that generate work for approval and execution. Autonomous agents that solo operators collaborate with to scale operations without hiring.",
+      "priority": 1
+    }
+  ],
+  "automation_ready": true,
+  "next_steps": [
+    "Create pillar pages at /insights/{pillar-slug}",
+    "Update existing blog posts with pillar page links",
+    "Create internal linking component for automatic pillar linking",
+    "Set up content generation prompts based on questions list",
+    "Implement content-to-target mapping in CMS"
+  ]
+}
+

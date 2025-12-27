@@ -74,4 +74,43 @@
   img[data-img-embed='true'] {
     @apply border-accent rounded border;
   }
+
+  /* Pillar callout styling - blockquotes that start with "Part of our" */
+  .prose blockquote:has(> p:first-child strong:has-text("Part of our")) {
+    @apply border-l-4 border-accent bg-slate-900/70 rounded-r-lg p-6 my-8 not-italic;
+  }
+
+  .prose blockquote:has(> p:first-child strong:has-text("Part of our")) > p {
+    @apply text-slate-200 leading-relaxed;
+  }
+
+  .prose blockquote:has(> p:first-child strong:has-text("Part of our")) > p:first-child {
+    @apply font-semibold text-slate-100 mb-2;
+  }
+
+  .prose blockquote:has(> p:first-child strong:has-text("Part of our")) a {
+    @apply text-accent font-semibold hover:underline;
+  }
+
+  /* Related Resources section styling */
+  .prose h2:has-text("Related Resources") {
+    @apply mt-16 mb-6 text-2xl font-semibold text-slate-100 border-t border-slate-800 pt-8;
+  }
+
+  .prose h2:has-text("Related Resources") + ul {
+    @apply list-none pl-0 space-y-3;
+  }
+
+  .prose h2:has-text("Related Resources") + ul li {
+    @apply my-0;
+  }
+
+  .prose h2:has-text("Related Resources") + ul li a {
+    @apply text-accent font-medium hover:underline inline-flex items-center gap-2;
+  }
+
+  .prose h2:has-text("Related Resources") + ul li a::before {
+    content: "→";
+    @apply text-slate-500;
+  }
 }

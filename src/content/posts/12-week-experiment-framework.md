@@ -9,6 +9,8 @@ draft: false
 
 # The 12-Week Experiment Framework
 
+> **Part of our [Rapid Experimentation Frameworks](/insights/experimentation-frameworks) pillar** — This is our complete methodology guide for systematic business experimentation.
+
 After testing dozens of business ideas anonymously, we've developed a structured 12-week framework that maximizes learning while minimizing time investment. This methodology has become our core approach to business experimentation.
 
 ## Why 12 Weeks?
@@ -346,6 +348,12 @@ The 12-week experiment framework provides structure without constraining creativ
 The key is committing to the timeline and decision criteria upfront. This prevents the most common startup mistake: continuing failed ideas too long due to emotional attachment.
 
 After running dozens of experiments through this framework, we've found it creates the perfect balance between thorough validation and rapid iteration—exactly what anonymous building requires.
+
+## Related Resources
+
+- **[Rapid Experimentation Frameworks](/insights/experimentation-frameworks)** — Complete guide to systematic business experimentation
+- **[Why Anonymity Accelerates Innovation](/posts/why-anonymity-accelerates-innovation)** — How anonymous building enables faster experimentation
+- **[AI as Co-Founder](/posts/ai-as-cofounder)** — How AI collaboration accelerates experiment cycles
 
 ---
 

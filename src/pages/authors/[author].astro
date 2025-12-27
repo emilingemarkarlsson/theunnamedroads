@@ -4,6 +4,7 @@ import PageLayout, {
   type Props as PageLayoutProps
 } from '@/layouts/PageLayout.astro'
 import { generateAuthors, getPosts } from '@/util/posts'
+import { getAgentByName } from '@/util/agents'
 import type { InferGetStaticPropsType } from 'astro'
 
 export async function getStaticPaths() {
@@ -20,17 +21,46 @@ const { author } = Astro.props
 type Props = InferGetStaticPropsType<typeof getStaticPaths>
 
 const posts = await getPosts(undefined, author)
+const agent = await getAgentByName(author)
 
 const frontmatter: PageLayoutProps['frontmatter'] = {
-  title: `Author: ${author}`,
+  title: agent ? agent.name : `Author: ${author}`,
+  description: agent 
+    ? `${agent.role} at The Unnamed Road. ${agent.bio}`
+    : `Articles by ${author}`,
   activeHeaderLink: 'Blog'
 }
 ---
 
 <PageLayout {frontmatter}>
-  <h1>
-    <span class={`iconify align-middle text-6xl tabler--user`}></span>
-    <span>{author}</span>
-  </h1>
-  <PostsList {posts} />
+  {
+    agent ? (
+      <div class="space-y-6">
+        <div class="flex items-start gap-4">
+          <span class={`iconify text-6xl ${agent.icon || 'tabler--robot'}`}></span>
+          <div class="flex-1">
+            <h1 class="text-4xl font-semibold">{agent.name}</h1>
+            <p class="mt-2 text-xl text-slate-300">{agent.role}</p>
+            <p class="mt-4 text-slate-400">{agent.bio}</p>
+            <div class="mt-4">
+              <span class="text-sm uppercase tracking-wider text-slate-500">Strengths:</span>
+              <p class="mt-1 text-slate-300">{agent.strengths}</p>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-slate-800 pt-6">
+          <h2 class="text-2xl font-semibold mb-4">Articles</h2>
+          <PostsList {posts} />
+        </div>
+      </div>
+    ) : (
+      <>
+        <h1>
+          <span class={`iconify align-middle text-6xl tabler--user`}></span>
+          <span>{author}</span>
+        </h1>
+        <PostsList {posts} />
+      </>
+    )
+  }
 </PageLayout>

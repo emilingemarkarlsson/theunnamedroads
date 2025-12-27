@@ -7,6 +7,8 @@ tags: ['ai-native', 'post-human', 'paradigm-shift', 'future-business']
 
 # The Post-Human Entrepreneur: When One Person Becomes a Corporation
 
+> **Part of our [Post-Human Entrepreneurship](/insights/post-human-entrepreneurship) pillar** — This is our foundational manifesto on the paradigm shift in business building.
+
 The rules have changed overnight. **Everything you know about business is obsolete.**
 
 We stand at the threshold of a new epoch where the traditional startup playbook—massive teams, venture capital, years of development—has become not just inefficient, but **fundamentally wrong**. A single individual, properly partnered with AI, now possesses capabilities that would have required armies just months ago.
@@ -67,6 +69,12 @@ We are the architects of tomorrow, forging the future while others debate its po
 The transformation isn't coming—**it's here**. Every day, single operators launch businesses that would have taken teams years to build. Every week, impossible problems get solved by human-AI partnerships. Every month, the gap between the old world and the new world grows wider.
 
 The question isn't whether this paradigm will dominate. The question is: **Will you be among the early adopters, or will you be disrupted by them?**
+
+## Related Resources
+
+- **[Post-Human Entrepreneurship](/insights/post-human-entrepreneurship)** — Complete guide to the paradigm shift
+- **[AI as Co-Founder](/posts/ai-as-cofounder)** — The practical implementation of hybrid intelligence
+- **[AI-Human Collaboration Methodology](/insights/ai-human-collaboration)** — The methodology behind post-human building
 
 ---
 

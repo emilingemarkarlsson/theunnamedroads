@@ -9,6 +9,8 @@ draft: false
 
 # AI as Co-Founder: Lessons from 6 Months of Collaboration
 
+> **Part of our [AI-Human Collaboration Methodology](/insights/ai-human-collaboration) pillar** — This article is foundational to understanding how to treat AI as a strategic partner.
+
 Six months ago, we began an experiment: What happens when you treat AI not as a tool, but as a co-founder? The results have been surprising, challenging, and ultimately transformative for how we think about business building.
 
 ## Reframing the Relationship
@@ -202,6 +204,13 @@ Ready to try AI co-founding? Start with one experiment:
 4. **Measure the difference** in your decision speed and quality
 
 The future of business building isn't human OR AI—it's human AND AI, working together as true partners.
+
+## Related Resources
+
+- **[AI-Human Collaboration Methodology](/insights/ai-human-collaboration)** — Complete guide to treating AI as a strategic co-founder
+- **[Auto Agent Workflows](/insights/auto-agent-workflows)** — Building proactive AI agents that generate work for approval
+- **[The Post-Human Entrepreneur](/posts/the-post-human-entrepreneur)** — The broader paradigm shift
+- **[Rapid Experimentation Frameworks](/insights/experimentation-frameworks)** — How AI collaboration accelerates experimentation
 
 ---
 

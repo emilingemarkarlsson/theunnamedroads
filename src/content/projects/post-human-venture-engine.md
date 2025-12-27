@@ -26,6 +26,8 @@ homepage:
 
 # Post-Human Venture Engine
 
+> **Part of our [Auto Agent Workflows](/insights/auto-agent-workflows) pillar** — This project demonstrates how autonomous agents enable portfolio-scale operations for solo operators.
+
 The Post-Human Venture Engine is the operating system behind The Unnamed Road. It merges battle-tested playbooks, custom agents, and autonomous build pipelines so one operator can deploy multiple ventures in parallel.
 
 ## Core Components

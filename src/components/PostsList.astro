@@ -14,24 +14,30 @@ const { posts } = Astro.props
 posts.sort(sortPosts)
 ---
 
-<ul class="p-0">
+<ul class="space-y-6 p-0">
   {
     posts.map(({ data, slug }) => (
-      <li class="mt-4 flex flex-col gap-2 sm:mt-0">
-        <div class="flex flex-col justify-between sm:flex-row sm:items-center">
-          <a
-            class="text-xl font-normal"
-            href={`/posts/${slug}`}
-            data-astro-prefetch
-          >
-            <span>{data.title}</span>
-          </a>
-          <time class="mt-4 text-sm opacity-75 sm:mt-0">
-            {toDateString(data.publishedDate)}
-          </time>
-        </div>
-        <TagsBar tags={resolveTags(data.tags)} />
-        <div class="opacity-75">{data.description}</div>
+      <li class="group">
+        <article class="space-y-3 rounded-lg border border-slate-800 bg-slate-900/30 p-6 transition-all hover:border-slate-700 hover:bg-slate-900/50">
+          <div class="flex flex-col justify-between gap-2 sm:flex-row sm:items-start">
+            <div class="flex-1">
+              <h2 class="mb-2">
+                <a
+                  class="text-xl font-semibold text-slate-100 transition-colors hover:text-white sm:text-2xl"
+                  href={`/posts/${slug}`}
+                  data-astro-prefetch
+                >
+                  {data.title}
+                </a>
+              </h2>
+              <p class="text-slate-400">{data.description}</p>
+            </div>
+            <time class="shrink-0 text-sm text-slate-500 sm:ml-4">
+              {toDateString(data.publishedDate)}
+            </time>
+          </div>
+          <TagsBar tags={resolveTags(data.tags)} />
+        </article>
       </li>
     ))
   }

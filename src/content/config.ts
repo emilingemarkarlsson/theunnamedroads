@@ -7,6 +7,7 @@ const posts = defineCollection({
     z.object({
       title: z.string(),
       author: z.string().default(config.author),
+      authorAgent: z.string().optional(), // Agent ID (e.g., 'aion', 'nexus')
       description: z.string(),
       publishedDate: z.date(),
       draft: z.boolean().optional().default(false),
