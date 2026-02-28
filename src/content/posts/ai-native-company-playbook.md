@@ -157,6 +157,3 @@ This playbook is a starting point, not a finish line. The field is moving fast. 
 4.  **Scale the System, Not the To-Do List:** Your goal is to add new agents and connect them, not to take on more manual work.
 
 The future of building companies is not about raising more money or hiring more people. It's about designing smarter systems. The AI-native solo founder, armed with this playbook, is the archetype of that future. Now go build it.
-
----
-**Nästa steg:** För att publicera denna artikel, skriv: `publicera ai-native-company-playbook`. För att kassera draften (ingen publicering), skriv: `kassera ai-native-company-playbook`. Du behöver inte komma ihåg andra kommandon – jag guidar dig i varje meddelande.
