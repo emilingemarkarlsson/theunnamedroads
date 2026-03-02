@@ -14,6 +14,8 @@ const frontmatter: PageLayoutProps['frontmatter'] = {
 
 <PageLayout {frontmatter}>
   <slot />
+  <h1 class="mb-6 text-3xl font-semibold sm:text-4xl">Tags</h1>
+  <p class="mb-8 text-slate-400">Browse insights and articles by topic.</p>
   <div class="flex flex-wrap gap-4 sm:gap-8">
     {
       tags.map(({ tag, icon }) => (

@@ -32,6 +32,8 @@ export interface Props {
     publishedDate: Date
     prev?: string
     next?: string
+    /** Override meta robots (e.g. "noindex, follow" for 404 pages) */
+    robotsContent?: string
   }>
 }
 
@@ -44,9 +46,13 @@ const {
     openGraphImage = config.openGraphImage || '/ogImage.png',
     publishedDate,
     prev,
-    next
+    next,
+    robotsContent
   }
 } = Astro.props
+
+const robotsValue = robotsContent ?? 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+const ogDescription = (description || config.description || '').trim() || config.description
 
 let titleWithSuffix = title
 
@@ -97,8 +103,11 @@ const websiteJsonLd = {
   }
 }
 
+const pathname = Astro.url.pathname
+const isAgentsPage = pathname === '/agents' || pathname === '/agents/'
+
 const webPageJsonLd = {
-  '@type': 'WebPage',
+  '@type': isAgentsPage ? 'CollectionPage' : 'WebPage',
   '@id': webPageId,
   url: canonicalURL,
   name: titleWithSuffix,
@@ -107,7 +116,14 @@ const webPageJsonLd = {
   inLanguage: config.locale,
   datePublished: publishedDate?.toISOString(),
   dateModified: new Date().toISOString(),
-  mainEntity: { '@id': organizationId },
+  mainEntity: isAgentsPage
+    ? {
+        '@type': 'ItemList',
+        name: 'AI Agent Team',
+        description: 'AI agents that author content for The Unnamed Road—AION, NEXUS, FLUX, ECHO, FORGE, and CORE.',
+        numberOfItems: 6
+      }
+    : { '@id': organizationId },
   author: {
     '@type': 'Organization',
     name: author
@@ -183,11 +199,11 @@ if (articleJsonLd) jsonLdGraph.push(articleJsonLd)
 
     <title>{titleWithSuffix}</title>
     <meta name="title" content={titleWithSuffix} />
-    <meta name="description" content={description} />
+    <meta name="description" content={ogDescription} />
     <meta name="author" content={author} />
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-    <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-    <meta name="bingbot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="robots" content={robotsValue} />
+    <meta name="googlebot" content={robotsValue} />
+    <meta name="bingbot" content={robotsValue} />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link
       rel="alternate"
@@ -197,7 +213,7 @@ if (articleJsonLd) jsonLdGraph.push(articleJsonLd)
     />
 
     <meta property="og:title" content={titleWithSuffix} />
-    <meta property="og:description" content={description} />
+    <meta property="og:description" content={ogDescription} />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:image" content={openGraphImageUrl} />
     <meta property="og:type" content="website" />
@@ -209,7 +225,7 @@ if (articleJsonLd) jsonLdGraph.push(articleJsonLd)
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={canonicalURL} />
     <meta property="twitter:title" content={titleWithSuffix} />
-    <meta property="twitter:description" content={description} />
+    <meta property="twitter:description" content={ogDescription} />
     <meta property="twitter:image" content={openGraphImageUrl} />
     <meta property="twitter:creator" content="@theunnamedroad" />
     <meta property="twitter:site" content="@theunnamedroad" />

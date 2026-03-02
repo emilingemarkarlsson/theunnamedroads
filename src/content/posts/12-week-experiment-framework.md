@@ -1,6 +1,6 @@
 ---
-title: The 12-Week Experiment Framework
-description: Our structured approach to testing business ideas without traditional startup constraints
+title: 12-Week Experiment Framework — Test & Learn Methodology for Product Experiments
+description: A practical test-and-learn framework for product experimentation: validate ideas in 12 weeks, 4 experiments per year. Phase-by-phase guide with foundation, development, and evaluation.
 publishedDate: 2024-12-03
 author: The Unnamed Road
 tags: ['methodology', 'experimentation', 'framework']

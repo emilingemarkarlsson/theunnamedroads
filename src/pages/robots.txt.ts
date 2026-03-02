@@ -51,7 +51,11 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
-# Block any potential admin or draft areas
+# Intentionally blocked: not linked internally, should not be indexed
+# /admin/ – no public admin area; avoid indexing if present
+# /api/ – API endpoints, not content for search
+# /*?preview=* – draft/preview URLs
+# /.well-known/ – verification endpoints (e.g. ACME), not content
 Disallow: /admin/
 Disallow: /*?preview=*
 Disallow: /api/
