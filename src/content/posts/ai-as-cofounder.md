@@ -7,8 +7,6 @@ tags: ['ai', 'collaboration', 'startup-methodology']
 draft: false
 ---
 
-# AI as Co-Founder: Lessons from 6 Months of Collaboration
-
 > **Part of our [AI-Human Collaboration Methodology](/insights/ai-human-collaboration) pillar** — This article is foundational to understanding how to treat AI as a strategic partner.
 
 Six months ago, we began an experiment: What happens when you treat AI not as a tool, but as a co-founder? The results have been surprising, challenging, and ultimately transformative for how we think about business building.

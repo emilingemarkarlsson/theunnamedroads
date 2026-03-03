@@ -1,0 +1,54 @@
+---
+import NavItem from '@/components/layout/NavItem.astro'
+import PageLayout from '@/layouts/PageLayout.astro'
+import Prose from '@/components/layout/Prose.astro'
+import { getCollection } from 'astro:content'
+import type { InferGetStaticPropsType } from 'astro'
+
+type Props = InferGetStaticPropsType<typeof getStaticPaths>
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects')
+  return projects.map((project) => ({
+    params: { slug: project.slug },
+    props: { project }
+  }))
+}
+
+const { project } = Astro.props
+const { Content } = await project.render()
+
+const frontmatter = {
+  title: project.data.title,
+  description: project.data.description,
+  activeHeaderLink: 'Projects',
+  fullBleed: false
+}
+const contentContainerClass = 'mx-auto w-full max-w-6xl px-3 sm:px-6 lg:px-8'
+---
+
+<PageLayout {frontmatter}>
+  <div slot="top" class="mt-4">
+    <NavItem
+      item={{
+        label: 'Back to all projects',
+        href: '/projects',
+        icon: 'tabler--arrow-left'
+      }}
+    />
+  </div>
+
+  <Prose
+    class={`mb-6 sm:mb-12 ${contentContainerClass} prose prose-lg prose-invert max-w-none
+      prose-headings:font-semibold prose-headings:text-slate-100 prose-headings:mt-8 prose-headings:mb-4
+      prose-h1:text-3xl prose-h1:mt-12 prose-h1:mb-6 prose-h1:scroll-mt-20
+      prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-h2:scroll-mt-20
+      prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3 prose-h3:scroll-mt-20
+      prose-p:leading-relaxed prose-p:text-slate-300 prose-p:mb-6
+      prose-a:text-accent prose-a:no-underline hover:prose-a:underline prose-a:font-medium
+      prose-blockquote:border-l-accent prose-blockquote:border-l-4 prose-blockquote:pl-6 prose-blockquote:bg-slate-900/50 prose-blockquote:rounded-r-lg
+      prose-ul:list-disc prose-ul:pl-6 prose-ol:list-decimal prose-ol:pl-6`}
+  >
+    <Content />
+  </Prose>
+</PageLayout>

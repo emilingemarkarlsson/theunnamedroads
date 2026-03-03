@@ -18,7 +18,7 @@ type Props = InferGetStaticPropsType<typeof getStaticPaths>
 
 const { page } = Astro.props
 
-const pageTitle = page.currentPage === 1 ? 'Posts' : `Posts - Page ${page.currentPage}`
+const pageTitle = `Posts - Page ${page.currentPage}`
 
 const frontmatter: PageLayoutProps['frontmatter'] = {
   title: pageTitle,

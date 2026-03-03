@@ -7,8 +7,6 @@ tags: ['anonymity', 'innovation', 'methodology']
 draft: false
 ---
 
-# Why Anonymity Accelerates Innovation
-
 > **Part of our [Anonymous Building Strategy](/insights/anonymous-building) pillar** — This article explains the strategic advantages of building without personal branding.
 
 After six months of building businesses anonymously, we've discovered something counterintuitive: **removing your name from your work makes everything move faster.**

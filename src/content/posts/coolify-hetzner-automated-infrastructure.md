@@ -8,8 +8,6 @@ tags: ['ai-tool-stack', 'infrastructure', 'self-hosted', 'automation']
 draft: false
 ---
 
-# How we run a fully automated infrastructure on Coolify and Hetzner
-
 > **Part of our [AI Tool Stack](/tools) pillar** — This article covers the infrastructure layer that powers our entire operating system.
 
 Our infrastructure runs on a single principle: **maximum automation, zero manual intervention**. Every service—from object storage to LLM hosting to workflow automation—runs self-hosted on Hetzner servers, orchestrated by Coolify, and managed with near-total autonomy.

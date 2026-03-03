@@ -7,8 +7,6 @@ tags: ['methodology', 'experimentation', 'framework']
 draft: false
 ---
 
-# The 12-Week Experiment Framework
-
 > **Part of our [Rapid Experimentation Frameworks](/insights/experimentation-frameworks) pillar** — This is our complete methodology guide for systematic business experimentation.
 
 After testing dozens of business ideas anonymously, we've developed a structured 12-week framework that maximizes learning while minimizing time investment. This methodology has become our core approach to business experimentation.

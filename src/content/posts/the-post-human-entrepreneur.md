@@ -5,8 +5,6 @@ publishedDate: 2025-06-07
 tags: ['ai-native', 'post-human', 'paradigm-shift', 'future-business']
 ---
 
-# The Post-Human Entrepreneur: When One Person Becomes a Corporation
-
 > **Part of our [Post-Human Entrepreneurship](/insights/post-human-entrepreneurship) pillar** — This is our foundational manifesto on the paradigm shift in business building.
 
 The rules have changed overnight. **Everything you know about business is obsolete.**

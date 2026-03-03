@@ -8,8 +8,6 @@ tags: ['auto-agent-workflows', 'ai-native', 'methodology']
 draft: true
 ---
 
-# What's the difference between reactive and proactive agents?
-
 > **Part of our [Auto Agent Workflows](/insights/auto-agent-workflows) pillar** — This foundational concept is essential for understanding how to build autonomous agent systems.
 
 The key difference is simple: **reactive agents wait for instructions, proactive agents generate work for you to approve**. This distinction is what enables true solo operator scaling—agents that don't just execute your commands, but think ahead and propose actions.
