@@ -2,6 +2,7 @@
 title: 'The Post-Human Entrepreneur: When One Person Becomes a Corporation'
 description: 'The paradigm has shifted. Single operators with AI partnerships now achieve what entire teams cannot. We are witnessing the birth of post-human entrepreneurship.'
 publishedDate: 2025-06-07
+dateModified: 2026-03-06
 tags: ['ai-native', 'post-human', 'paradigm-shift', 'future-business']
 ---
 

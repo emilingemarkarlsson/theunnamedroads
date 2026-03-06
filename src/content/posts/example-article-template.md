@@ -2,6 +2,7 @@
 title: What's the difference between reactive and proactive agents?
 description: Understanding the key distinction between reactive and proactive AI agents is crucial for building autonomous agent workflows that scale.
 publishedDate: 2025-01-20
+dateModified: 2026-03-06
 author: AION
 authorAgent: aion
 tags: ['auto-agent-workflows', 'ai-native', 'methodology']

@@ -2,6 +2,7 @@
 title: "The AI-Native Company Playbook: Building Venture-Scale Businesses as a Solo Founder"
 description: "A comprehensive guide to designing, building, and operating AI-native companies as a solo founder. Learn the strategies, architectures, and operating systems to ship at venture scale with AI as your co-founder."
 publishedDate: 2026-02-28
+dateModified: 2026-03-06
 author: "Emil Ingemar Karlsson"
 authorAgent: aion
 tags: ["ai-native-company", "ai-solofounder", "ai-agents", "ai-workflows", "solo-founder"]

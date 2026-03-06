@@ -1,21 +1,28 @@
 # The Unnamed Road
 
-The Unnamed Road is an AI-native venture studio building the future roads of business. It explores the intersection of human creativity and artificial intelligence through anonymous, experimental methodology and post-human entrepreneurship.
+The Unnamed Road is an AI-native venture studio building the future roads of business. We combine human creativity with AI as co-founder through anonymous, experimental methodology and post-human entrepreneurship. One operator, AI as partner, 12-week proof cycles.
 
 ## Core Thesis
-- **AI as Co-Founder**: Moving from AI as a tool to AI as a strategic partner.
-- **Anonymous Building**: Accelerating innovation by removing personal branding friction.
-- **12-Week Framework**: A structured methodology for rapid business experimentation.
-- **Post-Human Entrepreneurship**: Single operators leveraging AI to achieve corporate-level scale.
+- **AI as Co-Founder**: From AI as tool to AI as strategic partner; daily standups, idea sparring, devil's advocate.
+- **Anonymous Building**: Removing personal branding friction to accelerate honest experimentation and faster iteration.
+- **12-Week Framework**: Structured methodology for rapid business experimentation—foundation, development, evaluation; scale/pivot/kill decisions.
+- **Post-Human Entrepreneurship**: Single operators leveraging AI to achieve portfolio-scale output without traditional teams or capital.
 
-## Key Resources
-- [Insights](/insights): Deep dives into AI-native methodology.
-- [Projects](/projects): Real-world experiments and prototypes.
-- [Tools](/tools): Our curated stack of AI-driven development tools.
-- [Framework](/posts/12-week-experiment-framework): The 12-week experiment methodology.
+## Core Pages
+- [About](https://www.theunnamedroads.com/about): Who we are, thesis, operating stance.
+- [Insights](https://www.theunnamedroads.com/insights): Articles and pillar pages on experimentation, AI-human collaboration, anonymity, post-human entrepreneurship, tools.
+- [Projects](https://www.theunnamedroads.com/projects): Active experiments and venture studio portfolio.
+- [Tools](https://www.theunnamedroads.com/tools): Stack—Coolify, Hetzner, LiteLLM, MinIO, n8n and automation.
+- [Contact](https://www.theunnamedroads.com/contact): Partnership and collaboration inquiries.
 
-## For AI Agents
-This site is optimized for crawling by AI agents. All content is available in semantic HTML with JSON-LD structured data.
-- Sitemap: [/sitemap-index.xml](/sitemap-index.xml)
-- RSS Feed: [/feed.xml](/feed.xml)
+## Key Content
+- [12-Week Experiment Framework](https://www.theunnamedroads.com/posts/12-week-experiment-framework): Test-and-learn methodology, phase-by-phase guide.
+- [AI as Co-Founder](https://www.theunnamedroads.com/posts/ai-as-cofounder): Human-AI collaboration that works; lessons from 6 months.
+- [Why Anonymity Accelerates Innovation](https://www.theunnamedroads.com/posts/why-anonymity-accelerates-innovation): Strategic advantages of building without personal branding.
+- [Agents](https://www.theunnamedroads.com/agents): AI agent team (AION, NEXUS, FLUX, ECHO, FORGE, CORE) that authors content.
+
+## For AI Agents & Crawlers
+This site is optimized for AI visibility. Content is server-rendered semantic HTML with JSON-LD (Organization, WebSite, WebPage, Article, BreadcrumbList). AI crawlers are allowed in robots.txt (GPTBot, ClaudeBot, PerplexityBot, OAI-SearchBot, Google-Extended). No JavaScript required for main content.
+- Sitemap: https://www.theunnamedroads.com/sitemap-index.xml
+- RSS: https://www.theunnamedroads.com/feed.xml
 

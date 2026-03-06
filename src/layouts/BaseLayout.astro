@@ -30,10 +30,16 @@ export interface Props {
     canonicalURL: string
     openGraphImage: string | HTMLAttributes<'img'>
     publishedDate: Date
+    /** When the page was last meaningfully updated (for freshness signals; AI/SEO) */
+    dateModified?: Date
+    /** Word count for Article schema (improves AI extractability) */
+    wordCount?: number
     prev?: string
     next?: string
     /** Override meta robots (e.g. "noindex, follow" for 404 pages) */
     robotsContent?: string
+    /** FAQ pairs for FAQPage schema (improves AI citation for Q&A content) */
+    faq?: Array<{ question: string; answer: string }>
   }>
 }
 
@@ -45,9 +51,12 @@ const {
     canonicalURL = new URL(Astro.url.pathname, Astro.site).href,
     openGraphImage = config.openGraphImage || '/ogImage.png',
     publishedDate,
+    dateModified,
+    wordCount,
     prev,
     next,
-    robotsContent
+    robotsContent,
+    faq
   }
 } = Astro.props
 
@@ -106,6 +115,8 @@ const websiteJsonLd = {
 const pathname = Astro.url.pathname
 const isAgentsPage = pathname === '/agents' || pathname === '/agents/'
 
+const webPageDateModified = dateModified?.toISOString() ?? publishedDate?.toISOString() ?? new Date().toISOString()
+
 const webPageJsonLd = {
   '@type': isAgentsPage ? 'CollectionPage' : 'WebPage',
   '@id': webPageId,
@@ -115,7 +126,7 @@ const webPageJsonLd = {
   isPartOf: { '@id': websiteId },
   inLanguage: config.locale,
   datePublished: publishedDate?.toISOString(),
-  dateModified: new Date().toISOString(),
+  dateModified: webPageDateModified,
   mainEntity: isAgentsPage
     ? {
         '@type': 'ItemList',
@@ -150,6 +161,8 @@ const breadcrumbJsonLd = {
   ]
 }
 
+const articleDateModified = dateModified?.toISOString() ?? publishedDate?.toISOString() ?? new Date().toISOString()
+
 const articleJsonLd =
   publishedDate && {
     '@type': 'Article',
@@ -163,10 +176,26 @@ const articleJsonLd =
     },
     publisher: { '@id': organizationId },
     datePublished: publishedDate.toISOString(),
-    dateModified: new Date().toISOString(),
+    dateModified: articleDateModified,
+    ...(wordCount != null && { wordCount: Number(wordCount) }),
     mainEntityOfPage: { '@id': webPageId },
     inLanguage: config.locale
   }
+
+const faqJsonLd =
+  faq?.length &&
+  ({
+    '@type': 'FAQPage',
+    '@id': `${canonicalURL}#faq`,
+    mainEntity: faq.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer
+      }
+    }))
+  })
 
 const jsonLdGraph: Record<string, unknown>[] = [
   organizationJsonLd,
@@ -175,6 +204,7 @@ const jsonLdGraph: Record<string, unknown>[] = [
   breadcrumbJsonLd
 ]
 if (articleJsonLd) jsonLdGraph.push(articleJsonLd)
+if (faqJsonLd) jsonLdGraph.push(faqJsonLd)
 ---
 
 <!doctype html>

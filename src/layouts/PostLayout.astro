@@ -26,13 +26,17 @@ const {
   headings
 } = await post.render()
 
+const wordCount = post.body.split(/\s+/).filter(Boolean).length
+
 const frontmatter: PageLayoutProps['frontmatter'] = {
   ...post.data,
   openGraphImage: post.data.openGraphImage || `/posts/${post.slug}.png`,
   activeHeaderLink: 'Blog',
   scrollProgress: true,
   searchable: true,
-  publishedDate: post.data.publishedDate
+  publishedDate: post.data.publishedDate,
+  dateModified: post.data.dateModified ?? post.data.publishedDate,
+  wordCount
 }
 
 const publishedStr = toDateString(post.data.publishedDate)

@@ -45,7 +45,16 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
+User-agent: Googlebot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
 User-agent: Bing
+Allow: /
+
+User-agent: Bingbot
 Allow: /
 
 User-agent: facebookexternalhit
@@ -60,9 +69,6 @@ Disallow: /admin/
 Disallow: /*?preview=*
 Disallow: /api/
 Disallow: /.well-known/
-
-# Crawl-delay for respectful indexing
-Crawl-delay: 1
 
 Sitemap: ${sitemapURL.href}
 `

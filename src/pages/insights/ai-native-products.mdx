@@ -2,6 +2,13 @@
 layout: '@/layouts/PageLayout.astro'
 title: AI-Native Product Development
 description: Building products where AI is a core component. Architecture, infrastructure, and technical patterns for AI-first applications.
+faq:
+  - question: "What makes a product AI-native vs AI-enhanced?"
+    answer: "AI-enhanced products add AI features to an existing product. AI-native products couldn't exist without AI—AI is core to the value proposition, architecture, and user experience. Examples: conversational analytics, proactive agents, AI-first content and workflow tools."
+  - question: "What infrastructure do AI-native products need?"
+    answer: "You need model access (APIs or self-hosted like LiteLLM), context and memory (vector stores, state), secure APIs, and observability. Our stack uses Coolify on Hetzner, LiteLLM for routing, and workflow tools for agents. Start with one integration point and expand."
+  - question: "How do you build trust in AI products?"
+    answer: "Be transparent about when AI is involved; give users control and override; handle failures gracefully with clear feedback. Design for human-in-the-loop where it matters (e.g. approvals, public output) and automate the rest. Test with real users and iterate on trust signals."
 ---
 
 # AI-Native Product Development

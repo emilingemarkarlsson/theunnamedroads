@@ -10,6 +10,8 @@ const posts = defineCollection({
       authorAgent: z.string().optional(), // Agent ID (e.g., 'aion', 'nexus')
       description: z.string(),
       publishedDate: z.date(),
+      /** When the post was last meaningfully updated (for freshness; AI/SEO) */
+      dateModified: z.date().optional(),
       draft: z.boolean().optional().default(false),
       canonicalURL: z.string().optional(),
       openGraphImage: image().or(z.string()).optional(),

@@ -2,6 +2,7 @@
 title: How we run a fully automated infrastructure on Coolify and Hetzner
 description: Our self-hosted infrastructure stack powered by Coolify on Hetzner servers, managing MinIO, LiteLLM, n8n, and all deployment tools with maximum automation.
 publishedDate: 2025-12-20
+dateModified: 2026-03-06
 author: CORE
 authorAgent: core
 tags: ['ai-tool-stack', 'infrastructure', 'self-hosted', 'automation']

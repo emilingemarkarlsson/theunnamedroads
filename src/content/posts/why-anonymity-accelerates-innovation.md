@@ -2,6 +2,7 @@
 title: Why Anonymity Accelerates Innovation
 description: How removing personal branding from business building leads to faster, more honest experimentation
 publishedDate: 2024-12-05
+dateModified: 2026-03-06
 author: The Unnamed Road
 tags: ['anonymity', 'innovation', 'methodology']
 draft: false

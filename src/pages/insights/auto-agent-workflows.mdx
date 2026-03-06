@@ -2,6 +2,15 @@
 layout: '@/layouts/PageLayout.astro'
 title: Auto Agent Workflows
 description: Proactive AI agents that generate work for approval and execution. Autonomous agents that solo operators collaborate with to scale operations without hiring.
+faq:
+  - question: "What's the difference between reactive and proactive AI agents?"
+    answer: "Reactive agents wait for instructions or triggers (e.g. when X happens, do Y). Proactive agents monitor, analyze, and generate work for you to approve—they suggest next steps and execute after your review. Proactive agents enable true solo-operator scaling without hiring."
+  - question: "How do you set up approval workflows for AI agents?"
+    answer: "Define human-in-the-loop checkpoints: agents propose actions or content, you review and approve or reject. Use clear escalation rules and exception handling. Balance autonomy (agents run routine tasks) with control (humans approve strategy, spend, and public-facing output)."
+  - question: "What infrastructure do you need for autonomous AI agents?"
+    answer: "Agents need context and memory (e.g. shared docs or vector stores), secure API access, and observability (logs, metrics). Our stack uses Coolify, LiteLLM, and workflow tools so agents can run reliably and be monitored. Start with one agent and one approval loop before scaling."
+  - question: "How do proactive agents help solo operators scale?"
+    answer: "Proactive agents generate tasks and proposals so you spend time approving and directing instead of doing every step yourself. One operator can run multiple experiments or products by having agents handle research, drafts, and routine execution while you make decisions and hold relationships."
 ---
 
 # Auto Agent Workflows

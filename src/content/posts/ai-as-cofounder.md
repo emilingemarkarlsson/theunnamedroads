@@ -2,6 +2,7 @@
 title: "AI as Co-Founder — Human-AI Collaboration That Actually Works"
 description: "Six months treating AI as a co-founder, not a tool: what works, what doesn’t, and how to build with AI as a thinking partner. Lessons and a practical human-AI collaboration framework."
 publishedDate: 2024-11-28
+dateModified: 2026-03-06
 author: The Unnamed Road
 tags: ['ai', 'collaboration', 'startup-methodology']
 draft: false
