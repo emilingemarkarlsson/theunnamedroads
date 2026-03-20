@@ -2,7 +2,7 @@
 title: "12-Week Experiment Framework — Test & Learn Methodology for Product Experiments"
 description: "A practical test-and-learn framework for product experimentation: validate ideas in 12 weeks, 4 experiments per year. Phase-by-phase guide with foundation, development, and evaluation."
 publishedDate: 2024-12-03
-dateModified: 2026-03-06
+dateModified: 2026-03-20
 author: The Unnamed Road
 tags: ['methodology', 'experimentation', 'framework']
 draft: false
@@ -353,6 +353,27 @@ After running dozens of experiments through this framework, we've found it creat
 - **[Rapid Experimentation Frameworks](/insights/experimentation-frameworks)** — Complete guide to systematic business experimentation
 - **[Why Anonymity Accelerates Innovation](/posts/why-anonymity-accelerates-innovation)** — How anonymous building enables faster experimentation
 - **[AI as Co-Founder](/posts/ai-as-cofounder)** — How AI collaboration accelerates experiment cycles
+
+## FAQ: 12-Week Experiment Framework
+
+### What is the 12-week experiment framework?
+The 12-week experiment framework is a structured methodology for testing business ideas and product concepts through systematic experimentation. It divides the validation process into three phases: Foundation (weeks 1-3), Development (weeks 4-9), and Evaluation (weeks 10-12), allowing teams to validate ideas efficiently while minimizing time and resource investment.
+
+### Why 12 weeks instead of shorter or longer timelines?
+Twelve weeks provides the optimal balance: it's long enough to build and test a meaningful MVP and gather sufficient data, but short enough to maintain urgency and avoid sunk cost fallacy. This timeframe also aligns with quarterly business cycles and allows for four complete experiments per year.
+
+### What types of projects work best with this framework?
+The framework works well for software products, service businesses, content/media ventures, and technical projects. It's particularly effective for anonymous building where rapid iteration and honest evaluation are crucial. The methodology can be adapted for different project types by adjusting phase durations and focus areas.
+
+### How do you decide whether to continue, pivot, or kill a project?
+The framework includes a structured decision matrix in week 11 that evaluates five criteria: Problem Validation (25%), Market Demand (25%), Solution Effectiveness (20%), Technical Feasibility (15%), and Business Model Viability (15%). Projects scoring above 7.0 typically continue, 5.0-7.0 may pivot, and below 5.0 are archived with learnings documented.
+
+### What are the most common pitfalls and how to avoid them?
+Common pitfalls include scope creep (solved by weekly scope reviews), analysis paralysis (force MVP by week 6), sunken cost continuation (pre-commit to decision criteria), and insufficient user contact (minimum 5 user conversations weekly). The framework includes specific safeguards for each.
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"12-Week Experiment Framework — Test & Learn Methodology for Product Experiments","datePublished":"2024-12-03","dateModified":"2026-03-20","author":{"@type":"Person","name":"The Unnamed Road"}}</script>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the 12-week experiment framework?","acceptedAnswer":{"@type":"Answer","text":"The 12-week experiment framework is a structured methodology for testing business ideas and product concepts through systematic experimentation. It divides the validation process into three phases: Foundation (weeks 1-3), Development (weeks 4-9), and Evaluation (weeks 10-12), allowing teams to validate ideas efficiently while minimizing time and resource investment."}},{"@type":"Question","name":"Why 12 weeks instead of shorter or longer timelines?","acceptedAnswer":{"@type":"Answer","text":"Twelve weeks provides the optimal balance: it's long enough to build and test a meaningful MVP and gather sufficient data, but short enough to maintain urgency and avoid sunk cost fallacy. This timeframe also aligns with quarterly business cycles and allows for four complete experiments per year."}},{"@type":"Question","name":"What types of projects work best with this framework?","acceptedAnswer":{"@type":"Answer","text":"The framework works well for software products, service businesses, content/media ventures, and technical projects. It's particularly effective for anonymous building where rapid iteration and honest evaluation are crucial. The methodology can be adapted for different project types by adjusting phase durations and focus areas."}},{"@type":"Question","name":"How do you decide whether to continue, pivot, or kill a project?","acceptedAnswer":{"@type":"Answer","text":"The framework includes a structured decision matrix in week 11 that evaluates five criteria: Problem Validation (25%), Market Demand (25%), Solution Effectiveness (20%), Technical Feasibility (15%), and Business Model Viability (15%). Projects scoring above 7.0 typically continue, 5.0-7.0 may pivot, and below 5.0 are archived with learnings documented."}},{"@type":"Question","name":"What are the most common pitfalls and how to avoid them?","acceptedAnswer":{"@type":"Answer","text":"Common pitfalls include scope creep (solved by weekly scope reviews), analysis paralysis (force MVP by week 6), sunken cost continuation (pre-commit to decision criteria), and insufficient user contact (minimum 5 user conversations weekly). The framework includes specific safeguards for each."}}]}</script>
 
 ---
 
