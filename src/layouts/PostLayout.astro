@@ -1,5 +1,6 @@
 ---
 import NavItem from '@/components/layout/NavItem.astro'
+import NewsletterSignup from '@/components/NewsletterSignup.astro'
 import TagsBar from '@/components/TagsBar.astro'
 import ToC from '@/components/ToC.astro'
 import PageLayout, {
@@ -126,7 +127,9 @@ const agent = post.data.authorAgent
     <Content />
   </article>
 
-  <div slot="bottom" class="mt-12 border-t border-slate-800 pt-8">
+  <div slot="bottom">
+    <NewsletterSignup />
+    <div class="mt-12 border-t border-slate-800 pt-8">
     <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
       {
         !!previous && (
@@ -155,6 +158,7 @@ const agent = post.data.authorAgent
         )
       }
     </div>
+  </div>
   </div>
   <HeadingAnchorsPlugin />
 </PageLayout>
