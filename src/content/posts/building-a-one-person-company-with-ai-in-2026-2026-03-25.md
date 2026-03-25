@@ -1,9 +1,10 @@
 ---
-title: "Building A One-Person Company With Ai In 2026"
-description: "## Introduction to One-Person Companies The concept of a one-person company has been around for decades, but it has never been more viable than it is today. Wit"
-publishedDate: "2026-03-25"
-tags: ["ai", "entrepreneurship"]
+title: "Building a One-Person Company with AI in 2026"
+description: "How AI tools are enabling solo founders to build, ship, and scale products that previously required a full team — a practical guide to the one-person company in 2026."
+publishedDate: 2026-03-25
+dateModified: 2026-03-25
 author: The Unnamed Road
+tags: ["ai", "entrepreneurship", "indie-hacking"]
 draft: false
 ---
 
