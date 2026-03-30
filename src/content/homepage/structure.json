@@ -1,307 +1,311 @@
 {
   "hero": {
-    "eyebrow": "Hybrid intelligence studio",
-    "headline": "AI-Native Ventures For The Brave",
-    "subheadline": "We design, launch, and operate multiple companies with a single human founder orchestrating a full stack of synthetic teams.",
-    "supportingLine": "Signal-led building across automation, media, commerce, and systems.",
+    "eyebrow": "One founder. Seven sites. AI agents doing the work.",
+    "headline": "Running a Studio on AI Infrastructure",
+    "subheadline": "The Unnamed Roads is a self-hosted AI agent studio — 7 live sites publishing daily content, tracking analytics, and running workflows autonomously. One person. No employees. ~€35/month in infra.",
+    "supportingLine": "Built on n8n, OpenClaw, LiteLLM, Coolify, and Hetzner.",
     "badges": [
-      { "id": "badge-operating", "label": "Always-on operating system" },
-      { "id": "badge-solo", "label": "One founder, many ventures" },
-      { "id": "badge-ai", "label": "Federated AI teams" }
+      { "id": "badge-operating", "label": "Self-hosted on Coolify + Hetzner" },
+      { "id": "badge-solo", "label": "One founder, 7 live sites" },
+      { "id": "badge-ai", "label": "AI agents publishing daily" }
     ],
     "stats": [
-      { "id": "ventures", "label": "Ventures running", "value": "07", "detail": "parallel builds" },
-      { "id": "launch", "label": "Median launch", "value": "12d", "detail": "concept to market" },
-      { "id": "automation", "label": "Autonomy", "value": "92%", "detail": "work handled by AI" },
+      { "id": "ventures", "label": "Sites running", "value": "07", "detail": "all publishing daily" },
+      { "id": "cost", "label": "Monthly infra cost", "value": "€35", "detail": "fully self-hosted" },
+      { "id": "automation", "label": "Content published by AI", "value": "100%", "detail": "zero manual writing" },
       {
         "id": "legacy-headcount",
-        "label": "Traditional team",
-        "value": "18 FTE",
-        "detail": "needed in a legacy studio"
+        "label": "Traditional team needed",
+        "value": "8–12",
+        "detail": "editors, devs, ops"
       }
     ],
     "primaryCta": {
-      "label": "Review the OS",
-      "href": "#operating-system"
+      "label": "See the sites",
+      "href": "#ventures"
     },
     "secondaryCta": {
-      "label": "Meet the AI org",
-      "href": "#ai-teams"
+      "label": "How it works",
+      "href": "#operating-system"
     }
   },
   "ventures": {
-    "eyebrow": "Active venture graph",
-    "title": "Where the AI org is deployed",
-    "description": "Every venture is operated by a dedicated trio of AI squads—build, communicate, optimize. Filter the board to see current surface areas.",
+    "eyebrow": "Live sites",
+    "title": "Seven sites, all running on agents",
+    "description": "Each site publishes AI-generated content daily, tracks analytics via Umami, and notifies via Telegram. No manual editing. No CMS logins.",
     "filters": [
-      { "id": "automation", "label": "Automation" },
-      { "id": "commerce", "label": "Commerce" },
       { "id": "media", "label": "Media" },
-      { "id": "infrastructure", "label": "Infrastructure" },
-      { "id": "labs", "label": "Labs" }
+      { "id": "sports", "label": "Sports" },
+      { "id": "saas", "label": "SaaS" },
+      { "id": "studio", "label": "Studio" }
     ],
     "companies": [
       {
-        "id": "autopath",
-        "name": "AUTOPATH",
-        "focus": "AI workflow infrastructure",
-        "summary": "Orchestrates sales and operations automation for high-velocity businesses.",
-        "tag": "automation",
-        "status": { "label": "Shipping", "tone": "active" },
-        "metric": { "label": "Playbooks live", "value": "28" },
-        "href": "/projects/post-human-venture-engine"
+        "id": "tur",
+        "name": "THE UNNAMED ROADS",
+        "focus": "AI agent studio & writing",
+        "summary": "The studio hub. Publishes articles on AI infrastructure, solo founder ops, and self-hosted systems.",
+        "tag": "studio",
+        "status": { "label": "Live", "tone": "active" },
+        "metric": { "label": "Articles published", "value": "10+" },
+        "href": "https://theunnamedroads.com/"
       },
       {
-        "id": "northbridge",
-        "name": "NORTHBRIDGE LABS",
-        "focus": "Realtime data commerce",
-        "summary": "Deploys micro APIs that feed market and product intelligence back into every venture.",
-        "tag": "infrastructure",
-        "status": { "label": "Scaling", "tone": "active" },
-        "metric": { "label": "Signals / hour", "value": "480" },
-        "href": "/projects/the-atomic-network"
+        "id": "tha",
+        "name": "THE HOCKEY ANALYTICS",
+        "focus": "NHL stats & analytics",
+        "summary": "AI-generated NHL analysis, standings explainers, and xG/Corsi breakdowns. Published daily via n8n + Groq.",
+        "tag": "sports",
+        "status": { "label": "Live", "tone": "active" },
+        "metric": { "label": "Articles / month", "value": "30+" },
+        "href": "https://thehockeyanalytics.com/"
       },
       {
-        "id": "circuit",
-        "name": "CIRCUIT COMMERCE",
-        "focus": "Autonomous storefronts",
-        "summary": "Launches and operates AI-run shops with dynamic pricing and narrative engines.",
-        "tag": "commerce",
-        "status": { "label": "Building", "tone": "building" },
-        "metric": { "label": "Experiments / week", "value": "65" }
+        "id": "thb",
+        "name": "THE HOCKEY BRAIN",
+        "focus": "Hockey stats education",
+        "summary": "Plain-language hockey stats guides targeting casual fans. Gemini-powered with live NHL API data.",
+        "tag": "sports",
+        "status": { "label": "Live", "tone": "active" },
+        "metric": { "label": "Daily publishes", "value": "1" },
+        "href": "https://thehockeybrain.com/"
       },
       {
-        "id": "quantum",
-        "name": "QUANTUM INK",
-        "focus": "Narrative manufacturing",
-        "summary": "Creates long-form media, brand systems, and launch kits on demand.",
-        "tag": "media",
-        "status": { "label": "Shipping", "tone": "active" },
-        "metric": { "label": "Campaigns / month", "value": "34" }
+        "id": "taf",
+        "name": "THE AGENT FABRIC",
+        "focus": "Enterprise AI agent infrastructure",
+        "summary": "B2B content site on distributed AI agents, edge deployments, and sovereign AI. Built with Next.js.",
+        "tag": "saas",
+        "status": { "label": "Live", "tone": "active" },
+        "metric": { "label": "Pillar articles", "value": "5+" },
+        "href": "https://tur-theagentfabric.vercel.app/"
       },
       {
-        "id": "signal-loom",
-        "name": "SIGNAL LOOM",
-        "focus": "Market sensing grid",
-        "summary": "Listens to cultural, financial, and technical shifts to trigger new ventures.",
-        "tag": "labs",
-        "status": { "label": "Live monitoring", "tone": "exploring" },
-        "metric": { "label": "Signals mapped", "value": "3.2K" }
+        "id": "tan",
+        "name": "THE ATOMIC NETWORK",
+        "focus": "Micro-transaction infrastructure",
+        "summary": "Landing page for a payment micro-network concept. Netlify-hosted, content published via OpenClaw.",
+        "tag": "saas",
+        "status": { "label": "Live", "tone": "active" },
+        "metric": { "label": "Blog posts", "value": "5+" },
+        "href": "https://tan-website.netlify.app/"
       },
       {
-        "id": "flowfield",
-        "name": "FLOWFIELD OPS",
-        "focus": "Ops autopilot",
-        "summary": "Turns messy internal processes into resilient autonomous workflows.",
-        "tag": "automation",
-        "status": { "label": "Pilot", "tone": "building" },
-        "metric": { "label": "Processes stabilized", "value": "19" }
+        "id": "tpr",
+        "name": "THE PRINT ROUTE",
+        "focus": "Smart print routing SaaS",
+        "summary": "Landing page for an automated print order routing platform. React/Vite, deployed on Vercel.",
+        "tag": "saas",
+        "status": { "label": "Live", "tone": "active" },
+        "metric": { "label": "Blog posts", "value": "5+" },
+        "href": "https://tur-theprintroute.vercel.app/"
+      },
+      {
+        "id": "eik",
+        "name": "EMILINGEMARKARLSSON.COM",
+        "focus": "Personal site — AI Agent Architect",
+        "summary": "Personal portfolio and blog. AI-generated SEO articles, Astro-based, deployed on Netlify.",
+        "tag": "studio",
+        "status": { "label": "Live", "tone": "active" },
+        "metric": { "label": "Articles / month", "value": "20+" },
+        "href": "https://emilingemarkarlsson.com/"
       }
     ]
   },
   "aiTeams": {
-    "eyebrow": "Synthetic org chart",
-    "title": "Meet the AI organization",
-    "subtitle": "Every venture spins up a trio of squads: build, communicate, optimize. Each member has a distinct remit and reportable metrics.",
-    "note": "Human founder orchestrates strategy, approvals, and key relationships. Everything else is handled by AI counterparts.",
+    "eyebrow": "How it runs",
+    "title": "The agent pipeline",
+    "subtitle": "Three layers handle everything: research, content generation, and publishing. Each runs on a schedule with Telegram notifications and zero manual steps.",
+    "note": "One human sets strategy, approves sensitive changes, and checks Telegram. The rest is autonomous.",
     "groups": [
       {
-        "id": "systems",
-        "name": "Systems Team",
-        "description": "Architecture, automation, and intelligence fabric for every venture.",
+        "id": "research",
+        "name": "Research Layer",
+        "description": "Keyword research, NHL API data pulls, and topic scoring run every morning before content generation.",
         "members": [
           {
-            "id": "aion",
-            "name": "AION",
-            "role": "Lead AI Engineer",
-            "strengths": "Speed, precision, multi-project execution",
-            "bio": "Turns strategic intent into hardened systems—from backend services to production-ready apps."
+            "id": "n8n-research",
+            "name": "n8n",
+            "role": "Workflow orchestrator",
+            "strengths": "Scheduling, API calls, conditional logic",
+            "bio": "Self-hosted on Coolify. Runs ~23 active workflows across all 7 sites — cron-triggered, chained, with error monitoring."
           },
           {
-            "id": "solace",
-            "name": "SOLACE",
-            "role": "Product Architect",
-            "strengths": "User systems, interaction design",
-            "bio": "Designs experiences that align user behavior with business outcomes across ventures."
+            "id": "groq-scoring",
+            "name": "Groq API",
+            "role": "Topic scorer & writer",
+            "strengths": "Fast inference, cost-effective at scale",
+            "bio": "Scores keyword candidates by relevance and competition, then generates full article drafts. Llama 3 models."
           },
           {
-            "id": "neura",
-            "name": "NEURA",
-            "role": "Data & Signals Analyst",
-            "strengths": "Pattern detection, predictive modeling",
-            "bio": "Processes large data volumes to surface insights, calibrate bets, and eliminate guesswork."
+            "id": "nhl-api",
+            "name": "NHL API",
+            "role": "Live data source",
+            "strengths": "Real-time standings, game scores, player stats",
+            "bio": "Powers The Hockey Analytics and The Hockey Brain with current season data — no manual data entry."
           }
         ]
       },
       {
-        "id": "story",
-        "name": "Story Team",
-        "description": "Brand, narrative, and go-to-market cadence.",
+        "id": "content",
+        "name": "Content Layer",
+        "description": "Generation, formatting, and quality scoring before anything is published.",
         "members": [
           {
-            "id": "vexa",
-            "name": "VEXA",
-            "role": "Creative Director AI",
-            "strengths": "Narrative design, cross-channel creativity",
-            "bio": "Shapes how every venture looks, sounds, and feels—from names to long-form drops."
+            "id": "litellm",
+            "name": "LiteLLM",
+            "role": "LLM proxy & router",
+            "strengths": "Multi-model, cost tracking, fallback routing",
+            "bio": "Self-hosted LLM gateway that routes requests to Groq, Gemini, or other providers. Tracks spend per site."
           },
           {
-            "id": "pulse",
-            "name": "PULSE",
-            "role": "Growth & Performance AI",
-            "strengths": "Rapid experimentation, funnel design",
-            "bio": "Runs continuous experiments to uncover compounding channels and scale the winners."
+            "id": "gemini",
+            "name": "Gemini API",
+            "role": "Long-form content writer",
+            "strengths": "High quality, large context window",
+            "bio": "Used for The Hockey Brain's daily NHL articles — longer format with richer context than Groq."
           },
           {
-            "id": "chant",
-            "name": "CHANT",
-            "role": "Community & Support AI",
-            "strengths": "Tone matching, live ops",
-            "bio": "Maintains relationships with users, early adopters, and partners across every touchpoint."
-          },
-          {
-            "id": "flare",
-            "name": "FLARE",
-            "role": "Market Architect",
-            "strengths": "Omnichannel launches, partner flywheels",
-            "bio": "Designs integrated marketing systems that align stories, surfaces, and conversion loops for each venture.",
-            "status": "hiring",
-            "statusLabel": "Recruiting"
+            "id": "minio",
+            "name": "Minio",
+            "role": "Draft storage",
+            "strengths": "S3-compatible, self-hosted",
+            "bio": "Stores keyword JSONs, approved article drafts, and performance insight files between pipeline stages."
           }
         ]
       },
       {
-        "id": "optimize",
-        "name": "Optimization Team",
-        "description": "Telemetry, finance, and decision automation.",
+        "id": "publish",
+        "name": "Publish Layer",
+        "description": "From draft to live in seconds — GitHub commits, IndexNow pings, newsletter dispatch, and Telegram confirmations.",
         "members": [
           {
-            "id": "prism",
-            "name": "PRISM",
-            "role": "Telemetry Strategist",
-            "strengths": "Instrumentation, observability",
-            "bio": "Builds dashboards and alerting so humans can audit every decision surface in real time."
+            "id": "openclaw",
+            "name": "OpenClaw",
+            "role": "Publish server",
+            "strengths": "Markdown write + GitHub commit in one call",
+            "bio": "Webhook server on the host machine. Receives article payloads, writes markdown files, commits to GitHub repos, and triggers Netlify/Vercel deploys."
           },
           {
-            "id": "loop",
-            "name": "LOOP",
-            "role": "Ops Stabilizer",
-            "strengths": "Feedback routing, process repair",
-            "bio": "Routes qualitative and quantitative feedback back into the OS to keep ventures compounding."
+            "id": "github",
+            "name": "GitHub",
+            "role": "Content store & deploy trigger",
+            "strengths": "Version history, Netlify/Vercel hooks",
+            "bio": "All site content lives in GitHub repos. Every commit triggers an automatic build and deploy."
           },
           {
-            "id": "trace",
-            "name": "TRACE",
-            "role": "Finance & Risk AI",
-            "strengths": "Scenario modeling, guardrails",
-            "bio": "Models upside, risk, and runway to inform when to scale, pause, or sunset ventures."
+            "id": "telegram",
+            "name": "Telegram Bot",
+            "role": "Notifications & approvals",
+            "strengths": "Inline buttons, zero app switching",
+            "bio": "Every workflow sends a Telegram message on completion. EIK articles require inline button approval before publishing."
           }
         ]
       }
     ]
   },
   "signals": {
-    "eyebrow": "Signal cloud",
-    "title": "What we are tracking this quarter",
-    "description": "Tags are updated weekly. The heavier the tag, the more surface area we currently devote resources to.",
+    "eyebrow": "What I'm exploring",
+    "title": "Current focus areas",
+    "description": "Topics I'm actively writing about, building systems around, or experimenting with. Updated as the stack evolves.",
     "tags": [
-      "synthetic labor",
-      "boutique ai orgs",
-      "memory-anchored ux",
-      "multi-agent orchestration",
-      "vertical automation",
-      "founder tools",
-      "liquid media",
-      "hyperlocal commerce",
-      "consensus scraping",
-      "low-latency ops",
-      "voice-native flows",
-      "autonomous care",
-      "edge creativity",
-      "chain-of-ops"
+      "self-hosted AI infra",
+      "n8n workflows",
+      "LLM cost optimization",
+      "solo founder ops",
+      "content at scale",
+      "Coolify on Hetzner",
+      "RAG + Qdrant",
+      "GEO / AEO",
+      "IndexNow",
+      "Telegram bots",
+      "OpenClaw publishing",
+      "multi-site SEO",
+      "LiteLLM routing",
+      "autonomous publishing"
     ],
     "highlights": [
       {
-        "id": "operating-stack",
-        "label": "Operating stack shifts",
-        "detail": "Studios want everything abstracted: briefing, building, launch, telemetry. We build the scaffolding."
+        "id": "infra-cost",
+        "label": "Infra cost compression",
+        "detail": "Running 7 live sites with daily AI content for ~€35/month. Coolify + Hetzner replaces €200+/month in managed services."
       },
       {
-        "id": "trust-systems",
-        "label": "Trust systems",
-        "detail": "AI teams require observable control surfaces so humans can audit decision paths in real time."
+        "id": "geo-aeo",
+        "label": "GEO and Answer Engines",
+        "detail": "Structuring content so it gets cited in ChatGPT, Perplexity, and Google AI Overviews — not just ranked on page 1."
       },
       {
-        "id": "story-engines",
-        "label": "Story engines",
-        "detail": "Narratives become living systems—media drops, product updates, and data share a single orchestrator."
+        "id": "agentic-publishing",
+        "label": "Agentic publishing loops",
+        "detail": "Research → draft → quality score → publish → IndexNow → newsletter — fully automated, no human in the loop except Telegram approval."
       }
     ]
   },
   "operatingSystem": {
-    "eyebrow": "Hybrid OS",
-    "title": "From idea to autonomous company",
-    "description": "A single operating system loops discovery, build, launch, and optimization. Humans direct the vector; AI handles the surface area.",
+    "eyebrow": "Daily pipeline",
+    "title": "How a site publishes without me touching it",
+    "description": "Every content site runs the same loop — scheduled by n8n, generated by an LLM, committed to GitHub by OpenClaw, deployed by Netlify or Vercel.",
     "phases": [
       {
-        "id": "scan",
-        "label": "SCAN",
-        "title": "Signal scanning",
-        "description": "Pattern-match the markets, sentiment, data leaks, and workflow gaps that matter.",
-        "meta": "Live dashboards · hourly refresh"
+        "id": "research",
+        "label": "08:00",
+        "title": "Keyword research",
+        "description": "n8n reads yesterday's performance data from Minio. Groq scores topic candidates against real traffic signals.",
+        "meta": "Minio · Groq · n8n cron"
       },
       {
-        "id": "compose",
-        "label": "COMPOSE",
-        "title": "Venture composition",
-        "description": "Pair market gaps with available AI squads, resource budgets, and launch windows.",
-        "meta": "48h design-to-spec sprint"
+        "id": "generate",
+        "label": "09:00",
+        "title": "Article generation",
+        "description": "LiteLLM routes the prompt to Groq or Gemini. Article is scored for quality before continuing.",
+        "meta": "LiteLLM · Groq · Gemini"
       },
       {
-        "id": "deploy",
-        "label": "DEPLOY",
-        "title": "Autonomous deployment",
-        "description": "Spin up infrastructure, data, content, and go-live cadences without waiting for handoffs.",
-        "meta": "Under 2 weeks to revenue"
+        "id": "approve",
+        "label": "09:05",
+        "title": "Approve or auto-publish",
+        "description": "THA and THB auto-publish. EIK articles send a Telegram message with inline Approve/Reject buttons.",
+        "meta": "Telegram bot · n8n webhook"
       },
       {
-        "id": "drive",
-        "label": "DRIVE",
-        "title": "Operate + amplify",
-        "description": "AI teams own campaigns, product loops, customer feedback, and finance telemetry.",
-        "meta": "92% autonomous execution"
+        "id": "publish",
+        "label": "09:10",
+        "title": "Commit to GitHub",
+        "description": "OpenClaw writes the markdown file and commits to the site repo. Netlify or Vercel picks up the push and deploys in ~60 seconds.",
+        "meta": "OpenClaw · GitHub · Netlify / Vercel"
       },
       {
-        "id": "decide",
-        "label": "DECIDE",
-        "title": "Scale or sunset",
-        "description": "Keep signal loops running; scale performing ventures, recycle assets from the rest.",
-        "meta": "Decision windows every 30 days"
+        "id": "ping",
+        "label": "09:12",
+        "title": "IndexNow + newsletter",
+        "description": "IndexNow pings Google and Bing with the new URL. Newsletter dispatch fires to Listmonk subscribers.",
+        "meta": "IndexNow · Listmonk · Resend"
       }
     ]
   },
   "testimonials": {
-    "eyebrow": "Proof of impact",
-    "title": "Builders tapping the OS",
-    "description": "Operators, founders, and partners plug into the system when they need a flexible AI-native org.",
+    "eyebrow": "Numbers",
+    "title": "What the infra actually costs",
+    "description": "Full monthly breakdown for running 7 sites with daily AI content publishing.",
     "quotes": [
       {
-        "id": "quote-caro",
-        "quote": "They launch in days. Brief on Monday, get working product, story, and growth engine by Friday.",
-        "author": "Caro V.",
-        "role": "Founder, parallel retail"
+        "id": "cost-hetzner",
+        "quote": "One VPS running Coolify, n8n, OpenClaw, LiteLLM, Minio, Umami, and Qdrant. Everything self-hosted.",
+        "author": "Hetzner CX32",
+        "role": "~€13/month"
       },
       {
-        "id": "quote-ian",
-        "quote": "The telemetry layer is wild—every AI agent outputs rationale so we can audit in real time.",
-        "author": "Ian M.",
-        "role": "Angel operator"
+        "id": "cost-llm",
+        "quote": "Groq free tier covers most article generation. Gemini API for THB. LiteLLM tracks spend per site.",
+        "author": "LLM APIs (Groq + Gemini)",
+        "role": "~€5–10/month"
       },
       {
-        "id": "quote-sora",
-        "quote": "We plugged in for a go-to-market sprint and kept them on as our standing story team.",
-        "author": "Sora L.",
-        "role": "Chief of Staff, autonomy lab"
+        "id": "cost-domains",
+        "quote": "theunnamedroads.com, thehockeyanalytics.com, thehockeybrain.com — plus Netlify/Vercel free tiers.",
+        "author": "Domains + hosting",
+        "role": "~€12/month"
       }
     ]
   },
@@ -311,10 +315,10 @@
     "description": "Every OS phase has named tools so partners can see exactly how we sense, compose, deploy, and audit autonomous ventures.",
     "groups": [
       {
-        "id": "scan",
-        "phase": "SCAN",
-        "title": "Signal intake grid",
-        "description": "Scrapers, research capture, and model synths pouring context into NEURA and Signal Loom every hour.",
+        "id": "infra",
+        "phase": "INFRA",
+        "title": "Self-hosted infrastructure",
+        "description": "Everything runs on one Hetzner VPS managed by Coolify. No managed databases, no SaaS overhead.",
         "theme": {
           "gradientFrom": "rgba(75, 225, 255, 0.28)",
           "gradientTo": "rgba(15, 23, 42, 0.12)",
@@ -323,45 +327,45 @@
         },
         "tools": [
           {
-            "id": "readwise",
-            "name": "Readwise",
-            "description": "Source-of-truth for highlights so agents can recall research in briefings.",
-            "href": "https://readwise.io/read",
+            "id": "coolify",
+            "name": "Coolify",
+            "description": "Self-hosted PaaS that manages all containers, env vars, and deploys on the Hetzner VPS.",
+            "href": "https://coolify.io/",
             "logo": {
-              "type": "image",
-              "src": "/logos/readwise-logo.svg",
-              "alt": "Readwise logo"
+              "type": "monogram",
+              "label": "CL",
+              "background": "#7c3aed"
             }
           },
           {
-            "id": "apify",
-            "name": "Apify",
-            "description": "Turns messy public surfaces into structured signals we can automate on.",
-            "href": "https://apify.com/",
+            "id": "hetzner",
+            "name": "Hetzner",
+            "description": "CX32 VPS in Frankfurt. ~€13/month. Runs everything — n8n, LiteLLM, Minio, Umami, OpenClaw, Qdrant.",
+            "href": "https://www.hetzner.com/",
             "logo": {
               "type": "monogram",
-              "label": "AP",
-              "background": "#f59e0b"
+              "label": "HZ",
+              "background": "#d00"
             }
           },
           {
-            "id": "perplexity",
-            "name": "Perplexity API",
-            "description": "Rapid synthesis pass when we're probing opaque markets or niche tech.",
-            "href": "https://www.perplexity.ai/",
+            "id": "minio",
+            "name": "Minio",
+            "description": "S3-compatible object storage for draft files, keyword JSONs, and performance insight data.",
+            "href": "https://min.io/",
             "logo": {
               "type": "monogram",
-              "label": "PX",
-              "background": "#0f172a"
+              "label": "MN",
+              "background": "#c72c48"
             }
           }
         ]
       },
       {
-        "id": "compose",
-        "phase": "COMPOSE",
-        "title": "Briefing + runway",
-        "description": "Where specs, budgets, and squad assignments get locked before we greenlight a venture.",
+        "id": "orchestration",
+        "phase": "ORCHESTRATE",
+        "title": "Workflow automation",
+        "description": "n8n runs 23 active workflows. Every schedule, API call, conditional branch, and Telegram notification.",
         "theme": {
           "gradientFrom": "rgba(255, 145, 77, 0.24)",
           "gradientTo": "rgba(91, 76, 147, 0.18)",
@@ -370,78 +374,9 @@
         },
         "tools": [
           {
-            "id": "notion",
-            "name": "Notion API",
-            "description": "Structured venture briefs and rituals that sync straight into the OS.",
-            "href": "https://www.notion.so/",
-            "logo": {
-              "type": "monogram",
-              "label": "N",
-              "background": "#111827"
-            }
-          },
-          {
-            "id": "linear",
-            "name": "Linear",
-            "description": "Sequences autonomous workstreams with human approval checkpoints.",
-            "href": "https://linear.app/",
-            "logo": {
-              "type": "monogram",
-              "label": "LI",
-              "background": "#5e6ad2"
-            }
-          },
-          {
-            "id": "cursor",
-            "name": "Cursor",
-            "description": "Agentic IDE loops to get from spec to ship-ready systems fast.",
-            "href": "https://www.cursor.com/",
-            "logo": {
-              "type": "monogram",
-              "label": "CR",
-              "background": "#0f1117"
-            }
-          }
-        ]
-      },
-      {
-        "id": "deploy",
-        "phase": "DEPLOY",
-        "title": "Autonomous runtime",
-        "description": "Data, orchestration, and hosting layers that keep deployments reliable without headcount.",
-        "theme": {
-          "gradientFrom": "rgba(82, 251, 210, 0.22)",
-          "gradientTo": "rgba(15, 118, 110, 0.12)",
-          "accent": "#34f5c5",
-          "glow": "rgba(52, 245, 197, 0.2)"
-        },
-        "tools": [
-          {
-            "id": "databricks",
-            "name": "Databricks",
-            "description": "Unified analytics and ML runtime for streaming, training, and collaboration.",
-            "href": "https://www.databricks.com/",
-            "logo": {
-              "type": "image",
-              "src": "/logos/databricks-logo.svg",
-              "alt": "Databricks logo"
-            }
-          },
-          {
-            "id": "mage",
-            "name": "Mage",
-            "description": "Modern pipeline builder when we need deterministic data products.",
-            "href": "https://www.mage.ai/",
-            "logo": {
-              "type": "image",
-              "src": "/logos/mage-logo.svg",
-              "alt": "Mage logo"
-            }
-          },
-          {
             "id": "n8n",
             "name": "n8n",
-            "description": "Self-hosted workflow automation gluing agents, APIs, and telemetry.",
+            "description": "Self-hosted workflow engine. Handles keyword research, content generation, publishing, analytics, and error monitoring.",
             "href": "https://n8n.io/",
             "logo": {
               "type": "image",
@@ -450,23 +385,81 @@
             }
           },
           {
-            "id": "elestio",
-            "name": "Elest.io",
-            "description": "Managed DevOps that keeps our experiments hardened and deployable.",
-            "href": "https://elest.io/",
+            "id": "telegram",
+            "name": "Telegram",
+            "description": "All notifications and approvals arrive here. Inline buttons for approving EIK articles without opening a browser.",
+            "href": "https://telegram.org/",
             "logo": {
-              "type": "image",
-              "src": "/logos/elest-logo.svg",
-              "alt": "Elest.io logo"
+              "type": "monogram",
+              "label": "TG",
+              "background": "#229ed9"
+            }
+          },
+          {
+            "id": "openclaw",
+            "name": "OpenClaw",
+            "description": "Webhook publish server. Receives article payloads and commits markdown to GitHub — one HTTP call per publish.",
+            "href": "https://theunnamedroads.com/",
+            "logo": {
+              "type": "monogram",
+              "label": "OC",
+              "background": "#16a34a"
             }
           }
         ]
       },
       {
-        "id": "drive",
-        "phase": "DRIVE + DECIDE",
-        "title": "Observability + guardrails",
-        "description": "The telemetry layer PRISM and TRACE use to audit every autonomous decision.",
+        "id": "ai",
+        "phase": "AI",
+        "title": "LLM stack",
+        "description": "LiteLLM proxies all model calls. Groq handles speed, Gemini handles quality, costs tracked per site.",
+        "theme": {
+          "gradientFrom": "rgba(82, 251, 210, 0.22)",
+          "gradientTo": "rgba(15, 118, 110, 0.12)",
+          "accent": "#34f5c5",
+          "glow": "rgba(52, 245, 197, 0.2)"
+        },
+        "tools": [
+          {
+            "id": "litellm",
+            "name": "LiteLLM",
+            "description": "Self-hosted LLM gateway. Routes to Groq, Gemini, or other providers. Tracks spend. Single endpoint for all models.",
+            "href": "https://litellm.ai/",
+            "logo": {
+              "type": "monogram",
+              "label": "LL",
+              "background": "#0f766e"
+            }
+          },
+          {
+            "id": "groq",
+            "name": "Groq",
+            "description": "Fast inference for keyword scoring and article generation. Llama 3 models. Free tier covers most daily usage.",
+            "href": "https://groq.com/",
+            "logo": {
+              "type": "monogram",
+              "label": "GQ",
+              "background": "#f97316"
+            }
+          },
+          {
+            "id": "qdrant",
+            "name": "Qdrant",
+            "description": "Self-hosted vector DB for semantic search and RAG experiments on article archives.",
+            "href": "https://qdrant.tech/",
+            "logo": {
+              "type": "monogram",
+              "label": "QD",
+              "background": "#dc2626"
+            }
+          }
+        ]
+      },
+      {
+        "id": "analytics",
+        "phase": "OBSERVE",
+        "title": "Analytics + observability",
+        "description": "Umami tracks traffic across all 7 sites. Daily Telegram reports with week-over-week comparisons.",
         "theme": {
           "gradientFrom": "rgba(192, 132, 252, 0.3)",
           "gradientTo": "rgba(59, 7, 100, 0.15)",
@@ -475,36 +468,36 @@
         },
         "tools": [
           {
-            "id": "grafana",
-            "name": "Grafana",
-            "description": "Live dashboards spanning product, growth, and finance signals across ventures.",
-            "href": "https://grafana.com/",
+            "id": "umami",
+            "name": "Umami",
+            "description": "Privacy-first analytics. Self-hosted. Daily automated reports sent to Telegram with pageviews, referrers, and top articles.",
+            "href": "https://umami.is/",
             "logo": {
               "type": "monogram",
-              "label": "GF",
-              "background": "#f97316"
+              "label": "UM",
+              "background": "#374151"
             }
           },
           {
-            "id": "langfuse",
-            "name": "Langfuse",
-            "description": "Prompt and response tracing for Flowise chains plus custom evaluators.",
-            "href": "https://langfuse.com/",
+            "id": "indexnow",
+            "name": "IndexNow",
+            "description": "Instant URL submission to Google and Bing after every article publish. No waiting for crawlers.",
+            "href": "https://www.indexnow.org/",
             "logo": {
               "type": "monogram",
-              "label": "LF",
-              "background": "#0ea5e9"
+              "label": "IN",
+              "background": "#1d4ed8"
             }
           },
           {
-            "id": "metabase",
-            "name": "Metabase",
-            "description": "Decision cockpit for our 30-day venture reviews and financial guardrails.",
-            "href": "https://www.metabase.com/",
+            "id": "listmonk",
+            "name": "Listmonk",
+            "description": "Self-hosted newsletter platform. Subscriber list synced with Resend for transactional delivery.",
+            "href": "https://listmonk.app/",
             "logo": {
               "type": "monogram",
-              "label": "MB",
-              "background": "#2563eb"
+              "label": "LM",
+              "background": "#059669"
             }
           }
         ]
@@ -512,37 +505,37 @@
     ]
   },
   "about": {
-    "eyebrow": "Why we exist",
+    "eyebrow": "What this is",
     "title": "The Unnamed Roads",
-    "subtitle": "A studio built for founders who prefer orchestration over headcount.",
+    "subtitle": "A solo founder running 7 sites on self-hosted AI infrastructure.",
     "body": [
-      "The Unnamed Roads is an AI-native venture studio built around a simple idea: a single founder can orchestrate an entire organization of AI teams to build multiple companies in parallel.",
-      "Instead of hiring large human teams, we deploy specialized AI agents to handle engineering, marketing, operations, analysis, and finance. The result is a new kind of organization—lean, fast, massively scalable, and constantly learning.",
-      "Each venture we launch is another 'unnamed road' into the future. We exist to explore as many of those roads as possible."
+      "The Unnamed Roads is a personal studio — one person, seven live sites, and an AI agent pipeline that handles everything from keyword research to publishing.",
+      "The entire stack is self-hosted on a single Hetzner VPS managed by Coolify. n8n orchestrates ~23 workflows. LiteLLM routes LLM calls to Groq and Gemini. OpenClaw commits markdown to GitHub. Netlify and Vercel deploy. Total cost: ~€35/month.",
+      "This site is where I write about what I'm building, what breaks, and what it actually costs to run AI infrastructure at this scale. No fluff. Just systems."
     ],
     "pillars": [
-      { "id": "parallel", "title": "Parallel building", "detail": "Spin up multiple ventures simultaneously without diluting focus." },
-      { "id": "synthetic", "title": "Synthetic org", "detail": "Dedicated AI teams act like departments with shared telemetry." },
-      { "id": "adaptive", "title": "Adaptive ops", "detail": "Every workflow is instrumented, versioned, and continuously improved." }
+      { "id": "selfhosted", "title": "Fully self-hosted", "detail": "Coolify + Hetzner replaces €200+/month in managed SaaS. One VPS runs everything." },
+      { "id": "autonomous", "title": "Autonomous publishing", "detail": "Content research, generation, and publishing run on cron schedules without manual steps." },
+      { "id": "observable", "title": "Telegram-first ops", "detail": "Every workflow completion sends a Telegram message. Approvals use inline buttons. No dashboards needed." }
     ],
     "stats": [
-      { "id": "assets", "label": "Reusable assets", "value": "240+" },
-      { "id": "network", "label": "Signals ingested / day", "value": "3.8K" },
-      { "id": "speed", "label": "Average sprint", "value": "72h" }
+      { "id": "sites", "label": "Live sites", "value": "7" },
+      { "id": "cost", "label": "Monthly infra", "value": "€35" },
+      { "id": "workflows", "label": "n8n workflows", "value": "23" }
     ]
   },
   "contact": {
-    "eyebrow": "Open door",
-    "title": "Plug into the operating system",
-    "description": "Partners, investors, and ambitious operators can embed with the studio or license specific squads.",
+    "eyebrow": "Say hello",
+    "title": "Questions about the stack?",
+    "description": "If you're building something similar — self-hosted AI infra, multi-site content ops, n8n workflows — I'm happy to talk. No sales pitch, just notes from the field.",
     "primaryCta": {
-      "label": "Start a project",
+      "label": "Get in touch",
       "href": "/contact"
     },
     "secondaryCta": {
-      "label": "Download the brief",
-      "href": "/tools"
+      "label": "Read the articles",
+      "href": "/posts"
     },
-    "note": "Currently booking new collaborations for the next 6-week cycle."
+    "note": "Also on Bluesky: @theunnamedroads.bsky.social"
   }
 }
