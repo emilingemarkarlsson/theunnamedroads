@@ -27,7 +27,7 @@ The seven sites span different niches:
 
 ## The Infrastructure
 
-Everything runs on a single Hetzner VPS (CX32, €15/month). Self-hosted with [Coolify](https://coolify.io) as the deployment layer.
+Everything runs on a single [Hetzner](https://hetzner.cloud/?ref=ECLED3WXrvIQ) VPS (CX32, €15/month). Self-hosted with [Coolify](https://coolify.io) as the deployment layer.
 
 **Key services running:**
 - **n8n** — workflow orchestration (the brain of the whole thing)
@@ -78,7 +78,7 @@ Honest section. Things that cost me hours:
 
 | Service | Cost |
 |---------|------|
-| Hetzner CX32 | €15/mo |
+| [Hetzner](https://hetzner.cloud/?ref=ECLED3WXrvIQ) CX32 | €15/mo |
 | Groq API | ~€8/mo |
 | Gemini API | ~€3/mo |
 | Resend (email) | Free tier |
@@ -105,7 +105,7 @@ The Telegram reporting is genuinely useful. Every morning I get a summary of wha
 
 - **Orchestration:** n8n (self-hosted)
 - **LLMs:** Groq (LLaMA 3.3 70B), Gemini 1.5 Flash
-- **Hosting:** Hetzner + Coolify
+- **Hosting:** [Hetzner](https://hetzner.cloud/?ref=ECLED3WXrvIQ) + Coolify
 - **Deploy:** Netlify, Vercel (static)
 - **Storage:** Minio (S3-compatible)
 - **Analytics:** Umami

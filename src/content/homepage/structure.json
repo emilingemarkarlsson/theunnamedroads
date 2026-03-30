@@ -341,7 +341,7 @@
             "id": "hetzner",
             "name": "Hetzner",
             "description": "CX32 VPS in Frankfurt. ~€13/month. Runs everything — n8n, LiteLLM, Minio, Umami, OpenClaw, Qdrant.",
-            "href": "https://www.hetzner.com/",
+            "href": "https://hetzner.cloud/?ref=ECLED3WXrvIQ",
             "logo": {
               "type": "monogram",
               "label": "HZ",
