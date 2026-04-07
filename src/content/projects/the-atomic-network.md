@@ -23,8 +23,8 @@ homepage:
   summary: >-
     Physical mail plus referral mechanics that trigger when neighbors buy,
     spinning up viral loops for brick-and-mortar brands.
-  metricLabel: Live locations
-  metricValue: 2 live locations
+  metricLabel: Betyg
+  metricValue: 4.8 / 5
   tag: Marketing
   href: https://tan-website.netlify.app/
 ---
@@ -71,9 +71,8 @@ When neighbors buy, neighbors follow. TAN weaponizes the psychology of imitation
 
 ## Pricing Model
 
-- **Free Tier**: Up to 100 contacts, basic geo-targeting
-- **Pro (299 SEK/month)**: Unlimited contacts, AI-generated copy, physical postcards
-- **Enterprise**: Custom pricing with white-label solutions
+- **Gratis (0 SEK)** – tillgängligt t.o.m. 2026-12-31
+- Fullständig tillgång till geo-targeting, kampanjautomatisering och referralsystem under lanseringsfasen
 
 ## Results
 
