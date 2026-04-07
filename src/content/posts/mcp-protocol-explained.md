@@ -1,13 +1,9 @@
 ---
 title: "Model Context Protocol (MCP) Explained: How Anthropic's Open Standard Is Changing AI Agents"
 description: "Deep dive into MCP – the emerging standard for secure, discoverable, and interoperable AI agent tool access. Learn how to build MCP servers and clients in production."
-pubDate: "2026-03-31T08:00:00Z"
-updatedDate: "2026-03-31T08:00:00Z"
-heroImage: "/images/mcp-architecture-diagram.png"
-imageAlt: "MCP architecture: AI client, MCP server, and external tools with secure context flow"
+publishedDate: 2026-03-31
 tags: ["MCP", "AI agents", "tool use", "LangChain", "Litellm", "production AI", "API security"]
 author: "The Agent Fabric"
-readingTime: 8
 ---
 
 In 2024, AI agent tool usage was a jungle. Every framework had its own way of defining, invoking, and securing tools. Interoperability was non-existent. Your LangChain agent couldn’t use your AutoGen tools — and why would it? There was no standard.
