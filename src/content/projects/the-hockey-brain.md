@@ -24,7 +24,7 @@ homepage:
   metricLabel: Data points
   metricValue: ~7,5 M
   tag: Sports AI
-  href: https://thb-site.vercel.app/
+  href: https://www.thehockeybrain.com/
 ---
 
 # The Hockey Brain Consulting

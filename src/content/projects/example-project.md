@@ -1,7 +1,7 @@
 ---
 title: The Hockey Analytics
 description: Advanced NHL data analysis platform providing deep insights into player performance, team strategies, and game dynamics through statistical modeling and machine learning
-url: https://thehockeyanalytics.netlify.app
+url: https://www.thehockeyanalytics.com
 startDate: 2024-01-15
 tags:
   - ai-analytics
