@@ -5,7 +5,7 @@ publishedDate: 2026-03-29
 dateModified: 2026-03-29
 author: The Unnamed Road
 tags: ['bootstrapping', 'venture', 'funding', 'decision']
-draft: false
+draft: true
 ---
 
 The journey of building a company without a map is a daunting yet exhilarating experience. It's a path filled with uncertainty, where every step forward is a testament to resilience and adaptability. For indie hackers, founders, and curious builders, this unconventional road is often paved with lessons learned the hard way, through trial and error, and a willingness to challenge conventional wisdom. In this article, we'll delve into the realities of building a company without a predefined plan, exploring the challenges, opportunities, and strategies that emerge when you're forced to navigate uncharted territory.

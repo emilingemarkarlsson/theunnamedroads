@@ -5,7 +5,7 @@ publishedDate: 2026-04-04
 dateModified: 2026-04-04
 author: The Unnamed Road
 tags: ['digital', 'nomad', 'infrastructure', 'setup']
-draft: false
+draft: true
 ---
 
 The pursuit of building something from scratch is a daunting yet exhilarating experience. It's a journey that requires a delicate balance of vision, resilience, and adaptability. As indie hackers, founders, and curious builders, we often find ourselves navigating uncharted territories, where the rules are unwritten and the outcomes are uncertain. In this vast expanse of the unknown, one concept stands out as a beacon of guidance: the minimum viable product (MVP). The MVP is a powerful tool that can make or break a startup, and its effective implementation can be the difference between success and failure. In this article, we'll delve into the world of MVPs, exploring their significance, the process of building one, and the lessons learned from real-world examples.

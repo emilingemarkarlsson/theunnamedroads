@@ -5,7 +5,7 @@ publishedDate: 2026-03-25
 dateModified: 2026-03-25
 author: The Unnamed Road
 tags: ['solo', 'founder', 'mental', 'health']
-draft: false
+draft: true
 ---
 
 The concept of building a business without a clear roadmap has become increasingly appealing to indie hackers, founders, and curious builders. The idea of navigating uncharted territory, of creating something from scratch, and of learning as you go, resonates deeply with those who value autonomy, creativity, and resilience. However, this approach, often referred to as the "unconventional path," is not without its challenges. In this article, we will delve into the realities of building a company, experimenting with new ideas, and embarking on adventures without a predefined plan. We will explore the benefits and drawbacks of this approach, and provide practical insights and examples to help you navigate the uncharted territories of entrepreneurship.

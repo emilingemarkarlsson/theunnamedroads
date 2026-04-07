@@ -39,6 +39,8 @@ const formatTimeline = (project: CollectionEntry<'projects'>) => {
       const isExternal = data.url && isAbsolute(data.url)
       const projectUrl = data.url || `/projects/${slug}`
 
+      const categoryTag = data.homepage?.tag ?? (data.tags.length > 0 ? data.tags[0] : null)
+
       return (
         <a
           href={projectUrl}
@@ -60,6 +62,11 @@ const formatTimeline = (project: CollectionEntry<'projects'>) => {
 
             {/* Content Container */}
             <div class="flex flex-1 flex-col items-start justify-center text-left pt-8 sm:pt-0">
+              {categoryTag && (
+                <p class="mb-1 text-xs font-semibold uppercase tracking-[0.4em] text-white/50">
+                  {categoryTag}
+                </p>
+              )}
               <h3 class="mb-2 text-2xl font-bold leading-tight tracking-tight text-white transition-colors duration-300 group-hover:text-accent sm:mb-3 sm:text-3xl">
                 {data.title}
               </h3>

@@ -5,7 +5,7 @@ publishedDate: 2026-03-28
 dateModified: 2026-03-28
 author: The Unnamed Road
 tags: ['building', 'audience', 'before', 'product']
-draft: false
+draft: true
 ---
 
 The pursuit of building something from scratch is a daunting yet exhilarating experience. It's a path filled with uncertainty, where the only constant is the need to adapt and evolve. For indie hackers, founders, and curious builders, the journey is often marked by trial and error, with each misstep serving as a valuable lesson. In this article, we'll delve into the world of building companies, experiments, and adventures without a map, exploring the realities of this unconventional path and the insights that can be gleaned from those who have bravely ventured forth.

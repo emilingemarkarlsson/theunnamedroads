@@ -5,7 +5,7 @@ publishedDate: 2026-04-03
 dateModified: 2026-04-03
 author: The Unnamed Road
 tags: ['async-first', 'communication', 'systems']
-draft: false
+draft: true
 ---
 
 As we navigate the uncharted territories of entrepreneurship and innovation, it's easy to get caught up in the allure of the next big thing. We're constantly bombarded with stories of overnight successes and unicorn startups, each one more captivating than the last. But the truth is, the journey to building something meaningful and sustainable is rarely a straightforward one. It's a winding path filled with twists and turns, dead ends and false starts. And yet, it's in these moments of uncertainty that we discover our greatest opportunities for growth and learning. In this article, we'll delve into the world of unconventional entrepreneurship, where the rules are made to be broken and the only constant is change.
