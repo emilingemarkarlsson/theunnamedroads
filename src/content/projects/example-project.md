@@ -1,14 +1,14 @@
 ---
 title: The Hockey Analytics
-description: Advanced NHL data analysis platform providing deep insights into player performance, team strategies, and game dynamics through statistical modeling and machine learning
+description: Making Hockey Data Human. Independent hockey analytics research surfacing proactive insights for scouts, coaches, and analysts before anyone else sees them.
 url: https://www.thehockeyanalytics.com
 startDate: 2024-01-15
 tags:
-  - ai-analytics
+  - hockey-analytics
   - sports-data
-  - machine-learning
-  - data-visualization
-  - nhl-analytics
+  - research
+  - scouting
+  - ai-insights
 homepage:
   featured: true
   order: 4
@@ -16,62 +16,42 @@ homepage:
   statusTone: active
   statusDotColor: bg-emerald-500
   animateDot: true
-  focus: Hockey Analytics Platform
+  focus: Proactive hockey analytics research
   summary: >-
-    Hockey analytics engine turning raw game data into insights, predictive
-    models, and interactive reports for coaches and bettors.
-  metricLabel: Models live
-  metricValue: 7 ML stacks
+    Making Hockey Data Human. Proactive pattern detection in NHL data delivering
+    insights to scouts, coaches, and analysts before anyone else sees them.
+  metricLabel: Premium
+  metricValue: 499 SEK/mån
   tag: Sports AI
   href: https://www.thehockeyanalytics.com/
 ---
 
 # The Hockey Analytics
 
-**Status:** Active Development  
-**Timeline:** Continuous Enhancement  
-**Type:** Sports Analytics Platform
+**Making Hockey Data Human.**
 
-## Beyond Traditional Stats
+Independent hockey analytics research and consulting from Stockholm. The core idea: continuously scan hockey data to detect patterns, anomalies, and opportunities proactively — surfacing insights before anyone else sees them.
 
-While mainstream hockey analysis relies on basic metrics like goals and assists, **The Hockey Analytics** reveals the hidden patterns that determine game outcomes through advanced statistical modeling and machine learning algorithms.
+## What Makes It Different
 
-## The Platform
+Most analytics tools are reactive. You ask a question, you get an answer. THA flips that — insights arrive unsolicited, based on ongoing pattern scanning across NHL data. Scouts and coaches get intelligence they didn't know to ask for.
 
-A comprehensive NHL analytics system that transforms raw game data into actionable insights:
+## What You Get
 
-- **Advanced Player Metrics**: Beyond traditional stats to reveal true player impact
-- **Team Performance Analysis**: Deep dive into tactical patterns and strategic effectiveness
-- **Predictive Modeling**: Machine learning algorithms for game outcome predictions
-- **Interactive Visualizations**: Dynamic charts and graphs for data exploration
-- **Real-time Analytics**: Live game analysis and performance tracking
+- **Weekly research reports** – proactive pattern detection delivered to your inbox
+- **Player development & scouting insights** – data-driven player profiles and progression tracking
+- **Team performance analytics** – tactical breakdowns, matchup analysis, roster construction
+- **Trade value assessments** – AI-powered valuation across positions and contracts
+- **Interactive dashboards** (Premium) – live data exploration and custom filters
+- **AI-powered player profiles** (Premium) – deep dives beyond box scores
 
-## Technical Innovation
+## Pricing
 
-Built with modern web technologies to deliver:
+- **Free** – weekly reports, basic analytics, newsletter access
+- **Premium – 499 SEK/mån** – full research archive, interactive dashboards, AI profiles, trade insights, priority support
 
-- **Real-time Data Processing**: Instant updates during NHL games
-- **Machine Learning Integration**: AI-powered pattern recognition and predictions
-- **Responsive Design**: Optimized for all devices and screen sizes
-- **Data Visualization**: Interactive charts using advanced charting libraries
-- **Performance Optimization**: Fast loading and smooth user experience
+## For Whom
 
-## The Analytics Edge
+Scouts, coaches, analysts, teams, and decision-makers who want a data edge in player development, roster construction, and game strategy.
 
-This platform goes beyond traditional hockey statistics to uncover:
-
-- **Hidden Player Contributions**: Metrics that reveal true player value
-- **Tactical Insights**: Understanding team strategies through data
-- **Predictive Intelligence**: Forecasting game outcomes and player performance
-- **Trend Analysis**: Identifying patterns across seasons and matchups
-
-## Future Development
-
-Continuous expansion includes:
-
-- **Enhanced ML Models**: More sophisticated prediction algorithms
-- **Extended Coverage**: Potential expansion to other hockey leagues
-- **API Development**: Access for developers and analysts
-- **Mobile Applications**: Native apps for iOS and Android platforms
-
-**The Hockey Analytics** represents the future of sports analysis—where traditional scouting meets artificial intelligence to unlock the game's deepest secrets.
+**Location:** Stockholm, Sweden · contact@thehockeyanalytics.com
