@@ -1,6 +1,6 @@
 ---
 title: The Price Lab
-description: Professionella prisskyltar for smabutiker. Bestall snygga prisskyltar pa minuter med direktleverans – utan printerstrul.
+description: Snygga prisskyltar till din butik. Klart pa fem minuter. Ingen printer, ingen stress – bara professionella prisskyltar med direktleverans.
 url: https://thepricelab-thepricelab.vercel.app/prototype/coming-soon.html
 startDate: 2026-04-01
 tags:
@@ -16,34 +16,36 @@ homepage:
   statusTone: building
   statusDotColor: bg-amber-500
   animateDot: true
-  focus: Prisskyltar for smabutiker
+  focus: Snygga prisskyltar. Klart pa 5 minuter.
   summary: >-
-    Professionella prisskyltar utan printerstrul. Bestall snygga prisskyltar pa
-    minuter med direktleverans till din butik.
-  metricLabel: Lanseringsdatum
-  metricValue: Kommer snart
+    Ingen printer. Ingen stress. Valj design, ange pris – fa professionella
+    prisskyltar levererade direkt till butiken pa fem minuter.
+  metricLabel: Tid fran order
+  metricValue: 5 minuter
   tag: Retail Tech
   href: https://thepricelab-thepricelab.vercel.app/prototype/coming-soon.html
 ---
 
 # The Price Lab
 
-**Professionella prisskyltar. Utan printerstrul.**
+**Snygga prisskyltar till din butik. Klart pa fem minuter.**
 
-The Price Lab hjalper smabutiker att bestalla snygga prisskyltar pa minuter – med direktleverans och utan behovet av lokal skrivare eller designkompetens.
+Ingen printer. Ingen stress. The Price Lab lar butiker bestalla professionella prisskyltar med ett konsekvent visuellt uttryck – direkt levererade till butiken.
 
-## Problemet
+## Sa fungerar det
 
-Smabutiker behover attraktiva prisskyltar men fastnar i printerstrul, fula mallar och tidskravande processer. Resultatet blir ofta handskrivna lappar eller fula utskrifter som skadar butikens image.
+1. **Valj produkter** – blaeddra eller sok bland dina varor
+2. **Ange pris** – snabb ifyllning, ingen designkompetens kravs
+3. **Bestall** – prisskyltar trycks och levereras direkt till butiken
 
-## Losningen
-
-En enkel bestellningsplattform dar butiker:
-
-- **Valjer format och design** – professionella mallar anpassade for detaljhandel
-- **Anger pris och produkt** – snabb ifyllning utan designkompetens
-- **Far direktleverans** – tryckta prisskyltar levererade till doren
+Hela processen tar fem minuter. Ingen skrivare, inga mallar att fixa, ingen stress.
 
 ## For vem
 
-Smabutiker, livsmedelshandlare, blomsterbutiker och alla som vill ha professionella prisskyltar utan overhead.
+Butiksoagare och butikschefer som vill ha ett professionellt och konsekvent uttryck pa sina prisskyltar – utan att bygga intern printinfrastruktur.
+
+Dagligvaruhandel, blomsterbutiker, klader, sport – alla som behoever prisskyltar regelbundet.
+
+## Status
+
+Pre-launch. Anmael intresse via sajten for att fa tidig access nar tjansen lanseras.
