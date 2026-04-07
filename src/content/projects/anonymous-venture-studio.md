@@ -1,6 +1,6 @@
 ---
 title: The Unnamed Road
-description: One founder. Seven sites. AI agents doing the work. Self-hosted AI venture studio running 23 n8n workflows on Coolify + Hetzner for ~35 EUR per month.
+description: One founder. Seven projects. AI agents doing the work. Self-hosted AI venture studio running 23 n8n workflows on Coolify + Hetzner for ~35 EUR per month.
 startDate: 2024-11-15
 url: https://theunnamedroads.com
 tags:
@@ -18,7 +18,7 @@ homepage:
   animateDot: true
   focus: AI-native solo venture studio
   summary: >-
-    One founder. Seven sites. AI agents doing the work. Self-hosted on Coolify
+    One founder. Seven projects. AI agents doing the work. Self-hosted on Coolify
     and Hetzner for ~35 EUR/month – replacing what would normally take 8-12 people.
   metricLabel: Infrastruktur
   metricValue: ~35 EUR/mån
@@ -28,7 +28,7 @@ homepage:
 
 # The Unnamed Road
 
-**One founder. Seven sites. AI agents doing the work.**
+**One founder. Seven projects. AI agents doing the work.**
 
 The Unnamed Road is a single-operator AI-native venture studio. AI agents handle keyword research, article generation, publishing, and analytics – all self-hosted on Coolify and Hetzner for around €35 per month.
 
