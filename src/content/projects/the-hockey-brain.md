@@ -1,7 +1,7 @@
 ---
 title: The Hockey Brain
-description: Stockholm-based hockey analytics consultancy that blends modern data science, visualization, and AI copilots to give teams measurable competitive edges
-url: https://thehockeybrain.com
+description: Stockholm-based hockey analytics consultancy combining data science and deep hockey knowledge. On-demand analytics for pro clubs, junior orgs, and national teams – no full-time hire needed.
+url: https://www.thehockeybrain.com
 startDate: 2025-01-05
 tags:
   - sports-analytics
@@ -21,8 +21,8 @@ homepage:
     Modern data stack + flexible engagement model delivering on-demand hockey
     analytics squads for teams that want measurable tactical advantages without
     full-time hires.
-  metricLabel: Data points
-  metricValue: ~7,5 M
+  metricLabel: Svarstid
+  metricValue: 2 arbetsdagar
   tag: Sports AI
   href: https://www.thehockeybrain.com/
 ---
@@ -47,12 +47,14 @@ inside pro teams without the overhead of full-time hires.
 3. **Embedded Analysts** – operate as an extension of the hockey ops group, delivering weekly briefings and live support during critical windows.
 4. **Iterate & Scale** – expand to new surfaces (draft, player development, matchups) once the initial mandate is humming.
 
-## Representative Deliverables
+## Services
 
-- Expected goals and finishing quality benchmarks for entire rosters.
-- Tactical matchup boards that visualize forecheck, zone entry, and special teams trends.
-- Draft and recruitment intelligence that scores upside vs. role fit through AI-assisted scouting reports.
-- Dashboards and alerts that highlight when performance deviates from predictive models.
+- **Scouting models & player evaluation** – AI-assisted recruitment scoring and talent profiling
+- **Expected Goals (xG) analysis** – finishing quality benchmarks across entire rosters
+- **Custom dashboards & reporting** – tactical matchup boards, forecheck, zone entry, special teams
+- **Recruitment & talent evaluation** – upside vs. role fit through data-driven scouting reports
+- **Player development frameworks** – track individual progression against predictive baselines
+- **Strategic matchup analysis** – scenario planning for playoffs, trade deadlines, and draft prep
 
 ## Why Teams Plug In
 
@@ -60,6 +62,12 @@ inside pro teams without the overhead of full-time hires.
 - **Cost-Effective Expertise** – senior talent on-demand instead of permanent headcount.
 - **On-Demand Scaling** – surge support during playoffs, trade deadlines, or draft prep, then scale down again.
 
+## For Whom
+
+Professional clubs, junior organizations, national teams, and player agencies seeking senior-level analytics without permanent headcount. Remote delivery from Stockholm, support across time zones.
+
+**Founder:** Emil Karlsson – Senior Analytics Consultant
+
 ## Get Started
 
-Teams typically receive a tailored analytics activation roadmap within 48 hours of reaching out. Visit the site to book a consultation and unlock a modern data edge for your organization.
+Teams typically receive a tailored analytics activation roadmap within 2 business days of reaching out.
