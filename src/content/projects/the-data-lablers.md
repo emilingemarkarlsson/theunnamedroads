@@ -1,7 +1,7 @@
 ---
 title: The Data Lablers
 description: Efficient data labeling company to enable AI. Professional data annotation services that power machine learning and AI model training.
-url: https://thedatalabelers.vercel.app
+url: https://tur-thedatalabelers.vercel.app
 startDate: 2025-01-20
 tags:
   - data-labeling
@@ -24,7 +24,7 @@ homepage:
   metricLabel: Datasets labeled
   metricValue: Coming soon
   tag: Data Services
-  href: 'https://thedatalabelers.vercel.app'
+  href: 'https://tur-thedatalabelers.vercel.app'
 ---
 
 # The Data Lablers
