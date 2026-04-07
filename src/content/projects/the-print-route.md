@@ -1,15 +1,15 @@
 ---
 title: The Print Route
-description: Seamless Routing for Every Print Need. Send your order – we analyze geo, format, and price, then route it to the optimal provider and handle delivery end-to-end.
+description: From webhook to doorstep. A two-sided print routing platform connecting retailers with local print providers – automated order intake, SLA-based production workflow, and synced delivery tracking.
 url: https://theprintroute.com
 startDate: 2025-01-15
 tags:
   - print-logistics
   - routing
-  - automation
-  - e-commerce
+  - marketplace
+  - saas
   - logistics
-  - ai-native
+  - gdpr
 homepage:
   featured: true
   order: 3
@@ -17,64 +17,44 @@ homepage:
   statusTone: active
   statusDotColor: bg-emerald-500
   animateDot: true
-  focus: Seamless print routing platform
+  focus: Print routing from webhook to doorstep
   summary: >-
-    Send your order – we analyze geo, format, and price, then route it to the
-    optimal provider and handle delivery end-to-end.
-  metricLabel: Orders routed
-  metricValue: '3'
+    Two-sided print routing platform. Retailers send orders via webhook –
+    providers accept, produce, and ship with full tracking synced back automatically.
+  metricLabel: Provider portal
+  metricValue: app.theprintroute.com
   tag: Logistics AI
   href: https://theprintroute.com
 ---
 
 # The Print Route
 
-**Seamless Routing for Every Print Need**
+**From webhook to doorstep.**
 
-Send your order – we analyze geo, format, and price, then route it to the optimal provider and handle delivery end-to-end.
+The Print Route is a two-sided SaaS platform that connects retailers and e-commerce businesses with a network of local print providers. Orders flow in via API or webhook – providers receive structured jobs, follow an SLA-based production workflow, and sync tracking automatically back to the customer.
 
-## The Problem
+## For Retailers
 
-Traditional print ordering involves:
-- Manual vendor research and comparison
-- Geographic limitations and shipping delays
-- Inconsistent pricing and format compatibility
-- Fragmented delivery tracking across multiple providers
-- Time-consuming order management for businesses
+Send print orders programmatically and get fulfilment handled end-to-end:
 
-## The Solution
+- Submit requirements (file, format, quantity, delivery address) via webhook or portal
+- The platform analyzes geo-proximity, format compatibility, and provider pricing
+- Automatically routes to the optimal provider in the network
+- Single tracking update syncs back to your system when shipped
 
-The Print Route automates the entire print ordering process:
+## For Print Providers
 
-1. **Order Submission** – Send your print requirements (file, format, quantity, delivery location)
+A structured inbox and workflow replacing ad hoc emails and manual coordination:
 
-2. **Intelligent Analysis** – Our system analyzes:
-   - Geographic proximity to delivery destination
-   - Format compatibility with available providers
-   - Price optimization across the network
-   - Delivery time estimates
+- **Accept** – receive structured, standardized print jobs
+- **Produce** – clear SLA steps with file delivery per order
+- **Ship** – one tracking update syncs automatically back to the retailer
 
-3. **Optimal Routing** – Automatically routes your order to the best provider based on your priorities
+Onboarding: define production capabilities (formats, countries, materials), set pricing, run a test order.
 
-4. **End-to-End Delivery** – Handles the complete fulfillment and delivery process
+## Platform
 
-## Key Features
-
-- **Geo-Optimized Routing** – Finds the closest provider to your delivery location
-- **Format Analysis** – Ensures compatibility with your print specifications
-- **Price Comparison** – Automatically finds the best price across providers
-- **Seamless Delivery** – Complete order tracking and fulfillment management
-- **Multi-Provider Network** – Access to optimized network of print providers
-
-## Use Cases
-
-- **Business Printing** – Corporate documents, marketing materials, event collateral
-- **Personal Printing** – Custom prints, photo books, invitations
-- **On-Demand Services** – Same-day or rush order fulfillment
-- **Bulk Orders** – Large quantity printing with optimized routing
-
-## How It Works
-
-Submit your order → System analyzes requirements → Routes to optimal provider → Handles fulfillment → Delivers to your location
-
-The Print Route eliminates the complexity of finding, comparing, and managing print providers—making professional printing as simple as sending an email.
+- Provider portal: [app.theprintroute.com](https://app.theprintroute.com)
+- GDPR-compliant, EU-based data handling
+- Admin dashboard for managing customers, orders, and revenue
+- API-first integration for retailers
