@@ -21,8 +21,8 @@ homepage:
   summary: >-
     Infrastructure layer that enables AI agents to operate inside enterprise
     systems—securely, locally, and at scale. On-prem, edge, and hybrid deployment.
-  metricLabel: Running agents
-  metricValue: '2'
+  metricLabel: Deployment model
+  metricValue: Edge + on-prem
   tag: Enterprise AI
   href: https://tur-theagentfabric.vercel.app/
 ---
