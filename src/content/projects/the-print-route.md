@@ -1,7 +1,7 @@
 ---
 title: The Print Route
 description: Seamless Routing for Every Print Need. Send your order – we analyze geo, format, and price, then route it to the optimal provider and handle delivery end-to-end.
-url: https://tur-theprintroute.vercel.app/
+url: https://theprintroute.com
 startDate: 2025-01-15
 tags:
   - print-logistics
@@ -24,7 +24,7 @@ homepage:
   metricLabel: Orders routed
   metricValue: '3'
   tag: Logistics AI
-  href: https://tur-theprintroute.vercel.app/
+  href: https://theprintroute.com
 ---
 
 # The Print Route
