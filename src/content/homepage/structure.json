@@ -1,16 +1,16 @@
 {
   "hero": {
-    "eyebrow": "One founder. Seven sites. AI agents doing the work.",
-    "headline": "Running a Studio on AI Infrastructure",
-    "subheadline": "The Unnamed Roads is a self-hosted AI agent studio — 7 live sites publishing daily content, tracking analytics, and running workflows autonomously. One person. No employees. ~€35/month in infra.",
-    "supportingLine": "Built on n8n, OpenClaw, LiteLLM, Coolify, and Hetzner.",
+    "eyebrow": "AI Venture Studio",
+    "headline": "Building Ventures on AI. No Big Team. Just Agents.",
+    "subheadline": "The Unnamed Roads is an AI venture studio. 9 live projects. Built by one founder and a stack of AI agents — content, analytics, and workflows run fully autonomously. No employees. ~€35/month in infra.",
+    "supportingLine": "Stack: n8n · OpenClaw · LiteLLM · Coolify · Hetzner",
     "badges": [
       { "id": "badge-operating", "label": "Self-hosted on Coolify + Hetzner" },
-      { "id": "badge-solo", "label": "One founder, 7 live sites" },
+      { "id": "badge-solo", "label": "One founder, 9 live projects" },
       { "id": "badge-ai", "label": "AI agents publishing daily" }
     ],
     "stats": [
-      { "id": "ventures", "label": "Sites running", "value": "07", "detail": "all publishing daily" },
+      { "id": "ventures", "label": "Projects running", "value": "09", "detail": "all publishing daily" },
       { "id": "cost", "label": "Monthly infra cost", "value": "€35", "detail": "fully self-hosted" },
       { "id": "automation", "label": "Content published by AI", "value": "100%", "detail": "zero manual writing" },
       {
@@ -21,7 +21,7 @@
       }
     ],
     "primaryCta": {
-      "label": "See the sites",
+      "label": "See the projects",
       "href": "#ventures"
     },
     "secondaryCta": {
@@ -30,9 +30,9 @@
     }
   },
   "ventures": {
-    "eyebrow": "Live sites",
-    "title": "Seven sites, all running on agents",
-    "description": "Each site publishes AI-generated content daily, tracks analytics via Umami, and notifies via Telegram. No manual editing. No CMS logins.",
+    "eyebrow": "Live projects",
+    "title": "Nine projects, all running on agents",
+    "description": "Each project publishes AI-generated content daily, tracks analytics via Umami, and notifies via Telegram. No manual editing. No CMS logins.",
     "filters": [
       { "id": "media", "label": "Media" },
       { "id": "sports", "label": "Sports" },
@@ -507,9 +507,9 @@
   "about": {
     "eyebrow": "What this is",
     "title": "The Unnamed Roads",
-    "subtitle": "A solo founder running 7 sites on self-hosted AI infrastructure.",
+    "subtitle": "An AI venture studio — one founder, 9 live projects, self-hosted AI infrastructure.",
     "body": [
-      "The Unnamed Roads is a personal studio — one person, seven live sites, and an AI agent pipeline that handles everything from keyword research to publishing.",
+      "The Unnamed Roads is an AI venture studio — one person, nine live projects, and an AI agent pipeline that handles everything from keyword research to publishing.",
       "The entire stack is self-hosted on a single Hetzner VPS managed by Coolify. n8n orchestrates ~23 workflows. LiteLLM routes LLM calls to Groq and Gemini. OpenClaw commits markdown to GitHub. Netlify and Vercel deploy. Total cost: ~€35/month.",
       "This site is where I write about what I'm building, what breaks, and what it actually costs to run AI infrastructure at this scale. No fluff. Just systems."
     ],
@@ -519,7 +519,7 @@
       { "id": "observable", "title": "Telegram-first ops", "detail": "Every workflow completion sends a Telegram message. Approvals use inline buttons. No dashboards needed." }
     ],
     "stats": [
-      { "id": "sites", "label": "Live sites", "value": "7" },
+      { "id": "sites", "label": "Live projects", "value": "9" },
       { "id": "cost", "label": "Monthly infra", "value": "€35" },
       { "id": "workflows", "label": "n8n workflows", "value": "23" }
     ]
