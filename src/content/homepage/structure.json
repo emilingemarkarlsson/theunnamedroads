@@ -185,7 +185,7 @@
   "testimonials": {
     "eyebrow": "Numbers",
     "title": "What the infra actually costs",
-    "description": "Full monthly breakdown for running 7 sites with daily AI content publishing.",
+    "description": "Full monthly breakdown for running 8 sites with daily AI content publishing.",
     "quotes": [
       {
         "id": "cost-hetzner",
@@ -195,8 +195,8 @@
       },
       {
         "id": "cost-llm",
-        "quote": "Groq free tier covers most article generation. Gemini API for THB. LiteLLM tracks spend per site.",
-        "author": "LLM APIs (Groq + Gemini)",
+        "quote": "Gemini 2.5 Flash via LiteLLM handles article generation for 6 sites. Groq handles keyword scoring and EIK. Spend tracked per site.",
+        "author": "LLM APIs (Gemini + Groq)",
         "role": "~60–115 kr/month"
       },
       {
@@ -303,6 +303,17 @@
               "label": "OC",
               "background": "#16a34a"
             }
+          },
+          {
+            "id": "paperclip",
+            "name": "Paperclip",
+            "description": "AI agent platform. CEO agent runs weekly strategy heartbeat. CFO agent reads Umami + LiteLLM spend data and flags cost anomalies.",
+            "href": "https://theunnamedroads.com/",
+            "logo": {
+              "type": "monogram",
+              "label": "PC",
+              "background": "#7c3aed"
+            }
           }
         ]
       },
@@ -310,7 +321,7 @@
         "id": "ai",
         "phase": "AI",
         "title": "LLM stack",
-        "description": "LiteLLM proxies all model calls. Groq handles speed, Gemini handles quality, costs tracked per site.",
+        "description": "LiteLLM proxies all model calls. Gemini 2.5 Flash runs article generation for 6 sites. Groq handles keyword scoring. Costs tracked per site.",
         "theme": {
           "gradientFrom": "rgba(82, 251, 210, 0.22)",
           "gradientTo": "rgba(15, 118, 110, 0.12)",
@@ -332,12 +343,23 @@
           {
             "id": "groq",
             "name": "Groq",
-            "description": "Fast inference for keyword scoring and article generation. Llama 3 models. Free tier covers most daily usage.",
+            "description": "Fast inference for keyword scoring and EIK article generation. Llama models. Free tier covers daily usage.",
             "href": "https://groq.com/",
             "logo": {
               "type": "monogram",
               "label": "GQ",
               "background": "#f97316"
+            }
+          },
+          {
+            "id": "gemini",
+            "name": "Gemini",
+            "description": "Gemini 2.5 Flash is the primary article generator for 6 sites — TUR, TAN, TAF, TPR, THA, THB. Large context window, routed via LiteLLM.",
+            "href": "https://deepmind.google/technologies/gemini/",
+            "logo": {
+              "type": "monogram",
+              "label": "GM",
+              "background": "#1a73e8"
             }
           },
           {
@@ -357,7 +379,7 @@
         "id": "analytics",
         "phase": "OBSERVE",
         "title": "Analytics + observability",
-        "description": "Umami tracks traffic across all 7 sites. Daily Telegram reports with week-over-week comparisons.",
+        "description": "Umami tracks traffic across all 8 sites. Daily Telegram reports with week-over-week comparisons.",
         "theme": {
           "gradientFrom": "rgba(192, 132, 252, 0.3)",
           "gradientTo": "rgba(59, 7, 100, 0.15)",
