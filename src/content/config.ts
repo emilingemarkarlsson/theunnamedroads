@@ -173,7 +173,7 @@ const homepage = defineCollection({
           )
         })
       )
-    }),
+    }).optional(),
     testimonials: z.object({
       eyebrow: z.string(),
       title: z.string(),
