@@ -21,8 +21,8 @@ homepage:
   summary: >-
     Two-sided print routing platform. Retailers send orders via webhook –
     providers accept, produce, and ship with full tracking synced back automatically.
-  metricLabel: Provider portal
-  metricValue: app.theprintroute.com
+  metricLabel: Print connections
+  metricValue: "2"
   tag: Logistics AI
   href: https://theprintroute.com
 ---

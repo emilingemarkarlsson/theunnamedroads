@@ -2,23 +2,13 @@
   "hero": {
     "eyebrow": "AI Venture Studio",
     "headline": "Building Ventures on AI. No Big Team. Just Agents.",
-    "subheadline": "The Unnamed Roads is an AI venture studio. 9 live projects. Built by one founder and a stack of AI agents — content, analytics, and workflows run fully autonomously. No employees. ~€35/month in infra.",
-    "supportingLine": "Stack: n8n · OpenClaw · LiteLLM · Coolify · Hetzner",
-    "badges": [
-      { "id": "badge-operating", "label": "Self-hosted on Coolify + Hetzner" },
-      { "id": "badge-solo", "label": "One founder, 9 live projects" },
-      { "id": "badge-ai", "label": "AI agents publishing daily" }
-    ],
+    "subheadline": "The Unnamed Roads is an AI venture studio. 9 live projects. Built by one founder and a stack of AI agents.",
+    "supportingLine": "📎 Stack: n8n · OpenClaw · LiteLLM · Coolify · Hetzner",
+    "badges": [],
     "stats": [
-      { "id": "ventures", "label": "Projects running", "value": "09", "detail": "all publishing daily" },
-      { "id": "cost", "label": "Monthly infra cost", "value": "€35", "detail": "fully self-hosted" },
-      { "id": "automation", "label": "Content published by AI", "value": "100%", "detail": "zero manual writing" },
-      {
-        "id": "legacy-headcount",
-        "label": "Traditional team needed",
-        "value": "8–12",
-        "detail": "editors, devs, ops"
-      }
+      { "id": "ventures", "label": "Projects running", "value": "09", "detail": "" },
+      { "id": "efficiency", "label": "More efficient with agents", "value": "10x", "detail": "vs traditional team" },
+      { "id": "code", "label": "Lines of code auto-generated", "value": "120k+", "detail": "across all projects" }
     ],
     "primaryCta": {
       "label": "See the projects",
@@ -205,40 +195,40 @@
     ]
   },
   "signals": {
-    "eyebrow": "What I'm exploring",
-    "title": "Current focus areas",
-    "description": "Topics I'm actively writing about, building systems around, or experimenting with. Updated as the stack evolves.",
+    "eyebrow": "The thesis",
+    "title": "Agents as the only workforce",
+    "description": "Building a fully automated company where AI agents handle every operational role — on a cost-optimized platform designed for maximum profitability with zero headcount.",
     "tags": [
+      "fully automated operations",
+      "agent-first architecture",
+      "zero headcount",
       "self-hosted AI infra",
+      "cost-optimized platform",
+      "autonomous publishing",
       "n8n workflows",
       "LLM cost optimization",
-      "solo founder ops",
-      "content at scale",
       "Coolify on Hetzner",
       "RAG + Qdrant",
-      "GEO / AEO",
-      "IndexNow",
-      "Telegram bots",
-      "OpenClaw publishing",
-      "multi-site SEO",
       "LiteLLM routing",
-      "autonomous publishing"
+      "Telegram-first ops",
+      "GEO / AEO",
+      "IndexNow"
     ],
     "highlights": [
       {
-        "id": "infra-cost",
-        "label": "Infra cost compression",
-        "detail": "Running 7 live sites with daily AI content for ~€35/month. Coolify + Hetzner replaces €200+/month in managed services."
+        "id": "agent-workforce",
+        "label": "Agents as the only employees",
+        "detail": "Every operational role — content, research, publishing, analytics, notifications — is handled by AI agents running on schedule. No team. No overhead."
       },
       {
-        "id": "geo-aeo",
-        "label": "GEO and Answer Engines",
-        "detail": "Structuring content so it gets cited in ChatGPT, Perplexity, and Google AI Overviews — not just ranked on page 1."
+        "id": "cost-efficiency",
+        "label": "Cost-optimized for profitability",
+        "detail": "Running 9 live projects with daily AI content for ~400 kr/month. Coolify + Hetzner replaces 2 300+ kr/month in managed services — maximizing margin from day one."
       },
       {
         "id": "agentic-publishing",
-        "label": "Agentic publishing loops",
-        "detail": "Research → draft → quality score → publish → IndexNow → newsletter — fully automated, no human in the loop except Telegram approval."
+        "label": "Fully automated publishing loops",
+        "detail": "Research → draft → quality score → publish → IndexNow → newsletter — end-to-end autonomous. One human sets strategy. Agents execute everything else."
       }
     ]
   },
@@ -293,19 +283,19 @@
         "id": "cost-hetzner",
         "quote": "One VPS running Coolify, n8n, OpenClaw, LiteLLM, Minio, Umami, and Qdrant. Everything self-hosted.",
         "author": "Hetzner CX32",
-        "role": "~€13/month"
+        "role": "~150 kr/month"
       },
       {
         "id": "cost-llm",
         "quote": "Groq free tier covers most article generation. Gemini API for THB. LiteLLM tracks spend per site.",
         "author": "LLM APIs (Groq + Gemini)",
-        "role": "~€5–10/month"
+        "role": "~60–115 kr/month"
       },
       {
         "id": "cost-domains",
         "quote": "theunnamedroads.com, thehockeyanalytics.com, thehockeybrain.com — plus Netlify/Vercel free tiers.",
         "author": "Domains + hosting",
-        "role": "~€12/month"
+        "role": "~140 kr/month"
       }
     ]
   },
@@ -340,7 +330,7 @@
           {
             "id": "hetzner",
             "name": "Hetzner",
-            "description": "CX32 VPS in Frankfurt. ~€13/month. Runs everything — n8n, LiteLLM, Minio, Umami, OpenClaw, Qdrant.",
+            "description": "CX32 VPS in Frankfurt. ~150 kr/month. Runs everything — n8n, LiteLLM, Minio, Umami, OpenClaw, Qdrant.",
             "href": "https://hetzner.cloud/?ref=ECLED3WXrvIQ",
             "logo": {
               "type": "monogram",
@@ -510,17 +500,17 @@
     "subtitle": "An AI venture studio — one founder, 9 live projects, self-hosted AI infrastructure.",
     "body": [
       "The Unnamed Roads is an AI venture studio — one person, nine live projects, and an AI agent pipeline that handles everything from keyword research to publishing.",
-      "The entire stack is self-hosted on a single Hetzner VPS managed by Coolify. n8n orchestrates ~23 workflows. LiteLLM routes LLM calls to Groq and Gemini. OpenClaw commits markdown to GitHub. Netlify and Vercel deploy. Total cost: ~€35/month.",
+      "The entire stack is self-hosted on a single Hetzner VPS managed by Coolify. n8n orchestrates ~23 workflows. LiteLLM routes LLM calls to Groq and Gemini. OpenClaw commits markdown to GitHub. Netlify and Vercel deploy. Total cost: ~400 kr/month.",
       "This site is where I write about what I'm building, what breaks, and what it actually costs to run AI infrastructure at this scale. No fluff. Just systems."
     ],
     "pillars": [
-      { "id": "selfhosted", "title": "Fully self-hosted", "detail": "Coolify + Hetzner replaces €200+/month in managed SaaS. One VPS runs everything." },
+      { "id": "selfhosted", "title": "Fully self-hosted", "detail": "Coolify + Hetzner replaces 2 300+ kr/month in managed SaaS. One VPS runs everything." },
       { "id": "autonomous", "title": "Autonomous publishing", "detail": "Content research, generation, and publishing run on cron schedules without manual steps." },
       { "id": "observable", "title": "Telegram-first ops", "detail": "Every workflow completion sends a Telegram message. Approvals use inline buttons. No dashboards needed." }
     ],
     "stats": [
       { "id": "sites", "label": "Live projects", "value": "9" },
-      { "id": "cost", "label": "Monthly infra", "value": "€35" },
+      { "id": "cost", "label": "Monthly infra", "value": "400 kr" },
       { "id": "workflows", "label": "n8n workflows", "value": "23" }
     ]
   },

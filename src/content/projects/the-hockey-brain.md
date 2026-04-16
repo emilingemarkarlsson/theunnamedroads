@@ -21,8 +21,8 @@ homepage:
     Modern data stack + flexible engagement model delivering on-demand hockey
     analytics squads for teams that want measurable tactical advantages without
     full-time hires.
-  metricLabel: Svarstid
-  metricValue: 2 arbetsdagar
+  metricLabel: Data points available
+  metricValue: 30M+
   tag: Sports AI
   href: https://www.thehockeybrain.com/
 ---

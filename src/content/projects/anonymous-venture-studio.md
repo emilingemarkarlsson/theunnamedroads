@@ -20,8 +20,8 @@ homepage:
   summary: >-
     One founder. Seven projects. AI agents doing the work. Self-hosted on Coolify
     and Hetzner for ~35 EUR/month – replacing what would normally take 8-12 people.
-  metricLabel: Infrastruktur
-  metricValue: ~35 EUR/mån
+  metricLabel: AI agents deployed
+  metricValue: "8"
   tag: Venture studio
   href: /about
 ---

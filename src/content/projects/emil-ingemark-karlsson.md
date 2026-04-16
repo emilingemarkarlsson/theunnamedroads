@@ -20,8 +20,8 @@ homepage:
   summary: >-
     Data Engineer in Stockholm. Modern data stack, Python automation, and
     scalable web solutions. n8n, Streamlit, Databricks, data chat agents.
-  metricLabel: Stack
-  metricValue: n8n · Databricks · Python
+  metricLabel: Experience
+  metricValue: 10+ years
   tag: Portfolio
   href: https://www.emilingemarkarlsson.com
 ---

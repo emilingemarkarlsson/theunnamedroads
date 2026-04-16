@@ -1,6 +1,6 @@
 ---
 title: The Data Labelers
-description: Traningsdata du kan lita pa – med bevis. Validerad annotationsinfrastruktur for AI-team som kraver dokumentation, revision och EU AI Act-kompatibilitet.
+description: Training data you can trust — with proof. Validated annotation infrastructure for AI teams that require documentation, audit trails, and EU AI Act compliance.
 url: https://tur-thedatalabelers.vercel.app
 startDate: 2025-01-20
 tags:
@@ -17,11 +17,11 @@ homepage:
   statusTone: building
   statusDotColor: bg-amber-500
   animateDot: true
-  focus: Validerad traningsdata med revisionskedja
+  focus: Validated training data with audit trail
   summary: >-
-    Traningsdata du kan lita pa – med bevis. Multi-annotator-validering,
-    konfidenspoang och full EU AI Act-dokumentation levererad inom 72 timmar.
-  metricLabel: Annotator-overenskommelse
+    Training data you can trust — with proof. Multi-annotator validation,
+    confidence scoring, and full EU AI Act documentation delivered within 72 hours.
+  metricLabel: Label accuracy
   metricValue: 92%+
   tag: Data Infrastructure
   href: 'https://tur-thedatalabelers.vercel.app'
@@ -29,29 +29,29 @@ homepage:
 
 # The Data Labelers
 
-**Traningsdata du kan lita pa — med bevis.**
+**Training data you can trust — with proof.**
 
-De flesta AI-team vet inte hur bra deras traningsdata egentligen ar. The Data Labelers loser det med validerad annotationsinfrastruktur, fullstandig revisionskedja och dokumentation redo for EU AI Act.
+Most AI teams don't know how good their training data actually is. The Data Labelers solves that with validated annotation infrastructure, a complete audit trail, and documentation ready for EU AI Act compliance.
 
-## Hur det fungerar
+## How it works
 
-- **Multi-annotator-validering** – minimum 3 oberoende annotatorer per datapunkt
-- **Konsensuspoang** – viktad expertprecision per etikett
-- **Konfidenspoang** – kvantifierad sakerstallning pa varje annoterat objekt
-- **Domanekalering** – lagkonfidensfall eskaleras till domänexpert
-- **Leverans inom 72 timmar**
+- **Multi-annotator validation** – minimum 3 independent annotators per data point
+- **Consensus scoring** – weighted expert precision per label
+- **Confidence scoring** – quantified certainty on every annotated item
+- **Domain escalation** – low-confidence cases escalated to domain expert
+- **Delivery within 72 hours**
 
-## For vem
+## For whom
 
-AI/ML-team inom legal tech, fintech, e-handel, SaaS/NLP och reglerade branscher som kraver dokumentation och compliance-bevis.
+AI/ML teams in legal tech, fintech, e-commerce, SaaS/NLP, and regulated industries that require documentation and compliance proof.
 
-## Compliance och sakerhet
+## Compliance and security
 
-- GDPR-kompatibelt, EU-baserade servrar
-- SOC 2-certifiering pagar
-- EU AI Act-dokumentation inkluderad
-- NDA per projekt, strict dataisolering
+- GDPR-compliant, EU-based servers
+- SOC 2 certification in progress
+- EU AI Act documentation included
+- NDA per project, strict data isolation
 
 ## Pilot Q2 2026
 
-3 pilotplatser tillgangliga for team som vill sakerställa sin datakvalitet infor nasta modelltraning.
+3 pilot slots available for teams looking to secure their data quality ahead of their next model training run.

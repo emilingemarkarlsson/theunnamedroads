@@ -20,8 +20,8 @@ homepage:
   summary: >-
     Making Hockey Data Human. Proactive pattern detection in NHL data delivering
     insights to scouts, coaches, and analysts before anyone else sees them.
-  metricLabel: Premium
-  metricValue: 499 SEK/mån
+  metricLabel: Agent Analysts deployed
+  metricValue: "10"
   tag: Sports AI
   href: https://www.thehockeyanalytics.com/
 ---

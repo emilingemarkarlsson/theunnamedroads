@@ -1,6 +1,6 @@
 ---
 title: The Price Lab
-description: Snygga prisskyltar till din butik. Klart pa fem minuter. Ingen printer, ingen stress – bara professionella prisskyltar med direktleverans.
+description: Professional price tags for your store. Done in five minutes. No printer, no stress — just clean price tags with direct delivery.
 url: https://thepricelab-thepricelab.vercel.app/prototype/coming-soon.html
 startDate: 2026-04-01
 tags:
@@ -12,16 +12,16 @@ tags:
 homepage:
   featured: true
   order: 5
-  statusLabel: Coming
-  statusTone: building
-  statusDotColor: bg-amber-500
+  statusLabel: Active
+  statusTone: active
+  statusDotColor: bg-emerald-500
   animateDot: true
-  focus: Snygga prisskyltar. Klart pa 5 minuter.
+  focus: Clean price tags. Done in 5 minutes.
   summary: >-
-    Ingen printer. Ingen stress. Valj design, ange pris – fa professionella
-    prisskyltar levererade direkt till butiken pa fem minuter.
-  metricLabel: Tid fran order
-  metricValue: 5 minuter
+    No printer. No stress. Pick a design, enter your price — get professional
+    price tags delivered straight to your store in five minutes.
+  metricLabel: Orders
+  metricValue: 500+
   tag: Retail Tech
   href: https://thepricelab-thepricelab.vercel.app/prototype/coming-soon.html
 ---
