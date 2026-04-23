@@ -1,0 +1,21 @@
+# The Unnamed Roads
+
+> The Unnamed Roads is an AI-powered venture studio run by a single founder in Stockholm. It operates 8 live content websites, publishes daily articles without human writing, and documents what actually happens when you run a real AI business — costs, failures, architecture decisions, and numbers.
+
+## Key pages
+- /: Studio overview and current projects
+- /posts/: All articles — AI infrastructure, content automation, agentic workflows, real production data
+- /about: What The Unnamed Roads is and how it works
+
+## What this site covers
+- Running 8 websites on one €15/month Hetzner VPS
+- AI content pipelines: n8n + LiteLLM + OpenClaw + Paperclip
+- Autonomous agent workflows for content generation and publishing
+- Real infrastructure costs and performance data (Umami analytics, LiteLLM spend)
+- What breaks when you run AI automation at scale — and how it was fixed
+
+## Technical stack
+Hetzner VPS (CX21) · Coolify · Docker · n8n · LiteLLM · OpenClaw · Paperclip · Minio · Listmonk · Resend · Bluesky API · Astro · Next.js
+
+## Publisher
+Emil Ingemar Karlsson — solo technical founder, Stockholm.
