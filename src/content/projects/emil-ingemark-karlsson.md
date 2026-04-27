@@ -1,7 +1,7 @@
 ---
 title: EIK
 description: Data Engineer & Full-Stack Developer based in Stockholm. Builds modern data pipelines, n8n automations, Streamlit apps, and scalable web solutions.
-url: https://www.emilingemarkarlsson.com
+url: https://emilingemarkarlsson.com
 startDate: 2024-01-01
 tags:
   - data-engineering
@@ -23,7 +23,7 @@ homepage:
   metricLabel: Experience
   metricValue: 10+ years
   tag: Portfolio
-  href: https://www.emilingemarkarlsson.com
+  href: https://emilingemarkarlsson.com
 ---
 
 # EIK
