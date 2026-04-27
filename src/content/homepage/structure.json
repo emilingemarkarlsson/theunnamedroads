@@ -1,22 +1,63 @@
 {
   "hero": {
-    "eyebrow": "AI Venture Studio",
-    "headline": "Building Ventures on AI. No Big Team. Just Agents.",
-    "subheadline": "The Unnamed Roads is an AI venture studio. 9 live projects. Built by one founder and a stack of AI agents.",
-    "supportingLine": "📎 Stack: n8n · OpenClaw · LiteLLM · Coolify · Hetzner",
+    "eyebrow": "AI venture studio",
+    "eyebrowAfter": "Nine live properties, one stack, agents shipping while you steer.",
+    "headline": "The Unnamed Roads",
     "badges": [],
-    "stats": [
-      { "id": "ventures", "label": "Projects running", "value": "09", "detail": "" },
-      { "id": "efficiency", "label": "More efficient with agents", "value": "10x", "detail": "vs traditional team" },
-      { "id": "code", "label": "Lines of code auto-generated", "value": "120k+", "detail": "across all projects" }
-    ],
-    "primaryCta": {
-      "label": "See the projects",
-      "href": "#ventures"
-    },
-    "secondaryCta": {
-      "label": "How it works",
-      "href": "#operating-system"
+    "orgChart": {
+      "windowTitle": "Org chart · The Unnamed Roads",
+      "platformLabel": "Studio · Platform",
+      "liveLabel": "LIVE",
+      "teamLabel": "AI AGENT TEAM",
+      "footerCaption": "THE UNNAMED ROADS · STAFF MAP",
+      "chief": {
+        "title": "CEO",
+        "subtitle": "Chief Executive Officer",
+        "tagline": "Sets direction; agents translate goals into shipped work.",
+        "status": "Claude",
+        "icon": "tabler--robot"
+      },
+      "executives": [
+        {
+          "id": "ciso",
+          "title": "CISO",
+          "subtitle": "Chief Information Security Officer",
+          "description": "Owns platform security. Monitors fail2ban, UFW, and access posture.",
+          "status": "Claude",
+          "icon": "tabler--shield"
+        },
+        {
+          "id": "cfo",
+          "title": "CFO",
+          "subtitle": "Chief Financial Officer",
+          "status": "Claude",
+          "icon": "tabler--robot"
+        },
+        {
+          "id": "sales",
+          "title": "Sales Agent",
+          "subtitle": "Lead Intelligence & Outreach",
+          "description": "Monitors HN, Reddit, and job boards daily for signals and leads.",
+          "status": "Claude",
+          "icon": "tabler--robot"
+        },
+        {
+          "id": "cto",
+          "title": "CTO",
+          "subtitle": "Chief Technology Officer",
+          "description": "Owns technical roadmap, architecture, and delivery systems.",
+          "status": "Claude",
+          "icon": "tabler--code"
+        },
+        {
+          "id": "cmo",
+          "title": "CMO",
+          "subtitle": "Chief Marketing Officer",
+          "description": "Owns content strategy, SEO direction, and publishing cadence.",
+          "status": "Claude",
+          "icon": "tabler--chart-dots"
+        }
+      ]
     }
   },
   "ventures": {

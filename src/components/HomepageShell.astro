@@ -102,92 +102,194 @@ const getMemberStatusClass = (status: string) =>
 
 const getMemberStatusLabel = (status: string, label?: string) =>
   label ?? (status === 'hiring' ? 'Recruiting' : 'Active')
+
+const heroOrg = homepageData.hero.orgChart
 ---
 
 <div class="homepage-shell space-y-16 sm:space-y-20">
   <section
     data-reveal
-    class="hero-shell relative overflow-hidden rounded-[32px] border border-white/10 bg-gradient-to-br from-[#0f172a] via-[#111f3b] to-[#0b0f1d] px-6 py-12 text-white shadow-2xl sm:px-10 sm:py-16"
+    class="hero-shell relative overflow-hidden rounded-[32px] border border-white/10 px-6 py-12 text-white shadow-2xl sm:px-10 sm:py-16"
   >
     <div
-      class="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(14,165,233,0.35),_transparent_55%)]"
+      class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_20%_0%,rgba(255,145,77,0.2),transparent_50%),radial-gradient(ellipse_at_90%_20%,rgba(45,212,191,0.12),transparent_45%)]"
       aria-hidden="true"
     >
     </div>
-    <div class="relative grid gap-10 lg:grid-cols-2">
-      <div class="space-y-6">
-        <p
-          class="text-xs font-semibold uppercase tracking-[0.5em] text-sky-200/80"
-        >
-          {homepageData.hero.eyebrow}
-        </p>
+    <div class="relative flex min-w-0 flex-col gap-8 lg:gap-10">
+      <header class="hero-brand space-y-3">
         <h1
-          class="text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl"
+          class="text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl"
         >
           {homepageData.hero.headline}
         </h1>
-        <p class="max-w-2xl text-lg text-white/80">
-          {homepageData.hero.subheadline}
-        </p>
-        <div class="flex flex-wrap gap-3 text-sm font-semibold text-slate-200">
+        <p class="max-w-2xl text-base leading-relaxed text-white/80 sm:text-lg">
+          <span class="font-semibold text-[#ff914d]">
+            {homepageData.hero.eyebrow}
+          </span>
           {
-            homepageData.hero.badges.map((badge) => (
-              <span class="hero-badge">{badge.label}</span>
-            ))
+            homepageData.hero.eyebrowAfter && (
+              <>
+                <span class="text-white/40"> · </span>
+                <span class="text-white/85">{homepageData.hero.eyebrowAfter}</span>
+              </>
+            )
           }
-        </div>
-        <div class="flex flex-col gap-3 sm:flex-row">
-          <a
-            href={homepageData.hero.primaryCta.href}
-            class="group inline-flex items-center justify-center gap-2 rounded-2xl bg-white px-7 py-3 text-base font-semibold text-gray-900 transition-all duration-300 hover:translate-y-0.5"
-          >
-            <span>{homepageData.hero.primaryCta.label}</span>
-            <svg
-              class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-            </svg>
-          </a>
-          <a
-            href={homepageData.hero.secondaryCta.href}
-            class="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/30 px-7 py-3 text-base font-semibold text-white transition-colors hover:border-white/60"
-          >
-            {homepageData.hero.secondaryCta.label}
-          </a>
-        </div>
-        <p class="text-xs uppercase tracking-[0.6em] text-white/50">
-          {homepageData.hero.supportingLine}
         </p>
-      </div>
-      <div
-        class="glass-panel relative rounded-[28px] border border-white/10 bg-white/5 p-6 backdrop-blur"
-      >
-        <div
-          class="absolute inset-0 rounded-[28px] border border-white/5 bg-gradient-to-b from-white/5 to-transparent"
-          aria-hidden="true"
-        >
-        </div>
-        <div class="hero-stats-grid">
-          {
-            homepageData.hero.stats.map((stat, index) => (
-              <div
-                class="hero-stat"
-                data-reveal
-                style={`--reveal-delay:${index * 60}ms`}
-              >
-                <p class="hero-stat-label">{stat.label}</p>
-                <p class="hero-stat-value">{stat.value}</p>
-                <p class="hero-stat-detail">{stat.detail}</p>
+      </header>
+      <div class="hero-org-glow w-full min-w-0">
+        <div class="hero-org-browser">
+          <div class="hero-org-titlebar">
+            <span class="hero-org-dots" aria-hidden="true">
+              <span class="hero-org-dot hero-org-dot--r"></span>
+              <span class="hero-org-dot hero-org-dot--y"></span>
+              <span class="hero-org-dot hero-org-dot--g"></span>
+            </span>
+            <p class="hero-org-window-title">
+              {heroOrg.windowTitle}
+            </p>
+          </div>
+          <div class="hero-org-frame">
+            <div class="hero-org-inner-head">
+              <span class="hero-org-platform">
+                {heroOrg.platformLabel}
+              </span>
+              <span class="hero-org-live">
+                <span class="hero-org-live-dot" aria-hidden="true"></span>
+                {heroOrg.liveLabel ?? 'LIVE'}
+              </span>
+            </div>
+
+            <div class="hero-org-chart">
+              <div class="hero-org-tier hero-org-tier--chief">
+                <div class="hero-org-card hero-org-card--director">
+                  <div class="hero-org-card-top">
+                    {
+                      heroOrg.chief.icon && (
+                        <span
+                          class:list={[
+                            'iconify shrink-0 text-lg opacity-90',
+                            heroOrg.chief.icon
+                          ]}
+                        />
+                      )
+                    }
+                    <div class="min-w-0 flex-1">
+                      <p class="hero-org-card-title">{heroOrg.chief.title}</p>
+                      <p class="hero-org-card-sub">{heroOrg.chief.subtitle}</p>
+                      <p class="hero-org-card-tag">{heroOrg.chief.tagline}</p>
+                    </div>
+                  </div>
+                  <div class="hero-org-status">
+                    <span class="hero-org-status-dot" aria-hidden="true"></span>
+                    <span>{heroOrg.chief.status}</span>
+                  </div>
+                </div>
               </div>
-            ))
-          }
+
+              <div class="hero-org-connector" aria-hidden="true">
+                <span class="hero-org-connector-v"></span>
+                <span class="hero-org-connector-h"></span>
+                <span class="hero-org-flow-dot hero-org-flow-dot--v"></span>
+                <span class="hero-org-flow-dot hero-org-flow-dot--v hero-org-flow-dot--v-delay"></span>
+                {
+                  heroOrg.executives.map((_, i) => (
+                    <span
+                      class:list={[
+                        'hero-org-flow-dot',
+                        'hero-org-flow-dot--h',
+                        i % 2 === 1 && 'hero-org-flow-dot--h-rev'
+                      ]}
+                      style={`--hero-h-delay:${(i * 0.65).toFixed(2)}s`}
+                    />
+                  ))
+                }
+              </div>
+
+              <p class="hero-org-team-label">{heroOrg.teamLabel}</p>
+
+              <div class="hero-org-exec-grid">
+                {
+                  heroOrg.executives.map((exec) => (
+                    <div class="hero-org-col">
+                      <div class="hero-org-card hero-org-card--lead">
+                        <div class="hero-org-card-top">
+                          {exec.icon && (
+                            <span
+                              class:list={[
+                                'iconify shrink-0 text-base opacity-90',
+                                exec.icon
+                              ]}
+                            />
+                          )}
+                          <div class="min-w-0 flex-1">
+                            <p class="hero-org-card-title">{exec.title}</p>
+                            <p class="hero-org-card-sub">{exec.subtitle}</p>
+                            {exec.description && (
+                              <p class="hero-org-card-desc">{exec.description}</p>
+                            )}
+                          </div>
+                        </div>
+                        {exec.status && (
+                          <div class="hero-org-status">
+                            <span
+                              class="hero-org-status-dot"
+                              aria-hidden="true"
+                            />
+                            <span>{exec.status}</span>
+                          </div>
+                        )}
+                      </div>
+                      {exec.agents && exec.agents.length > 0 && (
+                        <div class="hero-org-agent-stack hero-org-agent-stack--horizontal">
+                          {exec.agents.map((agent) => (
+                            <div class="hero-org-card hero-org-card--agent hero-org-card--agent-compact">
+                              <div class="hero-org-card-top hero-org-card-top--compact">
+                                {agent.icon && (
+                                  <span
+                                    class:list={[
+                                      'iconify shrink-0 opacity-90 hero-org-agent-icon',
+                                      agent.icon
+                                    ]}
+                                  />
+                                )}
+                                <div class="min-w-0 flex-1">
+                                  <p class="hero-org-card-title hero-org-card-title--agent-compact">
+                                    {agent.title}
+                                  </p>
+                                  <p class="hero-org-card-sub hero-org-card-sub--agent-compact">
+                                    {agent.subtitle}
+                                  </p>
+                                  {agent.description && (
+                                    <p class="hero-org-card-desc hero-org-card-desc--agent-compact">
+                                      {agent.description}
+                                    </p>
+                                  )}
+                                </div>
+                              </div>
+                              {agent.status && (
+                                <div class="hero-org-status hero-org-status--agent-compact">
+                                  <span
+                                    class="hero-org-status-dot"
+                                    aria-hidden="true"
+                                  />
+                                  <span>{agent.status}</span>
+                                </div>
+                              )}
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ))
+                }
+              </div>
+            </div>
+
+            <p class="hero-org-browser-footer">
+              {heroOrg.footerCaption}
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -590,19 +692,631 @@ const getMemberStatusLabel = (status: string, label?: string) =>
   }
 
   .hero-shell {
-    box-shadow: 0 55px 150px rgba(2, 6, 23, 0.75);
+    box-shadow:
+      0 55px 150px rgba(2, 6, 23, 0.85),
+      0 0 80px rgba(255, 145, 77, 0.06);
     background:
       radial-gradient(
-        circle at 20% 20%,
-        rgba(116, 185, 255, 0.15),
-        transparent 55%
+        circle at 18% 15%,
+        rgba(255, 145, 77, 0.14),
+        transparent 52%
       ),
       radial-gradient(
-        circle at 80% 0%,
-        rgba(255, 145, 77, 0.3),
-        transparent 45%
+        circle at 92% 8%,
+        rgba(45, 212, 191, 0.08),
+        transparent 42%
       ),
-      #04060f;
+      #050814;
+  }
+
+  .hero-cta-primary {
+    background: linear-gradient(180deg, #ff9a5c 0%, #ff914d 55%, #ea580c 100%);
+    box-shadow: 0 12px 36px rgba(234, 88, 12, 0.35);
+  }
+
+  .hero-cta-primary:hover {
+    box-shadow: 0 14px 40px rgba(234, 88, 12, 0.45);
+  }
+
+  .hero-org-glow {
+    filter: drop-shadow(0 28px 48px rgba(0, 0, 0, 0.55));
+    width: 100%;
+  }
+
+  .hero-org-browser {
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: linear-gradient(
+      165deg,
+      rgba(22, 28, 42, 0.98),
+      rgba(12, 16, 28, 0.99)
+    );
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.06),
+      0 24px 60px rgba(0, 0, 0, 0.45);
+    overflow: hidden;
+  }
+
+  .hero-org-titlebar {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.55rem 0.85rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(0, 0, 0, 0.25);
+  }
+
+  .hero-org-dots {
+    display: flex;
+    gap: 0.35rem;
+    flex-shrink: 0;
+  }
+
+  .hero-org-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 9999px;
+    display: block;
+  }
+
+  .hero-org-dot--r {
+    background: #ff5f57;
+  }
+
+  .hero-org-dot--y {
+    background: #febc2e;
+  }
+
+  .hero-org-dot--g {
+    background: #28c840;
+  }
+
+  .hero-org-window-title {
+    flex: 1;
+    text-align: center;
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.45);
+    margin: 0;
+    padding-right: 2.5rem;
+  }
+
+  .hero-org-frame {
+    padding: 0.65rem 0.75rem 0.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    .hero-org-frame {
+      padding: 0.85rem 1.15rem 0.65rem;
+    }
+  }
+
+  .hero-org-inner-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.85rem;
+    padding: 0 0.15rem;
+  }
+
+  .hero-org-platform {
+    font-size: 0.62rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.55);
+  }
+
+  .hero-org-live {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.58rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    color: #4ade80;
+  }
+
+  .hero-org-live-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 9999px;
+    background: #4ade80;
+    box-shadow: 0 0 10px rgba(74, 222, 128, 0.85);
+    animation: hero-live-pulse 2.2s ease-in-out infinite;
+  }
+
+  @keyframes hero-live-pulse {
+    50% {
+      opacity: 0.55;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-org-live-dot {
+      animation: none;
+    }
+  }
+
+  .hero-org-chart {
+    overflow: visible;
+    padding-right: 0;
+  }
+
+  @media (max-width: 1023px) {
+    .hero-org-chart {
+      max-height: min(62vh, 640px);
+      overflow-y: auto;
+      padding-right: 0.2rem;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(255, 145, 77, 0.4) transparent;
+    }
+  }
+
+  .hero-org-tier--chief {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.25rem;
+  }
+
+  .hero-org-tier--chief .hero-org-card {
+    max-width: 20rem;
+    width: 100%;
+  }
+
+  @media (min-width: 1280px) {
+    .hero-org-tier--chief .hero-org-card {
+      max-width: 24rem;
+    }
+  }
+
+  .hero-org-connector {
+    position: relative;
+    height: 1.75rem;
+    margin: 0 auto;
+    width: 100%;
+    max-width: min(100%, 72rem);
+  }
+
+  .hero-org-connector-v,
+  .hero-org-connector-h {
+    pointer-events: none;
+  }
+
+  .hero-org-flow-dot {
+    pointer-events: none;
+    border-radius: 9999px;
+    position: absolute;
+    z-index: 2;
+    background: #ecfdf5;
+    box-shadow:
+      0 0 6px rgba(74, 222, 128, 0.95),
+      0 0 14px rgba(255, 145, 77, 0.45);
+  }
+
+  .hero-org-flow-dot--v {
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    margin-left: -2.5px;
+    top: 0;
+    animation: hero-org-flow-v 2.6s ease-in-out infinite;
+  }
+
+  .hero-org-flow-dot--v-delay {
+    animation-delay: 1.3s;
+  }
+
+  @keyframes hero-org-flow-v {
+    0% {
+      transform: translateY(0);
+      opacity: 0.15;
+    }
+
+    25% {
+      opacity: 1;
+    }
+
+    75% {
+      opacity: 1;
+    }
+
+    100% {
+      transform: translateY(calc(1.75rem - 5px));
+      opacity: 0.15;
+    }
+  }
+
+  .hero-org-flow-dot--h {
+    bottom: -1.5px;
+    width: 4px;
+    height: 4px;
+    margin-left: -2px;
+    animation: hero-org-flow-h-fwd 3.4s linear infinite;
+    animation-delay: var(--hero-h-delay, 0s);
+  }
+
+  .hero-org-flow-dot--h-rev {
+    animation-name: hero-org-flow-h-rev;
+  }
+
+  @keyframes hero-org-flow-h-fwd {
+    0% {
+      left: 2%;
+      opacity: 0;
+    }
+
+    12% {
+      opacity: 1;
+    }
+
+    88% {
+      opacity: 1;
+    }
+
+    100% {
+      left: 98%;
+      opacity: 0;
+    }
+  }
+
+  @keyframes hero-org-flow-h-rev {
+    0% {
+      left: 98%;
+      opacity: 0;
+    }
+
+    12% {
+      opacity: 1;
+    }
+
+    88% {
+      opacity: 1;
+    }
+
+    100% {
+      left: 2%;
+      opacity: 0;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-org-flow-dot--v,
+    .hero-org-flow-dot--h {
+      animation: none;
+      opacity: 0.45;
+    }
+
+    .hero-org-flow-dot--v {
+      transform: translateY(0.55rem);
+    }
+
+    .hero-org-flow-dot--h {
+      left: 50%;
+      opacity: 0.4;
+    }
+
+    .hero-org-flow-dot--h-rev {
+      left: 35%;
+    }
+  }
+
+  .hero-org-connector-v {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    transform: translateX(-50%);
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 145, 77, 0.95),
+      rgba(255, 145, 77, 0.35)
+    );
+    border-radius: 9999px;
+  }
+
+  .hero-org-connector-h {
+    position: absolute;
+    left: 1%;
+    right: 1%;
+    height: 2px;
+    bottom: 0;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 145, 77, 0.65) 8%,
+      rgba(255, 145, 77, 0.65) 92%,
+      transparent
+    );
+    border-radius: 9999px;
+  }
+
+  .hero-org-team-label {
+    text-align: center;
+    font-size: 0.58rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: rgba(255, 145, 77, 0.85);
+    margin: 0.35rem 0 0.65rem;
+  }
+
+  .hero-org-exec-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 0.45rem;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  @media (min-width: 1024px) {
+    .hero-org-exec-grid {
+      gap: 0.65rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .hero-org-exec-grid {
+      gap: 0.85rem;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    .hero-org-exec-grid {
+      grid-template-columns: repeat(5, minmax(100px, 1fr));
+      overflow-x: auto;
+      padding-bottom: 0.35rem;
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+
+  .hero-org-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    min-width: 0;
+    min-height: 100%;
+  }
+
+  .hero-org-agent-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .hero-org-agent-stack--horizontal {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    gap: 0.3rem;
+    width: 100%;
+    margin-top: 0.15rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.15rem;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(45, 212, 191, 0.45) transparent;
+  }
+
+  .hero-org-agent-stack--horizontal .hero-org-card--agent-compact {
+    flex: 1 1 0;
+    min-width: 4.5rem;
+  }
+
+  @media (min-width: 1280px) {
+    .hero-org-agent-stack--horizontal .hero-org-card--agent-compact {
+      min-width: 0;
+    }
+  }
+
+  .hero-org-card--agent-compact {
+    border-radius: 8px;
+    padding: 0.38rem 0.42rem 0.32rem !important;
+    border-width: 1px;
+  }
+
+  .hero-org-card-top--compact {
+    gap: 0.28rem;
+    align-items: flex-start;
+  }
+
+  .hero-org-agent-icon {
+    font-size: 0.85rem !important;
+    line-height: 1;
+  }
+
+  .hero-org-card-title--agent-compact {
+    font-size: 0.58rem !important;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  .hero-org-card-sub--agent-compact {
+    font-size: 0.48rem !important;
+    margin: 0.08rem 0 0 !important;
+    line-height: 1.25;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .hero-org-card-desc--agent-compact {
+    font-size: 0.45rem !important;
+    margin: 0.2rem 0 0 !important;
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .hero-org-status--agent-compact {
+    margin-top: 0.28rem !important;
+    padding-top: 0.25rem !important;
+    font-size: 0.42rem !important;
+    letter-spacing: 0.02em;
+    gap: 0.25rem;
+  }
+
+  .hero-org-status--agent-compact .hero-org-status-dot {
+    width: 4px;
+    height: 4px;
+  }
+
+  .hero-org-card {
+    border-radius: 10px;
+    padding: 0.55rem 0.55rem 0.45rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.04);
+  }
+
+  @media (min-width: 1024px) {
+    .hero-org-card {
+      padding: 0.65rem 0.7rem 0.5rem;
+      border-radius: 11px;
+    }
+  }
+
+  .hero-org-card--director {
+    border-color: rgba(148, 163, 184, 0.28);
+    background: rgba(15, 23, 42, 0.65);
+  }
+
+  .hero-org-card--lead {
+    border-color: rgba(74, 222, 128, 0.55);
+    background: rgba(74, 222, 128, 0.09);
+    box-shadow: 0 0 22px rgba(74, 222, 128, 0.12);
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  .hero-org-card--lead .hero-org-card-top {
+    flex: 1 1 auto;
+  }
+
+  .hero-org-card--lead .hero-org-status {
+    margin-top: auto;
+    color: rgba(187, 247, 208, 0.88);
+    border-top-color: rgba(74, 222, 128, 0.22);
+  }
+
+  .hero-org-card--lead .hero-org-status-dot {
+    background: #4ade80;
+    box-shadow: 0 0 10px rgba(74, 222, 128, 0.75);
+  }
+
+  .hero-org-card--agent {
+    border-color: rgba(45, 212, 191, 0.45);
+    background: rgba(45, 212, 191, 0.07);
+    box-shadow: 0 0 14px rgba(45, 212, 191, 0.06);
+  }
+
+  .hero-org-card-top {
+    display: flex;
+    gap: 0.45rem;
+    align-items: flex-start;
+  }
+
+  .hero-org-card-title {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: #f8fafc;
+    margin: 0;
+    line-height: 1.25;
+  }
+
+  @media (min-width: 1024px) {
+    .hero-org-card-title {
+      font-size: 0.78rem;
+    }
+  }
+
+  .hero-org-card-title--sm {
+    font-size: 0.65rem;
+  }
+
+  @media (min-width: 1024px) {
+    .hero-org-card-title--sm {
+      font-size: 0.7rem;
+    }
+  }
+
+  .hero-org-card-sub {
+    font-size: 0.58rem;
+    color: rgba(226, 232, 240, 0.72);
+    margin: 0.1rem 0 0;
+    line-height: 1.3;
+  }
+
+  .hero-org-card-sub--sm {
+    font-size: 0.54rem;
+  }
+
+  .hero-org-card-tag {
+    font-size: 0.55rem;
+    color: rgba(148, 163, 184, 0.88);
+    margin: 0.35rem 0 0;
+    line-height: 1.35;
+  }
+
+  .hero-org-card-desc {
+    font-size: 0.52rem;
+    color: rgba(148, 163, 184, 0.78);
+    margin: 0.3rem 0 0;
+    line-height: 1.35;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .hero-org-status {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-top: 0.45rem;
+    padding-top: 0.4rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    font-size: 0.52rem;
+    letter-spacing: 0.04em;
+    color: rgba(226, 232, 240, 0.65);
+  }
+
+  .hero-org-status--sm {
+    margin-top: 0.35rem;
+    padding-top: 0.3rem;
+    font-size: 0.48rem;
+  }
+
+  .hero-org-status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 9999px;
+    background: #facc15;
+    box-shadow: 0 0 8px rgba(250, 204, 21, 0.65);
+    flex-shrink: 0;
+  }
+
+  .hero-org-browser-footer {
+    margin: 0.65rem 0 0;
+    padding-top: 0.55rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    text-align: center;
+    font-size: 0.55rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.35);
+  }
+
+  .hero-quote {
+    margin: 0;
   }
 
   .hero-badge {

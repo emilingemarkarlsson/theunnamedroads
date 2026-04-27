@@ -68,30 +68,71 @@ const homepage = defineCollection({
   schema: z.object({
     hero: z.object({
       eyebrow: z.string(),
+      eyebrowAfter: z.string().optional(),
       headline: z.string(),
-      subheadline: z.string(),
-      supportingLine: z.string(),
+      subheadline: z.string().optional(),
+      subheadlineAccent: z.string().optional(),
+      description: z.string().optional(),
+      supportingLine: z.string().optional(),
       badges: z.array(
         z.object({
           id: z.string(),
           label: z.string()
         })
       ),
-      stats: z.array(
-        z.object({
-          id: z.string(),
+      bookCall: z
+        .object({
           label: z.string(),
-          value: z.string(),
-          detail: z.string()
+          href: z.string()
         })
-      ),
-      primaryCta: z.object({
-        label: z.string(),
-        href: z.string()
-      }),
-      secondaryCta: z.object({
-        label: z.string(),
-        href: z.string()
+        .optional(),
+      footerQuote: z.string().optional(),
+      primaryCta: z
+        .object({
+          label: z.string(),
+          href: z.string()
+        })
+        .optional(),
+      secondaryCta: z
+        .object({
+          label: z.string(),
+          href: z.string()
+        })
+        .optional(),
+      orgChart: z.object({
+        windowTitle: z.string(),
+        platformLabel: z.string(),
+        liveLabel: z.string().optional(),
+        teamLabel: z.string(),
+        footerCaption: z.string(),
+        chief: z.object({
+          title: z.string(),
+          subtitle: z.string(),
+          tagline: z.string(),
+          status: z.string(),
+          icon: z.string().optional()
+        }),
+        executives: z.array(
+          z.object({
+            id: z.string(),
+            title: z.string(),
+            subtitle: z.string(),
+            description: z.string().optional(),
+            status: z.string().optional(),
+            icon: z.string().optional(),
+            agents: z
+              .array(
+                z.object({
+                  title: z.string(),
+                  subtitle: z.string(),
+                  description: z.string().optional(),
+                  status: z.string().optional(),
+                  icon: z.string().optional()
+                })
+              )
+              .optional()
+          })
+        )
       })
     }),
     ventures: z.object({
