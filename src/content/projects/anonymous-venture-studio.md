@@ -58,7 +58,7 @@ Coolify · Hetzner · n8n · OpenClaw · Umami · Minio · Groq · Gemini
 - **The Atomic Network** – hyperlocal GTM via physical mail + referral loops
 - **The Print Route** – print order routing from webhook to doorstep
 - **The Data Labelers** – validated training data with EU AI Act compliance
-- **Emil Ingemark Karlsson** – data engineering and full-stack consulting
+- **EIK** – data engineering and full-stack consulting
 
 ## Operating Principle
 

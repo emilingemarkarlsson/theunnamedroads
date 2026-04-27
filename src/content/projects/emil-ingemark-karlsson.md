@@ -1,5 +1,5 @@
 ---
-title: Emil Ingemark Karlsson
+title: EIK
 description: Data Engineer & Full-Stack Developer based in Stockholm. Builds modern data pipelines, n8n automations, Streamlit apps, and scalable web solutions.
 url: https://www.emilingemarkarlsson.com
 startDate: 2024-01-01
@@ -26,7 +26,7 @@ homepage:
   href: https://www.emilingemarkarlsson.com
 ---
 
-# Emil Ingemark Karlsson
+# EIK
 
 **Data Engineer & Full-Stack Developer, Stockholm.**
 
