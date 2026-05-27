@@ -1,7 +1,10 @@
 ---
 title: "Internal linking for small sites: which pages to connect and when a link hurts"
 description: "Internal linking on a small site is deceptively simple. You have a small number of pages, the connections seem obvious, and it is tempting to link everything to"
-pubDate: 2026-05-27
+publishedDate: 2026-05-27
+dateModified: 2026-05-27
+author: The Unnamed Road
+draft: false
 tags: ["SEO", "internal linking", "content strategy", "small sites"]
 ---
 
