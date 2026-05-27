@@ -1,7 +1,10 @@
 ---
 title: "Category and archive page SEO for small sites: index, noindex, or redirect"
 description: "---"
-pubDate: 2026-05-27
+publishedDate: 2026-05-27
+dateModified: 2026-05-27
+author: The Unnamed Road
+draft: false
 tags: ["SEO", "technical SEO", "small sites", "content strategy"]
 ---
 
