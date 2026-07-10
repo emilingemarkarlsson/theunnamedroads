@@ -1,3 +1,7 @@
 # Favicon redirects to ensure the new favicon is served
 /favicon.svg /favicon-tur.svg 301
 /favicon.ico /favicon-tur.svg 301
+
+# Project slug rename (THA)
+/projects/example-project /projects/the-hockey-analytics 301
+/projects/example-project/ /projects/the-hockey-analytics/ 301

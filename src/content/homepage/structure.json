@@ -1,7 +1,7 @@
 {
   "hero": {
     "eyebrow": "AI venture studio",
-    "eyebrowAfter": "Nine live properties, one stack, agents shipping while you steer.",
+    "eyebrowAfter": "10+ live properties, one stack, agents shipping while you steer.",
     "headline": "The Unnamed Roads",
     "badges": [],
     "orgChart": {
@@ -62,7 +62,7 @@
   },
   "ventures": {
     "eyebrow": "Live projects",
-    "title": "Nine projects, all running on agents",
+    "title": "10+ projects, all running on agents",
     "description": "Each project publishes AI-generated content daily, tracks analytics via Umami, and notifies via Telegram. No manual editing. No CMS logins.",
     "filters": [
       { "id": "media", "label": "Media" },
@@ -172,7 +172,7 @@
       {
         "id": "cost-efficiency",
         "label": "Cost-optimized for profitability",
-        "detail": "Running 9 live projects with daily AI content for ~400 kr/month. Coolify + Hetzner replaces 2 300+ kr/month in managed services — maximizing margin from day one."
+        "detail": "Running 10+ live projects with daily AI content for ~400 kr/month. Coolify + Hetzner replaces 2 300+ kr/month in managed services — maximizing margin from day one."
       },
       {
         "id": "agentic-publishing",
@@ -468,9 +468,9 @@
   "about": {
     "eyebrow": "What this is",
     "title": "The Unnamed Roads",
-    "subtitle": "An AI venture studio — one founder, 9 live projects, self-hosted AI infrastructure.",
+    "subtitle": "An AI venture studio — one founder, 10+ live projects, self-hosted AI infrastructure.",
     "body": [
-      "The Unnamed Roads is an AI venture studio — one person, nine live projects, and an AI agent pipeline that handles everything from keyword research to publishing.",
+      "The Unnamed Roads is an AI venture studio — one person, 10+ live projects, and an AI agent pipeline that handles everything from keyword research to publishing.",
       "The entire stack is self-hosted on a single Hetzner VPS managed by Coolify. n8n orchestrates ~23 workflows. LiteLLM routes LLM calls to Groq and Gemini. OpenClaw commits markdown to GitHub. Netlify and Vercel deploy. Total cost: ~400 kr/month.",
       "This site is where I write about what I'm building, what breaks, and what it actually costs to run AI infrastructure at this scale. No fluff. Just systems."
     ],
@@ -480,7 +480,7 @@
       { "id": "observable", "title": "Telegram-first ops", "detail": "Every workflow completion sends a Telegram message. Approvals use inline buttons. No dashboards needed." }
     ],
     "stats": [
-      { "id": "sites", "label": "Live projects", "value": "9" },
+      { "id": "sites", "label": "Live projects", "value": "10+" },
       { "id": "cost", "label": "Monthly infra", "value": "400 kr" },
       { "id": "workflows", "label": "n8n workflows", "value": "23" }
     ]
@@ -494,8 +494,8 @@
       "href": "/contact"
     },
     "secondaryCta": {
-      "label": "Read the articles",
-      "href": "/posts"
+      "label": "Get the €35 stack",
+      "href": "/stack"
     },
     "note": "Also on Bluesky: @theunnamedroads.bsky.social"
   }
