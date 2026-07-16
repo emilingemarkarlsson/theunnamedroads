@@ -44,7 +44,8 @@ const projects = defineCollection({
           metricLabel: z.string().optional(),
           metricValue: z.string().optional(),
           tag: z.string().optional(),
-          href: z.string().optional()
+          href: z.string().optional(),
+          ctaLabel: z.string().optional()
         })
         .optional()
     })
@@ -160,7 +161,8 @@ const homepage = defineCollection({
             label: z.string(),
             value: z.string()
           }),
-          href: z.string().optional()
+          href: z.string().optional(),
+          ctaLabel: z.string().optional()
         })
       )
     }),

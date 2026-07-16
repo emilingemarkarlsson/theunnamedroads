@@ -48,6 +48,7 @@ const ventureProjects = featuredProjects.map((project) => {
   const href = meta.href !== undefined 
     ? (meta.href === '' ? undefined : meta.href)
     : (project.data.url ?? `/projects/${project.slug}`)
+  const ctaLabel = meta.ctaLabel ?? 'View venture'
 
   return {
     tag,
@@ -62,7 +63,8 @@ const ventureProjects = featuredProjects.map((project) => {
       label: metricLabel,
       value: metricValue
     },
-    href
+    href,
+    ctaLabel
   }
 })
 
@@ -368,7 +370,7 @@ const heroOrg = homepageData.hero.orgChart
                   href={company.href}
                   class="inline-flex items-center gap-2 text-sm font-semibold text-accent"
                 >
-                  View venture
+                  {company.ctaLabel ?? 'View venture'}
                   <svg
                     class="h-4 w-4"
                     fill="none"
