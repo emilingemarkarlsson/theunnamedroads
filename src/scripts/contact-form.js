@@ -1,8 +1,11 @@
+/** @deprecated Kept for local reference; ContactForm.astro posts to tur-automations. */
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.querySelector('form[name="contact"]')
   if (!form) return
 
   const submitButton = form.querySelector('button[type="submit"]')
+  const CONTACT_WEBHOOK_URL =
+    'https://tur-automations.vercel.app/api/webhooks/contact'
 
   form.addEventListener('submit', async function (e) {
     e.preventDefault()
@@ -14,13 +17,27 @@ document.addEventListener('DOMContentLoaded', function () {
     const formData = new FormData(form)
     const data = Object.fromEntries(formData)
 
+    if (data['bot-field']) {
+      form.innerHTML =
+        '<div class="text-center py-8">' +
+        '<div class="text-green-600 dark:text-green-400 text-lg font-medium mb-2">' +
+        '✅ Message sent successfully!' +
+        '</div></div>'
+      return
+    }
+
     try {
-      const response = await fetch('/.netlify/functions/contact-form', {
+      const response = await fetch(CONTACT_WEBHOOK_URL, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded'
-        },
-        body: new URLSearchParams(data)
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          subject: data.subject,
+          message: data.message,
+          timestamp: new Date().toISOString(),
+          source: 'Contact Form - The Unnamed Roads',
+        }),
       })
 
       const result = await response.json()

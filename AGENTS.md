@@ -19,4 +19,11 @@ Travel site. **Production host: Vercel** (not Netlify).
 - Commit author: Gmail or GitHub noreply — never Husqvarna work email.
 - Prefer GitHub deploy over CLI `vercel deploy`.
 
+## Contact form
+
+Posts JSON to `https://tur-automations.vercel.app/api/webhooks/contact` (not Netlify functions).
+Source label: `Contact Form - The Unnamed Roads`.
+
 Cross-portfolio hosting map: `tur-automations/docs/HOSTING-VERCEL.md`.
+Monitoring/contact ops: `tur-automations/docs/MONITORING-SYNTHETIC.md`.
+
