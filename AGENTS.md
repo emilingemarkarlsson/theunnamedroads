@@ -4,8 +4,8 @@ Travel site. **Production host: Vercel** (not Netlify).
 
 | | |
 |--|--|
-| Vercel team | `thepricelab` |
-| Vercel project | `theunnamedroads` |
+| Vercel team | `thepricelab` (The Unnamed Roads) |
+| Vercel project | `tur-site` |
 | Domains | `www.theunnamedroads.com`, apex |
 | Deploy | `git push origin main` → GitHub → Vercel |
 | Framework | Astro static; package manager **pnpm** |
