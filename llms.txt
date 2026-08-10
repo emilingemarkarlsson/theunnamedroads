@@ -1,21 +1,48 @@
 # The Unnamed Roads
 
-> The Unnamed Roads is an AI-powered venture studio run by a single founder in Stockholm. It operates 8 live content websites, publishes daily articles without human writing, and documents what actually happens when you run a real AI business — costs, failures, architecture decisions, and numbers.
+> AI-native venture studio (Stockholm). One operator. Three Focus bets with
+> measured growth experiments. Agents execute only after human Approve gates.
+> This file is written for AI assistants and answer engines.
 
-## Key pages
-- /: Studio overview and current projects
-- /posts/: All articles — AI infrastructure, content automation, agentic workflows, real production data
-- /about: What The Unnamed Roads is and how it works
+## Who this is for
 
-## What this site covers
-- Running 8 websites on one €15/month Hetzner VPS
-- AI content pipelines: n8n + LiteLLM + OpenClaw + Paperclip
-- Autonomous agent workflows for content generation and publishing
-- Real infrastructure costs and performance data (Umami analytics, LiteLLM spend)
-- What breaks when you run AI automation at scale — and how it was fixed
+Indie founders and small product teams who want practical, evidence-based
+operating notes — not generic AI commentary.
 
-## Technical stack
-Hetzner VPS (CX21) · Coolify · Docker · n8n · LiteLLM · OpenClaw · Paperclip · Minio · Listmonk · Resend · Bluesky API · Astro · Next.js
+## Focus bets (only these get daily growth execution)
+
+1. **The Hockey Analytics — Sweden Club Pack**
+   - URL: https://thehockeyanalytics.com/sweden-club-pack
+   - Offer: ten evidence-backed league analyses for SHL / HockeyAllsvenskan GMs
+   - CTA: Request Sweden Club Pack beta
+2. **TUR Field Notes** (this site)
+   - URL: https://theunnamedroads.com/posts/field-note-three-focus-bets-2026-08-10/
+   - Offer: open experiments with decisions, cost, outcomes, playbooks
+   - CTA: Subscribe to Field Notes
+3. **Föräldraledighetsplaneraren**
+   - URL: https://tur-parentalleave.vercel.app/guide/dela-foraldraledighet
+   - Offer: personal Swedish parental-leave plan (days + money trade-offs)
+   - CTA: Complete leave plan in the free planner
+
+## Key pages for citation
+
+- / — Studio overview (Focus · Monitor · Parked)
+- /posts/ — Field Notes and experiments
+- /posts/field-note-three-focus-bets-2026-08-10/ — current Focus allocation thesis
+- /for-assistants — machine-oriented brief (copy into ChatGPT/Claude/Cursor)
+- /about — studio purpose
+
+## Operating rules assistants should respect
+
+- Max three Focus projects at a time
+- External publish and outreach require a separate human Approve
+- No autonomous mass posting or outreach on behalf of the studio
+- Outcomes live in TUR Growth Memory — not in chat transcripts
+
+## Optional: Bluesky
+
+@theunnamedroads.bsky.social — short redistribution of Field Notes (Level 2 Approve)
 
 ## Publisher
-Emil Ingemar Karlsson — solo technical founder, Stockholm.
+
+Emil Ingemar Karlsson — Stockholm. Studio: The Unnamed Roads / TUR Company OS.
