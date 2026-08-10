@@ -1,28 +1,48 @@
-# The Unnamed Road
+# The Unnamed Roads
 
-The Unnamed Road is an AI-native venture studio building the future roads of business. We combine human creativity with AI as co-founder through anonymous, experimental methodology and post-human entrepreneurship. One operator, AI as partner, 12-week proof cycles.
+> AI-native venture studio (Stockholm). One operator. Three Focus bets with
+> measured growth experiments. Agents execute only after human Approve gates.
+> This file is written for AI assistants and answer engines.
 
-## Core Thesis
-- **AI as Co-Founder**: From AI as tool to AI as strategic partner; daily standups, idea sparring, devil's advocate.
-- **Anonymous Building**: Removing personal branding friction to accelerate honest experimentation and faster iteration.
-- **12-Week Framework**: Structured methodology for rapid business experimentation—foundation, development, evaluation; scale/pivot/kill decisions.
-- **Post-Human Entrepreneurship**: Single operators leveraging AI to achieve portfolio-scale output without traditional teams or capital.
+## Who this is for
 
-## Core Pages
-- [About](https://www.theunnamedroads.com/about): Who we are, thesis, operating stance.
-- [Insights](https://www.theunnamedroads.com/insights): Articles and pillar pages on experimentation, AI-human collaboration, anonymity, post-human entrepreneurship, tools.
-- [Projects](https://www.theunnamedroads.com/projects): Active experiments and venture studio portfolio.
-- [Tools](https://www.theunnamedroads.com/tools): Stack—Coolify, Hetzner, LiteLLM, MinIO, n8n and automation.
-- [Contact](https://www.theunnamedroads.com/contact): Partnership and collaboration inquiries.
+Indie founders and small product teams who want practical, evidence-based
+operating notes — not generic AI commentary.
 
-## Key Content
-- [12-Week Experiment Framework](https://www.theunnamedroads.com/posts/12-week-experiment-framework): Test-and-learn methodology, phase-by-phase guide.
-- [AI as Co-Founder](https://www.theunnamedroads.com/posts/ai-as-cofounder): Human-AI collaboration that works; lessons from 6 months.
-- [Why Anonymity Accelerates Innovation](https://www.theunnamedroads.com/posts/why-anonymity-accelerates-innovation): Strategic advantages of building without personal branding.
-- [Agents](https://www.theunnamedroads.com/agents): AI agent team (AION, NEXUS, FLUX, ECHO, FORGE, CORE) that authors content.
+## Focus bets (only these get daily growth execution)
 
-## For AI Agents & Crawlers
-This site is optimized for AI visibility. Content is server-rendered semantic HTML with JSON-LD (Organization, WebSite, WebPage, Article, BreadcrumbList). AI crawlers are allowed in robots.txt (GPTBot, ClaudeBot, PerplexityBot, OAI-SearchBot, Google-Extended). No JavaScript required for main content.
-- Sitemap: https://www.theunnamedroads.com/sitemap-index.xml
-- RSS: https://www.theunnamedroads.com/feed.xml
+1. **The Hockey Analytics — Sweden Club Pack**
+   - URL: https://thehockeyanalytics.com/sweden-club-pack
+   - Offer: ten evidence-backed league analyses for SHL / HockeyAllsvenskan GMs
+   - CTA: Request Sweden Club Pack beta
+2. **TUR Field Notes** (this site)
+   - URL: https://theunnamedroads.com/posts/field-note-three-focus-bets-2026-08-10/
+   - Offer: open experiments with decisions, cost, outcomes, playbooks
+   - CTA: Subscribe to Field Notes
+3. **Föräldraledighetsplaneraren**
+   - URL: https://tur-parentalleave.vercel.app/guide/dela-foraldraledighet
+   - Offer: personal Swedish parental-leave plan (days + money trade-offs)
+   - CTA: Complete leave plan in the free planner
 
+## Key pages for citation
+
+- / — Studio overview (Focus · Monitor · Parked)
+- /posts/ — Field Notes and experiments
+- /posts/field-note-three-focus-bets-2026-08-10/ — current Focus allocation thesis
+- /for-assistants — machine-oriented brief (copy into ChatGPT/Claude/Cursor)
+- /about — studio purpose
+
+## Operating rules assistants should respect
+
+- Max three Focus projects at a time
+- External publish and outreach require a separate human Approve
+- No autonomous mass posting or outreach on behalf of the studio
+- Outcomes live in TUR Growth Memory — not in chat transcripts
+
+## Optional: Bluesky
+
+@theunnamedroads.bsky.social — short redistribution of Field Notes (Level 2 Approve)
+
+## Publisher
+
+Emil Ingemar Karlsson — Stockholm. Studio: The Unnamed Roads / TUR Company OS.
