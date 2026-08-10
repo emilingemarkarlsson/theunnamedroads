@@ -1,7 +1,7 @@
 {
   "hero": {
     "eyebrow": "AI venture studio",
-    "eyebrowAfter": "10+ live properties, one stack, agents shipping while you steer.",
+    "eyebrowAfter": "Three Focus bets. Measured learning. Agents only where the workflow is proven.",
     "headline": "The Unnamed Roads",
     "badges": [],
     "orgChart": {
@@ -13,7 +13,7 @@
       "chief": {
         "title": "CEO",
         "subtitle": "Chief Executive Officer",
-        "tagline": "Sets direction; agents translate goals into shipped work.",
+        "tagline": "Sets direction; Company OS turns evidence into the next decision.",
         "status": "Claude",
         "icon": "tabler--robot"
       },
@@ -37,7 +37,7 @@
           "id": "sales",
           "title": "Sales Agent",
           "subtitle": "Lead Intelligence & Outreach",
-          "description": "Monitors HN, Reddit, and job boards daily for signals and leads.",
+          "description": "Surfaces signals for human-approved outreach — never autonomous send.",
           "status": "Claude",
           "icon": "tabler--robot"
         },
@@ -53,7 +53,7 @@
           "id": "cmo",
           "title": "CMO",
           "subtitle": "Chief Marketing Officer",
-          "description": "Owns content strategy, SEO direction, and publishing cadence.",
+          "description": "Owns distribution experiments, Field Notes cadence, and publish gates.",
           "status": "Claude",
           "icon": "tabler--chart-dots"
         }
@@ -62,189 +62,195 @@
   },
   "ventures": {
     "eyebrow": "Live projects",
-    "title": "10+ projects, all running on agents",
-    "description": "Each project publishes AI-generated content daily, tracks analytics via Umami, and notifies via Telegram. No manual editing. No CMS logins.",
+    "title": "Portfolio with three Focus bets",
+    "description": "Focus projects run measured growth experiments. Monitor projects stay visible. Publishing and outreach always need a human gate.",
     "filters": [
-      { "id": "media", "label": "Media" },
+      { "id": "family", "label": "Family" },
       { "id": "sports", "label": "Sports" },
       { "id": "saas", "label": "SaaS" },
       { "id": "studio", "label": "Studio" }
     ],
     "companies": [
       {
+        "id": "parental",
+        "name": "FÖRÄLDRALEDIGHETSPLANERAREN",
+        "focus": "Swedish parental leave planning",
+        "summary": "Complete a personal leave plan — days, pay and trade-offs — then share or return. Organic SEO/AEO is the growth path.",
+        "tag": "family",
+        "status": { "label": "Focus", "tone": "active" },
+        "metric": { "label": "CTA", "value": "Complete plan" },
+        "href": "https://tur-parentalleave.vercel.app"
+      },
+      {
         "id": "tur",
         "name": "THE UNNAMED ROADS",
-        "focus": "AI agent studio & writing",
-        "summary": "The studio hub. Publishes articles on AI infrastructure, solo founder ops, and self-hosted systems.",
+        "focus": "Studio Field Notes & distribution hub",
+        "summary": "Evidence-based Field Notes for indie founders building AI-native companies without heavy org debt.",
         "tag": "studio",
-        "status": { "label": "Live", "tone": "active" },
-        "metric": { "label": "Articles published", "value": "10+" },
+        "status": { "label": "Focus", "tone": "active" },
+        "metric": { "label": "CTA", "value": "Subscribe" },
         "href": "https://theunnamedroads.com/"
       },
       {
         "id": "tha",
         "name": "THE HOCKEY ANALYTICS",
-        "focus": "NHL stats & analytics",
-        "summary": "AI-generated NHL analysis, standings explainers, and xG/Corsi breakdowns. Published daily via n8n + Groq.",
+        "focus": "Sweden Club Pack / league intelligence",
+        "summary": "Proactive hockey intelligence for clubs — evidence-backed analyses before dashboards alone are enough.",
         "tag": "sports",
-        "status": { "label": "Live", "tone": "active" },
-        "metric": { "label": "Articles / month", "value": "30+" },
+        "status": { "label": "Focus", "tone": "active" },
+        "metric": { "label": "Offer", "value": "Club Pack beta" },
         "href": "https://thehockeyanalytics.com/"
       },
       {
         "id": "thb",
         "name": "THE HOCKEY BRAIN",
-        "focus": "Hockey stats education",
-        "summary": "Plain-language hockey stats guides targeting casual fans. Gemini-powered with live NHL API data.",
+        "focus": "Hockey analytics consulting",
+        "summary": "On-demand analytics for teams that want edge without a full-time hire.",
         "tag": "sports",
-        "status": { "label": "Live", "tone": "active" },
-        "metric": { "label": "Daily publishes", "value": "1" },
+        "status": { "label": "Monitor", "tone": "active" },
+        "metric": { "label": "Mode", "value": "Monitor" },
         "href": "https://thehockeybrain.com/"
       },
       {
         "id": "taf",
         "name": "THE AGENT FABRIC",
         "focus": "Enterprise AI agent infrastructure",
-        "summary": "B2B content site on distributed AI agents, edge deployments, and sovereign AI. Built with Next.js.",
+        "summary": "B2B content site on distributed AI agents, edge deployments, and sovereign AI.",
         "tag": "saas",
-        "status": { "label": "Live", "tone": "active" },
-        "metric": { "label": "Pillar articles", "value": "5+" },
+        "status": { "label": "Monitor", "tone": "active" },
+        "metric": { "label": "Mode", "value": "Monitor" },
         "href": "https://tur-theagentfabric.vercel.app/"
       },
       {
         "id": "tan",
         "name": "THE ATOMIC NETWORK",
-        "focus": "Micro-transaction infrastructure",
-        "summary": "Landing page for a payment micro-network concept. Netlify-hosted, content published via OpenClaw.",
+        "focus": "Hyperlocal GTM loops",
+        "summary": "Physical mail plus referral mechanics for brick-and-mortar brands.",
         "tag": "saas",
-        "status": { "label": "Live", "tone": "active" },
-        "metric": { "label": "Blog posts", "value": "5+" },
+        "status": { "label": "Monitor", "tone": "active" },
+        "metric": { "label": "Mode", "value": "Monitor" },
         "href": "https://tan-website.netlify.app/"
       },
       {
         "id": "tpr",
         "name": "THE PRINT ROUTE",
-        "focus": "Smart print routing SaaS",
-        "summary": "Landing page for an automated print order routing platform. React/Vite, deployed on Vercel.",
+        "focus": "Smart print routing",
+        "summary": "Webhook-to-doorstep print routing for retailers and local providers.",
         "tag": "saas",
-        "status": { "label": "Live", "tone": "active" },
-        "metric": { "label": "Blog posts", "value": "5+" },
-        "href": "https://tur-theprintroute.vercel.app/"
+        "status": { "label": "Monitor", "tone": "active" },
+        "metric": { "label": "Mode", "value": "Monitor" },
+        "href": "https://theprintroute.com/"
       },
       {
         "id": "eik",
         "name": "EIK",
-        "focus": "Personal site — AI Agent Architect",
-        "summary": "Personal portfolio and blog. AI-generated SEO articles, Astro-based, deployed on Netlify.",
+        "focus": "Personal site — founder distribution",
+        "summary": "Personal portfolio. Separate Personal trust realm; linked here as a distribution surface only.",
         "tag": "studio",
-        "status": { "label": "Live", "tone": "active" },
-        "metric": { "label": "Articles / month", "value": "20+" },
+        "status": { "label": "Linked", "tone": "active" },
+        "metric": { "label": "Realm", "value": "Personal" },
         "href": "https://emilingemarkarlsson.com/"
       }
     ]
   },
   "signals": {
     "eyebrow": "The thesis",
-    "title": "Agents as the only workforce",
-    "description": "Building a fully automated company where AI agents handle every operational role — on a cost-optimized platform designed for maximum profitability with zero headcount.",
+    "title": "Learning loop before agent swarm",
+    "description": "An AI-native venture studio where decisions, experiments and outcomes compound in Company OS — agents execute proven workflows under human approval gates.",
     "tags": [
-      "fully automated operations",
-      "agent-first architecture",
-      "zero headcount",
-      "self-hosted AI infra",
-      "cost-optimized platform",
-      "autonomous publishing",
-      "n8n workflows",
-      "LLM cost optimization",
-      "Coolify on Hetzner",
-      "RAG + Qdrant",
-      "LiteLLM routing",
-      "Telegram-first ops",
+      "decision-first growth",
+      "Focus · Monitor · Parked",
+      "Field Notes",
+      "organic distribution",
       "GEO / AEO",
-      "IndexNow"
+      "IndexNow",
+      "human publish gates",
+      "self-hosted where it pays",
+      "cost-aware model routing",
+      "PostHog growth evidence"
     ],
     "highlights": [
       {
-        "id": "agent-workforce",
-        "label": "Agents as the only employees",
-        "detail": "Every operational role — content, research, publishing, analytics, notifications — is handled by AI agents running on schedule. No team. No overhead."
+        "id": "learning-loop",
+        "label": "Evidence before automation",
+        "detail": "Signal → decision → work → outcome → human correction. Agents join only after the workflow is stable enough to evaluate."
       },
       {
-        "id": "cost-efficiency",
-        "label": "Cost-optimized for profitability",
-        "detail": "Running 10+ live projects with daily AI content for ~400 kr/month. Coolify + Hetzner replaces 2 300+ kr/month in managed services — maximizing margin from day one."
+        "id": "focus-allocation",
+        "label": "Three Focus bets at a time",
+        "detail": "THA, TUR Field Notes and Föräldraledighetsplaneraren run measured experiments. Everything else is Monitor or Parked."
       },
       {
-        "id": "agentic-publishing",
-        "label": "Fully automated publishing loops",
-        "detail": "Research → draft → quality score → publish → IndexNow → newsletter — end-to-end autonomous. One human sets strategy. Agents execute everything else."
+        "id": "distribution",
+        "label": "Organic visibility in the AI era",
+        "detail": "Canonical claim pages, answer-engine FAQ, Field Notes and product tools — not autonomous blog spray across every domain."
       }
     ]
   },
   "operatingSystem": {
     "eyebrow": "Daily pipeline",
-    "title": "How 8 sites publish without me touching them",
-    "description": "23 n8n workflows run staggered across the day. Each site has its own schedule, model routing, and publish path. One Hetzner VPS. Zero daily intervention.",
+    "title": "How the studio ships learning every day",
+    "description": "Ingest signals, draft under MethodPolicy, approve on phone, publish only with a gate. Self-hosted jobs still power research and IndexNow where useful.",
     "phases": [
       {
         "id": "report",
-        "label": "08:30",
-        "title": "Consolidated analytics",
-        "description": "One workflow pulls Umami stats for all 8 sites and packages the previous day into a single Telegram message. Paperclip CFO agent reads the same data for weekly financial ops.",
-        "meta": "Umami · Minio · Paperclip · Telegram"
+        "label": "Morning",
+        "title": "Growth + inbox signals",
+        "description": "PostHog Focus funnels, Raindrop/Gmail learning labels and Tech Pulse digest surface at most three mobile decisions.",
+        "meta": "PostHog · Company OS · Resend"
       },
       {
         "id": "research",
-        "label": "08:00–10:00",
-        "title": "Research per site",
-        "description": "Each site runs its own keyword research window. THA pulls live NHL standings from the API. EIK reads performance data from Minio and scores topics with Groq. THB uses NHL data directly — no separate research step.",
-        "meta": "NHL API · Minio · Groq · n8n cron"
+        "label": "→",
+        "title": "Research per Focus bet",
+        "description": "Each Focus project keeps one active validation contract. Distribution packs stay bounded to one claim surface + one redistribution asset.",
+        "meta": "Validation contracts · Field Notes"
       },
       {
         "id": "generate",
-        "label": "10:00–12:00",
-        "title": "Generation — staggered by site",
-        "description": "THA at 10:00, FIN at 10:30, TUR at 11:00, TAN at 11:30, TAF at 12:00. LiteLLM routes each prompt to Groq or Gemini 2.5 Flash depending on the site. FIN generates in Swedish. THB uses Gemini directly with live standings data.",
-        "meta": "LiteLLM · Groq · Gemini 2.5 Flash · n8n"
+        "label": "→",
+        "title": "Draft with MethodPolicy",
+        "description": "Marketing and development drafts run free-first models under spend gates. Deterministic policy still owns approvals and budgets.",
+        "meta": "OpenRouter · Inngest · MethodPolicy"
       },
       {
         "id": "approve",
         "label": "→",
-        "title": "Auto-publish or Telegram approval",
-        "description": "7 sites auto-publish without review. EIK articles stop here — a Telegram message with inline Approve/Reject buttons goes to me. One tap publishes, one tap discards. No login, no dashboard.",
-        "meta": "Telegram bot · n8n webhook · OpenClaw"
+        "title": "Approve on phone",
+        "description": "Linear Mobile / operator approvals. No autonomous outreach, publish or production deploy from an agent.",
+        "meta": "Approve · Defer · Reject"
       },
       {
         "id": "publish",
         "label": "→",
-        "title": "Commit, deploy, ping, notify",
-        "description": "OpenClaw writes the markdown file and commits to the site's GitHub repo. Netlify or Vercel deploys in ~60 seconds. IndexNow pings Google and Bing with the new URL. Resend fires the newsletter. One Telegram message lands in the Publishes topic.",
-        "meta": "OpenClaw · GitHub · Netlify · IndexNow · Resend"
+        "title": "Publish with a separate gate",
+        "description": "Approved drafts can commit, deploy and IndexNow after Level 2/3 policy. Outcomes return to Growth Memory.",
+        "meta": "GitHub · Vercel/Netlify · IndexNow"
       }
     ]
   },
   "testimonials": {
     "eyebrow": "Numbers",
-    "title": "What the infra actually costs",
-    "description": "Full monthly breakdown for running 8 sites with daily AI content publishing.",
+    "title": "What the stack actually costs",
+    "description": "Rough monthly cost to run Focus distribution, self-hosted jobs and the Studio site — not a claim of zero-headcount autonomy.",
     "quotes": [
       {
         "id": "cost-hetzner",
-        "quote": "One VPS running Coolify, n8n, OpenClaw, LiteLLM, Minio, Umami, and Qdrant. Everything self-hosted.",
-        "author": "Hetzner CX32",
-        "role": "~150 kr/month"
+        "quote": "Self-hosted jobs still run on one Hetzner VPS where they beat managed SaaS on cost. Company OS stays on Vercel + Supabase.",
+        "author": "Hetzner + Vercel",
+        "role": "hybrid stack"
       },
       {
         "id": "cost-llm",
-        "quote": "Gemini 2.5 Flash via LiteLLM handles article generation for 6 sites. Groq handles keyword scoring and EIK. Spend tracked per site.",
-        "author": "LLM APIs (Gemini + Groq)",
-        "role": "~60–115 kr/month"
+        "quote": "Model spend is gated by MethodPolicy and free-first routing. Drafts are cheap; publish still needs approval.",
+        "author": "OpenRouter + MethodPolicy",
+        "role": "bounded"
       },
       {
         "id": "cost-domains",
-        "quote": "theunnamedroads.com, thehockeyanalytics.com, thehockeybrain.com — plus Netlify/Vercel free tiers.",
+        "quote": "Focus domains first: theunnamedroads.com, thehockeyanalytics.com, tur-parentalleave — Monitor sites stay live but outside daily growth ranking.",
         "author": "Domains + hosting",
-        "role": "~140 kr/month"
+        "role": "Focus first"
       }
     ]
   },

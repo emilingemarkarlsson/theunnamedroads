@@ -11,18 +11,18 @@ tags:
   - ai-insights
 homepage:
   featured: true
-  order: 4
-  statusLabel: Active
+  order: 1
+  statusLabel: Focus
   statusTone: active
   statusDotColor: bg-emerald-500
   animateDot: true
-  focus: Proactive hockey analytics research
+  focus: Sweden Club Pack / league intelligence
   summary: >-
-    Making Hockey Data Human. Proactive pattern detection in NHL data delivering
-    insights to scouts, coaches, and analysts before anyone else sees them.
-  metricLabel: Agent Analysts deployed
-  metricValue: "10"
-  tag: Sports AI
+    Making Hockey Data Human. Proactive league intelligence for SHL/HA leaders —
+    evidence-backed analyses before another dashboard is enough.
+  metricLabel: Offer
+  metricValue: Club Pack beta
+  tag: Sports
   href: https://www.thehockeyanalytics.com/
 ---
 

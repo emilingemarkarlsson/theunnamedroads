@@ -11,18 +11,18 @@ tags:
   - solo-founder
 homepage:
   featured: true
-  order: 5
-  statusLabel: Active
+  order: 2
+  statusLabel: Focus
   statusTone: active
   statusDotColor: bg-emerald-500
   animateDot: true
-  focus: AI-native solo venture studio
+  focus: Studio Field Notes & distribution hub
   summary: >-
-    One founder. Seven projects. AI agents doing the work. Self-hosted on Coolify
-    and Hetzner for ~35 EUR/month – replacing what would normally take 8-12 people.
-  metricLabel: AI agents deployed
-  metricValue: "8"
-  tag: Venture studio
+    Evidence-based Field Notes from an AI-native venture studio — decisions,
+    cost, outcomes and playbooks. Human gates on publish and outreach.
+  metricLabel: CTA
+  metricValue: Subscribe
+  tag: Studio
   href: /about
 ---
 
