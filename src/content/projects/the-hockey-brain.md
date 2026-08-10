@@ -11,8 +11,8 @@ tags:
   - data-visualization
 homepage:
   featured: true
-  order: 1
-  statusLabel: Active
+  order: 3
+  statusLabel: Monitor
   statusTone: active
   statusDotColor: bg-sky-500
   animateDot: true
@@ -21,9 +21,9 @@ homepage:
     Modern data stack + flexible engagement model delivering on-demand hockey
     analytics squads for teams that want measurable tactical advantages without
     full-time hires.
-  metricLabel: Data points available
-  metricValue: 30M+
-  tag: Sports AI
+  metricLabel: Mode
+  metricValue: Monitor
+  tag: Sports
   href: https://www.thehockeybrain.com/
 ---
 
