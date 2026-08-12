@@ -14,18 +14,23 @@ Make The Unnamed Roads discoverable for "AI-native venture studio" and clearly s
 - [x] Published SEO pillar: `/insights/ai-native-venture-studio-operating-system`.
 - [x] Launched service landing: `/services/ai-native-venture-studio`.
 - [x] Outbound kits kept internal (public `/outreach` removed).
+- [x] Assigned Linear owners/priorities for remaining visibility issues.
+- [x] Structured data (Organization + Service + FAQ) on visibility pages.
+- [x] PostHog CTA instrumentation (Umami removed).
+- [x] Focus · Monitor · Parked policy page + homepage legend.
+- [x] Comparison page: agency vs venture studio vs incubator.
+- [x] Monthly proof refresh protocol (`planning/monthly-proof-refresh-protocol.md`).
 
 ## Now (execute this week)
-- [ ] Assign Linear owners and sprint priority (TUR-91–105).
-- [x] Add structured data (Organization + Service + FAQ) to new pages.
-- [x] Instrument PostHog events on homepage CTAs and service page.
-- [ ] Run first broker outbound batch (20–40/day after domain warmup).
+- [ ] Run first broker outbound batch (20–40/day after domain warmup) — **Emil / human-only**.
+- [ ] Verify pipeline map completeness vs Company OS registry (TUR-92).
+- [ ] Set up keyword + SERP tracking checklist in PostHog (TUR-100).
 
 ## Next (2-4 weeks)
-- [ ] Structured data rollout on remaining insight/comparison pages.
-- [ ] Comparison pages for search intent (agency vs venture studio vs incubator).
-- [ ] Monthly proof refresh protocol from Company OS evidence.
-- [ ] Keyword tracking dashboard and weekly review ritual.
+- [ ] Structured data on remaining older insight pillars.
+- [ ] First monthly proof refresh using the protocol.
+- [ ] Newsletter lead magnet for operators (TUR-102).
+- [ ] Case-study PRD (TUR-104) and quarterly narrative themes (TUR-105).
 
 ## Positioning statement draft
 The Unnamed Roads is an AI-native venture studio where TUR Company OS coordinates decisions, approvals, and execution loops. Agents accelerate proven workflows; humans keep governance at critical boundaries.

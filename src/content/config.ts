@@ -140,6 +140,19 @@ const homepage = defineCollection({
       eyebrow: z.string(),
       title: z.string(),
       description: z.string(),
+      statusPolicy: z
+        .object({
+          title: z.string(),
+          href: z.string(),
+          items: z.array(
+            z.object({
+              id: z.string(),
+              label: z.string(),
+              detail: z.string()
+            })
+          )
+        })
+        .optional(),
       filters: z.array(
         z.object({
           id: z.string(),

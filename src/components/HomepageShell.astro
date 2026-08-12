@@ -322,6 +322,34 @@ const heroOrg = homepageData.hero.orgChart
         </div>
       </div>
     </div>
+    {
+      homepageData.ventures.statusPolicy && (
+        <div class="grid gap-3 rounded-2xl border border-white/10 bg-white/5 p-4 sm:grid-cols-3">
+          {homepageData.ventures.statusPolicy.items.map((item) => (
+            <div>
+              <p class="text-xs uppercase tracking-[0.3em] text-accent">
+                {item.label}
+              </p>
+              <p class="mt-1 text-sm text-gray-600 dark:text-gray-300">
+                {item.detail}
+              </p>
+            </div>
+          ))}
+          <div class="sm:col-span-3">
+            <a
+              href={homepageData.ventures.statusPolicy.href}
+              class="text-sm font-semibold text-accent"
+              data-ph-event="cta_click"
+              data-ph-cta-id="status_policy"
+              data-ph-section="ventures"
+              data-ph-label="Status policy"
+            >
+              {homepageData.ventures.statusPolicy.title} →
+            </a>
+          </div>
+        </div>
+      )
+    }
     <div class="grid gap-6 lg:grid-cols-2">
       {
         ventureCards.map((company, index) => (

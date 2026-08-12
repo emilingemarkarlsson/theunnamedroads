@@ -64,6 +64,27 @@
     "eyebrow": "Live projects",
     "title": "Portfolio with three Focus bets",
     "description": "Focus projects run measured growth experiments. Monitor projects stay visible. Publishing and outreach always need a human gate.",
+    "statusPolicy": {
+      "title": "Status policy",
+      "href": "/insights/focus-monitor-parked",
+      "items": [
+        {
+          "id": "focus",
+          "label": "Focus",
+          "detail": "Max three bets with active validation and daily growth attention."
+        },
+        {
+          "id": "monitor",
+          "label": "Monitor",
+          "detail": "Live and visible, outside the daily growth queue."
+        },
+        {
+          "id": "parked",
+          "label": "Parked",
+          "detail": "Dormant — not shown as Active."
+        }
+      ]
+    },
     "filters": [
       { "id": "family", "label": "Family" },
       { "id": "sports", "label": "Sports" },
