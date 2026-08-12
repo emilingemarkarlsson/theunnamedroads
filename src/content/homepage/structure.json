@@ -154,6 +154,41 @@
       }
     ]
   },
+  "companyOs": {
+    "eyebrow": "Powered by TUR Company OS",
+    "title": "The operating system behind every venture decision",
+    "description": "TUR Company OS is the control plane for this studio — portfolio hierarchy, approval gates, event memory and measured learning loops. Agents draft and execute inside proven workflows; humans keep governance at consequential boundaries.",
+    "pillars": [
+      {
+        "id": "decisions",
+        "label": "Decision-first",
+        "detail": "Every action traces to a signal, decision, expected outcome and human correction — not a dashboard metric wall."
+      },
+      {
+        "id": "focus",
+        "label": "Focus · Monitor · Parked",
+        "detail": "Three Focus bets run measured experiments. Monitor ventures stay visible. Parked work does not compete for daily attention."
+      },
+      {
+        "id": "gates",
+        "label": "Human approval gates",
+        "detail": "Publish, outreach and production deploy never run autonomously. Mobile approvals keep velocity without losing control."
+      }
+    ],
+    "stats": [
+      { "id": "projects", "label": "Live ventures", "value": "10+" },
+      { "id": "focus", "label": "Focus bets", "value": "3" },
+      { "id": "loop", "label": "Learning loop", "value": "Signal → Lesson" }
+    ],
+    "primaryCta": {
+      "label": "See how Company OS works",
+      "href": "/insights/ai-native-venture-studio-operating-system"
+    },
+    "secondaryCta": {
+      "label": "Work with the studio",
+      "href": "/services/ai-native-venture-studio"
+    }
+  },
   "signals": {
     "eyebrow": "The thesis",
     "title": "Learning loop before agent swarm",

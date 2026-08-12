@@ -166,6 +166,35 @@ const homepage = defineCollection({
         })
       )
     }),
+    companyOs: z
+      .object({
+        eyebrow: z.string(),
+        title: z.string(),
+        description: z.string(),
+        pillars: z.array(
+          z.object({
+            id: z.string(),
+            label: z.string(),
+            detail: z.string()
+          })
+        ),
+        stats: z.array(
+          z.object({
+            id: z.string(),
+            label: z.string(),
+            value: z.string()
+          })
+        ),
+        primaryCta: z.object({
+          label: z.string(),
+          href: z.string()
+        }),
+        secondaryCta: z.object({
+          label: z.string(),
+          href: z.string()
+        })
+      })
+      .optional(),
     signals: z.object({
       eyebrow: z.string(),
       title: z.string(),

@@ -9,13 +9,17 @@ Make The Unnamed Roads discoverable for "AI-native venture studio" and clearly s
 - [x] TAN card fixed to `https://tan-site.vercel.app/pilot`.
 - [x] Added missing pipeline projects as public project entries with status metadata.
 - [x] Created Linear-import CSV backlog: `planning/linear-theunnamedroads-visibility-backlog.csv`.
+- [x] Imported 15 tasks into Linear project [The Unnamed Roads — Visibility](https://linear.app/turab/project/the-unnamed-roads-visibility-ade833466caf) (TUR-91–TUR-105).
+- [x] Added Company OS positioning block on homepage (`#company-os`).
+- [x] Published SEO pillar: `/insights/ai-native-venture-studio-operating-system`.
+- [x] Launched service landing: `/services/ai-native-venture-studio`.
+- [x] Built outbound kit page: `/outreach`.
 
 ## Now (execute this week)
-- [ ] Import CSV into Linear and assign owners/priority.
-- [ ] Add Company OS positioning block on homepage (`Powered by TUR Company OS`).
-- [ ] Publish one SEO page targeting "AI-native venture studio operating system".
-- [ ] Launch one service/offer landing page with primary CTA.
-- [ ] Build outbound kit pages with reusable screenshots + links per vertical.
+- [ ] Assign Linear owners and sprint priority (TUR-91–105).
+- [ ] Add structured data (Organization + Service + FAQ) to new pages.
+- [ ] Instrument Umami events on homepage CTAs and service page.
+- [ ] Run first broker outbound batch (20–40/day after domain warmup).
 
 ## Next (2-4 weeks)
 - [ ] Structured data rollout (Organization + Service + FAQ).
