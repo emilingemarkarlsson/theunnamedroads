@@ -1,0 +1,93 @@
+---
+layout: '@/layouts/PageLayout.astro'
+title: AI-Native Distribution Playbook — Focus Bets Without Portfolio Spray
+description: Free operator playbook for AI-native venture studios — Focus contracts, claim pages, human publish gates and PostHog measurement. Subscribe for Field Notes updates.
+activeHeaderLink: Insights
+fullBleed: true
+faq:
+  - question: "What is an AI-native distribution playbook?"
+    answer: "A bounded operating pattern: three Focus bets, one claim surface per bet, one redistribution asset, PostHog instrumentation and human Approve before publish or outreach."
+  - question: "Who is this playbook for?"
+    answer: "Solo founders and small studio operators running multiple ventures who need attention discipline — not another content calendar SaaS."
+  - question: "Do I need TUR Company OS to use this?"
+    answer: "No. Start with Focus/Monitor/Parked allocation and validation contracts on paper. Company OS becomes useful when decisions and lessons must compound across ventures."
+---
+
+import NewsletterSignup from '@/components/NewsletterSignup.astro'
+
+<div class="homepage-shell space-y-10">
+  <section class="section-shell space-y-6">
+    <div class="space-y-3">
+      <p class="section-eyebrow">Lead magnet · Free playbook</p>
+      <h1 class="text-4xl font-semibold text-white sm:text-5xl">
+        AI-native distribution without portfolio spray
+      </h1>
+      <p class="max-w-3xl text-base text-slate-300 sm:text-lg">
+        The same constraints we run at The Unnamed Roads: three Focus bets, honest status badges,
+        one claim page per experiment, and human gates on anything consequential.
+      </p>
+    </div>
+    <div class="flex flex-wrap gap-3">
+      <a
+        href="#subscribe"
+        class="inline-flex items-center rounded-full bg-emerald-500 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-emerald-400"
+        data-ph-event="cta_click"
+        data-ph-cta-id="playbook_subscribe"
+        data-ph-section="playbook"
+        data-ph-label="Get Field Notes"
+      >
+        Get Field Notes updates
+      </a>
+      <a
+        href="/insights/focus-monitor-parked"
+        class="inline-flex items-center rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition hover:border-white/40"
+        data-ph-event="cta_click"
+        data-ph-cta-id="playbook_status_policy"
+        data-ph-section="playbook"
+      >
+        Read status policy →
+      </a>
+    </div>
+  </section>
+
+  <section class="section-shell space-y-6">
+    <p class="section-eyebrow">The playbook (v0)</p>
+    <ol class="space-y-4 text-slate-300">
+      <li>
+        <strong class="text-white">1. Cap Focus at three.</strong> Everything else is Monitor or Parked.
+        Public badges must match your real attention budget.
+      </li>
+      <li>
+        <strong class="text-white">2. One validation contract per Focus bet.</strong> Expected outcome,
+        claim surface, redistribution asset, kill/pivot date.
+      </li>
+      <li>
+        <strong class="text-white">3. Ship one claim page before content volume.</strong> FAQ schema,
+        canonical URL, proof block — then IndexNow after human Approve.
+      </li>
+      <li>
+        <strong class="text-white">4. Instrument CTAs in PostHog.</strong> Track `cta_click` and
+        venture engagement with a `site` property. Ignore vanity pageview walls.
+      </li>
+      <li>
+        <strong class="text-white">5. Agents draft; humans gate.</strong> Publish, outreach and
+        production deploy stay Level 3+. No autonomous mass send.
+      </li>
+    </ol>
+    <p class="text-sm text-slate-400">
+      Deeper reading:{' '}
+      <a href="/insights/ai-native-venture-studio-operating-system" class="text-accent">Company OS</a>
+      {' · '}
+      <a href="/insights/agency-vs-venture-studio-vs-incubator" class="text-accent">Model comparison</a>
+      {' · '}
+      <a href="/services/ai-native-venture-studio" class="text-accent">Work with the studio</a>
+    </p>
+  </section>
+
+  <section id="subscribe" class="section-shell">
+    <NewsletterSignup
+      title="Field Notes for operators"
+      description="When we publish evidence-backed notes on Focus allocation, Company OS and distribution — not a daily newsletter spray."
+    />
+  </section>
+</div>

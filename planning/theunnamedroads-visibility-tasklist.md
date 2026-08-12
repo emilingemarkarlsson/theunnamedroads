@@ -3,34 +3,29 @@
 ## Objective
 Make The Unnamed Roads discoverable for "AI-native venture studio" and clearly show that execution is powered by TUR Company OS.
 
-## Completed now
-- [x] Chat renamed to `theunnmedroads.se`.
-- [x] Live link audit for homepage venture cards and project URLs.
-- [x] TAN card fixed to `https://tan-site.vercel.app/pilot`.
-- [x] Added missing pipeline projects as public project entries with status metadata.
-- [x] Created Linear-import CSV backlog: `planning/linear-theunnamedroads-visibility-backlog.csv`.
-- [x] Imported 15 tasks into Linear project [The Unnamed Roads — Visibility](https://linear.app/turab/project/the-unnamed-roads-visibility-ade833466caf) (TUR-91–TUR-105).
-- [x] Added Company OS positioning block on homepage (`#company-os`).
-- [x] Published SEO pillar: `/insights/ai-native-venture-studio-operating-system`.
-- [x] Launched service landing: `/services/ai-native-venture-studio`.
-- [x] Outbound kits kept internal (public `/outreach` removed).
-- [x] Assigned Linear owners/priorities for remaining visibility issues.
-- [x] Structured data (Organization + Service + FAQ) on visibility pages.
-- [x] PostHog CTA instrumentation (Umami removed).
-- [x] Focus · Monitor · Parked policy page + homepage legend.
-- [x] Comparison page: agency vs venture studio vs incubator.
-- [x] Monthly proof refresh protocol (`planning/monthly-proof-refresh-protocol.md`).
+## Completed
+- [x] Site audit, TAN link fix, pipeline projects on public portfolio
+- [x] Linear Visibility project TUR-91–105
+- [x] Company OS homepage block + SEO pillar + service landing
+- [x] PostHog instrumentation (Umami removed); outreach kept internal
+- [x] Focus · Monitor · Parked policy + comparison page
+- [x] Monthly proof protocol
+- [x] Linear owners/priorities assigned
+- [x] Pipeline reconciliation vs registry — **19/19 mapped** (TUR-92)
+- [x] Keyword + SERP tracking playbook with PostHog checklist (TUR-100)
+- [x] Weekly link audit script (`planning/scripts/reconcile-links.py`) (TUR-91)
+- [x] Operator lead magnet playbook page (TUR-102)
+- [x] Case-study pipeline PRD (TUR-104)
+- [x] Quarterly brand narrative themes (TUR-105)
 
-## Now (execute this week)
-- [ ] Run first broker outbound batch (20–40/day after domain warmup) — **Emil / human-only**.
-- [ ] Verify pipeline map completeness vs Company OS registry (TUR-92).
-- [ ] Set up keyword + SERP tracking checklist in PostHog (TUR-100).
+## Now — human-only
+- [ ] Run first broker outbound batch (20–40/day after domain warmup)
+- [ ] First weekly SERP baseline in `planning/keyword-serp-tracking.md`
 
-## Next (2-4 weeks)
-- [ ] Structured data on remaining older insight pillars.
-- [ ] First monthly proof refresh using the protocol.
-- [ ] Newsletter lead magnet for operators (TUR-102).
-- [ ] Case-study PRD (TUR-104) and quarterly narrative themes (TUR-105).
+## Later
+- [ ] First monthly proof refresh using the protocol
+- [ ] Execute case-study candidates when outcomes are sourced
+- [ ] Optional: FAQ schema polish on older blog posts
 
-## Positioning statement draft
+## Positioning
 The Unnamed Roads is an AI-native venture studio where TUR Company OS coordinates decisions, approvals, and execution loops. Agents accelerate proven workflows; humans keep governance at critical boundaries.
