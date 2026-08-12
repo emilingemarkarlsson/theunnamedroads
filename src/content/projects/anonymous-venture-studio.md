@@ -1,6 +1,6 @@
 ---
 title: The Unnamed Road
-description: One founder. Seven projects. AI agents doing the work. Self-hosted AI venture studio running 23 n8n workflows on Coolify + Hetzner for ~35 EUR per month.
+description: One operator. AI-native venture studio powered by TUR Company OS — decision-first portfolio, human approval gates, agents inside policy.
 startDate: 2024-11-15
 url: https://theunnamedroads.com
 tags:
@@ -15,11 +15,10 @@ homepage:
   statusLabel: Focus
   statusTone: active
   statusDotColor: bg-emerald-500
-  animateDot: true
-  focus: Studio Field Notes & distribution hub
+  focus: >-
+    Field Notes & Company OS distribution
   summary: >-
-    Evidence-based Field Notes from an AI-native venture studio — decisions,
-    cost, outcomes and playbooks. Human gates on publish and outreach.
+    Evidence-based notes for operators building AI-native companies — decision-first, not dashboard-first.
   metricLabel: CTA
   metricValue: Subscribe
   tag: Studio

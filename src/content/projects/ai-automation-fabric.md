@@ -11,17 +11,14 @@ tags:
   - saas
 homepage:
   featured: true
-  order: 10
+  order: 8
   statusLabel: Monitor
-  statusTone: exploring
-  statusDotColor: bg-emerald-500
-  animateDot: false
-  focus: Card-first automation studio for small teams
+  statusTone: building
+  focus: >-
+    Workflow cards operators can hand to agents
   summary: >-
-    Describe your workflow, get a clear estimate, and receive a
-    production-ready automation with AI handover docs so your team can run and
-    evolve it in-house.
-  metricLabel: Status
+    Describe a workflow, get a bounded automation with handover docs — agent-native delivery pattern.
+  metricLabel: Mode
   metricValue: Monitor
   tag: SaaS
   href: https://tur-aaf.vercel.app

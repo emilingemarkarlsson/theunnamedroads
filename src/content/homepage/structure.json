@@ -1,7 +1,7 @@
 {
   "hero": {
     "eyebrow": "AI venture studio",
-    "eyebrowAfter": "Three Focus bets. Measured learning. Agents only where the workflow is proven.",
+    "eyebrowAfter": "Decision-first portfolio. Measured learning. Agents inside policy — never as fake executives.",
     "headline": "The Unnamed Roads",
     "badges": [],
     "controlLoop": {
@@ -44,21 +44,42 @@
       ],
       "gate": {
         "label": "Human gate",
-        "detail": "Publish · outreach · deploy — never autonomous"
+        "detail": "Publish · deploy · external send — never autonomous"
       },
-      "portfolioLabel": "Three Focus bets",
-      "focusBets": [
-        { "id": "tha", "label": "THA", "detail": "Club Pack beta" },
-        { "id": "tur", "label": "TUR", "detail": "Field Notes" },
-        { "id": "parental", "label": "Parental", "detail": "Complete plan" }
+      "portfolioLabel": "Projects · Focus",
+      "projects": [
+        {
+          "id": "company-os",
+          "label": "Company OS",
+          "detail": "Control plane",
+          "href": "/insights/ai-native-venture-studio-operating-system"
+        },
+        {
+          "id": "tha",
+          "label": "THA",
+          "detail": "Club Pack beta",
+          "href": "https://thehockeyanalytics.com/"
+        },
+        {
+          "id": "parental",
+          "label": "Parental",
+          "detail": "Complete plan",
+          "href": "https://tur-parentalleave.vercel.app"
+        },
+        {
+          "id": "tur",
+          "label": "TUR",
+          "detail": "Field Notes",
+          "href": "https://theunnamedroads.com/"
+        }
       ],
       "footerCaption": "CONTROL PLANE · EXECUTION · KNOWLEDGE"
     }
   },
   "ventures": {
     "eyebrow": "Live projects",
-    "title": "Portfolio with three Focus bets",
-    "description": "Focus projects run measured growth experiments. Monitor projects stay visible. Publishing and outreach always need a human gate.",
+    "title": "Projects in the portfolio",
+    "description": "Focus projects run measured experiments. Monitor projects stay visible with honest status. Parked work does not pretend to be active.",
     "statusPolicy": {
       "title": "Status policy",
       "href": "/insights/focus-monitor-parked",
@@ -66,7 +87,7 @@
         {
           "id": "focus",
           "label": "Focus",
-          "detail": "Max three bets with active validation and daily growth attention."
+          "detail": "Active validation and daily growth attention — platform plus product bets."
         },
         {
           "id": "monitor",
@@ -183,17 +204,17 @@
       {
         "id": "focus",
         "label": "Focus · Monitor · Parked",
-        "detail": "Three Focus bets run measured experiments. Monitor ventures stay visible. Parked work does not compete for daily attention."
+        "detail": "Focus projects run measured experiments. Monitor projects stay visible. Parked work does not compete for daily attention."
       },
       {
         "id": "gates",
         "label": "Human approval gates",
-        "detail": "Publish, outreach and production deploy never run autonomously. Mobile approvals keep velocity without losing control."
+        "detail": "Publish, deploy and external send never run autonomously. Mobile approvals keep velocity without losing control."
       }
     ],
     "stats": [
       { "id": "projects", "label": "Live ventures", "value": "10+" },
-      { "id": "focus", "label": "Focus bets", "value": "3" },
+      { "id": "focus", "label": "Focus projects", "value": "4" },
       { "id": "loop", "label": "Learning loop", "value": "Signal → Lesson" }
     ],
     "primaryCta": {
@@ -229,8 +250,8 @@
       },
       {
         "id": "focus-allocation",
-        "label": "Three Focus bets at a time",
-        "detail": "THA, TUR Field Notes and Föräldraledighetsplaneraren run measured experiments. Everything else is Monitor or Parked."
+        "label": "Focus projects in rotation",
+        "detail": "Company OS, THA, Parental and TUR Field Notes run measured experiments. Everything else is Monitor or Parked."
       },
       {
         "id": "distribution",
@@ -269,7 +290,7 @@
         "id": "approve",
         "label": "→",
         "title": "Approve on phone",
-        "description": "Linear Mobile / operator approvals. No autonomous outreach, publish or production deploy from an agent.",
+        "description": "Linear Mobile / operator approvals. No autonomous publish, deploy or external send from an agent.",
         "meta": "Approve · Defer · Reject"
       },
       {
@@ -406,7 +427,7 @@
           {
             "id": "paperclip",
             "name": "Paperclip",
-            "description": "AI agent platform. CEO agent runs weekly strategy heartbeat. CFO agent reads PostHog + LiteLLM spend data and flags cost anomalies.",
+            "description": "Governed agent workflows with spend gates. Strategy and cost reviews surface as signals — not autonomous executives.",
             "href": "https://theunnamedroads.com/",
             "logo": {
               "type": "monogram",

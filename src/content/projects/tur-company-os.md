@@ -1,6 +1,6 @@
 ---
 title: TUR Company OS
-description: Mobile-first control plane for The Unnamed Roads. Decisions, approvals, outreach and learning loops in one governed operating system.
+description: Mobile-first control plane for The Unnamed Roads. Decisions, approvals, learning loops and agent policy in one governed operating system.
 startDate: 2026-07-13
 tags:
   - studio
@@ -9,23 +9,21 @@ tags:
   - ai-native
 homepage:
   featured: true
-  order: 13
+  order: 3
   statusLabel: Focus
   statusTone: active
   statusDotColor: bg-emerald-500
-  animateDot: true
-  focus: Control plane for venture execution
+  focus: >-
+    Mobile control plane for portfolio decisions
   summary: >-
-    The operating system behind the studio: decisions, approvals, outreach and
-    durable learning with human gates.
+    Signal → decision → work → outcome → lesson. Agents inside policy; human gates on consequential actions.
   metricLabel: Mode
-  metricValue: Focus
+  metricValue: Platform
   tag: Studio
-  href: /projects/tur-company-os
 ---
 
 # TUR Company OS
 
 Control plane for The Unnamed Roads. It coordinates decisions, approvals,
-outreach and learning while keeping consequential actions behind explicit human
+and learning while keeping publish, deploy and external send behind explicit human
 gates.

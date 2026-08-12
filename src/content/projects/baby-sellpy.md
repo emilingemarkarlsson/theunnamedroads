@@ -7,20 +7,19 @@ tags:
   - second-hand
   - pricing
 homepage:
-  featured: true
+  featured: false
   order: 15
-  statusLabel: Idea
+  statusLabel: Parked
   statusTone: exploring
-  statusDotColor: bg-sky-500
+  statusDotColor: bg-slate-500
   animateDot: false
-  focus: Second-hand decision support for parents
+  focus: >-
+    Second-hand baby pricing
   summary: >-
-    Early idea in TUR Family for better resale decisions around baby products.
-    Not in active Focus distribution.
+    Crowded marketplace problem — parked.
   metricLabel: Mode
-  metricValue: Idea
+  metricValue: Parked
   tag: Family
-  href: /projects/baby-sellpy
 ---
 
 # Baby Sellpy

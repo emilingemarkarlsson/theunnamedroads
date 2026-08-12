@@ -45,9 +45,16 @@ const ventureProjects = featuredProjects.map((project) => {
   const summary = meta.summary ?? truncate(project.data.description)
   const metricLabel = meta.metricLabel ?? 'Since'
   const metricValue = meta.metricValue ?? toMonthString(project.data.startDate)
-  const href = meta.href !== undefined 
-    ? (meta.href === '' ? undefined : meta.href)
-    : (project.data.url ?? `/projects/${project.slug}`)
+  const externalUrl = project.data.url?.trim()
+  const metaHref = meta.href?.trim()
+  const href =
+    metaHref !== undefined && metaHref !== ''
+      ? metaHref.startsWith('http')
+        ? metaHref
+        : undefined
+      : externalUrl && externalUrl.startsWith('http')
+        ? externalUrl
+        : undefined
   const ctaLabel = meta.ctaLabel ?? 'View venture'
 
   return {
@@ -216,12 +223,25 @@ const heroLoop = homepageData.hero.controlLoop
 
               <div class="hero-loop-focus">
                 {
-                  heroLoop.focusBets.map((bet) => (
-                    <div class="hero-org-card hero-org-card--agent">
-                      <p class="hero-org-card-title">{bet.label}</p>
-                      <p class="hero-org-card-desc">{bet.detail}</p>
-                    </div>
-                  ))
+                  heroLoop.projects.map((project) =>
+                    project.href ? (
+                      <a
+                        href={project.href}
+                        class="hero-org-card hero-org-card--agent hero-loop-project-link"
+                        data-ph-event="cta_click"
+                        data-ph-cta-id={`hero_project_${project.id}`}
+                        data-ph-section="control_loop"
+                      >
+                        <p class="hero-org-card-title">{project.label}</p>
+                        <p class="hero-org-card-desc">{project.detail}</p>
+                      </a>
+                    ) : (
+                      <div class="hero-org-card hero-org-card--agent">
+                        <p class="hero-org-card-title">{project.label}</p>
+                        <p class="hero-org-card-desc">{project.detail}</p>
+                      </div>
+                    )
+                  )
                 }
               </div>
             </div>
@@ -1448,11 +1468,25 @@ const heroLoop = homepageData.hero.controlLoop
 
   .hero-loop-focus {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 0.45rem;
   }
 
+  .hero-loop-project-link {
+    text-decoration: none;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+
+  .hero-loop-project-link:hover {
+    border-color: rgba(45, 212, 191, 0.65);
+    transform: translateY(-1px);
+  }
+
   @media (max-width: 640px) {
+    .hero-loop-focus {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
     .hero-loop-steps {
       overflow-x: auto;
       flex-wrap: nowrap;

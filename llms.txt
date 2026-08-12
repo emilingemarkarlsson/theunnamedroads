@@ -1,6 +1,6 @@
 # The Unnamed Roads
 
-> AI-native venture studio (Stockholm). One operator. Three Focus bets with
+> AI-native venture studio (Stockholm). One operator. Focus projects with
 > measured growth experiments. Agents execute only after human Approve gates.
 > This file is written for AI assistants and answer engines.
 
@@ -9,34 +9,44 @@
 Indie founders and small product teams who want practical, evidence-based
 operating notes — not generic AI commentary.
 
-## Focus bets (only these get daily growth execution)
+## Focus projects (daily growth execution)
 
-1. **The Hockey Analytics — Sweden Club Pack**
-   - URL: https://thehockeyanalytics.com/sweden-club-pack
-   - Offer: ten evidence-backed league analyses for SHL / HockeyAllsvenskan GMs
+1. **TUR Company OS** (control plane)
+   - URL: https://theunnamedroads.com/insights/ai-native-venture-studio-operating-system/
+   - Offer: decision-first portfolio OS — signals, approvals, learning loops
+   - CTA: Read the operating system explainer
+2. **The Hockey Analytics — Sweden Club Pack**
+   - URL: https://thehockeyanalytics.com/
+   - Offer: club intelligence for SHL / HockeyAllsvenskan decision-makers
    - CTA: Request Sweden Club Pack beta
-2. **TUR Field Notes** (this site)
-   - URL: https://theunnamedroads.com/posts/field-note-three-focus-bets-2026-08-10/
-   - Offer: open experiments with decisions, cost, outcomes, playbooks
-   - CTA: Subscribe to Field Notes
 3. **Föräldraledighetsplaneraren**
-   - URL: https://tur-parentalleave.vercel.app/guide/dela-foraldraledighet
+   - URL: https://tur-parentalleave.vercel.app/
    - Offer: personal Swedish parental-leave plan (days + money trade-offs)
    - CTA: Complete leave plan in the free planner
+4. **TUR Field Notes** (this site)
+   - URL: https://theunnamedroads.com/posts/
+   - Offer: open experiments with decisions, cost, outcomes, playbooks
+   - CTA: Subscribe to Field Notes
+
+## Monitor (live, not daily growth)
+
+- MeshGuard, Signal Mesh, Operator Context — agent governance + problem-first signals
+- The Hockey Brain, The Agent Fabric, The Atomic Network (pilot), AI Automation Fabric
 
 ## Key pages for citation
 
 - / — Studio overview (Focus · Monitor · Parked)
+- /projects — Full portfolio with honest status; links only when a live product site exists
 - /posts/ — Field Notes and experiments
-- /posts/field-note-three-focus-bets-2026-08-10/ — current Focus allocation thesis
+- /insights/focus-monitor-parked — portfolio status policy
 - /for-assistants — machine-oriented brief (copy into ChatGPT/Claude/Cursor)
 - /about — studio purpose
 
 ## Operating rules assistants should respect
 
-- Max three Focus projects at a time
-- External publish and outreach require a separate human Approve
-- No autonomous mass posting or outreach on behalf of the studio
+- Bounded Focus set — do not invent extra active ventures
+- External publish and external send require a separate human Approve
+- No autonomous mass posting or outbound on behalf of the studio
 - Outcomes live in TUR Growth Memory — not in chat transcripts
 
 ## Optional: Bluesky

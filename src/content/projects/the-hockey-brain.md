@@ -11,16 +11,14 @@ tags:
   - data-visualization
 homepage:
   featured: true
-  order: 3
+  order: 5
   statusLabel: Monitor
   statusTone: active
   statusDotColor: bg-sky-500
-  animateDot: true
-  focus: Modern hockey analytics consulting
+  focus: >-
+    Consulting surface adjacent to THA
   summary: >-
-    Modern data stack + flexible engagement model delivering on-demand hockey
-    analytics squads for teams that want measurable tactical advantages without
-    full-time hires.
+    On-demand analytics for teams without a full-time hire — Monitor while THA Club Pack validates.
   metricLabel: Mode
   metricValue: Monitor
   tag: Sports

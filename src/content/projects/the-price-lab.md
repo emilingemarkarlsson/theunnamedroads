@@ -10,18 +10,18 @@ tags:
   - e-commerce
   - saas
 homepage:
-  featured: true
-  order: 9
-  statusLabel: Monitor
+  featured: false
+  order: 11
+  statusLabel: Parked
   statusTone: exploring
-  statusDotColor: bg-sky-500
+  statusDotColor: bg-slate-500
   animateDot: false
-  focus: Clean price tags. Done in 5 minutes.
+  focus: >-
+    Retail price tags
   summary: >-
-    No printer. No stress. Pick a design, enter your price — get professional
-    price tags delivered straight to your store.
+    Commodity print workflow — parked; no differentiated agent-native wedge yet.
   metricLabel: Mode
-  metricValue: Monitor
+  metricValue: Parked
   tag: SaaS
   href: https://tur-thepricelab.vercel.app
 ---

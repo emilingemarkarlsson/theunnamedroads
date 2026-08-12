@@ -9,19 +9,18 @@ tags:
   - ai-native
 homepage:
   featured: false
-  order: 2
-  statusLabel: Active
-  statusTone: building
-  statusDotColor: bg-blue-500
-  animateDot: true
-  focus: Studio automation engine
+  order: 20
+  statusLabel: Parked
+  statusTone: exploring
+  statusDotColor: bg-slate-500
+  animateDot: false
+  focus: >-
+    Legacy methodology brand
   summary: >-
-    Operating system of playbooks, agents, and self-healing pipelines that let
-    one operator deploy portfolio-scale output.
-  metricLabel: Experiments shipped
-  metricValue: 12 per quarter
-  tag: Engine Core
-  href: /projects/post-human-venture-engine
+    Narrative merged into Company OS — kept as archive page only.
+  metricLabel: Mode
+  metricValue: Parked
+  tag: Studio
 ---
 
 # Post-Human Venture Engine

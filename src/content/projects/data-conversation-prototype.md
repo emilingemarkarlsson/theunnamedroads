@@ -7,20 +7,19 @@ tags:
   - data
   - conversational-ui
 homepage:
-  featured: true
+  featured: false
   order: 19
-  statusLabel: Concept
-  statusTone: building
-  statusDotColor: bg-amber-500
+  statusLabel: Parked
+  statusTone: exploring
+  statusDotColor: bg-slate-500
   animateDot: false
-  focus: Conversational analytics interface
+  focus: >-
+    Conversational metrics UI
   summary: >-
-    Prototype for asking business questions in natural language with grounded
-    operational context.
+    Absorbed into Company OS / Operator Context direction — parked as standalone.
   metricLabel: Mode
-  metricValue: Concept
+  metricValue: Parked
   tag: SaaS
-  href: /projects/data-conversation-prototype
 ---
 
 # Data Conversation Prototype

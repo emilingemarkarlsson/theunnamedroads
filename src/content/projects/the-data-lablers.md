@@ -11,19 +11,19 @@ tags:
   - eu-ai-act
   - machine-learning
 homepage:
-  featured: true
-  order: 4
-  statusLabel: Coming
-  statusTone: building
-  statusDotColor: bg-amber-500
-  animateDot: true
-  focus: Validated training data with audit trail
+  featured: false
+  order: 13
+  statusLabel: Parked
+  statusTone: exploring
+  statusDotColor: bg-slate-500
+  animateDot: false
+  focus: >-
+    Annotation compliance
   summary: >-
-    Training data you can trust — with proof. Multi-annotator validation,
-    confidence scoring, and full EU AI Act documentation delivered within 72 hours.
-  metricLabel: Label accuracy
-  metricValue: 92%+
-  tag: Data Infrastructure
+    Enterprise sales-heavy market — parked unless a narrow EU compliance wedge appears.
+  metricLabel: Mode
+  metricValue: Parked
+  tag: SaaS
   href: https://tur-thedatalabelers.vercel.app
 ---
 

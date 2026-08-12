@@ -9,19 +9,18 @@ tags:
   - mcp
 homepage:
   featured: true
-  order: 14
-  statusLabel: Concept
+  order: 4
+  statusLabel: Monitor
   statusTone: building
-  statusDotColor: bg-amber-500
+  statusDotColor: bg-sky-500
   animateDot: false
-  focus: Agent governance and approval policy
+  focus: >-
+    Tool permissions & approval levels for agents
   summary: >-
-    Policy and guardrail layer for agents: permission boundaries, approval
-    levels and auditable execution.
+    Governance layer so assistants and workflows cannot exceed policy — audit every consequential call.
   metricLabel: Mode
-  metricValue: Concept
+  metricValue: Monitor
   tag: Studio
-  href: /projects/meshguard
 ---
 
 # MeshGuard

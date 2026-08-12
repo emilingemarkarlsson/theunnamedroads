@@ -12,15 +12,14 @@ tags:
   - edge-computing
 homepage:
   featured: true
-  order: 8
+  order: 7
   statusLabel: Monitor
-  statusTone: exploring
+  statusTone: active
   statusDotColor: bg-sky-500
-  animateDot: false
-  focus: Enterprise AI agent infrastructure
+  focus: >-
+    Enterprise agent infrastructure narrative
   summary: >-
-    B2B content surface on distributed AI agents, edge deployments and sovereign
-    AI. Visible, but outside the daily Focus growth queue.
+    Content surface on distributed agents and sovereign AI — Monitor until a wedge product appears.
   metricLabel: Mode
   metricValue: Monitor
   tag: SaaS

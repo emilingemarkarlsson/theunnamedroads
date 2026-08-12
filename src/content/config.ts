@@ -123,11 +123,12 @@ const homepage = defineCollection({
           detail: z.string()
         }),
         portfolioLabel: z.string(),
-        focusBets: z.array(
+        projects: z.array(
           z.object({
             id: z.string(),
             label: z.string(),
-            detail: z.string()
+            detail: z.string(),
+            href: z.string().optional()
           })
         ),
         footerCaption: z.string()

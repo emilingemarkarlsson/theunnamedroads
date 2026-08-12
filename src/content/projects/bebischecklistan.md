@@ -8,18 +8,18 @@ tags:
   - nesting
   - checklist
 homepage:
-  featured: true
+  featured: false
   order: 12
-  statusLabel: Monitor
+  statusLabel: Parked
   statusTone: exploring
-  statusDotColor: bg-sky-500
+  statusDotColor: bg-slate-500
   animateDot: false
-  focus: Nesting checklists for new parents
+  focus: >-
+    Family nesting checklists
   summary: >-
-    Companion Family concept. Measured, but not in the daily Focus growth queue
-    until it earns its own validation contract.
+    Adjacent to parental leave planner — parked to avoid Family cluster spray.
   metricLabel: Mode
-  metricValue: Monitor
+  metricValue: Parked
   tag: Family
   href: https://tur-nesting.vercel.app
 ---

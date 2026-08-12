@@ -16,11 +16,11 @@ homepage:
   statusTone: active
   statusDotColor: bg-emerald-500
   animateDot: true
-  focus: Personal leave plan for Swedish parents
+  focus: >-
+    Agent-ready leave planning for Swedish families
   summary: >-
-    A clear parental-leave plan that makes days, pay and trade-offs visible
-    before the family decides. Organic Swedish SEO/AEO is the acquisition path.
-  metricLabel: Proof signal
+    Complete days, pay and trade-offs from phone or assistant — shareable plan, organic SEO wedge.
+  metricLabel: CTA
   metricValue: Complete plan
   tag: Family
   href: https://tur-parentalleave.vercel.app

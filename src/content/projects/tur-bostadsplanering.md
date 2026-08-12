@@ -7,19 +7,19 @@ tags:
   - housing
   - planning
 homepage:
-  featured: true
+  featured: false
   order: 17
-  statusLabel: Idea
+  statusLabel: Parked
   statusTone: exploring
-  statusDotColor: bg-sky-500
+  statusDotColor: bg-slate-500
   animateDot: false
-  focus: Housing planning decisions for families
+  focus: >-
+    Housing planning
   summary: >-
-    Idea-stage decision support for Swedish housing trade-offs and timing.
+    Crowded PropTech adjacency — parked.
   metricLabel: Mode
-  metricValue: Idea
+  metricValue: Parked
   tag: Family
-  href: /projects/tur-bostadsplanering
 ---
 
 # TUR Bostadsplanering

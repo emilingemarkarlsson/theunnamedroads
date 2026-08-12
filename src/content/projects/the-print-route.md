@@ -11,20 +11,20 @@ tags:
   - logistics
   - gdpr
 homepage:
-  featured: true
-  order: 5
-  statusLabel: Monitor
+  featured: false
+  order: 10
+  statusLabel: Parked
   statusTone: exploring
-  statusDotColor: bg-sky-500
+  statusDotColor: bg-slate-500
   animateDot: false
-  focus: Print routing from webhook to doorstep
+  focus: >-
+    Print routing marketplace
   summary: >-
-    Two-sided print routing platform. Retailers send orders via webhook –
-    providers accept, produce, and ship with full tracking synced back automatically.
+    Two-sided routing — parked until a single retailer pilot proves pull.
   metricLabel: Mode
-  metricValue: Monitor
+  metricValue: Parked
   tag: Print
-  href: https://theprintroute.com
+  href: https://theprintroute.com/
 ---
 
 # The Print Route

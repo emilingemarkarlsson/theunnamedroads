@@ -7,20 +7,19 @@ tags:
   - mcp
   - travel
 homepage:
-  featured: true
+  featured: false
   order: 18
-  statusLabel: Concept
-  statusTone: building
-  statusDotColor: bg-amber-500
+  statusLabel: Parked
+  statusTone: exploring
+  statusDotColor: bg-slate-500
   animateDot: false
-  focus: Travel capabilities for assistant workflows
+  focus: >-
+    Travel MCP tools
   summary: >-
-    Capability experiments for AI assistants that need structured travel search
-    and booking context.
+    Commoditized travel APIs — parked.
   metricLabel: Mode
-  metricValue: Concept
+  metricValue: Parked
   tag: SaaS
-  href: /projects/tur-travel-tools
 ---
 
 # TUR Travel Tools

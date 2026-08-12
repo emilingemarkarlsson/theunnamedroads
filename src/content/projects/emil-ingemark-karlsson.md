@@ -11,19 +11,19 @@ tags:
   - portfolio
 homepage:
   featured: true
-  order: 6
-  statusLabel: Active
+  order: 9
+  statusLabel: Linked
   statusTone: active
-  statusDotColor: bg-emerald-500
-  animateDot: true
-  focus: Data engineering & full-stack development
+  statusDotColor: bg-violet-500
+  animateDot: false
+  focus: >-
+    Personal trust realm — distribution only
   summary: >-
-    Data Engineer in Stockholm. Modern data stack, Python automation, and
-    scalable web solutions. n8n, Streamlit, Databricks, data chat agents.
-  metricLabel: Experience
-  metricValue: 10+ years
-  tag: Portfolio
-  href: https://emilingemarkarlsson.com
+    Founder portfolio in Personal realm; linked here as distribution, not a studio venture.
+  metricLabel: Realm
+  metricValue: Personal
+  tag: Studio
+  href: https://emilingemarkarlsson.com/
 ---
 
 # EIK

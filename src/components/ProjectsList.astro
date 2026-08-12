@@ -33,58 +33,67 @@ const formatTimeline = (project: CollectionEntry<'projects'>) => {
 <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
   {
     projects.map((project) => {
-      const { data, slug } = project
+      const { data } = project
       const { label, color, animate } = buildProjectStatus(project)
       const timeline = formatTimeline(project)
-      const isExternal = data.url && isAbsolute(data.url)
-      const projectUrl = data.url || `/projects/${slug}`
+      const externalUrl = data.url?.trim()
+      const hasLiveSite = Boolean(externalUrl && isAbsolute(externalUrl))
+      const categoryTag =
+        data.homepage?.tag ?? (data.tags.length > 0 ? data.tags[0] : null)
+      const cardClass =
+        'relative flex h-full min-h-[280px] flex-col overflow-hidden rounded-3xl border-2 border-white/[0.08] bg-gradient-to-br from-white/[0.08] via-white/[0.03] to-transparent p-6 shadow-2xl backdrop-blur-md sm:min-h-[320px] sm:p-8'
+      const interactiveClass = hasLiveSite
+        ? 'group block h-full transition-all duration-500 hover:[&>div]:border-accent/30'
+        : 'block h-full'
 
-      const categoryTag = data.homepage?.tag ?? (data.tags.length > 0 ? data.tags[0] : null)
-
-      return (
-        <a
-          href={projectUrl}
-          target={isExternal ? '_blank' : '_self'}
-          class="group block h-full transition-all duration-500"
-        >
-          <div class="relative flex h-full min-h-[280px] flex-col overflow-hidden rounded-3xl border-2 border-white/[0.08] bg-gradient-to-br from-white/[0.08] via-white/[0.03] to-transparent p-6 shadow-2xl backdrop-blur-md transition-all duration-500 hover:border-accent/30 hover:bg-gradient-to-br hover:from-accent/[0.15] hover:via-accent/[0.05] hover:to-transparent hover:shadow-[0_20px_60px_-15px_rgba(241,141,79,0.3)] sm:min-h-[320px] sm:p-8">
-            {/* Status Badge */}
-            <div
-              class={`absolute left-4 top-4 flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-white shadow-md sm:left-6 sm:top-6 ${color}`}
-            >
-              <span
-                class={`h-1 w-1 rounded-full bg-white ${
-                  animate ? 'animate-pulse' : ''
-                }`}
-              />
-              {label}
-            </div>
-
-            {/* Content Container */}
-            <div class="flex flex-1 flex-col items-start justify-center text-left pt-8 sm:pt-0">
-              {categoryTag && (
-                <p class="mb-1 text-xs font-semibold uppercase tracking-[0.4em] text-white/50">
-                  {categoryTag}
-                </p>
-              )}
-              <h3 class="mb-2 text-2xl font-bold leading-tight tracking-tight text-white transition-colors duration-300 group-hover:text-accent sm:mb-3 sm:text-3xl">
-                {data.title}
-              </h3>
-              <p class="project-summary mb-3 text-sm text-white/80 sm:mb-4 sm:text-base">
-                {data.description}
-              </p>
-              <div class="flex flex-col gap-2 text-xs font-semibold text-white/60 transition-colors duration-300 group-hover:text-white/80 sm:flex-row sm:items-center sm:text-sm">
-                <span class="inline-flex items-center gap-2 rounded-full border border-white/10 px-2 py-1 text-[10px] uppercase tracking-[0.3em] text-white/70 sm:px-3 sm:text-xs">
-                  Timeline
-                </span>
-                <time>{timeline}</time>
-              </div>
-            </div>
-
-            {/* Hover Glow Effect */}
-            <div class="pointer-events-none absolute inset-0 rounded-3xl bg-gradient-to-br from-accent/10 via-purple-500/5 to-blue-500/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+      const inner = (
+        <div class:list={[cardClass, hasLiveSite && 'transition-all duration-500 group-hover:shadow-[0_20px_60px_-15px_rgba(241,141,79,0.3)]']}>
+          <div
+            class={`absolute left-4 top-4 flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-white shadow-md sm:left-6 sm:top-6 ${color}`}
+          >
+            <span
+              class={`h-1 w-1 rounded-full bg-white ${hasLiveSite && animate ? 'animate-pulse' : ''}`}
+            />
+            {label}
           </div>
+          <div class="flex flex-1 flex-col items-start justify-center text-left pt-8 sm:pt-0">
+            {categoryTag && (
+              <p class="mb-1 text-xs font-semibold uppercase tracking-[0.4em] text-white/50">
+                {categoryTag}
+              </p>
+            )}
+            <h3 class:list={['mb-2 text-2xl font-bold leading-tight tracking-tight text-white sm:mb-3 sm:text-3xl', hasLiveSite && 'group-hover:text-accent transition-colors duration-300']}>
+              {data.title}
+            </h3>
+            <p class="project-summary mb-3 text-sm text-white/80 sm:mb-4 sm:text-base">
+              {data.description}
+            </p>
+            <div class="flex flex-col gap-2 text-xs font-semibold text-white/60 sm:flex-row sm:items-center sm:text-sm">
+              <span class="inline-flex items-center gap-2 rounded-full border border-white/10 px-2 py-1 text-[10px] uppercase tracking-[0.3em] text-white/70 sm:px-3 sm:text-xs">
+                Timeline
+              </span>
+              <time>{timeline}</time>
+            </div>
+            {!hasLiveSite && (
+              <p class="mt-4 text-[10px] uppercase tracking-[0.25em] text-white/40">
+                No live site — status & direction only
+              </p>
+            )}
+          </div>
+        </div>
+      )
+
+      return hasLiveSite ? (
+        <a
+          href={externalUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class={interactiveClass}
+        >
+          {inner}
         </a>
+      ) : (
+        <div class={interactiveClass}>{inner}</div>
       )
     })
   }
@@ -94,12 +103,5 @@ const formatTimeline = (project: CollectionEntry<'projects'>) => {
   .project-summary {
     color: rgba(248, 250, 252, 0.82);
     line-height: 1.5;
-  }
-
-  .line-clamp-3 {
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
   }
 </style>

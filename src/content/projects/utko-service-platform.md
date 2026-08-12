@@ -10,21 +10,20 @@ tags:
   - nordics
   - operations
 homepage:
-  featured: true
-  order: 11
-  statusLabel: COMING
-  statusTone: building
-  statusDotColor: bg-amber-500
+  featured: false
+  order: 14
+  statusLabel: Parked
+  statusTone: exploring
+  statusDotColor: bg-slate-500
   animateDot: false
-  focus: Nordic service platform for outdoor product support
+  focus: >-
+    Field service for robot mowers
   summary: >-
-    Nordic service platform for robot lawn mowers and battery-powered outdoor
-    products. Built for booking, repair tracking, and zone-by-zone expansion.
-  metricLabel: Status
-  metricValue: Coming
-  tag: Service AI
+    Ops-heavy two-sided service — parked pending a single-dealer agent workflow proof.
+  metricLabel: Mode
+  metricValue: Parked
+  tag: SaaS
   href: https://utko.vercel.app
-  ctaLabel: View project
 ---
 
 # UTKO Service Platform

@@ -15,11 +15,10 @@ homepage:
   statusLabel: Focus
   statusTone: active
   statusDotColor: bg-emerald-500
-  animateDot: true
-  focus: Sweden Club Pack / league intelligence
+  focus: >-
+    Club intelligence digestible by coaches and agents
   summary: >-
-    Making Hockey Data Human. Proactive league intelligence for SHL/HA leaders —
-    evidence-backed analyses before another dashboard is enough.
+    Proactive hockey analyses before dashboards — built for mobile review and assistant handoff.
   metricLabel: Offer
   metricValue: Club Pack beta
   tag: Sports

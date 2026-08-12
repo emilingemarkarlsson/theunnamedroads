@@ -14,15 +14,13 @@ tags:
   ]
 homepage:
   featured: true
-  order: 4
+  order: 6
   statusLabel: Monitor
   statusTone: exploring
-  statusDotColor: bg-sky-500
-  animateDot: false
-  focus: Hyperlocal print distribution
+  focus: >-
+    Hyperlocal GTM from mobile + assistant
   summary: >-
-    B2B hyperlocal print campaigns on OSM + PostGIS. Infrastructure is live;
-    GTM and pilot pricing validation remain the next commercial step.
+    Physical mail and referral loops for local sellers — pilot validates agent-assisted campaign creation.
   metricLabel: Mode
   metricValue: Monitor
   tag: Print

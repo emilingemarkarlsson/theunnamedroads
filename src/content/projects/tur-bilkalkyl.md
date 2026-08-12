@@ -7,20 +7,19 @@ tags:
   - finance
   - calculator
 homepage:
-  featured: true
+  featured: false
   order: 16
-  statusLabel: Idea
+  statusLabel: Parked
   statusTone: exploring
-  statusDotColor: bg-sky-500
+  statusDotColor: bg-slate-500
   animateDot: false
-  focus: Cost transparency for car ownership
+  focus: >-
+    Car TCO calculator
   summary: >-
-    Idea-stage consumer calculator for Swedish households evaluating car
-    ownership costs.
+    Commodity calculator — parked.
   metricLabel: Mode
-  metricValue: Idea
+  metricValue: Parked
   tag: Family
-  href: /projects/tur-bilkalkyl
 ---
 
 # TUR Bilkalkyl
