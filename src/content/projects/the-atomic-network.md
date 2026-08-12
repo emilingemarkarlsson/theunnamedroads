@@ -2,7 +2,7 @@
 title: The Atomic Network
 description: Hyperlocal marketing platform that triggers physical mail campaigns when neighbors buy, creating viral loops through referral codes and network effects
 startDate: 2025-09-01
-url: https://tan-website.netlify.app/
+url: https://tan-site.vercel.app/pilot
 tags:
   [
     'marketing',
@@ -14,24 +14,24 @@ tags:
   ]
 homepage:
   featured: true
-  order: 3
-  statusLabel: Active
-  statusTone: active
-  statusDotColor: bg-pink-500
-  animateDot: true
-  focus: Hyperlocal GTM loops
+  order: 4
+  statusLabel: Monitor
+  statusTone: exploring
+  statusDotColor: bg-sky-500
+  animateDot: false
+  focus: Hyperlocal print distribution
   summary: >-
-    Physical mail plus referral mechanics that trigger when neighbors buy,
-    spinning up viral loops for brick-and-mortar brands.
-  metricLabel: Networks created
-  metricValue: "15"
-  tag: Marketing
-  href: https://tan-website.netlify.app/
+    B2B hyperlocal print campaigns on OSM + PostGIS. Infrastructure is live;
+    GTM and pilot pricing validation remain the next commercial step.
+  metricLabel: Mode
+  metricValue: Monitor
+  tag: Print
+  href: https://tan-site.vercel.app/pilot
 ---
 
 # The Atomic Network (TAN)
 
-**Status:** 🚀 Active  
+**Status:** Monitor  
 **Type:** SaaS Marketing Platform  
 **Focus:** Hyperlocal Network Effects
 

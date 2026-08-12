@@ -12,18 +12,18 @@ tags:
   - gdpr
 homepage:
   featured: true
-  order: 3
-  statusLabel: Active
-  statusTone: active
-  statusDotColor: bg-emerald-500
-  animateDot: true
+  order: 5
+  statusLabel: Monitor
+  statusTone: exploring
+  statusDotColor: bg-sky-500
+  animateDot: false
   focus: Print routing from webhook to doorstep
   summary: >-
     Two-sided print routing platform. Retailers send orders via webhook –
     providers accept, produce, and ship with full tracking synced back automatically.
-  metricLabel: Print connections
-  metricValue: "2"
-  tag: Logistics AI
+  metricLabel: Mode
+  metricValue: Monitor
+  tag: Print
   href: https://theprintroute.com
 ---
 

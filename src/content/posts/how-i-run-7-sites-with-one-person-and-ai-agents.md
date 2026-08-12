@@ -22,7 +22,7 @@ The seven sites span different niches:
 - **[Emil Karlsson](https://emilingemarkarlsson.com)** — personal blog (automation, building in public)
 - **[The Agent Fabric](https://theagentfabric.com)** — AI agent infrastructure
 - **[The Print Route](https://tur-theprintroute.vercel.app)** — print order routing SaaS
-- **[The Atomic Network](https://tan-website.netlify.app)** — hyperlocal marketing platform
+- **[The Atomic Network](https://tan-site.vercel.app/pilot)** — hyperlocal marketing platform
 - **The Unnamed Roads** — the studio itself
 
 ## The Infrastructure

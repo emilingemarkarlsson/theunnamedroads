@@ -23,7 +23,7 @@ homepage:
   metricLabel: CTA
   metricValue: Subscribe
   tag: Studio
-  href: /about
+  href: https://theunnamedroads.com/
 ---
 
 # The Unnamed Road

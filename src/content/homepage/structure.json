@@ -67,6 +67,7 @@
     "filters": [
       { "id": "family", "label": "Family" },
       { "id": "sports", "label": "Sports" },
+      { "id": "print", "label": "Print" },
       { "id": "saas", "label": "SaaS" },
       { "id": "studio", "label": "Studio" }
     ],
@@ -125,19 +126,19 @@
         "id": "tan",
         "name": "THE ATOMIC NETWORK",
         "focus": "Hyperlocal GTM loops",
-        "summary": "Physical mail plus referral mechanics for brick-and-mortar brands.",
-        "tag": "saas",
-        "status": { "label": "Monitor", "tone": "active" },
+        "summary": "Physical mail plus referral mechanics for brick-and-mortar brands. GTM execution is the remaining gap.",
+        "tag": "print",
+        "status": { "label": "Monitor", "tone": "exploring" },
         "metric": { "label": "Mode", "value": "Monitor" },
-        "href": "https://tan-website.netlify.app/"
+        "href": "https://tan-site.vercel.app/pilot"
       },
       {
         "id": "tpr",
         "name": "THE PRINT ROUTE",
         "focus": "Smart print routing",
         "summary": "Webhook-to-doorstep print routing for retailers and local providers.",
-        "tag": "saas",
-        "status": { "label": "Monitor", "tone": "active" },
+        "tag": "print",
+        "status": { "label": "Monitor", "tone": "exploring" },
         "metric": { "label": "Mode", "value": "Monitor" },
         "href": "https://theprintroute.com/"
       },

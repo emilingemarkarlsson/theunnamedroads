@@ -1,7 +1,7 @@
 ---
 title: The Price Lab
 description: Professional price tags for your store. Done in five minutes. No printer, no stress — just clean price tags with direct delivery.
-url: https://mcp-hub-static-thepricelab.vercel.app
+url: https://tur-thepricelab.vercel.app
 startDate: 2026-04-01
 tags:
   - retail
@@ -11,19 +11,19 @@ tags:
   - saas
 homepage:
   featured: true
-  order: 5
-  statusLabel: Active
-  statusTone: active
-  statusDotColor: bg-emerald-500
-  animateDot: true
+  order: 9
+  statusLabel: Monitor
+  statusTone: exploring
+  statusDotColor: bg-sky-500
+  animateDot: false
   focus: Clean price tags. Done in 5 minutes.
   summary: >-
     No printer. No stress. Pick a design, enter your price — get professional
-    price tags delivered straight to your store in five minutes.
-  metricLabel: Orders
-  metricValue: 500+
-  tag: Retail Tech
-  href: https://mcp-hub-static-thepricelab.vercel.app
+    price tags delivered straight to your store.
+  metricLabel: Mode
+  metricValue: Monitor
+  tag: SaaS
+  href: https://tur-thepricelab.vercel.app
 ---
 
 # The Price Lab

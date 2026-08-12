@@ -12,18 +12,18 @@ tags:
   - edge-computing
 homepage:
   featured: true
-  order: 2
-  statusLabel: Coming
-  statusTone: building
-  statusDotColor: bg-blue-500
-  animateDot: true
-  focus: Distributed agent infrastructure
+  order: 8
+  statusLabel: Monitor
+  statusTone: exploring
+  statusDotColor: bg-sky-500
+  animateDot: false
+  focus: Enterprise AI agent infrastructure
   summary: >-
-    Infrastructure layer that enables AI agents to operate inside enterprise
-    systems—securely, locally, and at scale. On-prem, edge, and hybrid deployment.
-  metricLabel: Deployment model
-  metricValue: Edge + on-prem
-  tag: Enterprise AI
+    B2B content surface on distributed AI agents, edge deployments and sovereign
+    AI. Visible, but outside the daily Focus growth queue.
+  metricLabel: Mode
+  metricValue: Monitor
+  tag: SaaS
   href: https://tur-theagentfabric.vercel.app/
 ---
 
