@@ -24,7 +24,7 @@ homepage:
   metricLabel: Label accuracy
   metricValue: 92%+
   tag: Data Infrastructure
-  href: 'https://tur-thedatalabelers.vercel.app'
+  href: https://tur-thedatalabelers.vercel.app
 ---
 
 # The Data Labelers

@@ -1,0 +1,16 @@
+Title,Description,Priority,Labels
+Audit all venture links weekly,Run automated link/status check for all project cards and external URLs and fix drift within 24h,2,website;seo;operations
+Map full pipeline to public portfolio,Ensure every active pipeline project has a project page and accurate status card metadata,1,website;portfolio
+Define Focus Monitor Parked policy copy,Publish clear status taxonomy on homepage and project pages to avoid mixed signals,2,positioning;brand
+Create Company OS powered narrative block,Add dedicated homepage section explaining how TUR Company OS powers decisions and execution,1,positioning;company-os
+Publish Company OS architecture explainer,Ship a high-intent article targeting AI-native venture studio operating system queries,2,seo;content;company-os
+Launch service landing for AI-native venture studio,Create conversion page for advisory/implementation offers with proof and CTA,1,growth;conversion
+Build structured data for venture studio pages,Add Organization/Service/FAQ schema across homepage and key landing pages,2,seo;technical
+Add comparison page vs agency/incubator,Solution-awareness page targeting users comparing venture studio operating models,3,seo;positioning
+Implement monthly proof update cadence,Update metrics/proof blocks monthly from company evidence sources,2,operations;content
+Set up keyword + SERP tracking,Track target keywords and pages with weekly reporting loop,2,seo;analytics
+Create outreach kit for three ICPs,Package email copy + screenshots + links for brokers robot mower dealers and landscaping companies,1,growth;outbound
+Add newsletter lead magnet for operators,Offer downloadable playbook for AI-native distribution loop and capture qualified leads,3,growth;conversion
+Instrument funnel events end-to-end,Track hero CTA project click project page CTA and contact conversions in Umami,1,analytics;website
+Create PRD for partner case-study pipeline,Define process to publish 3 case studies proving Company OS driven execution,3,content;proof
+Set quarterly brand narrative themes,Define 3 narrative themes and map to projects for coherent market positioning,3,brand;strategy

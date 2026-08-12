@@ -12,18 +12,18 @@ tags:
 homepage:
   featured: true
   order: 10
-  statusLabel: Active
-  statusTone: active
+  statusLabel: Monitor
+  statusTone: exploring
   statusDotColor: bg-emerald-500
-  animateDot: true
+  animateDot: false
   focus: Card-first automation studio for small teams
   summary: >-
     Describe your workflow, get a clear estimate, and receive a
     production-ready automation with AI handover docs so your team can run and
     evolve it in-house.
   metricLabel: Status
-  metricValue: Live now
-  tag: Automation
+  metricValue: Monitor
+  tag: SaaS
   href: https://tur-aaf.vercel.app
 ---
 
