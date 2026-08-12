@@ -29,9 +29,9 @@ export interface Props {
     description: string
     canonicalURL: string
     openGraphImage: string | HTMLAttributes<'img'>
-    publishedDate: Date
+    publishedDate: Date | string
     /** When the page was last meaningfully updated (for freshness signals; AI/SEO) */
-    dateModified?: Date
+    dateModified?: Date | string
     /** Word count for Article schema (improves AI extractability) */
     wordCount?: number
     prev?: string
@@ -40,7 +40,19 @@ export interface Props {
     robotsContent?: string
     /** FAQ pairs for FAQPage schema (improves AI citation for Q&A content) */
     faq?: Array<{ question: string; answer: string }>
+    /** Service schema for offer/landing pages */
+    service?: {
+      name: string
+      description: string
+      serviceType?: string
+      areaServed?: string
+    }
   }>
+}
+
+const coerceDate = (value: Date | string | undefined) => {
+  if (!value) return undefined
+  return value instanceof Date ? value : new Date(value)
 }
 
 const {
@@ -56,9 +68,13 @@ const {
     prev,
     next,
     robotsContent,
-    faq
+    faq,
+    service
   }
 } = Astro.props
+
+const publishedDateValue = coerceDate(publishedDate)
+const dateModifiedValue = coerceDate(dateModified)
 
 const robotsValue = robotsContent ?? 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
 const ogDescription = (description || config.description || '').trim() || config.description
@@ -115,7 +131,7 @@ const websiteJsonLd = {
 const pathname = Astro.url.pathname
 const isAgentsPage = pathname === '/agents' || pathname === '/agents/'
 
-const webPageDateModified = dateModified?.toISOString() ?? publishedDate?.toISOString() ?? new Date().toISOString()
+const webPageDateModified = dateModifiedValue?.toISOString() ?? publishedDateValue?.toISOString() ?? new Date().toISOString()
 
 const webPageJsonLd = {
   '@type': isAgentsPage ? 'CollectionPage' : 'WebPage',
@@ -125,7 +141,7 @@ const webPageJsonLd = {
   description,
   isPartOf: { '@id': websiteId },
   inLanguage: config.locale,
-  datePublished: publishedDate?.toISOString(),
+  datePublished: publishedDateValue?.toISOString(),
   dateModified: webPageDateModified,
   mainEntity: isAgentsPage
     ? {
@@ -161,10 +177,10 @@ const breadcrumbJsonLd = {
   ]
 }
 
-const articleDateModified = dateModified?.toISOString() ?? publishedDate?.toISOString() ?? new Date().toISOString()
+const articleDateModified = dateModifiedValue?.toISOString() ?? publishedDateValue?.toISOString() ?? new Date().toISOString()
 
 const articleJsonLd =
-  publishedDate && {
+  publishedDateValue && {
     '@type': 'Article',
     '@id': `${canonicalURL}#article`,
     headline: title,
@@ -175,7 +191,7 @@ const articleJsonLd =
       name: author
     },
     publisher: { '@id': organizationId },
-    datePublished: publishedDate.toISOString(),
+    datePublished: publishedDateValue.toISOString(),
     dateModified: articleDateModified,
     ...(wordCount != null && { wordCount: Number(wordCount) }),
     mainEntityOfPage: { '@id': webPageId },
@@ -205,6 +221,21 @@ const jsonLdGraph: Record<string, unknown>[] = [
 ]
 if (articleJsonLd) jsonLdGraph.push(articleJsonLd)
 if (faqJsonLd) jsonLdGraph.push(faqJsonLd)
+
+const serviceJsonLd =
+  service &&
+  ({
+    '@type': 'Service',
+    '@id': `${canonicalURL}#service`,
+    name: service.name,
+    description: service.description,
+    serviceType: service.serviceType ?? 'Venture studio advisory',
+    provider: { '@id': organizationId },
+    areaServed: service.areaServed ?? 'Global',
+    url: canonicalURL
+  })
+
+if (serviceJsonLd) jsonLdGraph.push(serviceJsonLd)
 ---
 
 <!doctype html>
@@ -277,21 +308,15 @@ if (faqJsonLd) jsonLdGraph.push(faqJsonLd)
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
 
     {
-      publishedDate && (
+      publishedDateValue && (
         <meta
           property="article:published_time"
-          content={publishedDate.toISOString()}
+          content={publishedDateValue.toISOString()}
         />
       )
     }
     <ModeManager />
-    <script
-      is:inline
-      defer
-      src="https://umami.theunnamedroads.com/script.js"
-      data-website-id="fc8f279b-0da8-4013-b8df-be07dc12a8f1"
-    />
-    <!-- PostHog Cloud EU (dual-run with Umami — filter by property site) -->
+    <!-- PostHog Cloud EU (proxy via e.theunnamedroads.com — filter by property site) -->
     <script is:inline>
       !(function (t, e) {
         var o, n, p, r;

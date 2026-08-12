@@ -45,21 +45,21 @@ const {
 </section>
 
 <script>
+  import { trackEvent } from '@/util/analytics'
+
   const form = document.getElementById('tur-field-notes-subscribe')
   form?.addEventListener('submit', () => {
     const props = {
       venture_id: 'tur',
       project_id: 'proj-tur-site',
       cluster_id: 'cluster-studio',
-      campaign_id: null,
       channel: 'website',
       audience: 'indie_founders',
       message_variant: 'field_notes_subscribe',
-      experiment_id: null,
-      site: 'theunnamedroads'
+      cta_id: 'field_notes_subscribe',
+      section: 'newsletter'
     }
-    const posthog = (window as unknown as { posthog?: { capture: (e: string, p: object) => void } }).posthog
-    posthog?.capture('primary_cta_clicked', props)
-    posthog?.capture('signup_completed', props)
+    trackEvent('primary_cta_clicked', props)
+    trackEvent('signup_completed', props)
   })
 </script>

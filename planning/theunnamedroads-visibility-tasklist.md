@@ -17,12 +17,12 @@ Make The Unnamed Roads discoverable for "AI-native venture studio" and clearly s
 
 ## Now (execute this week)
 - [ ] Assign Linear owners and sprint priority (TUR-91–105).
-- [ ] Add structured data (Organization + Service + FAQ) to new pages.
-- [ ] Instrument Umami events on homepage CTAs and service page.
+- [x] Add structured data (Organization + Service + FAQ) to new pages.
+- [x] Instrument PostHog events on homepage CTAs and service page.
 - [ ] Run first broker outbound batch (20–40/day after domain warmup).
 
 ## Next (2-4 weeks)
-- [ ] Structured data rollout (Organization + Service + FAQ).
+- [ ] Structured data rollout on remaining insight/comparison pages.
 - [ ] Comparison pages for search intent (agency vs venture studio vs incubator).
 - [ ] Monthly proof refresh protocol from Company OS evidence.
 - [ ] Keyword tracking dashboard and weekly review ritual.

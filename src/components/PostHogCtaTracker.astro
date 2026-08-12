@@ -1,0 +1,36 @@
+<script>
+  import { trackEvent, type TurEventName } from '@/util/analytics'
+
+  const PH_ATTRS = [
+    'ctaId',
+    'section',
+    'ventureId',
+    'vertical',
+    'href',
+    'label'
+  ] as const
+
+  const bindCtaTracking = () => {
+    document.querySelectorAll<HTMLElement>('[data-ph-event]').forEach((el) => {
+      if (el.dataset.phBound === '1') return
+      el.dataset.phBound = '1'
+
+      el.addEventListener('click', () => {
+        const eventName = el.dataset.phEvent as TurEventName | undefined
+        if (!eventName) return
+
+        const payload: Record<string, string | undefined> = {}
+        for (const key of PH_ATTRS) {
+          const value = el.dataset[`ph${key.charAt(0).toUpperCase()}${key.slice(1)}`]
+          if (value) payload[key] = value
+        }
+
+        trackEvent(eventName, payload)
+      })
+    })
+  }
+
+  bindCtaTracking()
+  document.addEventListener('astro:page-load', bindCtaTracking)
+  document.addEventListener('astro:after-swap', bindCtaTracking)
+</script>

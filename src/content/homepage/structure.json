@@ -390,7 +390,7 @@
           {
             "id": "paperclip",
             "name": "Paperclip",
-            "description": "AI agent platform. CEO agent runs weekly strategy heartbeat. CFO agent reads Umami + LiteLLM spend data and flags cost anomalies.",
+            "description": "AI agent platform. CEO agent runs weekly strategy heartbeat. CFO agent reads PostHog + LiteLLM spend data and flags cost anomalies.",
             "href": "https://theunnamedroads.com/",
             "logo": {
               "type": "monogram",
@@ -462,7 +462,7 @@
         "id": "analytics",
         "phase": "OBSERVE",
         "title": "Analytics + observability",
-        "description": "Umami tracks traffic across all 8 sites. Daily Telegram reports with week-over-week comparisons.",
+        "description": "PostHog tracks Focus funnels across studio and venture sites. Weekly review surfaces conversion and CTA evidence.",
         "theme": {
           "gradientFrom": "rgba(192, 132, 252, 0.3)",
           "gradientTo": "rgba(59, 7, 100, 0.15)",
@@ -471,14 +471,14 @@
         },
         "tools": [
           {
-            "id": "umami",
-            "name": "Umami",
-            "description": "Privacy-first analytics. Self-hosted. Daily automated reports sent to Telegram with pageviews, referrers, and top articles.",
-            "href": "https://umami.is/",
+            "id": "posthog",
+            "name": "PostHog",
+            "description": "Product analytics and funnel tracking. CTA clicks, venture card engagement and outreach pilot links — filter by site property.",
+            "href": "https://eu.posthog.com/",
             "logo": {
               "type": "monogram",
-              "label": "UM",
-              "background": "#374151"
+              "label": "PH",
+              "background": "#1d4ed8"
             }
           },
           {

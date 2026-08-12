@@ -369,6 +369,10 @@ const heroOrg = homepageData.hero.orgChart
                 <a
                   href={company.href}
                   class="inline-flex items-center gap-2 text-sm font-semibold text-accent"
+                  data-ph-event="venture_card_click"
+                  data-ph-venture-id={company.name}
+                  data-ph-section="ventures"
+                  data-ph-href={company.href}
                 >
                   {company.ctaLabel ?? 'View venture'}
                   <svg
@@ -411,12 +415,20 @@ const heroOrg = homepageData.hero.orgChart
               <a
                 href={homepageData.companyOs.primaryCta.href}
                 class="inline-flex items-center justify-center gap-2 rounded-2xl bg-accent px-5 py-2.5 text-sm font-semibold text-white"
+                data-ph-event="cta_click"
+                data-ph-cta-id="company_os_explainer"
+                data-ph-section="company_os"
+                data-ph-label={homepageData.companyOs.primaryCta.label}
               >
                 {homepageData.companyOs.primaryCta.label}
               </a>
               <a
                 href={homepageData.companyOs.secondaryCta.href}
                 class="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/20 px-5 py-2.5 text-sm font-semibold text-gray-900 dark:text-white"
+                data-ph-event="cta_click"
+                data-ph-cta-id="company_os_services"
+                data-ph-section="company_os"
+                data-ph-label={homepageData.companyOs.secondaryCta.label}
               >
                 {homepageData.companyOs.secondaryCta.label}
               </a>
@@ -651,12 +663,20 @@ const heroOrg = homepageData.hero.orgChart
         <a
           href={homepageData.contact.primaryCta.href}
           class="inline-flex items-center justify-center gap-2 rounded-2xl bg-white px-6 py-3 font-semibold text-gray-900"
+          data-ph-event="cta_click"
+          data-ph-cta-id="contact_primary"
+          data-ph-section="contact"
+          data-ph-label={homepageData.contact.primaryCta.label}
         >
           {homepageData.contact.primaryCta.label}
         </a>
         <a
           href={homepageData.contact.secondaryCta.href}
           class="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/40 px-6 py-3 font-semibold text-white"
+          data-ph-event="cta_click"
+          data-ph-cta-id="contact_secondary"
+          data-ph-section="contact"
+          data-ph-label={homepageData.contact.secondaryCta.label}
         >
           {homepageData.contact.secondaryCta.label}
         </a>
