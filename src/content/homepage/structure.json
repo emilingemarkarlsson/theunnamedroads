@@ -4,60 +4,55 @@
     "eyebrowAfter": "Three Focus bets. Measured learning. Agents only where the workflow is proven.",
     "headline": "The Unnamed Roads",
     "badges": [],
-    "orgChart": {
-      "windowTitle": "Org chart · The Unnamed Roads",
-      "platformLabel": "Studio · Platform",
+    "controlLoop": {
+      "windowTitle": "Company OS · Control loop",
+      "platformLabel": "TUR Company OS",
       "liveLabel": "LIVE",
-      "teamLabel": "AI AGENT TEAM",
-      "footerCaption": "THE UNNAMED ROADS · STAFF MAP",
-      "chief": {
-        "title": "CEO",
-        "subtitle": "Chief Executive Officer",
-        "tagline": "Sets direction; Company OS turns evidence into the next decision.",
-        "status": "Claude",
-        "icon": "tabler--robot"
+      "operator": {
+        "label": "Operator",
+        "title": "Principal",
+        "detail": "Strategy, values and irreversible decisions — approve on phone, not in meetings.",
+        "icon": "tabler--user"
       },
-      "executives": [
+      "loopLabel": "Learning loop",
+      "steps": [
         {
-          "id": "ciso",
-          "title": "CISO",
-          "subtitle": "Chief Information Security Officer",
-          "description": "Owns platform security. Monitors fail2ban, UFW, and access posture.",
-          "status": "Claude",
-          "icon": "tabler--shield"
+          "id": "signal",
+          "label": "Signal",
+          "detail": "PostHog, inbox, market"
         },
         {
-          "id": "cfo",
-          "title": "CFO",
-          "subtitle": "Chief Financial Officer",
-          "status": "Claude",
-          "icon": "tabler--robot"
+          "id": "decision",
+          "label": "Decision",
+          "detail": "Expected outcome set"
         },
         {
-          "id": "sales",
-          "title": "Sales Agent",
-          "subtitle": "Lead Intelligence & Outreach",
-          "description": "Surfaces signals for human-approved outreach — never autonomous send.",
-          "status": "Claude",
-          "icon": "tabler--robot"
+          "id": "work",
+          "label": "Work",
+          "detail": "Bounded execution"
         },
         {
-          "id": "cto",
-          "title": "CTO",
-          "subtitle": "Chief Technology Officer",
-          "description": "Owns technical roadmap, architecture, and delivery systems.",
-          "status": "Claude",
-          "icon": "tabler--code"
+          "id": "outcome",
+          "label": "Outcome",
+          "detail": "Measured vs expected"
         },
         {
-          "id": "cmo",
-          "title": "CMO",
-          "subtitle": "Chief Marketing Officer",
-          "description": "Owns distribution experiments, Field Notes cadence, and publish gates.",
-          "status": "Claude",
-          "icon": "tabler--chart-dots"
+          "id": "lesson",
+          "label": "Lesson",
+          "detail": "Correction → memory"
         }
-      ]
+      ],
+      "gate": {
+        "label": "Human gate",
+        "detail": "Publish · outreach · deploy — never autonomous"
+      },
+      "portfolioLabel": "Three Focus bets",
+      "focusBets": [
+        { "id": "tha", "label": "THA", "detail": "Club Pack beta" },
+        { "id": "tur", "label": "TUR", "detail": "Field Notes" },
+        { "id": "parental", "label": "Parental", "detail": "Complete plan" }
+      ],
+      "footerCaption": "CONTROL PLANE · EXECUTION · KNOWLEDGE"
     }
   },
   "ventures": {

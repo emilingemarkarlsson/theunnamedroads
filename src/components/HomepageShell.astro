@@ -105,7 +105,7 @@ const getMemberStatusClass = (status: string) =>
 const getMemberStatusLabel = (status: string, label?: string) =>
   label ?? (status === 'hiring' ? 'Recruiting' : 'Active')
 
-const heroOrg = homepageData.hero.orgChart
+const heroLoop = homepageData.hero.controlLoop
 ---
 
 <div class="homepage-shell space-y-16 sm:space-y-20">
@@ -148,140 +148,78 @@ const heroOrg = homepageData.hero.orgChart
               <span class="hero-org-dot hero-org-dot--g"></span>
             </span>
             <p class="hero-org-window-title">
-              {heroOrg.windowTitle}
+              {heroLoop.windowTitle}
             </p>
           </div>
           <div class="hero-org-frame">
             <div class="hero-org-inner-head">
               <span class="hero-org-platform">
-                {heroOrg.platformLabel}
+                {heroLoop.platformLabel}
               </span>
               <span class="hero-org-live">
                 <span class="hero-org-live-dot" aria-hidden="true"></span>
-                {heroOrg.liveLabel ?? 'LIVE'}
+                {heroLoop.liveLabel ?? 'LIVE'}
               </span>
             </div>
 
-            <div class="hero-org-chart">
-              <div class="hero-org-tier hero-org-tier--chief">
+            <div class="hero-loop">
+              <div class="hero-loop-operator">
                 <div class="hero-org-card hero-org-card--director">
                   <div class="hero-org-card-top">
                     {
-                      heroOrg.chief.icon && (
+                      heroLoop.operator.icon && (
                         <span
                           class:list={[
                             'iconify shrink-0 text-lg opacity-90',
-                            heroOrg.chief.icon
+                            heroLoop.operator.icon
                           ]}
                         />
                       )
                     }
                     <div class="min-w-0 flex-1">
-                      <p class="hero-org-card-title">{heroOrg.chief.title}</p>
-                      <p class="hero-org-card-sub">{heroOrg.chief.subtitle}</p>
-                      <p class="hero-org-card-tag">{heroOrg.chief.tagline}</p>
+                      <p class="hero-org-card-sub">{heroLoop.operator.label}</p>
+                      <p class="hero-org-card-title">{heroLoop.operator.title}</p>
+                      <p class="hero-org-card-tag">{heroLoop.operator.detail}</p>
                     </div>
-                  </div>
-                  <div class="hero-org-status">
-                    <span class="hero-org-status-dot" aria-hidden="true"></span>
-                    <span>{heroOrg.chief.status}</span>
                   </div>
                 </div>
               </div>
 
-              <div class="hero-org-connector" aria-hidden="true">
-                <span class="hero-org-connector-v"></span>
-                <span class="hero-org-connector-h"></span>
-                <span class="hero-org-flow-dot hero-org-flow-dot--v"></span>
-                <span class="hero-org-flow-dot hero-org-flow-dot--v hero-org-flow-dot--v-delay"></span>
+              <p class="hero-org-team-label">{heroLoop.loopLabel}</p>
+
+              <div class="hero-loop-steps" aria-label={heroLoop.loopLabel}>
                 {
-                  heroOrg.executives.map((_, i) => (
-                    <span
-                      class:list={[
-                        'hero-org-flow-dot',
-                        'hero-org-flow-dot--h',
-                        i % 2 === 1 && 'hero-org-flow-dot--h-rev'
-                      ]}
-                      style={`--hero-h-delay:${(i * 0.65).toFixed(2)}s`}
-                    />
+                  heroLoop.steps.map((step, index) => (
+                    <div class="hero-loop-step-wrap">
+                      <div class="hero-loop-step">
+                        <div class="hero-org-card hero-org-card--lead">
+                          <p class="hero-org-card-title">{step.label}</p>
+                          <p class="hero-org-card-desc">{step.detail}</p>
+                        </div>
+                      </div>
+                      {
+                        index < heroLoop.steps.length - 1 && (
+                          <span class="hero-loop-arrow" aria-hidden="true">→</span>
+                        )
+                      }
+                    </div>
                   ))
                 }
               </div>
 
-              <p class="hero-org-team-label">{heroOrg.teamLabel}</p>
+              <div class="hero-loop-gate">
+                <span class="hero-loop-gate-pill">{heroLoop.gate.label}</span>
+                <span class="hero-loop-gate-detail">{heroLoop.gate.detail}</span>
+              </div>
 
-              <div class="hero-org-exec-grid">
+              <p class="hero-org-team-label">{heroLoop.portfolioLabel}</p>
+
+              <div class="hero-loop-focus">
                 {
-                  heroOrg.executives.map((exec) => (
-                    <div class="hero-org-col">
-                      <div class="hero-org-card hero-org-card--lead">
-                        <div class="hero-org-card-top">
-                          {exec.icon && (
-                            <span
-                              class:list={[
-                                'iconify shrink-0 text-base opacity-90',
-                                exec.icon
-                              ]}
-                            />
-                          )}
-                          <div class="min-w-0 flex-1">
-                            <p class="hero-org-card-title">{exec.title}</p>
-                            <p class="hero-org-card-sub">{exec.subtitle}</p>
-                            {exec.description && (
-                              <p class="hero-org-card-desc">{exec.description}</p>
-                            )}
-                          </div>
-                        </div>
-                        {exec.status && (
-                          <div class="hero-org-status">
-                            <span
-                              class="hero-org-status-dot"
-                              aria-hidden="true"
-                            />
-                            <span>{exec.status}</span>
-                          </div>
-                        )}
-                      </div>
-                      {exec.agents && exec.agents.length > 0 && (
-                        <div class="hero-org-agent-stack hero-org-agent-stack--horizontal">
-                          {exec.agents.map((agent) => (
-                            <div class="hero-org-card hero-org-card--agent hero-org-card--agent-compact">
-                              <div class="hero-org-card-top hero-org-card-top--compact">
-                                {agent.icon && (
-                                  <span
-                                    class:list={[
-                                      'iconify shrink-0 opacity-90 hero-org-agent-icon',
-                                      agent.icon
-                                    ]}
-                                  />
-                                )}
-                                <div class="min-w-0 flex-1">
-                                  <p class="hero-org-card-title hero-org-card-title--agent-compact">
-                                    {agent.title}
-                                  </p>
-                                  <p class="hero-org-card-sub hero-org-card-sub--agent-compact">
-                                    {agent.subtitle}
-                                  </p>
-                                  {agent.description && (
-                                    <p class="hero-org-card-desc hero-org-card-desc--agent-compact">
-                                      {agent.description}
-                                    </p>
-                                  )}
-                                </div>
-                              </div>
-                              {agent.status && (
-                                <div class="hero-org-status hero-org-status--agent-compact">
-                                  <span
-                                    class="hero-org-status-dot"
-                                    aria-hidden="true"
-                                  />
-                                  <span>{agent.status}</span>
-                                </div>
-                              )}
-                            </div>
-                          ))}
-                        </div>
-                      )}
+                  heroLoop.focusBets.map((bet) => (
+                    <div class="hero-org-card hero-org-card--agent">
+                      <p class="hero-org-card-title">{bet.label}</p>
+                      <p class="hero-org-card-desc">{bet.detail}</p>
                     </div>
                   ))
                 }
@@ -289,7 +227,7 @@ const heroOrg = homepageData.hero.orgChart
             </div>
 
             <p class="hero-org-browser-footer">
-              {heroOrg.footerCaption}
+              {heroLoop.footerCaption}
             </p>
           </div>
         </div>
@@ -1425,6 +1363,106 @@ const heroOrg = homepageData.hero.orgChart
     letter-spacing: 0.28em;
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.35);
+  }
+
+  .hero-loop {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+
+  .hero-loop-operator {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-loop-operator .hero-org-card {
+    max-width: 22rem;
+    width: 100%;
+  }
+
+  .hero-loop-steps {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    gap: 0.25rem 0.15rem;
+  }
+
+  .hero-loop-step-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.15rem;
+  }
+
+  .hero-loop-step {
+    min-width: 4.5rem;
+    max-width: 6.5rem;
+  }
+
+  .hero-loop-step .hero-org-card {
+    padding: 0.45rem 0.5rem;
+    min-height: 100%;
+  }
+
+  .hero-loop-step .hero-org-card-title {
+    font-size: 0.62rem;
+  }
+
+  .hero-loop-step .hero-org-card-desc {
+    font-size: 0.48rem;
+    -webkit-line-clamp: 2;
+  }
+
+  .hero-loop-arrow {
+    color: rgba(255, 145, 77, 0.85);
+    font-size: 0.75rem;
+    line-height: 1;
+    padding: 0 0.05rem;
+  }
+
+  .hero-loop-gate {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.45rem 0.65rem;
+    border-radius: 9999px;
+    border: 1px dashed rgba(251, 191, 36, 0.45);
+    background: rgba(251, 191, 36, 0.08);
+  }
+
+  .hero-loop-gate-pill {
+    font-size: 0.58rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #fcd34d;
+  }
+
+  .hero-loop-gate-detail {
+    font-size: 0.52rem;
+    color: rgba(226, 232, 240, 0.75);
+  }
+
+  .hero-loop-focus {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.45rem;
+  }
+
+  @media (max-width: 640px) {
+    .hero-loop-steps {
+      overflow-x: auto;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      padding-bottom: 0.25rem;
+    }
+
+    .hero-loop-step-wrap {
+      flex-shrink: 0;
+    }
   }
 
   .hero-quote {

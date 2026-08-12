@@ -100,40 +100,37 @@ const homepage = defineCollection({
           href: z.string()
         })
         .optional(),
-      orgChart: z.object({
+      controlLoop: z.object({
         windowTitle: z.string(),
         platformLabel: z.string(),
         liveLabel: z.string().optional(),
-        teamLabel: z.string(),
-        footerCaption: z.string(),
-        chief: z.object({
+        operator: z.object({
+          label: z.string(),
           title: z.string(),
-          subtitle: z.string(),
-          tagline: z.string(),
-          status: z.string(),
+          detail: z.string(),
           icon: z.string().optional()
         }),
-        executives: z.array(
+        loopLabel: z.string(),
+        steps: z.array(
           z.object({
             id: z.string(),
-            title: z.string(),
-            subtitle: z.string(),
-            description: z.string().optional(),
-            status: z.string().optional(),
-            icon: z.string().optional(),
-            agents: z
-              .array(
-                z.object({
-                  title: z.string(),
-                  subtitle: z.string(),
-                  description: z.string().optional(),
-                  status: z.string().optional(),
-                  icon: z.string().optional()
-                })
-              )
-              .optional()
+            label: z.string(),
+            detail: z.string()
           })
-        )
+        ),
+        gate: z.object({
+          label: z.string(),
+          detail: z.string()
+        }),
+        portfolioLabel: z.string(),
+        focusBets: z.array(
+          z.object({
+            id: z.string(),
+            label: z.string(),
+            detail: z.string()
+          })
+        ),
+        footerCaption: z.string()
       })
     }),
     ventures: z.object({
