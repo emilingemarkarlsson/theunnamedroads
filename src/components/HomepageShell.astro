@@ -221,26 +221,22 @@ const heroLoop = homepageData.hero.controlLoop
 
               <p class="hero-org-team-label">{heroLoop.portfolioLabel}</p>
 
-              <div class="hero-loop-focus">
+              <div class="hero-loop-portfolio">
                 {
-                  heroLoop.projects.map((project) =>
-                    project.href ? (
-                      <a
-                        href={project.href}
-                        class="hero-org-card hero-org-card--agent hero-loop-project-link"
-                        data-ph-event="cta_click"
-                        data-ph-cta-id={`hero_project_${project.id}`}
-                        data-ph-section="control_loop"
-                      >
-                        <p class="hero-org-card-title">{project.label}</p>
-                        <p class="hero-org-card-desc">{project.detail}</p>
-                      </a>
-                    ) : (
-                      <div class="hero-org-card hero-org-card--agent">
-                        <p class="hero-org-card-title">{project.label}</p>
-                        <p class="hero-org-card-desc">{project.detail}</p>
-                      </div>
-                    )
+                  heroLoop.portfolio.href ? (
+                    <a
+                      href={heroLoop.portfolio.href}
+                      class="hero-org-card hero-org-card--agent hero-loop-portfolio-link"
+                      data-ph-event="cta_click"
+                      data-ph-cta-id="hero_portfolio"
+                      data-ph-section="control_loop"
+                    >
+                      <p class="hero-org-card-desc">{heroLoop.portfolio.detail}</p>
+                    </a>
+                  ) : (
+                    <div class="hero-org-card hero-org-card--agent">
+                      <p class="hero-org-card-desc">{heroLoop.portfolio.detail}</p>
+                    </div>
                   )
                 }
               </div>
@@ -1466,27 +1462,29 @@ const heroLoop = homepageData.hero.controlLoop
     color: rgba(226, 232, 240, 0.75);
   }
 
-  .hero-loop-focus {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 0.45rem;
+  .hero-loop-portfolio {
+    display: block;
   }
 
-  .hero-loop-project-link {
+  .hero-loop-portfolio-link {
+    display: block;
     text-decoration: none;
     transition: border-color 0.2s ease, transform 0.2s ease;
   }
 
-  .hero-loop-project-link:hover {
+  .hero-loop-portfolio-link:hover {
     border-color: rgba(45, 212, 191, 0.65);
     transform: translateY(-1px);
   }
 
-  @media (max-width: 640px) {
-    .hero-loop-focus {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
+  .hero-loop-portfolio .hero-org-card-desc {
+    margin: 0;
+    text-align: center;
+    font-size: 0.62rem;
+    line-height: 1.45;
+  }
 
+  @media (max-width: 640px) {
     .hero-loop-steps {
       overflow-x: auto;
       flex-wrap: nowrap;

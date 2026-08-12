@@ -46,33 +46,11 @@
         "label": "Human gate",
         "detail": "Publish · deploy · external send — never autonomous"
       },
-      "portfolioLabel": "Projects · Focus",
-      "projects": [
-        {
-          "id": "company-os",
-          "label": "Company OS",
-          "detail": "Control plane",
-          "href": "/insights/ai-native-venture-studio-operating-system"
-        },
-        {
-          "id": "tha",
-          "label": "THA",
-          "detail": "Club Pack beta",
-          "href": "https://thehockeyanalytics.com/"
-        },
-        {
-          "id": "parental",
-          "label": "Parental",
-          "detail": "Complete plan",
-          "href": "https://tur-parentalleave.vercel.app"
-        },
-        {
-          "id": "tur",
-          "label": "TUR",
-          "detail": "Field Notes",
-          "href": "https://theunnamedroads.com/"
-        }
-      ],
+      "portfolioLabel": "Projects",
+      "portfolio": {
+        "detail": "Focus · Monitor · Parked — bounded attention, honest status across the portfolio",
+        "href": "/projects"
+      },
       "footerCaption": "CONTROL PLANE · EXECUTION · KNOWLEDGE"
     }
   },
