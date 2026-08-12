@@ -58,3 +58,4 @@ Optional later: add GSC property + export; PostHog remains product funnel SoR.
 | Week | Notes |
 | --- | --- |
 | 2026-08-12 | Tracking doc created; pages live for all primary URLs. First SERP baseline pending Emil. |
+| 2026-08-12 W1 | Baseline keywords for Focus reach (log rank band 1–10 / 11–30 / not found): `föräldraledighet planera` → Parental; `hockeyanalytics klubb` → THA; `ai-native venture studio` → TUR; `company operating system ai` → Company OS; `föräldraledighet kalkylator` → Parental. |
