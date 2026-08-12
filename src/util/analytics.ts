@@ -13,7 +13,6 @@ export type TurEventName =
   | 'venture_card_click'
   | 'primary_cta_clicked'
   | 'signup_completed'
-  | 'outreach_pilot_click'
 
 function readUtmParams(): AnalyticsPayload {
   if (typeof window === 'undefined') return {}

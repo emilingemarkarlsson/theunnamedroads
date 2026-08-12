@@ -13,7 +13,7 @@ Make The Unnamed Roads discoverable for "AI-native venture studio" and clearly s
 - [x] Added Company OS positioning block on homepage (`#company-os`).
 - [x] Published SEO pillar: `/insights/ai-native-venture-studio-operating-system`.
 - [x] Launched service landing: `/services/ai-native-venture-studio`.
-- [x] Built outbound kit page: `/outreach`.
+- [x] Outbound kits kept internal (public `/outreach` removed).
 
 ## Now (execute this week)
 - [ ] Assign Linear owners and sprint priority (TUR-91–105).

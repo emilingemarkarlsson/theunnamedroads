@@ -473,7 +473,7 @@
           {
             "id": "posthog",
             "name": "PostHog",
-            "description": "Product analytics and funnel tracking. CTA clicks, venture card engagement and outreach pilot links — filter by site property.",
+            "description": "Product analytics and funnel tracking. CTA clicks and venture card engagement — filter by site property.",
             "href": "https://eu.posthog.com/",
             "logo": {
               "type": "monogram",
