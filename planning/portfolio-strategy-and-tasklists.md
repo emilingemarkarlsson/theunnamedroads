@@ -58,7 +58,10 @@ The Data Labelers, UTKO, Baby Sellpy, Bilkalkyl, Bostadsplanering, Travel Tools,
 
 ## Linear tasklists
 
-Import `planning/linear-portfolio-tasklist.csv` into project **The Unnamed Roads — Visibility** or a new **Portfolio Execution** project.
+Import `planning/linear-portfolio-tasklist.csv` into Linear project **Portfolio Execution** (imported Aug 2026 as TUR-106–TUR-121).
+
+**Granular 4-week breakdown (mobile + distribution):** `planning/portfolio-execution-mobile-distribution.md`  
+**Linear epics:** TUR-122–127 · **Subtasks:** TUR-128–156
 
 ### A. Platform (Company OS)
 
