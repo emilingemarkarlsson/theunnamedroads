@@ -21,7 +21,8 @@
 
         const payload: Record<string, string | undefined> = {}
         for (const key of PH_ATTRS) {
-          const value = el.dataset[`ph${key.charAt(0).toUpperCase()}${key.slice(1)}`]
+          const value =
+            el.dataset[`ph${key.charAt(0).toUpperCase()}${key.slice(1)}`]
           if (value) payload[key] = value
         }
 

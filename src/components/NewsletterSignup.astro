@@ -12,9 +12,16 @@ const {
 } = Astro.props
 ---
 
-<section class:list={['rounded-xl border border-slate-700 bg-slate-900/60 px-8 py-10 my-12', className]}>
+<section
+  class:list={[
+    'my-12 rounded-xl border border-slate-700 bg-slate-900/60 px-8 py-10',
+    className
+  ]}
+>
   <div class="max-w-xl">
-    <p class="mb-1 text-xs font-semibold uppercase tracking-widest text-accent">Newsletter</p>
+    <p class="mb-1 text-xs font-semibold uppercase tracking-widest text-accent">
+      Newsletter
+    </p>
     <h2 class="mb-3 text-xl font-bold text-slate-100 sm:text-2xl">{title}</h2>
     <p class="mb-6 text-sm leading-relaxed text-slate-400">{description}</p>
     <form
@@ -23,7 +30,11 @@ const {
       method="post"
       class="flex flex-col gap-3 sm:flex-row"
     >
-      <input type="hidden" name="l" value="e7f38861-4bc4-448d-85ae-376e7f7c2fb0" />
+      <input
+        type="hidden"
+        name="l"
+        value="e7f38861-4bc4-448d-85ae-376e7f7c2fb0"
+      />
       <label for="tur-email" class="sr-only">Email address</label>
       <input
         type="email"
@@ -35,7 +46,7 @@ const {
       />
       <button
         type="submit"
-        class="h-10 rounded-lg bg-accent px-5 text-sm font-semibold text-white transition-opacity hover:opacity-90 whitespace-nowrap"
+        class="h-10 whitespace-nowrap rounded-lg bg-accent px-5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
       >
         Subscribe
       </button>

@@ -9,6 +9,7 @@ export default {
         ignoreAtRules: ['tailwind', 'apply', 'layer']
       }
     ],
-    'at-rule-no-deprecated': null
+    'at-rule-no-deprecated': null,
+    'no-descending-specificity': null
   }
 }

@@ -23,6 +23,17 @@ export interface NavItemParent {
 
 export type HeaderItem = NavItem | NavItemParent
 
+export interface Agent {
+  id: string
+  name: string
+  role: string
+  strengths: string
+  bio: string
+  status: string
+  icon: Icon
+  color: string
+}
+
 const Modes = ['dark', 'light'] as const
 
 export const ColorSchemes = [

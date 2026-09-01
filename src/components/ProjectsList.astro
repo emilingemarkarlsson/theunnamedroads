@@ -47,7 +47,13 @@ const formatTimeline = (project: CollectionEntry<'projects'>) => {
         : 'block h-full'
 
       const inner = (
-        <div class:list={[cardClass, hasLiveSite && 'transition-all duration-500 group-hover:shadow-[0_20px_60px_-15px_rgba(241,141,79,0.3)]']}>
+        <div
+          class:list={[
+            cardClass,
+            hasLiveSite &&
+              'transition-all duration-500 group-hover:shadow-[0_20px_60px_-15px_rgba(241,141,79,0.3)]'
+          ]}
+        >
           <div
             class={`absolute left-4 top-4 flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-white shadow-md sm:left-6 sm:top-6 ${color}`}
           >
@@ -56,13 +62,19 @@ const formatTimeline = (project: CollectionEntry<'projects'>) => {
             />
             {label}
           </div>
-          <div class="flex flex-1 flex-col items-start justify-center text-left pt-8 sm:pt-0">
+          <div class="flex flex-1 flex-col items-start justify-center pt-8 text-left sm:pt-0">
             {categoryTag && (
               <p class="mb-1 text-xs font-semibold uppercase tracking-[0.4em] text-white/50">
                 {categoryTag}
               </p>
             )}
-            <h3 class:list={['mb-2 text-2xl font-bold leading-tight tracking-tight text-white sm:mb-3 sm:text-3xl', hasLiveSite && 'group-hover:text-accent transition-colors duration-300']}>
+            <h3
+              class:list={[
+                'mb-2 text-2xl font-bold leading-tight tracking-tight text-white sm:mb-3 sm:text-3xl',
+                hasLiveSite &&
+                  'transition-colors duration-300 group-hover:text-accent'
+              ]}
+            >
               {data.title}
             </h3>
             <p class="project-summary mb-3 text-sm text-white/80 sm:mb-4 sm:text-base">

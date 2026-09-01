@@ -15,7 +15,8 @@ export const agents: Agent[] = [
     id: 'nexus',
     name: 'NEXUS',
     role: 'Strategic Intelligence',
-    strengths: 'Pattern recognition, market analysis, opportunity identification',
+    strengths:
+      'Pattern recognition, market analysis, opportunity identification',
     bio: 'Monitors signals across culture, capital, and technology to identify asymmetric opportunities.',
     status: 'active',
     icon: 'tabler--brain',
@@ -55,7 +56,8 @@ export const agents: Agent[] = [
     id: 'core',
     name: 'CORE',
     role: 'Infrastructure Lead',
-    strengths: 'Platform management, resource orchestration, self-hosted infrastructure',
+    strengths:
+      'Platform management, resource orchestration, self-hosted infrastructure',
     bio: 'Manages the entire Coolify platform and infrastructure resources—MinIO, LiteLLM, and all self-hosted services that power our operations.',
     status: 'active',
     icon: 'tabler--server',
@@ -64,14 +66,15 @@ export const agents: Agent[] = [
 ]
 
 export const getAgent = (id: string): Agent | undefined => {
-  return agents.find(agent => agent.id === id)
+  return agents.find((agent) => agent.id === id)
 }
 
 export const getAgentById = async (id: string): Promise<Agent | undefined> => {
-  return agents.find(agent => agent.id === id)
+  return agents.find((agent) => agent.id === id)
 }
 
-export const getAgentByName = async (name: string): Promise<Agent | undefined> => {
-  return agents.find(agent => agent.name.toLowerCase() === name.toLowerCase())
+export const getAgentByName = async (
+  name: string
+): Promise<Agent | undefined> => {
+  return agents.find((agent) => agent.name.toLowerCase() === name.toLowerCase())
 }
-

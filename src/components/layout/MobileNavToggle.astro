@@ -4,7 +4,7 @@
 
 <button
   id="mobile-nav-toggle"
-  class="flex items-center clickable"
+  class="clickable flex items-center"
   title="Mobile nav toggle"
   type="button"
 >
@@ -23,10 +23,10 @@
     const icon = button.querySelector('span.iconify')
     if (!icon) return
 
-    const handler = function(e) {
+    const handler = function (e) {
       e.preventDefault()
       e.stopPropagation()
-      
+
       if (icon.className.includes(iconOpen)) {
         icon.classList.remove(iconOpen)
         icon.classList.add(iconClosed)
