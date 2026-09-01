@@ -19,11 +19,16 @@
     @apply text-sm sm:text-base;
   }
 
-  /* Better touch targets for mobile */
-  button, 
-  .clickable,
-  a {
-    @apply min-h-[44px] sm:min-h-0 min-w-[44px] sm:min-w-0 flex items-center justify-center;
+  /* Touch targets on chrome controls only — not inline prose links. */
+  button:not([disabled]),
+  .clickable {
+    @apply min-h-[44px] min-w-[44px] sm:min-h-0 sm:min-w-0;
+  }
+
+  header a,
+  footer a,
+  #mobile-nav a {
+    @apply min-h-[44px] sm:min-h-0;
   }
 
   /* Responsive images */
@@ -45,6 +50,30 @@
 
   ::-webkit-scrollbar-thumb:hover {
     @apply bg-accent/100;
+  }
+
+  /* Visible keyboard focus for interactive elements. `:where()` keeps
+     specificity at 0 so components using `focus:ring`/`focus:outline-none`
+     keep their own focus styling. */
+  :where(a, button, summary, [tabindex]):focus-visible {
+    outline: 2px solid rgb(var(--accent));
+    outline-offset: 3px;
+    border-radius: 3px;
+  }
+}
+
+/* Respect users who prefer reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
 
@@ -75,47 +104,24 @@
     @apply border-accent rounded border;
   }
 
-  /* NOTE: `:has-text()` is not valid CSS and never matches in a browser, so the
-     rules below currently have no effect. Kept as-is (behavior unchanged); the
-     stylelint rule is disabled for this block until they are reimplemented. */
-  /* stylelint-disable selector-pseudo-class-no-unknown */
-  /* Pillar callout styling - blockquotes that start with "Part of our" */
-  .prose blockquote:has(> p:first-child strong:has-text("Part of our")) {
-    @apply border-l-4 border-accent bg-slate-900/70 rounded-r-lg p-6 my-8 not-italic;
+  .prose h2#related-resources {
+    @apply mb-6 mt-16 border-t border-slate-800 pt-8 text-2xl font-semibold;
   }
 
-  .prose blockquote:has(> p:first-child strong:has-text("Part of our")) > p {
-    @apply text-slate-200 leading-relaxed;
+  .prose h2#related-resources + ul {
+    @apply list-none space-y-3 pl-0;
   }
 
-  .prose blockquote:has(> p:first-child strong:has-text("Part of our")) > p:first-child {
-    @apply font-semibold text-slate-100 mb-2;
-  }
-
-  .prose blockquote:has(> p:first-child strong:has-text("Part of our")) a {
-    @apply text-accent font-semibold hover:underline;
-  }
-
-  /* Related Resources section styling */
-  .prose h2:has-text("Related Resources") {
-    @apply mt-16 mb-6 text-2xl font-semibold text-slate-100 border-t border-slate-800 pt-8;
-  }
-
-  .prose h2:has-text("Related Resources") + ul {
-    @apply list-none pl-0 space-y-3;
-  }
-
-  .prose h2:has-text("Related Resources") + ul li {
+  .prose h2#related-resources + ul li {
     @apply my-0;
   }
 
-  .prose h2:has-text("Related Resources") + ul li a {
-    @apply text-accent font-medium hover:underline inline-flex items-center gap-2;
+  .prose h2#related-resources + ul a {
+    @apply font-medium;
   }
 
-  .prose h2:has-text("Related Resources") + ul li a::before {
-    content: "→";
+  .prose h2#related-resources + ul a::before {
+    content: '→ ';
     @apply text-slate-500;
   }
-  /* stylelint-enable selector-pseudo-class-no-unknown */
 }
