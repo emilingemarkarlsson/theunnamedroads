@@ -1,0 +1,17 @@
+{
+  "name": "theunnamedroads",
+  "install": "corepack enable && pnpm install --frozen-lockfile",
+  "terminals": [
+    {
+      "name": "astro-dev",
+      "command": "pnpm dev --host 0.0.0.0",
+      "description": "Astro dev server with hot reload on http://localhost:4321"
+    }
+  ],
+  "ports": [
+    {
+      "name": "astro dev",
+      "port": 4321
+    }
+  ]
+}
