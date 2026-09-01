@@ -5,7 +5,7 @@ AI-native venture studio proving that a single operator plus AI can ship at vent
 ![Astro](https://img.shields.io/badge/Astro-5.x-BC52EE?style=for-the-badge&logo=astro&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.x-38BDF8?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![Netlify](https://img.shields.io/badge/Netlify-Edge-00AD9F?style=for-the-badge&logo=netlify&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-Production-000000?style=for-the-badge&logo=vercel&logoColor=white)
 ![Umami](https://img.shields.io/badge/Analytics-Umami-111111?style=for-the-badge)
 
 ## Highlights
@@ -13,7 +13,7 @@ AI-native venture studio proving that a single operator plus AI can ship at vent
 - Active-project hero that renders live badges straight from the Astro content collection.
 - MDX-based publishing stack for essays, experiments, and project dossiers with automatic RSS + sitemap.
 - Consent-free, privacy-first analytics powered by self-hosted Umami.
-- Netlify deployment with serverless contact form, redirects, and page indexing via Pagefind.
+- Vercel deployment with a webhook-backed contact form and page indexing via Pagefind.
 - Dark/light mode choreography handled at the layout level with `ModeManager`.
 
 ## Quick Start
@@ -47,7 +47,6 @@ Visit http://localhost:4321 and watch the hero badges reflect whatever projects 
 ```text
 ./
 ├── public/                 # Static assets, redirects, manifest, logos
-├── netlify/                # Functions (contact form) + serverless glue
 ├── src/
 │   ├── components/         # Hero, project lists, layout primitives
 │   ├── content/            # Astro collections (posts, projects)
@@ -67,13 +66,13 @@ Visit http://localhost:4321 and watch the hero badges reflect whatever projects 
 - **Content Engine** – MDX collections give you RSS, sitemap, pagination, and tag pages out of the box.
 - **SEO + Schema** – Base layout emits canonical URLs, OG/Twitter metadata, organization JSON-LD, and handles font preloading.
 - **Dark Mode** – `ModeManager` maintains theme preference, while `ModeToggle` exposes UI controls.
-- **Contact Automation** – `netlify/functions/contact-form.cjs` handles submissions without exposing API keys to the client.
+- **Contact Automation** – `ContactForm.astro` POSTs submissions to the `tur-automations` webhook (`https://tur-automations.vercel.app/api/webhooks/contact`) without exposing API keys to the client.
 - **Search Ready** – Pagefind builds a static search index every deploy via `pnpm postbuild`.
 
 ## Analytics & Integrations
 
 - **Umami** – `<script defer src="https://umami.theunnamedroads.com/script.js" data-website-id="fc8f279b-0da8-4013-b8df-be07dc12a8f1">` is injected in `BaseLayout.astro` for site-wide reporting.
-- **Netlify Forms** – serverless handler stores contact requests securely.
+- **Contact Webhook** – submissions are forwarded to the `tur-automations` webhook, keeping API keys off the client.
 - **Pagefind** – zero-config static search for the content library.
 
 ## Customization Guide
@@ -88,8 +87,7 @@ Visit http://localhost:4321 and watch the hero badges reflect whatever projects 
 
 | Platform         | Build Command     | Notes                                                |
 | ---------------- | ----------------- | ---------------------------------------------------- |
-| Netlify (default)| `pnpm run build`  | Publish `dist/`, Netlify functions live in `netlify/`|
-| Vercel           | `pnpm run build`  | Add the Astro Vercel adapter if you need SSR         |
+| Vercel (default) | `pnpm run build`  | Production host. `git push origin main` → Vercel deploys `dist/` |
 | Cloudflare Pages | `pnpm run build`  | Upload `dist/` and keep `_redirects` in `public/`    |
 
 `pnpm postbuild` (Pagefind) runs automatically via the `package.json` script, so deploy targets just need Node 18 and pnpm.
@@ -97,7 +95,7 @@ Visit http://localhost:4321 and watch the hero badges reflect whatever projects 
 ## Tooling Snapshot
 
 - **Editor**: VS Code + Copilot for rapid iteration.
-- **Automation**: Netlify builds, Pagefind indexing, and AI-assisted content workflows.
+- **Automation**: Vercel builds, Pagefind indexing, and AI-assisted content workflows.
 - **Design System**: TailwindCSS + IBM Plex Sans.
 - **Stack Visibility**: Toolstack page mirrors the actual workstation so visitors can inspect the exact hardware/software mix.
 
