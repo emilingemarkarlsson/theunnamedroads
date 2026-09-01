@@ -37,8 +37,8 @@ document.addEventListener('DOMContentLoaded', function () {
           message: data.message,
           timestamp: new Date().toISOString(),
           source: 'Contact Form - The Unnamed Roads',
-          brand: 'tur',
-        }),
+          brand: 'tur'
+        })
       })
 
       const result = await response.json()

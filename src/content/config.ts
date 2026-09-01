@@ -229,30 +229,32 @@ const homepage = defineCollection({
         })
       )
     }),
-    aiTeams: z.object({
-      eyebrow: z.string(),
-      title: z.string(),
-      subtitle: z.string(),
-      note: z.string(),
-      groups: z.array(
-        z.object({
-          id: z.string(),
-          name: z.string(),
-          description: z.string(),
-          members: z.array(
-            z.object({
-              id: z.string(),
-              name: z.string(),
-              role: z.string(),
-              strengths: z.string(),
-              bio: z.string(),
-              status: z.enum(['active', 'hiring']).optional(),
-              statusLabel: z.string().optional()
-            })
-          )
-        })
-      )
-    }).optional(),
+    aiTeams: z
+      .object({
+        eyebrow: z.string(),
+        title: z.string(),
+        subtitle: z.string(),
+        note: z.string(),
+        groups: z.array(
+          z.object({
+            id: z.string(),
+            name: z.string(),
+            description: z.string(),
+            members: z.array(
+              z.object({
+                id: z.string(),
+                name: z.string(),
+                role: z.string(),
+                strengths: z.string(),
+                bio: z.string(),
+                status: z.enum(['active', 'hiring']).optional(),
+                statusLabel: z.string().optional()
+              })
+            )
+          })
+        )
+      })
+      .optional(),
     testimonials: z.object({
       eyebrow: z.string(),
       title: z.string(),

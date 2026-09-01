@@ -318,14 +318,15 @@ if (serviceJsonLd) jsonLdGraph.push(serviceJsonLd)
     <ModeManager />
     <!-- PostHog Cloud EU (proxy via e.theunnamedroads.com — filter by property site) -->
     <script is:inline>
+      /* eslint-disable */
       !(function (t, e) {
-        var o, n, p, r;
+        let o, n, p, r;
         e.__SV ||
           ((window.posthog = e),
           (e._i = []),
           (e.init = function (i, s, a) {
             function g(t, e) {
-              var o = e.split(".");
+              const o = e.split(".");
               2 == o.length && ((t = t[o[0]]), (e = o[1])),
                 (t[e] = function () {
                   t.push([e].concat(Array.prototype.slice.call(arguments, 0)));
@@ -341,12 +342,12 @@ if (serviceJsonLd) jsonLdGraph.push(serviceJsonLd)
                 p,
                 r
               );
-            var u = e;
+            let u = e;
             for (
               void 0 !== a ? (u = e[a] = []) : (a = "posthog"),
                 u.people = u.people || [],
                 u.toString = function (t) {
-                  var e = "posthog";
+                  let e = "posthog";
                   return (
                     "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e
                   );

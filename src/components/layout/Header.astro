@@ -61,11 +61,12 @@ export const isNavItem = (item: HeaderItem): item is NavItemType =>
         </li>
       </ul>
     </nav>
-    <div
-      class="flex items-center gap-3 text-xl sm:gap-4 sm:text-2xl md:hidden"
-    >
+    <div class="flex items-center gap-3 text-xl sm:gap-4 sm:text-2xl md:hidden">
       {config.modeToggle && <ModeToggle />}
-      <a href="/search" class="flex items-center transition-colors hover:text-accent">
+      <a
+        href="/search"
+        class="flex items-center transition-colors hover:text-accent"
+      >
         <span class="clickable iconify tabler--search"></span>
       </a>
       <MobileNavToggle />

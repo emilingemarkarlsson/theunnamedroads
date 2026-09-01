@@ -1,4 +1,7 @@
-type AnalyticsPayload = Record<string, string | number | boolean | null | undefined>
+type AnalyticsPayload = Record<
+  string,
+  string | number | boolean | null | undefined
+>
 
 declare global {
   interface Window {

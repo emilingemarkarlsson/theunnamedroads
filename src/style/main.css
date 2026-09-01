@@ -75,6 +75,10 @@
     @apply border-accent rounded border;
   }
 
+  /* NOTE: `:has-text()` is not valid CSS and never matches in a browser, so the
+     rules below currently have no effect. Kept as-is (behavior unchanged); the
+     stylelint rule is disabled for this block until they are reimplemented. */
+  /* stylelint-disable selector-pseudo-class-no-unknown */
   /* Pillar callout styling - blockquotes that start with "Part of our" */
   .prose blockquote:has(> p:first-child strong:has-text("Part of our")) {
     @apply border-l-4 border-accent bg-slate-900/70 rounded-r-lg p-6 my-8 not-italic;
@@ -113,4 +117,5 @@
     content: "→";
     @apply text-slate-500;
   }
+  /* stylelint-enable selector-pseudo-class-no-unknown */
 }

@@ -11,7 +11,7 @@ const { tags } = Astro.props
 <div class="flex flex-wrap gap-4 text-base sm:gap-6">
   {
     tags.map(({ tag, icon }) => (
-      <a class="clickable no-underline whitespace-nowrap" href={`/tags/${tag}`}>
+      <a class="clickable whitespace-nowrap no-underline" href={`/tags/${tag}`}>
         <span class={`iconify align-middle text-xl ${icon}`} />
         <span class="font-normal">{tag}</span>
       </a>

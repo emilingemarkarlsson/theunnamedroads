@@ -98,20 +98,6 @@ const getStatusDotClass = (tone: string) =>
   )[tone as 'active' | 'building' | 'exploring'] ??
   'bg-emerald-400 shadow-[0_0_12px_rgba(16,185,129,0.7)]'
 
-const memberStatusClassMap = {
-  active: 'ai-status-pill--active',
-  hiring: 'ai-status-pill--hiring'
-} as const
-
-const getMemberStatusClass = (status: string) =>
-  `ai-status-pill ${
-    memberStatusClassMap[status as keyof typeof memberStatusClassMap] ??
-    memberStatusClassMap.active
-  }`
-
-const getMemberStatusLabel = (status: string, label?: string) =>
-  label ?? (status === 'hiring' ? 'Recruiting' : 'Active')
-
 const heroLoop = homepageData.hero.controlLoop
 ---
 
@@ -140,7 +126,9 @@ const heroLoop = homepageData.hero.controlLoop
             homepageData.hero.eyebrowAfter && (
               <>
                 <span class="text-white/40"> · </span>
-                <span class="text-white/85">{homepageData.hero.eyebrowAfter}</span>
+                <span class="text-white/85">
+                  {homepageData.hero.eyebrowAfter}
+                </span>
               </>
             )
           }
@@ -185,8 +173,12 @@ const heroLoop = homepageData.hero.controlLoop
                     }
                     <div class="min-w-0 flex-1">
                       <p class="hero-org-card-sub">{heroLoop.operator.label}</p>
-                      <p class="hero-org-card-title">{heroLoop.operator.title}</p>
-                      <p class="hero-org-card-tag">{heroLoop.operator.detail}</p>
+                      <p class="hero-org-card-title">
+                        {heroLoop.operator.title}
+                      </p>
+                      <p class="hero-org-card-tag">
+                        {heroLoop.operator.detail}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -204,11 +196,11 @@ const heroLoop = homepageData.hero.controlLoop
                           <p class="hero-org-card-desc">{step.detail}</p>
                         </div>
                       </div>
-                      {
-                        index < heroLoop.steps.length - 1 && (
-                          <span class="hero-loop-arrow" aria-hidden="true">→</span>
-                        )
-                      }
+                      {index < heroLoop.steps.length - 1 && (
+                        <span class="hero-loop-arrow" aria-hidden="true">
+                          →
+                        </span>
+                      )}
                     </div>
                   ))
                 }
@@ -216,7 +208,8 @@ const heroLoop = homepageData.hero.controlLoop
 
               <div class="hero-loop-gate">
                 <span class="hero-loop-gate-pill">{heroLoop.gate.label}</span>
-                <span class="hero-loop-gate-detail">{heroLoop.gate.detail}</span>
+                <span class="hero-loop-gate-detail">{heroLoop.gate.detail}</span
+                >
               </div>
 
               <p class="hero-org-team-label">{heroLoop.portfolioLabel}</p>
@@ -231,11 +224,15 @@ const heroLoop = homepageData.hero.controlLoop
                       data-ph-cta-id="hero_portfolio"
                       data-ph-section="control_loop"
                     >
-                      <p class="hero-org-card-desc">{heroLoop.portfolio.detail}</p>
+                      <p class="hero-org-card-desc">
+                        {heroLoop.portfolio.detail}
+                      </p>
                     </a>
                   ) : (
                     <div class="hero-org-card hero-org-card--agent">
-                      <p class="hero-org-card-desc">{heroLoop.portfolio.detail}</p>
+                      <p class="hero-org-card-desc">
+                        {heroLoop.portfolio.detail}
+                      </p>
                     </div>
                   )
                 }
@@ -1469,7 +1466,9 @@ const heroLoop = homepageData.hero.controlLoop
   .hero-loop-portfolio-link {
     display: block;
     text-decoration: none;
-    transition: border-color 0.2s ease, transform 0.2s ease;
+    transition:
+      border-color 0.2s ease,
+      transform 0.2s ease;
   }
 
   .hero-loop-portfolio-link:hover {
