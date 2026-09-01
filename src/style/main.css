@@ -19,11 +19,16 @@
     @apply text-sm sm:text-base;
   }
 
-  /* Better touch targets for mobile */
-  button, 
-  .clickable,
-  a {
-    @apply min-h-[44px] sm:min-h-0 min-w-[44px] sm:min-w-0 flex items-center justify-center;
+  /* Touch targets on chrome controls only — not inline prose links. */
+  button:not([disabled]),
+  .clickable {
+    @apply min-h-[44px] min-w-[44px] sm:min-h-0 sm:min-w-0;
+  }
+
+  header a,
+  footer a,
+  #mobile-nav a {
+    @apply min-h-[44px] sm:min-h-0;
   }
 
   /* Responsive images */
@@ -97,5 +102,26 @@
   img[data-img-embed=''],
   img[data-img-embed='true'] {
     @apply border-accent rounded border;
+  }
+
+  .prose h2#related-resources {
+    @apply mb-6 mt-16 border-t border-slate-800 pt-8 text-2xl font-semibold;
+  }
+
+  .prose h2#related-resources + ul {
+    @apply list-none space-y-3 pl-0;
+  }
+
+  .prose h2#related-resources + ul li {
+    @apply my-0;
+  }
+
+  .prose h2#related-resources + ul a {
+    @apply font-medium;
+  }
+
+  .prose h2#related-resources + ul a::before {
+    content: '→ ';
+    @apply text-slate-500;
   }
 }

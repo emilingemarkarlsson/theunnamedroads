@@ -11,13 +11,14 @@ const frontmatter: PageLayoutProps['frontmatter'] = {
 
 <PageLayout {frontmatter}>
   <h1>{frontmatter.title}</h1>
+  <p class="mb-6 text-slate-400">Search posts, projects, and insights.</p>
   <search-input
     class="flex w-full flex-col items-center gap-4 sm:flex-row sm:justify-center sm:gap-8"
   >
     <label for="search-input" class="sr-only">Search the site</label>
     <input
       id="search-input"
-      type="text"
+      type="search"
       placeholder="Type to search"
       class="w-full rounded border border-accent p-4 sm:w-[50%]"
     />
@@ -46,15 +47,21 @@ const frontmatter: PageLayoutProps['frontmatter'] = {
             return
 
           const onInput = async () => {
-            const searchQuery = searchInput.value
+            const searchQuery = searchInput.value.trim()
 
-            if (searchQuery === '') clearBtn.classList.add('invisible')
-            else clearBtn.classList.remove('invisible')
+            if (searchQuery === '') {
+              clearBtn.classList.add('invisible')
+              resultsHeading.innerHTML = ''
+              resultsContainer.innerHTML = ''
+              return
+            }
+
+            clearBtn.classList.remove('invisible')
 
             const { results } = await window.pagefind.search(searchQuery)
 
             resultsHeading.innerHTML =
-              results.length > 0 ? `Results (${results.length})` : 'No Results'
+              results.length > 0 ? `Results (${results.length})` : 'No results'
 
             resultsContainer.innerHTML = ''
 

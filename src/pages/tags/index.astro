@@ -5,6 +5,11 @@ import PageLayout, {
 import { generateTags, getTagUsage } from '@/util/tags'
 
 const tags = await generateTags()
+const tagsWithCount = (
+  await Promise.all(
+    tags.map(async ({ tag }) => ({ tag, count: await getTagUsage(tag) }))
+  )
+).sort((a, b) => b.count - a.count || a.tag.localeCompare(b.tag))
 
 const frontmatter: PageLayoutProps['frontmatter'] = {
   title: 'Tags',
@@ -16,19 +21,16 @@ const frontmatter: PageLayoutProps['frontmatter'] = {
   <slot />
   <h1 class="mb-6 text-3xl font-semibold sm:text-4xl">Tags</h1>
   <p class="mb-8 text-slate-400">Browse insights and articles by topic.</p>
-  <div class="flex flex-wrap gap-4 sm:gap-8">
+  <div class="flex flex-wrap gap-2 sm:gap-3">
     {
-      tags.map(({ tag, icon }) => (
+      tagsWithCount.map(({ tag, count }) => (
         <a
-          class="clickable flex flex-col items-center gap-1 no-underline"
+          class="inline-flex items-center gap-2 rounded-full border border-white/15 px-3 py-1.5 text-sm no-underline transition-colors hover:border-white/40 hover:text-accent"
           href={`/tags/${tag}`}
           data-astro-prefetch
         >
-          <span class={`iconify text-4xl sm:text-5xl ${icon}`} />
-
-          <span class="text-base font-normal sm:text-lg">
-            {tag} ({getTagUsage(tag)})
-          </span>
+          <span>{tag}</span>
+          <span class="tabular-nums text-slate-400">{count}</span>
         </a>
       ))
     }
