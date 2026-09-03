@@ -1,30 +1,101 @@
 ---
 import FooterItem from '@/components/layout/FooterItem.astro'
-import Separator from '@/components/layout/Separator.astro'
 import config from '@/theme.config'
 
 const currentYear = new Date().getFullYear()
 ---
 
-<footer class="mt-auto">
-  <Separator />
-  <div
-    class="mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-4 px-3 py-4 text-2xl sm:flex-row sm:gap-2 sm:px-6 sm:py-8 lg:px-8"
-  >
-    <span class="text-base">&#169; {currentYear} {config.author}</span>
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div class="site-footer-brand">
+      <a href="/" class="site-footer-logo">{config.title}</a>
+      <p class="site-footer-tagline">{config.description}</p>
+    </div>
 
-    <div class="flex gap-4">
+    <nav class="site-footer-nav" aria-label="Footer navigation">
+      <ul>
+        {
+          config.navbarItems.map((item) =>
+            'href' in item ? (
+              <li>
+                <a href={item.href}>{item.label}</a>
+              </li>
+            ) : null
+          )
+        }
+      </ul>
+    </nav>
+
+    <div class="site-footer-social">
       {config.footerItems.map((item) => <FooterItem {item} />)}
     </div>
   </div>
-  <div class="mx-auto max-w-6xl px-3 pb-6 text-center sm:px-6 lg:px-8">
+
+  <div class="site-footer-bottom">
+    <span>&#169; {currentYear} {config.author}</span>
     <a
       href="https://emilingemarkarlsson.com/"
       target="_blank"
       rel="noopener noreferrer"
-      class="text-xs text-slate-500 transition-colors hover:text-slate-400"
     >
       Built by emilingemarkarlsson
     </a>
   </div>
 </footer>
+
+<style>
+  .site-footer {
+    @apply mt-auto border-t;
+    border-color: rgba(255, 255, 255, 0.06);
+  }
+
+  .site-footer-inner {
+    @apply mx-auto grid w-full max-w-6xl gap-8 px-4 py-10 sm:px-6 sm:py-12 lg:grid-cols-[1.5fr_1fr_auto] lg:px-8;
+  }
+
+  .site-footer-logo {
+    @apply text-lg font-bold tracking-tight transition-colors;
+    color: #f0ebe3;
+  }
+
+  .site-footer-logo:hover {
+    @apply text-accent;
+  }
+
+  .site-footer-tagline {
+    @apply mt-2 max-w-sm text-sm leading-relaxed;
+    color: rgba(240, 235, 227, 0.45);
+  }
+
+  .site-footer-nav ul {
+    @apply flex flex-col gap-2;
+  }
+
+  .site-footer-nav a {
+    @apply text-sm transition-colors;
+    color: rgba(240, 235, 227, 0.6);
+  }
+
+  .site-footer-nav a:hover {
+    @apply text-accent;
+  }
+
+  .site-footer-social {
+    @apply flex gap-3;
+  }
+
+  .site-footer-bottom {
+    @apply mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-2 border-t px-4 py-4 text-xs sm:flex-row sm:px-6 lg:px-8;
+    border-color: rgba(255, 255, 255, 0.04);
+    color: rgba(240, 235, 227, 0.35);
+  }
+
+  .site-footer-bottom a {
+    @apply transition-colors;
+    color: rgba(240, 235, 227, 0.35);
+  }
+
+  .site-footer-bottom a:hover {
+    color: rgba(240, 235, 227, 0.6);
+  }
+</style>

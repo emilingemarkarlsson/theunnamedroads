@@ -4,7 +4,7 @@ export default defineThemeConfig({
   site: 'https://www.theunnamedroads.com',
   title: 'The Unnamed Road',
   description:
-    'AI-native venture studio building the future roads of business. Where human creativity merges with artificial intelligence to forge impossible innovations through anonymous, experimental methodology and post-human entrepreneurship.',
+    'AI-native venture studio building measured, decision-first companies. Portfolio of focused experiments, Field Notes for indie founders, and a Company OS that compounds learning.',
   author: 'The Unnamed Road',
   navbarItems: [
     { label: 'Home', href: '/' },
@@ -31,7 +31,7 @@ export default defineThemeConfig({
   locale: 'en',
   mode: 'dark',
   modeToggle: false,
-  colorScheme: 'scheme-mono',
+  colorScheme: 'scheme-roads',
   openGraphImage: undefined,
   postsPerPage: 4,
   projectsPerPage: 3,

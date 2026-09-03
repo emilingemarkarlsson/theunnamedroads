@@ -14,25 +14,25 @@ const { posts } = Astro.props
 posts.sort(sortPosts)
 ---
 
-<ul class="space-y-6 p-0">
+<ul class="space-y-4 p-0">
   {
     posts.map(({ data, slug }) => (
-      <li class="group">
-        <article class="space-y-3 rounded-lg border border-slate-800 bg-slate-900/30 p-6 transition-all hover:border-slate-700 hover:bg-slate-900/50">
+      <li>
+        <article class="post-card group">
           <div class="flex flex-col justify-between gap-2 sm:flex-row sm:items-start">
             <div class="flex-1">
-              <h2 class="mb-2">
+              <h2 class="mb-1">
                 <a
-                  class="text-xl font-semibold text-slate-100 transition-colors hover:text-white sm:text-2xl"
+                  class="post-card-title"
                   href={`/posts/${slug}`}
                   data-astro-prefetch
                 >
                   {data.title}
                 </a>
               </h2>
-              <p class="text-slate-400">{data.description}</p>
+              <p class="post-card-desc">{data.description}</p>
             </div>
-            <time class="shrink-0 text-sm text-slate-500 sm:ml-4">
+            <time class="post-card-date shrink-0 sm:ml-4">
               {toDateString(data.publishedDate)}
             </time>
           </div>
@@ -42,3 +42,35 @@ posts.sort(sortPosts)
     ))
   }
 </ul>
+
+<style>
+  .post-card {
+    @apply rounded-2xl border p-5 transition-all duration-200;
+    border-color: rgba(255, 255, 255, 0.07);
+    background: #111114;
+  }
+
+  .post-card:hover {
+    border-color: rgba(255, 255, 255, 0.12);
+    transform: translateY(-1px);
+  }
+
+  .post-card-title {
+    @apply text-lg font-semibold transition-colors sm:text-xl;
+    color: #f0ebe3;
+  }
+
+  .post-card:hover .post-card-title {
+    @apply text-accent;
+  }
+
+  .post-card-desc {
+    @apply text-sm;
+    color: rgba(240, 235, 227, 0.55);
+  }
+
+  .post-card-date {
+    @apply text-xs;
+    color: rgba(240, 235, 227, 0.35);
+  }
+</style>

@@ -1,4 +1,14 @@
 @layer base {
+  .scheme-roads {
+    --accent: 212, 160, 84;
+    --accent-bg: 8, 8, 10;
+
+    &[data-mode='dark'] {
+      --accent: 212, 160, 84;
+      --accent-bg: 8, 8, 10;
+    }
+  }
+
   .scheme-mono {
     --accent: 0, 0, 0;
     --accent-bg: 255, 255, 255;
