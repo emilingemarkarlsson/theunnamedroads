@@ -3,7 +3,7 @@ title: "AI Tools For Indie Hackers"
 description: "The allure of the unconventional path is a siren's call to many of us, beckoning us to leave behind the familiar and forge our own way. As indie hackers, founde"
 publishedDate: 2026-04-07
 dateModified: 2026-04-07
-author: The Unnamed Road
+author: The Unnamed Roads
 tags: ['tools', 'indie', 'hackers']
 draft: true
 ---

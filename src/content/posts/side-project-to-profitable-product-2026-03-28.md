@@ -3,7 +3,7 @@ title: "Side Project To Profitable Product"
 description: "The pursuit of building something from scratch, without a clear roadmap, is a daunting yet exhilarating experience. It's a path that requires a unique blend of "
 publishedDate: 2026-03-28
 dateModified: 2026-03-28
-author: The Unnamed Road
+author: The Unnamed Roads
 tags: ['side', 'project', 'profitable', 'product']
 draft: true
 ---

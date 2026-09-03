@@ -3,7 +3,7 @@ title: "Building a One-Person Company with AI in 2026"
 description: "How AI tools are enabling solo founders to build, ship, and scale products that previously required a full team — a practical guide to the one-person company in 2026."
 publishedDate: 2026-03-25
 dateModified: 2026-03-25
-author: The Unnamed Road
+author: The Unnamed Roads
 tags: ["ai", "entrepreneurship", "indie-hacking"]
 draft: false
 ---

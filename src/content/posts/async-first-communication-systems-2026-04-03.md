@@ -3,7 +3,7 @@ title: "Async-first Communication Systems"
 description: "As we navigate the uncharted territories of entrepreneurship and innovation, it's easy to get caught up in the allure of the next big thing. We're constantly bo"
 publishedDate: 2026-04-03
 dateModified: 2026-04-03
-author: The Unnamed Road
+author: The Unnamed Roads
 tags: ['async-first', 'communication', 'systems']
 draft: true
 ---

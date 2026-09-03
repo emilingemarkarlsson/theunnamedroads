@@ -3,7 +3,7 @@ title: "Bootstrapping Vs Venture Funding Decision"
 description: "The journey of building a company without a map is a daunting yet exhilarating experience. It's a path filled with uncertainty, where every step forward is a te"
 publishedDate: 2026-03-29
 dateModified: 2026-03-29
-author: The Unnamed Road
+author: The Unnamed Roads
 tags: ['bootstrapping', 'venture', 'funding', 'decision']
 draft: true
 ---

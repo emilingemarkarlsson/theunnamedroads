@@ -3,7 +3,7 @@ title: "Remote-first Team Culture 2026"
 description: "The allure of the unconventional path is a siren's call to many indie hackers, founders, and curious builders. It's a journey without a map, where the only cons"
 publishedDate: 2026-04-01
 dateModified: 2026-04-01
-author: The Unnamed Road
+author: The Unnamed Roads
 tags: ['remote-first', 'team', 'culture', '2026']
 draft: true
 ---

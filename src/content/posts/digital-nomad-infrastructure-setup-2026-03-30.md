@@ -3,7 +3,7 @@ title: "Digital Nomad Infrastructure Setup"
 description: "The allure of the unconventional path is a siren's call to many indie hackers, founders, and curious builders. It's a journey that beckons us to leave the well-"
 publishedDate: 2026-03-30
 dateModified: 2026-03-30
-author: The Unnamed Road
+author: The Unnamed Roads
 tags: ['digital', 'nomad', 'infrastructure', 'setup']
 draft: true
 ---

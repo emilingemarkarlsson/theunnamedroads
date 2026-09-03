@@ -3,7 +3,7 @@ title: "Solo Founder Mental Health Practices"
 description: "The concept of building a business without a clear roadmap has become increasingly appealing to indie hackers, founders, and curious builders. The idea of navig"
 publishedDate: 2026-03-25
 dateModified: 2026-03-25
-author: The Unnamed Road
+author: The Unnamed Roads
 tags: ['solo', 'founder', 'mental', 'health']
 draft: true
 ---

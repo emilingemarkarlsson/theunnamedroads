@@ -3,7 +3,7 @@ title: "Building Audience Before Product"
 description: "The pursuit of building something from scratch is a daunting yet exhilarating experience. It's a path filled with uncertainty, where the only constant is the ne"
 publishedDate: 2026-03-28
 dateModified: 2026-03-28
-author: The Unnamed Road
+author: The Unnamed Roads
 tags: ['building', 'audience', 'before', 'product']
 draft: true
 ---

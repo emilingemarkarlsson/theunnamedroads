@@ -3,7 +3,7 @@ title: "Micro-SaaS Niche Validation"
 description: "The pursuit of building something from scratch is a daunting yet exhilarating experience. It's a path fraught with uncertainty, where the only constant is the a"
 publishedDate: 2026-04-05
 dateModified: 2026-04-05
-author: The Unnamed Road
+author: The Unnamed Roads
 tags: ['micro-saas', 'niche', 'validation']
 draft: true
 ---
