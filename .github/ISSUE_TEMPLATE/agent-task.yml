@@ -1,0 +1,69 @@
+name: Agent Task
+description: Scoped task for Cursor Cloud Automations
+title: "[agent] "
+labels: ["agent:draft"]
+body:
+  - type: input
+    id: goal
+    attributes:
+      label: Mål
+      description: One sentence describing the outcome.
+      placeholder: Add X so that Y works.
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: Files or areas the agent may touch.
+      placeholder: |
+        - src/pages/...
+        - docs/...
+    validations:
+      required: false
+
+  - type: textarea
+    id: out_of_scope
+    attributes:
+      label: Inte i scope
+      description: Explicit non-goals.
+      placeholder: |
+        - No dependency upgrades
+        - No redesign
+    validations:
+      required: false
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptanskriterier
+      description: Verifiable checkboxes the PR must satisfy.
+      value: |
+        - [ ] CI grön
+        - [ ] `pnpm check` passes
+        - [ ]
+    validations:
+      required: true
+
+  - type: dropdown
+    id: task_type
+    attributes:
+      label: Typ
+      options:
+        - feature
+        - bugfix
+        - deploy
+        - refactor
+        - docs
+      default: 0
+    validations:
+      required: true
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Extra kontext
+      description: Optional links, screenshots notes, or constraints.
+    validations:
+      required: false

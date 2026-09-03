@@ -1,0 +1,32 @@
+[
+  {
+    "name": "agent:draft",
+    "color": "FBCA04",
+    "description": "Human still scoping"
+  },
+  {
+    "name": "agent:ready",
+    "color": "0E8A16",
+    "description": "Execute may pick up"
+  },
+  {
+    "name": "agent:running",
+    "color": "1D76DB",
+    "description": "Claimed this run"
+  },
+  {
+    "name": "agent:done",
+    "color": "8250DF",
+    "description": "PR opened"
+  },
+  {
+    "name": "agent:needs-human",
+    "color": "D73A4A",
+    "description": "Blocked — needs human"
+  },
+  {
+    "name": "learn:candidate",
+    "color": "6E7781",
+    "description": "Durable learning waiting promotion"
+  }
+]
