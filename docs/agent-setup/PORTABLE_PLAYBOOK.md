@@ -32,7 +32,8 @@ Without `agent:ready` issues, Execute should no-op.
 | Build | `pnpm build` (when acceptance requires it) |
 | Deploy | `git push origin main` → Vercel (`tur-site`) |
 | Default branch | `main` |
-| Human inbox | https://github.com/pulls/assigned |
+| Human inbox | https://github.com/pulls/review-requested (primär), https://github.com/pulls/assigned (backup) |
+| Agent PR routing | `.github/workflows/agent-pr-inbox.yml` — auto-assign + review on `cursor/agent-issue-*` |
 
 See also `AGENTS.md` for content and hosting rules.
 
