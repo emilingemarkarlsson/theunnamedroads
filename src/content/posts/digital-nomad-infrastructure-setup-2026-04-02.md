@@ -3,7 +3,7 @@ title: "Digital Nomad Infrastructure Setup"
 description: "The pursuit of innovation and entrepreneurship is often shrouded in mystery, with many would-be founders and indie hackers searching for a clear roadmap to succ"
 publishedDate: 2026-04-02
 dateModified: 2026-04-02
-author: The Unnamed Road
+author: The Unnamed Roads
 tags: ['digital', 'nomad', 'infrastructure', 'setup']
 draft: true
 ---

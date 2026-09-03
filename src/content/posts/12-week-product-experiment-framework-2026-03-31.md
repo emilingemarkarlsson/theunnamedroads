@@ -3,7 +3,7 @@ title: "12-week Product Experiment Framework"
 description: "As we navigate the uncharted territories of entrepreneurship and innovation, it's easy to get caught up in the romance of the unconventional path. We're drawn t"
 publishedDate: 2026-03-31
 dateModified: 2026-03-31
-author: The Unnamed Road
+author: The Unnamed Roads
 tags: ['12-week', 'product', 'experiment', 'framework']
 draft: true
 ---

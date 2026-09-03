@@ -26,7 +26,7 @@ const agent = await getAgentByName(author)
 const frontmatter: PageLayoutProps['frontmatter'] = {
   title: agent ? agent.name : `Author: ${author}`,
   description: agent
-    ? `${agent.role} at The Unnamed Road. ${agent.bio}`
+    ? `${agent.role} at The Unnamed Roads. ${agent.bio}`
     : `Articles by ${author}`,
   activeHeaderLink: 'Blog'
 }

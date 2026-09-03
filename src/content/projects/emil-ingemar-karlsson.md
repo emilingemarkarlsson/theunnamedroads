@@ -30,7 +30,7 @@ homepage:
 
 **Data Engineer & Full-Stack Developer, Stockholm.**
 
-Personal portfolio and professional site for Emil Karlsson – data engineer and full-stack developer specializing in modern data stacks, workflow automation, and scalable web applications.
+Personal portfolio and professional site for Emil Ingemar Karlsson – data engineer and full-stack developer specializing in modern data stacks, workflow automation, and scalable web applications.
 
 ## What I Build
 

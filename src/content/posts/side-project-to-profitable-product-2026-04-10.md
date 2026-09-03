@@ -3,7 +3,7 @@ title: "Side Project To Profitable Product"
 description: "The allure of building a successful online business is undeniable. With the rise of digital platforms and tools, it's easier than ever to turn an idea into a th"
 publishedDate: 2026-04-10
 dateModified: 2026-04-10
-author: The Unnamed Road
+author: The Unnamed Roads
 tags: ['side', 'project', 'profitable', 'product']
 draft: false
 ---

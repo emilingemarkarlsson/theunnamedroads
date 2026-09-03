@@ -3,7 +3,7 @@ title: "Digital Nomad Infrastructure Setup"
 description: "The pursuit of building something from scratch is a daunting yet exhilarating experience. It's a journey that requires a delicate balance of vision, resilience,"
 publishedDate: 2026-04-04
 dateModified: 2026-04-04
-author: The Unnamed Road
+author: The Unnamed Roads
 tags: ['digital', 'nomad', 'infrastructure', 'setup']
 draft: true
 ---

@@ -3,7 +3,7 @@ title: "Solo Founder Mental Health Practices"
 description: "The art of building a successful business without a traditional roadmap is a daunting yet exhilarating journey. It's a path that requires a unique blend of crea"
 publishedDate: 2026-04-08
 dateModified: 2026-04-08
-author: The Unnamed Road
+author: The Unnamed Roads
 tags: ['solo', 'founder', 'mental', 'health']
 draft: false
 ---

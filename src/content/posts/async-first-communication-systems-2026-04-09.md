@@ -3,7 +3,7 @@ title: "Async-first Communication Systems"
 description: "The pursuit of building something from scratch is a daunting yet exhilarating experience. It's a path filled with uncertainty, where the only constant is change"
 publishedDate: 2026-04-09
 dateModified: 2026-04-09
-author: The Unnamed Road
+author: The Unnamed Roads
 tags: ['async-first', 'communication', 'systems']
 draft: false
 ---

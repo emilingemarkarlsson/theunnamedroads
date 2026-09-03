@@ -9,6 +9,16 @@ import config from './src/theme.config'
 
 export default defineConfig({
   site: config.site,
+  redirects: {
+    '/projects/emil-ingemark-karlsson': {
+      status: 301,
+      destination: '/projects/emil-ingemar-karlsson'
+    },
+    '/authors/Emil Karlsson': {
+      status: 301,
+      destination: '/authors/Emil Ingemar Karlsson'
+    }
+  },
   integrations: [tailwind(), mdx(), sitemap()],
   markdown: {
     shikiConfig: {

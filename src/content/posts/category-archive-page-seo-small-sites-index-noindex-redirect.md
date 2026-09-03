@@ -3,7 +3,7 @@ title: "Category and archive page SEO for small sites: index, noindex, or redire
 description: "When to index, noindex, or redirect category pages on small content sites — with practical thresholds."
 publishedDate: 2026-05-27
 dateModified: 2026-05-27
-author: The Unnamed Road
+author: The Unnamed Roads
 draft: false
 tags: ["SEO", "technical SEO", "small sites", "content strategy"]
 ---
