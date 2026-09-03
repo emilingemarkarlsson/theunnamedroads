@@ -37,6 +37,7 @@ export interface Agent {
 const Modes = ['dark', 'light'] as const
 
 export const ColorSchemes = [
+  'scheme-roads',
   'scheme-mono',
   'scheme-nord',
   'scheme-aurora',

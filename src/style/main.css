@@ -1,5 +1,6 @@
 @import 'color-schemes.css';
 @import 'astro-code.css';
+@import 'site.css';
 
 @tailwind base;
 @tailwind components;
@@ -7,7 +8,7 @@
 
 @layer base {
   :root {
-    @apply bg-accent-bg selection:bg-accent/75 overflow-y-scroll scroll-smooth underline-offset-4 selection:text-white selection:dark:text-black;
+    @apply bg-accent-bg selection:bg-accent/75 overflow-y-scroll scroll-smooth underline-offset-4 selection:text-white;
 
     #page-wrapper {
       @apply flex min-h-[100svh] w-full flex-col justify-between;

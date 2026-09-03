@@ -23,28 +23,18 @@ const frontmatter: PageLayoutProps['frontmatter'] = {
     <section class="section-shell space-y-4 text-center">
       <p class="section-eyebrow">Experiments in flight</p>
       <div class="space-y-6">
-        <h1 class="text-4xl font-semibold text-white sm:text-5xl">
+        <h1 class="section-title text-4xl sm:text-5xl">
           Where we test impossible playbooks
         </h1>
-        <p class="mx-auto max-w-3xl text-base text-slate-300 sm:text-lg">
+        <p class="section-lead mx-auto max-w-3xl">
           Every project is a validation contract inside Company OS — Focus,
           Monitor or Parked. Live product links only when a site exists;
           otherwise status and direction live here.
         </p>
       </div>
-      <div class="flex flex-col gap-3 pt-2 sm:flex-row sm:justify-center">
-        <a
-          href="/contact"
-          class="inline-flex items-center justify-center gap-2 rounded-2xl bg-white px-6 py-3 font-semibold text-gray-900"
-        >
-          Propose a build
-        </a>
-        <a
-          href="/tools"
-          class="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/40 px-6 py-3 font-semibold text-white"
-        >
-          Inspect the stack
-        </a>
+      <div class="hero-ctas justify-center pt-2">
+        <a href="/contact" class="btn-primary">Propose a build</a>
+        <a href="/tools" class="btn-secondary">Inspect the stack</a>
       </div>
     </section>
 
@@ -54,10 +44,10 @@ const frontmatter: PageLayoutProps['frontmatter'] = {
       >
         <div>
           <p class="section-eyebrow">Active portfolio</p>
-          <h2 class="text-3xl font-semibold text-white">
+          <h2 class="section-title">
             {projectCount} builds across research, product, and GTM
           </h2>
-          <p class="mt-2 max-w-2xl text-slate-300">
+          <p class="section-lead mt-2">
             From stealth operating systems to public-facing SaaS launches, each
             project runs on the same automation-first discipline.
           </p>

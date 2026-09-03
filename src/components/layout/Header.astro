@@ -16,24 +16,18 @@ export const isNavItem = (item: HeaderItem): item is NavItemType =>
   Object.hasOwn(item, 'href')
 ---
 
-<header
-  class="sticky top-0 z-50 border-b border-gray-200/60 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:border-white/10 dark:bg-gray-950/60"
->
-  <div
-    class="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-3 py-2 sm:px-6 sm:py-4 lg:px-8 lg:py-6"
-  >
-    <a
-      href="/"
-      class="flex gap-2 text-2xl font-bold text-accent sm:text-3xl lg:text-4xl"
-    >
-      <span class="xs:inline hidden">{config.title}</span>
-      <span class="xs:hidden">TUR</span>
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="site-logo">
+      <span class="site-logo-full">{config.title}</span>
+      <span class="site-logo-short">TUR</span>
     </a>
-    <nav class="hidden flex-col justify-end md:flex">
-      <ul class="flex gap-4 lg:gap-6">
+
+    <nav class="site-nav hidden md:flex" aria-label="Main navigation">
+      <ul class="site-nav-list">
         {
           config.navbarItems.map((item) => (
-            <li class="flex flex-col justify-center">
+            <li>
               {isNavItem(item) ? (
                 <NavItem
                   {item}
@@ -48,39 +42,36 @@ export const isNavItem = (item: HeaderItem): item is NavItemType =>
             </li>
           ))
         }
-        <li class="text-xl lg:text-2xl">
-          <a
-            href="/search"
-            class="flex items-center transition-colors hover:text-accent"
-          >
-            <span class="clickable iconify tabler--search"></span>
+        <li>
+          <a href="/search" class="site-nav-icon" aria-label="Search">
+            <span class="iconify tabler--search"></span>
           </a>
         </li>
-        <li class="text-xl lg:text-2xl">
-          {config.modeToggle && <ModeToggle />}
-        </li>
+        {
+          config.modeToggle && (
+            <li>
+              <ModeToggle />
+            </li>
+          )
+        }
       </ul>
     </nav>
-    <div class="flex items-center gap-3 text-xl sm:gap-4 sm:text-2xl md:hidden">
+
+    <div class="flex items-center gap-2 md:hidden">
       {config.modeToggle && <ModeToggle />}
-      <a
-        href="/search"
-        class="flex items-center transition-colors hover:text-accent"
-      >
-        <span class="clickable iconify tabler--search"></span>
+      <a href="/search" class="site-nav-icon" aria-label="Search">
+        <span class="iconify tabler--search"></span>
       </a>
       <MobileNavToggle />
     </div>
   </div>
-  <div
-    id="mobile-nav"
-    class="mx-auto hidden w-full max-w-6xl border-t border-gray-200/60 px-3 pt-4 sm:px-6 dark:border-white/10"
-  >
-    <nav class="flex flex-col justify-end pb-4">
-      <ul class="flex flex-col items-center gap-2">
+
+  <div id="mobile-nav" class="site-mobile-nav hidden">
+    <nav aria-label="Mobile navigation">
+      <ul class="site-mobile-nav-list">
         {
           config.navbarItems.map((item) => (
-            <li class="flex flex-col justify-center">
+            <li>
               {isNavItem(item) ? (
                 <NavItem
                   {item}
@@ -99,3 +90,54 @@ export const isNavItem = (item: HeaderItem): item is NavItemType =>
     </nav>
   </div>
 </header>
+
+<style>
+  .site-header {
+    @apply sticky top-0 z-50 border-b backdrop-blur-md;
+    border-color: rgba(255, 255, 255, 0.06);
+    background: rgba(8, 8, 10, 0.85);
+  }
+
+  .site-header-inner {
+    @apply mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6 sm:py-4 lg:px-8;
+  }
+
+  .site-logo {
+    @apply text-lg font-bold tracking-tight transition-colors sm:text-xl;
+    color: var(--roads-text, #f0ebe3);
+  }
+
+  .site-logo:hover {
+    @apply text-accent;
+  }
+
+  .site-logo-short {
+    @apply sm:hidden;
+  }
+
+  .site-logo-full {
+    @apply hidden sm:inline;
+  }
+
+  .site-nav-list {
+    @apply flex items-center gap-1 lg:gap-2;
+  }
+
+  .site-nav-icon {
+    @apply flex items-center justify-center rounded-lg p-2 text-lg transition-colors;
+    color: rgba(240, 235, 227, 0.6);
+  }
+
+  .site-nav-icon:hover {
+    @apply text-accent;
+  }
+
+  .site-mobile-nav {
+    @apply border-t px-4 pb-4 pt-3 sm:px-6;
+    border-color: rgba(255, 255, 255, 0.06);
+  }
+
+  .site-mobile-nav-list {
+    @apply flex flex-col items-center gap-1;
+  }
+</style>
