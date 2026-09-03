@@ -200,8 +200,8 @@
       "href": "/insights/ai-native-venture-studio-operating-system"
     },
     "secondaryCta": {
-      "label": "Work with the studio",
-      "href": "/services/ai-native-venture-studio"
+      "label": "Browse Field Notes",
+      "href": "/posts/"
     }
   },
   "signals": {

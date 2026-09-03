@@ -9,6 +9,10 @@ import config from './src/theme.config'
 
 export default defineConfig({
   site: config.site,
+  redirects: {
+    '/services/ai-native-venture-studio': '/',
+    '/projects/emil-ingemark-karlsson': 'https://emilingemarkarlsson.com/'
+  },
   integrations: [tailwind(), mdx(), sitemap()],
   markdown: {
     shikiConfig: {
