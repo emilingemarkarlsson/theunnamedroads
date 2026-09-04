@@ -1,5 +1,4 @@
 ---
-import ToolStackSection from '@/components/ToolStackSection.astro'
 import { toMonthString } from '@/util'
 import { getProjects } from '@/util/projects'
 import { getEntry, type CollectionEntry } from 'astro:content'
@@ -133,10 +132,14 @@ const heroLoop = homepageData.hero.controlLoop
     <div class="loop-panel" aria-label={heroLoop.loopLabel}>
       <div class="loop-header">
         <span class="loop-label">{heroLoop.platformLabel}</span>
-        <span class="loop-live">
-          <span class="loop-live-dot" aria-hidden="true"></span>
-          {heroLoop.liveLabel ?? 'LIVE'}
-        </span>
+        {
+          heroLoop.liveLabel && (
+            <span class="loop-live">
+              <span class="loop-live-dot" aria-hidden="true" />
+              {heroLoop.liveLabel}
+            </span>
+          )
+        }
       </div>
       <p class="loop-label mb-3">{heroLoop.loopLabel}</p>
       <div class="loop-steps">
@@ -288,14 +291,22 @@ const heroLoop = homepageData.hero.controlLoop
     </div>
   </section>
 
-  <!-- Company OS -->
+  <!-- Company OS archive -->
   {
     homepageData.companyOs && (
-      <section id="company-os" class="section-shell space-y-8" data-reveal>
+      <section id="company-os" class="section-shell space-y-5" data-reveal>
         <header class="space-y-3">
           <p class="section-eyebrow">{homepageData.companyOs.eyebrow}</p>
           <h2 class="section-title">{homepageData.companyOs.title}</h2>
           <p class="section-lead">{homepageData.companyOs.description}</p>
+          {homepageData.companyOs.statusNote && (
+            <p
+              class="text-sm font-medium"
+              style="color: var(--roads-text-soft)"
+            >
+              {homepageData.companyOs.statusNote}
+            </p>
+          )}
           <div class="flex flex-wrap gap-3 pt-2">
             <a
               href={homepageData.companyOs.primaryCta.href}
@@ -306,89 +317,24 @@ const heroLoop = homepageData.hero.controlLoop
             >
               {homepageData.companyOs.primaryCta.label}
             </a>
-            <a
-              href={homepageData.companyOs.secondaryCta.href}
-              class="btn-secondary"
-              data-ph-event="cta_click"
-              data-ph-cta-id="company_os_services"
-              data-ph-section="company_os"
-            >
-              {homepageData.companyOs.secondaryCta.label}
-            </a>
+            {homepageData.companyOs.secondaryCta && (
+              <a
+                href={homepageData.companyOs.secondaryCta.href}
+                class="btn-secondary"
+                data-ph-event="cta_click"
+                data-ph-cta-id="company_os_field_notes"
+                data-ph-section="company_os"
+              >
+                {homepageData.companyOs.secondaryCta.label}
+              </a>
+            )}
           </div>
         </header>
-        <div
-          class="grid grid-cols-3 gap-3 rounded-xl border p-4 text-center"
-          style="border-color: var(--roads-border)"
-        >
-          {homepageData.companyOs.stats.map((stat) => (
-            <div>
-              <p
-                class="text-2xl font-semibold"
-                style="color: var(--roads-text)"
-              >
-                {stat.value}
-              </p>
-              <p
-                class="text-xs uppercase tracking-wider"
-                style="color: var(--roads-text-soft)"
-              >
-                {stat.label}
-              </p>
-            </div>
-          ))}
-        </div>
-        <div class="grid gap-4 md:grid-cols-3">
-          {homepageData.companyOs.pillars.map((pillar, index) => (
-            <div
-              class="signal-card"
-              data-reveal
-              style={`--reveal-delay:${index * 50}ms`}
-            >
-              <p class="section-eyebrow">{pillar.label}</p>
-              <p class="mt-2 text-sm" style="color: var(--roads-text-muted)">
-                {pillar.detail}
-              </p>
-            </div>
-          ))}
-        </div>
       </section>
     )
   }
 
-  <!-- Signals / Thesis -->
-  <section class="section-shell space-y-6" data-reveal>
-    <header class="space-y-3">
-      <p class="section-eyebrow">{homepageData.signals.eyebrow}</p>
-      <h2 class="section-title">{homepageData.signals.title}</h2>
-      <p class="section-lead">{homepageData.signals.description}</p>
-    </header>
-    <div class="flex flex-wrap gap-2">
-      {
-        homepageData.signals.tags.map((tag) => (
-          <span class="signal-tag">{tag}</span>
-        ))
-      }
-    </div>
-    <div class="grid gap-4 md:grid-cols-2">
-      {
-        homepageData.signals.highlights.map((highlight, index) => (
-          <div
-            class="signal-card"
-            data-reveal
-            style={`--reveal-delay:${index * 50}ms`}
-          >
-            <p class="section-eyebrow">{highlight.label}</p>
-            <p class="mt-2 text-sm" style="color: var(--roads-text-muted)">
-              {highlight.detail}
-            </p>
-          </div>
-        ))
-      }
-    </div>
-  </section>
-
-  <!-- Operating System -->
+  <!-- How we ship -->
   <section id="operating-system" class="section-shell space-y-8" data-reveal>
     <header class="space-y-3">
       <p class="section-eyebrow">{homepageData.operatingSystem.eyebrow}</p>
@@ -424,103 +370,56 @@ const heroLoop = homepageData.hero.controlLoop
     </ol>
   </section>
 
-  <ToolStackSection id="tools" data={homepageData.tools} />
+  {
+    homepageData.fieldNotesTeaser && (
+      <section class="section-shell space-y-4" data-reveal>
+        <p class="section-eyebrow">{homepageData.fieldNotesTeaser.eyebrow}</p>
+        <h2 class="section-title">{homepageData.fieldNotesTeaser.title}</h2>
+        <p class="section-lead">{homepageData.fieldNotesTeaser.description}</p>
+        <a
+          href={homepageData.fieldNotesTeaser.href}
+          class="inline-flex text-sm font-semibold text-accent"
+          data-ph-event="cta_click"
+          data-ph-cta-id="field_notes_teaser"
+          data-ph-section="field_notes"
+        >
+          {homepageData.fieldNotesTeaser.linkLabel} →
+        </a>
+      </section>
+    )
+  }
 
-  <!-- Testimonials -->
-  <section class="section-shell space-y-8" data-reveal>
-    <header class="space-y-3">
-      <p class="section-eyebrow">{homepageData.testimonials.eyebrow}</p>
-      <h2 class="section-title">{homepageData.testimonials.title}</h2>
-      <p class="section-lead">{homepageData.testimonials.description}</p>
-    </header>
-    <div class="grid gap-5 md:grid-cols-3">
-      {
-        homepageData.testimonials.quotes.map((quote, index) => (
-          <blockquote
-            class="quote-card"
-            data-reveal
-            style={`--reveal-delay:${index * 50}ms`}
-          >
-            <p
-              class="text-sm leading-relaxed"
-              style="color: var(--roads-text-muted)"
-            >
-              &ldquo;{quote.quote}&rdquo;
-            </p>
-            <footer class="mt-3 text-xs" style="color: var(--roads-text-soft)">
-              {quote.author} · {quote.role}
-            </footer>
-          </blockquote>
-        ))
-      }
-    </div>
-  </section>
-
-  <!-- About -->
-  <section class="section-shell" data-reveal>
-    <div class="grid gap-8 lg:grid-cols-2">
-      <div>
-        <p class="section-eyebrow">{homepageData.about.eyebrow}</p>
-        <h2 class="section-title mt-2">{homepageData.about.title}</h2>
-        <p class="mt-1 text-sm" style="color: var(--roads-text-soft)">
-          {homepageData.about.subtitle}
-        </p>
-        <div class="mt-5 space-y-3">
-          {
-            homepageData.about.body.map((paragraph) => (
-              <p
-                class="text-sm leading-relaxed"
-                style="color: var(--roads-text-muted)"
-              >
-                {paragraph}
-              </p>
-            ))
-          }
-        </div>
-      </div>
-      <div class="space-y-4">
-        {
-          homepageData.about.pillars.map((pillar, index) => (
-            <div
-              class="signal-card"
-              data-reveal
-              style={`--reveal-delay:${index * 40}ms`}
-            >
-              <p class="section-eyebrow">{pillar.title}</p>
-              <p class="mt-1 text-sm" style="color: var(--roads-text-muted)">
-                {pillar.detail}
-              </p>
-            </div>
-          ))
-        }
+  {
+    homepageData.stackStrip && (
+      <section class="section-shell" data-reveal>
         <div
-          class="grid grid-cols-3 gap-3 rounded-xl border p-4 text-center"
+          class="flex flex-col gap-4 rounded-xl border p-5 sm:flex-row sm:items-center sm:justify-between"
           style="border-color: var(--roads-border)"
         >
-          {
-            homepageData.about.stats.map((stat) => (
-              <div>
-                <p
-                  class="text-xl font-semibold"
-                  style="color: var(--roads-text)"
-                >
-                  {stat.value}
-                </p>
-                <p
-                  class="text-xs uppercase tracking-wider"
-                  style="color: var(--roads-text-soft)"
-                >
-                  {stat.label}
-                </p>
-              </div>
-            ))
-          }
+          <div class="space-y-2">
+            <p class="section-eyebrow">{homepageData.stackStrip.eyebrow}</p>
+            <p class="text-sm font-medium" style="color: var(--roads-text)">
+              {homepageData.stackStrip.title}
+            </p>
+            <p class="text-sm" style="color: var(--roads-text-muted)">
+              {homepageData.stackStrip.description}
+            </p>
+          </div>
+          <a
+            href={homepageData.stackStrip.href}
+            class="btn-secondary shrink-0"
+            data-ph-event="cta_click"
+            data-ph-cta-id="stack_strip"
+            data-ph-section="stack"
+          >
+            {homepageData.stackStrip.linkLabel}
+          </a>
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
+    )
+  }
 
-  <!-- Contact -->
+  <!-- Soft close -->
   <section class="contact-shell" data-reveal>
     <p class="section-eyebrow">{homepageData.contact.eyebrow}</p>
     <h2 class="section-title mt-3">{homepageData.contact.title}</h2>
