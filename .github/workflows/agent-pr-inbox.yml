@@ -1,0 +1,54 @@
+name: Agent PR inbox
+
+# Cursor Cloud Agent tokens cannot assign PRs (403). This workflow ensures
+# agent PRs always land in Emil's GitHub approval queues.
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - ready_for_review
+    branches:
+      - main
+
+permissions:
+  pull-requests: write
+
+jobs:
+  route-to-human:
+    if: startsWith(github.head_ref, 'cursor/agent-issue-')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Assign and request review from emilingemarkarlsson
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const pull_number = context.payload.pull_request.number;
+            const human = 'emilingemarkarlsson';
+
+            await github.rest.issues.addAssignees({
+              owner,
+              repo,
+              issue_number: pull_number,
+              assignees: [human],
+            });
+            core.info(`Assigned PR #${pull_number} to ${human}`);
+
+            try {
+              await github.rest.pulls.requestReviewers({
+                owner,
+                repo,
+                pull_number,
+                reviewers: [human],
+              });
+              core.info(`Requested review on PR #${pull_number} from ${human}`);
+            } catch (error) {
+              // Author cannot request review from self — inbox assignee is enough.
+              if (error.status === 422) {
+                core.warning(`Could not request review (likely self-review): ${error.message}`);
+              } else {
+                throw error;
+              }
+            }

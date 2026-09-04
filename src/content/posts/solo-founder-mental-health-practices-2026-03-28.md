@@ -3,7 +3,7 @@ title: "Solo Founder Mental Health Practices"
 description: "The pursuit of innovation is often romanticized as a linear journey, where entrepreneurs and founders follow a well-trodden path to success. However, the realit"
 publishedDate: 2026-03-28
 dateModified: 2026-03-28
-author: The Unnamed Road
+author: The Unnamed Roads
 tags: ['solo', 'founder', 'mental', 'health']
 draft: true
 ---

@@ -3,7 +3,7 @@ title: "Solo Founder Mental Health Practices"
 description: "The journey of building something from scratch is often shrouded in uncertainty, with each step forward feeling like a leap of faith into the unknown. For indie"
 publishedDate: 2026-04-06
 dateModified: 2026-04-06
-author: The Unnamed Road
+author: The Unnamed Roads
 tags: ['solo', 'founder', 'mental', 'health']
 draft: true
 ---

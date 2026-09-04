@@ -27,7 +27,13 @@ Execute ska alltid **assigna** dig också. Använd den här om review-request sa
 
 ### Om båda köerna är tomma
 
-Inget att göra just nu.
+Tre vanliga orsaker:
+
+1. **Ingen öppen agent-PR** — Execute har inte kört, eller inget issue har `agent:ready`.
+2. **PR redan mergad** — mergade PR:er försvinner från båda köerna. Smoke test [#12](https://github.com/emilingemarkarlsson/theunnamedroads/pull/12) mergades t.ex. direkt; då är det *klart*, inte trasigt.
+3. **Fel kö** — agent-PR:er hamnar i [Review requests](https://github.com/pulls/review-requested) först. [Assigned](https://github.com/pulls/assigned) är backup om Cursor-boten inte kunde assigna (GitHub Action `agent-pr-inbox.yml` fixar det framåt).
+
+Manuellt filter om något glipade: [öppna `cursor/agent-issue-*` PR:er](https://github.com/emilingemarkarlsson/theunnamedroads/pulls?q=is%3Apr+is%3Aopen+head%3Acursor%2Fagent-issue-).
 
 ### Relaterat
 

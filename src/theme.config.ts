@@ -2,10 +2,10 @@ import { defineThemeConfig } from './types'
 
 export default defineThemeConfig({
   site: 'https://www.theunnamedroads.com',
-  title: 'The Unnamed Road',
+  title: 'The Unnamed Roads',
   description:
     'AI-native venture studio building measured, decision-first companies. Portfolio of focused experiments, Field Notes for indie founders, and a Company OS that compounds learning.',
-  author: 'The Unnamed Road',
+  author: 'The Unnamed Roads',
   navbarItems: [
     { label: 'Home', href: '/' },
     { label: 'About', href: '/about' },

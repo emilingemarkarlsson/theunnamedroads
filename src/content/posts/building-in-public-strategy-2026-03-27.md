@@ -3,7 +3,7 @@ title: "Building In Public Strategy"
 description: "As we navigate the uncharted territories of entrepreneurship and innovation, it's easy to get caught up in the romantic notion of the 'big idea' – that singular"
 publishedDate: 2026-03-27
 dateModified: 2026-03-27
-author: The Unnamed Road
+author: The Unnamed Roads
 tags: ['building', 'public', 'strategy']
 draft: true
 ---

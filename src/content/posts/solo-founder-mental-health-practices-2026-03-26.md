@@ -3,7 +3,7 @@ title: "Solo Founder Mental Health Practices"
 description: "The allure of the unconventional path is a siren's call to many an entrepreneur, inventor, and innovator. It's a journey without a map, where the rules are made"
 publishedDate: 2026-03-26
 dateModified: 2026-03-26
-author: The Unnamed Road
+author: The Unnamed Roads
 tags: ['solo', 'founder', 'mental', 'health']
 draft: true
 ---

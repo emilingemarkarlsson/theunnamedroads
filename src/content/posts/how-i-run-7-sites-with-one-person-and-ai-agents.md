@@ -3,7 +3,7 @@ title: "How I Run 7 Websites With One Person and AI Agents"
 description: "A detailed breakdown of the automation stack behind The Unnamed Roads studio: self-hosted on Hetzner, n8n workflows, AI-generated content pipelines, and what actually went wrong building it."
 publishedDate: 2026-03-30
 dateModified: 2026-03-30
-author: Emil Karlsson
+author: "Emil Ingemar Karlsson"
 tags: ['automation', 'n8n', 'selfhosted', 'ai', 'buildinpublic']
 draft: false
 ---

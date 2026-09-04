@@ -5,3 +5,19 @@
 # Project slug rename (THA)
 /projects/example-project /projects/the-hockey-analytics 301
 /projects/example-project/ /projects/the-hockey-analytics/ 301
+
+# EIK project slug typo fix (legacy slug → Ingemar)
+/projects/emil-ingemark-karlsson /projects/emil-ingemar-karlsson 301
+/projects/emil-ingemark-karlsson/ /projects/emil-ingemar-karlsson/ 301
+
+# EIK personal realm — off studio domain
+/projects/emil-ingemar-karlsson https://emilingemarkarlsson.com/ 301
+/projects/emil-ingemar-karlsson/ https://emilingemarkarlsson.com/ 301
+
+# Hire-funnel removal
+/services/ai-native-venture-studio / 301
+/services/ai-native-venture-studio/ / 301
+
+# Canonical author entity
+/authors/Emil%20Karlsson /authors/Emil%20Ingemar%20Karlsson 301
+/authors/Emil%20Karlsson/ /authors/Emil%20Ingemar%20Karlsson/ 301

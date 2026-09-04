@@ -10,7 +10,7 @@ type Props = InferGetStaticPropsType<typeof getStaticPaths>
 export async function getStaticPaths() {
   const projects = await getCollection('projects')
   return projects
-    .filter((project) => project.slug !== 'emil-ingemark-karlsson')
+    .filter((project) => project.slug !== 'emil-ingemar-karlsson')
     .map((project) => ({
       params: { slug: project.slug },
       props: { project }
