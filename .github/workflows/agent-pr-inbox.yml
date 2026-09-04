@@ -16,7 +16,7 @@ permissions:
 
 jobs:
   route-to-human:
-    if: startsWith(github.head_ref, 'cursor/agent-issue-')
+    if: startsWith(github.head_ref, 'cursor/')
     runs-on: ubuntu-latest
     steps:
       - name: Assign and request review from emilingemarkarlsson
