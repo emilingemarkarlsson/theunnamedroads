@@ -102,6 +102,7 @@ const organizationJsonLd = {
   url: config.site,
   logo: `${config.site}/favicon-tur.svg`,
   sameAs: sameAsProfiles,
+  founder: { '@id': `${config.site}#founder` },
   contactPoint: [
     {
       '@type': 'ContactPoint',
@@ -129,7 +130,23 @@ const websiteJsonLd = {
 }
 
 const pathname = Astro.url.pathname
+const isHomePage = pathname === '/' || pathname === ''
 const isAgentsPage = pathname === '/agents' || pathname === '/agents/'
+
+const founderPersonJsonLd = isHomePage
+  ? {
+      '@type': 'Person',
+      '@id': `${config.site}#founder`,
+      name: 'Emil Ingemar Karlsson',
+      jobTitle: 'Operator',
+      worksFor: { '@id': organizationId },
+      homeLocation: {
+        '@type': 'Place',
+        name: 'Stockholm, Sweden'
+      },
+      url: 'https://emilingemarkarlsson.com/'
+    }
+  : null
 
 const webPageDateModified = dateModifiedValue?.toISOString() ?? publishedDateValue?.toISOString() ?? new Date().toISOString()
 
@@ -219,6 +236,7 @@ const jsonLdGraph: Record<string, unknown>[] = [
   webPageJsonLd,
   breadcrumbJsonLd
 ]
+if (founderPersonJsonLd) jsonLdGraph.push(founderPersonJsonLd)
 if (articleJsonLd) jsonLdGraph.push(articleJsonLd)
 if (faqJsonLd) jsonLdGraph.push(faqJsonLd)
 

@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "theunnamedroads.com" }],
+      "destination": "https://www.theunnamedroads.com/:path*",
+      "permanent": true
+    }
+  ]
+}
