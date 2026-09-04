@@ -11,22 +11,23 @@ operating notes — not generic AI commentary.
 
 ## Focus projects (daily growth execution)
 
-1. **TUR Company OS** (control plane)
-   - URL: https://theunnamedroads.com/insights/ai-native-venture-studio-operating-system/
-   - Offer: decision-first portfolio OS — signals, approvals, learning loops
-   - CTA: Read the operating system explainer
-2. **The Hockey Analytics — Sweden Club Pack**
+1. **The Hockey Analytics — Sweden Club Pack**
    - URL: https://thehockeyanalytics.com/
    - Offer: club intelligence for SHL / HockeyAllsvenskan decision-makers
    - CTA: Request Sweden Club Pack beta
-3. **Föräldraledighetsplaneraren**
+2. **Föräldraledighetsplaneraren**
    - URL: https://tur-parentalleave.vercel.app/
    - Offer: personal Swedish parental-leave plan (days + money trade-offs)
    - CTA: Complete leave plan in the free planner
-4. **TUR Field Notes** (this site)
+3. **TUR Field Notes** (this site)
    - URL: https://theunnamedroads.com/posts/
    - Offer: open experiments with decisions, cost, outcomes, playbooks
    - CTA: Subscribe to Field Notes
+
+## Avvecklat (archive only)
+
+- **TUR Company OS** — platform wound down September 2026; explainer kept for reference
+  - URL: https://theunnamedroads.com/insights/ai-native-venture-studio-operating-system/
 
 ## Monitor (live, not daily growth)
 
@@ -55,4 +56,4 @@ operating notes — not generic AI commentary.
 
 ## Publisher
 
-Emil Ingemar Karlsson — Stockholm. Studio: The Unnamed Roads / TUR Company OS.
+Emil Ingemar Karlsson — Stockholm. Studio: The Unnamed Roads.

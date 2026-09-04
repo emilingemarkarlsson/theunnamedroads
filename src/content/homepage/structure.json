@@ -192,7 +192,7 @@
     ],
     "stats": [
       { "id": "projects", "label": "Live ventures", "value": "10+" },
-      { "id": "focus", "label": "Focus projects", "value": "4" },
+      { "id": "focus", "label": "Focus projects", "value": "3" },
       { "id": "loop", "label": "Learning loop", "value": "Signal → Lesson" }
     ],
     "primaryCta": {
@@ -229,7 +229,7 @@
       {
         "id": "focus-allocation",
         "label": "Focus projects in rotation",
-        "detail": "Company OS, THA, Parental and TUR Field Notes run measured experiments. Everything else is Monitor or Parked."
+        "detail": "THA, Parental and TUR Field Notes run measured experiments. Everything else is Monitor, Parked or Avvecklat."
       },
       {
         "id": "distribution",
