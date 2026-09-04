@@ -31,7 +31,7 @@ const wordCount = post.body.split(/\s+/).filter(Boolean).length
 const frontmatter: PageLayoutProps['frontmatter'] = {
   ...post.data,
   openGraphImage: post.data.openGraphImage || `/posts/${post.slug}.png`,
-  activeHeaderLink: 'Blog',
+  activeHeaderLink: 'Field Notes',
   scrollProgress: true,
   searchable: true,
   publishedDate: post.data.publishedDate,

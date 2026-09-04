@@ -3,6 +3,10 @@ import FooterItem from '@/components/layout/FooterItem.astro'
 import config from '@/theme.config'
 
 const currentYear = new Date().getFullYear()
+const footerLinks = [
+  ...config.navbarItems,
+  ...(config.footerNavItems ?? [])
+].filter((item): item is { label: string; href: string } => 'href' in item)
 ---
 
 <footer class="site-footer">
@@ -15,13 +19,11 @@ const currentYear = new Date().getFullYear()
     <nav class="site-footer-nav" aria-label="Footer navigation">
       <ul>
         {
-          config.navbarItems.map((item) =>
-            'href' in item ? (
-              <li>
-                <a href={item.href}>{item.label}</a>
-              </li>
-            ) : null
-          )
+          footerLinks.map((item) => (
+            <li>
+              <a href={item.href}>{item.label}</a>
+            </li>
+          ))
         }
       </ul>
     </nav>

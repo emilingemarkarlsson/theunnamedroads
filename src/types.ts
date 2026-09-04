@@ -53,6 +53,7 @@ export interface ThemeConfig {
   description: string
   author: string
   navbarItems: HeaderItem[]
+  footerNavItems?: NavItem[]
   footerItems: NavItem[]
 
   locale: string
@@ -79,6 +80,7 @@ const defaults = {
   scrollProgress: false,
   scrollToTop: true,
   tagIcons: {},
+  footerNavItems: [] as NavItem[],
   shikiThemes: {
     light: 'vitesse-light',
     dark: 'vitesse-black'

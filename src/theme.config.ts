@@ -7,12 +7,16 @@ export default defineThemeConfig({
     'AI-native venture studio building measured, decision-first companies. Portfolio of focused experiments, Field Notes for indie founders, and a Company OS that compounds learning.',
   author: 'The Unnamed Roads',
   navbarItems: [
-    { label: 'Home', href: '/' },
+    { label: 'Projects', href: '/projects' },
+    { label: 'Field Notes', href: '/posts' },
     { label: 'About', href: '/about' },
+    { label: 'Insights', href: '/insights' }
+  ],
+  footerNavItems: [
     { label: 'Stack', href: '/stack' },
     { label: 'Tools', href: '/tools' },
-    { label: 'Insights', href: '/insights' },
-    { label: 'Contact', href: '/contact' }
+    { label: 'Contact', href: '/contact' },
+    { label: 'For assistants', href: '/for-assistants' }
   ],
   footerItems: [
     {

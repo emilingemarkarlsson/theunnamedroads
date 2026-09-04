@@ -2,7 +2,7 @@ import fs from 'fs'
 import path from 'path'
 
 const CONFIG = {
-  host: 'theunnamedroads.com',
+  host: 'www.theunnamedroads.com',
   key: '741e73bc05ca4ca8b93944e7e9231f99',
   sitemapPath: path.join(process.cwd(), 'dist', 'sitemap-0.xml'), // Astro usually names it sitemap-0.xml
   indexNowApi: 'https://api.indexnow.org/indexnow'
