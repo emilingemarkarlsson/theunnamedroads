@@ -14,3 +14,5 @@ alwaysApply: true
 - Production host is Vercel (`tur-site`); deploy via `git push origin main` — do not switch hosts.
 - When opening an agent Execute PR: mark **Ready for review** (not draft), **assign** `emilingemarkarlsson`, and **request review** from them when the author is cursor-bot — otherwise the PR never lands in https://github.com/pulls/assigned.
 - Never merge your own agent PR; Emil approves. After Emil merges, they unassign themselves (GitHub does not clear assignees).
+- **Astro static redirects:** `redirects` in `astro.config.ts` emit meta-refresh pages at build time. When a slug is redirected, exclude it from `getStaticPaths` in the matching dynamic route (e.g. `src/pages/projects/[slug].astro`) to avoid route-collision warnings.
+- **Portfolio redirect pattern:** external project redirect = config redirect + filter slug from `getStaticPaths`; keep a short content file if the project still appears on portfolio cards.
