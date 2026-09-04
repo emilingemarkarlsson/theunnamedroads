@@ -10,6 +10,7 @@ alwaysApply: true
 - Follow issue acceptance criteria exactly; do not expand scope.
 - Max 2 retries on failure. If still blocked, stop and ask for human help (`agent:needs-human`).
 - Prefer existing scripts (`pnpm check`, `pnpm build`, `pnpm lint`) over new tooling.
+- Docs-only agent issues (changes under `docs/` only): always run `pnpm check`; skip `pnpm build` unless acceptance criteria explicitly require it.
 - Use `pnpm` (see `packageManager` in `package.json`). Content collection date field is `publishedDate` (not `pubDate`).
 - Production host is Vercel (`tur-site`); deploy via `git push origin main` — do not switch hosts.
 - When opening an agent Execute PR: mark **Ready for review** (not draft), **assign** `emilingemarkarlsson`, and **request review** from them when the author is cursor-bot — otherwise the PR never lands in https://github.com/pulls/assigned.
