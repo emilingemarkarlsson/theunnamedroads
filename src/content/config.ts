@@ -178,28 +178,53 @@ const homepage = defineCollection({
         eyebrow: z.string(),
         title: z.string(),
         description: z.string(),
-        pillars: z.array(
-          z.object({
-            id: z.string(),
-            label: z.string(),
-            detail: z.string()
-          })
-        ),
-        stats: z.array(
-          z.object({
-            id: z.string(),
-            label: z.string(),
-            value: z.string()
-          })
-        ),
+        statusNote: z.string().optional(),
+        pillars: z
+          .array(
+            z.object({
+              id: z.string(),
+              label: z.string(),
+              detail: z.string()
+            })
+          )
+          .optional(),
+        stats: z
+          .array(
+            z.object({
+              id: z.string(),
+              label: z.string(),
+              value: z.string()
+            })
+          )
+          .optional(),
         primaryCta: z.object({
           label: z.string(),
           href: z.string()
         }),
-        secondaryCta: z.object({
-          label: z.string(),
-          href: z.string()
-        })
+        secondaryCta: z
+          .object({
+            label: z.string(),
+            href: z.string()
+          })
+          .optional()
+      })
+      .optional(),
+    stackStrip: z
+      .object({
+        eyebrow: z.string(),
+        title: z.string(),
+        description: z.string(),
+        href: z.string(),
+        linkLabel: z.string()
+      })
+      .optional(),
+    fieldNotesTeaser: z
+      .object({
+        eyebrow: z.string(),
+        title: z.string(),
+        description: z.string(),
+        href: z.string(),
+        linkLabel: z.string()
       })
       .optional(),
     signals: z.object({
