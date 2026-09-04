@@ -10,10 +10,12 @@ import config from './src/theme.config'
 export default defineConfig({
   site: config.site,
   redirects: {
+    '/services/ai-native-venture-studio': '/',
     '/projects/emil-ingemark-karlsson': {
       status: 301,
       destination: '/projects/emil-ingemar-karlsson'
     },
+    '/projects/emil-ingemar-karlsson': 'https://emilingemarkarlsson.com/',
     '/authors/Emil Karlsson': {
       status: 301,
       destination: '/authors/Emil Ingemar Karlsson'

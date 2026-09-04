@@ -1,82 +1,43 @@
 ---
 layout: '@/layouts/PageLayout.astro'
-title: AI Agent Team
-description: Meet the AI agents that author our content—AION, NEXUS, FLUX, ECHO, FORGE, and CORE. Each has a distinct role and expertise in our AI-native venture studio.
+title: Agent roles & approval policy
+description: How The Unnamed Roads uses MethodPolicy agent roles inside human Approve gates — not a fake executive team.
 ---
 
-# AI Agent Team
+# Agent roles & approval policy
 
-Our content is authored by our AI agent team—each with specialized expertise and a distinct voice.
+Agents on this studio site are **policy-bound workflow roles** inside [TUR Company OS](/insights/ai-native-venture-studio-operating-system) — not executives, not autonomous publishers.
 
-## Active Agents
+Every consequential action — publish, deploy, external send — requires a **human Approve** on the phone. Drafts and research can run under MethodPolicy spend gates; nothing goes live without a gate.
 
-### AION
-**Lead AI Engineer**  
-*Speed, precision, multi-project execution*
+## MethodPolicy roles (not a org chart)
 
-Turns strategic intent into hardened systems—from backend services to production-ready apps.
+| Role | What it does | Gate |
+| --- | --- | --- |
+| **Research** | Ingest signals, rank opportunities, draft memos | Level 1–2 — internal only |
+| **Draft** | Copy, code and asset drafts under spend caps | Level 1–2 — no external send |
+| **Execute** | Bounded commits, builds, internal automation | Level 2 — policy-bound |
+| **Publish** | Deploy, IndexNow, outbound | **Level 3+ — human Approve required** |
 
-**Specializes in**: Technical implementation, infrastructure, code architecture
+These map to tooling (OpenRouter, Inngest, Cursor agents) — they are **not** named people or fake leadership.
 
----
+## Human Approve (always visible)
 
-### NEXUS
-**Strategic Intelligence**  
-*Pattern recognition, market analysis, opportunity identification*
+```
+Signal → Decision → Work → Outcome → Lesson
+              ↑
+        Human gate: Approve · Defer · Reject
+        (publish · deploy · external send)
+```
 
-Monitors signals across culture, capital, and technology to identify asymmetric opportunities.
+- **Approve** — proceed with the proposed external or consequential action
+- **Defer** — revisit with a date and reason
+- **Reject** — stop; log the lesson
 
-**Specializes in**: Market analysis, strategic frameworks, opportunity discovery
+Matches [`/llms.txt`](/llms.txt): agents execute only after human Approve gates.
 
----
+## Field Notes attribution
 
-### FLUX
-**Rapid Experimentation Lead**  
-*Hypothesis formation, experiment design, data synthesis*
+Some articles carry agent-style bylines (AION, NEXUS, etc.) as **voice labels** for specialized drafts — not a reporting structure. The operator approves what ships.
 
-Designs and executes 12-week proof cycles, turning ideas into validated learnings.
-
-**Specializes in**: Experiment methodology, validation frameworks, data analysis
-
----
-
-### ECHO
-**Content & Narrative**  
-*Technical writing, knowledge synthesis, documentation*
-
-Transforms operational learnings into actionable frameworks and thought leadership.
-
-**Specializes in**: Knowledge synthesis, frameworks, thought leadership
-
----
-
-### FORGE
-**Product Architecture**  
-*System design, infrastructure, scalability*
-
-Architects AI-native products from concept to production, ensuring technical excellence.
-
-**Specializes in**: Product design, system architecture, scalability patterns
-
----
-
-### CORE
-**Infrastructure Lead**  
-*Platform management, resource orchestration, self-hosted infrastructure*
-
-Manages the entire Coolify platform and infrastructure resources—MinIO, LiteLLM, and all self-hosted services that power our operations.
-
-**Specializes in**: Infrastructure management, platform orchestration, self-hosted services, resource optimization
-
----
-
-## How It Works
-
-Each article is authored by the agent whose expertise best matches the topic. This creates:
-- **Specialized expertise**: Each agent writes in their domain
-- **Consistent voice**: Agents maintain their distinct perspectives
-- **Practical knowledge**: Articles reflect real operational experience
-- **Team collaboration**: Multiple agents contribute to our knowledge base
-
-[View all articles by agent →](/insights)
-
+[Read Field Notes →](/insights) · [Company OS explainer →](/insights/ai-native-venture-studio-operating-system) · [For AI assistants →](/for-assistants)

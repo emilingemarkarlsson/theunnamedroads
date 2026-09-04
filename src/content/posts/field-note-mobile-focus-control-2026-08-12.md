@@ -62,4 +62,4 @@ Indie operators running multiple ventures who need decision-first distribution, 
 Portfolio Execution project in Linear (TUR-122–157), PostHog instrumentation, and public Focus · Monitor · Parked policy on the studio site.
 
 **What should I do next?**  
-Subscribe to Field Notes, or request the [AI-native venture studio service](/services/ai-native-venture-studio) if you want the same operating pattern.
+Subscribe to Field Notes, or read the [Company OS explainer](/insights/ai-native-venture-studio-operating-system) if you want the same operating pattern.

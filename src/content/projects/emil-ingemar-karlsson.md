@@ -1,13 +1,9 @@
 ---
 title: EIK
-description: Data Engineer & Full-Stack Developer based in Stockholm. Builds modern data pipelines, n8n automations, Streamlit apps, and scalable web solutions.
+description: Personal trust realm — distribution only. Founder portfolio linked from the studio site, not a studio venture.
 url: https://emilingemarkarlsson.com
 startDate: 2024-01-01
 tags:
-  - data-engineering
-  - full-stack
-  - automation
-  - consulting
   - portfolio
 homepage:
   featured: true
@@ -26,28 +22,8 @@ homepage:
   href: https://emilingemarkarlsson.com/
 ---
 
-# EIK
+# EIK — Personal realm
 
-**Data Engineer & Full-Stack Developer, Stockholm.**
+This project card links to the **personal trust realm** at [emilingemarkarlsson.com](https://emilingemarkarlsson.com/) — distribution only, not a studio venture or consulting offer on this domain.
 
-Personal portfolio and professional site for Emil Ingemar Karlsson – data engineer and full-stack developer specializing in modern data stacks, workflow automation, and scalable web applications.
-
-## What I Build
-
-- **Data pipelines** – scalable ETL and ELT workflows using Databricks, dbt, and Python
-- **Automation** – n8n workflows, data chat agents, and process automation
-- **Analytics** – Streamlit apps, Databricks Genie, usable dashboards
-- **Web applications** – full-stack development from backend APIs to frontend UX
-- **System architecture** – consulting on infrastructure, cloud platforms, and data strategy
-
-## Expertise
-
-**Technical:** Data Engineering · Full-Stack Development · Cloud Platforms
-
-**Leadership:** Project Management · Infrastructure Management
-
-**Business:** B2B Commerce · Hockey Analytics
-
-## Consulting
-
-Available for consulting engagements on data pipelines, automation architecture, and web development. Based in Stockholm, working remotely across Europe.
+[Visit emilingemarkarlsson.com →](https://emilingemarkarlsson.com/)
