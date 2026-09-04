@@ -11,6 +11,7 @@ alwaysApply: true
 - Max 2 retries on failure. If still blocked, stop and ask for human help (`agent:needs-human`).
 - Prefer existing scripts (`pnpm check`, `pnpm build`, `pnpm lint`) over new tooling.
 - Use `pnpm` (see `packageManager` in `package.json`). Content collection date field is `publishedDate` (not `pubDate`).
+- Brand/metadata splits (`Organization.name`, `og:site_name`, footer ©): fix `src/theme.config.ts` `title`/`author` first — they drive those outputs; only then hunt hardcoded strings in layouts or content.
 - Production host is Vercel (`tur-site`); deploy via `git push origin main` — do not switch hosts.
 - When opening an agent Execute PR: mark **Ready for review** (not draft), **assign** `emilingemarkarlsson`, and **request review** from them when the author is cursor-bot — otherwise the PR never lands in https://github.com/pulls/assigned.
 - Never merge your own agent PR; Emil approves. After Emil merges, they unassign themselves (GitHub does not clear assignees).
