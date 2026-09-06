@@ -19,7 +19,7 @@ export default defineConfig({
   site: config.site,
   redirects: {
     '/sitemap.xml': '/sitemap-index.xml',
-    '/services/ai-native-venture-studio': '/',
+    '/services/ai-native-venture-studio': '/services',
     '/projects/emil-ingemark-karlsson': {
       status: 301,
       destination: '/projects/emil-ingemar-karlsson'
