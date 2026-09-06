@@ -1,13 +1,12 @@
 {
   "hero": {
     "eyebrow": "AI venture studio",
-    "eyebrowAfter": "Decision-first portfolio. Measured learning. Agents inside policy — never as fake executives.",
+    "eyebrowAfter": "Agents draft inside policy — humans Approve before publish, deploy, or external send.",
     "headline": "The Unnamed Roads",
     "badges": [],
     "controlLoop": {
-      "windowTitle": "Company OS · Control loop",
-      "platformLabel": "TUR Company OS",
-      "liveLabel": "LIVE",
+      "windowTitle": "Studio · Control loop",
+      "platformLabel": "Decision-first loop",
       "operator": {
         "label": "Operator",
         "title": "Principal",
@@ -170,38 +169,13 @@
     ]
   },
   "companyOs": {
-    "eyebrow": "Powered by TUR Company OS",
-    "title": "The operating system behind every venture decision",
-    "description": "TUR Company OS is the control plane for this studio — portfolio hierarchy, approval gates, event memory and measured learning loops. Agents draft and execute inside proven workflows; humans keep governance at consequential boundaries.",
-    "pillars": [
-      {
-        "id": "decisions",
-        "label": "Decision-first",
-        "detail": "Every action traces to a signal, decision, expected outcome and human correction — not a dashboard metric wall."
-      },
-      {
-        "id": "focus",
-        "label": "Focus · Monitor · Parked",
-        "detail": "Focus projects run measured experiments. Monitor projects stay visible. Parked work does not compete for daily attention."
-      },
-      {
-        "id": "gates",
-        "label": "Human approval gates",
-        "detail": "Publish, deploy and external send never run autonomously. Mobile approvals keep velocity without losing control."
-      }
-    ],
-    "stats": [
-      { "id": "projects", "label": "Live ventures", "value": "10+" },
-      { "id": "focus", "label": "Focus projects", "value": "3" },
-      { "id": "loop", "label": "Learning loop", "value": "Signal → Lesson" }
-    ],
+    "eyebrow": "Archive · TUR Company OS",
+    "title": "Operating model reference — platform Avvecklat",
+    "description": "Company OS was the studio control plane for portfolio hierarchy, approval gates and learning loops. The platform wound down in September 2026; the decision-first playbook and human Approve gates remain how we ship.",
+    "statusNote": "Avvecklat September 2026 — kept as reference, not an active product.",
     "primaryCta": {
-      "label": "See how Company OS works",
+      "label": "Read the operating system essay",
       "href": "/insights/ai-native-venture-studio-operating-system"
-    },
-    "secondaryCta": {
-      "label": "Browse Field Notes",
-      "href": "/posts/"
     }
   },
   "signals": {
@@ -542,18 +516,32 @@
       { "id": "workflows", "label": "n8n workflows", "value": "23" }
     ]
   },
+  "stackStrip": {
+    "eyebrow": "Stack",
+    "title": "Infrastructure lives on dedicated pages",
+    "description": "Tool catalogs and cost breakdowns belong on /stack and /tools — not the studio homepage.",
+    "href": "/stack",
+    "linkLabel": "Browse the stack playbook"
+  },
+  "fieldNotesTeaser": {
+    "eyebrow": "Field Notes",
+    "title": "Evidence from building in public",
+    "description": "Measured experiments, approval gates and portfolio policy — written for indie founders shipping AI-native companies without heavy org debt.",
+    "href": "/posts/",
+    "linkLabel": "Read Field Notes"
+  },
   "contact": {
-    "eyebrow": "Say hello",
-    "title": "Questions about the stack?",
-    "description": "If you're building something similar — self-hosted AI infra, multi-site content ops, n8n workflows — I'm happy to talk. No sales pitch, just notes from the field.",
+    "eyebrow": "Keep exploring",
+    "title": "Field Notes and assistant context",
+    "description": "Subscribe to Field Notes for studio updates, or point assistants at our public context pages — no fit calls or stack consulting on this homepage.",
     "primaryCta": {
-      "label": "Get in touch",
-      "href": "/contact"
+      "label": "Browse Field Notes",
+      "href": "/posts/"
     },
     "secondaryCta": {
-      "label": "Get the €35 stack",
-      "href": "/stack"
+      "label": "For assistants",
+      "href": "/for-assistants"
     },
-    "note": "Also on Bluesky: @theunnamedroads.bsky.social"
+    "note": "Direct contact: /contact when you have a specific question."
   }
 }
