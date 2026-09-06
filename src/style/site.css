@@ -1,7 +1,8 @@
 /* ── The Unnamed Roads — shared site design system ── */
 
 @layer components {
-  .homepage-shell {
+  .homepage-shell,
+  .scheme-roads {
     --roads-bg: #08080a;
     --roads-surface: #111114;
     --roads-surface-elevated: #18181c;
@@ -13,6 +14,47 @@
     --roads-accent: #d4a054;
     --roads-accent-soft: rgba(212, 160, 84, 0.12);
     --roads-accent-glow: rgba(212, 160, 84, 0.25);
+
+    /* Status chip tokens */
+    --status-focus-fg: #6ee7b7;
+    --status-focus-border: rgba(52, 211, 153, 0.35);
+    --status-focus-bg: rgba(16, 185, 129, 0.1);
+    --status-focus-dot: #34d399;
+
+    --status-monitor-fg: #fcd34d;
+    --status-monitor-border: rgba(251, 191, 36, 0.35);
+    --status-monitor-bg: rgba(245, 158, 11, 0.1);
+    --status-monitor-dot: #fbbf24;
+
+    --status-parked-fg: #94a3b8;
+    --status-parked-border: rgba(148, 163, 184, 0.3);
+    --status-parked-bg: rgba(100, 116, 139, 0.12);
+    --status-parked-dot: #94a3b8;
+
+    --status-avvecklat-fg: #c4b5fd;
+    --status-avvecklat-border: rgba(167, 139, 250, 0.35);
+    --status-avvecklat-bg: rgba(139, 92, 246, 0.08);
+    --status-avvecklat-dot: #a78bfa;
+
+    --status-concept-fg: #7dd3fc;
+    --status-concept-border: rgba(56, 189, 248, 0.35);
+    --status-concept-bg: rgba(14, 165, 233, 0.1);
+    --status-concept-dot: #38bdf8;
+
+    --status-personal-fg: #f9a8d4;
+    --status-personal-border: rgba(244, 114, 182, 0.35);
+    --status-personal-bg: rgba(236, 72, 153, 0.1);
+    --status-personal-dot: #f472b6;
+
+    --status-linked-fg: #93c5fd;
+    --status-linked-border: rgba(96, 165, 250, 0.35);
+    --status-linked-bg: rgba(59, 130, 246, 0.1);
+    --status-linked-dot: #60a5fa;
+
+    --status-default-fg: var(--roads-text-muted);
+    --status-default-border: var(--roads-border);
+    --status-default-bg: rgba(255, 255, 255, 0.04);
+    --status-default-dot: var(--roads-text-soft);
 
     /* Legacy aliases for ToolStackSection */
     --tur-base: var(--roads-bg);
@@ -200,12 +242,143 @@
     color: var(--roads-text-soft);
   }
 
-  .status-pill {
-    @apply inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-xs font-semibold;
+  .status-chip {
+    @apply inline-flex shrink-0 items-center gap-1.5 rounded-full border px-2.5 py-1 text-xs font-semibold;
+    color: var(--status-default-fg);
+    border-color: var(--status-default-border);
+    background: var(--status-default-bg);
   }
 
-  .status-dot {
-    @apply h-1.5 w-1.5 rounded-full;
+  .status-chip--compact {
+    @apply px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider;
+  }
+
+  .status-chip-dot {
+    @apply h-1.5 w-1.5 shrink-0 rounded-full;
+    background: var(--status-default-dot);
+  }
+
+  .status-chip-dot--pulse {
+    animation: status-pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes status-pulse {
+    50% {
+      opacity: 0.45;
+    }
+  }
+
+  .status-chip--focus {
+    color: var(--status-focus-fg);
+    border-color: var(--status-focus-border);
+    background: var(--status-focus-bg);
+  }
+
+  .status-chip--focus .status-chip-dot {
+    background: var(--status-focus-dot);
+  }
+
+  .status-chip--monitor {
+    color: var(--status-monitor-fg);
+    border-color: var(--status-monitor-border);
+    background: var(--status-monitor-bg);
+  }
+
+  .status-chip--monitor .status-chip-dot {
+    background: var(--status-monitor-dot);
+  }
+
+  .status-chip--parked {
+    color: var(--status-parked-fg);
+    border-color: var(--status-parked-border);
+    background: var(--status-parked-bg);
+  }
+
+  .status-chip--parked .status-chip-dot {
+    background: var(--status-parked-dot);
+  }
+
+  .status-chip--avvecklat {
+    color: var(--status-avvecklat-fg);
+    border-color: var(--status-avvecklat-border);
+    background: var(--status-avvecklat-bg);
+    border-style: dashed;
+  }
+
+  .status-chip--avvecklat .status-chip-dot {
+    background: var(--status-avvecklat-dot);
+    opacity: 0.7;
+  }
+
+  .status-chip--concept {
+    color: var(--status-concept-fg);
+    border-color: var(--status-concept-border);
+    background: var(--status-concept-bg);
+  }
+
+  .status-chip--concept .status-chip-dot {
+    background: var(--status-concept-dot);
+  }
+
+  .status-chip--personal {
+    color: var(--status-personal-fg);
+    border-color: var(--status-personal-border);
+    background: var(--status-personal-bg);
+  }
+
+  .status-chip--personal .status-chip-dot {
+    background: var(--status-personal-dot);
+  }
+
+  .status-chip--linked {
+    color: var(--status-linked-fg);
+    border-color: var(--status-linked-border);
+    background: var(--status-linked-bg);
+  }
+
+  .status-chip--linked .status-chip-dot {
+    background: var(--status-linked-dot);
+  }
+
+  /* Field Notes list */
+  .field-note-card {
+    @apply rounded-2xl border p-5 transition-all duration-200 sm:p-6;
+    border-color: var(--roads-border);
+    background: var(--roads-surface);
+  }
+
+  .field-note-card:hover {
+    border-color: var(--roads-border-hover);
+    transform: translateY(-1px);
+  }
+
+  .field-note-card-title {
+    @apply text-lg font-semibold tracking-tight transition-colors sm:text-xl;
+    color: var(--roads-text);
+  }
+
+  .field-note-card:hover .field-note-card-title {
+    @apply text-accent;
+  }
+
+  .field-note-card-desc {
+    @apply mt-1 text-sm leading-relaxed;
+    color: var(--roads-text-muted);
+  }
+
+  .field-note-meta {
+    @apply flex flex-wrap items-center gap-x-2 gap-y-1 text-xs;
+    color: var(--roads-text-soft);
+  }
+
+  .field-note-meta-sep {
+    opacity: 0.5;
+  }
+
+  .field-note-type {
+    @apply rounded-full border px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider;
+    border-color: var(--roads-border);
+    color: var(--roads-accent);
   }
 
   .quote-card {

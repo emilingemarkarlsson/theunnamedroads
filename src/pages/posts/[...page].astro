@@ -27,15 +27,30 @@ const frontmatter: PageLayoutProps['frontmatter'] = {
   title: pageTitle,
   activeHeaderLink: 'Field Notes',
   prev: page.url.prev,
-  next: page.url.next
+  next: page.url.next,
+  fullBleed: true
 }
 ---
 
 <PageLayout {frontmatter}>
-  <h1>
-    {frontmatter.title}
-  </h1>
-  <PostsList posts={page.data} />
+  <div class="homepage-shell space-y-8">
+    <section class="section-shell space-y-4">
+      <p class="section-eyebrow">Operator journals</p>
+      <h1 class="section-title text-4xl sm:text-5xl">{pageTitle}</h1>
+      {
+        page.currentPage === 1 && (
+          <p class="section-lead max-w-2xl">
+            Evidence from the studio floor — how we decide, ship, and learn on
+            Focus bets. Not Medium essays; operator notes with honest status.
+          </p>
+        )
+      }
+    </section>
+
+    <section class="section-shell">
+      <PostsList posts={page.data} />
+    </section>
+  </div>
 
   <Pagination slot="bottom" page={page} />
 </PageLayout>

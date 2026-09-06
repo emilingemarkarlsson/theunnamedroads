@@ -75,6 +75,11 @@
           "id": "parked",
           "label": "Parked",
           "detail": "Dormant — not shown as Active."
+        },
+        {
+          "id": "avvecklat",
+          "label": "Avvecklat",
+          "detail": "Wound down — kept as reference, not an active product."
         }
       ]
     },

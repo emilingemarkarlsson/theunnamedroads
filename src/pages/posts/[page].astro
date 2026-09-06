@@ -22,16 +22,22 @@ const pageTitle = `Field Notes — Page ${page.currentPage}`
 
 const frontmatter: PageLayoutProps['frontmatter'] = {
   title: pageTitle,
-  activeHeaderLink: 'Field Notes'
+  activeHeaderLink: 'Field Notes',
+  fullBleed: true
 }
 ---
 
 <PageLayout {frontmatter}>
-  <h1>
-    {frontmatter.title}
-    <span>{` (page ${page.currentPage})`}</span>
-  </h1>
-  <PostsList posts={page.data} />
+  <div class="homepage-shell space-y-8">
+    <section class="section-shell space-y-4">
+      <p class="section-eyebrow">Operator journals</p>
+      <h1 class="section-title text-4xl sm:text-5xl">{pageTitle}</h1>
+    </section>
+
+    <section class="section-shell">
+      <PostsList posts={page.data} />
+    </section>
+  </div>
 
   <Pagination slot="bottom" page={page} />
 </PageLayout>
