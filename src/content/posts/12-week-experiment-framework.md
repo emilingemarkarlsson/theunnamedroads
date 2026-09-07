@@ -1,16 +1,16 @@
 ---
-title: "12-Week Experiment Framework — Test & Learn Methodology for Product Experiments"
-description: "A practical test-and-learn framework for product experimentation: validate ideas in 12 weeks, 4 experiments per year. Phase-by-phase guide with foundation, development, and evaluation."
+title: "12-Week Experimentation Framework | Studio Field Notes"
+description: "How our venture studio runs 4 product bets per year—12-week phases, kill criteria, and Field Notes from real experiments. Part of our experimentation frameworks pillar."
 publishedDate: 2024-12-03
-dateModified: 2026-03-20
+dateModified: 2026-09-07
 author: The Unnamed Roads
 tags: ['methodology', 'experimentation', 'framework']
 draft: false
 ---
 
-> **Part of our [Rapid Experimentation Frameworks](/insights/experimentation-frameworks) pillar** — This is our complete methodology guide for systematic business experimentation.
+> **Studio Field Note** — Our [experimentation frameworks](/insights/experimentation-frameworks) pillar in practice: 4 bets per year, phase gates, and documented kill criteria from anonymous product tests.
 
-After testing dozens of business ideas anonymously, we've developed a structured 12-week framework that maximizes learning while minimizing time investment. This methodology has become our core approach to business experimentation.
+After dozens of anonymous product bets, we standardized on a 12-week experimentation framework—long enough for signal, short enough to kill fast. This is the same method behind Focus projects at the studio.
 
 ## Why 12 Weeks?
 
