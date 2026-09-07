@@ -12,12 +12,15 @@ const SITEMAP_EXCLUDE = [
   /^\/posts\/\d+\/?$/,
   /^\/services(\/|$)/,
   /emil-ingemark-karlsson/,
-  /^\/authors\//
+  /^\/authors\//,
+  /^\/sitemap\/?$/
 ]
 
 export default defineConfig({
   site: config.site,
+  trailingSlash: 'always',
   redirects: {
+    '/sitemap': '/sitemap-index.xml',
     '/sitemap.xml': '/sitemap-index.xml',
     '/services/ai-native-venture-studio': '/',
     '/projects/emil-ingemark-karlsson': {
