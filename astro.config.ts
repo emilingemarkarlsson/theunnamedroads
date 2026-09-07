@@ -6,19 +6,20 @@ import tailwind from '@astrojs/tailwind'
 import codeHeadersPlugin from './src/plugins/codeHeadersPlugin'
 import readingTimePlugin from './src/plugins/readingTimePlugin'
 import config from './src/theme.config'
+import { LEGACY_AUTHOR_SLUGS, SITEMAP_EXCLUDE } from './src/util/seo'
 
-const SITEMAP_EXCLUDE = [
-  /^\/tags(\/|$)/,
-  /^\/posts\/\d+\/?$/,
-  /^\/services(\/|$)/,
-  /emil-ingemark-karlsson/,
-  /^\/authors\//
-]
+const legacyAuthorRedirects = Object.fromEntries(
+  LEGACY_AUTHOR_SLUGS.map((author) => [
+    `/authors/${author}`,
+    { status: 301 as const, destination: '/' }
+  ])
+)
 
 export default defineConfig({
   site: config.site,
   redirects: {
     '/sitemap.xml': '/sitemap-index.xml',
+    ...legacyAuthorRedirects,
     '/services/ai-native-venture-studio': '/',
     '/projects/emil-ingemark-karlsson': {
       status: 301,

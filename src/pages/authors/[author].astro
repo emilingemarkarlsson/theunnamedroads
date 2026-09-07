@@ -5,10 +5,13 @@ import PageLayout, {
 } from '@/layouts/PageLayout.astro'
 import { generateAuthors, getPosts } from '@/util/posts'
 import { getAgentByName } from '@/util/agents'
+import { isLegacyAuthor, NOINDEX_FOLLOW } from '@/util/seo'
 import type { InferGetStaticPropsType } from 'astro'
 
 export async function getStaticPaths() {
-  const authors = await generateAuthors()
+  const authors = (await generateAuthors()).filter(
+    (author) => !isLegacyAuthor(author)
+  )
 
   return authors.map((author) => ({
     params: { author },
@@ -28,7 +31,8 @@ const frontmatter: PageLayoutProps['frontmatter'] = {
   description: agent
     ? `${agent.role} at The Unnamed Roads. ${agent.bio}`
     : `Articles by ${author}`,
-  activeHeaderLink: 'Field Notes'
+  activeHeaderLink: 'Field Notes',
+  robotsContent: NOINDEX_FOLLOW
 }
 ---
 
