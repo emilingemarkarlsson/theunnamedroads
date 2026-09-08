@@ -24,6 +24,15 @@ homepage:
   metricValue: Complete plan
   tag: Family
   href: https://tur-parentalleave.vercel.app
+faq:
+  - question: "What is Föräldraledighetsplaneraren?"
+    answer: "A free Swedish parental leave planner — model days, income and scenarios before the family commits. Built for phone review and assistant handoff, not spreadsheet archaeology."
+  - question: "Who is it for?"
+    answer: "Expecting parents and guardians in Sweden who need föräldrapenning, delning and ekonomi visible without reading the full rulebook."
+  - question: "How do you decide what to build next?"
+    answer: "Focus validation contract: completed shareable plans, return rate and Swedish problem-specific SEO/AEO signals. Feature work follows measured gaps; production deploy stays human-gated."
+  - question: "What proof is in motion?"
+    answer: "Status Focus — production consumer product with organic search evidence and shareable plan completions. Partner surfaces stay GDPR-aware; no fake user counts."
 ---
 
 # Föräldraledighetsplaneraren

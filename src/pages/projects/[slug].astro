@@ -30,11 +30,14 @@ const timeline = timelineEnd
   ? `${timelineStart} – ${timelineEnd}`
   : timelineStart
 
+const faq = project.data.faq
+
 const frontmatter = {
   title: project.data.title,
   description: project.data.description,
   activeHeaderLink: 'Projects',
-  fullBleed: false
+  fullBleed: false,
+  ...(faq?.length && { faq })
 }
 const contentContainerClass = 'mx-auto w-full max-w-6xl px-3 sm:px-6 lg:px-8'
 ---
@@ -75,4 +78,25 @@ const contentContainerClass = 'mx-auto w-full max-w-6xl px-3 sm:px-6 lg:px-8'
   >
     <Content />
   </Prose>
+
+  {
+    faq?.length && (
+      <section
+        class={`section-shell mx-auto max-w-3xl space-y-6 pb-16 ${contentContainerClass}`}
+        aria-labelledby="project-faq"
+      >
+        <h2 id="project-faq" class="text-2xl font-semibold text-white">
+          Common questions
+        </h2>
+        <dl class="space-y-5">
+          {faq.map((item) => (
+            <div>
+              <dt class="font-semibold text-white">{item.question}</dt>
+              <dd class="mt-1 text-slate-300">{item.answer}</dd>
+            </div>
+          ))}
+        </dl>
+      </section>
+    )
+  }
 </PageLayout>
