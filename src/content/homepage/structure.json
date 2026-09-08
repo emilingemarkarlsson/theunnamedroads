@@ -56,7 +56,7 @@
   "ventures": {
     "eyebrow": "Live projects",
     "title": "Projects in the portfolio",
-    "description": "Focus projects run measured experiments. Monitor projects stay visible with honest status. Parked work does not pretend to be active.",
+    "description": "Focus projects run measured validation experiments. Monitor projects stay visible with honest status — some also sit in the SEO/dev attention set (eight live surfaces). Parked work does not pretend to be active.",
     "statusPolicy": {
       "title": "Status policy",
       "href": "/insights/focus-monitor-parked",
@@ -64,12 +64,12 @@
         {
           "id": "focus",
           "label": "Focus",
-          "detail": "Active validation and daily growth attention — platform plus product bets."
+          "detail": "Active validation contract — three product bets with measured experiments."
         },
         {
           "id": "monitor",
           "label": "Monitor",
-          "detail": "Live and visible, outside the daily growth queue."
+          "detail": "Live and visible; may still be in the SEO/dev attention set without a Focus contract."
         },
         {
           "id": "parked",
@@ -125,7 +125,7 @@
         "id": "thb",
         "name": "THE HOCKEY BRAIN",
         "focus": "Hockey analytics consulting",
-        "summary": "On-demand analytics for teams that want edge without a full-time hire.",
+        "summary": "On-demand analytics for teams that want edge without a full-time hire — Monitor; in the SEO/dev attention set.",
         "tag": "sports",
         "status": { "label": "Monitor", "tone": "active" },
         "metric": { "label": "Mode", "value": "Monitor" },
@@ -134,38 +134,48 @@
       {
         "id": "taf",
         "name": "THE AGENT FABRIC",
-        "focus": "Enterprise AI agent infrastructure",
-        "summary": "B2B content site on distributed AI agents, edge deployments, and sovereign AI.",
+        "focus": "Distributed agent infrastructure for enterprise AI",
+        "summary": "B2B surface on sovereign AI and edge nodes — SEO/dev attention set. Canonical domain recovering; preview live on Vercel.",
         "tag": "saas",
         "status": { "label": "Monitor", "tone": "active" },
-        "metric": { "label": "Mode", "value": "Monitor" },
+        "metric": { "label": "Site", "value": "Preview live" },
         "href": "https://tur-theagentfabric.vercel.app/"
       },
       {
         "id": "tan",
         "name": "THE ATOMIC NETWORK",
-        "focus": "Hyperlocal GTM loops",
-        "summary": "Physical mail plus referral mechanics for brick-and-mortar brands. GTM execution is the remaining gap.",
+        "focus": "Hyperlocal GTM — physical mail plus referral loops",
+        "summary": "Geo-triggered postcards and invite codes for brick-and-mortar brands. Pilot on Vercel; in the SEO/dev attention set.",
         "tag": "print",
         "status": { "label": "Monitor", "tone": "exploring" },
-        "metric": { "label": "Mode", "value": "Monitor" },
+        "metric": { "label": "Pilot", "value": "Live on Vercel" },
         "href": "https://tan-site.vercel.app/pilot"
+      },
+      {
+        "id": "aaf",
+        "name": "AI AUTOMATION FABRIC",
+        "focus": "Card-first automation studio for small teams",
+        "summary": "Describe a workflow, get an estimate, and receive production-ready automation with AI handover docs — SEO/dev attention set.",
+        "tag": "saas",
+        "status": { "label": "Monitor", "tone": "building" },
+        "metric": { "label": "Site", "value": "Live" },
+        "href": "https://tur-aaf.vercel.app"
       },
       {
         "id": "tpr",
         "name": "THE PRINT ROUTE",
-        "focus": "Smart print routing",
-        "summary": "Webhook-to-doorstep print routing for retailers and local providers.",
+        "focus": "Webhook-to-doorstep print routing",
+        "summary": "Two-sided routing for retailers and local print providers — Monitor in the SEO/dev attention set while a retailer pilot proves pull.",
         "tag": "print",
         "status": { "label": "Monitor", "tone": "exploring" },
-        "metric": { "label": "Mode", "value": "Monitor" },
+        "metric": { "label": "Site", "value": "Live" },
         "href": "https://theprintroute.com/"
       },
       {
         "id": "eik",
         "name": "EIK",
         "focus": "Personal site — founder distribution",
-        "summary": "Personal portfolio. Separate Personal trust realm; linked here as a distribution surface only.",
+        "summary": "Personal portfolio for Emil Ingemar Karlsson — distribution surface in the SEO/dev attention set.",
         "tag": "studio",
         "status": { "label": "Linked", "tone": "active" },
         "metric": { "label": "Realm", "value": "Personal" },
@@ -207,8 +217,8 @@
       },
       {
         "id": "focus-allocation",
-        "label": "Focus projects in rotation",
-        "detail": "THA, Parental and TUR Field Notes run measured experiments. Everything else is Monitor, Parked or Avvecklat."
+        "label": "Focus vs SEO attention set",
+        "detail": "Three Focus product bets run validation contracts. Eight live surfaces (EIK, TUR, THA, THB, Agent Fabric, Atomic Network, AAF, Print Route) get daily SEO/dev work — family-cluster SEO deferred, not abandoned."
       },
       {
         "id": "distribution",
@@ -278,7 +288,7 @@
       },
       {
         "id": "cost-domains",
-        "quote": "Focus domains first: theunnamedroads.com, thehockeyanalytics.com, tur-parentalleave — Monitor sites stay live but outside daily growth ranking.",
+        "quote": "SEO/dev attention set first: theunnamedroads.com, thehockeyanalytics.com, thehockeybrain.com, emilingemarkarlsson.com, plus Agent Fabric, Atomic Network, AAF, and Print Route previews. Focus family SEO deferred — FLP stays a product bet.",
         "author": "Domains + hosting",
         "role": "Focus first"
       }

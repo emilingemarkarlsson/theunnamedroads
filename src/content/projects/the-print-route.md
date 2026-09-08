@@ -1,6 +1,6 @@
 ---
 title: The Print Route
-description: From webhook to doorstep. A two-sided print routing platform connecting retailers with local print providers – automated order intake, SLA-based production workflow, and synced delivery tracking.
+description: Webhook-to-doorstep print routing for retailers and local providers — automated order intake, SLA-based production workflow, and synced delivery tracking.
 url: https://theprintroute.com
 startDate: 2025-01-15
 tags:
@@ -11,18 +11,18 @@ tags:
   - logistics
   - gdpr
 homepage:
-  featured: false
+  featured: true
   order: 10
-  statusLabel: Parked
+  statusLabel: Monitor
   statusTone: exploring
-  statusDotColor: bg-slate-500
-  animateDot: false
+  statusDotColor: bg-sky-500
+  animateDot: true
   focus: >-
-    Print routing marketplace
+    Webhook-to-doorstep print routing
   summary: >-
-    Two-sided routing — parked until a single retailer pilot proves pull.
-  metricLabel: Mode
-  metricValue: Parked
+    Two-sided platform routing retailer orders to local print providers — SLA workflow and synced tracking. Monitor; in the SEO/dev attention set while a retailer pilot proves pull.
+  metricLabel: Site
+  metricValue: Live
   tag: Print
   href: https://theprintroute.com/
 ---

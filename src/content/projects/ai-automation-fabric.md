@@ -1,6 +1,6 @@
 ---
 title: AI Automation Fabric
-description: Card-first automation studio for small teams. Describe the workflow, get a clear estimate, and receive a production-ready automation with AI handover docs so you can run and evolve it in-house.
+description: Card-first automation studio for small teams — describe a workflow, get a clear estimate, and receive production-ready automation with AI handover docs.
 url: https://tur-aaf.vercel.app
 startDate: 2026-06-16
 tags:
@@ -15,11 +15,11 @@ homepage:
   statusLabel: Monitor
   statusTone: building
   focus: >-
-    Workflow cards operators can hand to agents
+    Card-first automation studio for small teams
   summary: >-
-    Describe a workflow, get a bounded automation with handover docs — agent-native delivery pattern.
-  metricLabel: Mode
-  metricValue: Monitor
+    Describe a workflow, get a clear estimate, and receive production-ready automation with AI handover docs. Monitor product bet — in the SEO/dev attention set.
+  metricLabel: Site
+  metricValue: Live
   tag: SaaS
   href: https://tur-aaf.vercel.app
 ---
