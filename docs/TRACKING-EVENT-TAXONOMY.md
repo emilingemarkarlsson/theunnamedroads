@@ -20,6 +20,7 @@ All events include base properties from `src/util/analytics.ts`:
 - Project key in `BaseLayout.astro` (EU cloud, proxy `e.theunnamedroads.com`)
 - Global property: `site: theunnamedroads`
 - Pageviews: automatic via PostHog init
+- **GSC note:** `e.theunnamedroads.com` is a PostHog API reverse proxy, not a public site. Root `/` 301s to `www.theunnamedroads.com`; API paths stay on the subdomain. Not in sitemap.
 
 ## Instrumented surfaces
 
