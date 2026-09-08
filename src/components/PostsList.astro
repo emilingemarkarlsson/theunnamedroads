@@ -14,29 +14,47 @@ const { posts } = Astro.props
 posts.sort(sortPosts)
 ---
 
-<ul class="space-y-4 p-0">
+<ul class="field-notes-list">
   {
     posts.map(({ data, slug }) => (
       <li>
-        <article class="post-card group">
-          <div class="flex flex-col justify-between gap-2 sm:flex-row sm:items-start">
-            <div class="flex-1">
-              <h2 class="mb-1">
+        <article class="field-note-card group">
+          <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+            <div class="min-w-0 flex-1 space-y-2">
+              <div class="field-note-meta">
+                <span class="field-note-type">Field Note</span>
+                <span class="field-note-meta-sep" aria-hidden="true">
+                  ·
+                </span>
+                <time datetime={data.publishedDate.toISOString()}>
+                  {toDateString(data.publishedDate)}
+                </time>
+                {data.author && (
+                  <>
+                    <span class="field-note-meta-sep" aria-hidden="true">
+                      ·
+                    </span>
+                    <span>{data.author}</span>
+                  </>
+                )}
+              </div>
+              <h2 class="m-0">
                 <a
-                  class="post-card-title"
+                  class="field-note-card-title"
                   href={`/posts/${slug}`}
                   data-astro-prefetch
                 >
                   {data.title}
                 </a>
               </h2>
-              <p class="post-card-desc">{data.description}</p>
+              <p class="field-note-card-desc">{data.description}</p>
             </div>
-            <time class="post-card-date shrink-0 sm:ml-4">
-              {toDateString(data.publishedDate)}
-            </time>
           </div>
-          <TagsBar tags={resolveTags(data.tags)} />
+          {data.tags.length > 0 && (
+            <div class="mt-4">
+              <TagsBar tags={resolveTags(data.tags)} />
+            </div>
+          )}
         </article>
       </li>
     ))
@@ -44,33 +62,7 @@ posts.sort(sortPosts)
 </ul>
 
 <style>
-  .post-card {
-    @apply rounded-2xl border p-5 transition-all duration-200;
-    border-color: rgba(255, 255, 255, 0.07);
-    background: #111114;
-  }
-
-  .post-card:hover {
-    border-color: rgba(255, 255, 255, 0.12);
-    transform: translateY(-1px);
-  }
-
-  .post-card-title {
-    @apply text-lg font-semibold transition-colors sm:text-xl;
-    color: #f0ebe3;
-  }
-
-  .post-card:hover .post-card-title {
-    @apply text-accent;
-  }
-
-  .post-card-desc {
-    @apply text-sm;
-    color: rgba(240, 235, 227, 0.55);
-  }
-
-  .post-card-date {
-    @apply text-xs;
-    color: rgba(240, 235, 227, 0.35);
+  .field-notes-list {
+    @apply list-none space-y-3 p-0;
   }
 </style>

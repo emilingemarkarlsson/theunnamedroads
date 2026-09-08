@@ -1,4 +1,5 @@
 ---
+import StatusChip from '@/components/StatusChip.astro'
 import { toMonthString } from '@/util'
 import { getProjects } from '@/util/projects'
 import { getEntry, type CollectionEntry } from 'astro:content'
@@ -61,8 +62,7 @@ const ventureProjects = featuredProjects.map((project) => {
     focus,
     summary,
     status: {
-      label: meta.statusLabel ?? 'Active',
-      tone: meta.statusTone ?? 'active'
+      label: meta.statusLabel ?? 'Active'
     },
     metric: { label: metricLabel, value: metricValue },
     href,
@@ -72,25 +72,6 @@ const ventureProjects = featuredProjects.map((project) => {
 
 const ventureCards =
   ventureProjects.length > 0 ? ventureProjects : homepageData.ventures.companies
-
-const getStatusBadgeClass = (tone: string) =>
-  (
-    ({
-      active: 'text-emerald-300 border-emerald-400/30 bg-emerald-500/10',
-      building: 'text-amber-300 border-amber-400/30 bg-amber-500/10',
-      exploring: 'text-sky-300 border-sky-400/30 bg-sky-500/10'
-    }) as const
-  )[tone as 'active' | 'building' | 'exploring'] ??
-  'text-emerald-300 border-emerald-400/30 bg-emerald-500/10'
-
-const getStatusDotClass = (tone: string) =>
-  (
-    ({
-      active: 'bg-emerald-400',
-      building: 'bg-amber-400',
-      exploring: 'bg-sky-400'
-    }) as const
-  )[tone as 'active' | 'building' | 'exploring'] ?? 'bg-emerald-400'
 
 const heroLoop = homepageData.hero.controlLoop
 ---
@@ -196,18 +177,18 @@ const heroLoop = homepageData.hero.controlLoop
     {
       homepageData.ventures.statusPolicy && (
         <div
-          class="grid gap-3 rounded-xl border p-4 sm:grid-cols-3"
+          class="grid gap-3 rounded-xl border p-4 sm:grid-cols-2 lg:grid-cols-4"
           style="border-color: var(--roads-border)"
         >
           {homepageData.ventures.statusPolicy.items.map((item) => (
             <div>
-              <p class="section-eyebrow">{item.label}</p>
-              <p class="mt-1 text-sm" style="color: var(--roads-text-muted)">
+              <StatusChip label={item.label} />
+              <p class="mt-2 text-sm" style="color: var(--roads-text-muted)">
                 {item.detail}
               </p>
             </div>
           ))}
-          <div class="sm:col-span-3">
+          <div class="sm:col-span-2 lg:col-span-4">
             <a
               href={homepageData.ventures.statusPolicy.href}
               class="text-sm font-semibold text-accent"
@@ -243,14 +224,7 @@ const heroLoop = homepageData.hero.controlLoop
                   {company.focus}
                 </p>
               </div>
-              <span
-                class={`status-pill ${getStatusBadgeClass(company.status.tone)}`}
-              >
-                <span
-                  class={`status-dot ${getStatusDotClass(company.status.tone)}`}
-                />
-                {company.status.label}
-              </span>
+              <StatusChip label={company.status.label} class="shrink-0" />
             </div>
             <p
               class="mt-4 text-sm leading-relaxed"
