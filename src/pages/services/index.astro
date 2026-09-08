@@ -1,0 +1,50 @@
+---
+import PageLayout, {
+  type Props as PageLayoutProps
+} from '@/layouts/PageLayout.astro'
+
+const frontmatter: PageLayoutProps['frontmatter'] = {
+  title: 'Not a services shop — The Unnamed Roads',
+  description:
+    'The Unnamed Roads is an AI venture studio — Focus bets, Field Notes, honest status. Agents draft; humans Approve.',
+  robotsContent: 'noindex, follow',
+  fullBleed: true
+}
+---
+
+<PageLayout {frontmatter}>
+  <div class="homepage-shell space-y-10">
+    <section class="section-shell space-y-6 text-center">
+      <p class="section-eyebrow">Studio</p>
+      <h1 class="text-4xl font-semibold text-white sm:text-5xl">
+        This isn't a services shop.
+      </h1>
+      <p class="mx-auto max-w-2xl text-base text-slate-300 sm:text-lg">
+        The Unnamed Roads is an AI venture studio — Focus bets, Field Notes,
+        honest status. Agents draft; humans Approve. Company OS is <strong
+          class="text-white">Avvecklat</strong
+        >; the explainer remains as archive.
+      </p>
+      <div class="hero-ctas justify-center pt-2">
+        <a href="/projects" class="btn-primary">View portfolio</a>
+        <a href="/posts" class="btn-secondary">Field Notes</a>
+        <a
+          href="https://www.emilingemarkarlsson.com/"
+          class="btn-secondary"
+          rel="noopener noreferrer"
+        >
+          Personal site
+        </a>
+      </div>
+      <p class="mx-auto max-w-xl text-sm text-slate-400">
+        Consulting and operator work live on the
+        <a
+          class="text-accent underline"
+          href="https://www.emilingemarkarlsson.com/"
+          rel="noopener noreferrer">personal realm</a
+        >
+        — separate from studio ventures.
+      </p>
+    </section>
+  </div>
+</PageLayout>

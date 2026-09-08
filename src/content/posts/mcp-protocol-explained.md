@@ -1,7 +1,8 @@
 ---
-title: "Model Context Protocol (MCP) Explained: How Anthropic's Open Standard Is Changing AI Agents"
-description: "Deep dive into MCP – the emerging standard for secure, discoverable, and interoperable AI agent tool access. Learn how to build MCP servers and clients in production."
+title: "MCP Explained: Model Context Protocol for AI Agents"
+description: "What MCP is, how to build servers and clients—and why our venture studio ships every new agent on MCP (200+ pipelines in production)."
 publishedDate: 2026-03-31
+dateModified: 2026-09-07
 tags: ["MCP", "AI agents", "tool use", "LangChain", "Litellm", "production AI", "API security"]
 author: "The Agent Fabric"
 ---
@@ -10,7 +11,7 @@ In 2024, AI agent tool usage was a jungle. Every framework had its own way of de
 
 Then came the [Model Context Protocol (MCP)](https://modelcontextprotocol.io) — Anthropic’s open proposal for a universal way to expose tools and context to AI agents. In 2025, it gained adoption. In 2026, it’s becoming the **default layer** between AI agents and their world.
 
-We run AI infra at scale. We’ve built and deployed over 200 agent pipelines using LangGraph, CrewAI, and custom orchestrators. For the past six months, every new agent we deploy uses MCP to access tools. Not because it’s trendy — because it **solves real production problems**.
+At The Unnamed Roads we run a one-operator venture studio where agents draft inside policy and humans Approve before deploy. We’ve built 200+ agent pipelines on LangGraph, CrewAI, and custom orchestrators—and for the past six months, every new agent uses MCP for tool access. Not because it’s trendy, but because it **solves real production problems** in a studio that ships fast.
 
 This post breaks down MCP: what it is, why it matters, how to implement it, and where it fits in a production architecture. No fluff. Just what works.
 

@@ -1,7 +1,9 @@
 ---
 import NavItem from '@/components/layout/NavItem.astro'
+import StatusChip from '@/components/StatusChip.astro'
 import PageLayout from '@/layouts/PageLayout.astro'
 import Prose from '@/components/layout/Prose.astro'
+import { toMonthString } from '@/util'
 import { getCollection } from 'astro:content'
 import type { InferGetStaticPropsType } from 'astro'
 
@@ -19,6 +21,14 @@ export async function getStaticPaths() {
 
 const { project } = Astro.props
 const { Content } = await project.render()
+const statusLabel = project.data.homepage?.statusLabel
+const timelineStart = toMonthString(project.data.startDate)
+const timelineEnd = project.data.endDate
+  ? toMonthString(project.data.endDate)
+  : null
+const timeline = timelineEnd
+  ? `${timelineStart} – ${timelineEnd}`
+  : timelineStart
 
 const frontmatter = {
   title: project.data.title,
@@ -38,6 +48,18 @@ const contentContainerClass = 'mx-auto w-full max-w-6xl px-3 sm:px-6 lg:px-8'
         icon: 'tabler--arrow-left'
       }}
     />
+  </div>
+
+  <div class={`homepage-shell mb-6 ${contentContainerClass}`}>
+    <div class="flex flex-wrap items-center gap-3">
+      {statusLabel && <StatusChip label={statusLabel} />}
+      <p
+        class="text-xs font-medium uppercase tracking-wider"
+        style="color: var(--roads-text-soft)"
+      >
+        Timeline · <time>{timeline}</time>
+      </p>
+    </div>
   </div>
 
   <Prose

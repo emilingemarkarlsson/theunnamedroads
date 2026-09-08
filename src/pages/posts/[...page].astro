@@ -6,6 +6,7 @@ import PageLayout, {
 } from '@/layouts/PageLayout.astro'
 import config from '@/theme.config'
 import { getPosts } from '@/util/posts'
+import { NOINDEX_FOLLOW } from '@/util/seo'
 import type { GetStaticPaths, InferGetStaticPropsType } from 'astro'
 
 export const getStaticPaths = (async ({ paginate }) => {
@@ -27,7 +28,11 @@ const frontmatter: PageLayoutProps['frontmatter'] = {
   title: pageTitle,
   activeHeaderLink: 'Field Notes',
   prev: page.url.prev,
-  next: page.url.next
+  next: page.url.next,
+  ...(page.currentPage > 1 && {
+    robotsContent: NOINDEX_FOLLOW,
+    canonicalURL: new URL('/posts/', Astro.site).href
+  })
 }
 ---
 
