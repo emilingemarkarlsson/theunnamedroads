@@ -23,6 +23,15 @@ homepage:
   metricValue: Club Pack beta
   tag: Sports
   href: https://www.thehockeyanalytics.com/
+faq:
+  - question: "What is The Hockey Analytics?"
+    answer: "Independent hockey analytics research from Stockholm. THA scans NHL data proactively — insights surface before scouts and coaches ask, not after they open a dashboard."
+  - question: "Who is it for?"
+    answer: "Scouts, coaches, analysts and decision-makers who want proactive intelligence for player development, roster construction, trade value and game strategy — reviewed on mobile or handed to an assistant."
+  - question: "How do you decide what insights to ship?"
+    answer: "Focus contract: one claim surface, one redistribution asset, one falsifiable outcome per cycle. Agents draft research; publish and outbound require explicit human Approve — no autonomous sends."
+  - question: "What proof is in motion?"
+    answer: "Status Focus — Club Pack beta. Weekly research reports are live; Premium dashboards and AI player profiles roll out in measured steps. No vanity traction claims."
 ---
 
 # The Hockey Analytics

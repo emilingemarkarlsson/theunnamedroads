@@ -49,6 +49,14 @@ const projects = defineCollection({
           href: z.string().optional(),
           ctaLabel: z.string().optional()
         })
+        .optional(),
+      faq: z
+        .array(
+          z.object({
+            question: z.string(),
+            answer: z.string()
+          })
+        )
         .optional()
     })
 })
