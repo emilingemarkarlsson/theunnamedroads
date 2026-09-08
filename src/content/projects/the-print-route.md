@@ -12,7 +12,7 @@ tags:
   - logistics
   - gdpr
 homepage:
-  featured: false
+  featured: true
   order: 10
   statusLabel: Parked
   statusTone: exploring

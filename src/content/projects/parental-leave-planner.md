@@ -1,6 +1,6 @@
 ---
-title: Föräldraledighetsplaneraren
-description: Gratis planering av svensk föräldraledighet — dagar, ekonomi och scenarier synliga innan familjen bestämmer sig.
+title: Parental Leave Planner
+description: Free Swedish parental leave planning — days, pay and trade-offs visible before the family commits.
 url: https://tur-parentalleave.vercel.app
 startDate: 2025-06-01
 tags:
@@ -25,8 +25,8 @@ homepage:
   tag: Family
   href: https://tur-parentalleave.vercel.app
 faq:
-  - question: "What is Föräldraledighetsplaneraren?"
-    answer: "A free Swedish parental leave planner — model days, income and scenarios before the family commits. Built for phone review and assistant handoff, not spreadsheet archaeology."
+  - question: "What is Parental Leave Planner?"
+    answer: "A free Swedish parental leave planner (Föräldraledighetsplaneraren in Swedish) — model days, income and scenarios before the family commits. Built for phone review and assistant handoff, not spreadsheet archaeology."
   - question: "Who is it for?"
     answer: "Expecting parents and guardians in Sweden who need föräldrapenning, delning and ekonomi visible without reading the full rulebook."
   - question: "How do you decide what to build next?"
@@ -35,9 +35,9 @@ faq:
     answer: "Status Focus — production consumer product with organic search evidence and shareable plan completions. Partner surfaces stay GDPR-aware; no fake user counts."
 ---
 
-# Föräldraledighetsplaneraren
+# Parental Leave Planner
 
-**Planera er föräldraledighet med lugn och klarhet.**
+**Plan Swedish parental leave with clarity — days, pay and trade-offs before you commit.**
 
 A production consumer product in the TUR Family cluster. Parents model days,
 income and scenarios without needing to become experts in the rulebook.
