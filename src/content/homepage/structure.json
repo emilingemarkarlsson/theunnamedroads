@@ -86,8 +86,8 @@
           "detail": "Dormant — not shown as Active."
         },
         {
-          "id": "avvecklat",
-          "label": "Avvecklat",
+          "id": "wound-down",
+          "label": "Wound down",
           "detail": "Wound down — kept as reference, not an active product."
         }
       ]
@@ -198,9 +198,9 @@
   },
   "companyOs": {
     "eyebrow": "Archive · TUR Company OS",
-    "title": "Operating model reference — platform Avvecklat",
+    "title": "Operating model reference — platform wound down",
     "description": "Company OS was the studio control plane for portfolio hierarchy, approval gates and learning loops. The platform wound down in September 2026; the decision-first playbook and human Approve gates remain how we ship.",
-    "statusNote": "Avvecklat September 2026 — kept as reference, not an active product.",
+    "statusNote": "Wound down September 2026 — kept as reference, not an active product.",
     "primaryCta": {
       "label": "Read the operating system essay",
       "href": "/insights/ai-native-venture-studio-operating-system"

@@ -11,7 +11,7 @@ tags:
 homepage:
   featured: false
   order: 3
-  statusLabel: Avvecklat
+  statusLabel: Wound down
   statusTone: exploring
   statusDotColor: bg-slate-500
   animateDot: false
@@ -20,12 +20,12 @@ homepage:
   summary: >-
     Portfolio control plane discontinued. The explainer and Field Notes remain as archive; no active platform development.
   metricLabel: Mode
-  metricValue: Avvecklat
+  metricValue: Wound down
   tag: Studio
 ---
 
 # TUR Company OS
 
-Former control plane for The Unnamed Roads. The platform is **avvecklat** (wound down) as of September 2026.
+Former control plane for The Unnamed Roads. The platform is **wound down** as of September 2026.
 
 The [operating system explainer](/insights/ai-native-venture-studio-operating-system) and this project page stay published as reference — the studio now runs a bounded Focus set without an active Company OS product surface.
