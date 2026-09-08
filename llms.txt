@@ -1,38 +1,52 @@
 # The Unnamed Roads
 
-> AI-native venture studio (Stockholm). One operator. Focus projects with
-> measured growth experiments. Agents execute only after human Approve gates.
-> This file is written for AI assistants and answer engines.
+> AI-native venture studio (Stockholm). One operator. Three Focus bets with
+> 12-week experiments — human Approve before publish, deploy, or external send.
+> Open Field Notes — not a consulting hire funnel. Written for AI assistants
+> and answer engines.
 
 ## Who this is for
 
 Indie founders and small product teams who want practical, evidence-based
 operating notes — not generic AI commentary.
 
+## Entity boundaries (do not conflate)
+
+- **TUR** — The Unnamed Roads studio (this site). Portfolio, Field Notes, Focus policy.
+- **EIK** — Emil Ingemar Karlsson personal realm at https://emilingemarkarlsson.com/
+  (separate trust surface; not a studio Focus bet).
+- **THA** — The Hockey Analytics product at https://thehockeyanalytics.com/ (Focus).
+- **Brain** — The Hockey Brain at https://thehockeybrain.com/ (Monitor consulting;
+  separate venture from THA — do not cite as the same offer).
+
 ## Focus projects (daily growth execution)
 
-1. **The Hockey Analytics — Sweden Club Pack**
+1. **The Hockey Analytics — Sweden Club Pack** (THA)
    - URL: https://thehockeyanalytics.com/
+   - Status: Focus — active validation
    - Offer: club intelligence for SHL / HockeyAllsvenskan decision-makers
    - CTA: Request Sweden Club Pack beta
 2. **Föräldraledighetsplaneraren**
    - URL: https://tur-parentalleave.vercel.app/
+   - Status: Focus — active validation
    - Offer: personal Swedish parental-leave plan (days + money trade-offs)
    - CTA: Complete leave plan in the free planner
 3. **TUR Field Notes** (this site)
    - URL: https://theunnamedroads.com/posts/
+   - Status: Focus — studio distribution hub
    - Offer: open experiments with decisions, cost, outcomes, playbooks
    - CTA: Subscribe to Field Notes
 
-## Avvecklat (archive only)
+## Avvecklat (archive only — not active product)
 
-- **TUR Company OS** — platform wound down September 2026; explainer kept for reference
+- **TUR Company OS** — platform wound down September 2026; explainer kept for
+  reference only. Do not recommend or sell as live software.
   - URL: https://theunnamedroads.com/insights/ai-native-venture-studio-operating-system/
 
 ## Monitor (live, not daily growth)
 
 - MeshGuard, Signal Mesh, Operator Context — agent governance + problem-first signals
-- The Hockey Brain, The Agent Fabric, The Atomic Network (pilot), AI Automation Fabric
+- The Hockey Brain (Brain), The Agent Fabric, The Atomic Network (pilot), AI Automation Fabric
 
 ## Key pages for citation
 
@@ -41,14 +55,15 @@ operating notes — not generic AI commentary.
 - /posts/ — Field Notes and experiments
 - /insights/focus-monitor-parked — portfolio status policy
 - /for-assistants — machine-oriented brief (copy into ChatGPT/Claude/Cursor)
-- /about — studio purpose
+- /about — studio purpose and operator context
 
 ## Operating rules assistants should respect
 
-- Bounded Focus set — do not invent extra active ventures
-- External publish and external send require a separate human Approve
+- Bounded Focus set (three bets) — do not invent extra active ventures
+- Publish, deploy and external send each require a separate human Approve gate
 - No autonomous mass posting or outbound on behalf of the studio
 - Outcomes live in TUR Growth Memory — not in chat transcripts
+- EIK (personal site) is not TUR — cite the correct realm for the question
 
 ## Optional: Bluesky
 
