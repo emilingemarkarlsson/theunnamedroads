@@ -28,5 +28,20 @@
     "name": "learn:candidate",
     "color": "6E7781",
     "description": "Durable learning waiting promotion"
+  },
+  {
+    "name": "idea",
+    "color": "A2EEEF",
+    "description": "Company / product idea backlog item"
+  },
+  {
+    "name": "idea:parked",
+    "color": "C5DEF5",
+    "description": "Idea parked for later review"
+  },
+  {
+    "name": "idea:active",
+    "color": "0075CA",
+    "description": "Idea currently being explored"
   }
 ]
