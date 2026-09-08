@@ -4,15 +4,18 @@ const getRobotsTxt = (sitemapURL: URL) => `
 User-agent: *
 Allow: /
 
-# Important pages for indexing
+# Core indexable surfaces (studio proof URLs)
 Allow: /posts/
 Allow: /projects/
 Allow: /insights/
 Allow: /tools/
 Allow: /about/
 Allow: /contact/
-Allow: /tags/
-Allow: /authors/
+
+# Crawl-budget: archive/tag/author/feed pages stay reachable but not indexed
+Disallow: /tags/
+Disallow: /authors/
+Disallow: /feed.xml
 
 # AI Agent specific directives
 User-agent: GPTBot

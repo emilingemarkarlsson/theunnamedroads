@@ -8,6 +8,7 @@ import PageLayout, {
 import { getPosts } from '@/util/posts'
 import { getProjects } from '@/util/projects'
 import { generateTags } from '@/util/tags'
+import { isCuratedTagHub, NOINDEX_FOLLOW } from '@/util/seo'
 import type { InferGetStaticPropsType } from 'astro'
 
 const {
@@ -31,7 +32,8 @@ const projects = await getProjects(tag)
 
 const frontmatter: PageLayoutProps['frontmatter'] = {
   title: `Tag: ${tag}`,
-  activeHeaderLink: 'Tags'
+  activeHeaderLink: 'Tags',
+  ...(!isCuratedTagHub(tag) && { robotsContent: NOINDEX_FOLLOW })
 }
 ---
 
