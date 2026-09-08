@@ -32,6 +32,15 @@
       ]
     },
     {
+      "source": "/",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "https://www.theunnamedroads.com"
+        }
+      ]
+    },
+    {
       "source": "/:path((?!.*\\.).*)",
       "headers": [
         {
