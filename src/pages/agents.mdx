@@ -2,42 +2,113 @@
 layout: '@/layouts/PageLayout.astro'
 title: Agent roles & approval policy
 description: How The Unnamed Roads uses MethodPolicy agent roles inside human Approve gates — not a fake executive team.
+activeHeaderLink: Agents
+fullBleed: true
 ---
 
-# Agent roles & approval policy
+<div class="homepage-shell space-y-10">
+  <section class="section-shell space-y-6">
+    <div class="space-y-3">
+      <p class="section-eyebrow">MethodPolicy</p>
+      <h1 class="text-4xl font-semibold text-white sm:text-5xl">Agent roles &amp; approval policy</h1>
+      <p class="text-base text-slate-300 sm:text-lg">
+        Agents on this studio site are <strong class="text-white">policy-bound workflow roles</strong> inside{' '}
+        <a class="text-accent underline" href="/insights/ai-native-venture-studio-operating-system">TUR Company OS</a> — not executives, not autonomous publishers.
+      </p>
+      <p class="text-base text-slate-300">
+        Every consequential action — publish, deploy, external send — requires a <strong class="text-white">human Approve</strong> on the phone.
+        Drafts and research can run under MethodPolicy spend gates; nothing goes live without a gate.
+      </p>
+    </div>
+  </section>
 
-Agents on this studio site are **policy-bound workflow roles** inside [TUR Company OS](/insights/ai-native-venture-studio-operating-system) — not executives, not autonomous publishers.
+  <section class="section-shell space-y-4">
+    <p class="section-eyebrow">MethodPolicy roles (not an org chart)</p>
+    <div class="overflow-x-auto rounded-2xl border border-white/10">
+      <table class="w-full min-w-[32rem] text-left text-sm">
+        <thead class="border-b border-white/10 bg-white/5 text-xs uppercase tracking-wider text-slate-400">
+          <tr>
+            <th class="px-4 py-3 font-semibold">Role</th>
+            <th class="px-4 py-3 font-semibold">What it does</th>
+            <th class="px-4 py-3 font-semibold">Gate</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-white/10 text-slate-300">
+          <tr>
+            <td class="px-4 py-3 font-semibold text-white">Research</td>
+            <td class="px-4 py-3">Ingest signals, rank opportunities, draft memos</td>
+            <td class="px-4 py-3">Level 1–2 — internal only</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-3 font-semibold text-white">Draft</td>
+            <td class="px-4 py-3">Copy, code and asset drafts under spend caps</td>
+            <td class="px-4 py-3">Level 1–2 — no external send</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-3 font-semibold text-white">Execute</td>
+            <td class="px-4 py-3">Bounded commits, builds, internal automation</td>
+            <td class="px-4 py-3">Level 2 — policy-bound</td>
+          </tr>
+          <tr class="bg-amber-500/5">
+            <td class="px-4 py-3 font-semibold text-amber-200">Publish</td>
+            <td class="px-4 py-3">Deploy, IndexNow, outbound</td>
+            <td class="px-4 py-3 font-semibold text-amber-200">Level 3+ — human Approve required</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="text-sm text-slate-400">
+      These map to tooling (OpenRouter, Inngest, Cursor agents) — they are <strong class="text-slate-300">not</strong> named people or fake leadership.
+    </p>
+  </section>
 
-Every consequential action — publish, deploy, external send — requires a **human Approve** on the phone. Drafts and research can run under MethodPolicy spend gates; nothing goes live without a gate.
+  <section class="section-shell space-y-4">
+    <p class="section-eyebrow">Human Approve (always visible)</p>
+    <div class="rounded-2xl border-2 border-amber-400/40 bg-amber-500/10 p-6 shadow-[0_0_40px_rgba(251,191,36,0.08)]">
+      <p class="text-xs uppercase tracking-[0.35em] text-amber-200/90">Non-negotiable gate</p>
+      <p class="mt-3 font-mono text-sm leading-relaxed text-amber-50 sm:text-base">
+        Signal → Decision → Work → Outcome → Lesson<br />
+        <span class="text-amber-300/80">              ↑</span><br />
+        <span class="font-semibold text-white">Human gate: Approve · Defer · Reject</span><br />
+        <span class="text-amber-200/70">        (publish · deploy · external send)</span>
+      </p>
+      <div class="mt-5 grid gap-3 sm:grid-cols-3">
+        <div class="rounded-xl border border-emerald-400/30 bg-emerald-500/10 px-4 py-3">
+          <p class="font-semibold text-emerald-200">Approve</p>
+          <p class="mt-1 text-sm text-slate-300">Proceed with the proposed external or consequential action.</p>
+        </div>
+        <div class="rounded-xl border border-sky-400/30 bg-sky-500/10 px-4 py-3">
+          <p class="font-semibold text-sky-200">Defer</p>
+          <p class="mt-1 text-sm text-slate-300">Revisit with a date and reason.</p>
+        </div>
+        <div class="rounded-xl border border-rose-400/30 bg-rose-500/10 px-4 py-3">
+          <p class="font-semibold text-rose-200">Reject</p>
+          <p class="mt-1 text-sm text-slate-300">Stop; log the lesson.</p>
+        </div>
+      </div>
+    </div>
+    <p class="text-sm text-slate-400">
+      Matches <a class="text-accent underline" href="/llms.txt">/llms.txt</a>: agents execute only after human Approve gates.
+      Optional governance stack: <a class="text-accent underline" href="/projects/meshguard">MeshGuard</a>.
+    </p>
+  </section>
 
-## MethodPolicy roles (not a org chart)
-
-| Role | What it does | Gate |
-| --- | --- | --- |
-| **Research** | Ingest signals, rank opportunities, draft memos | Level 1–2 — internal only |
-| **Draft** | Copy, code and asset drafts under spend caps | Level 1–2 — no external send |
-| **Execute** | Bounded commits, builds, internal automation | Level 2 — policy-bound |
-| **Publish** | Deploy, IndexNow, outbound | **Level 3+ — human Approve required** |
-
-These map to tooling (OpenRouter, Inngest, Cursor agents) — they are **not** named people or fake leadership.
-
-## Human Approve (always visible)
-
-```
-Signal → Decision → Work → Outcome → Lesson
-              ↑
-        Human gate: Approve · Defer · Reject
-        (publish · deploy · external send)
-```
-
-- **Approve** — proceed with the proposed external or consequential action
-- **Defer** — revisit with a date and reason
-- **Reject** — stop; log the lesson
-
-Matches [`/llms.txt`](/llms.txt): agents execute only after human Approve gates.
-
-## Field Notes attribution
-
-Some articles carry agent-style bylines (AION, NEXUS, etc.) as **voice labels** for specialized drafts — not a reporting structure. The operator approves what ships.
-
-[Read Field Notes →](/insights) · [Company OS explainer →](/insights/ai-native-venture-studio-operating-system) · [For AI assistants →](/for-assistants)
+  <section class="section-shell space-y-3">
+    <p class="section-eyebrow">Field Notes attribution</p>
+    <p class="text-base text-slate-300">
+      Some articles carry agent-style bylines (AION, NEXUS, etc.) as <strong class="text-white">voice labels</strong> for specialized drafts — not a reporting structure.
+      The operator approves what ships.
+    </p>
+    <div class="flex flex-col gap-3 pt-2 sm:flex-row">
+      <a href="/posts/" class="inline-flex items-center justify-center gap-2 rounded-2xl bg-white px-5 py-2.5 text-sm font-semibold text-gray-900">
+        Read Field Notes
+      </a>
+      <a href="/insights/ai-native-venture-studio-operating-system" class="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/40 px-5 py-2.5 text-sm font-semibold text-white">
+        Company OS explainer
+      </a>
+      <a href="/for-assistants" class="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/40 px-5 py-2.5 text-sm font-semibold text-white">
+        For AI assistants
+      </a>
+    </div>
+  </section>
+</div>

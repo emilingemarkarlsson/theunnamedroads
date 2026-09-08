@@ -109,7 +109,7 @@
         "tag": "studio",
         "status": { "label": "Focus", "tone": "active" },
         "metric": { "label": "CTA", "value": "Subscribe" },
-        "href": "https://theunnamedroads.com/"
+        "href": "https://www.theunnamedroads.com/"
       },
       {
         "id": "tha",
@@ -374,7 +374,7 @@
             "id": "openclaw",
             "name": "OpenClaw",
             "description": "Webhook publish server. Receives article payloads and commits markdown to GitHub — one HTTP call per publish.",
-            "href": "https://theunnamedroads.com/",
+            "href": "https://www.theunnamedroads.com/",
             "logo": {
               "type": "monogram",
               "label": "OC",
@@ -385,7 +385,7 @@
             "id": "paperclip",
             "name": "Paperclip",
             "description": "Governed agent workflows with spend gates. Strategy and cost reviews surface as signals — not autonomous executives.",
-            "href": "https://theunnamedroads.com/",
+            "href": "https://www.theunnamedroads.com/",
             "logo": {
               "type": "monogram",
               "label": "PC",

@@ -6,6 +6,7 @@ import PageLayout, {
 } from '@/layouts/PageLayout.astro'
 import config from '@/theme.config'
 import { getPosts } from '@/util/posts'
+import { NOINDEX_FOLLOW } from '@/util/seo'
 import type { GetStaticPaths, InferGetStaticPropsType } from 'astro'
 
 export const getStaticPaths = (async ({ paginate }) => {
@@ -28,29 +29,18 @@ const frontmatter: PageLayoutProps['frontmatter'] = {
   activeHeaderLink: 'Field Notes',
   prev: page.url.prev,
   next: page.url.next,
-  fullBleed: true
+  ...(page.currentPage > 1 && {
+    robotsContent: NOINDEX_FOLLOW,
+    canonicalURL: new URL('/posts/', Astro.site).href
+  })
 }
 ---
 
 <PageLayout {frontmatter}>
-  <div class="homepage-shell space-y-8">
-    <section class="section-shell space-y-4">
-      <p class="section-eyebrow">Operator journals</p>
-      <h1 class="section-title text-4xl sm:text-5xl">{pageTitle}</h1>
-      {
-        page.currentPage === 1 && (
-          <p class="section-lead max-w-2xl">
-            Evidence from the studio floor — how we decide, ship, and learn on
-            Focus bets. Not Medium essays; operator notes with honest status.
-          </p>
-        )
-      }
-    </section>
-
-    <section class="section-shell">
-      <PostsList posts={page.data} />
-    </section>
-  </div>
+  <h1>
+    {frontmatter.title}
+  </h1>
+  <PostsList posts={page.data} />
 
   <Pagination slot="bottom" page={page} />
 </PageLayout>

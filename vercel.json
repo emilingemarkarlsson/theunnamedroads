@@ -5,6 +5,12 @@
       "has": [{ "type": "host", "value": "theunnamedroads.com" }],
       "destination": "https://www.theunnamedroads.com/:path*",
       "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "e.theunnamedroads.com" }],
+      "destination": "https://www.theunnamedroads.com/",
+      "permanent": true
     }
   ]
 }
