@@ -1,6 +1,6 @@
 ---
 title: The Agent Fabric
-description: Distributed agent infrastructure for enterprise AI automation. Orchestrating distributed intelligence across data centers, edge nodes, and IoT devices.
+description: Distributed agent infrastructure for enterprise AI — sovereign, edge-ready agent runtime and orchestration narrative. Preview live while theagentfabric.com recovers.
 url: https://tur-theagentfabric.vercel.app/
 startDate: 2024-12-01
 tags:
@@ -17,13 +17,14 @@ homepage:
   statusTone: active
   statusDotColor: bg-sky-500
   focus: >-
-    Enterprise agent infrastructure narrative
+    Distributed agent infrastructure for enterprise AI
   summary: >-
-    Content surface on distributed agents and sovereign AI — Monitor until a wedge product appears.
-  metricLabel: Mode
-  metricValue: Monitor
+    B2B surface on sovereign AI, edge nodes, and agent runtime — in the SEO/dev attention set. Canonical domain recovering; preview live on Vercel.
+  metricLabel: Site
+  metricValue: Preview live
   tag: SaaS
   href: https://tur-theagentfabric.vercel.app/
+  ctaLabel: Open preview
 ---
 
 # The Agent Fabric
