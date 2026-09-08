@@ -1,4 +1,5 @@
 ---
+import StatusChip from '@/components/StatusChip.astro'
 import { isAbsolute, toMonthString } from '@/util'
 import { sortProjects } from '@/util/projects'
 import type { CollectionEntry } from 'astro:content'
@@ -10,16 +11,6 @@ export interface Props {
 const { projects } = Astro.props
 
 projects.sort(sortProjects)
-
-const buildProjectStatus = (
-  project: CollectionEntry<'projects'>
-): { label: string; color: string; animate?: boolean } => {
-  const label = project.data.homepage?.statusLabel ?? 'Active Experiment'
-  const color = project.data.homepage?.statusDotColor ?? 'bg-emerald-500'
-  const animate = project.data.homepage?.animateDot ?? true
-
-  return { label, color, animate }
-}
 
 const formatTimeline = (project: CollectionEntry<'projects'>) => {
   const start = toMonthString(project.data.startDate)
@@ -34,7 +25,8 @@ const formatTimeline = (project: CollectionEntry<'projects'>) => {
   {
     projects.map((project) => {
       const { data } = project
-      const { label, color, animate } = buildProjectStatus(project)
+      const statusLabel = data.homepage?.statusLabel ?? 'Active Experiment'
+      const animate = data.homepage?.animateDot ?? true
       const timeline = formatTimeline(project)
       const externalUrl = data.url?.trim()
       const hasLiveSite = Boolean(externalUrl && isAbsolute(externalUrl))
@@ -43,12 +35,12 @@ const formatTimeline = (project: CollectionEntry<'projects'>) => {
 
       const inner = (
         <div class="project-card">
-          <div class={`project-status ${color}`}>
-            <span
-              class={`h-1.5 w-1.5 rounded-full bg-white ${hasLiveSite && animate ? 'animate-pulse' : ''}`}
-            />
-            {label}
-          </div>
+          <StatusChip
+            label={statusLabel}
+            size="compact"
+            pulse={hasLiveSite && animate}
+            class="project-card-status"
+          />
           <div class="project-card-body">
             {categoryTag && <p class="section-eyebrow">{categoryTag}</p>}
             <h3 class="project-card-title">{data.title}</h3>
@@ -58,10 +50,7 @@ const formatTimeline = (project: CollectionEntry<'projects'>) => {
               <time>{timeline}</time>
             </div>
             {!hasLiveSite && (
-              <p
-                class="mt-3 text-xs uppercase tracking-wider"
-                style="color: rgba(240,235,227,0.3)"
-              >
+              <p class="project-card-note">
                 No live site — status & direction only
               </p>
             )}
@@ -79,7 +68,9 @@ const formatTimeline = (project: CollectionEntry<'projects'>) => {
           {inner}
         </a>
       ) : (
-        <div>{inner}</div>
+        <a href={`/projects/${project.slug}`} class="project-card-link group">
+          {inner}
+        </a>
       )
     })
   }
@@ -88,8 +79,8 @@ const formatTimeline = (project: CollectionEntry<'projects'>) => {
 <style>
   .project-card {
     @apply relative flex h-full min-h-[260px] flex-col overflow-hidden rounded-2xl border p-6 transition-all duration-300;
-    border-color: rgba(255, 255, 255, 0.07);
-    background: #111114;
+    border-color: var(--roads-border);
+    background: var(--roads-surface);
   }
 
   .project-card-link:hover .project-card {
@@ -102,8 +93,8 @@ const formatTimeline = (project: CollectionEntry<'projects'>) => {
     @apply text-accent;
   }
 
-  .project-status {
-    @apply absolute left-4 top-4 flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-white;
+  .project-card-status {
+    @apply absolute left-4 top-4;
   }
 
   .project-card-body {
@@ -112,21 +103,26 @@ const formatTimeline = (project: CollectionEntry<'projects'>) => {
 
   .project-card-title {
     @apply mb-2 text-xl font-bold leading-tight tracking-tight transition-colors sm:text-2xl;
-    color: #f0ebe3;
+    color: var(--roads-text);
   }
 
   .project-card-desc {
     @apply mb-3 text-sm leading-relaxed;
-    color: rgba(240, 235, 227, 0.65);
+    color: var(--roads-text-muted);
   }
 
   .project-card-meta {
     @apply flex flex-col gap-1 text-xs font-medium;
-    color: rgba(240, 235, 227, 0.4);
+    color: var(--roads-text-soft);
   }
 
   .project-card-meta-label {
     @apply inline-flex w-fit rounded-full border px-2 py-0.5 text-[10px] uppercase tracking-wider;
-    border-color: rgba(255, 255, 255, 0.08);
+    border-color: var(--roads-border);
+  }
+
+  .project-card-note {
+    @apply mt-3 text-xs uppercase tracking-wider;
+    color: var(--roads-text-soft);
   }
 </style>
