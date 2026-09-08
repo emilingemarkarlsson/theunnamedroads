@@ -2,7 +2,7 @@
 title: The Unnamed Roads
 description: One operator. AI-native venture studio powered by TUR Company OS — decision-first portfolio, human approval gates, agents inside policy.
 startDate: 2024-11-15
-url: https://theunnamedroads.com
+url: https://www.theunnamedroads.com
 tags:
   - venture-studio
   - ai-native
@@ -22,7 +22,7 @@ homepage:
   metricLabel: CTA
   metricValue: Subscribe
   tag: Studio
-  href: https://theunnamedroads.com/
+  href: https://www.theunnamedroads.com/
 ---
 
 # The Unnamed Roads
