@@ -81,72 +81,42 @@ const heroLoop = homepageData.hero.controlLoop
   <section class="hero" data-reveal>
     <p class="section-eyebrow">{homepageData.hero.eyebrow}</p>
     <h1 class="hero-headline mt-3">{homepageData.hero.headline}</h1>
-    <p class="hero-lead">
-      <strong>{homepageData.hero.eyebrow}</strong>
+    {
+      homepageData.hero.subheadline && (
+        <p class="hero-lead mt-4">{homepageData.hero.subheadline}</p>
+      )
+    }
+    {
+      homepageData.hero.supportingLine && (
+        <p class="mt-3 text-base" style="color: var(--roads-text-muted)">
+          {homepageData.hero.supportingLine}
+        </p>
+      )
+    }
+    <div class="hero-ctas">
       {
-        homepageData.hero.eyebrowAfter && (
-          <> — {homepageData.hero.eyebrowAfter}</>
+        homepageData.hero.primaryCta && (
+          <a
+            href={homepageData.hero.primaryCta.href}
+            class="btn-primary"
+            data-ph-event="cta_click"
+            data-ph-cta-id="hero_field_notes"
+            data-ph-section="hero"
+          >
+            {homepageData.hero.primaryCta.label}
+          </a>
         )
       }
-    </p>
-    <div class="hero-ctas">
-      <a
-        href="#ventures"
-        class="btn-primary"
-        data-ph-event="cta_click"
-        data-ph-cta-id="hero_ventures"
-        data-ph-section="hero"
-      >
-        View portfolio
-      </a>
-      <a
-        href="/insights"
-        class="btn-secondary"
-        data-ph-event="cta_click"
-        data-ph-cta-id="hero_insights"
-        data-ph-section="hero"
-      >
-        Read Field Notes
-      </a>
-    </div>
-
-    <div class="loop-panel" aria-label={heroLoop.loopLabel}>
-      <div class="loop-header">
-        <span class="loop-label">{heroLoop.platformLabel}</span>
-        {
-          heroLoop.liveLabel && (
-            <span class="loop-live">
-              <span class="loop-live-dot" aria-hidden="true" />
-              {heroLoop.liveLabel}
-            </span>
-          )
-        }
-      </div>
-      <p class="loop-label mb-3">{heroLoop.loopLabel}</p>
-      <div class="loop-steps">
-        {
-          heroLoop.steps.map((step) => (
-            <div class="loop-step">
-              <p class="loop-step-label">{step.label}</p>
-              <p class="loop-step-detail">{step.detail}</p>
-            </div>
-          ))
-        }
-      </div>
-      <div class="loop-gate">
-        <span class="loop-gate-pill">{heroLoop.gate.label}</span>
-        <span class="loop-gate-detail">{heroLoop.gate.detail}</span>
-      </div>
       {
-        heroLoop.portfolio.href && (
+        homepageData.hero.secondaryCta && (
           <a
-            href={heroLoop.portfolio.href}
-            class="mt-3 inline-block text-sm font-medium text-accent transition-colors hover:underline"
+            href={homepageData.hero.secondaryCta.href}
+            class="btn-secondary"
             data-ph-event="cta_click"
-            data-ph-cta-id="hero_portfolio"
-            data-ph-section="control_loop"
+            data-ph-cta-id="hero_projects"
+            data-ph-section="hero"
           >
-            {heroLoop.portfolio.detail} →
+            {homepageData.hero.secondaryCta.label} →
           </a>
         )
       }
@@ -308,13 +278,30 @@ const heroLoop = homepageData.hero.controlLoop
     )
   }
 
-  <!-- How we ship -->
+  <!-- How we ship (learning loop demoted below fold) -->
   <section id="operating-system" class="section-shell space-y-8" data-reveal>
     <header class="space-y-3">
       <p class="section-eyebrow">{homepageData.operatingSystem.eyebrow}</p>
       <h2 class="section-title">{homepageData.operatingSystem.title}</h2>
       <p class="section-lead">{homepageData.operatingSystem.description}</p>
     </header>
+    <div class="loop-panel" aria-label={heroLoop.loopLabel}>
+      <p class="loop-label mb-3">{heroLoop.loopLabel}</p>
+      <div class="loop-steps">
+        {
+          heroLoop.steps.map((step) => (
+            <div class="loop-step">
+              <p class="loop-step-label">{step.label}</p>
+              <p class="loop-step-detail">{step.detail}</p>
+            </div>
+          ))
+        }
+      </div>
+      <div class="loop-gate">
+        <span class="loop-gate-pill">{heroLoop.gate.label}</span>
+        <span class="loop-gate-detail">{heroLoop.gate.detail}</span>
+      </div>
+    </div>
     <ol class="os-timeline">
       {
         homepageData.operatingSystem.phases.map((phase, index) => (
