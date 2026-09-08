@@ -13,6 +13,7 @@ import GoogleTagManager from '@/components/GoogleTagManager.astro'
 import GoogleTagManagerNoScript from '@/components/GoogleTagManagerNoScript.astro'
 import config from '@/theme.config'
 import { resolveImageUrl } from '@/util'
+import { buildPageTitle, trimMetaDescription } from '@/util/seo'
 import type { HTMLAttributes } from 'astro/types'
 
 const preloadFonts = [
@@ -77,12 +78,10 @@ const publishedDateValue = coerceDate(publishedDate)
 const dateModifiedValue = coerceDate(dateModified)
 
 const robotsValue = robotsContent ?? 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
-const ogDescription = (description || config.description || '').trim() || config.description
+const ogDescription =
+  trimMetaDescription((description || config.description || '').trim() || config.description)
 
-let titleWithSuffix = title
-
-if (String(title).toLowerCase() !== String(config.title).toLowerCase())
-  titleWithSuffix += ` | ${config.title}`
+const titleWithSuffix = buildPageTitle(String(title), config.title)
 
 const openGraphImageUrl = new URL(
   resolveImageUrl(openGraphImage) || '/ogImage.png',
@@ -301,13 +300,13 @@ if (serviceJsonLd) jsonLdGraph.push(serviceJsonLd)
     <meta property="article:author" content={config.author} />
     <meta property="article:publisher" content={config.title} />
 
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={canonicalURL} />
-    <meta property="twitter:title" content={titleWithSuffix} />
-    <meta property="twitter:description" content={ogDescription} />
-    <meta property="twitter:image" content={openGraphImageUrl} />
-    <meta property="twitter:creator" content="@theunnamedroad" />
-    <meta property="twitter:site" content="@theunnamedroad" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalURL} />
+    <meta name="twitter:title" content={titleWithSuffix} />
+    <meta name="twitter:description" content={ogDescription} />
+    <meta name="twitter:image" content={openGraphImageUrl} />
+    <meta name="twitter:creator" content="@theunnamedroad" />
+    <meta name="twitter:site" content="@theunnamedroad" />
 
     {
       preloadFonts.map((font) => (
