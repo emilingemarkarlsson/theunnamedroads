@@ -144,12 +144,12 @@
         "id": "taf",
         "name": "THE AGENT FABRIC",
         "focus": "Distributed agent infrastructure for enterprise AI",
-        "summary": "B2B surface on sovereign AI and edge nodes — in the SEO/dev attention set. Canonical domain recovering; preview live on Vercel.",
+        "summary": "B2B surface on sovereign AI and edge nodes — in the SEO/dev attention set. Canonical URL is the Vercel deployment; theagentfabric.com apex is unregistered.",
         "tag": "saas",
         "status": { "label": "Monitor", "tone": "active" },
-        "metric": { "label": "Site", "value": "Canonical recovering" },
+        "metric": { "label": "Site", "value": "Live on Vercel" },
         "href": "https://tur-theagentfabric.vercel.app/",
-        "ctaLabel": "Open preview"
+        "ctaLabel": "Open site"
       },
       {
         "id": "tan",
