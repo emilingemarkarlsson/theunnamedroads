@@ -14,7 +14,7 @@ Here's the full stack, what it costs, and what broke badly along the way.
 
 ## The Setup
 
-**The studio** is called [The Unnamed Roads](https://theunnamedroads.com) — a venture studio where the thesis is that one person with AI agents as co-workers can run what used to require a team.
+**The studio** is called [The Unnamed Roads](https://www.theunnamedroads.com) — a venture studio where the thesis is that one person with AI agents as co-workers can run what used to require a team.
 
 The seven sites span different niches:
 - **[The Hockey Analytics](https://thehockeyanalytics.com)** — NHL data and analytics

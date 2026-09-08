@@ -1,18 +1,21 @@
-# AI.txt for The Unnamed Road
+# AI.txt for The Unnamed Roads
 # This file provides information for AI agents and web crawlers
 
 Site: https://www.theunnamedroads.com
-Name: The Unnamed Road
+Name: The Unnamed Roads
 Type: AI-Native Venture Studio
-Purpose: Building future roads of business through AI-human collaboration
+Purpose: Decision-first venture studio — Focus bets, Field Notes, human Approve gates
 
 # Content Structure
 Main Content: /
 Projects: /projects/
+Field Notes: /posts/
 Insights: /insights/
-Tools: /tools/
 About: /about/
+Stack: /stack/
+Tools: /tools/
 Contact: /contact/
+For assistants: /for-assistants/
 Feed: /feed.xml
 Sitemap: /sitemap-index.xml
 

@@ -1,0 +1,37 @@
+---
+import { resolveStatusVariant, type StatusVariant } from '@/util/status'
+
+export interface Props {
+  label: string
+  variant?: StatusVariant
+  /** Pulse the status dot (e.g. live product). */
+  pulse?: boolean
+  /** Compact size for overlay on project cards. */
+  size?: 'default' | 'compact'
+  class?: string
+}
+
+const {
+  label,
+  variant,
+  pulse = false,
+  size = 'default',
+  class: className = ''
+} = Astro.props
+
+const resolvedVariant = variant ?? resolveStatusVariant(label)
+---
+
+<span
+  class:list={[
+    'status-chip',
+    `status-chip--${resolvedVariant}`,
+    size === 'compact' && 'status-chip--compact',
+    className
+  ]}
+>
+  <span
+    class:list={['status-chip-dot', pulse && 'status-chip-dot--pulse']}
+    aria-hidden="true"></span>
+  <span class="status-chip-label">{label}</span>
+</span>
