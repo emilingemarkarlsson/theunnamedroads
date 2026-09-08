@@ -27,6 +27,8 @@ const projects = defineCollection({
       title: z.string(),
       description: z.string(),
       url: z.string().optional(),
+      /** Intended public domain — may differ from working `url` when canonical is recovering */
+      canonicalUrl: z.string().optional(),
       startDate: z.date(),
       endDate: z.date().optional().nullable(),
       tags: z.array(z.string()).default([]),

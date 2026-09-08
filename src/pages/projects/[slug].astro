@@ -22,6 +22,15 @@ export async function getStaticPaths() {
 const { project } = Astro.props
 const { Content } = await project.render()
 const statusLabel = project.data.homepage?.statusLabel
+const homepage = project.data.homepage
+const canonicalUrl = project.data.canonicalUrl?.trim()
+const workingUrl = (homepage?.href ?? project.data.url)?.trim()
+const siteMetricLabel = homepage?.metricLabel
+const siteMetricValue = homepage?.metricValue
+const ctaLabel = homepage?.ctaLabel ?? 'Open live site'
+const showSiteBlock = Boolean(
+  canonicalUrl || workingUrl || siteMetricLabel || siteMetricValue
+)
 const timelineStart = toMonthString(project.data.startDate)
 const timelineEnd = project.data.endDate
   ? toMonthString(project.data.endDate)
@@ -60,6 +69,58 @@ const contentContainerClass = 'mx-auto w-full max-w-6xl px-3 sm:px-6 lg:px-8'
         Timeline · <time>{timeline}</time>
       </p>
     </div>
+    {
+      showSiteBlock && (
+        <div
+          class="mt-4 rounded-xl border p-4 text-sm"
+          style="border-color: var(--roads-border); background: var(--roads-surface);"
+        >
+          <dl class="grid gap-3 sm:grid-cols-2">
+            {siteMetricLabel && siteMetricValue && (
+              <div>
+                <dt
+                  class="text-[10px] font-semibold uppercase tracking-wider"
+                  style="color: var(--roads-text-soft)"
+                >
+                  {siteMetricLabel}
+                </dt>
+                <dd class="mt-1 font-medium" style="color: var(--roads-text)">
+                  {siteMetricValue}
+                </dd>
+              </div>
+            )}
+            {canonicalUrl && (
+              <div>
+                <dt
+                  class="text-[10px] font-semibold uppercase tracking-wider"
+                  style="color: var(--roads-text-soft)"
+                >
+                  Canonical URL
+                </dt>
+                <dd
+                  class="mt-1 break-all"
+                  style="color: var(--roads-text-muted)"
+                >
+                  {canonicalUrl.replace(/^https?:\/\//, '')}
+                </dd>
+              </div>
+            )}
+          </dl>
+          {workingUrl && (
+            <p class="mt-4">
+              <a
+                href={workingUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="font-medium text-accent underline"
+              >
+                {ctaLabel} →
+              </a>
+            </p>
+          )}
+        </div>
+      )
+    }
   </div>
 
   <Prose

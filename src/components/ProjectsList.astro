@@ -25,13 +25,16 @@ const formatTimeline = (project: CollectionEntry<'projects'>) => {
   {
     projects.map((project) => {
       const { data } = project
-      const statusLabel = data.homepage?.statusLabel ?? 'Active Experiment'
-      const animate = data.homepage?.animateDot ?? true
+      const homepage = data.homepage
+      const statusLabel = homepage?.statusLabel ?? 'Active Experiment'
+      const animate = homepage?.animateDot ?? true
       const timeline = formatTimeline(project)
-      const externalUrl = data.url?.trim()
-      const hasLiveSite = Boolean(externalUrl && isAbsolute(externalUrl))
+      const workingUrl = (homepage?.href ?? data.url)?.trim()
+      const hasLiveSite = Boolean(workingUrl && isAbsolute(workingUrl))
+      const siteMetricLabel = homepage?.metricLabel
+      const siteMetricValue = homepage?.metricValue
       const categoryTag =
-        data.homepage?.tag ?? (data.tags.length > 0 ? data.tags[0] : null)
+        homepage?.tag ?? (data.tags.length > 0 ? data.tags[0] : null)
 
       const inner = (
         <div class="project-card">
@@ -49,6 +52,12 @@ const formatTimeline = (project: CollectionEntry<'projects'>) => {
               <span class="project-card-meta-label">Timeline</span>
               <time>{timeline}</time>
             </div>
+            {siteMetricLabel && siteMetricValue && (
+              <div class="project-card-meta mt-2">
+                <span class="project-card-meta-label">{siteMetricLabel}</span>
+                <span>{siteMetricValue}</span>
+              </div>
+            )}
             {!hasLiveSite && (
               <p class="project-card-note">
                 No live site — status & direction only
@@ -60,7 +69,7 @@ const formatTimeline = (project: CollectionEntry<'projects'>) => {
 
       return hasLiveSite ? (
         <a
-          href={externalUrl}
+          href={workingUrl}
           target="_blank"
           rel="noopener noreferrer"
           class="project-card-link group"

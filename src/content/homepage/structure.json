@@ -135,41 +135,45 @@
         "id": "taf",
         "name": "THE AGENT FABRIC",
         "focus": "Distributed agent infrastructure for enterprise AI",
-        "summary": "B2B surface on sovereign AI and edge nodes — SEO/dev attention set. Canonical domain recovering; preview live on Vercel.",
+        "summary": "B2B surface on sovereign AI and edge nodes — in the SEO/dev attention set. Canonical domain recovering; preview live on Vercel.",
         "tag": "saas",
         "status": { "label": "Monitor", "tone": "active" },
-        "metric": { "label": "Site", "value": "Preview live" },
-        "href": "https://tur-theagentfabric.vercel.app/"
+        "metric": { "label": "Site", "value": "Canonical recovering" },
+        "href": "https://tur-theagentfabric.vercel.app/",
+        "ctaLabel": "Open preview"
       },
       {
         "id": "tan",
         "name": "THE ATOMIC NETWORK",
         "focus": "Hyperlocal GTM — physical mail plus referral loops",
-        "summary": "Geo-triggered postcards and invite codes for brick-and-mortar brands. Pilot on Vercel; in the SEO/dev attention set.",
+        "summary": "Geo-triggered postcards and invite codes for brick-and-mortar brands. Pilot live on Vercel; canonical domain not yet serving — in the SEO/dev attention set.",
         "tag": "print",
         "status": { "label": "Monitor", "tone": "exploring" },
         "metric": { "label": "Pilot", "value": "Live on Vercel" },
-        "href": "https://tan-site.vercel.app/pilot"
+        "href": "https://tan-site.vercel.app/pilot",
+        "ctaLabel": "Open pilot"
       },
       {
         "id": "aaf",
         "name": "AI AUTOMATION FABRIC",
         "focus": "Card-first automation studio for small teams",
-        "summary": "Describe a workflow, get an estimate, and receive production-ready automation with AI handover docs — SEO/dev attention set.",
+        "summary": "Describe a workflow, get an estimate, and receive production-ready automation with AI handover docs — in the SEO/dev attention set. Canonical URL is Vercel preview until custom domain assigned.",
         "tag": "saas",
         "status": { "label": "Monitor", "tone": "building" },
         "metric": { "label": "Site", "value": "Live" },
-        "href": "https://tur-aaf.vercel.app"
+        "href": "https://tur-aaf.vercel.app",
+        "ctaLabel": "Open site"
       },
       {
         "id": "tpr",
         "name": "THE PRINT ROUTE",
         "focus": "Webhook-to-doorstep print routing",
-        "summary": "Two-sided routing for retailers and local print providers — Monitor in the SEO/dev attention set while a retailer pilot proves pull.",
+        "summary": "Two-sided routing for retailers and local print providers — Parked; marketing site live, product not actively developed.",
         "tag": "print",
-        "status": { "label": "Monitor", "tone": "exploring" },
-        "metric": { "label": "Site", "value": "Live" },
-        "href": "https://theprintroute.com/"
+        "status": { "label": "Parked", "tone": "exploring" },
+        "metric": { "label": "Mode", "value": "Parked" },
+        "href": "https://theprintroute.com/",
+        "ctaLabel": "View site (parked)"
       },
       {
         "id": "eik",
