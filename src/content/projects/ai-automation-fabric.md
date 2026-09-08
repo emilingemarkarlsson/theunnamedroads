@@ -2,6 +2,7 @@
 title: AI Automation Fabric
 description: Card-first automation studio for small teams. Describe the workflow, get a clear estimate, and receive a production-ready automation with AI handover docs so you can run and evolve it in-house.
 url: https://tur-aaf.vercel.app
+canonicalUrl: https://tur-aaf.vercel.app
 startDate: 2026-06-16
 tags:
   - automation
@@ -17,14 +18,17 @@ homepage:
   focus: >-
     Workflow cards operators can hand to agents
   summary: >-
-    Describe a workflow, get a bounded automation with handover docs — agent-native delivery pattern.
-  metricLabel: Mode
-  metricValue: Monitor
+    Describe a workflow, get a bounded automation with handover docs — Monitor. Canonical URL is the Vercel preview until a custom domain is assigned.
+  metricLabel: Site
+  metricValue: Live
   tag: SaaS
   href: https://tur-aaf.vercel.app
+  ctaLabel: Open site
 ---
 
 # AI Automation Fabric
+
+**Status:** Monitor · **Canonical URL:** tur-aaf.vercel.app (custom domain not yet assigned)
 
 **Card-first automation studio for small teams.**
 

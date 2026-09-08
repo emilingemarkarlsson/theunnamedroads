@@ -2,6 +2,7 @@
 title: The Print Route
 description: From webhook to doorstep. A two-sided print routing platform connecting retailers with local print providers – automated order intake, SLA-based production workflow, and synced delivery tracking.
 url: https://theprintroute.com
+canonicalUrl: https://theprintroute.com
 startDate: 2025-01-15
 tags:
   - print-logistics
@@ -20,14 +21,17 @@ homepage:
   focus: >-
     Print routing marketplace
   summary: >-
-    Two-sided routing — parked until a single retailer pilot proves pull.
+    Two-sided routing — Parked until a single retailer pilot proves pull. Marketing site remains live; product not actively developed.
   metricLabel: Mode
   metricValue: Parked
   tag: Print
   href: https://theprintroute.com/
+  ctaLabel: View site (parked)
 ---
 
 # The Print Route
+
+**Status:** Parked · **Site:** theprintroute.com (marketing site live; product not actively developed)
 
 **From webhook to doorstep.**
 

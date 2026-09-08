@@ -135,31 +135,45 @@
         "id": "taf",
         "name": "THE AGENT FABRIC",
         "focus": "Enterprise AI agent infrastructure",
-        "summary": "B2B content site on distributed AI agents, edge deployments, and sovereign AI.",
+        "summary": "B2B content site on distributed AI agents, edge deployments, and sovereign AI. Canonical domain recovering; preview live on Vercel.",
         "tag": "saas",
         "status": { "label": "Monitor", "tone": "active" },
-        "metric": { "label": "Mode", "value": "Monitor" },
-        "href": "https://tur-theagentfabric.vercel.app/"
+        "metric": { "label": "Site", "value": "Canonical recovering" },
+        "href": "https://tur-theagentfabric.vercel.app/",
+        "ctaLabel": "Open preview"
       },
       {
         "id": "tan",
         "name": "THE ATOMIC NETWORK",
         "focus": "Hyperlocal GTM loops",
-        "summary": "Physical mail plus referral mechanics for brick-and-mortar brands. GTM execution is the remaining gap.",
+        "summary": "Physical mail plus referral mechanics for brick-and-mortar brands. Pilot live on Vercel; canonical domain not yet serving.",
         "tag": "print",
         "status": { "label": "Monitor", "tone": "exploring" },
-        "metric": { "label": "Mode", "value": "Monitor" },
-        "href": "https://tan-site.vercel.app/pilot"
+        "metric": { "label": "Pilot", "value": "Live on Vercel" },
+        "href": "https://tan-site.vercel.app/pilot",
+        "ctaLabel": "Open pilot"
+      },
+      {
+        "id": "aaf",
+        "name": "AI AUTOMATION FABRIC",
+        "focus": "Card-first automation studio for small teams",
+        "summary": "Workflow cards with AI handover docs — Monitor. Canonical URL is Vercel preview until custom domain assigned.",
+        "tag": "saas",
+        "status": { "label": "Monitor", "tone": "building" },
+        "metric": { "label": "Site", "value": "Live" },
+        "href": "https://tur-aaf.vercel.app",
+        "ctaLabel": "Open site"
       },
       {
         "id": "tpr",
         "name": "THE PRINT ROUTE",
         "focus": "Smart print routing",
-        "summary": "Webhook-to-doorstep print routing for retailers and local providers.",
+        "summary": "Webhook-to-doorstep print routing for retailers and local providers — Parked; marketing site live, product not actively developed.",
         "tag": "print",
-        "status": { "label": "Monitor", "tone": "exploring" },
-        "metric": { "label": "Mode", "value": "Monitor" },
-        "href": "https://theprintroute.com/"
+        "status": { "label": "Parked", "tone": "exploring" },
+        "metric": { "label": "Mode", "value": "Parked" },
+        "href": "https://theprintroute.com/",
+        "ctaLabel": "View site (parked)"
       },
       {
         "id": "eik",

@@ -3,6 +3,7 @@ title: The Atomic Network
 description: Hyperlocal marketing platform that triggers physical mail campaigns when neighbors buy, creating viral loops through referral codes and network effects
 startDate: 2025-09-01
 url: https://tan-site.vercel.app/pilot
+canonicalUrl: https://theatomicnetwork.com
 tags:
   [
     'marketing',
@@ -20,16 +21,18 @@ homepage:
   focus: >-
     Hyperlocal GTM from mobile + assistant
   summary: >-
-    Physical mail and referral loops for local sellers — pilot validates agent-assisted campaign creation.
-  metricLabel: Mode
-  metricValue: Monitor
+    Physical mail and referral loops for local sellers — Monitor. Pilot live on Vercel; canonical domain not yet serving.
+  metricLabel: Pilot
+  metricValue: Live on Vercel
   tag: Print
   href: https://tan-site.vercel.app/pilot
+  ctaLabel: Open pilot
 ---
 
 # The Atomic Network (TAN)
 
 **Status:** Monitor  
+**Canonical URL:** theatomicnetwork.com (not yet serving — pilot live on Vercel)  
 **Type:** SaaS Marketing Platform  
 **Focus:** Hyperlocal Network Effects
 
