@@ -3,6 +3,7 @@ import PageLayout, {
   type Props as PageLayoutProps
 } from '@/layouts/PageLayout.astro'
 import { generateTags, getTagUsage } from '@/util/tags'
+import { NOINDEX_FOLLOW } from '@/util/seo'
 
 const tags = await generateTags()
 const tagsWithCount = (
@@ -13,7 +14,8 @@ const tagsWithCount = (
 
 const frontmatter: PageLayoutProps['frontmatter'] = {
   title: 'Tags',
-  activeHeaderLink: 'Tags'
+  activeHeaderLink: 'Tags',
+  robotsContent: NOINDEX_FOLLOW
 }
 ---
 
