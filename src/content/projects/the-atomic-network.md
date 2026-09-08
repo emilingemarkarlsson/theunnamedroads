@@ -79,6 +79,14 @@ When neighbors buy, neighbors follow. TAN weaponizes the psychology of imitation
 - -70% lower customer acquisition cost vs digital ads
 - 10x average growth through network effects
 
+## How print actually happens
+
+TAN is the campaign frontend. It does not choose print companies.
+
+When an operator approves a neighborhood wave, TAN should hand a structured
+print request to **The Print Route**. TPR routes that request to the right
+print company, which then prints and ships.
+
 ---
 
 _The Atomic Network - Igniting hyperlocal marketing through network effects_

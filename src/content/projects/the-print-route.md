@@ -58,3 +58,9 @@ Onboarding: define production capabilities (formats, countries, materials), set 
 - GDPR-compliant, EU-based data handling
 - Admin dashboard for managing customers, orders, and revenue
 - API-first integration for retailers
+
+## Role in the Print cluster
+
+The Print Route is the fulfilment kernel behind The Atomic Network (TAN).
+TAN is the campaign frontend. TPR receives a print request, routes it to the
+right print company, and that company prints and ships.
