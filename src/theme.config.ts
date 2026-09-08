@@ -4,7 +4,7 @@ export default defineThemeConfig({
   site: 'https://www.theunnamedroads.com',
   title: 'The Unnamed Roads',
   description:
-    'AI-native venture studio building measured, decision-first companies. Portfolio of focused experiments, Field Notes for indie founders, and a Company OS that compounds learning.',
+    'Expedition studio — one developer, unnamed roads. AI carries the pack; human holds the compass. Field Notes receipts from building in public.',
   author: 'The Unnamed Roads',
   navbarItems: [
     { label: 'Projects', href: '/projects' },

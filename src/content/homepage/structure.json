@@ -1,8 +1,17 @@
 {
   "hero": {
-    "eyebrow": "AI venture studio",
-    "eyebrowAfter": "3 Focus bets, 12-week experiments — human Approve before publish, deploy, or external send.",
+    "eyebrow": "Expedition studio",
     "headline": "The Unnamed Roads",
+    "subheadline": "The map is full. But there are still roads without names — and one developer can take them now. AI carries the pack. You hold the compass.",
+    "supportingLine": "It used to take a team. Now one developer + AI automation walks terrain that wasn't on the map — expedition, not agency.",
+    "primaryCta": {
+      "label": "Read Field Notes",
+      "href": "/posts/"
+    },
+    "secondaryCta": {
+      "label": "See what's in flight",
+      "href": "/projects/"
+    },
     "badges": [],
     "controlLoop": {
       "windowTitle": "Studio · Control loop",
@@ -544,8 +553,8 @@
   },
   "fieldNotesTeaser": {
     "eyebrow": "Field Notes",
-    "title": "Evidence from building in public",
-    "description": "Measured experiments, approval gates and portfolio policy — written for indie founders shipping AI-native companies without heavy org debt.",
+    "title": "Dispatches from the road",
+    "description": "Receipts from building in public — measured experiments, costs, and outcomes. Not a manifesto; evidence you can cite.",
     "href": "/posts/",
     "linkLabel": "Read Field Notes"
   },

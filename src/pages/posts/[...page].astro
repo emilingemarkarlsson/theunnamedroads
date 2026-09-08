@@ -40,6 +40,15 @@ const frontmatter: PageLayoutProps['frontmatter'] = {
   <h1>
     {frontmatter.title}
   </h1>
+  {
+    page.currentPage === 1 && (
+      <p class="mb-8 max-w-2xl text-base leading-relaxed text-slate-300">
+        Dispatches from the road — receipts from building in public, not a
+        manifesto. Field Notes capture what shipped, what broke, and what it
+        cost.
+      </p>
+    )
+  }
   <PostsList posts={page.data} />
 
   <Pagination slot="bottom" page={page} />
