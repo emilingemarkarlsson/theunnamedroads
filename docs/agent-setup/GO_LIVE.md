@@ -9,6 +9,7 @@ Cloud Agent tokens are **read-only** on GitHub for labels/issues/merge, and Curs
 - [x] Agent labels bootstrapped (`agent:draft|ready|running|done|needs-human`, `learn:candidate`)
 - [x] Execute automation configured (cron `*/30` + `agent:ready`)
 - [x] Smoke test ([#11](https://github.com/emilingemarkarlsson/theunnamedroads/issues/11) → [#12](https://github.com/emilingemarkarlsson/theunnamedroads/pull/12)) — Execute picked up `agent:ready` and opened a PR
+- [x] GSC wave #52 complete — #75 GSC ritual logged; IndexNow 403 → #79; next `agent:ready`: #76
 - [ ] **Agent PR inbox workflow** merged — auto-assign + review request on `cursor/agent-issue-*` PRs (fixes empty Assigned queue)
 
 Re-run label bootstrap if needed: push to `main` (workflow `.github/workflows/sync-agent-labels.yml`) or **Actions → Sync agent labels → Run workflow**.
