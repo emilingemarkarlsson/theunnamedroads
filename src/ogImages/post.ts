@@ -16,7 +16,7 @@ export default (accent: string, bg: string) =>
               {
                 type: 'img',
                 props: {
-                  src: 'https://theunnamedroads.com/favicon.svg',
+                  src: 'https://www.theunnamedroads.com/favicon.svg',
                   height: 48,
                   width: 48
                 }
