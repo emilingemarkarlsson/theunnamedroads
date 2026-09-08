@@ -1,7 +1,7 @@
 {
   "hero": {
     "eyebrow": "AI venture studio",
-    "eyebrowAfter": "Agents draft inside policy — humans Approve before publish, deploy, or external send.",
+    "eyebrowAfter": "3 Focus bets, 12-week experiments — human Approve before publish, deploy, or external send.",
     "headline": "The Unnamed Roads",
     "badges": [],
     "controlLoop": {
@@ -286,8 +286,8 @@
   },
   "tools": {
     "eyebrow": "Stack",
-    "title": "Tools we deploy daily",
-    "description": "Every OS phase has named tools so partners can see exactly how we sense, compose, deploy, and audit autonomous ventures.",
+    "title": "Studio stack reference",
+    "description": "Infrastructure mapped to OS phases — reference for operators building similar one-person studios, not a hire funnel.",
     "groups": [
       {
         "id": "infra",
