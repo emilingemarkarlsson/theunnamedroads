@@ -18,9 +18,10 @@
 /projects/emil-ingemar-karlsson https://emilingemarkarlsson.com/ 301
 /projects/emil-ingemar-karlsson/ https://emilingemarkarlsson.com/ 301
 
-# Hire-funnel removal
-/services/ai-native-venture-studio / 301
-/services/ai-native-venture-studio/ / 301
+# Hire-funnel removal — brand-safe interstitial (not silent home redirect)
+/services/ai-native-venture-studio /services/ 301
+/services/ai-native-venture-studio/ /services/ 301
+/services/* /services/ 301
 
 # Canonical author entity
 /authors/Emil%20Karlsson /authors/Emil%20Ingemar%20Karlsson 301
