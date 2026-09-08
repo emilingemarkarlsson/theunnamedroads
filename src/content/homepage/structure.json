@@ -1,8 +1,17 @@
 {
   "hero": {
-    "eyebrow": "AI venture studio",
-    "eyebrowAfter": "3 Focus bets, 12-week experiments — human Approve before publish, deploy, or external send.",
+    "eyebrow": "Expedition studio",
     "headline": "The Unnamed Roads",
+    "subheadline": "The map is full. But there are still roads without names — and one developer can take them now. AI carries the pack. You hold the compass.",
+    "supportingLine": "It used to take a team. Now one developer + AI automation walks terrain that wasn't on the map — expedition, not agency.",
+    "primaryCta": {
+      "label": "Read Field Notes",
+      "href": "/posts/"
+    },
+    "secondaryCta": {
+      "label": "See what's in flight",
+      "href": "/projects/"
+    },
     "badges": [],
     "controlLoop": {
       "windowTitle": "Studio · Control loop",
@@ -188,9 +197,9 @@
     ]
   },
   "companyOs": {
-    "eyebrow": "Archive · TUR Company OS",
-    "title": "Operating model reference — platform Avvecklat",
-    "description": "Company OS was the studio control plane for portfolio hierarchy, approval gates and learning loops. The platform wound down in September 2026; the decision-first playbook and human Approve gates remain how we ship.",
+    "eyebrow": "Archive",
+    "title": "TUR Company OS — reference only",
+    "description": "The control-plane platform wound down in September 2026. Human Approve before publish stays studio truth — kept here as reference, not brand hero.",
     "statusNote": "Avvecklat September 2026 — kept as reference, not an active product.",
     "primaryCta": {
       "label": "Read the operating system essay",
@@ -544,8 +553,8 @@
   },
   "fieldNotesTeaser": {
     "eyebrow": "Field Notes",
-    "title": "Evidence from building in public",
-    "description": "Measured experiments, approval gates and portfolio policy — written for indie founders shipping AI-native companies without heavy org debt.",
+    "title": "Dispatches from the road",
+    "description": "Receipts from building in public — what broke, what it cost, what we learned. Not manifestos; measured experiments with honest outcomes.",
     "href": "/posts/",
     "linkLabel": "Read Field Notes"
   },
