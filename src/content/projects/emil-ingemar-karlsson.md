@@ -15,7 +15,7 @@ homepage:
   focus: >-
     Personal trust realm — distribution only
   summary: >-
-    Founder portfolio in Personal realm; linked here as distribution, not a studio venture.
+    Personal portfolio for Emil Ingemar Karlsson — distribution surface in the SEO/dev attention set, separate Personal trust realm.
   metricLabel: Realm
   metricValue: Personal
   tag: Studio

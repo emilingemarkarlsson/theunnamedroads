@@ -18,7 +18,7 @@ homepage:
   focus: >-
     Consulting surface adjacent to THA
   summary: >-
-    On-demand analytics for teams without a full-time hire — Monitor while THA Club Pack validates.
+    On-demand analytics for teams without a full-time hire — Monitor product bet, in the SEO/dev attention set alongside THA.
   metricLabel: Mode
   metricValue: Monitor
   tag: Sports

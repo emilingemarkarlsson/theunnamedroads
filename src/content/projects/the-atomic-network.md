@@ -1,6 +1,6 @@
 ---
 title: The Atomic Network
-description: Hyperlocal marketing platform that triggers physical mail campaigns when neighbors buy, creating viral loops through referral codes and network effects
+description: Hyperlocal GTM platform — physical mail and referral loops triggered when neighbors buy, creating viral loops for brick-and-mortar brands.
 startDate: 2025-09-01
 url: https://tan-site.vercel.app/pilot
 canonicalUrl: https://theatomicnetwork.com
@@ -19,9 +19,9 @@ homepage:
   statusLabel: Monitor
   statusTone: exploring
   focus: >-
-    Hyperlocal GTM from mobile + assistant
+    Hyperlocal GTM — physical mail plus referral loops
   summary: >-
-    Physical mail and referral loops for local sellers — Monitor. Pilot live on Vercel; canonical domain not yet serving.
+    When neighbors buy, neighbors follow: geo-triggered postcards and invite codes for brick-and-mortar brands. Pilot live on Vercel; canonical domain not yet serving — in the SEO/dev attention set.
   metricLabel: Pilot
   metricValue: Live on Vercel
   tag: Print
