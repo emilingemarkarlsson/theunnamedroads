@@ -1,17 +1,55 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "trailingSlash": true,
   "redirects": [
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [{ "type": "host", "value": "theunnamedroads.com" }],
-      "destination": "https://www.theunnamedroads.com/:path*",
-      "permanent": true
+      "destination": "https://www.theunnamedroads.com/$1",
+      "statusCode": 301
     },
     {
       "source": "/",
       "has": [{ "type": "host", "value": "e.theunnamedroads.com" }],
       "destination": "https://www.theunnamedroads.com/",
       "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        }
+      ]
+    },
+    {
+      "source": "/",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "https://www.theunnamedroads.com"
+        }
+      ]
+    },
+    {
+      "source": "/:path((?!.*\\.).*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "https://www.theunnamedroads.com"
+        }
+      ]
     }
   ]
 }
