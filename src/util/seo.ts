@@ -24,6 +24,7 @@ export const SITEMAP_EXCLUDE: RegExp[] = [
   /^\/tags(\/|$)/,
   /^\/posts\/\d+\/?$/,
   /^\/services(\/|$)/,
+  /^\/search(\/|$)/,
   /emil-ingemark-karlsson/,
   /^\/authors\//,
   /^\/feed\.xml\/?$/
