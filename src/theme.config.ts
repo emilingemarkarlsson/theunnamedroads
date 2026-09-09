@@ -10,7 +10,16 @@ export default defineThemeConfig({
     { label: 'Projects', href: '/projects' },
     { label: 'Field Notes', href: '/posts' },
     { label: 'About', href: '/about' },
-    { label: 'Insights', href: '/insights' }
+    { label: 'Insights', href: '/insights' },
+    {
+      label: 'More',
+      children: [
+        { label: 'Stack', href: '/stack' },
+        { label: 'Tools', href: '/tools' },
+        { label: 'Agents', href: '/agents' }
+      ]
+    },
+    { label: 'Contact', href: '/contact' }
   ],
   footerNavItems: [
     { label: 'Stack', href: '/stack' },
