@@ -2,10 +2,12 @@
 import PageLayout, {
   type Props as PageLayoutProps
 } from '@/layouts/PageLayout.astro'
+import { NOINDEX_FOLLOW } from '@/util/seo'
 
 const frontmatter: PageLayoutProps['frontmatter'] = {
   title: 'Search',
-  activeHeaderLink: '/search'
+  activeHeaderLink: '/search',
+  robotsContent: NOINDEX_FOLLOW
 }
 ---
 
