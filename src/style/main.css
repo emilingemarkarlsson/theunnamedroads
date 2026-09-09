@@ -6,6 +6,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .skip-link {
+    @apply fixed left-4 top-4 z-[100] -translate-y-[200%] rounded bg-accent-bg px-4 py-2 text-sm font-medium text-accent shadow-lg ring-2 ring-accent transition-transform focus:translate-y-0 focus:outline-none;
+  }
+}
+
 @layer base {
   :root {
     @apply bg-accent-bg selection:bg-accent/75 overflow-y-scroll scroll-smooth underline-offset-4 selection:text-white;
