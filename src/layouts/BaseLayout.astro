@@ -13,6 +13,11 @@ import GoogleTagManager from '@/components/GoogleTagManager.astro'
 import GoogleTagManagerNoScript from '@/components/GoogleTagManagerNoScript.astro'
 import config from '@/theme.config'
 import { resolveImageUrl } from '@/util'
+import {
+  buildContactPageJsonLd,
+  buildProjectJsonLd,
+  type ProjectJsonLdInput
+} from '@/util/jsonLd'
 import type { HTMLAttributes } from 'astro/types'
 
 const preloadFonts = [
@@ -47,6 +52,10 @@ export interface Props {
       serviceType?: string
       areaServed?: string
     }
+    /** Project schema for /projects/* detail pages */
+    project?: ProjectJsonLdInput
+    /** ContactPage schema for /contact/ */
+    contactPage?: boolean
   }>
 }
 
@@ -69,7 +78,9 @@ const {
     next,
     robotsContent,
     faq,
-    service
+    service,
+    project,
+    contactPage
   }
 } = Astro.props
 
@@ -254,6 +265,23 @@ const serviceJsonLd =
   })
 
 if (serviceJsonLd) jsonLdGraph.push(serviceJsonLd)
+
+const projectJsonLd =
+  project && buildProjectJsonLd(project, canonicalURL, organizationId)
+
+if (projectJsonLd) jsonLdGraph.push(projectJsonLd)
+
+const contactPageJsonLd =
+  contactPage &&
+  buildContactPageJsonLd(
+    canonicalURL,
+    title,
+    description,
+    websiteId,
+    organizationId
+  )
+
+if (contactPageJsonLd) jsonLdGraph.push(contactPageJsonLd)
 ---
 
 <!doctype html>
