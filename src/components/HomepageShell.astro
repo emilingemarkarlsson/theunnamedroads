@@ -73,7 +73,14 @@ const ventureProjects = featuredProjects.map((project) => {
 const ventureCards =
   ventureProjects.length > 0 ? ventureProjects : homepageData.ventures.companies
 
-const heroLoop = homepageData.hero.controlLoop
+const heroPrimaryCta = homepageData.hero.primaryCta ?? {
+  label: 'Read Field Notes',
+  href: '/posts/'
+}
+const heroSecondaryCta = homepageData.hero.secondaryCta ?? {
+  label: "See what's in flight",
+  href: '/projects/'
+}
 ---
 
 <div class="homepage-shell space-y-12 sm:space-y-16 lg:space-y-20">
@@ -81,75 +88,44 @@ const heroLoop = homepageData.hero.controlLoop
   <section class="hero" data-reveal>
     <p class="section-eyebrow">{homepageData.hero.eyebrow}</p>
     <h1 class="hero-headline mt-3">{homepageData.hero.headline}</h1>
-    <p class="hero-lead">
-      <strong>{homepageData.hero.eyebrow}</strong>
-      {
+    {
+      homepageData.hero.subheadline ? (
+        <p class="hero-lead">{homepageData.hero.subheadline}</p>
+      ) : (
         homepageData.hero.eyebrowAfter && (
-          <> — {homepageData.hero.eyebrowAfter}</>
+          <p class="hero-lead">{homepageData.hero.eyebrowAfter}</p>
         )
-      }
-    </p>
+      )
+    }
+    {
+      homepageData.hero.supportingLine && (
+        <p
+          class="hero-support mt-4 max-w-2xl text-sm leading-relaxed sm:text-base"
+          style="color: var(--roads-text-muted)"
+        >
+          {homepageData.hero.supportingLine}
+        </p>
+      )
+    }
     <div class="hero-ctas">
       <a
-        href="#ventures"
+        href={heroPrimaryCta.href}
         class="btn-primary"
         data-ph-event="cta_click"
-        data-ph-cta-id="hero_ventures"
+        data-ph-cta-id="hero_primary"
         data-ph-section="hero"
       >
-        View portfolio
+        {heroPrimaryCta.label}
       </a>
       <a
-        href="/insights"
+        href={heroSecondaryCta.href}
         class="btn-secondary"
         data-ph-event="cta_click"
-        data-ph-cta-id="hero_insights"
+        data-ph-cta-id="hero_secondary"
         data-ph-section="hero"
       >
-        Read Field Notes
+        {heroSecondaryCta.label}
       </a>
-    </div>
-
-    <div class="loop-panel" aria-label={heroLoop.loopLabel}>
-      <div class="loop-header">
-        <span class="loop-label">{heroLoop.platformLabel}</span>
-        {
-          heroLoop.liveLabel && (
-            <span class="loop-live">
-              <span class="loop-live-dot" aria-hidden="true" />
-              {heroLoop.liveLabel}
-            </span>
-          )
-        }
-      </div>
-      <p class="loop-label mb-3">{heroLoop.loopLabel}</p>
-      <div class="loop-steps">
-        {
-          heroLoop.steps.map((step) => (
-            <div class="loop-step">
-              <p class="loop-step-label">{step.label}</p>
-              <p class="loop-step-detail">{step.detail}</p>
-            </div>
-          ))
-        }
-      </div>
-      <div class="loop-gate">
-        <span class="loop-gate-pill">{heroLoop.gate.label}</span>
-        <span class="loop-gate-detail">{heroLoop.gate.detail}</span>
-      </div>
-      {
-        heroLoop.portfolio.href && (
-          <a
-            href={heroLoop.portfolio.href}
-            class="mt-3 inline-block text-sm font-medium text-accent transition-colors hover:underline"
-            data-ph-event="cta_click"
-            data-ph-cta-id="hero_portfolio"
-            data-ph-section="control_loop"
-          >
-            {heroLoop.portfolio.detail} →
-          </a>
-        )
-      }
     </div>
   </section>
 
@@ -265,50 +241,26 @@ const heroLoop = homepageData.hero.controlLoop
     </div>
   </section>
 
-  <!-- Company OS archive -->
   {
-    homepageData.companyOs && (
-      <section id="company-os" class="section-shell space-y-5" data-reveal>
-        <header class="space-y-3">
-          <p class="section-eyebrow">{homepageData.companyOs.eyebrow}</p>
-          <h2 class="section-title">{homepageData.companyOs.title}</h2>
-          <p class="section-lead">{homepageData.companyOs.description}</p>
-          {homepageData.companyOs.statusNote && (
-            <p
-              class="text-sm font-medium"
-              style="color: var(--roads-text-soft)"
-            >
-              {homepageData.companyOs.statusNote}
-            </p>
-          )}
-          <div class="flex flex-wrap gap-3 pt-2">
-            <a
-              href={homepageData.companyOs.primaryCta.href}
-              class="btn-primary"
-              data-ph-event="cta_click"
-              data-ph-cta-id="company_os_explainer"
-              data-ph-section="company_os"
-            >
-              {homepageData.companyOs.primaryCta.label}
-            </a>
-            {homepageData.companyOs.secondaryCta && (
-              <a
-                href={homepageData.companyOs.secondaryCta.href}
-                class="btn-secondary"
-                data-ph-event="cta_click"
-                data-ph-cta-id="company_os_field_notes"
-                data-ph-section="company_os"
-              >
-                {homepageData.companyOs.secondaryCta.label}
-              </a>
-            )}
-          </div>
-        </header>
+    homepageData.fieldNotesTeaser && (
+      <section class="section-shell space-y-4" data-reveal>
+        <p class="section-eyebrow">{homepageData.fieldNotesTeaser.eyebrow}</p>
+        <h2 class="section-title">{homepageData.fieldNotesTeaser.title}</h2>
+        <p class="section-lead">{homepageData.fieldNotesTeaser.description}</p>
+        <a
+          href={homepageData.fieldNotesTeaser.href}
+          class="inline-flex text-sm font-semibold text-accent"
+          data-ph-event="cta_click"
+          data-ph-cta-id="field_notes_teaser"
+          data-ph-section="field_notes"
+        >
+          {homepageData.fieldNotesTeaser.linkLabel} →
+        </a>
       </section>
     )
   }
 
-  <!-- How we ship -->
+  <!-- How we ship (below fold — operational detail, not brand hero) -->
   <section id="operating-system" class="section-shell space-y-8" data-reveal>
     <header class="space-y-3">
       <p class="section-eyebrow">{homepageData.operatingSystem.eyebrow}</p>
@@ -343,25 +295,6 @@ const heroLoop = homepageData.hero.controlLoop
       }
     </ol>
   </section>
-
-  {
-    homepageData.fieldNotesTeaser && (
-      <section class="section-shell space-y-4" data-reveal>
-        <p class="section-eyebrow">{homepageData.fieldNotesTeaser.eyebrow}</p>
-        <h2 class="section-title">{homepageData.fieldNotesTeaser.title}</h2>
-        <p class="section-lead">{homepageData.fieldNotesTeaser.description}</p>
-        <a
-          href={homepageData.fieldNotesTeaser.href}
-          class="inline-flex text-sm font-semibold text-accent"
-          data-ph-event="cta_click"
-          data-ph-cta-id="field_notes_teaser"
-          data-ph-section="field_notes"
-        >
-          {homepageData.fieldNotesTeaser.linkLabel} →
-        </a>
-      </section>
-    )
-  }
 
   {
     homepageData.stackStrip && (

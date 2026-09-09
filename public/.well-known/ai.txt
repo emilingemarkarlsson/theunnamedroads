@@ -14,6 +14,7 @@ Insights: /insights/
 About: /about/
 Stack: /stack/
 Tools: /tools/
+Agents: /agents/
 Contact: /contact/
 For assistants: /for-assistants/
 Feed: /feed.xml

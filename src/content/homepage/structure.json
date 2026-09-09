@@ -1,8 +1,17 @@
 {
   "hero": {
-    "eyebrow": "AI venture studio",
-    "eyebrowAfter": "3 Focus bets, 12-week experiments — human Approve before publish, deploy, or external send.",
+    "eyebrow": "Expedition studio",
     "headline": "The Unnamed Roads",
+    "subheadline": "The map is full. But there are still roads without names — and one developer can take them now. AI carries the pack. You hold the compass.",
+    "supportingLine": "It used to take a team. Now one developer + AI automation walks terrain that wasn't on the map — expedition, not agency.",
+    "primaryCta": {
+      "label": "Read Field Notes",
+      "href": "/posts/"
+    },
+    "secondaryCta": {
+      "label": "See what's in flight",
+      "href": "/projects/"
+    },
     "badges": [],
     "controlLoop": {
       "windowTitle": "Studio · Control loop",
@@ -77,8 +86,8 @@
           "detail": "Dormant — not shown as Active."
         },
         {
-          "id": "avvecklat",
-          "label": "Avvecklat",
+          "id": "wound-down",
+          "label": "Wound down",
           "detail": "Wound down — kept as reference, not an active product."
         }
       ]
@@ -135,12 +144,12 @@
         "id": "taf",
         "name": "THE AGENT FABRIC",
         "focus": "Distributed agent infrastructure for enterprise AI",
-        "summary": "B2B surface on sovereign AI and edge nodes — in the SEO/dev attention set. Canonical domain recovering; preview live on Vercel.",
+        "summary": "B2B surface on sovereign AI and edge nodes — in the SEO/dev attention set. Canonical URL is the Vercel deployment; theagentfabric.com apex is unregistered.",
         "tag": "saas",
         "status": { "label": "Monitor", "tone": "active" },
-        "metric": { "label": "Site", "value": "Canonical recovering" },
+        "metric": { "label": "Site", "value": "Live on Vercel" },
         "href": "https://tur-theagentfabric.vercel.app/",
-        "ctaLabel": "Open preview"
+        "ctaLabel": "Open site"
       },
       {
         "id": "tan",
@@ -189,9 +198,9 @@
   },
   "companyOs": {
     "eyebrow": "Archive · TUR Company OS",
-    "title": "Operating model reference — platform Avvecklat",
+    "title": "Operating model reference — platform wound down",
     "description": "Company OS was the studio control plane for portfolio hierarchy, approval gates and learning loops. The platform wound down in September 2026; the decision-first playbook and human Approve gates remain how we ship.",
-    "statusNote": "Avvecklat September 2026 — kept as reference, not an active product.",
+    "statusNote": "Wound down September 2026 — kept as reference, not an active product.",
     "primaryCta": {
       "label": "Read the operating system essay",
       "href": "/insights/ai-native-venture-studio-operating-system"
@@ -544,8 +553,8 @@
   },
   "fieldNotesTeaser": {
     "eyebrow": "Field Notes",
-    "title": "Evidence from building in public",
-    "description": "Measured experiments, approval gates and portfolio policy — written for indie founders shipping AI-native companies without heavy org debt.",
+    "title": "Dispatches from the road",
+    "description": "Receipts from building in public — measured experiments, costs, and outcomes. Not a manifesto; evidence you can cite.",
     "href": "/posts/",
     "linkLabel": "Read Field Notes"
   },

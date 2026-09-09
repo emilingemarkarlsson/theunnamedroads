@@ -61,7 +61,11 @@ const getLogoLabel = (name: string) =>
           <div class="tool-group-heading">
             <span class="tool-phase-chip">{group.phase}</span>
             <div>
-              <h3 class="tool-group-title">{group.title}</h3>
+              {showHeader ? (
+                <h3 class="tool-group-title">{group.title}</h3>
+              ) : (
+                <h2 class="tool-group-title">{group.title}</h2>
+              )}
               <p class="tool-group-description">{group.description}</p>
             </div>
           </div>

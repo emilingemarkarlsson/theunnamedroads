@@ -96,19 +96,16 @@ const agent = post.data.authorAgent
 
   {
     !!post.data.showToC && (
-      <div
-        slot="aside"
-        class="mt-24 hidden border-r border-slate-800 pr-6 opacity-60 transition-opacity duration-300 hover:opacity-100 2xl:block"
-      >
-        <ToC {headings} open />
+      <div class="mb-8 w-fit rounded-lg border border-slate-800 bg-slate-900/50 p-4 2xl:hidden">
+        <ToC {headings} />
       </div>
     )
   }
 
   {
     !!post.data.showToC && (
-      <div class="mb-8 w-fit rounded-lg border border-slate-800 bg-slate-900/50 p-4 2xl:hidden">
-        <ToC {headings} />
+      <div class="fixed left-0 mt-24 hidden w-fit -translate-x-full border-r border-slate-800 pr-6 opacity-60 transition-opacity duration-300 hover:opacity-100 2xl:block">
+        <ToC {headings} open />
       </div>
     )
   }

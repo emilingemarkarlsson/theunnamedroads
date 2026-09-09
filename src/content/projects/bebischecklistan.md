@@ -1,6 +1,6 @@
 ---
-title: Bebischecklistan
-description: Checklistor och förberedelser inför bebis — ett Monitor-koncept i TUR Family.
+title: Baby Checklist
+description: Nesting checklists and preparation flows for expecting parents — a parked concept in the TUR Family cluster.
 url: https://tur-nesting.vercel.app
 startDate: 2025-08-01
 tags:
@@ -24,7 +24,7 @@ homepage:
   href: https://tur-nesting.vercel.app
 ---
 
-# Bebischecklistan
+# Baby Checklist
 
-Nesting checklists and preparation flows for expecting parents. Monitor-only in
-the Growth Operating Loop until a separate validation contract is approved.
+Nesting checklists and preparation flows for expecting parents. Parked in the
+portfolio until a separate validation contract is approved — adjacent to Parental Leave Planner, not a parallel Family cluster bet.

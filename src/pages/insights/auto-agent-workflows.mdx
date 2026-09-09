@@ -1,104 +1,63 @@
 ---
 layout: '@/layouts/PageLayout.astro'
-title: Auto Agent Workflows
-description: Proactive AI agents that generate work for approval and execution. Autonomous agents that solo operators collaborate with to scale operations without hiring.
+title: Policy-Bound Agent Workflows
+description: Agents draft and execute inside policy — human Approve before publish, deploy, or external send. Pack-carriers for one-developer expeditions, not autonomous executive teams.
 faq:
-  - question: "What's the difference between reactive and proactive AI agents?"
-    answer: "Reactive agents wait for instructions or triggers (e.g. when X happens, do Y). Proactive agents monitor, analyze, and generate work for you to approve—they suggest next steps and execute after your review. Proactive agents enable true solo-operator scaling without hiring."
+  - question: "What's the difference between reactive and proactive agents?"
+    answer: "Reactive agents wait for triggers. Proactive agents monitor and propose work for Approve — they do not publish or send outbound autonomously. The operator holds the compass; agents carry pack weight inside policy."
   - question: "How do you set up approval workflows for AI agents?"
-    answer: "Define human-in-the-loop checkpoints: agents propose actions or content, you review and approve or reject. Use clear escalation rules and exception handling. Balance autonomy (agents run routine tasks) with control (humans approve strategy, spend, and public-facing output)."
-  - question: "What infrastructure do you need for autonomous AI agents?"
-    answer: "Agents need context and memory (e.g. shared docs or vector stores), secure API access, and observability (logs, metrics). Our stack uses Coolify, LiteLLM, and workflow tools so agents can run reliably and be monitored. Start with one agent and one approval loop before scaling."
-  - question: "How do proactive agents help solo operators scale?"
-    answer: "Proactive agents generate tasks and proposals so you spend time approving and directing instead of doing every step yourself. One operator can run multiple experiments or products by having agents handle research, drafts, and routine execution while you make decisions and hold relationships."
+    answer: "Define Approve checkpoints before any external action: drafts, deploys, outbound send. Agents propose; humans Approve, defer, or reject — typically on phone. See /agents/ for how roles are described (not fake executives)."
+  - question: "What infrastructure do you need for policy-bound agents?"
+    answer: "Shared context, secure API access, observability, and spend gates. Start with one workflow and one Approve loop before scaling. Stack reference: /tools/ and /stack/."
 ---
 
-# Auto Agent Workflows
+# Policy-Bound Agent Workflows
 
-**Pillar Page** | Part of our [AI-Native Venture Building](/insights) topical authority
+**Pillar Page** | Part of our [Insights](/insights) archive
 
-This pillar addresses the practical implementation layer: building proactive AI agents that work autonomously, generate proposals for your approval, and execute tasks after you've reviewed them. This is what enables true solo operator scaling.
+This pillar covers **agents inside policy** — pack-carriers on an expedition, not an autonomous C-suite.
 
 ## Core Concept
 
-While [AI-Human Collaboration](/insights/ai-human-collaboration) covers the philosophy of treating AI as a co-founder, this pillar addresses the concrete systems: **autonomous agents that work proactively** rather than waiting for instructions. These agents monitor, analyze, propose, and execute—creating a scalable team of AI workers that you collaborate with as the sole human operator.
+Agents monitor, draft, and propose. Humans Approve before anything leaves camp. That distinction is non-negotiable: no publish/deploy/external-send autonomy theater.
+
+While [AI-Human Collaboration](/insights/ai-human-collaboration) covers compass/pack philosophy, this pillar covers concrete workflows: bounded roles, Approve loops, and honest observability.
 
 ## Key Topics Covered
 
-### Agent Design & Architecture
-- Designing proactive vs reactive agents
-- Agent specialization and role definition
-- Agent memory and context management
-- Agent-to-agent communication patterns
-- Building agent teams for solo operators
+### Agent design
+- Proactive proposals vs autonomous execution (external)
+- Specialization without fake executive titles
+- Memory and context within policy bounds
+- Coordination without "agent swarm" brand theater
 
-### Approval & Review Workflows
-- Setting up approval workflows for AI agents
-- Review and validation processes
-- Human-in-the-loop decision points
+### Approve workflows
+- Human-in-the-loop before external send
 - Escalation and exception handling
-- Balancing autonomy with control
+- Approve · Defer · Reject on phone
 
-### Agent Orchestration
-- Coordinating multiple agents
-- Preventing agent conflicts
-- Agent task distribution
-- Agent monitoring and observability
-- Agent failure handling and recovery
-
-### Infrastructure & Security
-- Infrastructure requirements for AI agents
-- Agent security and access control
-- Agent deployment patterns
-- Agent testing and validation
-- Scaling from one agent to many
+### Infrastructure
+- Stack mapped to expedition phases — see [/tools/](/tools/)
+- Security and spend gates
+- Scaling from one workflow to many — still one compass
 
 ## Featured Content
 
-### Essential Projects
-- [Post-Human Venture Engine](/projects/post-human-venture-engine) — Our operating system of playbooks, agents, and self-healing pipelines
-- [The Agent Fabric](/projects/the-agent-fabric) — Distributed agent infrastructure for enterprise AI automation
+### Related projects
+- [The Agent Fabric](/projects/the-agent-fabric) — distributed agent infrastructure (Monitor status)
+- Field Notes on automation receipts — [/posts/](/posts/)
 
 ### Related Pillars
-- [AI-Human Collaboration Methodology](/insights/ai-human-collaboration) — The philosophy behind agent collaboration
-- [Venture Studio Operations](/insights/venture-studio-operations) — How agents enable portfolio-scale operations
-- [Post-Human Entrepreneurship](/insights/post-human-entrepreneurship) — The broader paradigm shift
+- [AI-Human Collaboration](/insights/ai-human-collaboration) — compass and pack
+- [Venture Studio Operations](/insights/venture-studio-operations) — one-developer portfolio ops
+- [One-Developer Expedition](/insights/post-human-entrepreneurship) — expedition framing
 
-## Common Questions Answered
+## Agents vs automation
 
-This pillar answers questions like:
-- How do you build AI agents that work proactively?
-- What's the difference between reactive and proactive agents?
-- How do you set up approval workflows for AI agents?
-- How do multiple AI agents coordinate together?
-- What happens when an AI agent makes a mistake?
-- How do you monitor what your AI agents are doing?
-- How do you give AI agents access to your systems safely?
-- What tasks should AI agents handle autonomously?
+**Traditional automation**: predefined workflows when triggered.
 
-## Search Intent Coverage
-
-This pillar captures searches for:
-- "autonomous AI agents for business"
-- "AI agents that generate work"
-- "proactive AI agents"
-- "AI agent approval workflows"
-- "solo operator AI agents"
-- "autonomous agent systems"
-- "AI agent orchestration"
-- "building AI agent team"
-- "agent-based automation"
-- "AI agents for solo founders"
-
-## The Difference: Agents vs Automation
-
-**Traditional Automation**: Executes predefined workflows when triggered. Requires explicit instructions.
-
-**Auto Agent Workflows**: Proactive agents that monitor, analyze, propose actions, and execute after approval. They work autonomously and generate work for you to review.
-
-This distinction is critical—agents don't just execute your commands; they **think, propose, and create** work that you approve and deploy.
+**Policy-bound agents**: monitor and propose; external execution waits for human Approve. They carry pack weight — they do not hold the compass.
 
 ---
 
-_This is a living document. As we publish new content on auto agent workflows, it will be added here to maintain topical authority._
-
+_This pillar reframes earlier autonomous-agent language into Approve-gated expedition ops._

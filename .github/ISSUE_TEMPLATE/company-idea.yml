@@ -1,0 +1,55 @@
+name: Company / product idea
+description: Capture a new company or product idea for the recurring backlog review
+title: "idea: "
+labels: ["idea"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Drop an idea into the Unnamed Roads backlog. Review weekly; promote with `idea:active` or park with `idea:parked`.
+  - type: textarea
+    id: one-liner
+    attributes:
+      label: One-liner
+      description: What is it in one sentence?
+      placeholder: One login for every brand your workshop actually services.
+    validations:
+      required: true
+  - type: dropdown
+    id: stage
+    attributes:
+      label: Stage
+      options:
+        - Spark
+        - One-pager
+        - Named / branded
+        - Site / prototype
+        - Live / selling
+      default: 0
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: Who hurts and why?
+    validations:
+      required: true
+  - type: textarea
+    id: wedge
+    attributes:
+      label: Wedge
+      description: First beachhead (segment, geo, SKU).
+  - type: textarea
+    id: links
+    attributes:
+      label: Links
+      description: Briefs, sites, repos, competitors.
+      placeholder: |
+        - https://…
+  - type: textarea
+    id: next
+    attributes:
+      label: Next tiny step
+      description: Smallest useful next action.
+      placeholder: Domain check / 5 interviews / landing hero copy

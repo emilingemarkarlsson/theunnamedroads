@@ -13,6 +13,7 @@ const LABEL_VARIANTS: Record<string, StatusVariant> = {
   monitor: 'monitor',
   parked: 'parked',
   avvecklat: 'avvecklat',
+  'wound down': 'avvecklat',
   concept: 'concept',
   personal: 'personal',
   linked: 'linked',
