@@ -5,8 +5,10 @@
 <button
   id="mobile-nav-toggle"
   class="clickable flex items-center"
-  title="Mobile nav toggle"
   type="button"
+  aria-label="Open navigation menu"
+  aria-expanded="false"
+  aria-controls="mobile-nav"
 >
   <span class="iconify tabler--menu-2"></span>
 </button>
@@ -27,14 +29,20 @@
       e.preventDefault()
       e.stopPropagation()
 
-      if (icon.className.includes(iconOpen)) {
+      const isOpen = icon.className.includes(iconOpen)
+
+      if (isOpen) {
         icon.classList.remove(iconOpen)
         icon.classList.add(iconClosed)
         nav.classList.add('hidden')
+        button.setAttribute('aria-expanded', 'false')
+        button.setAttribute('aria-label', 'Open navigation menu')
       } else {
         icon.classList.remove(iconClosed)
         icon.classList.add(iconOpen)
         nav.classList.remove('hidden')
+        button.setAttribute('aria-expanded', 'true')
+        button.setAttribute('aria-label', 'Close navigation menu')
       }
     }
 
