@@ -14,6 +14,8 @@ alwaysApply: true
 - Use `pnpm` (see `packageManager` in `package.json`). Content collection date field is `publishedDate` (not `pubDate`).
 - Brand/metadata splits (`Organization.name`, `og:site_name`, footer ©): fix `src/theme.config.ts` `title`/`author` first — they drive those outputs; only then hunt hardcoded strings in layouts or content.
 - **UX nav audit-close:** when nav IA already landed in `theme.config.ts` via a prior SEO/brand issue, treat overlapping UX nav issues as audit-close — minimal diff only (e.g. `public/.well-known/ai.txt`, stale `activeHeaderLink`); do not re-edit `theme.config.ts`.
+- **AEO llms.txt sync:** when editing assistant-facing copy, update **both** root `llms.txt` and `public/llms.txt` in the same PR — `/for-assistants` and external assistants cite both paths.
+- **AEO entity fence:** on AEO surfaces (`llms.txt`, `/for-assistants`, `public/.well-known/ai.txt`), spell out **TUR ≠ EIK ≠ THA ≠ Brain** explicitly — do not assume readers infer boundaries from portfolio cards.
 - Production host is Vercel (`tur-site`); deploy via `git push origin main` — do not switch hosts.
 - When opening an agent Execute PR: mark **Ready for review** (not draft), **assign** `emilingemarkarlsson`, and **request review** from them when the author is cursor-bot — otherwise the PR never lands in https://github.com/pulls/assigned.
 - Never merge your own agent PR; Emil approves. After Emil merges, they unassign themselves (GitHub does not clear assignees).
