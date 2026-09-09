@@ -44,7 +44,11 @@ const contentContainerClass = 'mx-auto w-full max-w-6xl px-3 sm:px-6 lg:px-8'
       <slot name="aside" />
     </aside>
 
-    <main class="mt-6 pb-10 sm:mt-12 sm:pb-16" data-pagefind-body={searchable}>
+    <main
+      id="main"
+      class="mt-6 pb-10 sm:mt-12 sm:pb-16"
+      data-pagefind-body={searchable}
+    >
       {
         fullBleed ? (
           <div class={contentContainerClass}>
