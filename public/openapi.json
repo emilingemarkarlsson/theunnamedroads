@@ -1,0 +1,12 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "The Unnamed Roads — public API",
+    "description": "No public HTTP API on this static site. Machine brief: https://www.theunnamedroads.com/llms.txt. Contact form: https://www.theunnamedroads.com/contact/.",
+    "version": "1.0.0",
+    "contact": {
+      "url": "https://www.theunnamedroads.com/contact/"
+    }
+  },
+  "paths": {}
+}
