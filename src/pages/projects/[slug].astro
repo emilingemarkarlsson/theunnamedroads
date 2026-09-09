@@ -46,6 +46,15 @@ const frontmatter = {
   description: project.data.description,
   activeHeaderLink: 'Projects',
   fullBleed: false,
+  project: {
+    name: project.data.title,
+    description: project.data.description,
+    url: workingUrl || canonicalUrl,
+    startDate: project.data.startDate,
+    endDate: project.data.endDate,
+    statusLabel,
+    tags: project.data.tags
+  },
   ...(faq?.length && { faq })
 }
 const contentContainerClass = 'mx-auto w-full max-w-6xl px-3 sm:px-6 lg:px-8'
