@@ -3,6 +3,32 @@
 ---
 
 <div class="mx-auto mt-8 max-w-2xl">
+  <noscript>
+    <div
+      class="mb-6 rounded-lg border border-amber-500/40 bg-amber-500/10 p-6 text-slate-200"
+      role="status"
+    >
+      <p class="mb-2 font-medium text-white">
+        JavaScript is required to send this form.
+      </p>
+      <p class="text-sm text-slate-300">
+        Drop operator signal on
+        <a
+          href="https://bsky.app/profile/theunnamedroads.bsky.social"
+          class="text-accent underline"
+        >
+          Bluesky @theunnamedroads.bsky.social
+        </a>
+        instead — we read every message.
+      </p>
+    </div>
+    <style>
+      form[name='contact'] {
+        display: none !important;
+      }
+    </style>
+  </noscript>
+
   <form name="contact" method="POST" class="space-y-6">
     <div class="sr-only">
       <label for="bot-field">Don't fill this out if you're human:</label>
