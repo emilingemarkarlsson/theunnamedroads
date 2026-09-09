@@ -26,6 +26,8 @@ const pageTitle =
 
 const frontmatter: PageLayoutProps['frontmatter'] = {
   title: pageTitle,
+  description:
+    'Dispatches from the road — Field Notes with receipts from building in public. Not manifestos; measured experiments and honest outcomes.',
   activeHeaderLink: 'Field Notes',
   prev: page.url.prev,
   next: page.url.next,
@@ -42,11 +44,14 @@ const frontmatter: PageLayoutProps['frontmatter'] = {
   </h1>
   {
     page.currentPage === 1 && (
-      <p class="mb-8 max-w-2xl text-base leading-relaxed text-slate-300">
-        Dispatches from the road — receipts from building in public, not a
-        manifesto. Field Notes capture what shipped, what broke, and what it
-        cost.
-      </p>
+      <div class="mb-8 space-y-3">
+        <p class="section-eyebrow">Field Notes</p>
+        <p class="max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg">
+          Dispatches from the road — receipts from building in public, not
+          manifestos. What broke, what it cost, what we learned walking terrain
+          the map doesn't name.
+        </p>
+      </div>
     )
   }
   <PostsList posts={page.data} />

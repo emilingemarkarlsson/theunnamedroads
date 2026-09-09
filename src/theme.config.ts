@@ -4,7 +4,7 @@ export default defineThemeConfig({
   site: 'https://www.theunnamedroads.com',
   title: 'The Unnamed Roads',
   description:
-    'Expedition studio — one developer, unnamed roads. AI carries the pack; human holds the compass. Field Notes receipts from building in public.',
+    'Expedition studio — one developer, unnamed roads. AI carries the pack; you hold the compass. Field Notes receipts from the road, not agency theater.',
   author: 'The Unnamed Roads',
   navbarItems: [
     { label: 'Projects', href: '/projects' },
