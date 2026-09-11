@@ -47,6 +47,8 @@ income and scenarios without needing to become experts in the rulebook.
 It already has organic traffic evidence and a concrete validation contract:
 complete leave plans, return/share rate, and Swedish problem-specific SEO/AEO.
 
+The contract runs on the studio's [12-week experimentation framework](/posts/12-week-experiment-framework): measured outcomes decide what ships next. Why this project holds a Focus slot instead of portfolio-wide SEO is documented in [Field Note: Three Focus bets](/posts/field-note-three-focus-bets-2026-08-10).
+
 ## What you get
 
 - Day and economy scenarios for two adults

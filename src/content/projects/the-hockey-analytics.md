@@ -40,6 +40,8 @@ faq:
 
 Independent hockey analytics research and consulting from Stockholm. The core idea: continuously scan hockey data to detect patterns, anomalies, and opportunities proactively — surfacing insights before anyone else sees them.
 
+THA runs on the studio's [12-week experimentation framework](/posts/12-week-experiment-framework) — the Focus validation contract defines one falsifiable outcome per cycle. How THA keeps a Focus slot is documented in [Field Note: Three Focus bets](/posts/field-note-three-focus-bets-2026-08-10).
+
 ## What Makes It Different
 
 Most analytics tools are reactive. You ask a question, you get an answer. THA flips that — insights arrive unsolicited, based on ongoing pattern scanning across NHL data. Scouts and coaches get intelligence they didn't know to ask for.

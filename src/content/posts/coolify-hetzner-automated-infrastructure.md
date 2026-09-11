@@ -235,6 +235,7 @@ If you want to replicate this setup:
 - **[AI Tool Stack](/tools)** — Complete overview of all tools in our operating stack
 - **[Auto Agent Workflows](/insights/auto-agent-workflows)** — How agents interact with this infrastructure
 - **[Post-Human Venture Engine](/projects/post-human-venture-engine)** — The operating system this infrastructure powers
+- **[The Unnamed Roads studio](/projects/anonymous-venture-studio)** — the studio this infrastructure powers
 - **[Venture Studio Operations](/insights/venture-studio-operations)** — How we manage multiple ventures on this infrastructure
 
 ---

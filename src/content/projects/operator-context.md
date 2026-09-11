@@ -34,4 +34,6 @@ homepage:
 
 **Non-goals:** Autonomous sends, deploys, or policy changes from an assistant.
 
+**Protocol:** Built on the [Model Context Protocol](/posts/mcp-protocol-explained) the studio standardized on — the same decision behind every new studio agent.
+
 **Depends on:** TUR Company OS control plane, MeshGuard permission model, Signal Mesh ranked inputs.

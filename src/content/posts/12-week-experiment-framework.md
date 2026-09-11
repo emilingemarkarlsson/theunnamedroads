@@ -10,7 +10,7 @@ draft: false
 
 > **Studio Field Note** — Our [experimentation frameworks](/insights/experimentation-frameworks) pillar in practice: 4 bets per year, phase gates, and documented kill criteria from anonymous product tests.
 
-After dozens of anonymous product bets, we standardized on a 12-week experimentation framework—long enough for signal, short enough to kill fast. This is the same method behind Focus projects at the studio.
+After dozens of anonymous product bets, we standardized on a 12-week experimentation framework—long enough for signal, short enough to kill fast. This is the same method behind [Focus projects](/projects/) at the studio: measured outcomes, then a scale, pivot, or kill decision.
 
 ## Why 12 Weeks?
 
@@ -348,11 +348,15 @@ The key is committing to the timeline and decision criteria upfront. This preven
 
 After running dozens of experiments through this framework, we've found it creates the perfect balance between thorough validation and rapid iteration—exactly what anonymous building requires.
 
+Today the framework runs behind the studio's Focus projects: [Parental Leave Planner](/projects/parental-leave-planner) and [The Hockey Analytics](/projects/the-hockey-analytics) apply the same continue/pivot/kill decision gates in production, with live status on the [portfolio](/projects/).
+
 ## Related Resources
 
 - **[Rapid Experimentation Frameworks](/insights/experimentation-frameworks)** — Complete guide to systematic business experimentation
 - **[Why Anonymity Accelerates Innovation](/posts/why-anonymity-accelerates-innovation)** — How anonymous building enables faster experimentation
 - **[AI as Co-Founder](/posts/ai-as-cofounder)** — How AI collaboration accelerates experiment cycles
+- **[Parental Leave Planner](/projects/parental-leave-planner)** — Focus project running the framework's continue/pivot/kill decision gates
+- **[The Hockey Analytics](/projects/the-hockey-analytics)** — Focus project applying the 12-week decision matrix to hockey intelligence
 
 ## FAQ: 12-Week Experiment Framework
 
