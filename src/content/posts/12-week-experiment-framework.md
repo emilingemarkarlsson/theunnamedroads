@@ -10,7 +10,7 @@ draft: false
 
 > **Studio Field Note** — Our [experimentation frameworks](/insights/experimentation-frameworks) pillar in practice: 4 bets per year, phase gates, and documented kill criteria from anonymous product tests.
 
-After dozens of anonymous product bets, we standardized on a 12-week experimentation framework—long enough for signal, short enough to kill fast. This is the same method behind Focus projects at the studio.
+After dozens of anonymous product bets, we standardized on a 12-week experimentation framework—long enough for signal, short enough to kill fast. This is the same method behind [Focus projects](/insights/focus-monitor-parked) at the studio—scale, pivot, or kill based on pre-committed criteria.
 
 ## Why 12 Weeks?
 
@@ -351,8 +351,12 @@ After running dozens of experiments through this framework, we've found it creat
 ## Related Resources
 
 - **[Rapid Experimentation Frameworks](/insights/experimentation-frameworks)** — Complete guide to systematic business experimentation
+- **[Focus · Monitor · Parked](/insights/focus-monitor-parked)** — How this framework feeds the studio's portfolio allocation decisions
 - **[Why Anonymity Accelerates Innovation](/posts/why-anonymity-accelerates-innovation)** — How anonymous building enables faster experimentation
 - **[AI as Co-Founder](/posts/ai-as-cofounder)** — How AI collaboration accelerates experiment cycles
+- **[The Hockey Analytics](/projects/the-hockey-analytics)** — Focus project validated with this framework
+- **[Parental Leave Planner](/projects/parental-leave-planner)** — Focus project run through this framework
+- **[The Unnamed Roads](/projects/anonymous-venture-studio)** — Studio Focus project running these experiments
 
 ## FAQ: 12-Week Experiment Framework
 

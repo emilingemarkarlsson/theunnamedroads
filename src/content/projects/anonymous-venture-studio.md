@@ -62,3 +62,8 @@ Coolify · Hetzner · n8n · OpenClaw · Umami · Minio · Groq · Gemini
 ## Operating Principle
 
 Build without permission. Ship without a team. Let the data decide what survives.
+
+## Field Notes
+
+- [12-Week Experimentation Framework](/posts/12-week-experiment-framework) — the studio method behind every Focus bet
+- [MCP Explained](/posts/mcp-protocol-explained) — how the studio's 200+ agent pipelines get tool access

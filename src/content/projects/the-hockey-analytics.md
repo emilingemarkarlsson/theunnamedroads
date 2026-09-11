@@ -63,3 +63,8 @@ Most analytics tools are reactive. You ask a question, you get an answer. THA fl
 Scouts, coaches, analysts, teams, and decision-makers who want a data edge in player development, roster construction, and game strategy.
 
 **Location:** Stockholm, Sweden · contact@thehockeyanalytics.com
+
+## Field Notes
+
+- [12-Week Experimentation Framework](/posts/12-week-experiment-framework) — the studio method behind this Focus validation contract
+- [Field Note: Three Focus bets](/posts/field-note-three-focus-bets-2026-08-10) — why THA runs as one of the studio's three Focus bets (personal note by Emil Ingemar Karlsson)
