@@ -19,9 +19,9 @@ We chose concentration.
 
 Exactly **three Focus projects**:
 
-1. **The Hockey Analytics** — Sweden Club Pack / league intelligence for club leaders
-2. **The Unnamed Roads** — Field Notes for indie founders (this channel)
-3. **Föräldraledighetsplaneraren** — Swedish parental-leave plans via SEO/AEO
+1. **[The Hockey Analytics](/projects/the-hockey-analytics)** — Sweden Club Pack / league intelligence for club leaders
+2. **[The Unnamed Roads](/projects/anonymous-venture-studio)** — Field Notes for indie founders (this channel)
+3. **[Föräldraledighetsplaneraren](/projects/parental-leave-planner)** — Swedish parental-leave plans via SEO/AEO
 
 Everything else is **Monitor** (measured, no daily growth execution) or **Parked**.
 

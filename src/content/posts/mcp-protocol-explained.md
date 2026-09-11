@@ -11,7 +11,7 @@ In 2024, AI agent tool usage was a jungle. Every framework had its own way of de
 
 Then came the [Model Context Protocol (MCP)](https://modelcontextprotocol.io) — Anthropic’s open proposal for a universal way to expose tools and context to AI agents. In 2025, it gained adoption. In 2026, it’s becoming the **default layer** between AI agents and their world.
 
-At The Unnamed Roads we run a one-operator venture studio where agents draft inside policy and humans Approve before deploy. We’ve built 200+ agent pipelines on LangGraph, CrewAI, and custom orchestrators—and for the past six months, every new agent uses MCP for tool access. Not because it’s trendy, but because it **solves real production problems** in a studio that ships fast.
+At The Unnamed Roads we run a one-operator venture studio where agents draft inside policy and humans Approve before deploy. We’ve built 200+ agent pipelines on LangGraph, CrewAI, and custom orchestrators—and for the past six months, every new agent uses MCP for tool access. Not because it’s trendy, but because it **solves real production problems** in a studio that ships fast. The same decision sits behind [Operator Context](/projects/operator-context), our MCP-native portfolio surface for assistants, and the [MeshGuard](/projects/meshguard) permission layer that governs which tool calls need human approval.
 
 This post breaks down MCP: what it is, why it matters, how to implement it, and where it fits in a production architecture. No fluff. Just what works.
 
@@ -265,7 +265,7 @@ MCP isn’t just for tool access. It’s becoming the **universal context layer*
 - **LangChain**: Deep MCP integration allows LangChain apps to connect to any MCP server without code changes.
 - **Custom Orchestrators**: Teams building bespoke agent frameworks are adopting MCP as the internal wire protocol.
 
-We run our own AI stack on Hetzner Cloud, and our live agents are built with OpenClaw. We’ve integrated MCP at the gateway level — all external tool access flows through our MCP server. This gives us a single point for security, logging, and policy enforcement.
+We run our own AI stack on Hetzner Cloud, and our live agents are built with OpenClaw. We’ve integrated MCP at the gateway level — all external tool access flows through our MCP server. This gives us a single point for security, logging, and policy enforcement, and it is the same tool-access contract behind [The Agent Fabric](/projects/the-agent-fabric), our distributed agent infrastructure project.
 
 ## FAQ: Model Context Protocol
 

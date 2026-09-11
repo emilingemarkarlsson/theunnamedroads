@@ -45,6 +45,8 @@ Mission: "Engineer reality faster than bureaucracy can react."
 - **Concept to live site in 48 hours**
 - **Zero manual content creation**
 
+The infrastructure behind this site is covered in [How we run a fully automated infrastructure on Coolify and Hetzner](/posts/coolify-hetzner-automated-infrastructure); why the studio runs as one of three Focus bets is documented in [Field Note: Three Focus bets](/posts/field-note-three-focus-bets-2026-08-10).
+
 ## The Stack
 
 Coolify · Hetzner · n8n · OpenClaw · Umami · Minio · Groq · Gemini

@@ -36,7 +36,7 @@ Agent stacks fail governance at scale when:
 - Tool access is all-or-nothing per API key
 - Approval levels live in chat prompts instead of enforceable policy
 - Consequential calls (publish, deploy, external send) lack a durable audit trail
-- MCP servers and automation runners share credentials without scoped allow-lists
+- [MCP](/posts/mcp-protocol-explained) servers and automation runners share credentials without scoped allow-lists
 
 MeshGuard targets the gap between **MethodPolicy roles** (Research, Draft, Execute, Publish) and the actual tools those roles may invoke.
 
