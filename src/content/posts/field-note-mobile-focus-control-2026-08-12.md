@@ -28,9 +28,9 @@ PostHog notes and next reach actions are visible before you approve a deploy.
 
 ## Focus projects this cycle
 
-- **Parental** — FAQ/AEO for *planera dagar* → planner CTA (`/guide/planera-foraldraledighet`)
-- **THA** — Sweden Club Pack one-pager with assistant-readable beta brief
-- **TUR Studio** — Field Notes + service offer (this channel)
+- **[Parental](/projects/parental-leave-planner)** — FAQ/AEO for *planera dagar* → planner CTA (`/guide/planera-foraldraledighet`)
+- **[THA](/projects/the-hockey-analytics)** — Sweden Club Pack one-pager with assistant-readable beta brief
+- **[TUR Studio](/projects/anonymous-venture-studio)** — Field Notes + service offer (this channel)
 - **Company OS** — Signal Mesh v0 → ranked decisions in Linear
 
 Everything else stays **Monitor** or **Parked**.

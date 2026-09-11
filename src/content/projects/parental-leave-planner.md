@@ -52,3 +52,8 @@ complete leave plans, return/share rate, and Swedish problem-specific SEO/AEO.
 - Day and economy scenarios for two adults
 - Shareable plan results
 - Partner surfaces for relevant family support (GDPR-aware)
+
+## Field Notes
+
+- [12-Week Experimentation Framework](/posts/12-week-experiment-framework) — the studio method behind this Focus validation contract
+- [Field Note: Three Focus bets](/posts/field-note-three-focus-bets-2026-08-10) — why Föräldraledighetsplaneraren runs as one of the studio's three Focus bets (personal note by Emil Ingemar Karlsson)

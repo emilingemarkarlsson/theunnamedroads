@@ -34,7 +34,7 @@ homepage:
 
 **Orchestrating distributed intelligence across data centers, edge nodes, and IoT devices.**
 
-> **Part of our [Auto Agent Workflows](/insights/auto-agent-workflows) pillar** — This project provides the infrastructure layer for deploying autonomous AI agents at scale.
+> **Part of our [Auto Agent Workflows](/insights/auto-agent-workflows) pillar** — This project provides the infrastructure layer for deploying autonomous AI agents at scale. Field note: [MCP Explained](/posts/mcp-protocol-explained) documents how agents get tool access in this stack.
 
 The Agent Fabric provides the distributed, sovereign infrastructure layer that allows [post-human entrepreneurs](/posts/the-post-human-entrepreneur) to deploy AI agents inside enterprise systems—securely, locally, and at scale.
 

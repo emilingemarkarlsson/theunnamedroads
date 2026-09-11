@@ -11,7 +11,7 @@ In 2024, AI agent tool usage was a jungle. Every framework had its own way of de
 
 Then came the [Model Context Protocol (MCP)](https://modelcontextprotocol.io) — Anthropic’s open proposal for a universal way to expose tools and context to AI agents. In 2025, it gained adoption. In 2026, it’s becoming the **default layer** between AI agents and their world.
 
-At The Unnamed Roads we run a one-operator venture studio where agents draft inside policy and humans Approve before deploy. We’ve built 200+ agent pipelines on LangGraph, CrewAI, and custom orchestrators—and for the past six months, every new agent uses MCP for tool access. Not because it’s trendy, but because it **solves real production problems** in a studio that ships fast.
+At [The Unnamed Roads](/projects/anonymous-venture-studio) we run a one-operator venture studio where agents draft inside policy and humans Approve before deploy. We’ve built 200+ agent pipelines on LangGraph, CrewAI, and custom orchestrators—and for the past six months, every new agent uses MCP for tool access. Not because it’s trendy, but because it **solves real production problems** in a studio that ships fast.
 
 This post breaks down MCP: what it is, why it matters, how to implement it, and where it fits in a production architecture. No fluff. Just what works.
 
@@ -282,7 +282,13 @@ Yes, but with caveats. Major platforms like LangChain and LiteLLM support it. Pr
 MCP supports file streaming via multipart form data or signed URLs. For large payloads, we recommend using references — e.g., `"file_id": "doc_123"` — and letting the client fetch the actual content separately.
 
 ### Where can I see real-world MCP examples?
-The official [MCP GitHub repo](https://github.com/anthropics/mcp) has examples. We’ll be publishing our production MCP server templates on [The Agent Fabric](https://theagentfabric.com) soon.
+The official [MCP GitHub repo](https://github.com/anthropics/mcp) has examples. We’ll be publishing our production MCP server templates on [The Agent Fabric](https://theagentfabric.com) — the studio's [agent infrastructure project](/projects/the-agent-fabric) — soon.
 
 ---
 *Building AI agents in production? I cover real architectures, mistakes, and wins in the newsletter — [subscribe here](https://theagentfabric.com/newsletter).*
+
+## Related Resources
+
+- **[The Agent Fabric](/projects/the-agent-fabric)** — Studio project running agent infrastructure on MCP
+- **[The Unnamed Roads](/projects/anonymous-venture-studio)** — The venture studio where every new agent uses MCP
+- **[Auto Agent Workflows](/insights/auto-agent-workflows)** — The pillar this production pattern belongs to
