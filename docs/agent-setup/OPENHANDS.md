@@ -1,3 +1,9 @@
+## Operating rule (ROI)
+- Trigger: label `openhands` or `@openhands` → OpenHands runs with **Default LLM** (DeepSeek flash).
+- `task:easy-lite|easy|medium` = difficulty hints only (no auto model switch today).).
+- `task:hard` or fail×2 → use **Cursor PRO**, not OpenHands.
+- No `openhands` label = no agent spend.
+
 # OpenHands executor (alternate to Cursor Cloud Automations)
 
 OpenHands can run the **same GitHub label loop** as Cursor Execute — one `agent:ready` issue at a time, branch, verify, PR, human merge. Cursor-specific prompts and automations stay in [EXECUTE_PROMPT.md](./EXECUTE_PROMPT.md) and [LEARN_PROMPT.md](./LEARN_PROMPT.md); this file is the OpenHands-facing slice only.
