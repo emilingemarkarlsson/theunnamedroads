@@ -28,6 +28,14 @@ Source label: `Contact Form - The Unnamed Roads`.
 Cross-portfolio hosting map: `tur-automations/docs/HOSTING-VERCEL.md`.
 Monitoring/contact ops: `tur-automations/docs/MONITORING-SYNTHETIC.md`.
 
+## Definition of done
+
+- Success is proven: `pnpm check` (and `pnpm build` when acceptance criteria require it) pass; for SEO/AEO follow existing conventions.
+- Surgical diff: every changed line traces to the issue acceptance criteria — no drive-by refactors.
+- PR body states what changed, why, and how we know it is right (1–5 lines).
+- Mark Ready for review only after verify; follow existing agent rules; never self-merge.
+- If the work taught a reusable lesson, one short note in `docs/agent-runs/` or agent-setup — otherwise skip.
+
 ## Agent loop (Cursor Cloud Automations or OpenHands)
 
 Semi-automatic 24/7 Execute + Learn loop. **Human merge only** — no auto-merge.
