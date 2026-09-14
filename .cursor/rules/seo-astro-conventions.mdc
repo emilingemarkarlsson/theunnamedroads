@@ -1,0 +1,37 @@
+---
+description: Astro/SEO/AEO/redirect conventions for theunnamedroads
+alwaysApply: false
+globs:
+  - astro.config.ts
+  - src/**/*
+  - public/_redirects
+  - public/.well-known/**/*
+  - public/llms.txt
+  - llms.txt
+  - src/theme.config.ts
+  - src/util/seo.ts
+  - src/util/status.ts
+  - src/content/**/*
+  - docs/agent-runs/**/*
+---
+
+# Astro / SEO / AEO / redirect conventions
+
+- Brand/metadata splits (`Organization.name`, `og:site_name`, footer ©): fix `src/theme.config.ts` `title`/`author` first — they drive those outputs; only then hunt hardcoded strings in layouts or content.
+- **UX nav audit-close:** when nav IA already landed in `theme.config.ts` via a prior SEO/brand issue, treat overlapping UX nav issues as audit-close — minimal diff only (e.g. `public/.well-known/ai.txt`, stale `activeHeaderLink`); do not re-edit `theme.config.ts`.
+- **AEO llms.txt sync:** when editing assistant-facing copy, update **both** root `llms.txt` and `public/llms.txt` in the same PR — `/for-assistants` and external assistants cite both paths.
+- **AEO entity fence:** on AEO surfaces (`llms.txt`, `/for-assistants`, `public/.well-known/ai.txt`), spell out **TUR ≠ EIK ≠ THA ≠ Brain** explicitly — do not assume readers infer boundaries from portfolio cards.
+- **Astro static redirects:** `redirects` in `astro.config.ts` emit meta-refresh pages at build time. When a slug is redirected, exclude it from `getStaticPaths` in the matching dynamic route (e.g. `src/pages/projects/[slug].astro`) to avoid route-collision warnings.
+- **Vercel redirect sync:** When adding or changing a path redirect (e.g. hire-funnel soft-exit), update **both** `astro.config.ts` `redirects` and matching entries in `public/_redirects`. Astro build emits redirect pages from config; Vercel also applies `_redirects` at the edge.
+- **GSC 404 dead URLs (Vercel):** add 301s in `astro.config.ts` `redirects`, not `public/_redirects`. Legacy tag paths with hyphens (e.g. `/tags/experimental-methodology`) won't match Astro tag slugs — map each GSC 404 to a live insights/post/project URL or `/posts/`.
+- **GSC rituals (agent lacks UI access):** when acceptance criteria need GSC Validate fix or Request indexing and the agent cannot open Search Console, add `docs/agent-runs/YYYY-MM-DD-<slug>.md` — log human GSC outcomes + agent `curl` checks of live redirects/priority URLs; do not block the PR on missing GSC access.
+- **IndexNow gaps:** if IndexNow POST fails (e.g. 403 with key file live), document the honest gap in the run note, open a follow-up issue, and do not block the GSC ritual PR.
+- **Portfolio redirect pattern:** external project redirect = config redirect + filter slug from `getStaticPaths`; keep a short content file if the project still appears on portfolio cards.
+- **Status chips:** derive variant from `homepage.statusLabel` via `resolveStatusVariant()` in `src/util/status.ts` and render with `StatusChip` — never add or read `statusTone` / `statusDotColor` frontmatter (labels drift from tone).
+- **Studio page MDX rewrites** (`src/pages/about.mdx`, `agents.mdx`, `contact.mdx`, …): set frontmatter `fullBleed: true` and wrap body in `homepage-shell` → `section-shell` → `signal-card` classes — match `/contact` chrome; do not add new layout components.
+- **Sitemap hygiene:** when `/sitemap` should serve the XML index, delete `src/pages/sitemap.mdx` (or any HTML sitemap page) — do not keep both. Add `astro.config.ts` redirects for `/sitemap` and `/sitemap/` → `/sitemap-index.xml`, and add `/sitemap` to `SITEMAP_EXCLUDE` so the XML index does not list the HTML path.
+- **Trailing slashes:** set `trailingSlash: 'always'` in `astro.config.ts` to normalize slash-duplicate URLs in GSC on Astro static; sitemap URLs should use trailing slashes to match.
+- **SEO crawl rules:** keep sitemap deny-list + noindex surfaces in `src/util/seo.ts` (`SITEMAP_EXCLUDE`, `NOINDEX_FOLLOW`, `LEGACY_AUTHOR_SLUGS`, `CURATED_TAG_HUBS`) — import into `astro.config.ts` sitemap filter and page frontmatter; never duplicate regexes inline. Non-HTML routes (e.g. `feed.xml`): wrap `rss()` in `new Response(..., { headers: { 'X-Robots-Tag': 'noindex, follow' } })` — no `<meta>` available.
+- **SERP demotion:** when demoting a page in search, update on-page H1 and primary CTAs in the **same PR** as the SERP `title`/`description` — never ship a retitled SERP with the old hire-funnel H1/CTAs still on the page. Prefer retitle before `robotsContent: noindex`.
+- **Homepage proof alignment:** studio proof (Focus + Approve gates) belongs in `src/content/homepage/structure.json` hero `eyebrowAfter` (and matching hero lead), not only in `src/pages/index.mdx` frontmatter — keep SERP title/meta and on-page hero lead in sync.
+- **Project FAQPage (AEO/GEO):** add optional `faq` to the projects schema in `src/content/config.ts`; pass it through `src/pages/projects/[slug].astro` frontmatter to `BaseLayout` for FAQPage JSON-LD — same pattern as MDX pages; never duplicate inline `<script type="application/ld+json">` FAQPage blocks. Focus wedge FAQ answers must mirror `homepage.statusLabel` and the project's validation-contract language from markdown (honest Approve-gate status, not fake traction).
