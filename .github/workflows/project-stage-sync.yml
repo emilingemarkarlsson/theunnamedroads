@@ -26,6 +26,7 @@ env:
   STAGE_LIVE: 9d6f61dc
 
   PROCESS_FIELD_ID: PVTSSF_lAHOAQ4nb84BkT_9zhjFKM4
+  PROCESS_AGENT_DRAFT: f36ae6db
   PROCESS_AGENT_READY: f41ce141
   PROCESS_IN_AGENT: a08d452f
   PROCESS_AGENT_REVIEW: 02942ecd
@@ -36,6 +37,13 @@ env:
   NEEDS_APPROVAL_FIELD_ID: PVTSSF_lAHOAQ4nb84BkT_9zhjFQ5M
   NEEDS_APPROVAL_NO: 67df4988
   NEEDS_APPROVAL_YES: 68349e96
+
+  TRACKING_GATE_FIELD_ID: PVTSSF_lAHOAQ4nb84BkT_9zhjFSnc
+  TRACKING_NOT_ASSESSED: cf28c5dc
+  TRACKING_REQUIRED: f66d3868
+  TRACKING_PLANNED: ddd6875b
+  TRACKING_IMPLEMENTED: 8f0fed82
+  TRACKING_NOT_NEEDED: 46fb3409
 
   PROJECT_FIELD_ID: PVTSSF_lAHOAQ4nb84BkT_9zhjFA40
   PROJECT_THA: 1636c0e3
@@ -54,6 +62,7 @@ env:
   WORKTYPE_BUILD: 8afca584
 
   HANDSHAKE_FIELD_ID: PVTSSF_lAHOAQ4nb84BkT_9zhjFMCI
+  HANDSHAKE_DRAFT: 8836baab
   HANDSHAKE_ACCEPTED: 86fc959f
   HANDSHAKE_BLOCKED: fe94f13f
 
@@ -79,6 +88,7 @@ jobs:
             const stageFieldId = process.env.STAGE_FIELD_ID;
             const processFieldId = process.env.PROCESS_FIELD_ID;
             const needsApprovalFieldId = process.env.NEEDS_APPROVAL_FIELD_ID;
+            const trackingGateFieldId = process.env.TRACKING_GATE_FIELD_ID;
             const projectFieldId = process.env.PROJECT_FIELD_ID;
             const priorityFieldId = process.env.PRIORITY_FIELD_ID;
             const workTypeFieldId = process.env.WORKTYPE_FIELD_ID;
@@ -94,6 +104,7 @@ jobs:
             };
 
             const processByKey = {
+              AGENT_DRAFT: process.env.PROCESS_AGENT_DRAFT,
               AGENT_READY: process.env.PROCESS_AGENT_READY,
               IN_AGENT: process.env.PROCESS_IN_AGENT,
               AGENT_REVIEW: process.env.PROCESS_AGENT_REVIEW,
@@ -105,6 +116,14 @@ jobs:
             const needsApproval = {
               NO: process.env.NEEDS_APPROVAL_NO,
               YES: process.env.NEEDS_APPROVAL_YES,
+            };
+
+            const trackingGate = {
+              NOT_ASSESSED: process.env.TRACKING_NOT_ASSESSED,
+              REQUIRED: process.env.TRACKING_REQUIRED,
+              PLANNED: process.env.TRACKING_PLANNED,
+              IMPLEMENTED: process.env.TRACKING_IMPLEMENTED,
+              NOT_NEEDED: process.env.TRACKING_NOT_NEEDED,
             };
 
             const projectByRepo = {
@@ -196,11 +215,13 @@ jobs:
             function statusFromEvent() {
               if (context.eventName === "issues") {
                 if (["opened", "reopened"].includes(context.payload.action)) {
+                  // New rule: never auto-promote to Agent Ready before tracking is assessed.
                   return {
                     stage: stageByKey.REDO_AGENT,
-                    process: processByKey.AGENT_READY,
-                    handshake: process.env.HANDSHAKE_ACCEPTED,
+                    process: processByKey.AGENT_DRAFT,
+                    handshake: process.env.HANDSHAKE_DRAFT,
                     needsApproval: needsApproval.NO,
+                    tracking: trackingGate.NOT_ASSESSED,
                   };
                 }
               }
@@ -212,6 +233,7 @@ jobs:
                     process: processByKey.IN_AGENT,
                     handshake: process.env.HANDSHAKE_ACCEPTED,
                     needsApproval: needsApproval.NO,
+                    tracking: null,
                   };
                 }
                 if (context.payload.action === "ready_for_review") {
@@ -220,6 +242,7 @@ jobs:
                     process: processByKey.AGENT_REVIEW,
                     handshake: process.env.HANDSHAKE_ACCEPTED,
                     needsApproval: needsApproval.YES,
+                    tracking: null,
                   };
                 }
                 if (context.payload.action === "closed" && context.payload.pull_request?.merged) {
@@ -228,6 +251,7 @@ jobs:
                     process: processByKey.APPROVED,
                     handshake: process.env.HANDSHAKE_ACCEPTED,
                     needsApproval: needsApproval.NO,
+                    tracking: trackingGate.IMPLEMENTED,
                   };
                 }
               }
@@ -240,6 +264,7 @@ jobs:
                     process: processByKey.LIVE,
                     handshake: process.env.HANDSHAKE_ACCEPTED,
                     needsApproval: needsApproval.NO,
+                    tracking: trackingGate.IMPLEMENTED,
                   };
                 }
                 if (state === "failure" || state === "error") {
@@ -248,6 +273,7 @@ jobs:
                     process: processByKey.BLOCKED,
                     handshake: process.env.HANDSHAKE_BLOCKED,
                     needsApproval: needsApproval.YES,
+                    tracking: null,
                   };
                 }
               }
@@ -305,5 +331,8 @@ jobs:
               await setSingleSelect(projectId, itemId, workTypeFieldId, process.env.WORKTYPE_BUILD);
               await setSingleSelect(projectId, itemId, handshakeFieldId, mapped.handshake);
               await setSingleSelect(projectId, itemId, modelLaneFieldId, modelLaneOptionId);
+              if (mapped.tracking) {
+                await setSingleSelect(projectId, itemId, trackingGateFieldId, mapped.tracking);
+              }
               core.info(`Synced item ${itemId}`);
             }
