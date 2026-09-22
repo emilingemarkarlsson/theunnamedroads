@@ -33,6 +33,10 @@ env:
   PROCESS_LIVE: 63cb9dc3
   PROCESS_BLOCKED: 82ad5fe3
 
+  NEEDS_APPROVAL_FIELD_ID: PVTSSF_lAHOAQ4nb84BkT_9zhjFQ5M
+  NEEDS_APPROVAL_NO: 67df4988
+  NEEDS_APPROVAL_YES: 68349e96
+
   PROJECT_FIELD_ID: PVTSSF_lAHOAQ4nb84BkT_9zhjFA40
   PROJECT_THA: 1636c0e3
   PROJECT_TUR: 3cb37b1b
@@ -74,6 +78,7 @@ jobs:
 
             const stageFieldId = process.env.STAGE_FIELD_ID;
             const processFieldId = process.env.PROCESS_FIELD_ID;
+            const needsApprovalFieldId = process.env.NEEDS_APPROVAL_FIELD_ID;
             const projectFieldId = process.env.PROJECT_FIELD_ID;
             const priorityFieldId = process.env.PRIORITY_FIELD_ID;
             const workTypeFieldId = process.env.WORKTYPE_FIELD_ID;
@@ -95,6 +100,11 @@ jobs:
               APPROVED: process.env.PROCESS_APPROVED,
               LIVE: process.env.PROCESS_LIVE,
               BLOCKED: process.env.PROCESS_BLOCKED,
+            };
+
+            const needsApproval = {
+              NO: process.env.NEEDS_APPROVAL_NO,
+              YES: process.env.NEEDS_APPROVAL_YES,
             };
 
             const projectByRepo = {
@@ -190,6 +200,7 @@ jobs:
                     stage: stageByKey.REDO_AGENT,
                     process: processByKey.AGENT_READY,
                     handshake: process.env.HANDSHAKE_ACCEPTED,
+                    needsApproval: needsApproval.NO,
                   };
                 }
               }
@@ -200,6 +211,7 @@ jobs:
                     stage: stageByKey.IN_AGENT,
                     process: processByKey.IN_AGENT,
                     handshake: process.env.HANDSHAKE_ACCEPTED,
+                    needsApproval: needsApproval.NO,
                   };
                 }
                 if (context.payload.action === "ready_for_review") {
@@ -207,6 +219,7 @@ jobs:
                     stage: stageByKey.REDO_APPROVAL,
                     process: processByKey.AGENT_REVIEW,
                     handshake: process.env.HANDSHAKE_ACCEPTED,
+                    needsApproval: needsApproval.YES,
                   };
                 }
                 if (context.payload.action === "closed" && context.payload.pull_request?.merged) {
@@ -214,6 +227,7 @@ jobs:
                     stage: stageByKey.APPROVED_WAITING_RELEASE,
                     process: processByKey.APPROVED,
                     handshake: process.env.HANDSHAKE_ACCEPTED,
+                    needsApproval: needsApproval.NO,
                   };
                 }
               }
@@ -225,6 +239,7 @@ jobs:
                     stage: stageByKey.LIVE,
                     process: processByKey.LIVE,
                     handshake: process.env.HANDSHAKE_ACCEPTED,
+                    needsApproval: needsApproval.NO,
                   };
                 }
                 if (state === "failure" || state === "error") {
@@ -232,6 +247,7 @@ jobs:
                     stage: stageByKey.IN_AGENT,
                     process: processByKey.BLOCKED,
                     handshake: process.env.HANDSHAKE_BLOCKED,
+                    needsApproval: needsApproval.YES,
                   };
                 }
               }
@@ -283,6 +299,7 @@ jobs:
               const itemId = await upsertItem(projectId, contentId);
               await setSingleSelect(projectId, itemId, stageFieldId, mapped.stage);
               await setSingleSelect(projectId, itemId, processFieldId, mapped.process);
+              await setSingleSelect(projectId, itemId, needsApprovalFieldId, mapped.needsApproval);
               await setSingleSelect(projectId, itemId, projectFieldId, repoProjectOptionId);
               await setSingleSelect(projectId, itemId, priorityFieldId, process.env.PRIORITY_P2);
               await setSingleSelect(projectId, itemId, workTypeFieldId, process.env.WORKTYPE_BUILD);
