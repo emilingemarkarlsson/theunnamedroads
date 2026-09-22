@@ -1,0 +1,218 @@
+name: Project Stage Sync
+
+on:
+  issues:
+    types: [opened, reopened]
+  pull_request:
+    types: [opened, reopened, ready_for_review, closed]
+  deployment_status:
+    types: [created]
+
+permissions:
+  contents: read
+  issues: read
+  pull-requests: read
+  repository-projects: write
+
+env:
+  PROJECT_OWNER: emilingemarkarlsson
+  PROJECT_NUMBER: "6"
+
+  STAGE_FIELD_ID: PVTSSF_lAHOAQ4nb84BkT_9zhjFA4w
+  STAGE_STRATEGI: 12ad92e0
+  STAGE_REDO_AGENT: 5812ea14
+  STAGE_IN_AGENT: 419ecf79
+  STAGE_REDO_APPROVAL: 77c32be4
+  STAGE_APPROVED_WAITING_RELEASE: e2b0ddce
+  STAGE_LIVE: 9d6f61dc
+  STAGE_PARKERING: 5bbd59c0
+
+  PROJECT_FIELD_ID: PVTSSF_lAHOAQ4nb84BkT_9zhjFA40
+  PROJECT_THA: 1636c0e3
+  PROJECT_TUR: 3cb37b1b
+  PROJECT_TAF: 9f73d059
+  PROJECT_THB: ec97657e
+  PROJECT_AAF: 518b7357
+  PROJECT_TAN: 72683752
+  PROJECT_TOL: 23de942f
+  PROJECT_TSL: 3cb44d62
+
+  PRIORITY_FIELD_ID: PVTSSF_lAHOAQ4nb84BkT_9zhjFBU8
+  PRIORITY_P2: a2704f9f
+
+  WORKTYPE_FIELD_ID: PVTSSF_lAHOAQ4nb84BkT_9zhjFBV8
+  WORKTYPE_BUILD: 8afca584
+
+jobs:
+  sync-stage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update project stage
+        uses: actions/github-script@v7
+        env:
+          PROJECT_AUTOMATION_TOKEN: ${{ secrets.PROJECT_AUTOMATION_TOKEN }}
+        with:
+          github-token: ${{ env.PROJECT_AUTOMATION_TOKEN != '' && env.PROJECT_AUTOMATION_TOKEN || github.token }}
+          script: |
+            const owner = process.env.PROJECT_OWNER;
+            const projectNumber = Number(process.env.PROJECT_NUMBER);
+
+            const stageFieldId = process.env.STAGE_FIELD_ID;
+            const projectFieldId = process.env.PROJECT_FIELD_ID;
+            const priorityFieldId = process.env.PRIORITY_FIELD_ID;
+            const workTypeFieldId = process.env.WORKTYPE_FIELD_ID;
+
+            const stageByKey = {
+              REDO_AGENT: process.env.STAGE_REDO_AGENT,
+              IN_AGENT: process.env.STAGE_IN_AGENT,
+              REDO_APPROVAL: process.env.STAGE_REDO_APPROVAL,
+              APPROVED_WAITING_RELEASE: process.env.STAGE_APPROVED_WAITING_RELEASE,
+              LIVE: process.env.STAGE_LIVE,
+            };
+
+            const projectByRepo = {
+              "tha-website": process.env.PROJECT_THA,
+              "theunnamedroads": process.env.PROJECT_TUR,
+              "tur-theagentfabric": process.env.PROJECT_TAF,
+              "thb-site": process.env.PROJECT_THB,
+              "tur-aaf": process.env.PROJECT_AAF,
+              "tan-site": process.env.PROJECT_TAN,
+              "tol-website": process.env.PROJECT_TOL,
+              "tsl-website": process.env.PROJECT_TSL,
+            };
+
+            const repoName = context.repo.repo;
+            const repoProjectOptionId = projectByRepo[repoName];
+
+            async function getProjectId() {
+              const query = `
+                query($owner: String!, $number: Int!) {
+                  user(login: $owner) {
+                    projectV2(number: $number) { id }
+                  }
+                }
+              `;
+              const res = await github.graphql(query, { owner, number: projectNumber });
+              return res.user.projectV2.id;
+            }
+
+            async function upsertItem(projectId, contentId) {
+              const listQuery = `
+                query($projectId: ID!) {
+                  node(id: $projectId) {
+                    ... on ProjectV2 {
+                      items(first: 100) {
+                        nodes {
+                          id
+                          content {
+                            __typename
+                            ... on Issue { id }
+                            ... on PullRequest { id }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              `;
+              const listRes = await github.graphql(listQuery, { projectId });
+              const existing = listRes.node.items.nodes.find((n) => n?.content?.id === contentId);
+              if (existing) return existing.id;
+
+              const addMutation = `
+                mutation($projectId: ID!, $contentId: ID!) {
+                  addProjectV2ItemById(input: {projectId: $projectId, contentId: $contentId}) {
+                    item { id }
+                  }
+                }
+              `;
+              const addRes = await github.graphql(addMutation, { projectId, contentId });
+              return addRes.addProjectV2ItemById.item.id;
+            }
+
+            async function setSingleSelect(projectId, itemId, fieldId, optionId) {
+              if (!optionId) return;
+              const mutation = `
+                mutation($projectId: ID!, $itemId: ID!, $fieldId: ID!, $optionId: String!) {
+                  updateProjectV2ItemFieldValue(
+                    input: {
+                      projectId: $projectId,
+                      itemId: $itemId,
+                      fieldId: $fieldId,
+                      value: { singleSelectOptionId: $optionId }
+                    }
+                  ) {
+                    projectV2Item { id }
+                  }
+                }
+              `;
+              await github.graphql(mutation, { projectId, itemId, fieldId, optionId });
+            }
+
+            function stageFromEvent() {
+              if (context.eventName === "issues") {
+                if (["opened", "reopened"].includes(context.payload.action)) return stageByKey.REDO_AGENT;
+              }
+
+              if (context.eventName === "pull_request") {
+                if (["opened", "reopened"].includes(context.payload.action)) return stageByKey.IN_AGENT;
+                if (context.payload.action === "ready_for_review") return stageByKey.REDO_APPROVAL;
+                if (context.payload.action === "closed" && context.payload.pull_request?.merged) {
+                  return stageByKey.APPROVED_WAITING_RELEASE;
+                }
+              }
+
+              if (context.eventName === "deployment_status") {
+                const state = (context.payload.deployment_status?.state || "").toLowerCase();
+                if (state === "success") return stageByKey.LIVE;
+                if (state === "failure" || state === "error") return stageByKey.IN_AGENT;
+              }
+
+              return null;
+            }
+
+            async function contentIdsFromEvent() {
+              if (context.eventName === "issues") {
+                return context.payload.issue?.node_id ? [context.payload.issue.node_id] : [];
+              }
+
+              if (context.eventName === "pull_request") {
+                return context.payload.pull_request?.node_id ? [context.payload.pull_request.node_id] : [];
+              }
+
+              if (context.eventName === "deployment_status") {
+                const sha = context.payload.deployment?.sha;
+                if (!sha) return [];
+
+                const prs = await github.rest.repos.listPullRequestsAssociatedWithCommit({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  commit_sha: sha,
+                });
+                return prs.data.map((pr) => pr.node_id).filter(Boolean);
+              }
+
+              return [];
+            }
+
+            const stageOptionId = stageFromEvent();
+            if (!stageOptionId) {
+              core.info("No stage transition for this event.");
+              return;
+            }
+
+            const projectId = await getProjectId();
+            const contentIds = await contentIdsFromEvent();
+            if (contentIds.length === 0) {
+              core.info("No issue/PR content IDs detected for event.");
+              return;
+            }
+
+            for (const contentId of contentIds) {
+              const itemId = await upsertItem(projectId, contentId);
+              await setSingleSelect(projectId, itemId, stageFieldId, stageOptionId);
+              await setSingleSelect(projectId, itemId, projectFieldId, repoProjectOptionId);
+              await setSingleSelect(projectId, itemId, priorityFieldId, process.env.PRIORITY_P2);
+              await setSingleSelect(projectId, itemId, workTypeFieldId, process.env.WORKTYPE_BUILD);
+              core.info(`Synced item ${itemId} for content ${contentId}`);
+            }
