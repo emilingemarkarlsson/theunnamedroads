@@ -1,4 +1,4 @@
-name: Project Stage Sync
+name: Project Stage + Process Sync
 
 on:
   issues:
@@ -19,13 +19,19 @@ env:
   PROJECT_NUMBER: "6"
 
   STAGE_FIELD_ID: PVTSSF_lAHOAQ4nb84BkT_9zhjFA4w
-  STAGE_STRATEGI: 12ad92e0
   STAGE_REDO_AGENT: 5812ea14
   STAGE_IN_AGENT: 419ecf79
   STAGE_REDO_APPROVAL: 77c32be4
   STAGE_APPROVED_WAITING_RELEASE: e2b0ddce
   STAGE_LIVE: 9d6f61dc
-  STAGE_PARKERING: 5bbd59c0
+
+  PROCESS_FIELD_ID: PVTSSF_lAHOAQ4nb84BkT_9zhjFKM4
+  PROCESS_AGENT_READY: f41ce141
+  PROCESS_IN_AGENT: a08d452f
+  PROCESS_AGENT_REVIEW: 02942ecd
+  PROCESS_APPROVED: d55e0c9d
+  PROCESS_LIVE: 63cb9dc3
+  PROCESS_BLOCKED: 82ad5fe3
 
   PROJECT_FIELD_ID: PVTSSF_lAHOAQ4nb84BkT_9zhjFA40
   PROJECT_THA: 1636c0e3
@@ -43,11 +49,20 @@ env:
   WORKTYPE_FIELD_ID: PVTSSF_lAHOAQ4nb84BkT_9zhjFBV8
   WORKTYPE_BUILD: 8afca584
 
+  HANDSHAKE_FIELD_ID: PVTSSF_lAHOAQ4nb84BkT_9zhjFMCI
+  HANDSHAKE_ACCEPTED: 86fc959f
+  HANDSHAKE_BLOCKED: fe94f13f
+
+  MODEL_LANE_FIELD_ID: PVTSSF_lAHOAQ4nb84BkT_9zhjFMBM
+  MODEL_EVERYDAY: 7eb4529e
+  MODEL_MEDIUM: a121b0b3
+  MODEL_HARD: 1edf780f
+
 jobs:
   sync-stage:
     runs-on: ubuntu-latest
     steps:
-      - name: Update project stage
+      - name: Update project stage and process
         uses: actions/github-script@v7
         env:
           PROJECT_AUTOMATION_TOKEN: ${{ secrets.PROJECT_AUTOMATION_TOKEN }}
@@ -58,9 +73,12 @@ jobs:
             const projectNumber = Number(process.env.PROJECT_NUMBER);
 
             const stageFieldId = process.env.STAGE_FIELD_ID;
+            const processFieldId = process.env.PROCESS_FIELD_ID;
             const projectFieldId = process.env.PROJECT_FIELD_ID;
             const priorityFieldId = process.env.PRIORITY_FIELD_ID;
             const workTypeFieldId = process.env.WORKTYPE_FIELD_ID;
+            const handshakeFieldId = process.env.HANDSHAKE_FIELD_ID;
+            const modelLaneFieldId = process.env.MODEL_LANE_FIELD_ID;
 
             const stageByKey = {
               REDO_AGENT: process.env.STAGE_REDO_AGENT,
@@ -68,6 +86,15 @@ jobs:
               REDO_APPROVAL: process.env.STAGE_REDO_APPROVAL,
               APPROVED_WAITING_RELEASE: process.env.STAGE_APPROVED_WAITING_RELEASE,
               LIVE: process.env.STAGE_LIVE,
+            };
+
+            const processByKey = {
+              AGENT_READY: process.env.PROCESS_AGENT_READY,
+              IN_AGENT: process.env.PROCESS_IN_AGENT,
+              AGENT_REVIEW: process.env.PROCESS_AGENT_REVIEW,
+              APPROVED: process.env.PROCESS_APPROVED,
+              LIVE: process.env.PROCESS_LIVE,
+              BLOCKED: process.env.PROCESS_BLOCKED,
             };
 
             const projectByRepo = {
@@ -80,9 +107,6 @@ jobs:
               "tol-website": process.env.PROJECT_TOL,
               "tsl-website": process.env.PROJECT_TSL,
             };
-
-            const repoName = context.repo.repo;
-            const repoProjectOptionId = projectByRepo[repoName];
 
             async function getProjectId() {
               const query = `
@@ -149,23 +173,67 @@ jobs:
               await github.graphql(mutation, { projectId, itemId, fieldId, optionId });
             }
 
-            function stageFromEvent() {
+            function classifyModelLane(payload) {
+              if (context.eventName === "issues") return process.env.MODEL_EVERYDAY;
+              if (context.eventName === "pull_request") {
+                const draft = !!payload.pull_request?.draft;
+                return draft ? process.env.MODEL_EVERYDAY : process.env.MODEL_MEDIUM;
+              }
+              if (context.eventName === "deployment_status") return process.env.MODEL_HARD;
+              return null;
+            }
+
+            function statusFromEvent() {
               if (context.eventName === "issues") {
-                if (["opened", "reopened"].includes(context.payload.action)) return stageByKey.REDO_AGENT;
+                if (["opened", "reopened"].includes(context.payload.action)) {
+                  return {
+                    stage: stageByKey.REDO_AGENT,
+                    process: processByKey.AGENT_READY,
+                    handshake: process.env.HANDSHAKE_ACCEPTED,
+                  };
+                }
               }
 
               if (context.eventName === "pull_request") {
-                if (["opened", "reopened"].includes(context.payload.action)) return stageByKey.IN_AGENT;
-                if (context.payload.action === "ready_for_review") return stageByKey.REDO_APPROVAL;
+                if (["opened", "reopened"].includes(context.payload.action)) {
+                  return {
+                    stage: stageByKey.IN_AGENT,
+                    process: processByKey.IN_AGENT,
+                    handshake: process.env.HANDSHAKE_ACCEPTED,
+                  };
+                }
+                if (context.payload.action === "ready_for_review") {
+                  return {
+                    stage: stageByKey.REDO_APPROVAL,
+                    process: processByKey.AGENT_REVIEW,
+                    handshake: process.env.HANDSHAKE_ACCEPTED,
+                  };
+                }
                 if (context.payload.action === "closed" && context.payload.pull_request?.merged) {
-                  return stageByKey.APPROVED_WAITING_RELEASE;
+                  return {
+                    stage: stageByKey.APPROVED_WAITING_RELEASE,
+                    process: processByKey.APPROVED,
+                    handshake: process.env.HANDSHAKE_ACCEPTED,
+                  };
                 }
               }
 
               if (context.eventName === "deployment_status") {
                 const state = (context.payload.deployment_status?.state || "").toLowerCase();
-                if (state === "success") return stageByKey.LIVE;
-                if (state === "failure" || state === "error") return stageByKey.IN_AGENT;
+                if (state === "success") {
+                  return {
+                    stage: stageByKey.LIVE,
+                    process: processByKey.LIVE,
+                    handshake: process.env.HANDSHAKE_ACCEPTED,
+                  };
+                }
+                if (state === "failure" || state === "error") {
+                  return {
+                    stage: stageByKey.IN_AGENT,
+                    process: processByKey.BLOCKED,
+                    handshake: process.env.HANDSHAKE_BLOCKED,
+                  };
+                }
               }
 
               return null;
@@ -195,24 +263,30 @@ jobs:
               return [];
             }
 
-            const stageOptionId = stageFromEvent();
-            if (!stageOptionId) {
-              core.info("No stage transition for this event.");
+            const mapped = statusFromEvent();
+            if (!mapped) {
+              core.info("No transition for this event.");
               return;
             }
 
             const projectId = await getProjectId();
             const contentIds = await contentIdsFromEvent();
             if (contentIds.length === 0) {
-              core.info("No issue/PR content IDs detected for event.");
+              core.info("No issue/PR content IDs found.");
               return;
             }
 
+            const repoProjectOptionId = projectByRepo[context.repo.repo];
+            const modelLaneOptionId = classifyModelLane(context.payload);
+
             for (const contentId of contentIds) {
               const itemId = await upsertItem(projectId, contentId);
-              await setSingleSelect(projectId, itemId, stageFieldId, stageOptionId);
+              await setSingleSelect(projectId, itemId, stageFieldId, mapped.stage);
+              await setSingleSelect(projectId, itemId, processFieldId, mapped.process);
               await setSingleSelect(projectId, itemId, projectFieldId, repoProjectOptionId);
               await setSingleSelect(projectId, itemId, priorityFieldId, process.env.PRIORITY_P2);
               await setSingleSelect(projectId, itemId, workTypeFieldId, process.env.WORKTYPE_BUILD);
-              core.info(`Synced item ${itemId} for content ${contentId}`);
+              await setSingleSelect(projectId, itemId, handshakeFieldId, mapped.handshake);
+              await setSingleSelect(projectId, itemId, modelLaneFieldId, modelLaneOptionId);
+              core.info(`Synced item ${itemId}`);
             }
