@@ -1,6 +1,6 @@
 ---
 title: The Unnamed Roads
-description: One operator. AI-native venture studio powered by TUR Company OS — decision-first portfolio, human approval gates, agents inside policy.
+description: One operator. AI-native venture studio — decision-first portfolio, human approval gates, agents inside policy.
 startDate: 2024-11-15
 url: https://www.theunnamedroads.com
 tags:
@@ -16,7 +16,7 @@ homepage:
   statusTone: active
   statusDotColor: bg-emerald-500
   focus: >-
-    Field Notes & Company OS distribution
+    Field Notes distribution
   summary: >-
     Evidence-based notes for operators building AI-native companies — decision-first, not dashboard-first.
   metricLabel: CTA

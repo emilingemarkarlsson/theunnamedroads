@@ -1,6 +1,6 @@
 ---
 title: TUR Company OS
-description: Mobile-first control plane for The Unnamed Roads. Decisions, approvals, learning loops and agent policy in one governed operating system.
+description: Former studio control plane (wound down September 2026). Archive reference only — explainer and Field Notes remain; not live software.
 startDate: 2026-07-13
 endDate: 2026-09-04
 tags:

@@ -209,7 +209,7 @@
   "signals": {
     "eyebrow": "The thesis",
     "title": "Learning loop before agent swarm",
-    "description": "An AI-native venture studio where decisions, experiments and outcomes compound in Company OS — agents execute proven workflows under human approval gates.",
+    "description": "An AI-native venture studio where decisions, experiments and outcomes compound through a decision-first playbook — agents execute proven workflows under human approval gates.",
     "tags": [
       "decision-first growth",
       "Focus · Monitor · Parked",
@@ -250,7 +250,7 @@
         "label": "Morning",
         "title": "Growth + inbox signals",
         "description": "PostHog Focus funnels, Raindrop/Gmail learning labels and Tech Pulse digest surface at most three mobile decisions.",
-        "meta": "PostHog · Company OS · Resend"
+        "meta": "PostHog · MethodPolicy · Resend"
       },
       {
         "id": "research",
@@ -289,7 +289,7 @@
     "quotes": [
       {
         "id": "cost-hetzner",
-        "quote": "Self-hosted jobs still run on one Hetzner VPS where they beat managed SaaS on cost. Company OS stays on Vercel + Supabase.",
+        "quote": "Self-hosted jobs still run on one Hetzner VPS where they beat managed SaaS on cost. The studio site and automations stay on Vercel + Supabase.",
         "author": "Hetzner + Vercel",
         "role": "hybrid stack"
       },
