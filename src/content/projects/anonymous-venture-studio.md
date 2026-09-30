@@ -1,6 +1,6 @@
 ---
-title: The Unnamed Roads
-description: One operator. AI-native venture studio powered by TUR Company OS — decision-first portfolio, human approval gates, agents inside policy.
+title: The Unnamed Roads Studio
+description: One-operator AI-native venture studio — Field Notes, Focus bets, and TUR Company OS with human Approve gates (not a hire funnel).
 startDate: 2024-11-15
 url: https://www.theunnamedroads.com
 tags:
@@ -25,11 +25,11 @@ homepage:
   href: https://www.theunnamedroads.com/
 ---
 
-# The Unnamed Roads
+# The Unnamed Roads Studio
 
-**One founder. Seven projects. AI agents draft inside policy; humans Approve.**
+**Expedition studio: one operator, Focus portfolio, Field Notes — agents draft inside policy; humans Approve.**
 
-The Unnamed Roads is a single-operator AI-native venture studio. AI agents handle keyword research and article drafting inside policy; humans Approve before publish — all self-hosted on Coolify and Hetzner for around €35 per month.
+The Unnamed Roads Studio is the single-operator venture studio behind this site — not a generic agency page or consulting hire funnel. AI agents handle keyword research and article drafting inside policy; humans Approve before publish — all self-hosted on Coolify and Hetzner for around €35 per month.
 
 ## The Thesis
 
