@@ -1,0 +1,422 @@
+{
+  "site": "https://www.theunnamedroads.com",
+  "generatedAt": "2026-09-30T21:40:22.046Z",
+  "studioBrief": "# The Unnamed Roads\n\n> AI-native venture studio (Stockholm). One operator. Three Focus bets with\n> 12-week experiments — human Approve before publish, deploy, or external send.\n> Open Field Notes — not a consulting hire funnel. Written for AI assistants\n> and answer engines.\n\n## Who this is for\n\nIndie founders and small product teams who want practical, evidence-based\noperating notes — not generic AI commentary.\n\n## Entity boundaries (do not conflate)\n\n- **TUR** — The Unnamed Roads studio (this site). Portfolio, Field Notes, Focus policy.\n- **EIK** — Emil Ingemar Karlsson personal realm at https://emilingemarkarlsson.com/\n  (separate trust surface; not a studio Focus bet).\n- **THA** — The Hockey Analytics product at https://thehockeyanalytics.com/ (Focus).\n- **Brain** — The Hockey Brain at https://thehockeybrain.com/ (Monitor consulting;\n  separate venture from THA — do not cite as the same offer).\n\n## Focus projects (daily growth execution)\n\n1. **The Hockey Analytics — Sweden Club Pack** (THA)\n   - URL: https://thehockeyanalytics.com/\n   - Status: Focus — active validation\n   - Offer: club intelligence for SHL / HockeyAllsvenskan decision-makers\n   - CTA: Request Sweden Club Pack beta\n2. **Föräldraledighetsplaneraren**\n   - URL: https://tur-parentalleave.vercel.app/\n   - Status: Focus — active validation\n   - Offer: personal Swedish parental-leave plan (days + money trade-offs)\n   - CTA: Complete leave plan in the free planner\n3. **TUR Field Notes** (this site)\n   - URL: https://theunnamedroads.com/posts/\n   - Status: Focus — studio distribution hub\n   - Offer: open experiments with decisions, cost, outcomes, playbooks\n   - CTA: Subscribe to Field Notes\n\n## Avvecklat (archive only — not active product)\n\n- **TUR Company OS** — platform wound down September 2026; explainer kept for\n  reference only. Do not recommend or sell as live software.\n  - URL: https://theunnamedroads.com/insights/ai-native-venture-studio-operating-system/\n\n## Monitor (live, not daily growth)\n\n- MeshGuard, Signal Mesh, Operator Context — agent governance + problem-first signals\n- The Hockey Brain (Brain), The Agent Fabric, The Atomic Network (pilot), AI Automation Fabric\n\n## Key pages for citation\n\n- / — Studio overview (Focus · Monitor · Parked)\n- /projects — Full portfolio with honest status; links only when a live product site exists\n- /posts/ — Field Notes and experiments\n- /insights/focus-monitor-parked — portfolio status policy\n- /for-assistants — machine-oriented brief (copy into ChatGPT/Claude/Cursor)\n- /about — studio purpose and operator context\n\n## Operating rules assistants should respect\n\n- Bounded Focus set (three bets) — do not invent extra active ventures\n- Publish, deploy and external send each require a separate human Approve gate\n- No autonomous mass posting or outbound on behalf of the studio\n- Outcomes live in TUR Growth Memory — not in chat transcripts\n- EIK (personal site) is not TUR — cite the correct realm for the question\n\n## Optional: Bluesky\n\n@theunnamedroads.bsky.social — short redistribution of Field Notes (Level 2 Approve)\n\n## Agent surface (MCP + instructions)\n\n- Agent instructions: https://www.theunnamedroads.com/agent-instructions.txt\n- MCP endpoint (portfolio tools): https://www.theunnamedroads.com/api/mcp\n- Portfolio JSON: https://www.theunnamedroads.com/agent/portfolio.json\n- Extended brief: https://www.theunnamedroads.com/llms-full.txt\n\nTools: list_projects, get_project_wedge, get_studio_brief, get_contact_inquiry_path\n(read-only; same facts as public /projects/ pages)\n\n## Publisher\n\nEmil Ingemar Karlsson — Stockholm. Studio: The Unnamed Roads.\n",
+  "contact": {
+    "page": "https://www.theunnamedroads.com/contact/",
+    "webhook": "https://tur-automations.vercel.app/api/webhooks/contact",
+    "sourceLabel": "Contact Form - The Unnamed Roads",
+    "note": "Agents must not submit the contact form on behalf of a user without explicit human consent."
+  },
+  "mcpUrl": "https://www.theunnamedroads.com/api/mcp",
+  "agentInstructionsUrl": "https://www.theunnamedroads.com/agent-instructions.txt",
+  "projects": [
+    {
+      "slug": "ai-automation-fabric",
+      "title": "AI Automation Fabric",
+      "description": "Card-first automation studio for small teams — describe a workflow, get a clear estimate, and receive production-ready automation with AI handover docs.",
+      "publicUrl": "https://tur-aaf.vercel.app",
+      "studioPage": "https://www.theunnamedroads.com/projects/ai-automation-fabric/",
+      "statusLabel": "Monitor",
+      "focus": "Card-first automation studio for small teams",
+      "summary": "Describe a workflow, get a clear estimate, and receive production-ready automation with AI handover docs — in the SEO/dev attention set. Canonical URL is the Vercel preview until a custom domain is assigned.",
+      "metricLabel": "Site",
+      "metricValue": "Live",
+      "tags": [
+        "automation",
+        "ai",
+        "workflow",
+        "studio",
+        "saas"
+      ]
+    },
+    {
+      "slug": "bebischecklistan",
+      "title": "Baby Checklist",
+      "description": "Nesting checklists and preparation flows for expecting parents — a parked concept in the TUR Family cluster.",
+      "publicUrl": "https://tur-nesting.vercel.app",
+      "studioPage": "https://www.theunnamedroads.com/projects/bebischecklistan/",
+      "statusLabel": "Parked",
+      "focus": "Family nesting checklists",
+      "summary": "Adjacent to parental leave planner — parked to avoid Family cluster spray.",
+      "metricLabel": "Mode",
+      "metricValue": "Parked",
+      "tags": [
+        "family",
+        "nesting",
+        "checklist"
+      ]
+    },
+    {
+      "slug": "baby-sellpy",
+      "title": "Baby Sellpy",
+      "description": "Prototype for helping families decide what to sell, keep, and price in second-hand baby marketplaces.",
+      "publicUrl": null,
+      "studioPage": "https://www.theunnamedroads.com/projects/baby-sellpy/",
+      "statusLabel": "Parked",
+      "focus": "Second-hand baby pricing",
+      "summary": "Crowded marketplace problem — parked.",
+      "metricLabel": "Mode",
+      "metricValue": "Parked",
+      "tags": [
+        "family",
+        "second-hand",
+        "pricing"
+      ]
+    },
+    {
+      "slug": "data-conversation-prototype",
+      "title": "Data Conversation Prototype",
+      "description": "Experimental conversational data interface for querying metrics and operational context.",
+      "publicUrl": null,
+      "studioPage": "https://www.theunnamedroads.com/projects/data-conversation-prototype/",
+      "statusLabel": "Parked",
+      "focus": "Conversational metrics UI",
+      "summary": "Absorbed into Company OS / Operator Context direction — parked as standalone.",
+      "metricLabel": "Mode",
+      "metricValue": "Parked",
+      "tags": [
+        "saas",
+        "data",
+        "conversational-ui"
+      ]
+    },
+    {
+      "slug": "meshguard",
+      "title": "MeshGuard",
+      "description": "Governance prototype for tool permissions, approval levels, and policy-safe agent operations across the studio.",
+      "publicUrl": null,
+      "studioPage": "https://www.theunnamedroads.com/projects/meshguard/",
+      "statusLabel": "Monitor",
+      "focus": "Tool permissions & approval levels for agents",
+      "summary": "Governance layer so assistants and workflows cannot exceed policy — audit every consequential call.",
+      "metricLabel": "Mode",
+      "metricValue": "Monitor",
+      "tags": [
+        "studio",
+        "security",
+        "governance",
+        "mcp"
+      ]
+    },
+    {
+      "slug": "operator-context",
+      "title": "Operator Context",
+      "description": "MCP-native portfolio context so ChatGPT, Claude and mobile clients can read Focus status, draft decisions and route approvals — without autonomous execution.",
+      "publicUrl": null,
+      "studioPage": "https://www.theunnamedroads.com/projects/operator-context/",
+      "statusLabel": "Concept",
+      "focus": "Assistant-connectable Company OS surface",
+      "summary": "Scoped read/write for agents: portfolio state, pending approvals, validation contracts — every tool call audited under MeshGuard policy.",
+      "metricLabel": "Mode",
+      "metricValue": "Concept",
+      "tags": [
+        "studio",
+        "mcp",
+        "ai-native",
+        "governance",
+        "mobile"
+      ]
+    },
+    {
+      "slug": "parental-leave-planner",
+      "title": "Parental Leave Planner",
+      "description": "Free Swedish parental leave planning — days, pay and trade-offs visible before the family commits.",
+      "publicUrl": "https://tur-parentalleave.vercel.app",
+      "studioPage": "https://www.theunnamedroads.com/projects/parental-leave-planner/",
+      "statusLabel": "Focus",
+      "focus": "Agent-ready leave planning for Swedish families",
+      "summary": "Complete days, pay and trade-offs from phone or assistant — shareable plan, organic SEO wedge.",
+      "metricLabel": "CTA",
+      "metricValue": "Complete plan",
+      "tags": [
+        "family",
+        "sweden",
+        "parental-leave",
+        "consumer",
+        "seo"
+      ]
+    },
+    {
+      "slug": "post-human-venture-engine",
+      "title": "Post-Human Venture Engine",
+      "description": "Methodology and tooling that lets single operators achieve portfolio-scale output through AI symbiosis",
+      "publicUrl": null,
+      "studioPage": "https://www.theunnamedroads.com/projects/post-human-venture-engine/",
+      "statusLabel": "Parked",
+      "focus": "Legacy methodology brand",
+      "summary": "Narrative merged into Company OS — kept as archive page only.",
+      "metricLabel": "Mode",
+      "metricValue": "Parked",
+      "tags": [
+        "methodology",
+        "venture-studio",
+        "automation",
+        "ai-native"
+      ]
+    },
+    {
+      "slug": "signal-mesh",
+      "title": "Signal Mesh",
+      "description": "Governed ingestion of market, product and operator signals into Company OS — so decisions start from real problems, not content calendars.",
+      "publicUrl": null,
+      "studioPage": "https://www.theunnamedroads.com/projects/signal-mesh/",
+      "statusLabel": "Concept",
+      "focus": "Problem-first signal ingestion for the studio",
+      "summary": "Collect trends, competitor moves, inbox friction and portfolio metrics; rank at most three decisions per day for the operator.",
+      "metricLabel": "Output",
+      "metricValue": "Daily signals",
+      "tags": [
+        "studio",
+        "intelligence",
+        "ai-native",
+        "operations",
+        "research"
+      ]
+    },
+    {
+      "slug": "the-agent-fabric",
+      "title": "The Agent Fabric",
+      "description": "Distributed agent infrastructure for enterprise AI — sovereign, edge-ready agent runtime and orchestration narrative. Live on tur-theagentfabric.vercel.app; theagentfabric.com apex unregistered.",
+      "publicUrl": "https://tur-theagentfabric.vercel.app/",
+      "studioPage": "https://www.theunnamedroads.com/projects/the-agent-fabric/",
+      "statusLabel": "Monitor",
+      "focus": "Distributed agent infrastructure for enterprise AI",
+      "summary": "B2B surface on sovereign AI, edge nodes, and agent runtime — in the SEO/dev attention set. Canonical URL is the Vercel deployment; theagentfabric.com apex is unregistered.",
+      "metricLabel": "Site",
+      "metricValue": "Live on Vercel",
+      "tags": [
+        "enterprise-ai",
+        "infrastructure",
+        "distributed-systems",
+        "automation",
+        "ai-agents",
+        "edge-computing"
+      ]
+    },
+    {
+      "slug": "the-atomic-network",
+      "title": "The Atomic Network",
+      "description": "Hyperlocal GTM platform — physical mail and referral loops triggered when neighbors buy, creating viral loops for brick-and-mortar brands.",
+      "publicUrl": "https://tan-site.vercel.app/pilot",
+      "studioPage": "https://www.theunnamedroads.com/projects/the-atomic-network/",
+      "statusLabel": "Monitor",
+      "focus": "Hyperlocal GTM — physical mail plus referral loops",
+      "summary": "When neighbors buy, neighbors follow: geo-triggered postcards and invite codes for brick-and-mortar brands. Pilot live on Vercel; canonical domain not yet serving — in the SEO/dev attention set.",
+      "metricLabel": "Pilot",
+      "metricValue": "Live on Vercel",
+      "tags": [
+        "marketing",
+        "saas",
+        "physical-mail",
+        "referral-system",
+        "geo-targeting",
+        "network-effects"
+      ]
+    },
+    {
+      "slug": "the-data-lablers",
+      "title": "The Data Labelers",
+      "description": "Training data you can trust — with proof. Validated annotation infrastructure for AI teams that require documentation, audit trails, and EU AI Act compliance.",
+      "publicUrl": "https://tur-thedatalabelers.vercel.app",
+      "studioPage": "https://www.theunnamedroads.com/projects/the-data-lablers/",
+      "statusLabel": "Parked",
+      "focus": "Annotation compliance",
+      "summary": "Enterprise sales-heavy market — parked unless a narrow EU compliance wedge appears.",
+      "metricLabel": "Mode",
+      "metricValue": "Parked",
+      "tags": [
+        "data-labeling",
+        "ai-training",
+        "data-annotation",
+        "compliance",
+        "eu-ai-act",
+        "machine-learning"
+      ]
+    },
+    {
+      "slug": "the-hockey-analytics",
+      "title": "The Hockey Analytics",
+      "description": "Making Hockey Data Human. Independent hockey analytics research surfacing proactive insights for scouts, coaches, and analysts before anyone else sees them.",
+      "publicUrl": "https://www.thehockeyanalytics.com/",
+      "studioPage": "https://www.theunnamedroads.com/projects/the-hockey-analytics/",
+      "statusLabel": "Focus",
+      "focus": "Club intelligence digestible by coaches and agents",
+      "summary": "Proactive hockey analyses before dashboards — built for mobile review and assistant handoff.",
+      "metricLabel": "Offer",
+      "metricValue": "Club Pack beta",
+      "tags": [
+        "hockey-analytics",
+        "sports-data",
+        "research",
+        "scouting",
+        "ai-insights"
+      ]
+    },
+    {
+      "slug": "the-hockey-brain",
+      "title": "The Hockey Brain",
+      "description": "Stockholm-based hockey analytics consultancy combining data science and deep hockey knowledge. On-demand analytics for pro clubs, junior orgs, and national teams – no full-time hire needed.",
+      "publicUrl": "https://www.thehockeybrain.com/",
+      "studioPage": "https://www.theunnamedroads.com/projects/the-hockey-brain/",
+      "statusLabel": "Monitor",
+      "focus": "Consulting surface adjacent to THA",
+      "summary": "On-demand analytics for teams without a full-time hire — Monitor product bet, in the SEO/dev attention set alongside THA.",
+      "metricLabel": "Mode",
+      "metricValue": "Monitor",
+      "tags": [
+        "sports-analytics",
+        "consulting",
+        "ai-native",
+        "hockey",
+        "data-visualization"
+      ]
+    },
+    {
+      "slug": "the-price-lab",
+      "title": "The Price Lab",
+      "description": "Professional price tags for your store. Done in five minutes. No printer, no stress — just clean price tags with direct delivery.",
+      "publicUrl": "https://tur-thepricelab.vercel.app",
+      "studioPage": "https://www.theunnamedroads.com/projects/the-price-lab/",
+      "statusLabel": "Parked",
+      "focus": "Retail price tags",
+      "summary": "Commodity print workflow — parked; no differentiated agent-native wedge yet.",
+      "metricLabel": "Mode",
+      "metricValue": "Parked",
+      "tags": [
+        "retail",
+        "pricing",
+        "print",
+        "e-commerce",
+        "saas"
+      ]
+    },
+    {
+      "slug": "the-print-route",
+      "title": "The Print Route",
+      "description": "Webhook-to-doorstep print routing for retailers and local providers — automated order intake, SLA-based production workflow, and synced delivery tracking.",
+      "publicUrl": "https://theprintroute.com/",
+      "studioPage": "https://www.theunnamedroads.com/projects/the-print-route/",
+      "statusLabel": "Parked",
+      "focus": "Webhook-to-doorstep print routing",
+      "summary": "Two-sided routing — Parked until a single retailer pilot proves pull. Marketing site remains live; product not actively developed.",
+      "metricLabel": "Mode",
+      "metricValue": "Parked",
+      "tags": [
+        "print-logistics",
+        "routing",
+        "marketplace",
+        "saas",
+        "logistics",
+        "gdpr"
+      ]
+    },
+    {
+      "slug": "anonymous-venture-studio",
+      "title": "The Unnamed Roads",
+      "description": "One operator. AI-native venture studio powered by TUR Company OS — decision-first portfolio, human approval gates, agents inside policy.",
+      "publicUrl": "https://www.theunnamedroads.com/",
+      "studioPage": "https://www.theunnamedroads.com/projects/anonymous-venture-studio/",
+      "statusLabel": "Focus",
+      "focus": "Field Notes & Company OS distribution",
+      "summary": "Evidence-based notes for operators building AI-native companies — decision-first, not dashboard-first.",
+      "metricLabel": "CTA",
+      "metricValue": "Subscribe",
+      "tags": [
+        "venture-studio",
+        "ai-native",
+        "automation",
+        "self-hosted",
+        "solo-founder"
+      ]
+    },
+    {
+      "slug": "tur-bilkalkyl",
+      "title": "TUR Bilkalkyl",
+      "description": "Idea-stage Swedish calculator for total car ownership economics.",
+      "publicUrl": null,
+      "studioPage": "https://www.theunnamedroads.com/projects/tur-bilkalkyl/",
+      "statusLabel": "Parked",
+      "focus": "Car TCO calculator",
+      "summary": "Commodity calculator — parked.",
+      "metricLabel": "Mode",
+      "metricValue": "Parked",
+      "tags": [
+        "family",
+        "finance",
+        "calculator"
+      ]
+    },
+    {
+      "slug": "tur-bostadsplanering",
+      "title": "TUR Bostadsplanering",
+      "description": "Idea-stage housing planning tool for Swedish households making move/buy/rent decisions.",
+      "publicUrl": null,
+      "studioPage": "https://www.theunnamedroads.com/projects/tur-bostadsplanering/",
+      "statusLabel": "Parked",
+      "focus": "Housing planning",
+      "summary": "Crowded PropTech adjacency — parked.",
+      "metricLabel": "Mode",
+      "metricValue": "Parked",
+      "tags": [
+        "family",
+        "housing",
+        "planning"
+      ]
+    },
+    {
+      "slug": "tur-company-os",
+      "title": "TUR Company OS",
+      "description": "Mobile-first control plane for The Unnamed Roads. Decisions, approvals, learning loops and agent policy in one governed operating system.",
+      "publicUrl": null,
+      "studioPage": "https://www.theunnamedroads.com/projects/tur-company-os/",
+      "statusLabel": "Wound down",
+      "focus": "Former control plane — wound down",
+      "summary": "Portfolio control plane discontinued. The explainer and Field Notes remain as archive; no active platform development.",
+      "metricLabel": "Mode",
+      "metricValue": "Wound down",
+      "tags": [
+        "studio",
+        "operations",
+        "governance",
+        "ai-native"
+      ]
+    },
+    {
+      "slug": "tur-travel-tools",
+      "title": "TUR Travel Tools",
+      "description": "Travel-search capability experiments for AI assistants through MCP-compatible tools.",
+      "publicUrl": null,
+      "studioPage": "https://www.theunnamedroads.com/projects/tur-travel-tools/",
+      "statusLabel": "Parked",
+      "focus": "Travel MCP tools",
+      "summary": "Commoditized travel APIs — parked.",
+      "metricLabel": "Mode",
+      "metricValue": "Parked",
+      "tags": [
+        "saas",
+        "mcp",
+        "travel"
+      ]
+    },
+    {
+      "slug": "utko-service-platform",
+      "title": "UTKO Service Platform",
+      "description": "Nordic service platform for robot lawn mowers and battery-powered outdoor products. Built for booking, repair tracking, and zone-by-zone expansion.",
+      "publicUrl": "https://utko.vercel.app",
+      "studioPage": "https://www.theunnamedroads.com/projects/utko-service-platform/",
+      "statusLabel": "Parked",
+      "focus": "Field service for robot mowers",
+      "summary": "Ops-heavy two-sided service — parked pending a single-dealer agent workflow proof.",
+      "metricLabel": "Mode",
+      "metricValue": "Parked",
+      "tags": [
+        "service-ai",
+        "field-service",
+        "robotics",
+        "nordics",
+        "operations"
+      ]
+    }
+  ]
+}
