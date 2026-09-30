@@ -17,6 +17,7 @@ Tools: /tools/
 Agents: /agents/
 Contact: /contact/
 For assistants: /for-assistants/
+AEO thesis: /insights/sites-as-receipts-agent-distribution/
 Feed: /feed.xml
 Sitemap: /sitemap-index.xml
 
