@@ -9,6 +9,7 @@ Travel site. **Production host: Vercel** (not Netlify).
 | Domains | `www.theunnamedroads.com` (canonical), apex → www 301 |
 | Deploy | `git push origin main` → GitHub → Vercel |
 | Canonical host | `https://www.theunnamedroads.com` — apex and `http://` 301 at Vercel edge (`vercel.json`); internal links use `www` |
+| Security headers | Vercel edge: `vercel.json` → `headers` (CSP, Permissions-Policy, XCTO, XFO, Referrer-Policy). `public/_headers` is cache hints only (not Netlify). |
 | Framework | Astro static; package manager **pnpm** |
 | Local | `~/Documents/dev/theunnamedroads` |
 
