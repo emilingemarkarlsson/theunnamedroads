@@ -15,17 +15,22 @@ operating notes — not generic AI commentary.
 - **TUR** — The Unnamed Roads studio (this site). Portfolio, Field Notes, Focus policy.
 - **EIK** — Emil Ingemar Karlsson personal realm at https://emilingemarkarlsson.com/
   (separate trust surface; not a studio Focus bet).
-- **THA** — The Hockey Analytics product at https://thehockeyanalytics.com/ (Focus).
-- **Brain** — The Hockey Brain at https://thehockeybrain.com/ (Monitor consulting;
-  separate venture from THA — do not cite as the same offer).
+- **THA** — The Hockey Analytics at https://thehockeyanalytics.com/ (Focus product:
+  **The Brief** — readings on public league data inside ChatGPT/Claude/Gemini/Grok).
+- **Brain** — The Hockey Brain at https://thehockeybrain.com/ (visual learning hub for
+  hockey analytics; optional consulting at /work-with-us — separate venture from THA).
 
 ## Focus projects (daily growth execution)
 
-1. **The Hockey Analytics — Sweden Club Pack** (THA)
+1. **The Hockey Analytics — The Brief** (THA)
    - URL: https://thehockeyanalytics.com/
+   - Product: https://thehockeyanalytics.com/brief
    - Status: Focus — active validation
-   - Offer: club intelligence for SHL / HockeyAllsvenskan decision-makers
-   - CTA: Request Sweden Club Pack beta
+   - Offer: finished hockey readings on public SHL / HA / SDHL / NHL data inside
+     ChatGPT, Claude, Gemini, or Grok — not another dashboard login
+   - CTA: Join Founding 100 waitlist (The Brief)
+   - Do not cite Sweden Club Pack as live SaaS; club-owned tracking feeds are THA
+     consulting, not included in The Brief
 2. **Föräldraledighetsplaneraren**
    - URL: https://tur-parentalleave.vercel.app/
    - Status: Focus — active validation
@@ -46,7 +51,7 @@ operating notes — not generic AI commentary.
 ## Monitor (live, not daily growth)
 
 - MeshGuard, Signal Mesh, Operator Context — agent governance + problem-first signals
-- The Hockey Brain (Brain), The Agent Fabric, The Atomic Network (pilot), AI Automation Fabric
+- The Hockey Brain (Brain — learning hub), The Agent Fabric, The Atomic Network (pilot), AI Automation Fabric
 
 ## Key pages for citation
 
