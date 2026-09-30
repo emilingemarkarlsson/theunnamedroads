@@ -50,7 +50,7 @@ function resolveEl(heading: ProcessedHeading) {
   <Prose>
     <h2 class="no-anchor mb-2">Table of Contents</h2>
 
-    <details {open}>
+    <details id="post-toc-details" open={open}>
       <summary>Show more</summary>
       <ul>
         {
@@ -62,6 +62,14 @@ function resolveEl(heading: ProcessedHeading) {
     </details>
   </Prose>
 </div>
+<script is:inline>
+  ;(function () {
+    const details = document.getElementById('post-toc-details')
+    if (details && window.matchMedia('(min-width: 1536px)').matches) {
+      details.open = true
+    }
+  })()
+</script>
 <style>
   #toc {
     ul {
