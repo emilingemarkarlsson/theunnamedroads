@@ -4,7 +4,7 @@ Cloud Agent tokens are **read-only** on GitHub for labels/issues/merge, and Curs
 
 ## Status
 
-**Queue (2026-10-01):** Execute idle — inga `agent:ready`/`agent:draft`; öppna agent-PR:er #167–#184 (+ #93 draft) väntar mänsklig merge/review.
+**Queue (2026-10-01 03:00 UTC):** Execute idle — inga `agent:ready`/`agent:draft`/`agent:running`; öppna agent-PR:er #167–#186 (+ #93 draft, dependabot #1) väntar mänsklig merge/review.
 
 - [x] SEO Execute queue complete ([#17](https://github.com/emilingemarkarlsson/theunnamedroads/issues/17)) — #14 → #16 → #15 merged; UX PRs (#38, #40, #44) await human merge before next `agent:ready`
 - [x] Agent loop scaffold merged ([#10](https://github.com/emilingemarkarlsson/theunnamedroads/pull/10))
