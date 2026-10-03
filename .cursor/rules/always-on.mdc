@@ -13,6 +13,7 @@ alwaysApply: true
 - Docs-only agent issues (changes under `docs/` only): always run `pnpm check`; skip `pnpm build` unless acceptance criteria explicitly require it.
 - Use `pnpm` (see `packageManager` in `package.json`). Content collection date field is `publishedDate` (not `pubDate`).
 - Production host is Vercel (`tur-site`); deploy via `git push origin main` — do not switch hosts.
+- **Vercel HTML CORS:** static HTML responses default to `Access-Control-Allow-Origin: *` — override (you cannot remove the header) in `vercel.json` `headers` with `https://www.theunnamedroads.com`. Scope overrides to document URLs only: a `/` rule plus `/:path((?!.*\\.).*)` so `.js`, `.css`, `.xml`, and other dotted asset paths keep Vercel defaults.
 - When opening an agent Execute PR: mark **Ready for review** (not draft), **assign** `emilingemarkarlsson`, and **request review** from them when the author is cursor-bot — otherwise the PR never lands in https://github.com/pulls/assigned.
 - Never merge your own agent PR; Emil approves. After Emil merges, they unassign themselves (GitHub does not clear assignees).
 - **Meta-queue issues** (tracking issues without their own acceptance criteria): when all child issues are `agent:done`, close the meta-issue — remove `agent:ready`; do not leave it queued after the chain completes. If no `agent:draft` issues remain and open PRs await human merge, add a one-line queue-status note in `docs/agent-setup/GO_LIVE.md` instead of opening an empty code PR.
