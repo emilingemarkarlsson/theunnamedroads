@@ -12,10 +12,10 @@ Allow: /tools/
 Allow: /about/
 Allow: /contact/
 
-# Crawl-budget: archive/tag/author/feed pages stay reachable but not indexed
+# Crawl-budget: archive/tag/author pages stay reachable but not indexed
+# /feed.xml — crawlable for discovery; X-Robots-Tag: noindex on the feed response
 Disallow: /tags/
 Disallow: /authors/
-Disallow: /feed.xml
 
 # AI Agent specific directives
 User-agent: GPTBot
@@ -67,7 +67,8 @@ Allow: /
 # /admin/ – no public admin area; avoid indexing if present
 # /api/ – API endpoints, not content for search
 # /*?preview=* – draft/preview URLs
-# /.well-known/ – verification endpoints (e.g. ACME), not content
+# /.well-known/ – mostly verification (ACME); allow ai.txt for assistant discovery
+Allow: /.well-known/ai.txt
 Disallow: /admin/
 Disallow: /*?preview=*
 Disallow: /api/
