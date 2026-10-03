@@ -55,6 +55,7 @@ operating notes — not generic AI commentary.
 - /posts/ — Field Notes and experiments
 - /insights/focus-monitor-parked — portfolio status policy
 - /for-assistants — machine-oriented brief (copy into ChatGPT/Claude/Cursor)
+- /insights/sites-as-receipts-agent-distribution — AEO thesis: sites = receipts; distribution inside agents
 - /about — studio purpose and operator context
 
 ## Operating rules assistants should respect
