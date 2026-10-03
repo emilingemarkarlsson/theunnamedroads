@@ -82,3 +82,28 @@ Tools: list_projects, get_project_wedge, get_studio_brief, get_contact_inquiry_p
 ## Publisher
 
 Emil Ingemar Karlsson — Stockholm. Studio: The Unnamed Roads.
+
+## Full portfolio index (machine)
+
+- ai-automation-fabric: AI Automation Fabric | status=Monitor | https://www.theunnamedroads.com/projects/ai-automation-fabric/
+- bebischecklistan: Baby Checklist | status=Parked | https://www.theunnamedroads.com/projects/bebischecklistan/
+- baby-sellpy: Baby Sellpy | status=Parked | https://www.theunnamedroads.com/projects/baby-sellpy/
+- data-conversation-prototype: Data Conversation Prototype | status=Parked | https://www.theunnamedroads.com/projects/data-conversation-prototype/
+- meshguard: MeshGuard | status=Monitor | https://www.theunnamedroads.com/projects/meshguard/
+- operator-context: Operator Context | status=Concept | https://www.theunnamedroads.com/projects/operator-context/
+- parental-leave-planner: Parental Leave Planner | status=Focus | https://www.theunnamedroads.com/projects/parental-leave-planner/
+- post-human-venture-engine: Post-Human Venture Engine | status=Parked | https://www.theunnamedroads.com/projects/post-human-venture-engine/
+- signal-mesh: Signal Mesh | status=Concept | https://www.theunnamedroads.com/projects/signal-mesh/
+- the-agent-fabric: The Agent Fabric | status=Monitor | https://www.theunnamedroads.com/projects/the-agent-fabric/
+- the-atomic-network: The Atomic Network | status=Monitor | https://www.theunnamedroads.com/projects/the-atomic-network/
+- the-data-lablers: The Data Labelers | status=Parked | https://www.theunnamedroads.com/projects/the-data-lablers/
+- the-hockey-analytics: The Hockey Analytics | status=Focus | https://www.theunnamedroads.com/projects/the-hockey-analytics/
+- the-hockey-brain: The Hockey Brain | status=Monitor | https://www.theunnamedroads.com/projects/the-hockey-brain/
+- the-price-lab: The Price Lab | status=Parked | https://www.theunnamedroads.com/projects/the-price-lab/
+- the-print-route: The Print Route | status=Parked | https://www.theunnamedroads.com/projects/the-print-route/
+- anonymous-venture-studio: The Unnamed Roads | status=Focus | https://www.theunnamedroads.com/projects/anonymous-venture-studio/
+- tur-bilkalkyl: TUR Bilkalkyl | status=Parked | https://www.theunnamedroads.com/projects/tur-bilkalkyl/
+- tur-bostadsplanering: TUR Bostadsplanering | status=Parked | https://www.theunnamedroads.com/projects/tur-bostadsplanering/
+- tur-company-os: TUR Company OS | status=Wound down | https://www.theunnamedroads.com/projects/tur-company-os/
+- tur-travel-tools: TUR Travel Tools | status=Parked | https://www.theunnamedroads.com/projects/tur-travel-tools/
+- utko-service-platform: UTKO Service Platform | status=Parked | https://www.theunnamedroads.com/projects/utko-service-platform/

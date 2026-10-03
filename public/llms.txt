@@ -69,6 +69,16 @@ operating notes — not generic AI commentary.
 
 @theunnamedroads.bsky.social — short redistribution of Field Notes (Level 2 Approve)
 
+## Agent surface (MCP + instructions)
+
+- Agent instructions: https://www.theunnamedroads.com/agent-instructions.txt
+- MCP endpoint (portfolio tools): https://www.theunnamedroads.com/api/mcp
+- Portfolio JSON: https://www.theunnamedroads.com/agent/portfolio.json
+- Extended brief: https://www.theunnamedroads.com/llms-full.txt
+
+Tools: list_projects, get_project_wedge, get_studio_brief, get_contact_inquiry_path
+(read-only; same facts as public /projects/ pages)
+
 ## Publisher
 
 Emil Ingemar Karlsson — Stockholm. Studio: The Unnamed Roads.

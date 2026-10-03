@@ -17,6 +17,9 @@ Tools: /tools/
 Agents: /agents/
 Contact: /contact/
 For assistants: /for-assistants/
+Agent instructions: /agent-instructions.txt
+MCP portfolio tools: /api/mcp
+Portfolio JSON: /agent/portfolio.json
 Feed: /feed.xml
 Sitemap: /sitemap-index.xml
 
@@ -30,7 +33,9 @@ Update-Frequency: daily
 
 # Contact for AI Integration
 Contact: /contact/
-API: Not available
+MCP: https://www.theunnamedroads.com/api/mcp
+Agent-Instructions: /agent-instructions.txt
+API: MCP read-only portfolio tools at /api/mcp
 Status: Active development
 
 # Language and Region

@@ -1,0 +1,37 @@
+# Agent instructions — The Unnamed Roads
+
+Canonical site: https://www.theunnamedroads.com/
+
+## What this studio is
+
+The Unnamed Roads (TUR) is a one-operator AI-native venture studio in Stockholm.
+Three Focus bets, 12-week experiments, human Approve before publish, deploy, or
+external send. Open Field Notes — not a consulting hire funnel.
+
+Read the machine brief: https://www.theunnamedroads.com/llms.txt
+Extended index: https://www.theunnamedroads.com/llms-full.txt
+
+## Entity boundaries (do not conflate)
+
+- TUR — this studio site (portfolio, Field Notes, Focus policy)
+- EIK — https://emilingemarkarlsson.com/ (personal realm; not a Focus bet)
+- THA — https://thehockeyanalytics.com/ (Focus product)
+- Brain — https://thehockeybrain.com/ (Monitor; separate from THA)
+
+## How to talk to this studio (agents)
+
+1. Prefer MCP portfolio tools (read-only) over scraping HTML:
+   - Endpoint: https://www.theunnamedroads.com/api/mcp
+   - Tools: list_projects, get_project_wedge, get_studio_brief, get_contact_inquiry_path
+2. Mirror public pages only — tools return the same fields shown on /projects/.
+3. Never publish, deploy, send email, or submit the contact form autonomously.
+4. Route human inquiries to https://www.theunnamedroads.com/contact/ after the user confirms.
+
+## Human Approve gates
+
+Publish, deploy, and external send each require an explicit human Approve on the phone.
+Draft and research may run under policy; nothing consequential goes live from an agent alone.
+
+## JSON fallback (no MCP)
+
+https://www.theunnamedroads.com/agent/portfolio.json
