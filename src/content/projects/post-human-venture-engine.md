@@ -10,7 +10,7 @@ tags:
 homepage:
   featured: false
   order: 32
-  statusLabel: Parked
+  statusLabel: Closed
   statusTone: exploring
   summary: "Early write-up of the method for running many ventures as one person with AI."
   tag: "Studio tools"
@@ -18,7 +18,7 @@ faq:
   - question: "What is Post-Human Venture Engine?"
     answer: "The first written version of the studio’s method: how one person can run several ventures by letting AI do most of the work. It has been replaced by the How it works guide."
   - question: "What is the status of Post-Human Venture Engine?"
-    answer: "Parked. See How it works for the current method."
+    answer: "Closed. No further work is planned; the page is kept as a record of what was tested. See How it works for the current method."
 ---
 
 **Early write-up of the method for running many ventures as one person with AI.**
@@ -35,8 +35,8 @@ Founders curious about running a studio alone with AI.
 
 Written and refined with AI assistants.
 
-## Status: Parked
+## Status: Closed
 
-Parked. See How it works for the current method.
+Closed. No further work is planned; the page is kept as a record of what was tested. See How it works for the current method.
 
 Part of [The Unnamed Roads](/), an AI-native venture studio. See [how the studio starts and tests ideas with AI](/how-it-works/) or [all projects](/projects/).

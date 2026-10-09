@@ -2,15 +2,24 @@
 import ProjectGrid from '@/components/ProjectGrid.astro'
 import PageLayout from '@/layouts/PageLayout.astro'
 import config from '@/theme.config'
-import { getProjects, getStatus, projectItemList } from '@/util/projects'
+import {
+  STATUS_EXPLAINER,
+  getProjects,
+  getStatus,
+  isClosed,
+  projectItemList
+} from '@/util/projects'
 
-const projects = await getProjects()
+const all = await getProjects()
+const projects = all.filter((p) => !isClosed(p))
+const closed = all.filter(isClosed)
 const live = projects.filter((p) => getStatus(p) === 'Live').length
 const testing = projects.filter((p) => getStatus(p) === 'Testing').length
+const parked = projects.filter((p) => getStatus(p) === 'Parked').length
 
 const frontmatter = {
   title: 'Projects: Companies Started and Tested with AI',
-  description: `All ${projects.length} companies and ideas from The Unnamed Roads, an AI venture studio. ${live} live, ${testing} being tested, the rest parked, each built mostly by AI.`,
+  description: `Companies from The Unnamed Roads, an AI venture studio: ${live} live, ${testing} being tested, ${parked} parked, plus an archive of ${closed.length} closed experiments. Each built mostly by AI.`,
   activeHeaderLink: 'Projects',
   fullBleed: true,
   itemList: projectItemList(projects, config.site)
@@ -25,9 +34,10 @@ const frontmatter = {
         Companies started and tested with AI
       </h1>
       <p class="section-lead">
-        Every project The Unnamed Roads has started, with an honest status. Each
-        one was researched, built and launched mostly by AI, with one founder
-        choosing the ideas and approving what goes live. Want to know how? Read
+        Every project The Unnamed Roads is running or testing, with an honest
+        status. Each one was researched, built and launched mostly by AI, with
+        one founder choosing the ideas and approving what goes live. Want to
+        know how? Read
         <a href="/how-it-works/" class="text-accent underline">how it works</a>.
       </p>
     </section>
@@ -35,5 +45,53 @@ const frontmatter = {
     <section class="section-shell">
       <ProjectGrid {projects} headingLevel="h2" />
     </section>
+
+    {
+      closed.length > 0 && (
+        <section id="closed" class="section-shell scroll-mt-24">
+          <details class="closed-archive">
+            <summary>
+              <span class="closed-title">Closed archive ({closed.length})</span>
+              <span class="closed-lead">{STATUS_EXPLAINER.Closed}</span>
+            </summary>
+            <ul class="mt-5 grid gap-x-8 gap-y-3 md:grid-cols-2">
+              {closed.map((project) => (
+                <li>
+                  <a
+                    href={`/projects/${project.slug}/`}
+                    class="text-accent underline"
+                  >
+                    {project.data.title}
+                  </a>
+                  <span style="color: var(--roads-text-muted)">
+                    {' '}
+                    ·{' '}
+                    {project.data.homepage?.summary ?? project.data.description}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </details>
+        </section>
+      )
+    }
   </div>
 </PageLayout>
+
+<style>
+  .closed-archive {
+    @apply rounded-2xl border p-5 text-sm;
+    border-color: var(--roads-border);
+    background: var(--roads-surface);
+  }
+  .closed-archive summary {
+    @apply flex cursor-pointer flex-col gap-1;
+  }
+  .closed-title {
+    @apply text-lg font-semibold;
+    color: var(--roads-text);
+  }
+  .closed-lead {
+    color: var(--roads-text-muted);
+  }
+</style>

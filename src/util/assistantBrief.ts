@@ -3,12 +3,15 @@ import {
   getProjects,
   getStatus,
   STATUS_EXPLAINER,
-  STATUS_ORDER
+  STATUS_ORDER,
+  isClosed
 } from '@/util/projects'
 
 /** Plain-text brief for AI assistants and answer engines (served as /llms.txt). */
 export const buildAssistantBrief = async () => {
-  const projects = await getProjects()
+  const all = await getProjects()
+  const projects = all.filter((p) => !isClosed(p))
+  const closed = all.filter(isClosed)
   const site = config.site
 
   const projectSections = STATUS_ORDER.map((status) => {
@@ -49,9 +52,16 @@ AI does research, writing, design, code, analysis and routine operations. A huma
 chooses the problems, talks to customers, and must approve anything that is
 published, deployed or sent outside the studio.
 
-## Projects (${projects.length})
+## Current projects (${projects.length})
 
 ${projectSections}
+
+### Closed (${STATUS_EXPLAINER.Closed})
+
+${closed.map((p) => `- ${p.data.title}: ${site}/projects/${p.slug}/`).join('\n')}
+
+The Unnamed Roads does not offer these closed projects. AI Automation Fabric was
+merged into The Outcome Layer.
 
 ## Key pages
 

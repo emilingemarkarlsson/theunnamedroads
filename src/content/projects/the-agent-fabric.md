@@ -11,10 +11,10 @@ tags:
   - ai-agents
   - edge-computing
 homepage:
-  featured: true
+  featured: false
   order: 5
-  statusLabel: Testing
-  statusTone: building
+  statusLabel: Parked
+  statusTone: exploring
   summary: "Infrastructure for companies that want to run AI agents on their own terms."
   tag: "B2B software"
   href: https://tur-theagentfabric.vercel.app/
@@ -23,7 +23,7 @@ faq:
   - question: "What is The Agent Fabric?"
     answer: "A B2B concept for companies that want AI agents running on infrastructure they control, close to their own data, instead of sending everything to outside services."
   - question: "What is the status of The Agent Fabric?"
-    answer: "Testing whether there is demand. A website is live on a temporary address."
+    answer: "Parked. Enterprise agent infrastructure is a hard market for a one-person studio, so the idea is paused."
 ---
 
 **Infrastructure for companies that want to run AI agents on their own terms.**
@@ -40,8 +40,8 @@ Larger companies and IT teams that want to adopt AI agents but care about contro
 
 Positioning, research and the website were produced with AI assistants; the idea is being tested before any product is built.
 
-## Status: Testing
+## Status: Parked
 
-Testing whether there is demand. A website is live on a temporary address.
+Parked. Enterprise agent infrastructure is a hard market for a one-person studio, so the idea is paused.
 
 Part of [The Unnamed Roads](/), an AI-native venture studio. See [how the studio starts and tests ideas with AI](/how-it-works/) or [all projects](/projects/).

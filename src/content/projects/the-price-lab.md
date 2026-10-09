@@ -12,7 +12,7 @@ tags:
 homepage:
   featured: false
   order: 21
-  statusLabel: Parked
+  statusLabel: Closed
   statusTone: exploring
   summary: "Professional price tags for small shops in five minutes."
   tag: "Retail"
@@ -22,7 +22,7 @@ faq:
   - question: "What is The Price Lab?"
     answer: "A simple tool for small shops to create professional price tags and get them delivered."
   - question: "What is the status of The Price Lab?"
-    answer: "Parked. The test did not show a clear enough advantage to continue."
+    answer: "Closed. No further work is planned; the page is kept as a record of what was tested. The test did not show a clear enough advantage to continue."
 ---
 
 **Professional price tags for small shops in five minutes.**
@@ -39,8 +39,8 @@ Small retail stores.
 
 Built with AI coding assistants by one person.
 
-## Status: Parked
+## Status: Closed
 
-Parked. The test did not show a clear enough advantage to continue.
+Closed. No further work is planned; the page is kept as a record of what was tested. The test did not show a clear enough advantage to continue.
 
 Part of [The Unnamed Roads](/), an AI-native venture studio. See [how the studio starts and tests ideas with AI](/how-it-works/) or [all projects](/projects/).

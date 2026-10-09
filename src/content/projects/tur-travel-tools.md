@@ -9,7 +9,7 @@ tags:
 homepage:
   featured: false
   order: 31
-  statusLabel: Parked
+  statusLabel: Closed
   statusTone: exploring
   summary: "Flight, hotel and deal search that AI assistants can use directly."
   tag: "B2B software"
@@ -17,7 +17,7 @@ faq:
   - question: "What is Travel Tools for AI assistants?"
     answer: "An experiment that gave AI assistants (via the MCP standard) tools to search flights, hotels and deals directly."
   - question: "What is the status of Travel Tools for AI assistants?"
-    answer: "Parked."
+    answer: "Closed. No further work is planned; the page is kept as a record of what was tested."
 ---
 
 **Flight, hotel and deal search that AI assistants can use directly.**
@@ -34,8 +34,8 @@ People who plan trips with AI assistants.
 
 Built with AI coding assistants.
 
-## Status: Parked
+## Status: Closed
 
-Parked.
+Closed. No further work is planned; the page is kept as a record of what was tested.
 
 Part of [The Unnamed Roads](/), an AI-native venture studio. See [how the studio starts and tests ideas with AI](/how-it-works/) or [all projects](/projects/).
