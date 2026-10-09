@@ -1,6 +1,6 @@
 ---
-title: The Data Labelers
-description: Training data you can trust — with proof. Validated annotation infrastructure for AI teams that require documentation, audit trails, and EU AI Act compliance.
+title: "The Data Labelers"
+description: "The Data Labelers explored verified data labelling for AI teams that need documented quality. Parked."
 url: https://tur-thedatalabelers.vercel.app
 startDate: 2025-01-20
 tags:
@@ -12,46 +12,36 @@ tags:
   - machine-learning
 homepage:
   featured: false
-  order: 13
+  order: 22
   statusLabel: Parked
   statusTone: exploring
-  statusDotColor: bg-slate-500
-  animateDot: false
-  focus: >-
-    Annotation compliance
-  summary: >-
-    Enterprise sales-heavy market — parked unless a narrow EU compliance wedge appears.
-  metricLabel: Mode
-  metricValue: Parked
-  tag: SaaS
+  summary: "Training data for AI teams, with proof of quality."
+  tag: "B2B software"
   href: https://tur-thedatalabelers.vercel.app
+  ctaLabel: "Visit the site"
+faq:
+  - question: "What is The Data Labelers?"
+    answer: "A service idea for AI teams that need labelled training data with documented, verifiable quality."
+  - question: "What is the status of The Data Labelers?"
+    answer: "Parked."
 ---
 
-# The Data Labelers
+**Training data for AI teams, with proof of quality.**
 
-**Training data you can trust — with proof.**
+## What it is
 
-Most AI teams don't know how good their training data actually is. The Data Labelers solves that with validated annotation infrastructure, a complete audit trail, and documentation ready for EU AI Act compliance.
+A service idea for AI teams that need labelled training data with documented, verifiable quality.
 
-## How it works
+## Who it is for
 
-- **Multi-annotator validation** – minimum 3 independent annotators per data point
-- **Consensus scoring** – weighted expert precision per label
-- **Confidence scoring** – quantified certainty on every annotated item
-- **Domain escalation** – low-confidence cases escalated to domain expert
-- **Delivery within 72 hours**
+Teams that train or evaluate AI models.
 
-## For whom
+## How AI does the work
 
-AI/ML teams in legal tech, fintech, e-commerce, SaaS/NLP, and regulated industries that require documentation and compliance proof.
+Website and concept were built with AI assistants.
 
-## Compliance and security
+## Status: Parked
 
-- GDPR-compliant, EU-based servers
-- SOC 2 certification in progress
-- EU AI Act documentation included
-- NDA per project, strict data isolation
+Parked.
 
-## Pilot Q2 2026
-
-3 pilot slots available for teams looking to secure their data quality ahead of their next model training run.
+Part of [The Unnamed Roads](/), an AI-native venture studio. See [how the studio starts and tests ideas with AI](/how-it-works/) or [all projects](/projects/).

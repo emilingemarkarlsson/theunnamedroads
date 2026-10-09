@@ -1,8 +1,7 @@
 ---
-title: AI Automation Fabric
-description: Card-first automation studio for small teams — describe a workflow, get a clear estimate, and receive production-ready automation with AI handover docs.
+title: "AI Automation Fabric"
+description: "AI Automation Fabric tests a simple offer for small teams: describe a workflow, get a fixed estimate, and receive a working automation with documentation."
 url: https://tur-aaf.vercel.app
-canonicalUrl: https://tur-aaf.vercel.app
 startDate: 2026-06-16
 tags:
   - automation
@@ -12,35 +11,36 @@ tags:
   - saas
 homepage:
   featured: true
-  order: 8
-  statusLabel: Monitor
+  order: 6
+  statusLabel: Testing
   statusTone: building
-  focus: >-
-    Card-first automation studio for small teams
-  summary: >-
-    Describe a workflow, get a clear estimate, and receive production-ready automation with AI handover docs — in the SEO/dev attention set. Canonical URL is the Vercel preview until a custom domain is assigned.
-  metricLabel: Site
-  metricValue: Live
-  tag: SaaS
+  summary: "Describe a workflow, get a clear price, receive a working automation."
+  tag: "B2B software"
   href: https://tur-aaf.vercel.app
-  ctaLabel: Open site
+  ctaLabel: "Visit the site"
+faq:
+  - question: "What is AI Automation Fabric?"
+    answer: "An automation service for small teams. You describe a repetitive workflow, get a clear estimate, and receive a finished automation with handover documentation."
+  - question: "What is the status of AI Automation Fabric?"
+    answer: "Testing. The landing page is live; the offer is being validated."
 ---
 
-# AI Automation Fabric
+**Describe a workflow, get a clear price, receive a working automation.**
 
-**Status:** Monitor · **Canonical URL:** tur-aaf.vercel.app (custom domain not yet assigned)
+## What it is
 
-**Card-first automation studio for small teams.**
+An automation service for small teams. You describe a repetitive workflow, get a clear estimate, and receive a finished automation with handover documentation.
 
-AI Automation Fabric helps small teams design and launch automation in a practical, implementation-first flow. Start by describing the workflow, then get a clear estimate and a production-ready delivery package.
+## Who it is for
 
-## What You Get
+Small companies and teams with manual, repetitive work.
 
-- **Workflow definition** - describe the process in a card-first format
-- **Clear estimate** - understand effort and delivery scope up front
-- **Production-ready automation** - launch-ready implementation handover
-- **AI handover docs** - documentation your team can operate and iterate on internally
+## How AI does the work
 
-## Why It Matters
+The automations themselves are designed and built mostly by AI, with a human checking and delivering them.
 
-Most teams can identify repetitive work but get stuck translating ideas into reliable operations. AI Automation Fabric closes that gap with structure, estimation, and ready-to-run implementation support.
+## Status: Testing
+
+Testing. The landing page is live; the offer is being validated.
+
+Part of [The Unnamed Roads](/), an AI-native venture studio. See [how the studio starts and tests ideas with AI](/how-it-works/) or [all projects](/projects/).

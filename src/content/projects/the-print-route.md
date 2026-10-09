@@ -1,8 +1,7 @@
 ---
-title: The Print Route
-description: Webhook-to-doorstep print routing for retailers and local providers — automated order intake, SLA-based production workflow, and synced delivery tracking.
+title: "The Print Route"
+description: "The Print Route routed online print orders to local print providers automatically. Parked until a retailer pilot shows real demand."
 url: https://theprintroute.com
-canonicalUrl: https://theprintroute.com
 startDate: 2025-01-15
 tags:
   - print-logistics
@@ -12,53 +11,37 @@ tags:
   - logistics
   - gdpr
 homepage:
-  featured: true
-  order: 10
+  featured: false
+  order: 20
   statusLabel: Parked
   statusTone: exploring
-  statusDotColor: bg-slate-500
-  animateDot: false
-  focus: >-
-    Webhook-to-doorstep print routing
-  summary: >-
-    Two-sided routing — Parked until a single retailer pilot proves pull. Marketing site remains live; product not actively developed.
-  metricLabel: Mode
-  metricValue: Parked
-  tag: Print
-  href: https://theprintroute.com/
-  ctaLabel: View site (parked)
+  summary: "Routes online print orders to local print shops automatically."
+  tag: "Print"
+  href: https://theprintroute.com
+  ctaLabel: "Visit the site"
+faq:
+  - question: "What is The Print Route?"
+    answer: "A service that takes print orders from online stores and routes them automatically to a local print provider, with delivery to the customer’s door."
+  - question: "What is the status of The Print Route?"
+    answer: "Parked. The website is still up, but the product is not being developed."
 ---
 
-# The Print Route
+**Routes online print orders to local print shops automatically.**
 
-**Status:** Parked · **Site:** theprintroute.com (marketing site live; product not actively developed)
+## What it is
 
-**From webhook to doorstep.**
+A service that takes print orders from online stores and routes them automatically to a local print provider, with delivery to the customer’s door.
 
-The Print Route is a two-sided SaaS platform that connects retailers and e-commerce businesses with a network of local print providers. Orders flow in via API or webhook – providers receive structured jobs, follow an SLA-based production workflow, and sync tracking automatically back to the customer.
+## Who it is for
 
-## For Retailers
+Online retailers and local print shops.
 
-Send print orders programmatically and get fulfilment handled end-to-end:
+## How AI does the work
 
-- Submit requirements (file, format, quantity, delivery address) via webhook or portal
-- The platform analyzes geo-proximity, format compatibility, and provider pricing
-- Automatically routes to the optimal provider in the network
-- Single tracking update syncs back to your system when shipped
+Built with AI coding assistants by one person.
 
-## For Print Providers
+## Status: Parked
 
-A structured inbox and workflow replacing ad hoc emails and manual coordination:
+Parked. The website is still up, but the product is not being developed.
 
-- **Accept** – receive structured, standardized print jobs
-- **Produce** – clear SLA steps with file delivery per order
-- **Ship** – one tracking update syncs automatically back to the retailer
-
-Onboarding: define production capabilities (formats, countries, materials), set pricing, run a test order.
-
-## Platform
-
-- Provider portal: [app.theprintroute.com](https://app.theprintroute.com)
-- GDPR-compliant, EU-based data handling
-- Admin dashboard for managing customers, orders, and revenue
-- API-first integration for retailers
+Part of [The Unnamed Roads](/), an AI-native venture studio. See [how the studio starts and tests ideas with AI](/how-it-works/) or [all projects](/projects/).

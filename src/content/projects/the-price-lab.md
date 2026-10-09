@@ -1,6 +1,6 @@
 ---
-title: The Price Lab
-description: Professional price tags for your store. Done in five minutes. No printer, no stress — just clean price tags with direct delivery.
+title: "The Price Lab"
+description: "The Price Lab made clean price tags for small shops in minutes, with delivery. Parked: no clear advantage over existing tools."
 url: https://tur-thepricelab.vercel.app
 startDate: 2026-04-01
 tags:
@@ -11,41 +11,36 @@ tags:
   - saas
 homepage:
   featured: false
-  order: 11
+  order: 21
   statusLabel: Parked
   statusTone: exploring
-  statusDotColor: bg-slate-500
-  animateDot: false
-  focus: >-
-    Retail price tags
-  summary: >-
-    Commodity print workflow — parked; no differentiated agent-native wedge yet.
-  metricLabel: Mode
-  metricValue: Parked
-  tag: SaaS
+  summary: "Professional price tags for small shops in five minutes."
+  tag: "Retail"
   href: https://tur-thepricelab.vercel.app
+  ctaLabel: "Visit the site"
+faq:
+  - question: "What is The Price Lab?"
+    answer: "A simple tool for small shops to create professional price tags and get them delivered."
+  - question: "What is the status of The Price Lab?"
+    answer: "Parked. The test did not show a clear enough advantage to continue."
 ---
 
-# The Price Lab
+**Professional price tags for small shops in five minutes.**
 
-**Snygga prisskyltar till din butik. Klart pa fem minuter.**
+## What it is
 
-Ingen printer. Ingen stress. The Price Lab lar butiker bestalla professionella prisskyltar med ett konsekvent visuellt uttryck – direkt levererade till butiken.
+A simple tool for small shops to create professional price tags and get them delivered.
 
-## Sa fungerar det
+## Who it is for
 
-1. **Valj produkter** – blaeddra eller sok bland dina varor
-2. **Ange pris** – snabb ifyllning, ingen designkompetens kravs
-3. **Bestall** – prisskyltar trycks och levereras direkt till butiken
+Small retail stores.
 
-Hela processen tar fem minuter. Ingen skrivare, inga mallar att fixa, ingen stress.
+## How AI does the work
 
-## For vem
+Built with AI coding assistants by one person.
 
-Butiksoagare och butikschefer som vill ha ett professionellt och konsekvent uttryck pa sina prisskyltar – utan att bygga intern printinfrastruktur.
+## Status: Parked
 
-Dagligvaruhandel, blomsterbutiker, klader, sport – alla som behoever prisskyltar regelbundet.
+Parked. The test did not show a clear enough advantage to continue.
 
-## Status
-
-Pre-launch. Anmael intresse via sajten for att fa tidig access nar tjansen lanseras.
+Part of [The Unnamed Roads](/), an AI-native venture studio. See [how the studio starts and tests ideas with AI](/how-it-works/) or [all projects](/projects/).

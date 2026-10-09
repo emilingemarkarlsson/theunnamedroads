@@ -1,6 +1,6 @@
 ---
-title: Post-Human Venture Engine
-description: Methodology and tooling that lets single operators achieve portfolio-scale output through AI symbiosis
+title: "Post-Human Venture Engine"
+description: "Post-Human Venture Engine was the first write-up of the studio method: one person running many ventures with AI. Replaced by the How it works guide."
 startDate: 2024-05-01
 tags:
   - methodology
@@ -9,38 +9,34 @@ tags:
   - ai-native
 homepage:
   featured: false
-  order: 20
+  order: 32
   statusLabel: Parked
   statusTone: exploring
-  statusDotColor: bg-slate-500
-  animateDot: false
-  focus: >-
-    Legacy methodology brand
-  summary: >-
-    Narrative merged into Company OS — kept as archive page only.
-  metricLabel: Mode
-  metricValue: Parked
-  tag: Studio
+  summary: "Early write-up of the method for running many ventures as one person with AI."
+  tag: "Studio tools"
+faq:
+  - question: "What is Post-Human Venture Engine?"
+    answer: "The first written version of the studio’s method: how one person can run several ventures by letting AI do most of the work. It has been replaced by the How it works guide."
+  - question: "What is the status of Post-Human Venture Engine?"
+    answer: "Parked. See How it works for the current method."
 ---
 
-# Post-Human Venture Engine
+**Early write-up of the method for running many ventures as one person with AI.**
 
-> **Part of our [Auto Agent Workflows](/insights/auto-agent-workflows) pillar** — This project demonstrates how autonomous agents enable portfolio-scale operations for solo operators.
+## What it is
 
-The Post-Human Venture Engine is the operating system behind The Unnamed Roads. It merges battle-tested playbooks, custom agents, and autonomous build pipelines so one operator can deploy multiple ventures in parallel.
+The first written version of the studio’s method: how one person can run several ventures by letting AI do most of the work. It has been replaced by the <a href="/how-it-works/">How it works</a> guide.
 
-## Core Components
+## Who it is for
 
-1. **Signal Mesh** – agent clusters that monitor culture, capital, and technology shifts to source asymmetric opportunities.
-2. **Assembly Lines** – self-healing workflows covering research, code, content, design, and distribution.
-3. **Proof Cycles** – 12-week experiment loops that decide whether to scale, archive, or spin off each concept.
+Founders curious about running a studio alone with AI.
 
-## Why It Matters
+## How AI does the work
 
-Traditional studios rely on headcount and capital. The Engine abstracts both into software, letting us spin up products, services, and narratives without requesting permission or raising funds.
+Written and refined with AI assistants.
 
-## Current Focus
+## Status: Parked
 
-- Harden the automation primitives for new operators.
-- Expand the intelligence graph feeding every experiment.
-- Publish public-facing tooling so others can clone the Engine inside their own organizations.
+Parked. See How it works for the current method.
+
+Part of [The Unnamed Roads](/), an AI-native venture studio. See [how the studio starts and tests ideas with AI](/how-it-works/) or [all projects](/projects/).

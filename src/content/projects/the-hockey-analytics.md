@@ -1,6 +1,6 @@
 ---
-title: The Hockey Analytics
-description: Making Hockey Data Human. Independent hockey analytics research surfacing proactive insights for scouts, coaches, and analysts before anyone else sees them.
+title: "The Hockey Analytics"
+description: "The Hockey Analytics turns hockey data into short, proactive insights for scouts, coaches and club decision-makers. Built and run with AI by The Unnamed Roads."
 url: https://www.thehockeyanalytics.com
 startDate: 2024-01-15
 tags:
@@ -12,59 +12,35 @@ tags:
 homepage:
   featured: true
   order: 1
-  statusLabel: Focus
+  statusLabel: Live
   statusTone: active
-  statusDotColor: bg-emerald-500
-  focus: >-
-    Club intelligence digestible by coaches and agents
-  summary: >-
-    Proactive hockey analyses before dashboards — built for mobile review and assistant handoff.
-  metricLabel: Offer
-  metricValue: Club Pack beta
-  tag: Sports
-  href: https://www.thehockeyanalytics.com/
+  summary: "Hockey analytics for clubs: insights delivered before anyone asks."
+  tag: "Sports"
+  href: https://www.thehockeyanalytics.com
+  ctaLabel: "Visit The Hockey Analytics"
 faq:
   - question: "What is The Hockey Analytics?"
-    answer: "Independent hockey analytics research from Stockholm. THA scans NHL data proactively — insights surface before scouts and coaches ask, not after they open a dashboard."
-  - question: "Who is it for?"
-    answer: "Scouts, coaches, analysts and decision-makers who want proactive intelligence for player development, roster construction, trade value and game strategy — reviewed on mobile or handed to an assistant."
-  - question: "How do you decide what insights to ship?"
-    answer: "Focus contract: one claim surface, one redistribution asset, one falsifiable outcome per cycle. Agents draft research; publish and outbound require explicit human Approve — no autonomous sends."
-  - question: "What proof is in motion?"
-    answer: "Status Focus — Club Pack beta. Weekly research reports are live; Premium dashboards and AI player profiles roll out in measured steps. No vanity traction claims."
+    answer: "The Hockey Analytics scans hockey data continuously and turns patterns into short, readable insights: player development, team performance, matchups and roster questions. Instead of waiting for someone to open a dashboard, the insight arrives first."
+  - question: "What is the status of The Hockey Analytics?"
+    answer: "Live. Weekly reports and a club pack are being tested with Swedish clubs."
 ---
 
-# The Hockey Analytics
+**Hockey analytics for clubs: insights delivered before anyone asks.**
 
-**Making Hockey Data Human.**
+## What it is
 
-Independent hockey analytics research and consulting from Stockholm. The core idea: continuously scan hockey data to detect patterns, anomalies, and opportunities proactively — surfacing insights before anyone else sees them.
+The Hockey Analytics scans hockey data continuously and turns patterns into short, readable insights: player development, team performance, matchups and roster questions. Instead of waiting for someone to open a dashboard, the insight arrives first.
 
-## What Makes It Different
+## Who it is for
 
-Most analytics tools are reactive. You ask a question, you get an answer. THA flips that — insights arrive unsolicited, based on ongoing pattern scanning across NHL data. Scouts and coaches get intelligence they didn't know to ask for.
+Scouts, coaches, analysts and club decision-makers, starting with Swedish clubs (SHL and HockeyAllsvenskan).
 
-## What You Get
+## How AI does the work
 
-- **Weekly research reports** – proactive pattern detection delivered to your inbox
-- **Player development & scouting insights** – data-driven player profiles and progression tracking
-- **Team performance analytics** – tactical breakdowns, matchup analysis, roster construction
-- **Trade value assessments** – AI-powered valuation across positions and contracts
-- **Interactive dashboards** (Premium) – live data exploration and custom filters
-- **AI-powered player profiles** (Premium) – deep dives beyond box scores
+Data collection, analysis drafts, reports and the website are produced with AI agents and automated pipelines. A human with hockey knowledge reviews what goes out.
 
-## Pricing
+## Status: Live
 
-- **Free** – weekly reports, basic analytics, newsletter access
-- **Premium – 499 SEK/mån** – full research archive, interactive dashboards, AI profiles, trade insights, priority support
+Live. Weekly reports and a club pack are being tested with Swedish clubs.
 
-## For Whom
-
-Scouts, coaches, analysts, teams, and decision-makers who want a data edge in player development, roster construction, and game strategy.
-
-**Location:** Stockholm, Sweden · contact@thehockeyanalytics.com
-
-## Field Notes
-
-- [12-Week Experimentation Framework](/posts/12-week-experiment-framework) — the studio method behind this Focus validation contract
-- [Field Note: Three Focus bets](/posts/field-note-three-focus-bets-2026-08-10) — why THA runs as one of the studio's three Focus bets (personal note by Emil Ingemar Karlsson)
+Part of [The Unnamed Roads](/), an AI-native venture studio. See [how the studio starts and tests ideas with AI](/how-it-works/) or [all projects](/projects/).

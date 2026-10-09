@@ -46,21 +46,13 @@ export default defineConfig({
     },
     '/tags/public': {
       status: 301,
-      destination: '/posts/why-anonymity-accelerates-innovation'
+      destination: '/about/'
     },
     '/tags/nhl-analytics': {
       status: 301,
       destination: '/projects/the-hockey-analytics'
-    },
-    // GSC 404 cluster — dead post slugs (#53)
-    '/posts/solo-founder-mental-health-practices-2026-03-25': {
-      status: 301,
-      destination: '/posts/solo-founder-mental-health-practices-2026-04-08'
-    },
-    '/posts/digital-nomad-infrastructure-setup-2026-04-30': {
-      status: 301,
-      destination: '/posts/'
     }
+    // Removed/duplicate post slugs: real 301s live in vercel.json
   },
   integrations: [
     tailwind(),

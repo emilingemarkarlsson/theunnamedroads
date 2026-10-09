@@ -1,0 +1,284 @@
+---
+import NewsletterSignup from '@/components/NewsletterSignup.astro'
+import ProjectGrid from '@/components/ProjectGrid.astro'
+import PageLayout from '@/layouts/PageLayout.astro'
+import config from '@/theme.config'
+import { getPosts } from '@/util/posts'
+import { getProjects, getStatus, projectItemList } from '@/util/projects'
+
+const projects = await getProjects()
+const count = (s: string) => projects.filter((p) => getStatus(p) === s).length
+const live = count('Live')
+const testing = count('Testing')
+const parked = count('Parked')
+const latestPosts = (await getPosts()).slice(0, 3)
+
+const faq = [
+  {
+    question: 'What is The Unnamed Roads?',
+    answer:
+      'The Unnamed Roads is an AI-native venture studio based in Stockholm, Sweden. It works like a new kind of accelerator: AI does almost all of the work of researching, building, launching and testing new companies, and one founder, Emil Ingemar Karlsson, decides which ideas to pursue and approves everything that goes public.'
+  },
+  {
+    question: 'How do you start a company with AI?',
+    answer:
+      'Start with one clear problem for one group of people. Use AI to research the market and competitors, draft the offer, and build a simple website or prototype in days instead of months. Put it in front of real people, measure whether they sign up, pay or come back, and use AI to analyse the results. Keep what works, change what does not, and park the rest. The How it works guide describes each step in detail.'
+  },
+  {
+    question: 'How can I test a startup idea with AI?',
+    answer:
+      'Write down what has to be true for the idea to work, then let AI build the smallest possible test: a landing page, a prototype or a manual service. Decide in advance what result counts as success (for example sign-ups, replies or payments), run the test for a fixed period, and let AI help you read the numbers. A failed test that took a week is a cheap lesson.'
+  },
+  {
+    question: 'What is an AI venture studio?',
+    answer:
+      'A venture studio starts its own companies instead of investing in other people\u2019s. An AI venture studio does this with AI doing most of the work that would normally need a team: research, coding, design, writing, data analysis and operations. That makes it possible for one person to start and test many companies in parallel.'
+  },
+  {
+    question: 'How is this different from a startup accelerator?',
+    answer:
+      'A traditional accelerator invests in outside founders and supports them with mentoring and a programme. The Unnamed Roads builds its own companies, uses AI instead of a large team, and publishes every project with an honest status: Live, Testing or Parked.'
+  },
+  {
+    question: 'Does AI really do almost all of the work?',
+    answer:
+      'Yes, for most of the hands-on work: market research, code, websites, copy, analysis and routine operations are produced by AI tools and agents. A human still chooses which problems are worth solving, talks to customers, checks the quality, and must approve anything that is published, deployed or sent to someone outside the studio.'
+  }
+]
+
+const frontmatter = {
+  title: 'AI Venture Studio: Start and Test New Companies with AI',
+  description:
+    'A new kind of accelerator: an AI-native venture studio where AI does almost all the work of starting and testing new companies. See every project and how it works.',
+  activeHeaderLink: 'Home',
+  fullBleed: true,
+  faq,
+  itemList: projectItemList(projects, config.site)
+}
+
+const steps = [
+  {
+    title: 'Pick one real problem',
+    text: 'AI scans markets, forums, search data and competitors. We pick a problem that a specific group of people clearly has.'
+  },
+  {
+    title: 'Build a test in days',
+    text: 'AI writes the code, the copy and the design for the smallest thing that can be tested: a landing page, a prototype or a simple tool.'
+  },
+  {
+    title: 'Measure real demand',
+    text: 'The test goes live. We decide in advance what success looks like and let the numbers, not opinions, decide.'
+  },
+  {
+    title: 'Keep, change or park',
+    text: 'Projects that work keep growing. The rest are parked in public, so the lessons are not lost and the next idea starts faster.'
+  }
+]
+---
+
+<PageLayout {frontmatter}>
+  <div class="homepage-shell space-y-20">
+    <section class="section-shell mx-auto max-w-4xl space-y-6 pt-4 text-center">
+      <p class="section-eyebrow">A new kind of accelerator</p>
+      <h1 class="hero-headline">
+        The AI venture studio: start and test new companies with AI
+      </h1>
+      <p class="hero-lead mx-auto max-w-3xl">
+        The Unnamed Roads is an AI-native venture studio. Instead of a team of
+        people, AI does almost all of the work: research, code, design, writing
+        and analysis. One founder chooses the ideas and approves what goes live.
+        Every company we start and every idea we test is listed here, with an
+        honest status.
+      </p>
+      <div class="hero-ctas justify-center">
+        <a href="#projects" class="btn-primary">See all projects</a>
+        <a href="/how-it-works/" class="btn-secondary">How it works</a>
+      </div>
+      <dl class="mx-auto grid max-w-3xl grid-cols-2 gap-4 pt-6 sm:grid-cols-4">
+        <div class="stat"><dt>Projects</dt><dd>{projects.length}</dd></div>
+        <div class="stat"><dt>Live</dt><dd>{live}</dd></div>
+        <div class="stat"><dt>Testing</dt><dd>{testing}</dd></div>
+        <div class="stat"><dt>Parked</dt><dd>{parked}</dd></div>
+      </dl>
+    </section>
+
+    <section class="section-shell space-y-8" aria-labelledby="how">
+      <div class="mx-auto max-w-3xl space-y-3 text-center">
+        <h2 id="how" class="section-title">How a company gets started here</h2>
+        <p class="section-lead">
+          The same four steps for every idea. AI makes each step fast and cheap,
+          so many ideas can be tested instead of betting everything on one.
+        </p>
+      </div>
+      <ol class="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+        {
+          steps.map((step, i) => (
+            <li class="step">
+              <span class="step-num">{i + 1}</span>
+              <h3 class="step-title">{step.title}</h3>
+              <p class="step-text">{step.text}</p>
+            </li>
+          ))
+        }
+      </ol>
+      <p class="text-center">
+        <a href="/how-it-works/" class="text-accent underline"
+          >Read the full guide: how to start a company with AI →</a
+        >
+      </p>
+    </section>
+
+    <section
+      id="projects"
+      class="section-shell scroll-mt-24 space-y-8"
+      aria-labelledby="projects-title"
+    >
+      <div class="mx-auto max-w-3xl space-y-3 text-center">
+        <h2 id="projects-title" class="section-title">All projects</h2>
+        <p class="section-lead">
+          Every company and idea the studio has started. <strong>Live</strong> means
+          real users can use it today, <strong>Testing</strong> means we are checking
+          if people want it, and <strong>Parked</strong> means it is paused.
+        </p>
+      </div>
+      <ProjectGrid {projects} />
+    </section>
+
+    <section
+      class="section-shell mx-auto max-w-4xl space-y-6"
+      aria-labelledby="why"
+    >
+      <h2 id="why" class="section-title text-center">
+        Why this is a new kind of accelerator
+      </h2>
+      <div class="grid gap-4 md:grid-cols-2">
+        <div class="compare">
+          <h3 class="compare-title">Traditional accelerator</h3>
+          <ul>
+            <li>Invests in outside founders</li>
+            <li>Months of building before the first real test</li>
+            <li>Needs a team for code, design, marketing and analysis</li>
+            <li>Few bets, large budgets per bet</li>
+          </ul>
+        </div>
+        <div class="compare compare--accent">
+          <h3 class="compare-title">AI venture studio</h3>
+          <ul>
+            <li>Starts and owns its own companies</li>
+            <li>A first test is live within days</li>
+            <li>AI does the code, design, marketing and analysis</li>
+            <li>Many small bets, cheap to test, honest status for each</li>
+          </ul>
+        </div>
+      </div>
+      <p class="text-center text-sm" style="color: var(--roads-text-muted)">
+        More detail: <a
+          class="text-accent underline"
+          href="/insights/agency-vs-venture-studio-vs-incubator/"
+          >agency vs venture studio vs incubator</a
+        >.
+      </p>
+    </section>
+
+    {
+      latestPosts.length > 0 && (
+        <section class="section-shell space-y-6" aria-labelledby="notes">
+          <div class="flex flex-wrap items-end justify-between gap-3">
+            <h2 id="notes" class="section-title">
+              Field Notes
+            </h2>
+            <a href="/posts/" class="text-accent underline">
+              All Field Notes →
+            </a>
+          </div>
+          <ul class="grid gap-4 md:grid-cols-3">
+            {latestPosts.map((post) => (
+              <li>
+                <a href={`/posts/${post.slug}/`} class="note-card">
+                  <span class="note-title">{post.data.title}</span>
+                  <span class="note-desc">{post.data.description}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
+
+    <section
+      class="section-shell mx-auto max-w-3xl space-y-6"
+      aria-labelledby="faq"
+    >
+      <h2 id="faq" class="section-title">Common questions</h2>
+      <dl class="space-y-6">
+        {
+          faq.map((item) => (
+            <div>
+              <dt class="font-semibold" style="color: var(--roads-text)">
+                {item.question}
+              </dt>
+              <dd class="mt-1" style="color: var(--roads-text-muted)">
+                {item.answer}
+              </dd>
+            </div>
+          ))
+        }
+      </dl>
+    </section>
+
+    <section class="mx-auto max-w-3xl">
+      <NewsletterSignup />
+      <p class="text-center" style="color: var(--roads-text-muted)">
+        Have an idea, a problem worth solving, or want to collaborate?
+        <a href="/contact/" class="text-accent underline">Get in touch</a>.
+      </p>
+    </section>
+  </div>
+</PageLayout>
+
+<style>
+  .stat {
+    @apply rounded-xl border px-4 py-3;
+    border-color: var(--roads-border);
+    background: var(--roads-surface);
+  }
+  .stat dt {
+    @apply text-xs uppercase tracking-wider;
+    color: var(--roads-text-soft);
+  }
+  .stat dd {
+    @apply text-3xl font-bold;
+    color: var(--roads-text);
+  }
+  .step,
+  .compare,
+  .note-card {
+    @apply flex h-full flex-col gap-2 rounded-2xl border p-5;
+    border-color: var(--roads-border);
+    background: var(--roads-surface);
+  }
+  .step-num {
+    @apply text-sm font-bold text-accent;
+  }
+  .step-title,
+  .compare-title,
+  .note-title {
+    @apply text-lg font-semibold;
+    color: var(--roads-text);
+  }
+  .step-text,
+  .note-desc,
+  .compare ul {
+    @apply text-sm leading-relaxed;
+    color: var(--roads-text-muted);
+  }
+  .compare ul {
+    @apply list-disc space-y-1 pl-5;
+  }
+  .compare--accent {
+    border-color: rgba(212, 160, 84, 0.35);
+  }
+  .note-card:hover .note-title {
+    @apply text-accent;
+  }
+</style>

@@ -1,8 +1,6 @@
 ---
-title: Signal Mesh
-description: >-
-  Governed ingestion of market, product and operator signals into Company OS —
-  so decisions start from real problems, not content calendars.
+title: "Signal Mesh"
+description: "Signal Mesh is an idea for a studio tool that gathers market and project signals and suggests at most three decisions per day. Parked at idea stage."
 startDate: 2026-08-12
 tags:
   - studio
@@ -11,27 +9,35 @@ tags:
   - operations
   - research
 homepage:
-  featured: true
-  order: 21
-  statusLabel: Concept
-  statusTone: building
-  statusDotColor: bg-amber-500
-  animateDot: true
-  focus: Problem-first signal ingestion for the studio
-  summary: >-
-    Collect trends, competitor moves, inbox friction and portfolio metrics;
-    rank at most three decisions per day for the operator.
-  metricLabel: Output
-  metricValue: Daily signals
-  tag: Studio
+  featured: false
+  order: 25
+  statusLabel: Parked
+  statusTone: exploring
+  summary: "Collects signals and suggests at most three decisions a day."
+  tag: "Studio tools"
+faq:
+  - question: "What is Signal Mesh?"
+    answer: "An idea for a tool that collects signals (trends, competitors, inbox, project numbers) and turns them into at most three suggested decisions per day."
+  - question: "What is the status of Signal Mesh?"
+    answer: "Parked at idea stage."
 ---
 
-# Signal Mesh
+**Collects signals and suggests at most three decisions a day.**
 
-**The problem:** Operators drown in feeds but starve for *decision-grade* signals tied to active Focus bets.
+## What it is
 
-**The wedge:** A governed mesh that ingests PostHog, SERP shifts, support/inbox labels and lightweight web research — then surfaces **≤3 mobile decisions** with evidence links. No autonomous action.
+An idea for a tool that collects signals (trends, competitors, inbox, project numbers) and turns them into at most three suggested decisions per day.
 
-**Agent-native angle:** Assistants read ranked signals and draft decision memos; humans approve before anything becomes work.
+## Who it is for
 
-**Next proof:** One Focus bet (THA or Parental) with a weekly signal digest stored in Company OS memory.
+Founders running several projects at once.
+
+## How AI does the work
+
+Would be built and run by AI agents.
+
+## Status: Parked
+
+Parked at idea stage.
+
+Part of [The Unnamed Roads](/), an AI-native venture studio. See [how the studio starts and tests ideas with AI](/how-it-works/) or [all projects](/projects/).

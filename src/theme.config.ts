@@ -4,27 +4,20 @@ export default defineThemeConfig({
   site: 'https://www.theunnamedroads.com',
   title: 'The Unnamed Roads',
   description:
-    'Expedition studio — one developer, unnamed roads. AI carries the pack; human holds the compass. Field Notes receipts from building in public.',
+    'An AI-native venture studio: a new kind of accelerator where AI does almost all of the work of starting, building and testing new companies. One founder in Stockholm, every project in the open.',
   author: 'The Unnamed Roads',
   navbarItems: [
     { label: 'Projects', href: '/projects' },
+    { label: 'How it works', href: '/how-it-works' },
     { label: 'Field Notes', href: '/posts' },
     { label: 'About', href: '/about' },
-    { label: 'Insights', href: '/insights' },
-    {
-      label: 'More',
-      children: [
-        { label: 'Stack', href: '/stack' },
-        { label: 'Tools', href: '/tools' },
-        { label: 'Agents', href: '/agents' }
-      ]
-    },
     { label: 'Contact', href: '/contact' }
   ],
   footerNavItems: [
+    { label: 'Insights', href: '/insights' },
     { label: 'Stack', href: '/stack' },
     { label: 'Tools', href: '/tools' },
-    { label: 'Contact', href: '/contact' },
+    { label: 'Agents', href: '/agents' },
     { label: 'For assistants', href: '/for-assistants' }
   ],
   footerItems: [

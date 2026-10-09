@@ -1,6 +1,6 @@
 ---
-title: Baby Sellpy
-description: Prototype for helping families decide what to sell, keep, and price in second-hand baby marketplaces.
+title: "Baby Sellpy"
+description: "Baby Sellpy is an idea for helping families decide which baby items to sell, keep and how to price them second-hand. Parked."
 startDate: 2026-07-15
 tags:
   - family
@@ -8,20 +8,34 @@ tags:
   - pricing
 homepage:
   featured: false
-  order: 15
+  order: 27
   statusLabel: Parked
   statusTone: exploring
-  statusDotColor: bg-slate-500
-  animateDot: false
-  focus: >-
-    Second-hand baby pricing
-  summary: >-
-    Crowded marketplace problem — parked.
-  metricLabel: Mode
-  metricValue: Parked
-  tag: Family
+  summary: "Helps families decide what baby items to sell, keep or price."
+  tag: "Family"
+faq:
+  - question: "What is Baby Sellpy?"
+    answer: "An idea for helping families decide which baby items to sell or keep, and what price to ask second-hand."
+  - question: "What is the status of Baby Sellpy?"
+    answer: "Parked at idea stage."
 ---
 
-# Baby Sellpy
+**Helps families decide what baby items to sell, keep or price.**
 
-Idea-stage concept for improving second-hand resale decisions for parents.
+## What it is
+
+An idea for helping families decide which baby items to sell or keep, and what price to ask second-hand.
+
+## Who it is for
+
+Families with outgrown baby gear.
+
+## How AI does the work
+
+A prototype was built with AI coding assistants.
+
+## Status: Parked
+
+Parked at idea stage.
+
+Part of [The Unnamed Roads](/), an AI-native venture studio. See [how the studio starts and tests ideas with AI](/how-it-works/) or [all projects](/projects/).

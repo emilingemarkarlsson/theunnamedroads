@@ -1,8 +1,6 @@
 ---
-title: Operator Context
-description: >-
-  MCP-native portfolio context so ChatGPT, Claude and mobile clients can read
-  Focus status, draft decisions and route approvals — without autonomous execution.
+title: "Operator Context"
+description: "Operator Context is an idea for giving AI assistants safe, logged access to the state of every studio project. Parked at idea stage."
 startDate: 2026-08-12
 tags:
   - studio
@@ -11,27 +9,35 @@ tags:
   - governance
   - mobile
 homepage:
-  featured: true
-  order: 22
-  statusLabel: Concept
-  statusTone: building
-  statusDotColor: bg-amber-500
-  animateDot: true
-  focus: Assistant-connectable Company OS surface
-  summary: >-
-    Scoped read/write for agents: portfolio state, pending approvals, validation
-    contracts — every tool call audited under MeshGuard policy.
-  metricLabel: Mode
-  metricValue: Concept
-  tag: Studio
+  featured: false
+  order: 26
+  statusLabel: Parked
+  statusTone: exploring
+  summary: "Lets AI assistants read the state of every project safely."
+  tag: "Studio tools"
+faq:
+  - question: "What is Operator Context?"
+    answer: "An idea for giving AI assistants safe, logged access to project status, pending decisions and experiments, so they can help without guessing."
+  - question: "What is the status of Operator Context?"
+    answer: "Parked at idea stage."
 ---
 
-# Operator Context
+**Lets AI assistants read the state of every project safely.**
 
-**The problem:** Founders live in assistants on phone and desktop, but portfolio state still lives in scattered SaaS tabs.
+## What it is
 
-**The wedge:** A stable Operator API + MCP tools that expose **read-mostly** context (Focus bets, signals, decision queue) and **write-only-through-approval** actions (defer, approve, annotate lesson).
+An idea for giving AI assistants safe, logged access to project status, pending decisions and experiments, so they can help without guessing.
 
-**Non-goals:** Autonomous sends, deploys, or policy changes from an assistant.
+## Who it is for
 
-**Depends on:** TUR Company OS control plane, MeshGuard permission model, Signal Mesh ranked inputs.
+Founders who work with AI assistants every day.
+
+## How AI does the work
+
+Would be built with AI coding assistants.
+
+## Status: Parked
+
+Parked at idea stage.
+
+Part of [The Unnamed Roads](/), an AI-native venture studio. See [how the studio starts and tests ideas with AI](/how-it-works/) or [all projects](/projects/).

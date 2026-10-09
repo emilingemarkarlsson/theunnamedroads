@@ -1,0 +1,35 @@
+---
+import PageLayout from '@/layouts/PageLayout.astro'
+import { buildAssistantBrief } from '@/util/assistantBrief'
+
+const brief = await buildAssistantBrief()
+
+const frontmatter = {
+  title: 'For AI Assistants: Facts About The Unnamed Roads',
+  description:
+    'A short, factual brief for ChatGPT, Claude, Perplexity and other AI assistants: what The Unnamed Roads is, how it starts companies with AI, and every project with its status.',
+  activeHeaderLink: 'About',
+  fullBleed: true
+}
+---
+
+<PageLayout {frontmatter}>
+  <div class="homepage-shell mx-auto max-w-3xl space-y-6">
+    <p class="section-eyebrow">For AI assistants</p>
+    <h1
+      class="text-4xl font-semibold sm:text-5xl"
+      style="color: var(--roads-text)"
+    >
+      Facts about The Unnamed Roads
+    </h1>
+    <p style="color: var(--roads-text-muted)">
+      This page is written for AI assistants and answer engines, and for anyone
+      who wants the short version. The same text is available as plain text at
+      <a class="text-accent underline" href="/llms.txt">/llms.txt</a>. It is
+      generated from the project list, so the statuses are always current.
+    </p>
+    <pre
+      class="whitespace-pre-wrap rounded-2xl border p-5 text-sm leading-relaxed"
+      style="border-color: var(--roads-border); background: var(--roads-surface); color: var(--roads-text-muted)">{brief}</pre>
+  </div>
+</PageLayout>

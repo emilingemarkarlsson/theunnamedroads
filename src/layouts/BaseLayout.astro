@@ -56,6 +56,11 @@ export interface Props {
     project?: ProjectJsonLdInput
     /** ContactPage schema for /contact/ */
     contactPage?: boolean
+    /** ItemList schema (e.g. the project portfolio) */
+    itemList?: {
+      name: string
+      items: Array<{ name: string; url: string; description?: string }>
+    }
   }>
 }
 
@@ -80,7 +85,8 @@ const {
     faq,
     service,
     project,
-    contactPage
+    contactPage,
+    itemList
   }
 } = Astro.props
 
@@ -103,7 +109,10 @@ const openGraphImageUrl = new URL(
 const organizationId = `${config.site}#organization`
 const websiteId = `${config.site}#website`
 const webPageId = `${canonicalURL}#webpage`
-const sameAsProfiles = ['https://x.com/unnamedroads']
+// Only verified profiles. The studio has no X/Twitter account, so none is listed.
+const sameAsProfiles = [
+  'https://github.com/emilingemarkarlsson/theunnamedroads'
+]
 
 const organizationJsonLd = {
   '@type': 'Organization',
@@ -114,6 +123,14 @@ const organizationJsonLd = {
   logo: `${config.site}/favicon-tur.svg`,
   sameAs: sameAsProfiles,
   founder: { '@id': `${config.site}#founder` },
+  foundingLocation: { '@type': 'Place', name: 'Stockholm, Sweden' },
+  knowsAbout: [
+    'AI venture studio',
+    'Starting a company with AI',
+    'Startup idea validation',
+    'AI-built MVPs',
+    'Solo founder operations'
+  ],
   contactPoint: [
     {
       '@type': 'ContactPoint',
@@ -141,23 +158,24 @@ const websiteJsonLd = {
 }
 
 const pathname = Astro.url.pathname
-const isHomePage = pathname === '/' || pathname === ''
 const isAgentsPage = pathname === '/agents' || pathname === '/agents/'
 
-const founderPersonJsonLd = isHomePage
-  ? {
-      '@type': 'Person',
-      '@id': `${config.site}#founder`,
-      name: 'Emil Ingemar Karlsson',
-      jobTitle: 'Operator',
-      worksFor: { '@id': organizationId },
-      homeLocation: {
-        '@type': 'Place',
-        name: 'Stockholm, Sweden'
-      },
-      url: 'https://emilingemarkarlsson.com/'
-    }
-  : null
+const founderPersonJsonLd = {
+  '@type': 'Person',
+  '@id': `${config.site}#founder`,
+  name: 'Emil Ingemar Karlsson',
+  jobTitle: 'Founder, The Unnamed Roads',
+  worksFor: { '@id': organizationId },
+  homeLocation: {
+    '@type': 'Place',
+    name: 'Stockholm, Sweden'
+  },
+  url: 'https://emilingemarkarlsson.com/',
+  sameAs: [
+    'https://emilingemarkarlsson.com/',
+    'https://github.com/emilingemarkarlsson'
+  ]
+}
 
 const webPageDateModified = dateModifiedValue?.toISOString() ?? publishedDateValue?.toISOString() ?? new Date().toISOString()
 
@@ -214,10 +232,7 @@ const articleJsonLd =
     headline: title,
     description,
     image: openGraphImageUrl,
-    author: {
-      '@type': 'Organization',
-      name: author
-    },
+    author: { '@id': `${config.site}#founder` },
     publisher: { '@id': organizationId },
     datePublished: publishedDateValue.toISOString(),
     dateModified: articleDateModified,
@@ -247,7 +262,23 @@ const jsonLdGraph: Record<string, unknown>[] = [
   webPageJsonLd,
   breadcrumbJsonLd
 ]
-if (founderPersonJsonLd) jsonLdGraph.push(founderPersonJsonLd)
+jsonLdGraph.push(founderPersonJsonLd)
+
+if (itemList?.items.length) {
+  jsonLdGraph.push({
+    '@type': 'ItemList',
+    '@id': `${canonicalURL}#itemlist`,
+    name: itemList.name,
+    numberOfItems: itemList.items.length,
+    itemListElement: itemList.items.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.name,
+      url: item.url,
+      ...(item.description && { description: item.description })
+    }))
+  })
+}
 if (articleJsonLd) jsonLdGraph.push(articleJsonLd)
 if (faqJsonLd) jsonLdGraph.push(faqJsonLd)
 
@@ -334,8 +365,6 @@ if (contactPageJsonLd) jsonLdGraph.push(contactPageJsonLd)
     <meta property="twitter:title" content={titleWithSuffix} />
     <meta property="twitter:description" content={ogDescription} />
     <meta property="twitter:image" content={openGraphImageUrl} />
-    <meta property="twitter:creator" content="@theunnamedroad" />
-    <meta property="twitter:site" content="@theunnamedroad" />
 
     {
       preloadFonts.map((font) => (

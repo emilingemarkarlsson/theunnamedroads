@@ -1,6 +1,6 @@
 ---
-title: TUR Travel Tools
-description: Travel-search capability experiments for AI assistants through MCP-compatible tools.
+title: "Travel Tools for AI assistants"
+description: "Travel Tools tested giving AI assistants direct access to flight, hotel and deal search through MCP. Parked."
 startDate: 2026-06-17
 tags:
   - saas
@@ -8,20 +8,34 @@ tags:
   - travel
 homepage:
   featured: false
-  order: 18
+  order: 31
   statusLabel: Parked
   statusTone: exploring
-  statusDotColor: bg-slate-500
-  animateDot: false
-  focus: >-
-    Travel MCP tools
-  summary: >-
-    Commoditized travel APIs — parked.
-  metricLabel: Mode
-  metricValue: Parked
-  tag: SaaS
+  summary: "Flight, hotel and deal search that AI assistants can use directly."
+  tag: "B2B software"
+faq:
+  - question: "What is Travel Tools for AI assistants?"
+    answer: "An experiment that gave AI assistants (via the MCP standard) tools to search flights, hotels and deals directly."
+  - question: "What is the status of Travel Tools for AI assistants?"
+    answer: "Parked."
 ---
 
-# TUR Travel Tools
+**Flight, hotel and deal search that AI assistants can use directly.**
 
-Capability-focused experiment for assistant-native travel search workflows.
+## What it is
+
+An experiment that gave AI assistants (via the MCP standard) tools to search flights, hotels and deals directly.
+
+## Who it is for
+
+People who plan trips with AI assistants.
+
+## How AI does the work
+
+Built with AI coding assistants.
+
+## Status: Parked
+
+Parked.
+
+Part of [The Unnamed Roads](/), an AI-native venture studio. See [how the studio starts and tests ideas with AI](/how-it-works/) or [all projects](/projects/).
