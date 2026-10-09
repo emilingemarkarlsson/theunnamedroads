@@ -293,6 +293,16 @@
       "source": "/projects/anonymous-venture-studio/",
       "destination": "/about/",
       "permanent": true
+    },
+    {
+      "source": "/projects/ai-automation-fabric",
+      "destination": "/projects/the-outcome-layer/",
+      "permanent": true
+    },
+    {
+      "source": "/projects/ai-automation-fabric/",
+      "destination": "/projects/the-outcome-layer/",
+      "permanent": true
     }
   ],
   "headers": [

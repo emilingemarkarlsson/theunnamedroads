@@ -13,7 +13,7 @@ tags:
 homepage:
   featured: false
   order: 22
-  statusLabel: Parked
+  statusLabel: Closed
   statusTone: exploring
   summary: "Training data for AI teams, with proof of quality."
   tag: "B2B software"
@@ -23,7 +23,7 @@ faq:
   - question: "What is The Data Labelers?"
     answer: "A service idea for AI teams that need labelled training data with documented, verifiable quality."
   - question: "What is the status of The Data Labelers?"
-    answer: "Parked."
+    answer: "Closed. No further work is planned; the page is kept as a record of what was tested."
 ---
 
 **Training data for AI teams, with proof of quality.**
@@ -40,8 +40,8 @@ Teams that train or evaluate AI models.
 
 Website and concept were built with AI assistants.
 
-## Status: Parked
+## Status: Closed
 
-Parked.
+Closed. No further work is planned; the page is kept as a record of what was tested.
 
 Part of [The Unnamed Roads](/), an AI-native venture studio. See [how the studio starts and tests ideas with AI](/how-it-works/) or [all projects](/projects/).

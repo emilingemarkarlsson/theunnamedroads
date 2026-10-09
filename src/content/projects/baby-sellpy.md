@@ -9,7 +9,7 @@ tags:
 homepage:
   featured: false
   order: 27
-  statusLabel: Parked
+  statusLabel: Closed
   statusTone: exploring
   summary: "Helps families decide what baby items to sell, keep or price."
   tag: "Family"
@@ -17,7 +17,7 @@ faq:
   - question: "What is Baby Sellpy?"
     answer: "An idea for helping families decide which baby items to sell or keep, and what price to ask second-hand."
   - question: "What is the status of Baby Sellpy?"
-    answer: "Parked at idea stage."
+    answer: "Closed. No further work is planned; the page is kept as a record of what was tested."
 ---
 
 **Helps families decide what baby items to sell, keep or price.**
@@ -34,8 +34,8 @@ Families with outgrown baby gear.
 
 A prototype was built with AI coding assistants.
 
-## Status: Parked
+## Status: Closed
 
-Parked at idea stage.
+Closed. No further work is planned; the page is kept as a record of what was tested.
 
 Part of [The Unnamed Roads](/), an AI-native venture studio. See [how the studio starts and tests ideas with AI](/how-it-works/) or [all projects](/projects/).
