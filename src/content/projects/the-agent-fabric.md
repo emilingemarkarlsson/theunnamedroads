@@ -1,8 +1,7 @@
 ---
-title: The Agent Fabric
-description: Distributed agent infrastructure for enterprise AI — sovereign, edge-ready agent runtime and orchestration narrative. Live on tur-theagentfabric.vercel.app; theagentfabric.com apex unregistered.
+title: "The Agent Fabric"
+description: "The Agent Fabric explores infrastructure for running AI agents inside companies: private, close to the data, and under the company’s own control."
 url: https://tur-theagentfabric.vercel.app/
-canonicalUrl: https://tur-theagentfabric.vercel.app/
 startDate: 2024-12-01
 tags:
   - enterprise-ai
@@ -13,131 +12,36 @@ tags:
   - edge-computing
 homepage:
   featured: true
-  order: 7
-  statusLabel: Monitor
-  statusTone: active
-  statusDotColor: bg-sky-500
-  focus: >-
-    Distributed agent infrastructure for enterprise AI
-  summary: >-
-    B2B surface on sovereign AI, edge nodes, and agent runtime — in the SEO/dev attention set. Canonical URL is the Vercel deployment; theagentfabric.com apex is unregistered.
-  metricLabel: Site
-  metricValue: Live on Vercel
-  tag: SaaS
+  order: 5
+  statusLabel: Testing
+  statusTone: building
+  summary: "Infrastructure for companies that want to run AI agents on their own terms."
+  tag: "B2B software"
   href: https://tur-theagentfabric.vercel.app/
-  ctaLabel: Open site
+  ctaLabel: "Visit the site"
+faq:
+  - question: "What is The Agent Fabric?"
+    answer: "A B2B concept for companies that want AI agents running on infrastructure they control, close to their own data, instead of sending everything to outside services."
+  - question: "What is the status of The Agent Fabric?"
+    answer: "Testing whether there is demand. A website is live on a temporary address."
 ---
 
-# The Agent Fabric
+**Infrastructure for companies that want to run AI agents on their own terms.**
 
-**Status:** Monitor · **Canonical URL:** [tur-theagentfabric.vercel.app](https://tur-theagentfabric.vercel.app/) (theagentfabric.com apex unregistered)
+## What it is
 
-**Orchestrating distributed intelligence across data centers, edge nodes, and IoT devices.**
+A B2B concept for companies that want AI agents running on infrastructure they control, close to their own data, instead of sending everything to outside services.
 
-> **Part of our [Auto Agent Workflows](/insights/auto-agent-workflows) pillar** — This project provides the infrastructure layer for deploying autonomous AI agents at scale. Field note: [MCP Explained](/posts/mcp-protocol-explained) documents how agents get tool access in this stack.
+## Who it is for
 
-The Agent Fabric provides the distributed, sovereign infrastructure layer that allows [post-human entrepreneurs](/posts/the-post-human-entrepreneur) to deploy AI agents inside enterprise systems—securely, locally, and at scale.
+Larger companies and IT teams that want to adopt AI agents but care about control and data location.
 
-## The Problem
+## How AI does the work
 
-AI automation fails at scale because it's:
+Positioning, research and the website were produced with AI assistants; the idea is being tested before any product is built.
 
-- Too centralized
-- Too API-dependent
-- Too cloud-only
-- Disconnected from real infrastructure
-- Unable to operate close to data, machines, and systems
+## Status: Testing
 
-To automate real operations, AI must be:
+Testing whether there is demand. A website is live on a temporary address.
 
-- Deployed locally and at the edge
-- Embedded in infrastructure
-- Distributed across environments
-- Connected to IT and OT systems
-- Governed, observable, and sovereign
-
-## Market Position
-
-The Agent Fabric operates at **Layer 2**—the infrastructure layer that sits beneath workflows and applications:
-
-- **Layer 4**: AI Interfaces & Assistants (chatbots, copilots)
-- **Layer 3**: Workflow Automation Platforms (n8n, Zapier, Make, Power Automate)
-- **Layer 2**: Agent Runtime & Orchestration ← **We operate here**
-- **Layer 1**: Distributed Agent Infrastructure (edge nodes, gateways, on-prem, hybrid, IT/OT integration)
-
-We sit beneath workflows and applications, inside the infrastructure layer. We do not compete on UI, templates, or no-code. We enable the substrate that makes large-scale AI automation possible.
-
-## What We Focus On
-
-The Agent Fabric is not an automation tool. It is the infrastructure layer automation depends on. We focus on:
-
-- Where agents run
-- Where data lives
-- Where decisions must be made locally
-- Where systems cannot rely on SaaS APIs
-- Where AI must be embedded, not bolted on
-
-## Architecture
-
-### Layered View
-
-**LAYER 4 — Applications & Workflows**  
-n8n · ERP · MES · Analytics · Dashboards
-
-**LAYER 3 — Agent Logic**  
-Planning · Reasoning · Policies · Tool usage (LLMs, rules engines, decision logic)
-
-**LAYER 2 — Agent Fabric (our domain)**  
-Distributed nodes · Edge agents · Gateways · Secure communication · Observability · Control planes
-
-**LAYER 1 — Infrastructure**  
-Factories · Vehicles · Energy systems · Servers · Networks · IoT devices · OT + IT environments
-
-Most companies build at Layer 4. Some experiment at Layer 3. Almost no one owns Layer 2. That is our position.
-
-## Privacy & Sovereignty
-
-You own and govern your agents entirely inside your infrastructure—no external control plane, no hidden data egress, and full offline/local execution where required.
-
-## Comparison: Workflow Platforms vs The Agent Fabric
-
-| Dimension | Workflow Platforms | The Agent Fabric |
-|-----------|-------------------|------------------|
-| Primary focus | Tasks & workflows | Infrastructure & execution |
-| Deployment | Cloud-first | On-prem, edge, hybrid |
-| Integration model | APIs | Nodes, gateways, local connectors |
-| AI role | Tool inside workflows | Native, distributed agents |
-| Scale | Logical scale | Physical + logical scale |
-| IT/OT | Limited | Core capability |
-| Sovereignty | Low | High |
-
-We do not replace these tools. We enable them to work at enterprise scale.
-
-## What We Enable
-
-- Deploy AI agents inside infrastructure
-- Connect agents across sites and environments
-- Keep data local while enabling global coordination
-- Run sovereign, offline/local-first when required
-- Automate operations, not just tasks
-- Prepare infrastructure for the next decade of AI
-- Operate securely, locally, and at scale
-
-## Why Now?
-
-AI automation is moving from:
-
-- Experiments → operations
-- Copilots → autonomous systems
-- SaaS → embedded infrastructure
-
-This shift needs a new foundational layer because:
-
-- Centralized AI does not scale operationally
-- APIs are not infrastructure
-- Autonomy requires proximity to systems
-- Sovereignty, privacy, and observability are non-negotiable
-
-## Positioning Statement
-
-**The Agent Fabric provides the distributed, sovereign infrastructure layer that allows AI agents to operate inside enterprise systems—securely, locally, and at scale.**
+Part of [The Unnamed Roads](/), an AI-native venture studio. See [how the studio starts and tests ideas with AI](/how-it-works/) or [all projects](/projects/).

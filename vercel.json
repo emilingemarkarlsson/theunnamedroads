@@ -4,14 +4,294 @@
   "redirects": [
     {
       "source": "/(.*)",
-      "has": [{ "type": "host", "value": "theunnamedroads.com" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "theunnamedroads.com"
+        }
+      ],
       "destination": "https://www.theunnamedroads.com/$1",
       "statusCode": 301
     },
     {
       "source": "/",
-      "has": [{ "type": "host", "value": "e.theunnamedroads.com" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "e.theunnamedroads.com"
+        }
+      ],
       "destination": "https://www.theunnamedroads.com/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/12-week-product-experiment-framework-2026-03-31",
+      "destination": "/posts/12-week-experiment-framework/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/12-week-product-experiment-framework-2026-03-31/",
+      "destination": "/posts/12-week-experiment-framework/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/side-project-to-profitable-product-2026-03-28",
+      "destination": "/posts/side-project-to-profitable-product-2026-04-10/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/side-project-to-profitable-product-2026-03-28/",
+      "destination": "/posts/side-project-to-profitable-product-2026-04-10/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/solo-founder-mental-health-practices-2026-03-25",
+      "destination": "/posts/building-a-one-person-company-with-ai-in-2026-2026-03-25/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/solo-founder-mental-health-practices-2026-03-25/",
+      "destination": "/posts/building-a-one-person-company-with-ai-in-2026-2026-03-25/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/solo-founder-mental-health-practices-2026-03-26",
+      "destination": "/posts/building-a-one-person-company-with-ai-in-2026-2026-03-25/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/solo-founder-mental-health-practices-2026-03-26/",
+      "destination": "/posts/building-a-one-person-company-with-ai-in-2026-2026-03-25/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/solo-founder-mental-health-practices-2026-03-28",
+      "destination": "/posts/building-a-one-person-company-with-ai-in-2026-2026-03-25/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/solo-founder-mental-health-practices-2026-03-28/",
+      "destination": "/posts/building-a-one-person-company-with-ai-in-2026-2026-03-25/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/solo-founder-mental-health-practices-2026-04-06",
+      "destination": "/posts/building-a-one-person-company-with-ai-in-2026-2026-03-25/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/solo-founder-mental-health-practices-2026-04-06/",
+      "destination": "/posts/building-a-one-person-company-with-ai-in-2026-2026-03-25/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/solo-founder-mental-health-practices-2026-04-08",
+      "destination": "/posts/building-a-one-person-company-with-ai-in-2026-2026-03-25/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/solo-founder-mental-health-practices-2026-04-08/",
+      "destination": "/posts/building-a-one-person-company-with-ai-in-2026-2026-03-25/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/async-first-communication-systems-2026-04-03",
+      "destination": "/posts/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/async-first-communication-systems-2026-04-03/",
+      "destination": "/posts/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/async-first-communication-systems-2026-04-09",
+      "destination": "/posts/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/async-first-communication-systems-2026-04-09/",
+      "destination": "/posts/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/digital-nomad-infrastructure-setup-2026-03-30",
+      "destination": "/posts/coolify-hetzner-automated-infrastructure/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/digital-nomad-infrastructure-setup-2026-03-30/",
+      "destination": "/posts/coolify-hetzner-automated-infrastructure/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/digital-nomad-infrastructure-setup-2026-04-02",
+      "destination": "/posts/coolify-hetzner-automated-infrastructure/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/digital-nomad-infrastructure-setup-2026-04-02/",
+      "destination": "/posts/coolify-hetzner-automated-infrastructure/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/digital-nomad-infrastructure-setup-2026-04-04",
+      "destination": "/posts/coolify-hetzner-automated-infrastructure/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/digital-nomad-infrastructure-setup-2026-04-04/",
+      "destination": "/posts/coolify-hetzner-automated-infrastructure/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/digital-nomad-infrastructure-setup-2026-04-30",
+      "destination": "/posts/coolify-hetzner-automated-infrastructure/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/digital-nomad-infrastructure-setup-2026-04-30/",
+      "destination": "/posts/coolify-hetzner-automated-infrastructure/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/ai-tools-for-indie-hackers-2026-04-07",
+      "destination": "/how-it-works/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/ai-tools-for-indie-hackers-2026-04-07/",
+      "destination": "/how-it-works/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/micro-saas-niche-validation-2026-04-05",
+      "destination": "/how-it-works/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/micro-saas-niche-validation-2026-04-05/",
+      "destination": "/how-it-works/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/bootstrapping-vs-venture-funding-decision-2026-03-29",
+      "destination": "/posts/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/bootstrapping-vs-venture-funding-decision-2026-03-29/",
+      "destination": "/posts/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/building-audience-before-product-2026-03-28",
+      "destination": "/how-it-works/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/building-audience-before-product-2026-03-28/",
+      "destination": "/how-it-works/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/building-in-public-strategy-2026-03-27",
+      "destination": "/how-it-works/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/building-in-public-strategy-2026-03-27/",
+      "destination": "/how-it-works/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/remote-first-team-culture-2026-2026-04-01",
+      "destination": "/posts/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/remote-first-team-culture-2026-2026-04-01/",
+      "destination": "/posts/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/test-article",
+      "destination": "/posts/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/test-article/",
+      "destination": "/posts/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/example-article-template",
+      "destination": "/posts/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/example-article-template/",
+      "destination": "/posts/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/category-archive-page-seo-small-sites-index-noindex-redirect",
+      "destination": "/posts/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/category-archive-page-seo-small-sites-index-noindex-redirect/",
+      "destination": "/posts/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/internal-linking-small-sites-which-pages-connect-when-link-hurts",
+      "destination": "/posts/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/internal-linking-small-sites-which-pages-connect-when-link-hurts/",
+      "destination": "/posts/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/why-anonymity-accelerates-innovation",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/why-anonymity-accelerates-innovation/",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/field-note-three-focus-bets-2026-08-10",
+      "destination": "/how-it-works/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/field-note-three-focus-bets-2026-08-10/",
+      "destination": "/how-it-works/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/field-note-mobile-focus-control-2026-08-12",
+      "destination": "/how-it-works/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/field-note-mobile-focus-control-2026-08-12/",
+      "destination": "/how-it-works/",
+      "permanent": true
+    },
+    {
+      "source": "/projects/anonymous-venture-studio",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/projects/anonymous-venture-studio/",
+      "destination": "/about/",
       "permanent": true
     }
   ],

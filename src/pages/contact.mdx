@@ -1,7 +1,7 @@
 ---
 layout: '@/layouts/PageLayout.astro'
-title: Contact — Field Notes & Operator Signal
-description: "Message the studio about Field Notes, Focus bets, or portfolio OS patterns—operator-to-operator signal, not consulting intake."
+title: Contact The Unnamed Roads
+description: 'Contact The Unnamed Roads, an AI venture studio in Stockholm. Share an idea or a problem worth solving, ask about a project, or suggest a collaboration.'
 activeHeaderLink: Contact
 fullBleed: true
 contactPage: true
@@ -9,38 +9,21 @@ contactPage: true
 
 import ContactForm from '@/components/ContactForm.astro'
 
-<div class="homepage-shell space-y-8">
-	<section class="section-shell space-y-6">
-		<div class="space-y-3">
-			<p class="section-eyebrow">Signal</p>
-			<h1 class="text-4xl font-semibold text-white sm:text-5xl">Contact</h1>
-			<p class="text-base text-slate-300 sm:text-lg">
-				Drop a note if you follow Field Notes, run a similar portfolio, or want to share operator signal.
-				We read every message — this is not a consulting intake form.
-			</p>
-		</div>
+<div class="homepage-shell mx-auto max-w-3xl space-y-8">
+  <section class="section-shell space-y-6">
+    <div class="space-y-3">
+      <p class="section-eyebrow">Contact</p>
+      <h1 class="text-4xl font-semibold sm:text-5xl" style="color: var(--roads-text)">Get in touch</h1>
+      <p class="text-lg" style="color: var(--roads-text-muted)">
+        Good reasons to write: you have a problem you wish someone would build for, you want to
+        try or partner on one of the <a class="text-accent underline" href="/projects/">projects</a>,
+        or you are starting a company with AI yourself and want to compare notes.
+        Every message is read by a human.
+      </p>
+    </div>
 
-		<div class="rounded-3xl border border-white/15 bg-white/5 p-6 shadow-2xl">
-			<ContactForm />
-		</div>
-    </section>
-
-    <section class="section-shell space-y-4">
-    	<p class="section-eyebrow">Good fits</p>
-    	<div class="grid gap-4 md:grid-cols-3">
-    		<article class="signal-card space-y-2">
-    			<h2 class="text-lg font-semibold text-white">Field Notes</h2>
-    			<p class="text-sm text-slate-300">Subscribe, cite an experiment, or suggest a topic we should measure.</p>
-    		</article>
-    		<article class="signal-card space-y-2">
-    			<h2 class="text-lg font-semibold text-white">Operator signal</h2>
-    			<p class="text-sm text-slate-300">Share how you run Focus bets, approval gates, or portfolio OS patterns.</p>
-    		</article>
-    		<article class="signal-card space-y-2">
-    			<h2 class="text-lg font-semibold text-white">Portfolio questions</h2>
-    			<p class="text-sm text-slate-300">Ask about a live Focus product or cite <a class="text-accent underline" href="/llms.txt">/llms.txt</a> in your assistant brief.</p>
-    		</article>
-    	</div>
-    </section>
-
+    <div class="rounded-3xl border p-6" style="border-color: var(--roads-border); background: var(--roads-surface);">
+      <ContactForm />
+    </div>
+  </section>
 </div>

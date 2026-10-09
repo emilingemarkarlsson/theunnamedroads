@@ -1,6 +1,6 @@
 ---
-title: UTKO Service Platform
-description: Nordic service platform for robot lawn mowers and battery-powered outdoor products. Built for booking, repair tracking, and zone-by-zone expansion.
+title: "UTKO Service Platform"
+description: "UTKO explored a Nordic booking and repair service for robot lawn mowers and battery-powered outdoor products. Parked."
 url: https://utko.vercel.app
 startDate: 2026-06-16
 tags:
@@ -11,33 +11,36 @@ tags:
   - operations
 homepage:
   featured: false
-  order: 14
+  order: 24
   statusLabel: Parked
   statusTone: exploring
-  statusDotColor: bg-slate-500
-  animateDot: false
-  focus: >-
-    Field service for robot mowers
-  summary: >-
-    Ops-heavy two-sided service — parked pending a single-dealer agent workflow proof.
-  metricLabel: Mode
-  metricValue: Parked
-  tag: SaaS
+  summary: "Booking and repair service for robot lawn mowers and battery-powered garden tools."
+  tag: "B2B software"
   href: https://utko.vercel.app
+  ctaLabel: "Visit the site"
+faq:
+  - question: "What is UTKO Service Platform?"
+    answer: "A booking and service platform for robot lawn mowers and battery-powered outdoor products in the Nordics."
+  - question: "What is the status of UTKO Service Platform?"
+    answer: "Parked."
 ---
 
-# UTKO Service Platform
+**Booking and repair service for robot lawn mowers and battery-powered garden tools.**
 
-**Nordic service platform for modern outdoor product support.**
+## What it is
 
-UTKO Service Platform is built for workshops and service teams handling robot lawn mowers and battery-powered outdoor products. It centralizes booking, repair progress, and regional expansion planning in one operational layer.
+A booking and service platform for robot lawn mowers and battery-powered outdoor products in the Nordics.
 
-## Core Capabilities
+## Who it is for
 
-- **Booking workflows** - structured intake and service scheduling
-- **Repair tracking** - visibility from received unit to completed service
-- **Zone-by-zone expansion** - operational model for phased regional growth
+Owners of robot mowers and the workshops that service them.
 
-## Positioning
+## How AI does the work
 
-Designed for Nordic service operations that need reliable day-to-day execution now, while building toward broader regional coverage.
+Built with AI coding assistants by one person.
+
+## Status: Parked
+
+Parked.
+
+Part of [The Unnamed Roads](/), an AI-native venture studio. See [how the studio starts and tests ideas with AI](/how-it-works/) or [all projects](/projects/).

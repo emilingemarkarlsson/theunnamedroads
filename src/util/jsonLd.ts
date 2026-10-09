@@ -10,33 +10,16 @@ export type ProjectJsonLdInput = {
 
 export type ProjectSchemaType = 'SoftwareApplication' | 'CreativeWork'
 
-const softwareTags = new Set([
-  'saas',
-  'consumer',
-  'enterprise-ai',
-  'automation',
-  'ai-agents',
-  'sports-data',
-  'family',
-  'hockey-analytics'
-])
-
-export const resolveProjectSchemaType = (
-  project: ProjectJsonLdInput
-): ProjectSchemaType => {
-  if (project.url) return 'SoftwareApplication'
-  if (project.tags?.some((tag) => softwareTags.has(tag))) {
-    return 'SoftwareApplication'
-  }
-  return 'CreativeWork'
-}
+/** Every portfolio entry is a software product or prototype. */
+export const resolveProjectSchemaType = (): ProjectSchemaType =>
+  'SoftwareApplication'
 
 export const buildProjectJsonLd = (
   project: ProjectJsonLdInput,
   canonicalURL: string,
   organizationId: string
 ) => {
-  const schemaType = resolveProjectSchemaType(project)
+  const schemaType = resolveProjectSchemaType()
   const projectId = `${canonicalURL}#project`
 
   return {
@@ -53,11 +36,12 @@ export const buildProjectJsonLd = (
       dateModified: project.endDate.toISOString()
     }),
     ...(project.statusLabel && {
-      disambiguatingDescription: `Studio status: ${project.statusLabel}`
+      disambiguatingDescription: `Status: ${project.statusLabel}`
     }),
     ...(schemaType === 'SoftwareApplication' && {
       applicationCategory: 'BusinessApplication',
-      operatingSystem: 'Web'
+      operatingSystem: 'Web',
+      publisher: { '@id': organizationId }
     })
   }
 }

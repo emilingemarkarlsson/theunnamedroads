@@ -1,103 +1,69 @@
 ---
 layout: '@/layouts/PageLayout.astro'
-title: About — The Unnamed Roads
-description: "Stockholm expedition studio — one developer, roads the map doesn't name. AI carries the pack; human Approve before anything leaves camp. Open Field Notes."
+title: 'About: An AI Venture Studio Run by One Founder'
+description: 'The Unnamed Roads is an AI-native venture studio in Stockholm, founded by Emil Ingemar Karlsson. AI does almost all the work; one founder decides what is worth building.'
 activeHeaderLink: About
 fullBleed: true
+faq:
+  - question: 'Who runs The Unnamed Roads?'
+    answer: 'The Unnamed Roads is run by Emil Ingemar Karlsson, an engineer and founder in Stockholm, Sweden, who works with data platforms, AI automation and AI agents.'
+  - question: 'Is The Unnamed Roads a company or an investor?'
+    answer: 'It is a venture studio: it starts and builds its own companies rather than investing in outside startups. AI tools and agents do most of the work, and the founder decides what to build and approves what goes public.'
 ---
 
-<div class="homepage-shell space-y-10">
-  <section class="section-shell space-y-6">
-    <div class="space-y-3">
-      <p class="section-eyebrow">Studio</p>
-      <h1 class="text-4xl font-semibold text-white sm:text-5xl">About the studio</h1>
-      <p class="text-base text-slate-300 sm:text-lg">
-        Stockholm · one developer · roads the map doesn't name · AI carries · Approve before anything leaves camp.
-      </p>
-      <p class="text-base text-slate-400 sm:text-lg">
-        The map is full, but unnamed roads still exist. One developer with AI automation can walk them now — expedition, not agency.
-      </p>
-    </div>
-    <div class="grid gap-4 md:grid-cols-2">
-      <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
-        <p class="text-xs uppercase tracking-[0.4em] text-slate-400">Operator</p>
-        <p class="mt-2 text-lg font-semibold text-white">Emil Ingemar Karlsson — Stockholm</p>
-        <p class="mt-2 text-sm text-slate-300">
-          Holds the compass — strategy, irreversible decisions and publish gates, approved on phone, not in meetings.
-          Personal realm: <a class="text-accent underline" href="https://emilingemarkarlsson.com" rel="noopener noreferrer">emilingemarkarlsson.com</a> (separate from studio bets).
-        </p>
-      </div>
-      <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
-        <p class="text-xs uppercase tracking-[0.4em] text-slate-400">Operating stance</p>
-        <p class="mt-2 text-lg font-semibold text-white">AI carries the pack — never fake executives.</p>
-        <p class="mt-2 text-sm text-slate-300">Automation accelerates proven workflows; consequential external actions stay human-gated. See <a class="text-accent underline" href="/agents/">/agents/</a> for policy-bound roles.</p>
-      </div>
-    </div>
+<div class="homepage-shell mx-auto max-w-3xl space-y-12">
+  <section class="section-shell space-y-5">
+    <p class="section-eyebrow">About</p>
+    <h1 class="text-4xl font-semibold sm:text-5xl" style="color: var(--roads-text)">One founder, a lot of AI, many companies</h1>
+    <p class="text-lg" style="color: var(--roads-text-muted)">
+      The Unnamed Roads is an AI-native venture studio in Stockholm, Sweden. It is a new kind of
+      accelerator: instead of hiring a team for every new company, AI does almost all of the work
+      (research, code, design, writing, data analysis and day-to-day operations), and one founder
+      decides what is worth building.
+    </p>
+    <p style="color: var(--roads-text-muted)">
+      The name comes from a simple idea: most obvious business ideas are already taken, but there are
+      still many small, specific problems nobody has built for. AI makes it cheap enough to try them.
+    </p>
   </section>
 
-  <section class="section-shell space-y-6">
-    <p class="section-eyebrow">What's in flight</p>
-    <p class="text-base text-slate-300">Live projects with honest status — impossible playbooks, not a manifesto.</p>
-    <div class="grid gap-4 md:grid-cols-2">
-      <article class="signal-card space-y-2">
-        <div class="flex flex-wrap items-center gap-2">
-          <h2 class="text-lg font-semibold text-white">The Hockey Analytics</h2>
-          <span class="status-pill text-emerald-300 border-emerald-400/30 bg-emerald-500/10">Focus</span>
-        </div>
-        <p class="text-sm text-slate-300">Sweden Club Pack beta for SHL / HockeyAllsvenskan decision-makers.</p>
-        <a href="https://thehockeyanalytics.com/" class="text-sm font-semibold text-accent">Visit the product →</a>
-      </article>
-      <article class="signal-card space-y-2">
-        <div class="flex flex-wrap items-center gap-2">
-          <h2 class="text-lg font-semibold text-white">Föräldraledighetsplaneraren</h2>
-          <span class="status-pill text-emerald-300 border-emerald-400/30 bg-emerald-500/10">Focus</span>
-        </div>
-        <p class="text-sm text-slate-300">Swedish parental-leave planning — days, pay and trade-offs in one planner.</p>
-        <a href="https://tur-parentalleave.vercel.app/" class="text-sm font-semibold text-accent">Complete a plan →</a>
-      </article>
-      <article class="signal-card space-y-2">
-        <div class="flex flex-wrap items-center gap-2">
-          <h2 class="text-lg font-semibold text-white">TUR Field Notes</h2>
-          <span class="status-pill text-emerald-300 border-emerald-400/30 bg-emerald-500/10">Focus</span>
-        </div>
-        <p class="text-sm text-slate-300">Dispatches from the road — decisions, costs, outcomes and playbooks.</p>
-        <a href="/posts/" class="text-sm font-semibold text-accent">Browse Field Notes →</a>
-      </article>
-    </div>
-    <p class="text-sm text-slate-400">10+ live ventures total — <a class="text-accent underline" href="/projects">see the full portfolio</a> with honest status labels.</p>
+  <section class="section-shell space-y-4">
+    <h2 class="text-2xl font-semibold" style="color: var(--roads-text)">The founder: Emil Ingemar Karlsson</h2>
+    <p style="color: var(--roads-text-muted)">
+      Emil is an engineer and founder who builds across the stack: data platforms, AI automation and
+      AI agents, and the business conversations that decide what is worth building. His view in one
+      sentence: <em>AI can build almost anything now; what decides the outcome is building the right
+      thing for the right user at the right price.</em>
+    </p>
+    <ul class="list-disc space-y-2 pl-5" style="color: var(--roads-text-muted)">
+      <li>Shipped his first production AI product in July 2024: translation pipelines into all major languages using the OpenAI API.</li>
+      <li>Has worked with applied AI on enterprise data platforms (Databricks, BigQuery, Azure): forecasting, machine learning and language analysis of more than 1.4 million support cases.</li>
+      <li>Builds and runs production AI agent setups with scoped tools, memory, cost limits and human approval before anything ships.</li>
+      <li>Builds MCP servers (the open standard that lets AI assistants use tools and data) and runs every studio project with AI coding agents.</li>
+      <li>Background in hockey analytics, which became the studio&rsquo;s longest-running project, <a class="text-accent underline" href="/projects/the-hockey-analytics/">The Hockey Analytics</a>.</li>
+    </ul>
+    <p style="color: var(--roads-text-muted)">
+      Personal site and full background: <a class="text-accent underline" href="https://emilingemarkarlsson.com/" rel="noopener">emilingemarkarlsson.com</a>.
+    </p>
+  </section>
+
+  <section class="section-shell space-y-4">
+    <h2 class="text-2xl font-semibold" style="color: var(--roads-text)">How the studio works</h2>
+    <ul class="list-disc space-y-2 pl-5" style="color: var(--roads-text-muted)">
+      <li><strong>Small tests first.</strong> Every idea starts as the smallest thing that can be put in front of real people.</li>
+      <li><strong>AI does the work, a human decides.</strong> Nothing is published, deployed or sent to anyone outside the studio without a human yes.</li>
+      <li><strong>Honest status.</strong> Every project is listed as Live, Testing or Parked. Parked projects stay visible so the lessons are not lost.</li>
+      <li><strong>Few projects get full attention.</strong> Only a handful of projects are actively grown at any time; the rest wait.</li>
+    </ul>
+    <p style="color: var(--roads-text-muted)">
+      The full method, step by step: <a class="text-accent underline" href="/how-it-works/">How to start and test a company with AI</a>.
+    </p>
   </section>
 
   <section class="section-shell space-y-4 text-center">
-    <h2 class="text-2xl font-semibold text-white">Follow the work</h2>
-    <p class="mx-auto max-w-2xl text-base text-slate-300">Field Notes are receipts from the road — measured experiments, not manifestos.</p>
-    <div class="flex flex-col gap-3 pt-2 sm:flex-row sm:justify-center">
-      <a href="/posts/" class="inline-flex items-center justify-center gap-2 rounded-2xl bg-white px-6 py-3 font-semibold text-gray-900">
-        Read Field Notes
-      </a>
-      <a href="/projects" class="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/40 px-6 py-3 font-semibold text-white">
-        See what's in flight
-      </a>
-    </div>
-  </section>
-
-  <section class="section-shell space-y-4 border-t border-white/10 pt-10">
-    <p class="section-eyebrow">Portfolio taxonomy</p>
-    <p class="text-base text-slate-400">
-      Internal status labels — not the brand story. Full policy: <a class="text-accent underline" href="/insights/focus-monitor-parked">Focus · Monitor · Parked</a>.
-    </p>
-    <div class="grid gap-4 sm:grid-cols-3">
-      <article class="signal-card space-y-2">
-        <span class="status-pill text-emerald-300 border-emerald-400/30 bg-emerald-500/10">Focus</span>
-        <p class="text-sm text-slate-400">Active validation contracts on bounded product bets.</p>
-      </article>
-      <article class="signal-card space-y-2">
-        <span class="status-pill text-sky-300 border-sky-400/30 bg-sky-500/10">Monitor</span>
-        <p class="text-sm text-slate-400">Live products watched for signal — honest status, not parked.</p>
-      </article>
-      <article class="signal-card space-y-2">
-        <span class="status-pill text-slate-300 border-slate-400/30 bg-slate-500/10">Parked / Avvecklat</span>
-        <p class="text-sm text-slate-400">Archive with explainer kept — no pretend momentum.</p>
-      </article>
+    <div class="hero-ctas justify-center">
+      <a href="/projects/" class="btn-primary">See all projects</a>
+      <a href="/contact/" class="btn-secondary">Get in touch</a>
     </div>
   </section>
 </div>

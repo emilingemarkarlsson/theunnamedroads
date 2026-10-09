@@ -1,67 +1,39 @@
 ---
-import ProjectsList from '@/components/ProjectsList.astro'
-import PageLayout, {
-  type Props as PageLayoutProps
-} from '@/layouts/PageLayout.astro'
-import { getProjects } from '@/util/projects'
+import ProjectGrid from '@/components/ProjectGrid.astro'
+import PageLayout from '@/layouts/PageLayout.astro'
+import config from '@/theme.config'
+import { getProjects, getStatus, projectItemList } from '@/util/projects'
 
-// Get all projects without pagination
 const projects = await getProjects()
-const projectCount = projects.length
+const live = projects.filter((p) => getStatus(p) === 'Live').length
+const testing = projects.filter((p) => getStatus(p) === 'Testing').length
 
-const frontmatter: PageLayoutProps['frontmatter'] = {
-  title: 'Projects',
-  description:
-    'Explore our AI-native projects where technology meets innovation to build the future roads of business.',
+const frontmatter = {
+  title: 'Projects: Companies Started and Tested with AI',
+  description: `All ${projects.length} companies and ideas from The Unnamed Roads, an AI venture studio. ${live} live, ${testing} being tested, the rest parked, each built mostly by AI.`,
   activeHeaderLink: 'Projects',
-  fullBleed: true
+  fullBleed: true,
+  itemList: projectItemList(projects, config.site)
 }
 ---
 
 <PageLayout {frontmatter}>
   <div class="homepage-shell space-y-10">
-    <section class="section-shell space-y-4 text-center">
-      <p class="section-eyebrow">Experiments in flight</p>
-      <div class="space-y-6">
-        <h1 class="section-title text-4xl sm:text-5xl">
-          Where we test impossible playbooks
-        </h1>
-        <p class="section-lead mx-auto max-w-3xl">
-          Every project is a validation contract inside Company OS — Focus,
-          Monitor or Parked. <strong>Focus</strong> is three product bets with measured
-          experiments; the <strong>SEO/dev attention set</strong> is eight live surfaces
-          with daily crawl and copy work — not the same list. Live product links only
-          when a site returns healthy; otherwise status and direction live here.
-        </p>
-      </div>
-      <div class="hero-ctas justify-center pt-2">
-        <a href="/contact" class="btn-primary">Propose a build</a>
-        <a href="/tools" class="btn-secondary">Inspect the stack</a>
-      </div>
+    <section class="section-shell mx-auto max-w-3xl space-y-4 text-center">
+      <p class="section-eyebrow">Portfolio</p>
+      <h1 class="section-title text-4xl sm:text-5xl">
+        Companies started and tested with AI
+      </h1>
+      <p class="section-lead">
+        Every project The Unnamed Roads has started, with an honest status. Each
+        one was researched, built and launched mostly by AI, with one founder
+        choosing the ideas and approving what goes live. Want to know how? Read
+        <a href="/how-it-works/" class="text-accent underline">how it works</a>.
+      </p>
     </section>
 
-    <section class="section-shell space-y-8">
-      <div
-        class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between"
-      >
-        <div>
-          <p class="section-eyebrow">Active portfolio</p>
-          <h2 class="section-title">
-            {projectCount} builds across research, product, and GTM
-          </h2>
-          <p class="section-lead mt-2">
-            From stealth operating systems to public-facing SaaS launches, each
-            project runs on the same automation-first discipline.
-          </p>
-        </div>
-        <div class="flex flex-wrap gap-3">
-          <span class="filter-chip">AI-native</span>
-          <span class="filter-chip">Solo operator</span>
-          <span class="filter-chip">12-week proofs</span>
-        </div>
-      </div>
-
-      <ProjectsList {projects} />
+    <section class="section-shell">
+      <ProjectGrid {projects} headingLevel="h2" />
     </section>
   </div>
 </PageLayout>

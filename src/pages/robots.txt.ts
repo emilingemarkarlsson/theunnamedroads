@@ -7,6 +7,7 @@ Allow: /
 # Core indexable surfaces (studio proof URLs)
 Allow: /posts/
 Allow: /projects/
+Allow: /how-it-works/
 Allow: /insights/
 Allow: /tools/
 Allow: /about/

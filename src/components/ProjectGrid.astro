@@ -1,0 +1,97 @@
+---
+import StatusChip from '@/components/StatusChip.astro'
+import {
+  STATUS_EXPLAINER,
+  STATUS_ORDER,
+  getStatus,
+  sortProjects
+} from '@/util/projects'
+import type { CollectionEntry } from 'astro:content'
+
+export interface Props {
+  projects: CollectionEntry<'projects'>[]
+  /** Heading level used for the status group titles */
+  headingLevel?: 'h2' | 'h3'
+}
+
+const { projects, headingLevel = 'h3' } = Astro.props
+const sorted = [...projects].sort(sortProjects)
+const groups = STATUS_ORDER.map((status) => ({
+  status,
+  items: sorted.filter((p) => getStatus(p) === status)
+})).filter((g) => g.items.length > 0)
+const Heading = headingLevel
+---
+
+<div class="space-y-12">
+  {
+    groups.map((group) => (
+      <div class="space-y-5">
+        <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+          <Heading
+            class="text-xl font-semibold"
+            style="color: var(--roads-text)"
+          >
+            {group.status}{' '}
+            <span
+              class="text-base font-normal"
+              style="color: var(--roads-text-soft)"
+            >
+              ({group.items.length})
+            </span>
+          </Heading>
+          <p class="text-sm" style="color: var(--roads-text-muted)">
+            {STATUS_EXPLAINER[group.status]}
+          </p>
+        </div>
+        <ul class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {group.items.map((project) => (
+            <li>
+              <a href={`/projects/${project.slug}/`} class="grid-card group">
+                <div class="flex items-center justify-between gap-3">
+                  <StatusChip label={getStatus(project)} size="compact" />
+                  {project.data.homepage?.tag && (
+                    <span class="grid-card-cat">
+                      {project.data.homepage.tag}
+                    </span>
+                  )}
+                </div>
+                <span class="grid-card-title">{project.data.title}</span>
+                <span class="grid-card-desc">
+                  {project.data.homepage?.summary ?? project.data.description}
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))
+  }
+</div>
+
+<style>
+  .grid-card {
+    @apply flex h-full flex-col gap-3 rounded-2xl border p-5 transition-all duration-200;
+    border-color: var(--roads-border);
+    background: var(--roads-surface);
+  }
+  .grid-card:hover {
+    border-color: rgba(212, 160, 84, 0.35);
+    transform: translateY(-2px);
+  }
+  .grid-card-title {
+    @apply text-lg font-bold leading-tight transition-colors;
+    color: var(--roads-text);
+  }
+  .grid-card:hover .grid-card-title {
+    @apply text-accent;
+  }
+  .grid-card-desc {
+    @apply text-sm leading-relaxed;
+    color: var(--roads-text-muted);
+  }
+  .grid-card-cat {
+    @apply text-[11px] uppercase tracking-wider;
+    color: var(--roads-text-soft);
+  }
+</style>

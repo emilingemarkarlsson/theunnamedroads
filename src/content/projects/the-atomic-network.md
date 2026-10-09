@@ -1,87 +1,42 @@
 ---
-title: The Atomic Network
-description: Hyperlocal GTM platform — physical mail and referral loops triggered when neighbors buy, creating viral loops for brick-and-mortar brands.
-startDate: 2025-09-01
+title: "The Atomic Network"
+description: "The Atomic Network tests hyperlocal marketing for local businesses: physical postcards and referral codes triggered when someone in the neighbourhood buys."
 url: https://tan-site.vercel.app/pilot
-canonicalUrl: https://theatomicnetwork.com
+startDate: 2025-09-01
 tags:
-  [
-    'marketing',
-    'saas',
-    'physical-mail',
-    'referral-system',
-    'geo-targeting',
-    'network-effects'
-  ]
+  - marketing
 homepage:
   featured: true
-  order: 6
-  statusLabel: Monitor
-  statusTone: exploring
-  focus: >-
-    Hyperlocal GTM — physical mail plus referral loops
-  summary: >-
-    When neighbors buy, neighbors follow: geo-triggered postcards and invite codes for brick-and-mortar brands. Pilot live on Vercel; canonical domain not yet serving — in the SEO/dev attention set.
-  metricLabel: Pilot
-  metricValue: Live on Vercel
-  tag: Print
+  order: 4
+  statusLabel: Testing
+  statusTone: building
+  summary: "When a neighbour buys, the neighbours hear about it: postcards plus referral codes for local shops."
+  tag: "Marketing"
   href: https://tan-site.vercel.app/pilot
-  ctaLabel: Open pilot
+  ctaLabel: "See the pilot"
+faq:
+  - question: "What is The Atomic Network?"
+    answer: "A marketing idea for local, physical businesses. When a customer buys, nearby households get a postcard and an invite code, so word of mouth spreads street by street."
+  - question: "What is the status of The Atomic Network?"
+    answer: "Testing. A pilot page is live; the next step is one real local business pilot."
 ---
 
-# The Atomic Network (TAN)
+**When a neighbour buys, the neighbours hear about it: postcards plus referral codes for local shops.**
 
-**Status:** Monitor  
-**Canonical URL:** theatomicnetwork.com (not yet serving — pilot live on Vercel)  
-**Type:** SaaS Marketing Platform  
-**Focus:** Hyperlocal Network Effects
+## What it is
 
-## The Concept
+A marketing idea for local, physical businesses. When a customer buys, nearby households get a postcard and an invite code, so word of mouth spreads street by street.
 
-When neighbors buy, neighbors follow. TAN weaponizes the psychology of imitation by automatically sending physical mail campaigns to surrounding homes when purchases happen, creating cascading network effects in local neighborhoods.
+## Who it is for
 
-## Key Features
+Brick-and-mortar shops and local service businesses.
 
-### Physical Mail Campaigns
+## How AI does the work
 
-- Auto-send postcards, flyers, and discount codes to neighborhoods where purchases occur
-- 3x higher response rate than email marketing
-- Real mail cuts through digital noise
-- 48-hour delivery to surrounding homes
+The concept, the pilot site and the campaign builder were built with AI coding assistants by one person.
 
-### Invite & Referral Loops
+## Status: Testing
 
-- Unique referral codes for every customer
-- Rewards for both referrer and friend
-- 40% referral rate creating viral loops
-- Customers recruit their neighbors automatically
+Testing. A pilot page is live; the next step is one real local business pilot.
 
-### Geo-Targeting & Automation
-
-- Click any neighborhood on the map and set radius
-- Auto-trigger campaigns on purchases
-- Set once, forget it - every sale triggers new campaigns
-- Manual or automatic campaign modes
-
-### Complete Attribution
-
-- 100% trackable invite codes
-- See exactly which neighborhood, postcard, and referral drove each sale
-- Real-time cascade effect visualization on map
-- Data-driven growth optimization
-
-## Pricing Model
-
-- **Free (0 kr)** – available until 2026-12-31
-- Full access to geo-targeting, campaign automation, and referral system during the launch phase
-
-## Results
-
-- 9% conversion rates from physical campaigns
-- 150+ customers acquired in 3 months for test businesses
-- -70% lower customer acquisition cost vs digital ads
-- 10x average growth through network effects
-
----
-
-_The Atomic Network - Igniting hyperlocal marketing through network effects_
+Part of [The Unnamed Roads](/), an AI-native venture studio. See [how the studio starts and tests ideas with AI](/how-it-works/) or [all projects](/projects/).

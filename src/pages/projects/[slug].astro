@@ -4,6 +4,7 @@ import StatusChip from '@/components/StatusChip.astro'
 import PageLayout from '@/layouts/PageLayout.astro'
 import Prose from '@/components/layout/Prose.astro'
 import { toMonthString } from '@/util'
+import { getStatus } from '@/util/projects'
 import { getCollection } from 'astro:content'
 import type { InferGetStaticPropsType } from 'astro'
 
@@ -11,26 +12,18 @@ type Props = InferGetStaticPropsType<typeof getStaticPaths>
 
 export async function getStaticPaths() {
   const projects = await getCollection('projects')
-  return projects
-    .filter((project) => project.slug !== 'emil-ingemar-karlsson')
-    .map((project) => ({
-      params: { slug: project.slug },
-      props: { project }
-    }))
+  return projects.map((project) => ({
+    params: { slug: project.slug },
+    props: { project }
+  }))
 }
 
 const { project } = Astro.props
 const { Content } = await project.render()
-const statusLabel = project.data.homepage?.statusLabel
+const statusLabel = getStatus(project)
 const homepage = project.data.homepage
-const canonicalUrl = project.data.canonicalUrl?.trim()
 const workingUrl = (homepage?.href ?? project.data.url)?.trim()
-const siteMetricLabel = homepage?.metricLabel
-const siteMetricValue = homepage?.metricValue
-const ctaLabel = homepage?.ctaLabel ?? 'Open live site'
-const showSiteBlock = Boolean(
-  canonicalUrl || workingUrl || siteMetricLabel || siteMetricValue
-)
+const ctaLabel = homepage?.ctaLabel ?? 'Visit the site'
 const timelineStart = toMonthString(project.data.startDate)
 const timelineEnd = project.data.endDate
   ? toMonthString(project.data.endDate)
@@ -42,14 +35,14 @@ const timeline = timelineEnd
 const faq = project.data.faq
 
 const frontmatter = {
-  title: project.data.title,
+  title: `${project.data.title} (${statusLabel}): an AI-built venture`,
   description: project.data.description,
   activeHeaderLink: 'Projects',
-  fullBleed: false,
+  fullBleed: true,
   project: {
     name: project.data.title,
     description: project.data.description,
-    url: workingUrl || canonicalUrl,
+    url: workingUrl,
     startDate: project.data.startDate,
     endDate: project.data.endDate,
     statusLabel,
@@ -57,7 +50,7 @@ const frontmatter = {
   },
   ...(faq?.length && { faq })
 }
-const contentContainerClass = 'mx-auto w-full max-w-6xl px-3 sm:px-6 lg:px-8'
+const contentContainerClass = 'mx-auto w-full max-w-3xl px-3 sm:px-6 lg:px-8'
 ---
 
 <PageLayout {frontmatter}>
@@ -71,102 +64,52 @@ const contentContainerClass = 'mx-auto w-full max-w-6xl px-3 sm:px-6 lg:px-8'
     />
   </div>
 
-  <div class={`homepage-shell mb-6 ${contentContainerClass}`}>
+  <div class={`homepage-shell mb-8 ${contentContainerClass}`}>
+    <h1
+      class="mb-4 text-4xl font-bold tracking-tight"
+      style="color: var(--roads-text)"
+    >
+      {project.data.title}
+    </h1>
     <div class="flex flex-wrap items-center gap-3">
-      {statusLabel && <StatusChip label={statusLabel} />}
+      <StatusChip label={statusLabel} />
       <p
         class="text-xs font-medium uppercase tracking-wider"
         style="color: var(--roads-text-soft)"
       >
-        Timeline · <time>{timeline}</time>
+        Started <time>{timeline}</time>
+        {homepage?.tag && <span> · {homepage.tag}</span>}
       </p>
     </div>
     {
-      showSiteBlock && (
-        <div
-          class="mt-4 rounded-xl border p-4 text-sm"
-          style="border-color: var(--roads-border); background: var(--roads-surface);"
-        >
-          <dl class="grid gap-3 sm:grid-cols-2">
-            {siteMetricLabel && siteMetricValue && (
-              <div>
-                <dt
-                  class="text-[10px] font-semibold uppercase tracking-wider"
-                  style="color: var(--roads-text-soft)"
-                >
-                  {siteMetricLabel}
-                </dt>
-                <dd class="mt-1 font-medium" style="color: var(--roads-text)">
-                  {siteMetricValue}
-                </dd>
-              </div>
-            )}
-            {canonicalUrl && (
-              <div>
-                <dt
-                  class="text-[10px] font-semibold uppercase tracking-wider"
-                  style="color: var(--roads-text-soft)"
-                >
-                  Canonical URL
-                </dt>
-                <dd
-                  class="mt-1 break-all"
-                  style="color: var(--roads-text-muted)"
-                >
-                  {canonicalUrl.replace(/^https?:\/\//, '')}
-                </dd>
-              </div>
-            )}
-          </dl>
-          {workingUrl && (
-            <p class="mt-4">
-              <a
-                href={workingUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="font-medium text-accent underline"
-              >
-                {ctaLabel} →
-              </a>
-            </p>
-          )}
-        </div>
+      workingUrl ? (
+        <p class="mt-6">
+          <a
+            href={workingUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-primary"
+          >
+            {ctaLabel} →
+          </a>
+        </p>
+      ) : (
+        <p class="mt-6 text-sm" style="color: var(--roads-text-soft)">
+          No public website yet.
+        </p>
       )
     }
   </div>
 
-  <Prose
-    class={`mb-6 sm:mb-12 ${contentContainerClass} prose prose-lg prose-invert max-w-none
-      prose-headings:font-semibold prose-headings:text-slate-100 prose-headings:mt-8 prose-headings:mb-4
-      prose-h1:text-3xl prose-h1:mt-12 prose-h1:mb-6 prose-h1:scroll-mt-20
-      prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-h2:scroll-mt-20
-      prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3 prose-h3:scroll-mt-20
-      prose-p:leading-relaxed prose-p:text-slate-300 prose-p:mb-6
-      prose-a:text-accent prose-a:no-underline hover:prose-a:underline prose-a:font-medium
-      prose-blockquote:border-l-accent prose-blockquote:border-l-4 prose-blockquote:pl-6 prose-blockquote:bg-slate-900/50 prose-blockquote:rounded-r-lg
-      prose-ul:list-disc prose-ul:pl-6 prose-ol:list-decimal prose-ol:pl-6`}
-  >
-    <Content />
-  </Prose>
-
-  {
-    faq?.length && (
-      <section
-        class={`section-shell mx-auto max-w-3xl space-y-6 pb-16 ${contentContainerClass}`}
-        aria-labelledby="project-faq"
-      >
-        <h2 id="project-faq" class="text-2xl font-semibold text-white">
-          Common questions
-        </h2>
-        <dl class="space-y-5">
-          {faq.map((item) => (
-            <div>
-              <dt class="font-semibold text-white">{item.question}</dt>
-              <dd class="mt-1 text-slate-300">{item.answer}</dd>
-            </div>
-          ))}
-        </dl>
-      </section>
-    )
-  }
+  <div class={contentContainerClass}>
+    <Prose
+      class={`mb-6 sm:mb-12 prose prose-lg prose-invert
+      prose-headings:font-semibold prose-headings:text-slate-100
+      prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4
+      prose-p:leading-relaxed prose-p:text-slate-300
+      prose-a:text-accent prose-a:no-underline hover:prose-a:underline prose-a:font-medium`}
+    >
+      <Content />
+    </Prose>
+  </div>
 </PageLayout>

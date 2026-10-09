@@ -1,6 +1,6 @@
 ---
-title: MeshGuard
-description: Governance prototype for tool permissions, approval levels, and policy-safe agent operations across the studio.
+title: "MeshGuard"
+description: "MeshGuard is a prototype for controlling AI agents: which tools each agent may use, which actions need human approval, and a log of what happened."
 startDate: 2026-05-01
 tags:
   - studio
@@ -9,49 +9,34 @@ tags:
   - mcp
 homepage:
   featured: true
-  order: 4
-  statusLabel: Monitor
+  order: 9
+  statusLabel: Testing
   statusTone: building
-  statusDotColor: bg-sky-500
-  animateDot: false
-  focus: >-
-    Tool permissions & approval levels for agents
-  summary: >-
-    Governance layer so assistants and workflows cannot exceed policy — audit every consequential call.
-  metricLabel: Mode
-  metricValue: Monitor
-  tag: Studio
+  summary: "Rules for what AI agents may do, and when a human must approve."
+  tag: "Studio tools"
+faq:
+  - question: "What is MeshGuard?"
+    answer: "A prototype that sets clear rules for AI agents: which tools each one may use, which actions (publishing, deploying, sending email) need a human yes, and a log of every important action."
+  - question: "What is the status of MeshGuard?"
+    answer: "Testing internally. Not a public product."
 ---
 
-# MeshGuard
+**Rules for what AI agents may do, and when a human must approve.**
 
-**Status:** Monitor — governance prototype, not a shipped product surface.
+## What it is
 
-MeshGuard is the studio's governance layer for agent and workflow tooling. It defines who can call which tools, when human approval is required, and how consequential runs are audited — so assistants cannot exceed policy even when models suggest otherwise.
+A prototype that sets clear rules for AI agents: which tools each one may use, which actions (publishing, deploying, sending email) need a human yes, and a log of every important action.
 
-## The problem
+## Who it is for
 
-Agent stacks fail governance at scale when:
+Anyone running several AI agents who wants them to stay inside safe limits. It is used inside the studio first.
 
-- Tool access is all-or-nothing per API key
-- Approval levels live in chat prompts instead of enforceable policy
-- Consequential calls (publish, deploy, external send) lack a durable audit trail
-- MCP servers and automation runners share credentials without scoped allow-lists
+## How AI does the work
 
-MeshGuard targets the gap between **MethodPolicy roles** (Research, Draft, Execute, Publish) and the actual tools those roles may invoke.
+Designed and coded with AI assistants, and tested on the studio’s own agents.
 
-## What it enforces
+## Status: Testing
 
-| Layer | Policy |
-| --- | --- |
-| **Tool allow-list** | Each workflow role gets an explicit set of permitted tools — no implicit access |
-| **Approval levels** | Level 1–2 for internal/reversible work; Level 3+ requires human Approve before external or consequential action |
-| **Audit trail** | Every gated call logs who/what/when — aligned with the studio's Approve · Defer · Reject gates on [Agents](/agents/) |
+Testing internally. Not a public product.
 
-The prototype maps to the same approval sketch documented on the [Company OS explainer](/insights/ai-native-venture-studio-operating-system): drafts and research under spend caps; publish, outreach and production deploy stay human-gated.
-
-## Current status (Monitor)
-
-MeshGuard remains a **Monitor** bet — design and policy sketches are live in studio docs and the [Agents](/agents/) page, but there is no public product URL or customer-facing deployment. Enforcement today runs through MethodPolicy spend gates, GitHub approval queues and operator judgment rather than a standalone MeshGuard service.
-
-Next proof step: allow-list tools per workflow on the Operator API and wire Level 3 gates to mobile Approve before any external send.
+Part of [The Unnamed Roads](/), an AI-native venture studio. See [how the studio starts and tests ideas with AI](/how-it-works/) or [all projects](/projects/).

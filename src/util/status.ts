@@ -17,6 +17,8 @@ const LABEL_VARIANTS: Record<string, StatusVariant> = {
   concept: 'concept',
   personal: 'personal',
   linked: 'linked',
+  live: 'focus',
+  testing: 'monitor',
   active: 'focus',
   'active experiment': 'focus'
 }

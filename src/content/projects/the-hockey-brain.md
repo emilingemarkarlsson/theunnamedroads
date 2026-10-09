@@ -1,6 +1,6 @@
 ---
-title: The Hockey Brain
-description: Stockholm-based hockey analytics consultancy combining data science and deep hockey knowledge. On-demand analytics for pro clubs, junior orgs, and national teams – no full-time hire needed.
+title: "The Hockey Brain"
+description: "The Hockey Brain offers on-demand hockey analytics for teams that cannot hire a full-time analyst. A sister project to The Hockey Analytics."
 url: https://www.thehockeybrain.com
 startDate: 2025-01-05
 tags:
@@ -11,61 +11,36 @@ tags:
   - data-visualization
 homepage:
   featured: true
-  order: 5
-  statusLabel: Monitor
+  order: 3
+  statusLabel: Live
   statusTone: active
-  statusDotColor: bg-sky-500
-  focus: >-
-    Consulting surface adjacent to THA
-  summary: >-
-    On-demand analytics for teams without a full-time hire — Monitor product bet, in the SEO/dev attention set alongside THA.
-  metricLabel: Mode
-  metricValue: Monitor
-  tag: Sports
-  href: https://www.thehockeybrain.com/
+  summary: "On-demand hockey analytics help for teams without a full-time analyst."
+  tag: "Sports"
+  href: https://www.thehockeybrain.com
+  ctaLabel: "Visit The Hockey Brain"
+faq:
+  - question: "What is The Hockey Brain?"
+    answer: "A small consulting offer: teams get analytics work done when they need it, without hiring an analyst. It reuses the data and tools behind The Hockey Analytics."
+  - question: "What is the status of The Hockey Brain?"
+    answer: "Live as a website and offer. Demand is being observed before more is built."
 ---
 
-# The Hockey Brain Consulting
+**On-demand hockey analytics help for teams without a full-time analyst.**
 
-**Where modern data analytics tools meet the world of hockey.** The Hockey Brain is
-a Stockholm-based consultancy that embeds senior-level analytics capabilities
-inside pro teams without the overhead of full-time hires.
+## What it is
 
-## Why It Exists
+A small consulting offer: teams get analytics work done when they need it, without hiring an analyst. It reuses the data and tools behind The Hockey Analytics.
 
-- **Discover hidden edges** with custom metrics that expose signal beyond traditional box scores.
-- **Accelerate decisions** on drafts, lineups, and roster moves with predictive modeling.
-- **Reduce uncertainty** using tactical simulations and scenario planning.
-- **Scale development** by applying the same analytics framework across leagues and affiliates.
+## Who it is for
 
-## How Engagements Work
+Hockey teams and organisations that need analysis but not a full-time hire.
 
-1. **Assessment & Intake** – capture telemetry from existing scouting, video, and tracking systems.
-2. **Custom Model Stack** – spin up AI copilots, dashboards, and reporting loops tuned to each organization.
-3. **Embedded Analysts** – operate as an extension of the hockey ops group, delivering weekly briefings and live support during critical windows.
-4. **Iterate & Scale** – expand to new surfaces (draft, player development, matchups) once the initial mandate is humming.
+## How AI does the work
 
-## Services
+Analysis, reports and the website are produced with AI tools on top of the same data platform as The Hockey Analytics.
 
-- **Scouting models & player evaluation** – AI-assisted recruitment scoring and talent profiling
-- **Expected Goals (xG) analysis** – finishing quality benchmarks across entire rosters
-- **Custom dashboards & reporting** – tactical matchup boards, forecheck, zone entry, special teams
-- **Recruitment & talent evaluation** – upside vs. role fit through data-driven scouting reports
-- **Player development frameworks** – track individual progression against predictive baselines
-- **Strategic matchup analysis** – scenario planning for playoffs, trade deadlines, and draft prep
+## Status: Live
 
-## Why Teams Plug In
+Live as a website and offer. Demand is being observed before more is built.
 
-- **Complement Your Team** – fill analytics gaps without re-org overhead.
-- **Cost-Effective Expertise** – senior talent on-demand instead of permanent headcount.
-- **On-Demand Scaling** – surge support during playoffs, trade deadlines, or draft prep, then scale down again.
-
-## For Whom
-
-Professional clubs, junior organizations, national teams, and player agencies seeking senior-level analytics without permanent headcount. Remote delivery from Stockholm, support across time zones.
-
-**Founder:** Emil Karlsson – Senior Analytics Consultant
-
-## Get Started
-
-Teams typically receive a tailored analytics activation roadmap within 2 business days of reaching out.
+Part of [The Unnamed Roads](/), an AI-native venture studio. See [how the studio starts and tests ideas with AI](/how-it-works/) or [all projects](/projects/).
