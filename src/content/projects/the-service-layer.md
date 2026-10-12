@@ -6,10 +6,10 @@ startDate: 2026-09-15
 tags:
   - b2b-software
 homepage:
-  featured: true
+  featured: false
   order: 8
-  statusLabel: Testing
-  statusTone: building
+  statusLabel: Parked
+  statusTone: exploring
   summary: "One login for every brand a garden-equipment workshop services."
   tag: "B2B software"
   href: https://tsl-website-three.vercel.app
@@ -18,7 +18,7 @@ faq:
   - question: "What is The Service Layer?"
     answer: "A hub for workshops that repair garden and outdoor power equipment from many brands. Service bulletins, training, manuals, exploded views and spare parts in one place instead of one portal per brand."
   - question: "What is the status of The Service Layer?"
-    answer: "Testing. A website is live on a temporary address while demand is validated."
+    answer: "Parked. The website is still up, but the project is paused while other projects get priority."
 ---
 
 **One login for every brand a garden-equipment workshop services.**
@@ -35,8 +35,8 @@ Dealers and service workshops for garden and outdoor power equipment.
 
 Research, the website and the prototype were built with AI coding assistants by one person.
 
-## Status: Testing
+## Status: Parked
 
-Testing. A website is live on a temporary address while demand is validated.
+Parked. The website is still up, but the project is paused while other projects get priority.
 
 Part of [The Unnamed Roads](/), an AI-native venture studio. See [how the studio starts and tests ideas with AI](/how-it-works/) or [all projects](/projects/).

@@ -12,7 +12,7 @@ tags:
 homepage:
   featured: false
   order: 24
-  statusLabel: Parked
+  statusLabel: Closed
   statusTone: exploring
   summary: "Booking and repair service for robot lawn mowers and battery-powered garden tools."
   tag: "B2B software"
@@ -22,7 +22,7 @@ faq:
   - question: "What is UTKO Service Platform?"
     answer: "A booking and service platform for robot lawn mowers and battery-powered outdoor products in the Nordics."
   - question: "What is the status of UTKO Service Platform?"
-    answer: "Parked."
+    answer: "Closed. No further work is planned; the page is kept as a record of what was tested."
 ---
 
 **Booking and repair service for robot lawn mowers and battery-powered garden tools.**
@@ -39,8 +39,8 @@ Owners of robot mowers and the workshops that service them.
 
 Built with AI coding assistants by one person.
 
-## Status: Parked
+## Status: Closed
 
-Parked.
+Closed. No further work is planned; the page is kept as a record of what was tested.
 
 Part of [The Unnamed Roads](/), an AI-native venture studio. See [how the studio starts and tests ideas with AI](/how-it-works/) or [all projects](/projects/).

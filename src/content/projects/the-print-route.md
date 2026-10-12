@@ -13,7 +13,7 @@ tags:
 homepage:
   featured: false
   order: 20
-  statusLabel: Parked
+  statusLabel: Closed
   statusTone: exploring
   summary: "Routes online print orders to local print shops automatically."
   tag: "Print"
@@ -23,7 +23,7 @@ faq:
   - question: "What is The Print Route?"
     answer: "A service that takes print orders from online stores and routes them automatically to a local print provider, with delivery to the customer’s door."
   - question: "What is the status of The Print Route?"
-    answer: "Parked. The website is still up, but the product is not being developed."
+    answer: "Closed. No further work is planned; the page is kept as a record of what was tested. The website is still up, but the product is not being developed."
 ---
 
 **Routes online print orders to local print shops automatically.**
@@ -40,8 +40,8 @@ Online retailers and local print shops.
 
 Built with AI coding assistants by one person.
 
-## Status: Parked
+## Status: Closed
 
-Parked. The website is still up, but the product is not being developed.
+Closed. No further work is planned; the page is kept as a record of what was tested. The website is still up, but the product is not being developed.
 
 Part of [The Unnamed Roads](/), an AI-native venture studio. See [how the studio starts and tests ideas with AI](/how-it-works/) or [all projects](/projects/).

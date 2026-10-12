@@ -1,15 +1,15 @@
 ---
 title: "The Outcome Layer"
-description: "The Outcome Layer tests a fixed-price offer for modern data platforms and AI analytics agents, built mostly with AI by The Unnamed Roads."
+description: "The Outcome Layer tests a fixed-price offer for modern data platforms, AI analytics agents and workflow automations, built mostly with AI by The Unnamed Roads."
 startDate: 2026-09-10
 tags:
   - b2b-software
 homepage:
   featured: true
-  order: 7
+  order: 4
   statusLabel: Testing
   statusTone: building
-  summary: "Fixed-price data platforms and analytics agents that ship."
+  summary: "Fixed-price data platforms, analytics agents and automations that ship."
   tag: "B2B software"
 faq:
   - question: "What is The Outcome Layer?"
@@ -23,6 +23,8 @@ faq:
 ## What it is
 
 A fixed-price offer for companies that want a modern data platform and AI analytics agents without a long consulting project.
+
+It also includes what used to be a separate test, AI Automation Fabric: describe a repetitive workflow, get a fixed estimate, and receive a working automation with documentation.
 
 ## Who it is for
 

@@ -19,6 +19,7 @@ const LABEL_VARIANTS: Record<string, StatusVariant> = {
   linked: 'linked',
   live: 'focus',
   testing: 'monitor',
+  closed: 'avvecklat',
   active: 'focus',
   'active experiment': 'focus'
 }

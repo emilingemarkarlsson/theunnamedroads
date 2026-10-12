@@ -1,13 +1,15 @@
 import { getCollection, type CollectionEntry } from 'astro:content'
 
-export type PlainStatus = 'Live' | 'Testing' | 'Parked'
+export type PlainStatus = 'Live' | 'Testing' | 'Parked' | 'Closed'
 
+/** Statuses shown in the main project grid. Closed projects live in an archive. */
 export const STATUS_ORDER: PlainStatus[] = ['Live', 'Testing', 'Parked']
 
 export const STATUS_EXPLAINER: Record<PlainStatus, string> = {
   Live: 'Running and open to real users or customers.',
   Testing: 'Being tested for real demand before more is built.',
-  Parked: 'Paused. Kept public so the lessons stay visible.'
+  Parked: 'Paused, but could come back later.',
+  Closed: 'Stopped for good. Kept as a record of what was tested.'
 }
 
 export const getStatus = (
@@ -16,6 +18,7 @@ export const getStatus = (
   const label = project.data.homepage?.statusLabel?.trim().toLowerCase()
   if (label === 'live') return 'Live'
   if (label === 'testing') return 'Testing'
+  if (label === 'closed') return 'Closed'
   return 'Parked'
 }
 
@@ -23,8 +26,11 @@ export const sortProjects = (
   p1: CollectionEntry<'projects'>,
   p2: CollectionEntry<'projects'>
 ) => {
-  const statusDiff =
-    STATUS_ORDER.indexOf(getStatus(p1)) - STATUS_ORDER.indexOf(getStatus(p2))
+  const rank = (p: CollectionEntry<'projects'>) => {
+    const i = STATUS_ORDER.indexOf(getStatus(p))
+    return i === -1 ? STATUS_ORDER.length : i
+  }
+  const statusDiff = rank(p1) - rank(p2)
   const orderDiff =
     (p1.data.homepage?.order ?? 999) - (p2.data.homepage?.order ?? 999)
   return statusDiff || orderDiff || p1.data.title.localeCompare(p2.data.title)
@@ -52,3 +58,10 @@ export const projectItemList = (
     description: `${getStatus(p)}. ${p.data.homepage?.summary ?? p.data.description}`
   }))
 })
+
+export const isClosed = (project: CollectionEntry<'projects'>) =>
+  getStatus(project) === 'Closed'
+
+/** Live, Testing and Parked projects (everything except the Closed archive). */
+export const getActiveProjects = async () =>
+  (await getProjects()).filter((p) => !isClosed(p))

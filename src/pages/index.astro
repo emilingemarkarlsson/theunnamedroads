@@ -4,9 +4,9 @@ import ProjectGrid from '@/components/ProjectGrid.astro'
 import PageLayout from '@/layouts/PageLayout.astro'
 import config from '@/theme.config'
 import { getPosts } from '@/util/posts'
-import { getProjects, getStatus, projectItemList } from '@/util/projects'
+import { getActiveProjects, getStatus, projectItemList } from '@/util/projects'
 
-const projects = await getProjects()
+const projects = await getActiveProjects()
 const count = (s: string) => projects.filter((p) => getStatus(p) === s).length
 const live = count('Live')
 const testing = count('Testing')
@@ -134,14 +134,21 @@ const steps = [
       aria-labelledby="projects-title"
     >
       <div class="mx-auto max-w-3xl space-y-3 text-center">
-        <h2 id="projects-title" class="section-title">All projects</h2>
+        <h2 id="projects-title" class="section-title">Current projects</h2>
         <p class="section-lead">
-          Every company and idea the studio has started. <strong>Live</strong> means
-          real users can use it today, <strong>Testing</strong> means we are checking
-          if people want it, and <strong>Parked</strong> means it is paused.
+          The companies the studio is running or testing right now. <strong
+            >Live</strong
+          > means real users can use it today, <strong>Testing</strong> means we are
+          checking if people want it, and <strong>Parked</strong> means it is paused.
         </p>
       </div>
       <ProjectGrid {projects} />
+      <p class="text-center text-sm" style="color: var(--roads-text-muted)">
+        Earlier experiments that have been stopped are listed in the
+        <a href="/projects/#closed" class="text-accent underline"
+          >closed archive</a
+        >.
+      </p>
     </section>
 
     <section

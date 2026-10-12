@@ -9,7 +9,7 @@ tags:
 homepage:
   featured: false
   order: 29
-  statusLabel: Parked
+  statusLabel: Closed
   statusTone: exploring
   summary: "Helps households decide whether to move, buy or rent."
   tag: "Family"
@@ -17,7 +17,7 @@ faq:
   - question: "What is Housing Planner?"
     answer: "An idea for a planning tool for Swedish households deciding whether to move, buy or rent."
   - question: "What is the status of Housing Planner?"
-    answer: "Parked at idea stage."
+    answer: "Closed. No further work is planned; the page is kept as a record of what was tested."
 ---
 
 **Helps households decide whether to move, buy or rent.**
@@ -34,8 +34,8 @@ Swedish households planning a housing change.
 
 A prototype was built with AI coding assistants.
 
-## Status: Parked
+## Status: Closed
 
-Parked at idea stage.
+Closed. No further work is planned; the page is kept as a record of what was tested.
 
 Part of [The Unnamed Roads](/), an AI-native venture studio. See [how the studio starts and tests ideas with AI](/how-it-works/) or [all projects](/projects/).

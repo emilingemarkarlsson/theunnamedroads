@@ -9,7 +9,7 @@ tags:
 homepage:
   featured: false
   order: 28
-  statusLabel: Parked
+  statusLabel: Closed
   statusTone: exploring
   summary: "The real total cost of owning a car in Sweden."
   tag: "Family"
@@ -17,7 +17,7 @@ faq:
   - question: "What is Car Cost Calculator?"
     answer: "An idea for a calculator that shows the full cost of owning a car in Sweden: purchase, fuel or charging, insurance, tax and resale value."
   - question: "What is the status of Car Cost Calculator?"
-    answer: "Parked at idea stage."
+    answer: "Closed. No further work is planned; the page is kept as a record of what was tested."
 ---
 
 **The real total cost of owning a car in Sweden.**
@@ -34,8 +34,8 @@ Swedish households deciding on a car.
 
 A prototype was built with AI coding assistants.
 
-## Status: Parked
+## Status: Closed
 
-Parked at idea stage.
+Closed. No further work is planned; the page is kept as a record of what was tested.
 
 Part of [The Unnamed Roads](/), an AI-native venture studio. See [how the studio starts and tests ideas with AI](/how-it-works/) or [all projects](/projects/).

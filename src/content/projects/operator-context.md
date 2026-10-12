@@ -11,7 +11,7 @@ tags:
 homepage:
   featured: false
   order: 26
-  statusLabel: Parked
+  statusLabel: Closed
   statusTone: exploring
   summary: "Lets AI assistants read the state of every project safely."
   tag: "Studio tools"
@@ -19,7 +19,7 @@ faq:
   - question: "What is Operator Context?"
     answer: "An idea for giving AI assistants safe, logged access to project status, pending decisions and experiments, so they can help without guessing."
   - question: "What is the status of Operator Context?"
-    answer: "Parked at idea stage."
+    answer: "Closed. No further work is planned; the page is kept as a record of what was tested."
 ---
 
 **Lets AI assistants read the state of every project safely.**
@@ -36,8 +36,8 @@ Founders who work with AI assistants every day.
 
 Would be built with AI coding assistants.
 
-## Status: Parked
+## Status: Closed
 
-Parked at idea stage.
+Closed. No further work is planned; the page is kept as a record of what was tested.
 
 Part of [The Unnamed Roads](/), an AI-native venture studio. See [how the studio starts and tests ideas with AI](/how-it-works/) or [all projects](/projects/).
