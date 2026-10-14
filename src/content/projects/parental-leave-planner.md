@@ -12,8 +12,8 @@ tags:
 homepage:
   featured: true
   order: 2
-  statusLabel: Live
-  statusTone: active
+  statusLabel: Parked
+  statusTone: exploring
   summary: "Free planner for Swedish parental leave: days, money and trade-offs in one plan."
   tag: "Family"
   href: https://tur-parentalleave.vercel.app
@@ -22,7 +22,7 @@ faq:
   - question: "What is Parental Leave Planner?"
     answer: "A free web tool (in Swedish, \"Föräldraledighetsplaneraren\") that turns the Swedish parental-leave rules into a simple plan. Parents enter their situation and see how days and income play out for different choices."
   - question: "What is the status of Parental Leave Planner?"
-    answer: "Live and free to use. The planner is maintained and kept up to date with the rules, but there is no active growth work right now."
+    answer: "Parked. The planner still works and is free to use, but it is not actively developed right now."
 ---
 
 **Free planner for Swedish parental leave: days, money and trade-offs in one plan.**
@@ -39,8 +39,8 @@ Families in Sweden who are expecting a child or planning how to split leave.
 
 The rules research, calculations, interface and copy were built with AI coding assistants and checked by a human against official sources.
 
-## Status: Live
+## Status: Parked
 
-Live and free to use. The planner is maintained and kept up to date with the rules, but there is no active growth work right now.
+Parked. The planner still works and is free to use, but it is not actively developed right now.
 
 Part of [The Unnamed Roads](/), an AI-native venture studio. See [how the studio starts and tests ideas with AI](/how-it-works/) or [all projects](/projects/).
