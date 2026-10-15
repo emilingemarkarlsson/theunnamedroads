@@ -355,7 +355,7 @@ After running dozens of experiments through this framework, we've found it creat
 - **[Why Anonymity Accelerates Innovation](/posts/why-anonymity-accelerates-innovation)** — How anonymous building enables faster experimentation
 - **[AI as Co-Founder](/posts/ai-as-cofounder)** — How AI collaboration accelerates experiment cycles
 - **[The Hockey Analytics](/projects/the-hockey-analytics)** — Focus project validated with this framework
-- **[Parental Leave Planner](/projects/parental-leave-planner)** — Focus project run through this framework
+- **[Föräldraledighetsplanen](/projects/parental-leave-planner)** — Focus project run through this framework
 - **[The Unnamed Roads](/projects/anonymous-venture-studio)** — Studio Focus project running these experiments
 
 ## FAQ: 12-Week Experiment Framework

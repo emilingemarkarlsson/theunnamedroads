@@ -1,41 +1,48 @@
 ---
-title: "Car Cost Calculator"
-description: "Car Cost Calculator (TUR Bilkalkyl) is an idea for showing the full cost of car ownership for Swedish households. Parked."
+title: "CPA – Car Planner Assistant"
+description: "CPA (Car Planner Assistant) is an AI-assistant-first service for Swedish car buyers: total cost of ownership, car finder and alerts for good leasing campaigns. Affiliate model. In testing."
 startDate: 2026-07-15
 tags:
   - family
   - finance
   - calculator
+  - ai-assistants
 homepage:
   featured: false
-  order: 28
-  statusLabel: Closed
-  statusTone: exploring
-  summary: "The real total cost of owning a car in Sweden."
+  order: 14
+  statusLabel: Testing
+  statusTone: building
+  summary: "Your AI assistant's helper for choosing a car in Sweden: real costs, matching cars and campaign alerts."
   tag: "Family"
 faq:
-  - question: "What is Car Cost Calculator?"
-    answer: "An idea for a calculator that shows the full cost of owning a car in Sweden: purchase, fuel or charging, insurance, tax and resale value."
-  - question: "What is the status of Car Cost Calculator?"
-    answer: "Closed. No further work is planned; the page is kept as a record of what was tested."
+  - question: "What is CPA – Car Planner Assistant?"
+    answer: "An AI-assistant-first service (formerly Car Cost Calculator) that helps Swedish households find the right car: it calculates total cost of ownership with current Swedish tax rules, matches cars to needs, lists leasing campaigns and lets you set alerts for good deals."
+  - question: "How does CPA make money?"
+    answer: "Through clearly labelled affiliate links to car sales, loans and insurance. Cars are ranked only on cost and fit, never on commission."
+  - question: "What is the status of CPA?"
+    answer: "Testing. In development; no public version yet."
 ---
 
-**The real total cost of owning a car in Sweden.**
+**Your AI assistant's helper for choosing a car in Sweden: real costs, matching cars and campaign alerts.**
 
 ## What it is
 
-An idea for a calculator that shows the full cost of owning a car in Sweden: purchase, fuel or charging, insurance, tax and resale value.
+CPA (Car Planner Assistant, formerly Car Cost Calculator) is built for the way people increasingly decide and buy: by asking an AI assistant. Assistants connect to CPA to find cars that fit a household's needs, compare them on total cost of ownership (purchase or leasing, fuel or charging, insurance, tax and malus), list current leasing campaigns and switch on alerts for good deals. A simple website complements the assistant integration.
 
 ## Who it is for
 
-Swedish households deciding on a car.
+Swedish households choosing, leasing or buying a car.
+
+## Business model
+
+Affiliate. Links to purchase, loans and insurance are clearly labelled, and rankings are based only on cost and fit.
 
 ## How AI does the work
 
-A prototype was built with AI coding assistants.
+Campaign collection, the cost engine, the assistant integration and the site are built with AI coding assistants.
 
-## Status: Closed
+## Status: Testing
 
-Closed. No further work is planned; the page is kept as a record of what was tested.
+In development. No public version yet.
 
 Part of [The Unnamed Roads](/), an AI-native venture studio. See [how the studio starts and tests ideas with AI](/how-it-works/) or [all projects](/projects/).
